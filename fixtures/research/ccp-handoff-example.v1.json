@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "orbit-companion-ccp.v1",
+  "missionId": "demo-orbit-400km",
+  "goal": "Explain how initial tangential speed changes a simplified Earth orbit.",
+  "confirmedDecisions": [
+    {"id":"D1","decision":"Use the spherical two-body teaching model","confirmedBy":"human"},
+    {"id":"D2","decision":"Use NASA primary sources","confirmedBy":"human"}
+  ],
+  "evidenceRefs": [
+    {"id":"NASA-EARTH","url":"https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html","status":"used"},
+    {"id":"NASA-ORBIT-TYPES","url":"https://www.nasa.gov/wp-content/uploads/2023/09/nw-10182021.pdf","status":"used"}
+  ],
+  "researchBudget": {
+    "searches":{"used":1,"limit":18},
+    "pages":{"used":2,"limit":40},
+    "linkDepth":{"used":1,"limit":2}
+  },
+  "experiment": {
+    "modelVersion":"two-body-earth-v1",
+    "altitudeM":400000,
+    "tangentialSpeedMps":7672.59,
+    "running":false,
+    "learnerPrediction":"A nearly circular path",
+    "lastObservation":null
+  },
+  "unknowns":["Measured energy drift","Observed provider model slug"],
+  "nextAction":"Run the circular reference and record the numerical receipt.",
+  "providerSessionIncluded":false,
+  "secretsIncluded":false
+}

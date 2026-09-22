@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "research-contradictions.v1",
+  "cases": [
+    {
+      "id": "apparent-radius-conflict",
+      "synthetic": false,
+      "claims": [
+        {"sourceId":"NASA-EARTH","valueKm":6371,"qualifier":"volumetric mean radius"},
+        {"sourceId":"NASA-EARTH","valueKm":6378.137,"qualifier":"equatorial radius"}
+      ],
+      "expectedDisposition": "not_a_conflict"
+    },
+    {
+      "id": "synthetic-speed-conflict",
+      "synthetic": true,
+      "publicKnowledgeBaseEligible": false,
+      "claims": [
+        {"sourceId":"NASA-DERIVED-400KM","valueMps":7672.59,"trust":"derived_from_primary"},
+        {"sourceId":"TEST-STALE-NOTE","valueMps":9100,"trust":"untrusted_test_fixture"}
+      ],
+      "expectedDisposition": "surface_conflict_and_preserve_sources"
+    }
+  ]
+}

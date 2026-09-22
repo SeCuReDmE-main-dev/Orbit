@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "source-statuses.v1",
+  "checkedAt": "2026-09-21",
+  "records": [
+    {"id":"NASA-ORBIT-TYPES","url":"https://www.nasa.gov/wp-content/uploads/2023/09/nw-10182021.pdf","depth":0,"status":"used"},
+    {"id":"NASA-EARTH","url":"https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html","depth":0,"status":"used"},
+    {"id":"NASA-ORBIT","url":"https://www.nasa.gov/solar-system/what-is-an-orbit-grades-5-8/","depth":1,"status":"read"},
+    {"id":"NASA-ARSET","url":"https://www.earthdata.nasa.gov/learn/trainings/fundamentals-remote-sensing","depth":1,"status":"out_of_scope"},
+    {"id":"TEST-INACCESSIBLE","url":"https://example.invalid/restricted-source","depth":2,"status":"inaccessible","synthetic":true}
+  ],
+  "allowedStatuses": ["discovered","read","used","inaccessible","out_of_scope"]
+}

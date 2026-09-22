@@ -1,0 +1,10 @@
+<section class="rounded-2xl border border-sky-300/20 bg-slate-950/70 p-5 shadow-2xl shadow-sky-950/40">
+  <div class="mb-3 flex items-baseline justify-between gap-4"><h2 class="text-lg font-semibold">Orbital lab</h2><p data-orbit-status class="text-xs text-slate-400">Loading local simulation…</p></div>
+  <canvas data-orbit-canvas class="h-72 w-full rounded-xl bg-[#030711]" aria-label="A local orbital simulation with an Earth and satellite"></canvas>
+</section>
+<script>
+  import { mountOrbitalLab } from '../lib/orbital-lab'
+  const canvas = document.querySelector<HTMLCanvasElement>('[data-orbit-canvas]')
+  const status = document.querySelector<HTMLElement>('[data-orbit-status]')
+  if (canvas && status) mountOrbitalLab(canvas, status)
+</script>

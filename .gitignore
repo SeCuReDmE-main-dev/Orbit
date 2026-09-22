@@ -1,0 +1,12 @@
+node_modules/
+node_modules.corrupt-*/
+package-lock.corrupt-*.json
+dist/
+.astro/
+.sanity/
+.orbit/
+*.sqlite
+*.sqlite-journal
+.env
+.env.*
+!.env.example

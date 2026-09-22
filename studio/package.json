@@ -1,0 +1,17 @@
+{
+  "name": "@orbit/studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "schema:extract": "sanity schema extract"
+  },
+  "dependencies": {
+    "sanity": "^6.15.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "styled-components": "^6.5.3"
+  }
+}

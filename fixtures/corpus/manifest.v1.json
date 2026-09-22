@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "orbit-corpus-manifest.v1",
+  "corpusId": "orbit-companion-nasa-basics-v1",
+  "language": "en",
+  "createdAt": "2026-09-21",
+  "purpose": "Teach and test a bounded two-body Earth-orbit explanation with direct source links.",
+  "documents": ["nasa-earth-parameters.v1.md","nasa-circular-orbit.v1.md","nasa-orbit-concepts.v1.md","nasa-media-use.v1.md"],
+  "claimsPolicy": {"primarySourcesOnly":true,"derivedCalculationsMustBeLabeled":true,"syntheticFixturesExcluded":true}
+}
