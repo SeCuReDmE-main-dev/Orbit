@@ -41,29 +41,33 @@ function tools(): WebMcpTool[] {
     },
     {
       name: 'orbit_list_research_points', title: 'List Orbit research points',
-      description: 'Read a bounded page of research points. The runtime returns an explicit unavailable state until the research repository is implemented.',
+      description: 'Read a bounded page of local research points from the loopback broker.',
       inputSchema: pagedSchema(), annotations: readOnly,
-      execute: async (input, options) => { checkAbort(signalOf(options)); return unavailablePage(input, 'Research point persistence is not implemented.') },
+      execute: async (input, options) => brokerJson(`/research-points?${pageQuery(input)}`, signalOf(options)),
     },
     {
       name: 'orbit_search_sources', title: 'Search Orbit sources',
-      description: 'Search verified local source records only. It never fetches the web. The runtime reports unavailable until source persistence is implemented.',
+      description: 'Search verified local source records only. It never fetches the web.',
       inputSchema: objectSchema({ query: { type: 'string', minLength: 1, maxLength: 200 }, limit: { type: 'integer', minimum: 1, maximum: 25, default: 10 } }, ['query']),
       annotations: { ...readOnly, untrustedContentHint: true },
-      execute: async (input, options) => { checkAbort(signalOf(options)); requiredText(input.query, 'query', 200); return unavailablePage(input, 'Source persistence is not implemented.') },
+      execute: async (input, options) => {
+        const query = requiredText(input.query, 'query', 200)
+        const limit = integer(input.limit, 10, 1, 25)
+        return brokerJson(`/sources?query=${encodeURIComponent(query)}&limit=${limit}`, signalOf(options))
+      },
     },
     {
       name: 'orbit_read_source_record', title: 'Read Orbit source record',
       description: 'Read one stored source record by local identifier without fetching its URL.',
       inputSchema: objectSchema({ sourceId: { type: 'string', minLength: 1, maxLength: 128 } }, ['sourceId']),
       annotations: { ...readOnly, untrustedContentHint: true },
-      execute: async (input, options) => { checkAbort(signalOf(options)); requiredText(input.sourceId, 'sourceId', 128); return { state: 'NOT_IMPLEMENTED', reason: 'Source persistence is not implemented.' } },
+      execute: async (input, options) => brokerJson(`/sources/${encodeURIComponent(requiredText(input.sourceId, 'sourceId', 128))}`, signalOf(options)),
     },
     {
       name: 'orbit_get_physics_snapshot', title: 'Get Orbit physics snapshot',
       description: 'Read the capabilities and limits of the current local orbital visual. No model or network call is made.',
       inputSchema: objectSchema({}, []), annotations: readOnly,
-      execute: async (_input, options) => { checkAbort(signalOf(options)); return { state: 'READY', model: 'fixed-step-angular-visual', scientificQualification: false, newtonianGravity: false, remoteCalls: 0 } },
+      execute: async (_input, options) => { checkAbort(signalOf(options)); return { state: 'READY', model: 'newtonian-two-body-velocity-verlet-v1', scientificQualification: false, newtonianGravity: true, fixedStepSeconds: 2, remoteCalls: 0 } },
     },
   ]
 }
@@ -76,10 +80,10 @@ function pagedSchema(): JSONSchema {
   return objectSchema({ offset: { type: 'integer', minimum: 0, default: 0 }, limit: { type: 'integer', minimum: 1, maximum: 25, default: 10 } }, [])
 }
 
-function unavailablePage(input: Record<string, unknown>, reason: string): unknown {
+function pageQuery(input: Record<string, unknown>): string {
   const offset = integer(input.offset, 0, 0, 10_000)
   const limit = integer(input.limit, 10, 1, 25)
-  return { state: 'NOT_IMPLEMENTED', reason, items: [], offset, limit, total: 0, nextOffset: null }
+  return new URLSearchParams({ offset: String(offset), limit: String(limit) }).toString()
 }
 
 function integer(value: unknown, fallback: number, min: number, max: number): number {

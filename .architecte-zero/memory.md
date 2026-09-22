@@ -1,7 +1,7 @@
 # Orbit Companion project memory
 
 - Date: 2026-09-21
-- Repository: `C:\Users\jeans\Desktop\challenge-work-hacketon\dev.to-challenge`
+- Repository: the current `dev.to-challenge` checkout root
 - Initial Git state: branch `master`, `HEAD_UNBORN`, no remote observed at Sol start.
 - Singularity: transform one user objective into bounded, evidence-backed ActionCards without exceeding granted authority.
 - Core loop: intent -> mission -> ActionCards -> gates -> provider -> evidence -> CCPPackage.

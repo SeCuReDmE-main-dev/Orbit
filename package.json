@@ -12,6 +12,7 @@
   "scripts": {
     "build": "npm run build --workspace @orbit/core && npm run build --workspace @orbit/providers && npm run build --workspace @orbit/broker && npm run build --workspace @orbit/web && npm run build --workspace @orbit/studio",
     "test": "vitest run && node --experimental-strip-types --test packages/contracts/src/policy-guard.test.mjs",
+    "test:orbit": "vitest run tests/orbital-simulation.test.ts",
     "test:watch": "vitest",
     "broker": "npm run dev --workspace @orbit/broker"
   },

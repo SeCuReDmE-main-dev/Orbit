@@ -20,15 +20,25 @@ It is not yet a release candidate. Codex, Antigravity, Exa, Sanity Knowledge Bas
 Prerequisites observed on 2026-09-21: Node `24.18.1`, system npm `11.16.0`, Git `2.51.0.windows.1`. The reproducible lock was generated with npm `10.9.4`; the repository pins that version and enables legacy peer resolution because the current Sanity and Vitest peer graphs otherwise trigger an npm Arborist failure.
 
 ```powershell
-npm install
+npx --yes npm@10.9.4 install --legacy-peer-deps
 npm test
 npm run build --workspace @orbit/web
+python tools/package_mv3.py
+npm audit --omit=dev --audit-level=high
+```
+
+Tests and builds pass locally. The dependency audit still fails on high-severity transitive advisories in the standalone Sanity CLI/build graph, so this tree is not release-ready. Astro is pinned to `7.3.3` and Tailwind uses the supported Vite integration; the earlier Astro critical advisories no longer appear in the current audit.
+
+The broker listens only on `http://127.0.0.1:47831`. Its basic health endpoint is `GET /health`. Browser requests are denied until Chrome's exact unpacked-extension origin is allowlisted. After loading `web/dist`, copy the 32-character extension ID from Chrome and start the broker from PowerShell with:
+
+```powershell
+$env:ORBIT_ALLOWED_EXTENSION_ORIGINS = 'chrome-extension://<32-character-extension-id>'
 npm run broker
 ```
 
-The broker listens only on `http://127.0.0.1:47831`. Its basic health endpoint is `GET /health`.
+The broker validates this value strictly, echoes CORS only for the exact allowed origin, and continues to require its process-scoped bearer token for mutations. Requests without a browser `Origin` remain available to loopback command-line clients.
 
-To load the side panel locally, build `@orbit/web`, open Chrome's extension management page, enable developer mode, and load `web/dist` as an unpacked extension. This is a manual browser action; it has not yet been counted as a verified integration in this repository.
+To load the side panel locally, build `@orbit/web`, run `python tools/package_mv3.py` to create the reproducible package, open Chrome's extension management page, enable developer mode, and load `web/dist` as an unpacked extension. This is a manual browser action; it has not yet been counted as a verified integration in this repository.
 
 A reviewable snapshot is available at `artifacts/orbit-companion-mv3-unpacked-build.zip`; verify it against `artifacts/SHA256SUMS.txt`. It is an unpacked-development artifact, not a signed Chrome Web Store package.
 

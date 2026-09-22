@@ -101,4 +101,22 @@ export const BROKER_MIGRATIONS: readonly SqliteMigration[] = [
     },
     down(database) { database.exec('DROP TABLE decision_receipts; DROP TABLE proof_receipts; DROP TABLE source_receipts;') },
   },
+  {
+    version: 3,
+    name: 'research-points',
+    up(database) {
+      database.exec(`
+        CREATE TABLE research_points (
+          id TEXT PRIMARY KEY,
+          mission_id TEXT NOT NULL REFERENCES missions(id),
+          title TEXT NOT NULL,
+          status TEXT NOT NULL CHECK(status IN ('planned', 'active', 'complete', 'blocked')),
+          detail TEXT,
+          updated_at TEXT NOT NULL
+        ) STRICT;
+        CREATE INDEX research_points_mission_status ON research_points(mission_id, status, id);
+      `)
+    },
+    down(database) { database.exec('DROP INDEX research_points_mission_status; DROP TABLE research_points;') },
+  },
 ]

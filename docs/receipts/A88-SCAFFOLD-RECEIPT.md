@@ -19,9 +19,9 @@ State: `SUCCEEDED_WITH_EXTERNAL_BLOCKS`
 3. The initial interactive Sanity creator did not complete an authentication exchange and made no remote content change.
 4. A standalone Studio was configured locally for project `pzscx4w8`, dataset `production`.
 5. Astro was created as a separate static application under `web/`.
-6. The incomplete install produced by the interrupted creator was moved to `C:\Users\jeans\Desktop\challenge-work-hacketon\.orbit-quarantine\dev-to-challenge-20260921`; no user source file was deleted.
+6. The incomplete install produced by the interrupted creator was moved to the sibling quarantine directory `.orbit-quarantine/dev-to-challenge-20260921`; no user source file was deleted.
 7. A clean workspace install completed with `npx --yes npm@10.9.4 install --ignore-scripts --legacy-peer-deps --no-audit --no-fund`.
-8. Initial `npm test` — PASS, 3 files and 5 tests. The integrated suite now passes 6 Vitest files / 10 tests plus 5 policy-guard tests.
+8. Initial `npm test` — PASS, 3 files and 5 tests. The integrated suite now passes 8 Vitest files / 18 tests plus 5 policy-guard tests, for 23 checks total.
 9. `npm run build --workspace @orbit/web` — PASS, one static page.
 10. `npm run schema:extract --workspace @orbit/studio -- --path ..\docs\receipts\sanity-schema.json` — PASS.
 11. `npm run build --workspace @orbit/studio` — PASS.

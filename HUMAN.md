@@ -4,9 +4,16 @@ The verified local slice is safe to inspect without signing in to a provider.
 
 1. Run `npm test` from the repository root.
 2. Run `npm run build --workspace @orbit/web`.
-3. Run `npm run broker`; verify `http://127.0.0.1:47831/health` returns `status: ok`.
-4. Load `web/dist` as an unpacked Chrome extension and inspect the side panel.
-5. Treat the displayed provider states as truthful: they stay `BLOCKED_EXTERNAL` until a live integration is tested.
+3. Load `web/dist` as an unpacked Chrome extension, then copy the 32-character extension ID assigned by Chrome.
+4. In the same PowerShell session that will run the broker, allowlist that exact origin and start the broker:
+
+   ```powershell
+   $env:ORBIT_ALLOWED_EXTENSION_ORIGINS = 'chrome-extension://<32-character-extension-id>'
+   npm run broker
+   ```
+
+5. Verify `http://127.0.0.1:47831/health` returns `status: ok`, then inspect the side panel. The broker accepts browser reads only from the exact allowlisted extension origin; mutation routes additionally require the process-scoped bearer token printed when the broker starts.
+6. Treat the displayed provider states as truthful: they stay `BLOCKED_EXTERNAL` until a live integration is tested.
 
 Interactive actions that remain yours:
 

@@ -1,8 +1,10 @@
 import { defineConfig } from 'astro/config'
-import tailwind from '@astrojs/tailwind'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   output: 'static',
-  integrations: [tailwind({ applyBaseStyles: false })],
-  vite: { build: { assetsInlineLimit: 0 } },
+  vite: {
+    plugins: [tailwindcss()],
+    build: { assetsInlineLimit: 0 },
+  },
 })
