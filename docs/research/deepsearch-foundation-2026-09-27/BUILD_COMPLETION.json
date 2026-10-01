@@ -1,0 +1,12 @@
+{
+  "scope": "Completion of the initial 25-URL web foundation build; separate from the later 50-note build",
+  "job_id": "ctx-build-a22131ab-85c8-4887-8467-b657d3d3c3dd-1790526036697",
+  "status": "succeeded",
+  "completed_at": "2026-09-27T16:27:28.365Z",
+  "revision_id": "599f1fb8-038d-483e-94c4-75b5f3523652",
+  "entry_count": 27,
+  "issues_created": 3,
+  "critical_issue_count": 3,
+  "retrieval_through_orbit_tested": false,
+  "source": "Sanity Context job readback after the earlier running-status snapshot"
+}

@@ -1,0 +1,18 @@
+{
+  "observedAt": "2026-09-30T18:57:07Z",
+  "status": "partial-not-validated",
+  "modelHost": "Kaggle",
+  "browserHost": "E2B",
+  "models": ["google/gemini-3.8-flash", "google/gemini-3.1-pro-preview"],
+  "corpus": {"documents": 120, "packets": 10, "questions": 60, "realQuestionsPendingHumanReview": 24},
+  "suites": [
+    {"id":"A", "title":"Tests logiciels", "runId":"354209018", "state":"passed", "result":"59 tests réussis, zéro échec", "url":"https://www.kaggle.com/code/celebrum/orbit-cloud-software-validation"},
+    {"id":"B", "title":"Moteurs déterministes", "runId":"354204770", "state":"passed-controlled-inputs", "result":"108 évaluations et 324 invariants réussis ; 36 questions synthétiques", "url":"https://www.kaggle.com/code/celebrum/orbit-three-engines-kaggle-campaign"},
+    {"id":"C", "title":"Modèles et trois moteurs", "runId":"354204770", "state":"partial", "completed":37, "errored":23, "planned":60, "result":"37 tâches terminées sur 60 ; 23 erreurs à auditer", "url":"https://www.kaggle.com/code/celebrum/orbit-three-engines-kaggle-campaign"},
+    {"id":"D", "title":"Context contre recherche textuelle", "runId":"354223310", "state":"partial", "completed":0, "errored":24, "planned":24, "result":"Aucune trajectoire complète ; premières versions : champ absent, puis limite de tours SDK. Relance bornée également en erreur", "url":"https://www.kaggle.com/code/celebrum/orbit-live-sanity-context-comparison"},
+    {"id":"E", "title":"Agents WebMCP natifs", "runId":"354216830", "state":"partial", "completed":1, "errored":143, "planned":144, "result":"8 navigateurs et 15 outils natifs précontrôlés ; 1 trajectoire terminée, 143 erreurs. Limite SDK et refus de quota Pro observés", "url":"https://www.kaggle.com/code/celebrum/orbit-native-webmcp-agent-campaign"}
+  ],
+  "credentials": {"type":"ephemeral-mission-access-only", "retired":8, "denialVerified":"HTTP 401", "accountE2BKeyEmbedded":false},
+  "evidence":"Kaggle result UI readback; raw Suite D v1 ZIP archived with SHA256 63a6d9d8667e3568be80b52b405f26c7db573bed23be5ecf326f813226c86b98",
+  "limitations":["Notebooks currently private; links require owner access.","Completed task counts are not semantic accuracy scores.","No winning engine selected.","No scientific advantage established.","Final raw outputs and human source review remain pending.","Historical Antigravity pilots are separate from this Kaggle-only campaign."]
+}

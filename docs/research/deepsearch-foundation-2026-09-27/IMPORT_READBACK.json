@@ -1,0 +1,190 @@
+{
+  "at": "2026-09-27T16:01:32.392Z",
+  "totalWebsiteSources": 25,
+  "items": [
+    {
+      "id": "DS01",
+      "url": "https://developers.openai.com/api/docs/guides/deep-research",
+      "status": "complete",
+      "sourceCount": 1,
+      "detail": "Partial. Crawl page limit reached",
+      "error": null
+    },
+    {
+      "id": "DS02",
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "status": "complete",
+      "sourceCount": 1,
+      "detail": "Partial. Crawl page limit reached",
+      "error": null
+    },
+    {
+      "id": "DS03",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "status": "complete",
+      "sourceCount": 1,
+      "detail": "Partial. Crawl page limit reached",
+      "error": null
+    },
+    {
+      "id": "DS04",
+      "url": "https://arxiv.org/abs/2402.14207",
+      "status": "complete",
+      "sourceCount": 1,
+      "detail": "Partial. Crawl page limit reached",
+      "error": null
+    },
+    {
+      "id": "DS05",
+      "url": "https://ai.google.dev/gemini-api/docs/deep-research",
+      "status": "complete",
+      "sourceCount": 1,
+      "detail": "Partial. Crawl page limit reached",
+      "error": null
+    },
+    {
+      "id": "DS06",
+      "url": "https://exa.ai/docs/reference/search",
+      "status": "complete",
+      "sourceCount": 1,
+      "detail": "Partial. Crawl page limit reached",
+      "error": null
+    },
+    {
+      "id": "DS07",
+      "url": "https://exa.ai/docs/reference/contents",
+      "status": "complete",
+      "sourceCount": 0,
+      "detail": null,
+      "error": null
+    },
+    {
+      "id": "DS08",
+      "url": "https://exa.ai/docs/reference/search-api-guide-for-coding-agents",
+      "status": "complete",
+      "sourceCount": 0,
+      "detail": null,
+      "error": null
+    },
+    {
+      "id": "DS09",
+      "url": "https://ai.google.dev/gemini-api/docs/interactions/google-search",
+      "status": "complete",
+      "sourceCount": 0,
+      "detail": null,
+      "error": null
+    },
+    {
+      "id": "DS10",
+      "url": "https://docs.firecrawl.dev/features/map",
+      "status": "complete",
+      "sourceCount": 1,
+      "detail": "Partial. Crawl page limit reached",
+      "error": null
+    },
+    {
+      "id": "DS11",
+      "url": "https://docs.firecrawl.dev/features/scrape",
+      "status": "complete",
+      "sourceCount": 1,
+      "detail": "Partial. Crawl page limit reached",
+      "error": null
+    },
+    {
+      "id": "DS12",
+      "url": "https://docs.firecrawl.dev/features/crawl",
+      "status": "complete",
+      "sourceCount": 1,
+      "detail": "Partial. Crawl page limit reached",
+      "error": null
+    },
+    {
+      "id": "DS13",
+      "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+      "status": "complete",
+      "sourceCount": 1,
+      "detail": "Partial. Crawl page limit reached",
+      "error": null
+    },
+    {
+      "id": "DS14",
+      "url": "https://developers.openalex.org/api-reference/works",
+      "status": "complete",
+      "sourceCount": 0,
+      "detail": null,
+      "error": null
+    },
+    {
+      "id": "DS15",
+      "url": "https://www.semanticscholar.org/product/api",
+      "status": "complete",
+      "sourceCount": 1,
+      "detail": "Partial. Crawl page limit reached",
+      "error": null
+    },
+    {
+      "id": "DS16",
+      "url": "https://www.prisma-statement.org/prisma-2020-flow-diagram",
+      "status": "complete",
+      "sourceCount": 1,
+      "detail": "Partial. Crawl page limit reached",
+      "error": null
+    },
+    {
+      "id": "DS17",
+      "url": "https://www.w3.org/TR/prov-dm/",
+      "status": "complete",
+      "sourceCount": 1,
+      "detail": "Partial. Crawl page limit reached",
+      "error": null
+    },
+    {
+      "id": "DS18",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+      "status": "blocked_website_source_limit",
+      "sourceCount": 0
+    },
+    {
+      "id": "DS19",
+      "url": "https://www.rfc-editor.org/rfc/rfc9309.html",
+      "status": "blocked_website_source_limit",
+      "sourceCount": 0
+    },
+    {
+      "id": "DS20",
+      "url": "https://www.sanity.io/docs/ai/sanity-context-resolve-issues",
+      "status": "blocked_website_source_limit",
+      "sourceCount": 0
+    },
+    {
+      "id": "DS21",
+      "url": "https://www.sanity.io/docs/ai/sanity-context-maintain-knowledge-base",
+      "status": "blocked_website_source_limit",
+      "sourceCount": 0
+    },
+    {
+      "id": "DS22",
+      "url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_precision/",
+      "status": "blocked_website_source_limit",
+      "sourceCount": 0
+    },
+    {
+      "id": "DS23",
+      "url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_recall/",
+      "status": "blocked_website_source_limit",
+      "sourceCount": 0
+    },
+    {
+      "id": "DS24",
+      "url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/",
+      "status": "blocked_website_source_limit",
+      "sourceCount": 0
+    },
+    {
+      "id": "DS25",
+      "url": "https://aclanthology.org/2023.emnlp-main.398/",
+      "status": "blocked_website_source_limit",
+      "sourceCount": 0
+    }
+  ]
+}

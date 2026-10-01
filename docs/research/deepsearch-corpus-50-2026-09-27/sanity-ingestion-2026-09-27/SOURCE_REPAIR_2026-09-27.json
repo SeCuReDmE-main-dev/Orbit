@@ -1,0 +1,57 @@
+{
+  "kb": "kb5CHIYGXCMJ",
+  "reason": "Address source coverage gaps without standing instructions",
+  "submitted": [
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/zdr",
+      "jobId": "ctx-ingest-3d56e0b5-69da-457e-bd70-d8e9a93e4bb4"
+    },
+    {
+      "url": "https://openai.com/index/designing-agents-to-resist-prompt-injection/",
+      "jobId": "ctx-ingest-8455eea3-ab5d-41d2-806f-1cce96cb5589"
+    },
+    {
+      "url": "https://www.anthropic.com/research/prompt-injection-defenses",
+      "jobId": "ctx-ingest-9f2fdbb7-2a03-4956-9789-cfcc823264d9"
+    }
+  ],
+  "verified": [
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/zdr",
+      "importId": "3d56e0b5-69da-457e-bd70-d8e9a93e4bb4",
+      "sourceId": "0050fdee-0702-4079-84bc-b1e397562983",
+      "bytes": 8345,
+      "characters": 8240,
+      "hasMarker": true
+    },
+    {
+      "url": "https://openai.com/index/designing-agents-to-resist-prompt-injection/",
+      "importId": "8455eea3-ab5d-41d2-806f-1cce96cb5589",
+      "sourceId": "5cab3d3f-d45f-413f-b961-feb3d92afe33",
+      "bytes": 10939,
+      "characters": 10880,
+      "hasMarker": true
+    },
+    {
+      "url": "https://www.anthropic.com/research/prompt-injection-defenses",
+      "importId": "9f2fdbb7-2a03-4956-9789-cfcc823264d9",
+      "sourceId": "7cfb4431-0160-44d3-aa12-c0b366fec57e",
+      "bytes": 7866,
+      "characters": 7835,
+      "hasMarker": true
+    }
+  ],
+  "buildJobId": "ctx-build-a22131ab-85c8-4887-8467-b657d3d3c3dd-1790529881686",
+  "buildSubmittedAt": "2026-09-27T17:24:41.093Z",
+  "firstBuildRevisionId": "f45551a0-f56d-49fa-9052-a8ed72ab32f0",
+  "comparisonSource": {
+    "file": "GOOGLE_DEEP_RESEARCH_ZDR_SOURCE_COMPARISON.md",
+    "importJobId": "ctx-ingest-b08594ef-d025-428e-8ee1-83662f728fa8",
+    "sourceId": "853686c6-ac21-4eb5-bf6c-6d3ef5fae135",
+    "extractedCharacters": 1911
+  },
+  "secondBuildJobId": "ctx-build-a22131ab-85c8-4887-8467-b657d3d3c3dd-1790530775548",
+  "secondBuildRevisionId": "399ba269-0c48-4228-8718-30b8b493218c",
+  "secondBuildEntryCount": 30,
+  "secondBuildOpenIssueCount": 5
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "host": "scripted early-initialize regression over real native WebMCP",
+  "autonomousAgent": false,
+  "modelCalls": 0,
+  "nativeTools": 15,
+  "privateQuestionState": "CONSENT_REQUIRED",
+  "durationSeconds": 4.485
+}

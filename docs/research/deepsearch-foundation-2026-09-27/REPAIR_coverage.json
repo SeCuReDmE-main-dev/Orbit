@@ -1,0 +1,202 @@
+[
+  {
+    "url": "https://www.sanity.io/docs/ai/sanity-context",
+    "matched": 1,
+    "bytes": 8376,
+    "sources": [
+      "ebfeb39b-5a13-461b-9b64-4581af116fdf"
+    ]
+  },
+  {
+    "url": "https://www.sanity.io/docs/ai/sanity-context-knowledge-bases",
+    "matched": 1,
+    "bytes": 7920,
+    "sources": [
+      "74d675dd-517b-42d3-ad74-80cd3a8b5814"
+    ]
+  },
+  {
+    "url": "https://www.sanity.io/docs/ai/sanity-context-source-types",
+    "matched": 1,
+    "bytes": 4854,
+    "sources": [
+      "367d7288-2c11-4dd7-9f07-8793711247d4"
+    ]
+  },
+  {
+    "url": "https://www.sanity.io/docs/ai/sanity-context-create-knowledge-base",
+    "matched": 1,
+    "bytes": 6340,
+    "sources": [
+      "dd1abf0c-bf9f-4edd-a879-c1a7721a1008"
+    ]
+  },
+  {
+    "url": "https://www.sanity.io/docs/ai/sanity-context-resolve-issues",
+    "matched": 1,
+    "bytes": 5707,
+    "sources": [
+      "26784981-c12a-4912-aa7b-8f9fab118fec"
+    ]
+  },
+  {
+    "url": "https://www.sanity.io/docs/ai/sanity-context-maintain-knowledge-base",
+    "matched": 1,
+    "bytes": 5092,
+    "sources": [
+      "ff881e6e-9ae7-482c-9429-f971d977bfdd"
+    ]
+  },
+  {
+    "url": "https://www.sanity.io/docs/astro-quickstart/setting-up-your-studio",
+    "matched": 1,
+    "bytes": 2453,
+    "sources": [
+      "f4349976-71da-4296-b35d-6ca76f14668f"
+    ]
+  },
+  {
+    "url": "https://www.sanity.io/docs/studio/schema-types",
+    "matched": 1,
+    "bytes": 12193,
+    "sources": [
+      "f1c164a8-220e-4a4f-bb85-c6725607dfe1"
+    ]
+  },
+  {
+    "url": "https://www.sanity.io/docs/content-lake/how-queries-work",
+    "matched": 1,
+    "bytes": 29219,
+    "sources": [
+      "3e344a70-a165-4b42-8b33-568fb740be8a"
+    ]
+  },
+  {
+    "url": "https://exa.ai/docs/reference/search",
+    "matched": 1,
+    "bytes": 33243,
+    "sources": [
+      "6f788d92-f5c8-4339-a367-bf41ba25fd8d"
+    ]
+  },
+  {
+    "url": "https://exa.ai/docs/contents/quickstart",
+    "matched": 1,
+    "bytes": 11012,
+    "sources": [
+      "016bbda1-e308-4884-8da5-35324e1e6115"
+    ]
+  },
+  {
+    "url": "https://exa.ai/docs/search/quickstart",
+    "matched": 1,
+    "bytes": 18138,
+    "sources": [
+      "0aff348b-8fc0-4922-b994-4973f98aa85f"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/map",
+    "matched": 1,
+    "bytes": 8931,
+    "sources": [
+      "705d78f3-867e-4654-81f5-1854602986b1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/scrape",
+    "matched": 1,
+    "bytes": 50848,
+    "sources": [
+      "8294c7f7-14c3-4dc8-85c1-f9a6e8bfec88"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/crawl",
+    "matched": 1,
+    "bytes": 31165,
+    "sources": [
+      "5ce92400-e51a-4a20-8867-be09f2347777"
+    ]
+  },
+  {
+    "url": "https://developers.openai.com/api/docs/guides/deep-research",
+    "matched": 1,
+    "bytes": 59618,
+    "sources": [
+      "50f0ca8f-ee57-4abb-8162-ea484f085f66"
+    ]
+  },
+  {
+    "url": "https://ai.google.dev/gemini-api/docs/deep-research",
+    "matched": 1,
+    "bytes": 102380,
+    "sources": [
+      "94e0e2bb-39cc-4d3d-a13d-557971a309ee"
+    ]
+  },
+  {
+    "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+    "matched": 1,
+    "bytes": 28007,
+    "sources": [
+      "65df610b-6f81-4726-b070-2f120e154172"
+    ]
+  },
+  {
+    "url": "https://ai.google.dev/gemini-api/docs/google-search",
+    "matched": 1,
+    "bytes": 22872,
+    "sources": [
+      "3928ba4c-7838-41ae-b0d1-705227371f54"
+    ]
+  },
+  {
+    "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+    "matched": 1,
+    "bytes": 14520,
+    "sources": [
+      "d5bfcb51-4743-465c-a9e8-726c7c990a00"
+    ]
+  },
+  {
+    "url": "https://help.openalex.org/data/works/",
+    "matched": 1,
+    "bytes": 4812,
+    "sources": [
+      "3bffe9ec-9d83-4ee5-92e8-670e1301d84d"
+    ]
+  },
+  {
+    "url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_precision/",
+    "matched": 1,
+    "bytes": 12284,
+    "sources": [
+      "636354e1-fb90-409c-a73e-e17347dff5e2"
+    ]
+  },
+  {
+    "url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_recall/",
+    "matched": 1,
+    "bytes": 8601,
+    "sources": [
+      "11abdd29-a4aa-4d5e-9fcd-1ed4cf09bf20"
+    ]
+  },
+  {
+    "url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/",
+    "matched": 1,
+    "bytes": 8634,
+    "sources": [
+      "37ffa75e-3d13-46e8-bdad-350d64d1f0fc"
+    ]
+  },
+  {
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+    "matched": 1,
+    "bytes": 28913,
+    "sources": [
+      "cc0efad1-7238-4608-aecf-e2af05b747a8"
+    ]
+  }
+]

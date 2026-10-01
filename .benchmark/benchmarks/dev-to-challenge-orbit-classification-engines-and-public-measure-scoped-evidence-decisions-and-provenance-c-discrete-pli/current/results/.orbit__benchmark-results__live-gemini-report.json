@@ -1,0 +1,24 @@
+{
+  "release": "572a006d018a68df49a5b287",
+  "files": [
+    {
+      "path": "/benchmark/",
+      "status": 200,
+      "bytes": 13316,
+      "sha256": "a0506105d3c9cb97d98a7bf2924e19cf59e0f9329a4f1a7c480b117078e8ba16"
+    },
+    {
+      "path": "/benchmark/orbit-pilot-report.pdf",
+      "status": 200,
+      "bytes": 84517,
+      "sha256": "d3c7b833ef7a5936ce14a4c1609c6c5d9feaeb7098c7cc1508ac14a900024447"
+    },
+    {
+      "path": "/benchmark/pilot-results.csv",
+      "status": 200,
+      "bytes": 403,
+      "sha256": "7796fa9fd8a28f52b3c803791237a320d786d4493141558e671ac868092f5298"
+    }
+  ],
+  "readbackExact": true
+}

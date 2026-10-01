@@ -1,0 +1,64 @@
+{
+  "title": "Orbit — jouer, comprendre, transmettre",
+  "language": "fr-CA",
+  "edition": "2026-09-30 / 2.1.6",
+  "author": "Jean-Sébastien Beaulieu — support préparé avec Codex",
+  "master_markdown": "C:\\Users\\jeans\\Desktop\\challenge-work-hacketon\\dev.to-challenge\\docs\\learning\\orbit-atom-guide-2026-09-30\\MASTER_MANUSCRIPT.md",
+  "readiness": "review-ready",
+  "built": {
+    "markdown": "MASTER_MANUSCRIPT.md",
+    "docx": "book.docx",
+    "latex": "book.tex",
+    "pdf": "book.pdf"
+  },
+  "not_requested": [
+    "epub",
+    "podcast",
+    "audio",
+    "external-publication"
+  ],
+  "blockers": [],
+  "release": {
+    "packagePath": "C:\\Users\\jeans\\Desktop\\challenge-work-hacketon\\dev.to-challenge\\.orbit\\releases\\orbit-atom-20261001T014003Z.zip",
+    "sha256": "12340fd4bda703070fd7de18760e6c1fd9ada22c2ebef8b07c387c22fdd25931",
+    "releaseId": "orbit-atom-20261001T014003Z",
+    "files": 440
+  },
+  "sources": [
+    {
+      "path": "C:\\Users\\jeans\\Desktop\\challenge-work-hacketon\\dev.to-challenge\\web\\src\\lib\\atom-playground.ts",
+      "sha256": "d17bcdd556105a49d44d827eb59bd1ffca09340d557dc9fd5b443733e2ae3b59",
+      "status": "inspected"
+    },
+    {
+      "path": "C:\\Users\\jeans\\Desktop\\challenge-work-hacketon\\dev.to-challenge\\web\\src\\lib\\atom-scene.ts",
+      "sha256": "d1122a096ee46db5df0387e79ef26d633831bc85d2385bc5a6949d64abbc1635",
+      "status": "inspected"
+    },
+    {
+      "path": "C:\\Users\\jeans\\Desktop\\challenge-work-hacketon\\dev.to-challenge\\web\\src\\components\\LandingExperience.astro",
+      "sha256": "fc624b2be12d8628a0c79e11f11388602325102dfba15d2b59e32b8eb7c91986",
+      "status": "inspected"
+    },
+    {
+      "path": "C:\\Users\\jeans\\Desktop\\challenge-work-hacketon\\dev.to-challenge\\web\\src\\styles\\atom-games.css",
+      "sha256": "4b462de7d07db76b3a03e1e55f417e0389012e1ab617713c2f2e9c4e070d95a5",
+      "status": "inspected"
+    },
+    {
+      "path": "C:\\Users\\jeans\\Desktop\\challenge-work-hacketon\\dev.to-challenge\\web\\src\\lib\\landing-preferences.ts",
+      "sha256": "987ef67821b3185e6f0a49831cd3d652525c43151302246dfa147a8867a53230",
+      "status": "inspected"
+    },
+    {
+      "path": "C:\\Users\\jeans\\Desktop\\challenge-work-hacketon\\dev.to-challenge\\packages\\ui-preferences\\src\\index.ts",
+      "sha256": "5e67d8b3d88628a86c9298113f48cc41507635a001e7e84535fa77043a12c764",
+      "status": "inspected"
+    },
+    {
+      "path": "C:\\Users\\jeans\\Desktop\\challenge-work-hacketon\\dev.to-challenge\\docs\\learning\\orbit-atom-guide-2026-09-30\\validation.json",
+      "sha256": "361bcba382b021cf14521a350a574848a037bf579cb960244543c2bfc8cd4018",
+      "status": "observed"
+    }
+  ]
+}

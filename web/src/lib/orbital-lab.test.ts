@@ -2,34 +2,13 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 
 const { renderSpy } = vi.hoisted(() => ({ renderSpy: vi.fn() }))
 
-vi.mock('three', () => {
-  class Geometry { dispose(): void {} }
-  class Material { dispose(): void {} }
-  class Mesh {
-    position = { set: vi.fn() }
-    rotation = { y: 0 }
-    constructor(public geometry: Geometry, public material: Material) {}
-  }
-
-  return {
-    AmbientLight: class {},
-    BoxGeometry: Geometry,
-    Mesh,
-    MeshStandardMaterial: Material,
-    PerspectiveCamera: class {
-      aspect = 1
-      position = { set: vi.fn() }
-      lookAt(): void {}
-      updateProjectionMatrix(): void {}
-    },
-    Scene: class { add(): void {} },
-    SphereGeometry: Geometry,
-    WebGLRenderer: class {
-      dispose(): void {}
-      render = renderSpy
-      setSize(): void {}
-    },
-  }
+vi.mock('three', async importOriginal => {
+  const actual = await importOriginal<typeof import('three')>()
+  return { ...actual, WebGLRenderer: class {
+    dispose(): void {}
+    render = renderSpy
+    setSize(): void {}
+  } }
 })
 
 import { mountOrbitalLab } from './orbital-lab'
@@ -56,6 +35,8 @@ describe('orbital lab visibility handling', () => {
       return 1
     }))
     vi.stubGlobal('cancelAnimationFrame', vi.fn())
+    let intersection: ((entries: { isIntersecting: boolean }[]) => void) | undefined
+    vi.stubGlobal('IntersectionObserver', class { constructor(callback: typeof intersection) { intersection = callback }; observe(): void {}; disconnect(): void {} })
     vi.stubGlobal('ResizeObserver', class { observe(): void {}; disconnect(): void {} })
     vi.stubGlobal('localStorage', { getItem: () => null, removeItem: vi.fn(), setItem: vi.fn() })
     vi.stubGlobal('window', {
@@ -73,8 +54,8 @@ describe('orbital lab visibility handling', () => {
     const dispose = mountOrbitalLab({
       canvas: { clientHeight: 300, clientWidth: 600, hidden: false },
       status: { textContent: '' },
-      altitudeInput: { value: '400' },
-      speedInput: { value: '1' },
+      altitudeInput: { ...button(), value: '400' },
+      speedInput: { ...button(), value: '1' },
       pauseButton: button(),
       resetButton: button(),
       telemetry,
@@ -94,6 +75,18 @@ describe('orbital lab visibility handling', () => {
     expect(renderSpy).toHaveBeenCalledTimes(2)
     expect(telemetry.textContent).toContain('elapsed 0 s')
 
+    intersection?.([{ isIntersecting: false }])
+    scheduledFrame?.(20_000)
+    expect(renderSpy).toHaveBeenCalledTimes(2)
+    expect(telemetry.textContent).toContain('elapsed 0 s')
+    now = 20_000
+    intersection?.([{ isIntersecting: true }])
+    // Browser rAF timestamps can precede the observer's performance.now().
+    expect(() => scheduledFrame?.(19_999)).not.toThrow()
+    expect(telemetry.textContent).toContain('elapsed 0 s')
+    scheduledFrame?.(20_050)
+    expect(renderSpy).toHaveBeenCalledTimes(4)
+    expect(telemetry.textContent).toContain('elapsed 2 s')
     dispose()
   })
 })

@@ -1,0 +1,35 @@
+<section class="companion-console-slot" aria-label="Conversation avec Orbit">
+  <div class="companion-answer" data-companion-answer role="region" aria-label="Réponse du compagnon" aria-live="polite">Quel sujet souhaitez-vous comprendre ? Et qu’aimeriez-vous pouvoir en faire ?</div>
+  <form data-companion-form>
+    <label class="companion-label" for="companion-question">Votre question</label>
+    <textarea id="companion-question" rows="3" maxlength="2000" required placeholder="Une question, une intuition, quelque chose à explorer…"></textarea>
+    <details class="conversation-fold">
+      <summary>Ajouter du contexte <span aria-hidden="true">+</span></summary>
+      <label class="companion-label" for="companion-context">Extrait, lien ou précision</label>
+      <textarea id="companion-context" rows="3" maxlength="12000" placeholder="Collez un extrait et son adresse source."></textarea>
+      <button type="button" class="text-button" data-capture-page>Capturer la page avec l’extension ↗</button>
+      <p class="conversation-note">Sur le site, collez le contexte. Dans le panneau, cliquez d’abord sur l’icône Orbit de la page à capturer.</p>
+    </details>
+    <details class="conversation-fold">
+      <summary>Connexion et profondeur de recherche <span aria-hidden="true">+</span></summary>
+      <label class="companion-label" for="companion-route">Agent qui répond</label>
+      <select id="companion-route"><option value="external">Mon agent WebMCP dans le navigateur</option><option value="codex">Mon compte Codex via l’extension locale</option></select>
+      <button type="button" class="text-button" data-companion-connect>Vérifier ma connexion Codex ↗</button>
+      <label class="companion-consent"><input id="research-consent" type="checkbox" /> Activer la recherche NASA : neuf axes et jusqu’à six recherches Exa via Codex. Cette action utilise mon compte et mes crédits Exa.</label>
+      <p class="conversation-note">Gemini et Copilot restent à connecter. Le compte Orbit est indépendant de ces comptes IA.</p>
+    </details>
+    <label class="companion-consent"><input id="companion-consent" type="checkbox" required /> Transmettre cette question, le contexte choisi, les références et la dernière réponse à mon agent.</label>
+    <label class="companion-consent"><input id="webmcp-consent" type="checkbox" /> Autoriser mon agent WebMCP à lire cet espace. Décocher révoque le partage.</label>
+    <label class="companion-consent"><input id="webmcp-present-consent" type="checkbox" /> Autoriser cet agent à déposer sa réponse et ses sources dans cette mission, sans activer la voix.</label>
+    <div class="conversation-send"><span class="conversation-presence"><i></i> À votre rythme.</span><button type="submit" class="primary-action" data-companion-submit>Envoyer <span aria-hidden="true">↗</span></button></div>
+  </form>
+  <p data-companion-status class="status-line" role="status">Choisissez votre agent avant d’envoyer. Aucun appel n’est lancé automatiquement.</p>
+  <div class="conversation-utilities"><a class="text-button" data-google-search href="https://www.google.com" target="_blank" rel="noopener noreferrer">Ouvrir Google ↗</a><button class="text-button" type="button" data-report-download>Emporter le rapport ↓</button></div>
+</section>
+<style>
+.companion-console-slot{width:100%;padding:0;margin:0;color:#dce8dc}.companion-answer{white-space:pre-wrap;overflow-wrap:anywhere;max-height:27vh;overflow:auto;padding:0 0 24px;color:#bdcfbc;font:400 17px/1.75 Georgia,serif}.companion-console-slot form{background:#17271fbb;border:1px solid #a6c3ac35;border-radius:12px;padding:20px}.companion-label{display:block;color:#bacdbd;font-size:11px;letter-spacing:.025em;margin:0 0 8px}.companion-console-slot textarea,.companion-console-slot select{display:block;width:100%;box-sizing:border-box;border:1px solid #89a88c38;border-radius:5px;background:#0d1a12aa;color:#e7ede2;padding:12px;font:13px/1.7 'Segoe UI',system-ui,sans-serif;resize:vertical}.companion-console-slot textarea::placeholder{color:#8ba28f}.companion-console-slot #companion-question{border:0;background:none;padding:0;font-size:16px;min-height:80px;max-height:24vh}.conversation-fold{border-top:1px solid #abc4ac22;padding:11px 0;color:#aec4af}.conversation-fold summary{display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:12px;list-style:none}.conversation-fold summary::-webkit-details-marker{display:none}.conversation-fold[open] summary{margin-bottom:18px}.conversation-fold[open] summary span{transform:rotate(45deg)}.conversation-note{font-size:10px;line-height:1.7;color:#91ab95;margin:4px 0 0}.companion-consent{display:flex;align-items:flex-start;gap:9px;color:#aec3b0;font-size:11px;line-height:1.6;margin:12px 0}.companion-consent input{flex-shrink:0;width:14px;height:14px;padding:0;margin:3px 0 0;accent-color:#a5c594}.conversation-send{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px}.conversation-presence{color:#95b69b;font-size:10px;display:flex;gap:7px;align-items:center}.conversation-presence i{display:block;width:4px;height:4px;background:#a0c193;border-radius:50%}.conversation-utilities{display:flex;justify-content:space-between;gap:15px;border-top:1px solid #a6c3ac20;margin-top:16px;padding-top:6px}.conversation-utilities .text-button{font-size:10px;color:#9bb29e}.companion-console-slot>.status-line{font-size:11px;line-height:1.6;margin:12px 0}.conversation-fold .text-button{font-size:11px}.companion-console-slot :focus-visible{outline:2px solid #b5d7b1;outline-offset:3px}@media(max-width:600px){.companion-console-slot form{padding:16px}.companion-answer{max-height:40vh;font-size:16px}.companion-consent{font-size:11px}}
+</style>
+<script>
+  import { mountCompanionConsole } from '../lib/companion-console'
+  mountCompanionConsole()
+</script>

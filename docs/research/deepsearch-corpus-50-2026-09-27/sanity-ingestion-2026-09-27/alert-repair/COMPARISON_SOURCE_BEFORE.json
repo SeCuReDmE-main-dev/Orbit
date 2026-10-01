@@ -1,0 +1,59 @@
+{
+  "import": {
+    "id": "b08594ef-d025-428e-8ee1-83662f728fa8",
+    "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+    "name": "GOOGLE_DEEP_RESEARCH_ZDR_SOURCE_COMPARISON.md",
+    "sizeBytes": 1911,
+    "status": "complete",
+    "sourceKind": "file",
+    "lastCheckedAt": null,
+    "sourceCount": 1,
+    "totalDistillableCount": 1,
+    "distilledCount": 1,
+    "unsupportedCount": 0,
+    "statusDetail": null,
+    "error": null,
+    "crawlOptions": null,
+    "datasetSource": null,
+    "createdBy": {
+      "id": "gtuNb4s8T",
+      "displayName": "Jean-Sebastien Beaulieu"
+    },
+    "createdAt": "2026-09-27T17:39:14.269Z",
+    "completedAt": null
+  },
+  "sources": [
+    {
+      "source": {
+        "id": "853686c6-ac21-4eb5-bf6c-6d3ef5fae135",
+        "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+        "filename": "GOOGLE_DEEP_RESEARCH_ZDR_SOURCE_COMPARISON.md",
+        "kind": "file",
+        "sizeBytes": 1911,
+        "status": "ready",
+        "tldr": "Gemini Developer API Deep Research agent requires `store=True` for background execution, which conflicts with the `store=false` requirement for zero-data-footprint compliance; the same interaction cannot satisfy both constraints simultaneously.",
+        "topics": [
+          "gemini api",
+          "deep research",
+          "zero data retention",
+          "data storage requirements",
+          "interactions api"
+        ],
+        "canonicalUrl": null,
+        "externalId": null,
+        "fetchedAt": null,
+        "distilledAt": "2026-09-27T17:39:16.293Z",
+        "createdAt": "2026-09-27T17:39:16.322Z"
+      },
+      "body": {
+        "sourceId": "853686c6-ac21-4eb5-bf6c-6d3ef5fae135",
+        "content": "# Gemini Developer API Deep Research and zero-data footprint\n\nDocument status: dated source comparison by Orbit, 2026-09-27. This is not a Google policy document and is not an instruction to an agent. It connects two separate official Google documents; each claim should be checked against the linked primary page when used.\n\n## Deep Research agent requirement\n\nSource: https://ai.google.dev/gemini-api/docs/deep-research\n\nThe Gemini Developer API Deep Research agent runs as a background interaction. Google's documentation says that background execution requires `store=True`. This is a requirement of this specific agent path, not a claim about every Gemini model invocation.\n\n## Zero-data-footprint condition\n\nSource: https://ai.google.dev/gemini-api/docs/zdr\n\nGoogle's Zero Data Retention documentation says that for the Interactions API, `store=false` is required for zero-data footprint. The page also describes separate exceptions and data handling for tools such as Google Search grounding; those must be assessed separately.\n\n## Scope of the comparison\n\nFor this Gemini Developer API Deep Research agent path, the documented `store=True` requirement and the documented `store=false` condition for zero-data footprint cannot both hold for the same interaction. Therefore, do not claim that this path meets a strict zero-data-footprint requirement. This comparison does not establish a blanket rule for all Google research products or account agreements. Verify the provider's current terms and the selected tools before asserting retention properties.\n\nFor comparison only: OpenAI's Deep Research guide at https://developers.openai.com/api/docs/guides/deep-research states its background mode is incompatible with strict Zero Data Retention because of temporary polling storage. OpenAI's implementation and contractual terms are distinct from Google's; do not treat them as the same underlying policy.\n",
+        "totalLines": 22,
+        "slice": {
+          "start": 1,
+          "end": 22
+        }
+      }
+    }
+  ]
+}

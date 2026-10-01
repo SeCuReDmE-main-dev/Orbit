@@ -1,0 +1,808 @@
+{
+  "at": "2026-09-27T19:20:31.207Z",
+  "originalMethodologyCount": 50,
+  "originalMethodologyPresent": 50,
+  "missing": [],
+  "sourceRecords": 82,
+  "sourceKinds": {
+    "web": 29,
+    "file": 53
+  },
+  "imports": [
+    {
+      "id": "003f0b32-c8dc-42be-99a1-27e52f59d898",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://www.sanity.io/docs/studio/schema-types",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T16:18:56.754Z",
+      "completedAt": null
+    },
+    {
+      "id": "1c5c4b46-4bd3-4686-a72a-fc471aba9224",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://www.sanity.io/docs/ai/sanity-context",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T15:14:12.655Z",
+      "completedAt": null
+    },
+    {
+      "id": "3967cf12-969b-45ff-8182-f177b3af399d",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 4,
+      "distilledCount": 5,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T15:58:08.503Z",
+      "completedAt": null
+    },
+    {
+      "id": "3a3ef054-7eef-418d-82bd-668cf0731eed",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://ai.google.dev/gemini-api/docs/deep-research",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 3,
+      "distilledCount": 4,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T15:58:09.409Z",
+      "completedAt": null
+    },
+    {
+      "id": "3d3276da-b7c5-4805-a471-9ba4b08f3a8f",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://developers.openai.com/api/docs/guides/deep-research",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 3,
+      "distilledCount": 4,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T15:58:07.964Z",
+      "completedAt": null
+    },
+    {
+      "id": "3d56e0b5-69da-457e-bd70-d8e9a93e4bb4",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://ai.google.dev/gemini-api/docs/zdr",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": null,
+      "error": null,
+      "crawlOptions": {
+        "ignoreQueryParameters": true
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T17:23:58.181Z",
+      "completedAt": null
+    },
+    {
+      "id": "519f2ec3-b166-47bd-bc4f-7b08fecf8af2",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://www.sanity.io/docs/ai/sanity-context-knowledge-bases",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T15:15:20.749Z",
+      "completedAt": null
+    },
+    {
+      "id": "55b4a2cf-5ddf-49fa-a8c1-c873e97975d7",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://exa.ai/docs",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 3,
+      "totalDistillableCount": 3,
+      "distilledCount": 3,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "includePaths": [
+          "^/docs/?$",
+          "^/docs/reference/search/?$",
+          "^/docs/contents/quickstart/?$",
+          "^/docs/search/quickstart/?$"
+        ],
+        "maxDepth": 3,
+        "ignoreQueryParameters": true,
+        "pageLimit": 4
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T16:17:33.105Z",
+      "completedAt": null
+    },
+    {
+      "id": "65786aa1-24ab-472f-bf11-5a2a9a3d69b5",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T15:58:11.476Z",
+      "completedAt": null
+    },
+    {
+      "id": "67d1af48-159b-4f43-bc78-543df87b5fc3",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 3,
+      "totalDistillableCount": 3,
+      "distilledCount": 3,
+      "unsupportedCount": 0,
+      "statusDetail": null,
+      "error": null,
+      "crawlOptions": {
+        "includePaths": [
+          "^/en/stable/concepts/metrics/available_metrics/?$",
+          "^/en/stable/concepts/metrics/available_metrics/(context_precision|context_recall|faithfulness)/?$"
+        ],
+        "maxDepth": 2,
+        "ignoreQueryParameters": true,
+        "pageLimit": 4
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T16:19:49.453Z",
+      "completedAt": null
+    },
+    {
+      "id": "753457e5-de3d-4547-aeef-3a7bfc83c8da",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "GOOGLE_CLOUD_GROUNDING_PRIMARY_RETENTION.md",
+      "sizeBytes": 5101,
+      "status": "complete",
+      "sourceKind": "file",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": null,
+      "error": null,
+      "crawlOptions": null,
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T19:11:07.693Z",
+      "completedAt": null
+    },
+    {
+      "id": "7d3326c7-1630-4e13-aef5-e005f71c6550",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://www.sanity.io/docs/ai/sanity-context-resolve-issues",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T16:18:56.003Z",
+      "completedAt": null
+    },
+    {
+      "id": "8455eea3-ab5d-41d2-806f-1cce96cb5589",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://openai.com/index/designing-agents-to-resist-prompt-injection/",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": null,
+      "error": null,
+      "crawlOptions": {
+        "ignoreQueryParameters": true
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T17:23:58.783Z",
+      "completedAt": null
+    },
+    {
+      "id": "907adad8-c1fb-4d2f-b572-de4dfde4e471",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://www.sanity.io/docs/content-lake/how-queries-work",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T16:18:57.142Z",
+      "completedAt": null
+    },
+    {
+      "id": "95fdc94c-a1e3-446c-8ead-f8d0feb01ebc",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://help.openalex.org/data/works/",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T16:18:57.580Z",
+      "completedAt": null
+    },
+    {
+      "id": "96dbeff7-bbad-421e-b48c-1702c46756a4",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "orbit-methodology-other-49.zip",
+      "sizeBytes": 49129,
+      "status": "complete",
+      "sourceKind": "file",
+      "lastCheckedAt": null,
+      "sourceCount": 49,
+      "totalDistillableCount": 49,
+      "distilledCount": 49,
+      "unsupportedCount": 0,
+      "statusDetail": null,
+      "error": null,
+      "crawlOptions": null,
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T16:58:55.128Z",
+      "completedAt": null
+    },
+    {
+      "id": "99ec8180-7769-4843-ade5-95ab3ef25697",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://ai.google.dev/gemini-api/docs/google-search",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 3,
+      "distilledCount": 4,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T16:18:57.370Z",
+      "completedAt": null
+    },
+    {
+      "id": "9ec973e4-eba5-4bb6-8d94-2eae2b32d857",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://docs.firecrawl.dev/features/map",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T15:58:10.609Z",
+      "completedAt": null
+    },
+    {
+      "id": "9f2fdbb7-2a03-4956-9789-cfcc823264d9",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://www.anthropic.com/research/prompt-injection-defenses",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": null,
+      "error": null,
+      "crawlOptions": {
+        "ignoreQueryParameters": true
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T17:23:59.553Z",
+      "completedAt": null
+    },
+    {
+      "id": "9f4c1199-4c60-4e3c-9534-4c06cc7205ac",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "PROVIDER_RESEARCH_STORAGE_SCOPE_2026-09-27.md",
+      "sizeBytes": 3245,
+      "status": "complete",
+      "sourceKind": "file",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": null,
+      "error": null,
+      "crawlOptions": null,
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T18:49:46.993Z",
+      "completedAt": null
+    },
+    {
+      "id": "b2d3b8ce-283a-4e9d-8788-b741f06ffb52",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://docs.firecrawl.dev/features/scrape",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 2,
+      "distilledCount": 3,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T15:58:10.859Z",
+      "completedAt": null
+    },
+    {
+      "id": "b988afc4-3c6c-44b0-99cc-7e2f5ee8d9a9",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "CORPUS_ENTITY_REFERENCE.md",
+      "sizeBytes": 4737,
+      "status": "complete",
+      "sourceKind": "file",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": null,
+      "error": null,
+      "crawlOptions": null,
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T19:11:29.730Z",
+      "completedAt": null
+    },
+    {
+      "id": "bfb42942-3f0b-4354-a394-0900e07af230",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://exa.ai/docs/reference/search",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T15:58:09.611Z",
+      "completedAt": null
+    },
+    {
+      "id": "c8b4e0e0-5e0c-4ea9-8681-dcaada0ea3b1",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://www.sanity.io/docs/ai/sanity-context-create-knowledge-base",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T16:18:55.627Z",
+      "completedAt": null
+    },
+    {
+      "id": "cab896ab-d31a-4afa-babc-dc33d67312f7",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 3,
+      "distilledCount": 4,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T16:18:58.615Z",
+      "completedAt": null
+    },
+    {
+      "id": "dc3b1aae-8dfd-4b05-a89d-d5ccabe80f8f",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://www.sanity.io/docs/astro-quickstart/setting-up-your-studio",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": null,
+      "error": null,
+      "crawlOptions": {
+        "ignoreQueryParameters": true
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T15:19:37.069Z",
+      "completedAt": null
+    },
+    {
+      "id": "dec6d0e4-a548-4b66-8772-995e9a47a1cc",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "P01.md",
+      "sizeBytes": 1510,
+      "status": "complete",
+      "sourceKind": "file",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": null,
+      "error": null,
+      "crawlOptions": null,
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T16:58:40.794Z",
+      "completedAt": null
+    },
+    {
+      "id": "e0e203c9-f8e2-472f-b25d-d47fb02436f5",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://www.sanity.io/docs/ai/sanity-context-maintain-knowledge-base",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T16:18:56.386Z",
+      "completedAt": null
+    },
+    {
+      "id": "f43ce4f0-8d4e-4b52-8e0b-32cb586e93ca",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://www.sanity.io/docs/ai/sanity-context-source-types",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 1,
+      "distilledCount": 1,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T16:18:55.419Z",
+      "completedAt": null
+    },
+    {
+      "id": "fcc0b51e-1206-4c44-b931-7545efc31d54",
+      "knowledgeBaseId": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+      "name": "https://docs.firecrawl.dev/features/crawl",
+      "sizeBytes": null,
+      "status": "complete",
+      "sourceKind": "web",
+      "lastCheckedAt": null,
+      "sourceCount": 1,
+      "totalDistillableCount": 4,
+      "distilledCount": 5,
+      "unsupportedCount": 0,
+      "statusDetail": "Partial. Crawl page limit reached",
+      "error": null,
+      "crawlOptions": {
+        "maxDepth": 1,
+        "ignoreQueryParameters": true,
+        "pageLimit": 1
+      },
+      "datasetSource": null,
+      "createdBy": {
+        "id": "gtuNb4s8T",
+        "displayName": "Jean-Sebastien Beaulieu"
+      },
+      "createdAt": "2026-09-27T15:58:11.251Z",
+      "completedAt": null
+    }
+  ],
+  "originalArchive": {
+    "expectedSha256": "39827d303209870d390f0eda8e541547329561e2091ee1814d18c0f742a5b4f9",
+    "actualSha256": "39827d303209870d390f0eda8e541547329561e2091ee1814d18c0f742a5b4f9",
+    "unchanged": true
+  }
+}

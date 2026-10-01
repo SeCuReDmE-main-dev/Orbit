@@ -1,0 +1,45 @@
+---
+import { get } from 'node:https'
+const query = '*[_type == "source"] | order(title asc)[0...12]{_id,title,url,publisher}'
+let sources: { _id: string; title: string; url: string; publisher?: string }[] = []
+let available = false
+try {
+  // A short-lived HTTPS request avoids leaving a pooled fetch handle open during static build shutdown.
+  const body = await new Promise<any>((resolve, reject) => {
+    const request = get(`https://pzscx4w8.api.sanity.io/v2025-01-01/data/query/production?query=${encodeURIComponent(query)}`, { agent: false }, response => {
+      if (response.statusCode !== 200) { response.resume(); reject(new Error('Source collection unavailable')); return }
+      let data = ''; let size = 0
+      response.setEncoding('utf8')
+      response.on('data', chunk => { size += Buffer.byteLength(chunk); if (size > 262144) request.destroy(new Error('Source collection too large')); else data += chunk })
+      response.on('error', reject)
+      response.on('end', () => { try { resolve(JSON.parse(data)) } catch (error) { reject(error) } })
+    })
+    request.setTimeout(10000, () => request.destroy(new Error('Source collection timed out')))
+    request.on('error', reject)
+  })
+  if (Array.isArray(body.result)) { sources = body.result.filter((s: any) => typeof s.title === 'string' && typeof s.url === 'string' && /^https:\/\//.test(s.url)); available = true }
+} catch { /* Honest offline build state; no substitute corpus is invented. */ }
+const retrieved = new Date().toISOString().slice(0, 10)
+---
+<section class="evidence-library-slot" data-evidence-browser aria-labelledby="library-heading">
+  <div class="panel__header"><div><p class="eyebrow">COLLECTION PUBLIQUE · SANITY CONTENT LAKE</p><h3 id="library-heading">Repères pour explorer.</h3></div></div>
+  <p class="library-intro">Quelques références NASA pour commencer. Vos propres sources restent dans la mission au-dessus.</p>
+  <div class="library-grid">{sources.map(source => <a class="source-card" href={source.url} target="_blank" rel="noopener noreferrer"><span class="source-card__publisher">{source.publisher || 'Référence publique'}</span><h4>{source.title}</h4><span class="source-card__action">Lire le document original <span aria-hidden="true">↗</span></span></a>)}</div>
+  <nav class="evidence-turn" aria-label="Feuilleter les références" hidden><button type="button" data-evidence-previous aria-label="Référence précédente">←</button><span data-evidence-position role="status"></span><button type="button" data-evidence-next aria-label="Référence suivante">→</button></nav>
+  <details class="library-footnote"><summary>Provenance de cette collection</summary><p>{available ? `${sources.length} références récupérées dans Sanity pendant le build · ${retrieved}. La présence d’un lien ne prouve pas une lecture indépendante de son contenu.` : 'Collection indisponible pendant le build. Les sources de votre mission restent accessibles.'}</p></details>
+</section>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-evidence-browser]').forEach(root=>{
+    const cards=Array.from(root.querySelectorAll<HTMLElement>('.source-card'));
+    const nav=root.querySelector<HTMLElement>('.evidence-turn')!;
+    if(!cards.length)return;
+    let selected=0;
+    const update=()=>{cards.forEach((card,index)=>{card.hidden=index!==selected});root.querySelector('[data-evidence-position]')!.textContent=`${String(selected+1).padStart(2,'0')} / ${String(cards.length).padStart(2,'0')}`;};
+    root.querySelector('[data-evidence-previous]')!.addEventListener('click',()=>{selected=(selected+cards.length-1)%cards.length;update()});
+    root.querySelector('[data-evidence-next]')!.addEventListener('click',()=>{selected=(selected+1)%cards.length;update()});
+    nav.hidden=false;root.dataset.enhanced='true';update();
+  })
+</script>
+<style>
+ .library-badge{font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:#92b8b8}.library-intro{color:#9baec3;max-width:42rem;line-height:1.7}.library-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;margin:1.5rem 0}.source-card{padding:1.3rem;border:1px solid #263449;border-radius:14px;text-decoration:none;background:linear-gradient(135deg,#111e2d,#0c1522);display:flex;flex-direction:column;gap:.7rem;transition:border-color .2s,transform .2s}.source-card:hover{border-color:#77c5c5;transform:translateY(-2px)}.source-card:focus-visible{outline:2px solid #77c5c5;outline-offset:4px}.source-card__publisher{font-size:.65rem;color:#839bac;text-transform:uppercase;letter-spacing:.08em}.source-card h4{font-size:1.05rem;font-weight:500;color:#e3edf5;margin:0;line-height:1.45}.source-card__action{font-size:.75rem;color:#8bd2cb;margin-top:auto}.library-footnote{font-size:.7rem;color:#74889f;line-height:1.6}@media(max-width:540px){.library-grid{grid-template-columns:1fr}}@media(prefers-reduced-motion:reduce){.source-card{transition:none}.source-card:hover{transform:none}}
+</style>

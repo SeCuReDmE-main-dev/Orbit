@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"status\": \"success\", \"transport\": \"brokered-ssh-sftp\", \"backup_path\": \"/home/xacm7978/orbit.securedme.ca.backup-b4dcdd6ab9ebc8e55cdade03\", \"package_sha256\": \"ff07c25c27dbc426cfe8ebe0bef57ed4a07715659ff49407e2313c21e955833a\", \"verified_paths\": [\"api/index.php\", \"app/index.html\", \"benchmark/agent-mission-observations.json\", \"benchmark/index.html\", \"benchmark/orbit-pilot-report.pdf\", \"benchmark/real-corpus-candidates.json\", \"guide/index.html\", \"index.html\", \"studio/index.html\"], \"staging_cleaned\": true, \"mutated\": true, \"rollback_restored\": false, \"secret_values_exposed\": false, \"plan_id\": \"b4dcdd6ab9ebc8e55cdade03\", \"destination_dir\": \"/home/xacm7978/orbit.securedme.ca\"}"
+    }
+  ],
+  "isError": false
+}

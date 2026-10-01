@@ -1,0 +1,67 @@
+{
+  "observedAt": "2026-09-30T03:05:32.730409+00:00",
+  "origin": "https://orbit.securedme.ca",
+  "backupPlan": "b4dcdd6ab9ebc8e55cdade03",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 7652,
+      "sha256": "ab067db4f3e6524a76d271b2980093185ab3f3af9844394f37f7d6e184debc5f"
+    },
+    {
+      "route": "/app/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 3090,
+      "sha256": "85f7f696400c06e423f7a283122b7129319d2ac0764fe87628b376e1cf8ac3e1"
+    },
+    {
+      "route": "/studio/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 8715,
+      "sha256": "f85151df2c881425d288e6d72a76145f3f7588d9d78e2220eba5302910160c83"
+    },
+    {
+      "route": "/guide/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 16882,
+      "sha256": "a22d36c62520dfd200c6d37297618a8be5ead322eff6ab643e220e32eb3600a7"
+    },
+    {
+      "route": "/benchmark/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 28558,
+      "sha256": "f7b501fb932c1bd67ec3c4ad46690d121158fb8ad881c47b4f93c768c32dc828"
+    },
+    {
+      "route": "/benchmark/real-corpus-candidates.json",
+      "status": 200,
+      "contentType": "application/json",
+      "bytes": 53765,
+      "sha256": "ab52514b90deb24741b0101f7b6f5401f040850063601b668a349b2300362c0c",
+      "matchesLocal": true
+    },
+    {
+      "route": "/benchmark/agent-mission-observations.json",
+      "status": 200,
+      "contentType": "application/json",
+      "bytes": 4197,
+      "sha256": "5d1e8cfb5c3a2bbd3bb0702b9643d63344daa668aa1a3740cb84c92cb89f49c6",
+      "matchesLocal": true
+    },
+    {
+      "route": "/benchmark/orbit-pilot-report.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 84526,
+      "sha256": "ad2d3a49be0ac8908077dd2c6335fe12d27b2851794c2daa245ba8f8b763e2cc",
+      "matchesLocal": true
+    }
+  ],
+  "checks": "HTTP readback and exact public artifact bytes; not a browser interaction or research benchmark."
+}

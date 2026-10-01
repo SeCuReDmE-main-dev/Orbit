@@ -1,0 +1,198 @@
+{
+  "status": "development-pilots-not-final-benchmark",
+  "updatedAt": "2026-09-30T02:52:10.864342+00:00",
+  "antigravity": [
+    {
+      "model": "Gemini 3.8 Flash High",
+      "host": "Antigravity 2.18.1 desktop",
+      "questions": 6,
+      "modelDecisionsCorrect": 6,
+      "quotesExact": 8,
+      "quoteChecks": 8,
+      "engines": {
+        "baseline": {
+          "evaluated": 5,
+          "correctEvaluated": 5,
+          "schemaErrors": 1
+        },
+        "n": {
+          "evaluated": 5,
+          "correctEvaluated": 5,
+          "schemaErrors": 1
+        },
+        "p": {
+          "evaluated": 5,
+          "correctEvaluated": 5,
+          "schemaErrors": 1
+        }
+      },
+      "promptVersion": 1,
+      "repetitions": 1,
+      "durationSeconds": null,
+      "usage": null,
+      "answerSha256": "ea6341c8a2c314a1b3bcc09f1a5ad52e93dbd74c76b8c4466b2408d9907c8671"
+    },
+    {
+      "model": "gemini-3.1-pro-high",
+      "host": "Antigravity official CLI 1.2.13",
+      "questions": 6,
+      "modelDecisionsCorrect": 6,
+      "quotesExact": 8,
+      "quoteChecks": 8,
+      "engines": {
+        "baseline": {
+          "evaluated": 5,
+          "correctEvaluated": 5,
+          "schemaErrors": 1
+        },
+        "n": {
+          "evaluated": 5,
+          "correctEvaluated": 5,
+          "schemaErrors": 1
+        },
+        "p": {
+          "evaluated": 5,
+          "correctEvaluated": 5,
+          "schemaErrors": 1
+        }
+      },
+      "promptVersion": 1,
+      "repetitions": 1,
+      "durationSeconds": 36.016843,
+      "usage": {
+        "input_tokens": 19073,
+        "output_tokens": 5369,
+        "thinking_tokens": 3690,
+        "cache_read_tokens": 0,
+        "total_tokens": 24442
+      },
+      "answerSha256": "025d23a7e2cb6426101970a86403bc84a52a33dcd091e870f28401d0ad2c3ec0"
+    },
+    {
+      "model": "gemini-3.8-flash-high",
+      "host": "Antigravity official CLI 1.2.13",
+      "questions": 6,
+      "modelDecisionsCorrect": 6,
+      "quotesExact": 8,
+      "quoteChecks": 8,
+      "engines": {
+        "baseline": {
+          "evaluated": 5,
+          "correctEvaluated": 5,
+          "schemaErrors": 1
+        },
+        "n": {
+          "evaluated": 5,
+          "correctEvaluated": 5,
+          "schemaErrors": 1
+        },
+        "p": {
+          "evaluated": 5,
+          "correctEvaluated": 5,
+          "schemaErrors": 1
+        }
+      },
+      "promptVersion": 1,
+      "repetitions": 1,
+      "durationSeconds": 51.4249304,
+      "usage": {
+        "input_tokens": 18801,
+        "output_tokens": 17804,
+        "thinking_tokens": 16324,
+        "cache_read_tokens": 0,
+        "total_tokens": 36605
+      },
+      "answerSha256": "6d2abc5db545c26cbaae196cf5e08cd3b2e13d10db154d9c73851e07a0c7b267"
+    }
+  ],
+  "kaggle": [
+    {
+      "model": "google/gemini-3.8-flash",
+      "host": "Kaggle Benchmarks 0.6.1",
+      "promptVersion": 2,
+      "repetitions": 1,
+      "questions": 6,
+      "modelDecisionsCorrect": 6,
+      "quotesExact": 8,
+      "quoteChecks": 8,
+      "assertionsPassed": 53,
+      "assertionsTotal": 53,
+      "engines": {
+        "baseline": {
+          "evaluated": 6,
+          "correctEvaluated": 6,
+          "schemaErrors": 0
+        },
+        "n": {
+          "evaluated": 6,
+          "correctEvaluated": 6,
+          "schemaErrors": 0
+        },
+        "p": {
+          "evaluated": 6,
+          "correctEvaluated": 6,
+          "schemaErrors": 0
+        }
+      },
+      "usage": {
+        "n_input_tokens": 1147,
+        "n_output_tokens": 2173,
+        "cost_usd": 0.009009
+      },
+      "startedAt": "2026-09-30T00:59:50.765996Z",
+      "completedAt": "2026-09-30T00:59:58.110640Z",
+      "promptSha256": "785070d61245c64226ad070dff0196b3473edde8644fc333c501342d807e9c5f",
+      "engineSha256": "886f7cf3fbfcb445f4c1af7ebf1d3f8cb581964fe20d3bce706e8b4f4b880bd9"
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "host": "Kaggle Benchmarks 0.6.1",
+      "promptVersion": 2,
+      "repetitions": 1,
+      "questions": 6,
+      "modelDecisionsCorrect": 6,
+      "quotesExact": 8,
+      "quoteChecks": 8,
+      "assertionsPassed": 53,
+      "assertionsTotal": 53,
+      "engines": {
+        "baseline": {
+          "evaluated": 6,
+          "correctEvaluated": 6,
+          "schemaErrors": 0
+        },
+        "n": {
+          "evaluated": 6,
+          "correctEvaluated": 6,
+          "schemaErrors": 0
+        },
+        "p": {
+          "evaluated": 6,
+          "correctEvaluated": 6,
+          "schemaErrors": 0
+        }
+      },
+      "usage": {
+        "n_input_tokens": 1147,
+        "n_output_tokens": 5261,
+        "cost_usd": 0.065426
+      },
+      "startedAt": "2026-09-30T00:59:58.129989Z",
+      "completedAt": "2026-09-30T01:00:31.080826Z",
+      "promptSha256": "785070d61245c64226ad070dff0196b3473edde8644fc333c501342d807e9c5f",
+      "engineSha256": "886f7cf3fbfcb445f4c1af7ebf1d3f8cb581964fe20d3bce706e8b4f4b880bd9"
+    }
+  ],
+  "kaggleNotebook": "https://www.kaggle.com/code/celebrum/orbit-scoped-evidence-development-pilot",
+  "kaggleTask": "https://www.kaggle.com/benchmarks/tasks/celebrum/orbit-scoped-evidence-pilot-v2/1",
+  "kaggleVisibility": "Notebook and built task v1 are private. The task page initially displays one Flash result; the notebook export contains both model runs. No challenge submission published.",
+  "limitations": [
+    "One development repetition per model and host, six synthetic questions. No independent final validation.",
+    "Version 2 clarifies the evidence scope schema after a version 1 failure; results are not pooled.",
+    "Exact quotation is checked separately from semantic relevance.",
+    "Baseline and N use the same eligibility and decision rules here; this is not evidence for different theoretical performance.",
+    "Host defaults and reasoning budgets are not normalized; no cross-host speed or intelligence ranking.",
+    "Kaggle reported model cost consumes free AI quota; no purchase or paid top-up made.",
+    "An external Gemini JSON planner has now executed W01 calls in native WebMCP, with an interpretation defect. This is separate from the unresolved native Antigravity MCP integration and is not a full research trajectory."
+  ]
+}

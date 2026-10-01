@@ -1,0 +1,90 @@
+---
+
+const games = [
+
+ ['Fronde','Slingshot','Honda','Tirez la perle, puis relâchez-la à travers la poussière.','Pull the pearl, then release it through the dust.','Tira de la perla y suéltala a través del polvo.'],
+
+ ['Pinceau','Brush','Pincel','Déplacez le noyau pour dessiner un ruban lumineux.','Move the nucleus to draw a ribbon of light.','Mueve el núcleo para dibujar una estela de luz.'],
+
+ ['Cordes','Strings','Cuerdas','Tirez une orbite puis relâchez pour la faire vibrer.','Pull an orbit and release it to make it vibrate.','Tira de una órbita y suéltala para hacerla vibrar.'],
+
+ ['Élastique','Elastic','Elástico','Pressez et tirez le noyau : il revient avec un rebond.','Press and pull the nucleus: it returns with a bounce.','Presiona y tira del núcleo: vuelve con un rebote.'],
+
+ ['Vortex','Vortex','Vórtice','Dessinez un cercle pour déplacer le tourbillon.','Draw a circle to move the vortex.','Dibuja un círculo para mover el vórtice.'],
+
+ ['Sculpter Orbit','Sculpt Orbit','Esculpir Orbit','Traversez les lettres : leurs particules cèdent puis reviennent.','Move through the letters: their particles yield and return.','Atraviesa las letras: sus partículas ceden y vuelven.'],
+
+ ['Constellation','Constellation','Constelación','Touchez le fond pour ajouter des étoiles et déplacez-les pour changer les liens.','Touch the background to add stars and move them to change the links.','Toca el fondo para añadir estrellas y muévelas para cambiar los enlaces.'],
+
+ ['Collection','Collection','Colección','Maintenez le fond pour récolter, puis relâchez pour disperser la couronne.','Hold the background to collect, then release to scatter the crown.','Mantén el fondo para recoger y suelta para dispersar la corona.'],
+
+ ['Rosaces','Rosettes','Rosetas','Tournez l’atome pour dessiner une fleur lumineuse.','Rotate the atom to draw a luminous flower.','Gira el átomo para dibujar una flor luminosa.'],
+
+ ['Portails','Portals','Portales','Amenez le noyau dans un anneau pour ressortir par l’autre.','Move the nucleus into one ring to emerge from the other.','Lleva el núcleo a un anillo para salir por el otro.'],
+
+ ['Puzzle','Puzzle','Rompecabezas','Tournez le noyau pour aligner les anneaux avec leurs silhouettes.','Rotate the nucleus to align the rings with their silhouettes.','Gira el núcleo para alinear los anillos con sus siluetas.'],
+
+ ['Écho','Echo','Eco','Déplacez l’atome : son souvenir suit le parcours avec un retard.','Move the atom: its memory follows the path with a delay.','Mueve el átomo: su recuerdo sigue el recorrido con retraso.'],
+
+ ['Remonter le temps','Rewind','Retroceder','Déplacez l’atome, puis maintenez le fond pour rembobiner son parcours.','Move the atom, then hold the background to rewind its path.','Mueve el átomo y mantén el fondo para retroceder en su recorrido.'],
+
+ ['Rencontre','Encounter','Encuentro','Approchez le noyau de son compagnon pour tresser leurs lumières.','Bring the nucleus near its companion to braid their lights.','Acerca el núcleo a su compañero para entrelazar sus luces.'],
+
+ ['Empreinte','Imprint','Huella','Composez la scène puis enregistrez son image PNG sur votre appareil.','Compose the scene, then save its PNG image on your device.','Compón la escena y guarda su imagen PNG en tu dispositivo.'],
+
+];
+
+---
+
+<section aria-labelledby="release"><h2 id="release" data-fr="État final du landing · 2.1.7" data-en="Final landing state · 2.1.7" data-es="Estado final de la portada · 2.1.7">État final du landing · 2.1.7</h2>
+
+ <p data-fr="Édition du 30 septembre 2026. Le landing est validé par son utilisateur et par 77 contrôles publics orchestrés dans Kaggle avec un navigateur Linux E2B. Cette validation concerne l’atome ; elle ne termine pas les campagnes des trois moteurs et ne garantit pas une fréquence d’affichage sur tout matériel." data-en="September 30, 2026 edition. The landing was approved by its user and passed 77 public checks orchestrated in Kaggle with an E2B Linux browser. This validates the atom journey; it does not complete the three-engine campaigns or guarantee a frame rate on every device." data-es="Edición del 30 de septiembre de 2026. La portada fue aprobada por su usuario y superó 77 controles públicos coordinados desde Kaggle con un navegador Linux E2B. Esto valida el recorrido del átomo; no completa las campañas de los tres motores ni garantiza una frecuencia de imagen en todos los dispositivos.">Édition du 30 septembre 2026. Le landing est validé par son utilisateur et par 77 contrôles publics orchestrés dans Kaggle avec un navigateur Linux E2B. Cette validation concerne l’atome ; elle ne termine pas les campagnes des trois moteurs et ne garantit pas une fréquence d’affichage sur tout matériel.</p>
+
+ <p data-fr="Orbit. conserve son nom dans les trois langues : O majuscule et accents orange, noyau bleu, mauve et blanc perle, électrons de navigation orange. Les quatre entrées sont Jouer, Interface Orbit, Studio Sanity et Documentation. Le logo Publication Lab, sous le séparateur en bas au centre, ouvre securedme.ca." data-en="Orbit. keeps its name in all three languages: a capital O and orange accents, a blue, purple and pearl-white nucleus, and orange navigation electrons. The four entries are Play, Orbit interface, Sanity Studio and Documentation. The Publication Lab logo below the bottom separator opens securedme.ca." data-es="Orbit. conserva su nombre en los tres idiomas: O mayúscula y detalles naranjas, núcleo azul, violeta y blanco perla, y electrones de navegación naranjas. Las cuatro entradas son Jugar, Interfaz Orbit, Studio Sanity y Documentación. El logo Publication Lab debajo de la línea inferior abre securedme.ca.">Orbit. conserve son nom dans les trois langues : O majuscule et accents orange, noyau bleu, mauve et blanc perle, électrons de navigation orange. Les quatre entrées sont Jouer, Interface Orbit, Studio Sanity et Documentation. Le logo Publication Lab, sous le séparateur en bas au centre, ouvre securedme.ca.</p>
+
+</section>
+
+<section aria-labelledby="play"><h2 id="play" data-fr="Saisir, lancer et maintenir" data-en="Grab, throw and hold" data-es="Agarrar, lanzar y mantener">Saisir, lancer et maintenir</h2>
+
+ <p data-fr="Attrapez le noyau, déplacez-le puis relâchez : il glisse avec son élan et rebondit sur les limites de l’écran. Pendant le vol, croiser le pointeur ou survoler un lien ne freine plus l’atome. Pour le reprendre, saisissez explicitement le noyau. Le Vortex est le seul effet ambiant ; Écho et Remonter le temps restent des jeux volontaires." data-en="Grab the nucleus, move it and release: it glides with momentum and bounces at the screen edges. Crossing the pointer or hovering over a link no longer slows its flight. Grab the nucleus explicitly to catch it again. Vortex is the only ambient effect; Echo and Rewind remain optional games." data-es="Agarra el núcleo, muévelo y suéltalo: se desliza con inercia y rebota en los bordes. Cruzar el puntero o pasar sobre un enlace ya no frena su vuelo. Vuelve a agarrar el núcleo para detenerlo. Vórtice es el único efecto ambiental; Eco y Retroceder son juegos opcionales.">Attrapez le noyau, déplacez-le puis relâchez : il glisse avec son élan et rebondit sur les limites de l’écran. Pendant le vol, croiser le pointeur ou survoler un lien ne freine plus l’atome. Pour le reprendre, saisissez explicitement le noyau. Le Vortex est le seul effet ambiant ; Écho et Remonter le temps restent des jeux volontaires.</p>
+
+ <ol>
+
+  <li data-fr="2 secondes de maintien du noyau : aspiration progressive des particules." data-en="Hold the nucleus for 2 seconds: progressive particle suction." data-es="Mantén el núcleo durante 2 segundos: aspiración progresiva de partículas.">2 secondes de maintien du noyau : aspiration progressive des particules.</li>
+
+  <li data-fr="4 secondes : le grand mot décoratif Orbit devient ASCII et est aspiré à son tour." data-en="4 seconds: the large decorative Orbit wordmark turns into ASCII and is drawn inward." data-es="4 segundos: la palabra decorativa Orbit se convierte en ASCII y también es aspirada.">4 secondes : le grand mot décoratif Orbit devient ASCII et est aspiré à son tour.</li>
+
+  <li data-fr="6 secondes : effondrement bref, explosion en fines particules dans l’écran, puis reconstruction calme. Une fois déclenchée, cette séquence continue même si vous relâchez. Le mode statique peut toujours la suspendre." data-en="6 seconds: a brief collapse, an explosion into fine particles across the screen, then gentle reconstruction. Once triggered, the sequence continues after release. Static mode can still pause it." data-es="6 segundos: colapso breve, explosión en partículas finas por toda la pantalla y reconstrucción tranquila. Una vez iniciada, la secuencia continúa aunque sueltes. El modo estático permite pausarla.">6 secondes : effondrement bref, explosion en fines particules dans l’écran, puis reconstruction calme. Une fois déclenchée, cette séquence continue même si vous relâchez. Le mode statique peut toujours la suspendre.</li>
+
+ </ol>
+
+ <p data-fr="Ces effets sont artistiques : ils ne simulent ni les mouvements quantiques, ni la physique validée d’une étoile à neutrons. Les couleurs ne désignent pas des types de particules physiques." data-en="These are artistic effects, not simulations of quantum motion or validated neutron-star physics. The colors do not identify physical particle types." data-es="Son efectos artísticos, no simulaciones de movimiento cuántico ni de física validada de estrellas de neutrones. Los colores no identifican tipos de partículas físicas.">Ces effets sont artistiques : ils ne simulent ni les mouvements quantiques, ni la physique validée d’une étoile à neutrons. Les couleurs ne désignent pas des types de particules physiques.</p>
+
+</section>
+
+<section aria-labelledby="games"><h2 id="games" data-fr="Les quinze jeux" data-en="The fifteen games" data-es="Los quince juegos">Les quinze jeux</h2>
+
+ <p data-fr="Ouvrez Jouer depuis un électron de navigation, puis choisissez une activité. Chaque jeu indique son geste et propose ses commandes. Fermez le jeu pour retrouver l’ambiance Vortex du landing." data-en="Open Play from a navigation electron, then choose an activity. Each game explains its gesture and provides its controls. Close the game to return to the landing’s ambient Vortex." data-es="Abre Jugar desde un electrón de navegación y elige una actividad. Cada juego explica su gesto y presenta sus controles. Ciérralo para volver al Vórtice ambiental de la portada.">Ouvrez Jouer depuis un électron de navigation, puis choisissez une activité. Chaque jeu indique son geste et propose ses commandes. Fermez le jeu pour retrouver l’ambiance Vortex du landing.</p>
+
+ <ol>{games.map(([fr,en,es,frUse,enUse,esUse])=><li><strong data-fr={fr} data-en={en} data-es={es}>{fr}</strong><p data-fr={frUse} data-en={enUse} data-es={esUse}>{frUse}</p></li>)}</ol>
+
+</section>
+
+<section aria-labelledby="access"><h2 id="access" data-fr="Langues et accès dans les trois surfaces" data-en="Languages and accessibility across the three surfaces" data-es="Idiomas y accesibilidad en las tres superficies">Langues et accès dans les trois surfaces</h2>
+
+ <p data-fr="Les commandes FR / EN / ES et Accès partagent les mêmes préférences locales entre le landing, le guide, l’interface Orbit et le Studio : image statique, contraste renforcé et texte agrandi. Sur le landing, Statique fige la scène actuelle, y compris la chronologie d’une explosion ; il ne supprime pas son contenu. Désactivez-le pour reprendre." data-en="FR / EN / ES and Access share local preferences across the landing, guide, Orbit interface and Studio: a static image, high contrast and larger text. On the landing, Static freezes the current scene, including an explosion timeline; it does not remove content. Disable it to resume." data-es="FR / EN / ES y Acceso comparten las preferencias locales entre la portada, la guía, la interfaz Orbit y Studio: imagen estática, contraste alto y texto ampliado. En la portada, Estático congela la escena actual, incluida la secuencia de explosión; no elimina su contenido. Desactívalo para continuar.">Les commandes FR / EN / ES et Accès partagent les mêmes préférences locales entre le landing, le guide, l’interface Orbit et le Studio : image statique, contraste renforcé et texte agrandi. Sur le landing, Statique fige la scène actuelle, y compris la chronologie d’une explosion ; il ne supprime pas son contenu. Désactivez-le pour reprendre.</p>
+
+ <p data-fr="Tab parcourt les liens et les commandes. Escape ferme les jeux et les dialogues. Une fois le canvas sélectionné, les flèches permettent une rotation manuelle ; les indications du jeu précisent ses autres commandes. Le mouvement réduit du système est respecté. Sans WebGL, la navigation HTML reste disponible. Les noms des documents Sanity et les textes des dossiers ne sont pas traduits automatiquement." data-en="Tab moves through links and controls. Escape closes games and dialogs. With the canvas focused, arrow keys rotate manually; each game describes its other controls. System reduced-motion preferences are respected. Without WebGL, HTML navigation remains available. Sanity document names and dossier content are not automatically translated." data-es="Tab recorre enlaces y controles. Escape cierra juegos y diálogos. Con el foco en el lienzo, las flechas permiten girar manualmente; cada juego indica sus demás controles. Se respeta el movimiento reducido del sistema. Sin WebGL, la navegación HTML sigue disponible. Los nombres de documentos Sanity y el contenido de los expedientes no se traducen automáticamente.">Tab parcourt les liens et les commandes. Escape ferme les jeux et les dialogues. Une fois le canvas sélectionné, les flèches permettent une rotation manuelle ; les indications du jeu précisent ses autres commandes. Le mouvement réduit du système est respecté. Sans WebGL, la navigation HTML reste disponible. Les noms des documents Sanity et les textes des dossiers ne sont pas traduits automatiquement.</p>
+
+</section>
+
+<section aria-labelledby="learning"><h2 id="learning" data-fr="Comprendre puis enseigner" data-en="Understand, then teach" data-es="Comprender y enseñar">Comprendre puis enseigner</h2>
+
+ <p data-fr="Le manuel français de 56 pages explique les mécanismes et le code réel dans sa première partie. La seconde vous aide à les enseigner : une activité par jeu, un atelier de 30 minutes, trois mini-leçons, une fiche enseignant et des pistes de correction. Les intonations sont proposées, sans clonage vocal." data-en="The 56-page French manual explains the mechanisms and actual code in its first part. Its second part helps you teach them: one activity per game, a 30-minute workshop, three mini-lessons, a teacher’s sheet and solution hints. Suggested intonation does not involve voice cloning." data-es="El manual francés de 56 páginas explica los mecanismos y el código real en su primera parte. La segunda ayuda a enseñarlos: una actividad por juego, un taller de 30 minutos, tres minilecciones, una ficha docente y pistas de solución. Las entonaciones son sugerencias, sin clonación de voz.">Le manuel français de 56 pages explique les mécanismes et le code réel dans sa première partie. La seconde vous aide à les enseigner : une activité par jeu, un atelier de 30 minutes, trois mini-leçons, une fiche enseignant et des pistes de correction. Les intonations sont proposées, sans clonage vocal.</p>
+
+ <a href="/guide/orbit-atome-2.1.6-fr.pdf" data-fr="Ouvrir le manuel PDF · français · 56 pages · 6,7 Mo ↗" data-en="Open the PDF manual · French · 56 pages · 6.7 MB ↗" data-es="Abrir el manual PDF · francés · 56 páginas · 6,7 MB ↗">Ouvrir le manuel PDF · français · 56 pages · 6,7 Mo ↗</a>
+
+</section>
+
+<style>section{padding:28px 0;border-top:1px solid var(--s-line)}h2{font:500 25px var(--s-display);color:var(--s-gold)}p,li{color:#c1cbe4;font:400 17px/1.8 var(--s-body)}li p{margin:0 0 14px}strong{color:var(--s-cyan)}</style>
+

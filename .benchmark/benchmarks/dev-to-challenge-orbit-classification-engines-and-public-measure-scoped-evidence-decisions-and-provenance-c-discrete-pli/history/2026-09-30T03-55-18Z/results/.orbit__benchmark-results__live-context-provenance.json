@@ -1,0 +1,67 @@
+{
+  "observedAt": "2026-09-30T03:48:16.674543+00:00",
+  "origin": "https://orbit.securedme.ca",
+  "backupPlan": "aee92d28a8a590dbf2c0ee6d",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 7652,
+      "sha256": "fed84e5f0008cac266c538410fd04026dbd1fe8757412129f26f64f1b26fff55"
+    },
+    {
+      "route": "/app/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 3090,
+      "sha256": "69ff28812147601de123965631652a19b8fe9515ad83147b201ca434b2ba073d"
+    },
+    {
+      "route": "/studio/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 8715,
+      "sha256": "f85151df2c881425d288e6d72a76145f3f7588d9d78e2220eba5302910160c83"
+    },
+    {
+      "route": "/guide/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 17900,
+      "sha256": "bd139f40f6997cd767dd9ecf54a7002789f69ba46de4a8b8b75a491fb8319873"
+    },
+    {
+      "route": "/benchmark/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 32448,
+      "sha256": "8d7c431a48d3221abad1d519a7e2cb1ae42be425866396400c6c9d1f4489aeda"
+    },
+    {
+      "route": "/benchmark/real-corpus-candidates.json",
+      "status": 200,
+      "contentType": "application/json",
+      "bytes": 53765,
+      "sha256": "ab52514b90deb24741b0101f7b6f5401f040850063601b668a349b2300362c0c",
+      "matchesLocal": true
+    },
+    {
+      "route": "/benchmark/agent-mission-observations.json",
+      "status": 200,
+      "contentType": "application/json",
+      "bytes": 21511,
+      "sha256": "7701fbc37874d0440e8a001fb0ab62afbffbd13cbb23c8f26d2193d0643cccdd",
+      "matchesLocal": true
+    },
+    {
+      "route": "/benchmark/orbit-pilot-report.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 84637,
+      "sha256": "6b7bd5b81ca83da9b69db41760f2f2f6e0e682b79f7d0ef3d9909f1efcaffadd",
+      "matchesLocal": true
+    }
+  ],
+  "checks": "HTTP readback, new guide/benchmark markers and exact public artifact bytes; not an autonomous research benchmark."
+}

@@ -1,0 +1,23 @@
+{
+  "format": "orbit-evidence-v1",
+  "id": "case-sanity-20260929",
+  "title": "When Sanity Context changes the answer",
+  "question": "Which documented distinctions in Sanity Context require a structured Knowledge Base read rather than a keyword search alone?",
+  "objective": "Show the entry paths, references, versions and scope limits that affect the answer, then compare the result with a keyword-only baseline over the same corpus.",
+  "context": "Demonstration case. The result must not call a difference a contradiction unless passages from the same applicable scope truly disagree.",
+  "revision": 0,
+  "createdAt": "2026-09-29T19:45:00.000Z",
+  "updatedAt": "2026-09-29T19:45:00.000Z",
+  "axes": [],
+  "sources": [],
+  "claims": [],
+  "screeningCriteria": [],
+  "sourceDecisions": [],
+  "extractions": [],
+  "knowledgeReads": [],
+  "report": "",
+  "proposals": [],
+  "reviews": [],
+  "history": [],
+  "example": false
+}

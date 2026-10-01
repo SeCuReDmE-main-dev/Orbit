@@ -1,0 +1,52 @@
+{
+  "format": "orbit-agent-mission-v1",
+  "mission": "W02",
+  "experiment": "w02-json-loop-pro-v3",
+  "model": "gemini-3.1-pro-high",
+  "host": "Antigravity official CLI 1.2.13, external JSON planner -> native public WebMCP",
+  "nativeAntigravityMcpIntegration": false,
+  "agentDefinitionSha256": "29d7ddba3ec24ff3452f2135cb31a30a847211ca858a904f962821a348c0d025",
+  "plannerProtocol": "orbit-json-planner-v2",
+  "missionSha256": "e426958df7df40570b683ddc5f373be53065f5f7eed5641cc651d2ed6edc2dd0",
+  "harnessSha256": "1e66a8b313d2c77a08eb19f6f7f836e3e7814ade3ef223c30bde2ea90680ce5e",
+  "browserAdapterSha256": "0f739ac966e9a9b20e9bbfb10760e9a2a2dafabb8dbdd749d342058ecae6c2e9",
+  "startedAt": "2026-09-30T03:27:58.656364+00:00",
+  "maxCalls": 20,
+  "maxMinutes": 8,
+  "permissions": "Page consent unchanged; no persistent approval policy or human decision added.",
+  "turns": [],
+  "calls": [],
+  "missionStatus": "INCOMPLETE",
+  "final": null,
+  "quotaBefore": [
+    {
+      "id": "gemini-weekly",
+      "window": "weekly",
+      "remaining_fraction": 0.9913709759712219,
+      "reset_time": "2026-10-07T00:24:00Z"
+    },
+    {
+      "id": "gemini-5h",
+      "window": "5h",
+      "remaining_fraction": 0.9482260942459106,
+      "reset_time": "2026-09-30T05:24:00Z"
+    }
+  ],
+  "error": "TimeoutError: Native page RPC deadline; no tool result observed.",
+  "quotaAfter": [
+    {
+      "id": "gemini-weekly",
+      "window": "weekly",
+      "remaining_fraction": 0.9913709759712219,
+      "reset_time": "2026-10-07T00:24:00Z"
+    },
+    {
+      "id": "gemini-5h",
+      "window": "5h",
+      "remaining_fraction": 0.9482260942459106,
+      "reset_time": "2026-09-30T05:24:00Z"
+    }
+  ],
+  "observedCompletedAt": "2026-09-30T03:29:26.444695+00:00",
+  "durationSeconds": 87.79700000002049
+}

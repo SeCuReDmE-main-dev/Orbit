@@ -1,1 +1,2 @@
-3d1cd1e8d44199daa2dd1dbaf309d043fa79abdfb93f5e76a31e0ecd390ca073  orbit-companion-mv3-unpacked-build.zip
+94bb5ae23102da85ca3dd04e98de838f8029d5a6354baa158df7b6a56944a2a4  orbit-companion-mv3-unpacked-build.zip
+e931d439e0a1eb77c1b54797bd17e551a927a9cfd03860f9c03834362b59acd5  orbit-public-preview.zip

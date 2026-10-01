@@ -1,0 +1,906 @@
+{
+  "at": "2026-09-27T19:26:51.454Z",
+  "state": {
+    "id": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+    "publicId": "kb5CHIYGXCMJ",
+    "organizationId": "oatv1mmu8",
+    "title": "Orbit Companion — Sanity & Deep Research",
+    "description": "Support Orbit Companion and its developers with cited official guidance for Sanity Context, Astro integration, schemas and GROQ, and rigorous deep research: clarify questions, plan distinct research axes, search and read sources with Exa/Google/Firecrawl, track provenance and contradictions, discover scholarly works, evaluate retrieval and citation support, and resist prompt injection. Distinguish documentation from implemented capabilities and measured results. Preserve provider-specific authentication, costs, version and beta limitations; API access is not implied by subscriptions. This is a methods and implementation knowledge base, not a NASA scientific corpus or a store of private missions.",
+    "state": "ready",
+    "activeJobId": "ctx-build-a22131ab-85c8-4887-8467-b657d3d3c3dd-1790536332576",
+    "isBuilding": false,
+    "buildStageState": {
+      "jobId": "ctx-build-a22131ab-85c8-4887-8467-b657d3d3c3dd-1790536332576",
+      "stages": [
+        {
+          "id": "tldr",
+          "status": "done"
+        },
+        {
+          "id": "map",
+          "status": "done"
+        },
+        {
+          "id": "triage",
+          "status": "done"
+        },
+        {
+          "id": "plan",
+          "status": "done"
+        },
+        {
+          "id": "organize",
+          "status": "done"
+        },
+        {
+          "id": "arrange",
+          "status": "done"
+        },
+        {
+          "id": "write",
+          "status": "done"
+        },
+        {
+          "id": "review",
+          "status": "done"
+        },
+        {
+          "id": "polish",
+          "status": "done"
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-27T19:11:11.745Z",
+    "lastChangedAt": "2026-09-27T19:25:26.774Z",
+    "hasPendingChanges": false,
+    "pendingChanges": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0
+    },
+    "pipelineOutdated": false,
+    "rebuildRecommended": null,
+    "hasWebSource": true,
+    "hasDatasetSource": false,
+    "sourceUsage": {
+      "used": 97,
+      "limit": 5000
+    },
+    "buildRestriction": null,
+    "refreshEnabled": false,
+    "refreshFrequency": "weekly",
+    "refreshNextRunAt": null,
+    "refreshInFlight": false,
+    "openIssueCount": 0,
+    "instructionCount": 0,
+    "createdBy": {
+      "id": "gtuNb4s8T",
+      "displayName": "Jean-Sebastien Beaulieu"
+    },
+    "createdAt": "2026-09-27T15:13:18.045Z",
+    "updatedAt": "2026-09-27T19:26:51.696Z"
+  },
+  "issues": [
+    {
+      "_createdAt": "2026-09-27T16:27:24Z",
+      "_id": "issue.0GXT22CTZ1M5YE0JEEQ8N3G0E8",
+      "_rev": "tle419bzR4Zp5ODeefyRpC",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T16:27:24Z",
+      "content": {
+        "citedSourceIds": [
+          "95107813-abc3-8783-b983-a7f1b89e16cf"
+        ],
+        "claimKey": "entity_coverage.langchain",
+        "issue": "\"LangChain\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"LangChain\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "1e464dd4988b54bad66603e51433ab844ad054a42af4d34170b9c02d8d0e5da0",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "599f1fb8-038d-483e-94c4-75b5f3523652",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T16:27:24Z",
+      "_id": "issue.VJ5MG1C1XD358W9EAA3ZWJZM04",
+      "_rev": "tle419bzR4Zp5ODeefyRpC",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T16:27:24Z",
+      "content": {
+        "citedSourceIds": [
+          "016bbda1-e308-4884-8da5-35324e1e6115"
+        ],
+        "claimKey": "entity_coverage.exa_contents",
+        "issue": "\"Exa Contents\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"Exa Contents\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "d9c4bfde68b0ea5532c3c914d626a38a0bc5d279c191c75edd68c0de61c882ae",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "599f1fb8-038d-483e-94c4-75b5f3523652",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:12:06Z",
+      "_id": "issue.3XGQ354P7KBPAY1BR2JYA869EC",
+      "_rev": "tle419bzR4Zp5ODeegOGZe",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:12:06Z",
+      "content": {
+        "citedSourceIds": [
+          "b3c9259d-10b9-435a-8787-9bd96b7f1713"
+        ],
+        "claimKey": "entity_coverage.prisma_statement",
+        "issue": "\"PRISMA statement\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"PRISMA statement\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "4d13bf4bf7df3f3ce908d3b37617509757b09af7a6aa4e910882f74db92a9809",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "d7ff2bf7-d51b-4949-a4f9-b9cbf8cd5a06",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:12:06Z",
+      "_id": "issue.8VYSW0KWCVQR54CQBWAH6SQ1F0",
+      "_rev": "tle419bzR4Zp5ODeegOGZe",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:12:06Z",
+      "content": {
+        "citedSourceIds": [
+          "a0715d30-43be-401d-a7e6-a9b71605de3e"
+        ],
+        "claimKey": "entity_coverage.arxiv_org_html_2408_09869v5",
+        "issue": "\"arxiv.org/html/2408.09869v5\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"arxiv.org/html/2408.09869v5\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "0186440974566bb1641029f6c1cccc2c8308a9130253a64e8c62e6eedbe97609",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "d7ff2bf7-d51b-4949-a4f9-b9cbf8cd5a06",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:12:06Z",
+      "_id": "issue.BPEJ78F2D6CA24VPKFHH3ZCCRR",
+      "_rev": "tle419bzR4Zp5ODeegOGZe",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:12:06Z",
+      "content": {
+        "citedSourceIds": [
+          "bffbba52-a616-45ad-a1f9-ebdd974c1c04"
+        ],
+        "claimKey": "entity_coverage.cochrane_handbook_chapter_13",
+        "issue": "\"Cochrane Handbook Chapter 13\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"Cochrane Handbook Chapter 13\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "a49c426d483dd67bd60a501938584ae8806e7c8a2421eb100b956f32ad07ee19",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "d7ff2bf7-d51b-4949-a4f9-b9cbf8cd5a06",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:12:06Z",
+      "_id": "issue.DP37R8TXTW9PG1D6KB6Q6EE2GG",
+      "_rev": "tle419bzR4Zp5ODeegOGZe",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:12:06Z",
+      "content": {
+        "citedSourceIds": [
+          "84195d4f-7be5-4689-b509-bcd7271e027e"
+        ],
+        "claimKey": "entity_coverage.fair_guiding_principles",
+        "issue": "\"FAIR Guiding Principles\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"FAIR Guiding Principles\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "429ee8351ae478d3f04a83de92bfac84f0de56187b221861709f1ef2d7e39063",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "d7ff2bf7-d51b-4949-a4f9-b9cbf8cd5a06",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:12:06Z",
+      "_id": "issue.R3005Q513RRVW88KFG87YCGT40",
+      "_rev": "tle419bzR4Zp5ODeegOGZe",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:12:06Z",
+      "content": {
+        "citedSourceIds": [
+          "84195d4f-7be5-4689-b509-bcd7271e027e"
+        ],
+        "claimKey": "entity_coverage.nature",
+        "issue": "\"Nature\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"Nature\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "08cf1ade916befaa3f93bb858c878e9522406fc937d05313cdd180e82d1218d9",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "d7ff2bf7-d51b-4949-a4f9-b9cbf8cd5a06",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:12:06Z",
+      "_id": "issue.XEAV7HCH3H51WV9CTC5QJCK6P0",
+      "_rev": "tle419bzR4Zp5ODeegOGZe",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:12:06Z",
+      "content": {
+        "citedSourceIds": [
+          "0380d0c9-5edb-4e8c-a1fc-df46a8d66d23"
+        ],
+        "claimKey": "entity_coverage.tarcis_statement",
+        "issue": "\"TARCiS Statement\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"TARCiS Statement\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "e6ea7772b5a9c735f957c13e6522392121d34112db25c31577edf4ba600ed24b",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "d7ff2bf7-d51b-4949-a4f9-b9cbf8cd5a06",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:12:06Z",
+      "_id": "issue.YPC0PCAMC5279GT61T28H7QS8C",
+      "_rev": "tle419bzR4Zp5ODeegOGZe",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:12:06Z",
+      "content": {
+        "citedSourceIds": [
+          "78fcbf2d-9f33-4622-af79-026927d43ca7"
+        ],
+        "claimKey": "entity_coverage.marcia_j_bates",
+        "issue": "\"Marcia J. Bates\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"Marcia J. Bates\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "e4e7f778708ca08f5aca1dd5238b4a9e355bf7d2a0025fe5d173ed66470de8af",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "d7ff2bf7-d51b-4949-a4f9-b9cbf8cd5a06",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:12:06Z",
+      "_id": "issue.ZHZP4QK9SGCABK77HN15XD4GB8",
+      "_rev": "tle419bzR4Zp5ODeegOGZe",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:12:06Z",
+      "content": {
+        "citedSourceIds": [
+          "0380d0c9-5edb-4e8c-a1fc-df46a8d66d23"
+        ],
+        "claimKey": "entity_coverage.university_of_basel",
+        "issue": "\"University of Basel\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"University of Basel\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "29c7921f94de5e8ad77c72d868bc45bcf6cf9b693f4a2326130a43f8cbfa2d54",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "d7ff2bf7-d51b-4949-a4f9-b9cbf8cd5a06",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:32:53Z",
+      "_id": "issue.1FMRMKNMY7KX27X0QD7GDVSHJ4",
+      "_rev": "6rEg5NJmU1VCqgtBJIJ3wo",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:32:53Z",
+      "content": {
+        "citedSourceIds": [
+          "7b280f1d-62e1-851a-a42c-4b7f507b6f89"
+        ],
+        "claimKey": "entity_coverage.scrape_endpoint",
+        "issue": "\"/scrape endpoint\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"/scrape endpoint\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "ee4e4caa7fc62b74d4610a9ce36fe5e54d2bfcc8ccbcb7c16562df6289711722",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "f45551a0-f56d-49fa-9052-a8ed72ab32f0",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:32:53Z",
+      "_id": "issue.22J169Z2HKZPW3CAD4JYXK30XC",
+      "_rev": "6rEg5NJmU1VCqgtBJIJ3wo",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:32:53Z",
+      "content": {
+        "citedSourceIds": [
+          "17870eb2-ad65-4fbb-99f8-62ff8103737c"
+        ],
+        "claimKey": "entity_coverage.condorcet",
+        "issue": "\"Condorcet\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"Condorcet\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "277efc5f4cc4da3b5ada34bfd74aeb8226c3c74087078903c81ea573797e1473",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "f45551a0-f56d-49fa-9052-a8ed72ab32f0",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:32:53Z",
+      "_id": "issue.461ZK6QYYZNB8SAZ5DVAT4P0JM",
+      "_rev": "6rEg5NJmU1VCqgtBJIJ3wo",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:32:53Z",
+      "content": {
+        "citedSourceIds": [
+          "1cfbca14-286d-40d0-a2a0-cbcaa05bbdcd"
+        ],
+        "claimKey": "entity_coverage.memoryservice",
+        "issue": "\"MemoryService\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"MemoryService\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "52846379ec74d07df0a221db2fe3b17690b26e8f931d519e60255a0378e6d0db",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "f45551a0-f56d-49fa-9052-a8ed72ab32f0",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:32:53Z",
+      "_id": "issue.9ZTHXB84FEFMVZH7HXBTSC5W34",
+      "_rev": "6rEg5NJmU1VCqgtBJIJ3wo",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:32:53Z",
+      "content": {
+        "citedSourceIds": [
+          "7cfb4431-0160-44d3-aa12-c0b366fec57e"
+        ],
+        "claimKey": "entity_coverage.claude_for_chrome",
+        "issue": "\"Claude for Chrome\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"Claude for Chrome\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "1e7a2dd274c90a0e92e4a72803243374b95c5a1fe66ceb9e00675e92fa552605",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "f45551a0-f56d-49fa-9052-a8ed72ab32f0",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:32:53Z",
+      "_id": "issue.AGY841W60PG7SAKB6BJXD57VA4",
+      "_rev": "6rEg5NJmU1VCqgtBJIJ3wo",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:32:53Z",
+      "content": {
+        "citedSourceIds": [
+          "1cfbca14-286d-40d0-a2a0-cbcaa05bbdcd"
+        ],
+        "claimKey": "entity_coverage.google_agent_development_kit",
+        "issue": "\"Google Agent Development Kit\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"Google Agent Development Kit\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "f90f8b5c6c1c3ee2be378f549d489b824f7f1a6e68f4feac3250e5d79d1dacc7",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "f45551a0-f56d-49fa-9052-a8ed72ab32f0",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:32:53Z",
+      "_id": "issue.BYKXE8X4GP40ZP8W1B302E4BSW",
+      "_rev": "6rEg5NJmU1VCqgtBJIJ3wo",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:32:53Z",
+      "content": {
+        "citedSourceIds": [
+          "0050fdee-0702-4079-84bc-b1e397562983"
+        ],
+        "claimKey": "entity_coverage.paid_services",
+        "issue": "\"Paid Services\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"Paid Services\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "c782dcda1ef7229555fc502d0f190bdcfdba0162625432a1ba48654baf251abc",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "f45551a0-f56d-49fa-9052-a8ed72ab32f0",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:32:53Z",
+      "_id": "issue.FPDWHEFWEASSN1JCHSHVM1ZT38",
+      "_rev": "6rEg5NJmU1VCqgtBJIJ3wo",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:32:53Z",
+      "content": {
+        "citedSourceIds": [
+          "37ffa75e-3d13-46e8-bdad-350d64d1f0fc"
+        ],
+        "claimKey": "entity_coverage.gpt_4o_mini",
+        "issue": "\"GPT-4o-mini\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"GPT-4o-mini\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "33f32dbd63484c28fb0327fb02c67c858d80383b1e956a41e97c3fdd8c946919",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "f45551a0-f56d-49fa-9052-a8ed72ab32f0",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:32:53Z",
+      "_id": "issue.FRC2RK4PFVMNZ0126H4YYXSF70",
+      "_rev": "6rEg5NJmU1VCqgtBJIJ3wo",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:32:53Z",
+      "content": {
+        "citedSourceIds": [
+          "705d78f3-867e-4654-81f5-1854602986b1"
+        ],
+        "claimKey": "entity_coverage.map_endpoint",
+        "issue": "\"/map endpoint\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"/map endpoint\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "19adc280165e2da43f8a455ad357ff626e0e458dfa11fb778cf254f31a6d6bbc",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "f45551a0-f56d-49fa-9052-a8ed72ab32f0",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:32:53Z",
+      "_id": "issue.J9TJ8ZM79HM04DX2Y5X0BG648M",
+      "_rev": "6rEg5NJmU1VCqgtBJIJ3wo",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:32:53Z",
+      "content": {
+        "citedSourceIds": [
+          "ce547f4e-adab-45a6-b5ae-0ba9f12168f6"
+        ],
+        "claimKey": "entity_coverage.cochrane_handbook",
+        "issue": "\"Cochrane Handbook\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"Cochrane Handbook\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "4958d768e28d08c1c3f2a8afedbb5bdd6497486c4eee7c1ccf2f99f69e8910ff",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "f45551a0-f56d-49fa-9052-a8ed72ab32f0",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:32:53Z",
+      "_id": "issue.W7VFY6Z4SA5PNB15GVRJVPS2D0",
+      "_rev": "6rEg5NJmU1VCqgtBJIJ3wo",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:32:53Z",
+      "content": {
+        "citedSourceIds": [
+          "be9ef3c4-f01b-4d90-91b5-04e8c1788e77"
+        ],
+        "claimKey": "entity_coverage.politicite",
+        "issue": "\"PolitiCite\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"PolitiCite\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "8dfbc4989b639baef0cad83a610d80f0c2d2cbf213652ea9f892a97956c2978c",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "f45551a0-f56d-49fa-9052-a8ed72ab32f0",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:32:53Z",
+      "_id": "issue.XZ7F9VJ0EJHHHT0V2K8EM7DMAR",
+      "_rev": "6rEg5NJmU1VCqgtBJIJ3wo",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:32:53Z",
+      "content": {
+        "citedSourceIds": [
+          "0050fdee-0702-4079-84bc-b1e397562983"
+        ],
+        "claimKey": "entity_coverage.live_api",
+        "issue": "\"Live API\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"Live API\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "d40fa099fab43458e13d51fb96799a9d7f4a8283b05b40c5c5474c2df075e3fe",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "f45551a0-f56d-49fa-9052-a8ed72ab32f0",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:32:53Z",
+      "_id": "issue.YPWGCTRX72ER2Q7GFTWS915DVR",
+      "_rev": "6rEg5NJmU1VCqgtBJIJ3wo",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:32:53Z",
+      "content": {
+        "citedSourceIds": [
+          "61d4bd07-b25c-4830-9f29-a7a7eb2ea8d7"
+        ],
+        "claimKey": "entity_coverage.inmemory",
+        "issue": "\"InMemory\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"InMemory\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "f3378ff6401a527a2e12839472b6e57b47eb63cccfb94a21e80445d9fec92e4d",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "f45551a0-f56d-49fa-9052-a8ed72ab32f0",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:47:03Z",
+      "_id": "issue.BN139P7KW5J2MVW1XGH0J5RCD4",
+      "_rev": "FEAYqiLxg7DwRFaW59YiJ7",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:47:03Z",
+      "content": {
+        "citedSourceIds": [
+          "ebfeb39b-5a13-461b-9b64-4581af116fdf",
+          "f4349976-71da-4296-b35d-6ca76f14668f"
+        ],
+        "claimKey": "entity_coverage.sanity_studio",
+        "issue": "\"Sanity Studio\" is covered by 2 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"Sanity Studio\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "0dbfc247ef7f83eb86759066a247a2646602458b5a7ed70c7edf900370d9c20c",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "399ba269-0c48-4228-8718-30b8b493218c",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:47:03Z",
+      "_id": "issue.DWA6NQ0FMF7KM37B7MGQGNWW4W",
+      "_rev": "FEAYqiLxg7DwRFaW59YiJ7",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:47:03Z",
+      "content": {
+        "citedSourceIds": [
+          "4062c901-663d-4629-b8e9-48eef157e761",
+          "e50b6ffe-0037-445e-bec5-c102c8a22d5b"
+        ],
+        "claimKey": "entity_coverage.university_of_washington",
+        "issue": "\"University of Washington\" is covered by 2 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"University of Washington\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "bd9f8e0618ff530351e525904f3689fd1823af456d66717adf007b38df78a93a",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "399ba269-0c48-4228-8718-30b8b493218c",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T17:47:03Z",
+      "_id": "issue.S83YFZB09J0SGNE2GPP9P6ZQH8",
+      "_rev": "FEAYqiLxg7DwRFaW59YiJ7",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T17:47:03Z",
+      "content": {
+        "citedSourceIds": [
+          "0050fdee-0702-4079-84bc-b1e397562983"
+        ],
+        "claimKey": "entity_coverage.file_api",
+        "issue": "\"File API\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"File API\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "b8265bd216bb8d1c18d287900b0b4f61ab3c66b97dd6beef8ed6dcb6c9133385",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "399ba269-0c48-4228-8718-30b8b493218c",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T19:06:47Z",
+      "_id": "issue.DF87WZZBH8CVQA11SW7MQT1TYR",
+      "_rev": "tle419bzR4Zp5ODeehuMug",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T19:06:47Z",
+      "content": {
+        "citedSourceIds": [
+          "4062c901-663d-4629-b8e9-48eef157e761",
+          "e50b6ffe-0037-445e-bec5-c102c8a22d5b"
+        ],
+        "claimKey": "entity_coverage.ai2",
+        "issue": "\"AI2\" is covered by 2 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"AI2\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "d104c5547f4faebcb2779f3b7352af74fe5d82cb8d6bcf17327bb3e71b9ba177",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "71925d92-e2d1-4c2f-9c30-03d2e95a4aef",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T19:06:47Z",
+      "_id": "issue.WVMBZ15YTEHA24W8ARRMMGTTVW",
+      "_rev": "tle419bzR4Zp5ODeehuMug",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T19:06:47Z",
+      "content": {
+        "citedSourceIds": [
+          "0050fdee-0702-4079-84bc-b1e397562983",
+          "22e952d2-fa8f-471b-974d-64f1e0b00476"
+        ],
+        "claimKey": "entity_coverage.file_api",
+        "issue": "\"File API\" is covered by 2 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"File API\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "ff4012a7e138b88b5d234d6535c7ece80117a59842535c3fad4f3a956eb0e44d",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "71925d92-e2d1-4c2f-9c30-03d2e95a4aef",
+      "schemaVersion": 1,
+      "status": "open"
+    },
+    {
+      "_createdAt": "2026-09-27T19:22:09Z",
+      "_id": "issue.61XDYCMEG3433GC73H5HSD57Y0",
+      "_rev": "6rEg5NJmU1VCqgtBJJZisK",
+      "_system": {
+        "createdBy": ""
+      },
+      "_type": "sanity.context.issue",
+      "_updatedAt": "2026-09-27T19:22:09Z",
+      "content": {
+        "citedSourceIds": [
+          "d5647ecc-d3c7-8aa2-9ae4-9b5e119e3cbd"
+        ],
+        "claimKey": "entity_coverage.deep_research_api",
+        "issue": "\"Deep Research API\" is covered by 1 source(s) but appears in no entry body or title — the consuming agent cannot answer for it by name.",
+        "kind": "gap",
+        "scopePath": "*",
+        "severity": "critical",
+        "suggestedFix": "Name \"Deep Research API\" explicitly in the entry that covers it (or give it its own entry), then re-scribe."
+      },
+      "fingerprint": "669e0e594d7546db926df2318c205ad51836c6ac0375bbeb4700278b5d23459c",
+      "knowledgeBaseId": "kb5CHIYGXCMJ",
+      "resolution": null,
+      "resolvedAt": null,
+      "resolvedBy": null,
+      "revisionId": "c78eba9e-ada6-4ff4-b6c6-e680d311b356",
+      "schemaVersion": 1,
+      "status": "open"
+    }
+  ],
+  "instructions": [],
+  "retentionEntryRevision": "61fb984c-2775-42a0-8f5e-1ccaf67d1b43",
+  "remainingDiagnosticsByKind": {
+    "gap": 28
+  }
+}

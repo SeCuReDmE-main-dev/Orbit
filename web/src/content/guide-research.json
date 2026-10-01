@@ -1,0 +1,182 @@
+[
+  {
+    "id": "workspace",
+    "fr": {
+      "title": "Votre dossier de recherche",
+      "html": "<p><a href=\"/app/\">Ouvrir Orbit</a> ne demande aucun compte. Question, Plan, Preuves, Vérification et Rapport sont cinq vues d’un même dossier. Les onglets remplacent la surface centrale ; les flèches du navigateur retrouvent votre parcours.</p><ol><li>Enregistrez la question, le résultat attendu et vos contraintes.</li><li>Activez séparément la lecture du dossier et la réception de propositions dans « Partager avec mon agent ». Votre agent navigateur garde sa propre connexion IA et ses outils de recherche.</li><li>Examinez le plan proposé, intégrez-le puis approuvez ses axes. Neuf axes et trente sources sont des plafonds de travail, jamais des quotas à remplir artificiellement.</li><li>Ouvrez chaque source et comparez les passages associés aux affirmations. Une contradiction signalée demande un examen du contexte et du périmètre.</li><li>Acceptez ou demandez une correction avec votre justification, puis exportez le rapport et son dossier de preuves.</li></ol>"
+    },
+    "en": {
+      "title": "Your research dossier",
+      "html": "<p><a href=\"/app/\">Open Orbit</a> without an account. Question, Plan, Evidence, Review and Report are five views of one dossier. Tabs replace the central surface; browser history restores your journey.</p><ol><li>Save the question, expected outcome and constraints.</li><li>Separately authorize dossier reading and proposals in “Share with my agent”. Your browser agent keeps its own AI account and research tools.</li><li>Examine the proposed plan, integrate it, then approve its axes. Nine axes and thirty sources are working limits, never quotas to fill artificially.</li><li>Open each source and compare passages supporting the claims. A reported contradiction requires checking context and scope.</li><li>Accept or request a correction with your reasons, then export the report and evidence dossier.</li></ol>"
+    },
+    "es": {
+      "title": "Tu expediente de investigación",
+      "html": "<p><a href=\"/app/\">Abrir Orbit</a> no requiere cuenta. Pregunta, Plan, Pruebas, Revisión e Informe son cinco vistas del mismo expediente. Las pestañas reemplazan la superficie central; el historial del navegador restaura el recorrido.</p><ol><li>Guarda la pregunta, el resultado esperado y las restricciones.</li><li>Autoriza por separado la lectura del expediente y la recepción de propuestas en «Compartir con mi agente». Tu agente conserva su propia cuenta de IA y sus herramientas.</li><li>Examina el plan, intégralo y aprueba sus ejes. Nueve ejes y treinta fuentes son límites de trabajo, nunca cuotas que rellenar artificialmente.</li><li>Abre cada fuente y compara los pasajes relacionados con las afirmaciones. Una contradicción requiere comprobar contexto y alcance.</li><li>Acepta o solicita una corrección con tu justificación; después exporta el informe y su expediente de pruebas.</li></ol>"
+    }
+  },
+  {
+    "id": "sanity",
+    "fr": {
+      "title": "Ce que Sanity apporte",
+      "html": "<p>Dans Plan, « Consulter Sanity » lit réellement le sommaire de notre Knowledge Base. Votre agent choisit ensuite les entrées utiles et leurs références : méthodes de clarification, recherche, provenance et évaluation. Ces méthodes ne remplacent pas les sources primaires de votre sujet.</p><p>Les quinze outils WebMCP comprennent dix outils de parcours (capacités, protocole, lectures Sanity et dossier) et cinq calculs : classement, comparaison, relations, reprise HOLD et impact d’une source modifiée. Le serveur conserve l’accès Sanity ; le navigateur ne reçoit aucun jeton.</p>"
+    },
+    "en": {
+      "title": "What Sanity contributes",
+      "html": "<p>In Plan, “Consult Sanity” reads the actual outline of our Knowledge Base. Your agent selects useful entries and their references: clarification, research, provenance and evaluation methods. These methods do not replace your topic’s primary sources.</p><p>Fifteen WebMCP tools comprise ten journey tools (capabilities, protocol, Sanity reads and dossier) and five calculations: classification, comparison, relations, HOLD reassessment and impact of a changed source. Sanity access stays on the server; no organization token is sent to the browser.</p>"
+    },
+    "es": {
+      "title": "Qué aporta Sanity",
+      "html": "<p>En Plan, «Consultar Sanity» lee el índice real de nuestra Knowledge Base. Tu agente selecciona entradas y referencias útiles: métodos de aclaración, investigación, procedencia y evaluación. Estos métodos no reemplazan las fuentes primarias del tema.</p><p>Los quince instrumentos WebMCP incluyen diez del recorrido (capacidades, protocolo, lecturas Sanity y expediente) y cinco cálculos: clasificación, comparación, relaciones, revisión de HOLD e impacto de una fuente modificada. El acceso Sanity permanece en el servidor; ningún token de organización llega al navegador.</p>"
+    }
+  },
+  {
+    "id": "studio",
+    "fr": {
+      "title": "Le Studio Sanity",
+      "html": "<p><a href=\"/studio/\">Ouvrir le Studio Orbit</a> mène à la surface authentifiée du projet Sanity <code>pzscx4w8</code>. Une session Sanity disposant des droits du projet est nécessaire. Le Studio permet notamment d’utiliser Structure, Dossiers, T · I · F, Relations, Audit et Releases pour examiner les corpus, les passages et les décisions humaines.</p><p>Cette adresse n’invente pas de Studio personnel pour chaque visiteur : elle ouvre le Studio Orbit existant avec les autorisations réellement accordées par Sanity. Le landing et <a href=\"/app/\">l’observatoire</a> restent accessibles directement.</p>"
+    },
+    "en": {
+      "title": "The Sanity Studio",
+      "html": "<p><a href=\"/studio/\">Open Orbit Studio</a> to access the authenticated Sanity project <code>pzscx4w8</code>. A Sanity session with project permissions is required. Structure, Dossiers, T · I · F, Relations, Audit and Releases examine corpora, passages and human decisions.</p><p>This address opens the existing Orbit Studio with actual Sanity permissions; it does not create a personal Studio for every visitor. The landing and <a href=\"/app/\">observatory</a> remain directly accessible.</p>"
+    },
+    "es": {
+      "title": "Sanity Studio",
+      "html": "<p><a href=\"/studio/\">Abrir Orbit Studio</a> lleva al proyecto autenticado Sanity <code>pzscx4w8</code>. Se requiere una sesión Sanity con permisos para ese proyecto. Structure, Dossiers, T · I · F, Relations, Audit y Releases permiten examinar corpus, pasajes y decisiones humanas.</p><p>Esta dirección abre el Studio Orbit existente con los permisos reales de Sanity; no crea un Studio personal para cada visitante. La portada y el <a href=\"/app/\">observatorio</a> siguen accesibles directamente.</p>"
+    }
+  },
+  {
+    "id": "review",
+    "fr": {
+      "title": "Vérifier sans prétendre tout savoir",
+      "html": "<p>Orbit détecte une référence absente, une lecture non déclarée, un passage introuvable dans l’extrait conservé ou une revue humaine périmée. Il distingue l’appréciation de l’agent de votre décision. Ces contrôles ne prouvent pas que la source est vraie ni que chaque phrase du rapport est exacte.</p><p>Une proposition fondée sur une ancienne révision est refusée à l’intégration. Les versions précédentes sont conservées dans l’historique. La carte facultative des preuves représente les relations déclarées ; ses distances ne mesurent pas la vérité. La liste reste disponible sans WebGL.</p>"
+    },
+    "en": {
+      "title": "Verify without claiming to know everything",
+      "html": "<p>Orbit detects missing references, undeclared reads, passages absent from the retained excerpt and outdated human reviews. It separates an agent’s assessment from your decision. These checks do not prove that a source is true or that every sentence in a report is correct.</p><p>A proposal based on an old revision is refused at integration. Previous versions remain in history. The optional evidence map represents declared relations; distances do not measure truth. The list remains available without WebGL.</p>"
+    },
+    "es": {
+      "title": "Verificar sin pretender saberlo todo",
+      "html": "<p>Orbit detecta referencias ausentes, lecturas no declaradas, pasajes que no aparecen en el extracto conservado y revisiones humanas desactualizadas. Separa la apreciación del agente de tu decisión. Estos controles no demuestran que una fuente sea verdadera ni que todas las frases del informe sean correctas.</p><p>Una propuesta basada en una revisión antigua se rechaza al integrarla. Las versiones anteriores se conservan en el historial. El mapa opcional representa relaciones declaradas; sus distancias no miden la verdad. La lista sigue disponible sin WebGL.</p>"
+    }
+  },
+  {
+    "id": "storage",
+    "fr": {
+      "title": "Où sont vos données ?",
+      "html": "<p>Le dossier reste en mémoire par défaut. Dans Réglages → Stockage, vous pouvez autoriser une copie locale dans ce profil de navigateur, ou exporter un fichier JSON. Sans copie ni export, fermer la session perd le dossier. Le partage avec l’agent est toujours révoqué au rechargement et au changement de dossier.</p><p>Le module Audit dans Sanity Studio ouvre explicitement votre export JSON. Il permet de revoir les mêmes affirmations et d’exporter les décisions. Aucune recherche privée n’est envoyée automatiquement dans Sanity et aucune entrée de la Knowledge Base n’est modifiée.</p>"
+    },
+    "en": {
+      "title": "Where is your data?",
+      "html": "<p>The dossier stays in memory by default. Settings → Storage lets you authorize a local copy in this browser profile or export JSON. Without a copy or export, closing the session loses the dossier. Agent sharing is revoked on reload and when changing dossier.</p><p>Audit in Sanity Studio explicitly opens your JSON export to review the same claims and export decisions. Private research is not automatically sent to Sanity; no Knowledge Base entry is modified.</p>"
+    },
+    "es": {
+      "title": "¿Dónde están tus datos?",
+      "html": "<p>El expediente permanece en memoria por defecto. Ajustes → Almacenamiento permite autorizar una copia local en este perfil o exportar JSON. Sin copia ni exportación, cerrar la sesión pierde el expediente. El acceso del agente se revoca al recargar y al cambiar de expediente.</p><p>Audit en Sanity Studio abre explícitamente tu exportación JSON para revisar las mismas afirmaciones y exportar decisiones. Las investigaciones privadas no se envían automáticamente a Sanity; no se modifica ninguna entrada de la Knowledge Base.</p>"
+    }
+  },
+  {
+    "id": "engines",
+    "fr": {
+      "title": "Trois moteurs sur les mêmes preuves",
+      "html": "<dl><dt>Standard · trois états</dt><dd>Chaque preuve admissible est un soutien, une opposition ou une information insuffisante. La règle classique recommande ADMIT, REJECT ou HOLD avec les mêmes contrôles de provenance que les autres moteurs.</dd><dt>N · preuves indépendantes</dt><dd>T conserve les passages de soutien, F les réfutations et I les raisons de suspendre. Les trois ensembles peuvent coexister. Ils ne sont ni des probabilités ni des parts totalisant 100 %.</dd><dt>P · relations par attributs</dt><dd>Compare fournisseur, produit, mode, conditions, population et versions. Des règles explicites peuvent rapprocher des libellés différents. Une règle absente reste inconnue. Une différence de version ne prouve pas un remplacement.</dd></dl><p>Le choix du moteur est humain dans Réglages ou T · I · F au Studio. Dans l’observatoire, le changement crée une révision et révoque le partage. L’agent ne choisit pas le moteur pour obtenir la réponse qu’il préfère.</p><p>Ouvrez une affirmation dans Vérification, puis « Comparer les trois moteurs sur ces mêmes passages ». La table montre décisions, preuves et raisons pour la révision actuelle. Ce calcul de comparaison n’intègre aucune proposition et ne change pas votre moteur. Des résultats identiques sont légitimes ; aucun gagnant n’est activé automatiquement.</p>"
+    },
+    "en": {
+      "title": "Three engines, the same evidence",
+      "html": "<dl><dt>Standard · three states</dt><dd>Each admissible passage is supporting, opposing or insufficient information. Explicit classical rules recommend ADMIT, REJECT or HOLD with the same provenance controls as the other engines.</dd><dt>N · independent evidence</dt><dd>T retains supporting passages, F refutations and I reasons to suspend. All three sets may coexist. They are neither probabilities nor shares adding to 100%.</dd><dt>P · attribute relations</dt><dd>Compares provider, product, mode, conditions, population and versions. Explicit rules may reconcile different labels. An absent rule stays unknown. Different versions do not prove replacement.</dd></dl><p>A human selects the engine in Settings or Studio T · I · F. In the observatory, changing it creates a revision and revokes sharing. An agent cannot switch engines to obtain its preferred answer.</p><p>Open a claim in Review and choose “Compare the three engines on these same passages”. The table shows decisions, evidence and reasons for the current revision. Comparison integrates no proposal and does not change the selected engine. Identical results are legitimate; no winner is activated automatically.</p>"
+    },
+    "es": {
+      "title": "Tres motores, las mismas pruebas",
+      "html": "<dl><dt>Estándar · tres estados</dt><dd>Cada pasaje admisible es apoyo, oposición o información insuficiente. Reglas clásicas explícitas recomiendan ADMIT, REJECT o HOLD con los mismos controles de procedencia.</dd><dt>N · pruebas independientes</dt><dd>T conserva apoyos, F refutaciones e I razones para suspender. Los tres conjuntos pueden coexistir. No son probabilidades ni partes que sumen el 100 %.</dd><dt>P · relaciones por atributos</dt><dd>Compara proveedor, producto, modo, condiciones, población y versiones. Reglas explícitas pueden relacionar etiquetas distintas. Una regla ausente sigue desconocida. Versiones diferentes no prueban una sustitución.</dd></dl><p>Una persona elige el motor en Ajustes o T · I · F de Studio. En el observatorio, cambiarlo crea una revisión y revoca el acceso compartido. El agente no puede cambiar de motor para obtener su respuesta preferida.</p><p>Abre una afirmación en Revisión y selecciona «Comparar los tres motores con estos mismos pasajes». La tabla muestra decisiones, pruebas y razones para la revisión actual. No integra propuestas ni cambia el motor elegido. Resultados idénticos son legítimos; ningún ganador se activa automáticamente.</p>"
+    }
+  },
+  {
+    "id": "hold",
+    "fr": {
+      "title": "HOLD : savoir ce qui manque",
+      "html": "<p>ADMIT, REJECT et HOLD sont des recommandations opérationnelles, jamais des décisions humaines. Une portée inconnue, un passage absent, une dépendance modifiée ou des preuves opposées maintiennent HOLD. La raison et la condition de reprise sont affichées.</p><p>Dans Vérification, « Préciser les conditions / reprendre HOLD » permet de corriger la portée cible et celle de chaque passage séparément. Un attribut vide reste inconnu : Orbit ne copie pas les conditions de la question dans ses sources. L’enregistrement crée une révision ; les trois moteurs peuvent ensuite être comparés à nouveau.</p><p>« Conserver les trois calculs » enregistre leur version, les raisons et une empreinte des données examinées. « Calculs précédents » distingue les données inchangées des évaluations à revoir. Ce journal est inclus dans l’export JSON ; il reste séparé de la revue humaine.</p><p>L’outil agent de reprise accepte de nouveaux passages du dossier ou une clarification des conditions. Il conserve le sujet, la propriété et la valeur. Deux demandes supplémentaires au maximum sont prévues dans les missions. Ce calcul ne sauvegarde pas son candidat et n’approuve pas sa propre proposition.</p>"
+    },
+    "en": {
+      "title": "HOLD: identify what is missing",
+      "html": "<p>ADMIT, REJECT and HOLD are operational recommendations, never human decisions. Unknown scope, a missing passage, a changed dependency or conflicting evidence maintains HOLD. Its reason and restart condition are displayed.</p><p>In Review, “Clarify conditions / reassess HOLD” edits the target scope and each passage’s scope separately. An empty attribute remains unknown: Orbit does not copy question conditions into sources. Saving creates a revision; compare the engines again afterward.</p><p>“Keep the three calculations” records their versions, reasons and a fingerprint of the examined data. “Previous calculations” distinguishes unchanged data from assessments needing review. This log is included in JSON exports and stays separate from human review.</p><p>The agent reassessment tool accepts additional dossier passages or clarified conditions. It retains the subject, property and value. Missions allow at most two additional requests. This calculation neither saves its candidate nor approves its own proposal.</p>"
+    },
+    "es": {
+      "title": "HOLD: identificar lo que falta",
+      "html": "<p>ADMIT, REJECT y HOLD son recomendaciones operativas, nunca decisiones humanas. Un alcance desconocido, un pasaje ausente, una dependencia modificada o pruebas opuestas mantienen HOLD. Se muestran la razón y la condición de reanudación.</p><p>En Revisión, «Precisar condiciones / revisar HOLD» modifica por separado el alcance objetivo y el de cada pasaje. Un atributo vacío sigue desconocido: Orbit no copia las condiciones de la pregunta en las fuentes. Guardar crea una revisión; después puedes comparar otra vez los motores.</p><p>«Conservar los tres cálculos» registra versiones, razones y una huella de los datos examinados. «Cálculos anteriores» distingue los datos iguales de las evaluaciones que deben revisarse. Este historial se incluye en JSON y permanece separado de la revisión humana.</p><p>La herramienta del agente acepta pasajes adicionales del expediente o condiciones aclaradas. Conserva sujeto, propiedad y valor. Las misiones permiten como máximo dos solicitudes adicionales. Este cálculo no guarda su candidato ni aprueba su propia propuesta.</p>"
+    }
+  },
+  {
+    "id": "example",
+    "fr": {
+      "title": "Exemple : deux portées, une clarification",
+      "html": "<p>Exemple pédagogique synthétique : le manuel A dit « Le mode local conserve les résultats. » Le manuel B dit « Le mode temporaire ne conserve pas les résultats. »</p><ol><li>Conservez les passages exacts et les deux sources.</li><li>Décrivez le même sujet et la même propriété, avec les modes <code>local</code> et <code>temporaire</code>.</li><li>La comparaison indique des portées différentes ; elle n’invente pas une contradiction.</li><li>Si la question omet le mode, gardez HOLD et demandez la précision.</li><li>L’humain choisit « local », ouvre A puis examine la réponse proposée : « Dans le mode local décrit par A, les résultats sont conservés. » Sa justification reste distincte du calcul.</li></ol><p>Deux passages opposés dans le même mode devraient être conservés et examinés ; le nombre de sources ne permettrait pas d’effacer ce désaccord.</p>"
+    },
+    "en": {
+      "title": "Example: two scopes, one clarification",
+      "html": "<p>Synthetic teaching example: manual A says “Local mode retains results.” Manual B says “Temporary mode does not retain results.”</p><ol><li>Keep the exact passages and both sources.</li><li>Describe the same subject and property with <code>local</code> and <code>temporary</code> modes.</li><li>Comparison identifies different scopes rather than inventing a contradiction.</li><li>If the question omits the mode, maintain HOLD and ask for clarification.</li><li>The human selects local, opens A and examines the proposed answer: “In the local mode described by A, results are retained.” Human reasoning stays separate from the calculation.</li></ol><p>Opposing passages in the same mode must both be kept and examined; counting sources cannot erase that disagreement.</p>"
+    },
+    "es": {
+      "title": "Ejemplo: dos alcances y una aclaración",
+      "html": "<p>Ejemplo didáctico sintético: el manual A dice «El modo local conserva los resultados». El manual B dice «El modo temporal no conserva los resultados».</p><ol><li>Conserva los pasajes exactos y ambas fuentes.</li><li>Describe el mismo sujeto y propiedad con modos <code>local</code> y <code>temporal</code>.</li><li>La comparación identifica alcances diferentes sin inventar contradicciones.</li><li>Si la pregunta omite el modo, mantén HOLD y solicita una aclaración.</li><li>La persona elige local, abre A y examina la propuesta: «En el modo local descrito por A se conservan los resultados». Su justificación permanece separada del cálculo.</li></ol><p>Pasajes opuestos en el mismo modo deben conservarse y examinarse; contar fuentes no permite borrar el desacuerdo.</p>"
+    }
+  },
+  {
+    "id": "tools",
+    "fr": {
+      "title": "Les quinze outils WebMCP",
+      "html": "<p>Les capacités, le protocole et les lectures du corpus Sanity configuré sont publics. Lire une question privée ou effectuer les cinq calculs demande le partage de son dossier. Déposer une proposition exige une autorisation distincte. Une lecture Context réussie n’ouvre donc aucun dossier privé ; un refus du dossier n’interdit pas la lecture du corpus public.</p><p>L’enregistrement ne lance ni recherche ni modèle. Les cinq calculs ne publient rien, ne modifient pas Sanity et n’accordent jamais une approbation humaine.</p><table><thead><tr><th>Outil</th><th>Usage</th></tr></thead><tbody><tr><td><code>orbit_get_capabilities</code></td><td>Capacités, versions et autorisations.</td></tr><tr><td><code>orbit_get_research_protocol</code></td><td>Méthode et contrat de transmission.</td></tr><tr><td><code>orbit_sanity_initial_context</code></td><td>Sommaire réel Context.</td></tr><tr><td><code>orbit_sanity_read_entries</code></td><td>Entrées choisies et références.</td></tr><tr><td><code>orbit_get_research_request</code></td><td>Question explicitement partagée.</td></tr><tr><td><code>orbit_get_mission_summary</code></td><td>Révision, propositions et décisions.</td></tr><tr><td><code>orbit_list_research_points</code></td><td>Axes et besoins de preuve.</td></tr><tr><td><code>orbit_search_sources</code></td><td>Sources enregistrées, sans recherche Web.</td></tr><tr><td><code>orbit_read_source_record</code></td><td>Passages et provenance d’une source.</td></tr><tr><td><code>orbit_present_research</code></td><td>Proposition versionnée pour revue humaine.</td></tr><tr><td><code>orbit_classify_evidence</code></td><td>T/I/F, recommandation et raisons.</td></tr><tr><td><code>orbit_compare_claims</code></td><td>Contradiction, portée, version ou relation inconnue.</td></tr><tr><td><code>orbit_find_relations</code></td><td>Relations dans une sélection de 25 affirmations au maximum.</td></tr><tr><td><code>orbit_resolve_hold</code></td><td>Recalcul avec passages supplémentaires ou portée précisée.</td></tr><tr><td><code>orbit_trace_impact</code></td><td>Dépendance modifiée → affirmation → réponse affectée.</td></tr></tbody></table><p>Pour les calculs, utilisez <code>requestId</code>, <code>expectedRevision</code> et des identifiants du dossier ou d’une proposition actuelle. Une référence étrangère ou une révision périmée est refusée. Un <code>submissionId</code> stable permet de répéter le même dépôt sans le dupliquer ; changer son contenu sous ce même identifiant est refusé.</p>"
+    },
+    "en": {
+      "title": "The fifteen WebMCP tools",
+      "html": "<p>Capabilities, the protocol and reads of the configured Sanity corpus are public. Reading a private question or performing the five calculations requires explicit dossier sharing. Submitting proposals requires separate authorization. A successful Context read opens no private dossier; refusing dossier access does not forbid public corpus reading.</p><p>Registration starts no research or model. The five calculations publish nothing, modify no Sanity entries and never grant human approval.</p><table><thead><tr><th>Tool</th><th>Usage</th></tr></thead><tbody><tr><td><code>orbit_get_capabilities</code></td><td>Capabilities, versions and permissions.</td></tr><tr><td><code>orbit_get_research_protocol</code></td><td>Method and handoff contract.</td></tr><tr><td><code>orbit_sanity_initial_context</code></td><td>Actual Context outline.</td></tr><tr><td><code>orbit_sanity_read_entries</code></td><td>Selected entries and references.</td></tr><tr><td><code>orbit_get_research_request</code></td><td>Explicitly shared question.</td></tr><tr><td><code>orbit_get_mission_summary</code></td><td>Revision, proposals and decisions.</td></tr><tr><td><code>orbit_list_research_points</code></td><td>Axes and evidence needs.</td></tr><tr><td><code>orbit_search_sources</code></td><td>Recorded sources; no Web search.</td></tr><tr><td><code>orbit_read_source_record</code></td><td>Source passages and provenance.</td></tr><tr><td><code>orbit_present_research</code></td><td>Versioned proposal for human review.</td></tr><tr><td><code>orbit_classify_evidence</code></td><td>T/I/F, recommendation and reasons.</td></tr><tr><td><code>orbit_compare_claims</code></td><td>Contradiction, scope, version or unknown relation.</td></tr><tr><td><code>orbit_find_relations</code></td><td>Relations among at most 25 selected claims.</td></tr><tr><td><code>orbit_resolve_hold</code></td><td>Reassessment with additional passages or clarified scope.</td></tr><tr><td><code>orbit_trace_impact</code></td><td>Changed dependency → claim → affected answer.</td></tr></tbody></table><p>Calculations use <code>requestId</code>, <code>expectedRevision</code> and identifiers from the dossier or a current proposal. Foreign references and outdated revisions are refused. A stable <code>submissionId</code> allows retrying the same submission without duplication; changing its content under the same identifier is refused.</p>"
+    },
+    "es": {
+      "title": "Las quince herramientas WebMCP",
+      "html": "<p>Las capacidades, el protocolo y la lectura del corpus Sanity configurado son públicos. Leer una pregunta privada o realizar los cinco cálculos requiere compartir explícitamente el expediente. Presentar propuestas requiere autorización aparte. Una lectura Context correcta no abre expedientes privados; rechazar el acceso al expediente no impide leer el corpus público.</p><p>El registro no inicia investigaciones ni modelos. Los cinco cálculos no publican nada, no modifican Sanity ni conceden aprobación humana.</p><table><thead><tr><th>Herramienta</th><th>Uso</th></tr></thead><tbody><tr><td><code>orbit_get_capabilities</code></td><td>Capacidades, versiones y permisos.</td></tr><tr><td><code>orbit_get_research_protocol</code></td><td>Método y contrato de transmisión.</td></tr><tr><td><code>orbit_sanity_initial_context</code></td><td>Índice real Context.</td></tr><tr><td><code>orbit_sanity_read_entries</code></td><td>Entradas elegidas y referencias.</td></tr><tr><td><code>orbit_get_research_request</code></td><td>Pregunta compartida explícitamente.</td></tr><tr><td><code>orbit_get_mission_summary</code></td><td>Revisión, propuestas y decisiones.</td></tr><tr><td><code>orbit_list_research_points</code></td><td>Ejes y necesidades de prueba.</td></tr><tr><td><code>orbit_search_sources</code></td><td>Fuentes registradas; sin búsqueda web.</td></tr><tr><td><code>orbit_read_source_record</code></td><td>Pasajes y procedencia de una fuente.</td></tr><tr><td><code>orbit_present_research</code></td><td>Propuesta versionada para revisión humana.</td></tr><tr><td><code>orbit_classify_evidence</code></td><td>T/I/F, recomendación y razones.</td></tr><tr><td><code>orbit_compare_claims</code></td><td>Contradicción, alcance, versión o relación desconocida.</td></tr><tr><td><code>orbit_find_relations</code></td><td>Relaciones entre un máximo de 25 afirmaciones.</td></tr><tr><td><code>orbit_resolve_hold</code></td><td>Nuevo cálculo con pasajes adicionales o alcance aclarado.</td></tr><tr><td><code>orbit_trace_impact</code></td><td>Dependencia modificada → afirmación → respuesta afectada.</td></tr></tbody></table><p>Los cálculos usan <code>requestId</code>, <code>expectedRevision</code> e identificadores del expediente o de una propuesta actual. Referencias ajenas y revisiones antiguas se rechazan. Un <code>submissionId</code> estable permite repetir un envío idéntico sin duplicarlo; cambiar su contenido con el mismo identificador se rechaza.</p>"
+    }
+  },
+  {
+    "id": "context-provenance",
+    "fr": {
+      "title": "Une lecture Sanity réussie peut avoir une provenance incomplète",
+      "html": "<p><code>READY</code> signifie que l’entrée Context a été reçue. La réponse conserve son texte et ajoute les références effectivement observées, avec <code>provenance.status</code> et <code>referencesWithoutOriginalUrl</code>. Une référence nommée sans adresse reste non résolue : Orbit ne reconstruit pas son URL à partir du titre.</p><p>Une URL observée ne prouve ni la lecture du document original ni sa pertinence pour l’affirmation. L’agent doit conserver ces limites, ouvrir la source originale lorsque sa mission le permet et suspendre une conclusion si la preuve nécessaire manque. Une provenance incomplète n’est pas une preuve que l’affirmation est fausse.</p>"
+    },
+    "en": {
+      "title": "A successful Sanity read may have incomplete provenance",
+      "html": "<p><code>READY</code> means the Context entry was received. The response retains its text and adds references actually observed, with <code>provenance.status</code> and <code>referencesWithoutOriginalUrl</code>. A named reference without an address stays unresolved: Orbit does not reconstruct URLs from titles.</p><p>An observed URL proves neither reading the original document nor its relevance to the claim. The agent must retain these limits, open the original when permitted and suspend conclusions when necessary evidence is missing. Incomplete provenance does not make a claim false.</p>"
+    },
+    "es": {
+      "title": "Una lectura Sanity correcta puede tener procedencia incompleta",
+      "html": "<p><code>READY</code> significa que se recibió la entrada Context. La respuesta conserva su texto y añade las referencias realmente observadas, con <code>provenance.status</code> y <code>referencesWithoutOriginalUrl</code>. Una referencia sin dirección sigue sin resolver: Orbit no reconstruye URL a partir del título.</p><p>Una URL observada no demuestra que se leyó el documento original ni su pertinencia. El agente conserva estos límites, abre el original cuando está permitido y suspende conclusiones si falta la prueba necesaria. Una procedencia incompleta no vuelve falsa una afirmación.</p>"
+    }
+  },
+  {
+    "id": "handoffs",
+    "fr": {
+      "title": "Transmettre à un sous-agent",
+      "html": "<p>Chaque transmission conserve la mission, sa révision, les affirmations, toutes les sources correspondantes et les questions ouvertes. L’extracteur lit un périmètre borné, le vérificateur examine passages et conditions, puis le coordinateur dépose la proposition finale.</p><p>Trois agents répétant une source ne constituent pas trois preuves. Leur désaccord ne prouve pas un conflit entre documents. Les identités déclarées sont séparées de celles observées par l’exécuteur. Une transmission ne doit pas supprimer un HOLD ou transformer « non contrôlé » en « vérifié » sans preuve supplémentaire.</p>"
+    },
+    "en": {
+      "title": "Hand off to a sub-agent",
+      "html": "<p>Each handoff retains the mission, revision, claims, corresponding sources and open questions. The extractor reads a bounded scope, the verifier examines passages and conditions, then the coordinator submits the final proposal.</p><p>Three agents repeating one source are not three pieces of evidence. Agent disagreement does not prove a conflict between documents. Declared identities are separated from those observed by the executor. A handoff must not remove HOLD or change “unchecked” into “verified” without additional evidence.</p>"
+    },
+    "es": {
+      "title": "Transmitir a un subagente",
+      "html": "<p>Cada transmisión conserva misión, revisión, afirmaciones, fuentes correspondientes y preguntas abiertas. El extractor lee un alcance acotado, el verificador examina pasajes y condiciones, y el coordinador presenta la propuesta final.</p><p>Tres agentes que repiten una fuente no son tres pruebas. Su desacuerdo no demuestra un conflicto entre documentos. Las identidades declaradas se separan de las observadas por el ejecutor. Una transmisión no elimina HOLD ni convierte «no controlado» en «verificado» sin pruebas adicionales.</p>"
+    }
+  },
+  {
+    "id": "benchmark",
+    "fr": {
+      "title": "Ce que le benchmark doit établir",
+      "html": "<p>Les campagnes séparent moteurs déterministes, modèles d’extraction, contribution Sanity Context et trajectoires sur le site public. Un test scripté, un rejeu et une exécution autonome seront étiquetés différemment. La présence d’un passage est un contrôle d’intégrité ; sa pertinence sémantique reste à examiner.</p><p><a href=\"/benchmark/\">Protocole, état des campagnes et résultats disponibles ↗</a></p>"
+    },
+    "en": {
+      "title": "What the benchmark must establish",
+      "html": "<p>Campaigns separate deterministic engines, extraction models, the contribution of Sanity Context and trajectories on the public site. Scripted tests, replays and autonomous runs are labeled separately. Passage presence checks integrity; semantic relevance still needs examination.</p><p><a href=\"/benchmark/\">Protocol, campaign status and available results ↗</a></p>"
+    },
+    "es": {
+      "title": "Qué debe establecer el benchmark",
+      "html": "<p>Las campañas separan motores deterministas, modelos de extracción, contribución de Sanity Context y recorridos en el sitio público. Pruebas programadas, repeticiones y ejecuciones autónomas se identifican por separado. La presencia de un pasaje comprueba integridad; su pertinencia semántica requiere examen.</p><p><a href=\"/benchmark/\">Protocolo, estado de las campañas y resultados disponibles ↗</a></p>"
+    }
+  }
+]

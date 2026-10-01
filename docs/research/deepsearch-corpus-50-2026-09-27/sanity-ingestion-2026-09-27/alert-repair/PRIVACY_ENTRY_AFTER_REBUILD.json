@@ -1,0 +1,124 @@
+{
+  "_createdAt": "2026-09-27T19:22:07Z",
+  "_id": "entry.FQW0CHYZAB0R6KE5TYZB5E9E4M",
+  "_rev": "FEAYqiLxg7DwRFaW59gZVI",
+  "_system": {
+    "createdBy": ""
+  },
+  "_type": "sanity.context.entry",
+  "_updatedAt": "2026-09-27T19:25:26Z",
+  "body": "Google's APIs differ significantly in zero data retention (ZDR) guarantees depending on which surface you use. The key distinction is **Gemini Developer API** (AI Studio / ai.google.dev) vs **Vertex AI / Gemini Enterprise Agent Platform** (Google Cloud).\n\n## Training restriction (Gemini Developer API)\n\nFor **Paid Services** on the Gemini Developer API, Google does not use your prompts (including system instructions, cached content, and files such as images, videos, or documents) or responses to improve Google products [1].\n\n## Gemini Developer API — per-feature retention\n\n| Feature | Retention | ZDR path |\n|---|---|---|\n| Abuse monitoring (Paid Services) | Limited period; prompts & responses logged solely to detect Prohibited Use Policy violations | Use Vertex AI if you need guaranteed ZDR or enterprise data processing agreements [1] |\n| Grounding with Google Search | 30 days; prompts, contextual info, generated output; used for debugging/testing | **Cannot be disabled.** Do not use this feature if ZDR is required [1] |\n| Grounding with Google Maps | 30 days; prompts, contextual info, generated output; used for reliability engineering/debugging | **Cannot be disabled.** Do not use this feature if ZDR is required [1] |\n| Interactions API | Default `store=true`; conversation state retained | Set `store=false` explicitly in every request [1] |\n| Live API / SessionResumptionConfig | Up to 24 hours of conversation state (text, audio, video) if a session handle is generated | Do not configure `SessionResumptionConfig` [1] |\n| File API | Files stored at-rest until deleted or expired | Manually delete files; File API storage is independent of ZDR log-dropping policies [1] |\n| Explicit Context Caching (`cached_content`) | Stored until user-defined `ttl` or `expire_time`; request logs follow ZDR dropping | Do not use `cached_content` for absolute ZDR [1] |\n| Implicit In-Memory Caching | RAM only, project-isolated, 24-hour TTL; **not** at-rest | **Does not violate ZDR** [1] |\n\n## Vertex AI / Gemini Enterprise Agent Platform — per-feature retention\n\n| Feature | Retention | ZDR path |\n|---|---|---|\n| Prompt logging — Google models (abuse monitoring) | Limited period; governed by Section 4.3 of Google Cloud Platform ToS | Request an exception for abuse monitoring [2] |\n| Prompt & response logging — Advanced AI models | Additional logging under Advanced AI Safety Addendum; ZDR **may not be possible** for some Advanced AI features | Contact your account team [2] |\n| Grounding with Google Search | Up to **3 days**; queries derived from prompts + contextual info; used for debugging | **Cannot be disabled.** Use Web Grounding for Enterprise if ZDR is required [2] |\n| Grounding with Google Maps | **30 days**; prompts, contextual info, generated output; used for reliability engineering | **Cannot be disabled** [2] |\n| Request-response logging | Disabled by default; if enabled, writes requests/responses to BigQuery | Do not enable this feature [2] |\n| Interactions API | `store` defaults to `true` for all models; stores prompts, responses, conversation state | Set `store=false` explicitly [2] |\n\nNote the difference in Google Search grounding retention between the two surfaces: the **Developer API retains for 30 days**, while the **Enterprise Agent Platform retains for only 3 days** — but neither allows opt-out [1][2].\n\n## Summary: achieving ZDR\n\n- **Developer API**: guaranteed ZDR is not achievable for abuse monitoring on Paid Services. Migrate to Vertex AI for enterprise-grade ZDR controls.\n- **Vertex AI / Enterprise Agent Platform**: ZDR requires opting out of or avoiding each feature above individually. Advanced AI features may block ZDR entirely — contact your account team.\n- **Grounding features (both surfaces)**: storage cannot be disabled; avoid them entirely if ZDR is a hard requirement.\n- **Interactions API (both surfaces)**: always set `store=false` explicitly, as the default is `true`.\n",
+  "citations": [
+    {
+      "_key": "0050fdee-0702-4079-84bc-b1e397562983",
+      "_type": "sanity.context.citation",
+      "filename": "0050fdee-0702-4079-84bc-b1e397562983",
+      "sourceId": "0050fdee-0702-4079-84bc-b1e397562983",
+      "spans": [
+        {
+          "quote": "- [What's next](https://ai.google.dev/gemini-api/docs/zdr#whats_next)\n\nThis page outlines details of what is commonly referred to as \"zero data retention\"\nin the Gemini Developer API.\n\n## Training restriction\n\nAs outlined in the [Gemini API Terms of Service](https://ai.google.dev/gemini-api/terms), when you",
+          "sourceLineEnd": 64,
+          "sourceLineStart": 57
+        },
+        {
+          "quote": "use Paid Services, Google does not use your prompts (including associated system\ninstructions, cached content, and files such as images, videos, or documents) or\nresponses to improve our products. Paid Services are defined\n[here](https://ai.google.dev/gemini-api/terms#paid-services).\n\n## Customer data retention and achieving zero data retention\n\nCustomer data is typically retained for limited periods of time in the following\nscenarios and conditions. To achieve zero data retention, customers must take",
+          "sourceLineEnd": 73,
+          "sourceLineStart": 65
+        },
+        {
+          "quote": "specific actions or avoid specific features within each of these areas:\n\n- **Prompt logging for abuse monitoring**: As outlined in the [Gemini API\\\\\nAdditional Terms of Service](https://ai.google.dev/gemini-api/terms), for Paid Services, Google\nlogs prompts and responses for a limited period of time solely for detecting\nviolations of the [Prohibited Use\\\\\nPolicy](https://policies.google.com/terms/generative-ai/use-policy). If your",
+          "sourceLineEnd": 80,
+          "sourceLineStart": 74
+        },
+        {
+          "quote": "workload requires guaranteed zero data retention or enterprise data\nprocessing agreements, use Vertex AI. For details, see\n[Gemini Enterprise Agent Platform and zero data\\\\\nretention](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention).\n",
+          "sourceLineEnd": 85,
+          "sourceLineStart": 81
+        },
+        {
+          "quote": "- **Grounding with Google Search**: As outlined in the [Gemini API Additional\\\\\nTerms of Service](https://ai.google.dev/gemini-api/terms#grounding-with-google-search), Google\nstores prompts, contextual information, and generated output for thirty (30)\ndays for the purposes of creating grounded results and search suggestions.",
+          "sourceLineEnd": 89,
+          "sourceLineStart": 86
+        },
+        {
+          "quote": "This stored information may be used for debugging and testing of systems\nthat support grounding. **There is no way to disable the storage of this**\n**information if you use Grounding with Google Search.**\n\n- **Grounding with Google Maps**: As outlined in the [Gemini API Additional\\\\",
+          "sourceLineEnd": 94,
+          "sourceLineStart": 90
+        },
+        {
+          "quote": "Terms of Service](https://ai.google.dev/gemini-api/terms), Google stores prompts, contextual\ninformation, and generated output for thirty (30) days for the purposes of\ncreating grounded results. This stored information may only be used for\nreliability engineering, such as debugging in case of service issues.\n**There is no way to disable the storage of this information if you use**",
+          "sourceLineEnd": 99,
+          "sourceLineStart": 95
+        },
+        {
+          "quote": "**Grounding with Google Maps.**\n\n- **Interactions API**: The Interactions API manages the active state of a\nconversation to enable multi-turn turns. **By default, the Interactions API**\n**enables state storage**. To ensure a zero-data footprint, you must",
+          "sourceLineEnd": 104,
+          "sourceLineStart": 100
+        },
+        {
+          "quote": "explicitly set the `store` parameter to `false` in your API requests to opt\nout of the default state retention.\n\n- **Live API**: This stateful API allows real-time reconnection by storing\nconversation state. To achieve zero data retention, **do not configure**",
+          "sourceLineEnd": 109,
+          "sourceLineStart": 105
+        }
+      ],
+      "supports": "Training restriction for Paid Services; all Gemini Developer API per-feature retention details (abuse monitoring, Grounding with Google Search 30-day, Grounding with Google Maps 30-day, Interactions API default store=true, Live API SessionResumptionConfig 24h, File API storage, Explicit Context Caching, Implicit In-Memory Caching does not violate ZDR)"
+    },
+    {
+      "_key": "2fb94c29-8825-4c32-b13b-5df7b2c59781",
+      "_type": "sanity.context.citation",
+      "filename": "2fb94c29-8825-4c32-b13b-5df7b2c59781",
+      "sourceId": "2fb94c29-8825-4c32-b13b-5df7b2c59781",
+      "spans": [
+        {
+          "quote": "**Prompt logging for abuse monitoring for Google models**: As outlined in\nSection 4.3 \"Generative AI Safety and Abuse\" of [Google Cloud Platform Terms of Service](https://cloud.google.com/terms), Google may log prompts to\ndetect potential abuse and violations of its [Acceptable Use Policy](https://cloud.google.com/terms/aup) and [Prohibited Use Policy](https://policies.google.com/terms/generative-ai/use-policy) as part\nof providing generative AI services to customers. Only customers whose use\nof Google Cloud is governed by the [Google Cloud Platform Terms of Service](https://cloud.google.com/terms) are subject to prompt logging for\nabuse monitoring. If you are in scope for prompt logging for abuse\nmonitoring and want zero data retention, you can request an exception for\nabuse monitoring. See [Abuse monitoring](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/abuse-monitoring).\n",
+          "sourceLineEnd": 22,
+          "sourceLineStart": 14
+        },
+        {
+          "quote": "- \n**Prompt and response logging for abuse monitoring for Advanced AI models**:\nCertain models or features may also be subject to additional prompt and\nresponse logging to prevent abuse, as described in the [Advanced AI Safety Addendum](http://cloud.google.com/terms/advanced-ai-safety-addendum). Zero\ndata retention may not be possible when using some Advanced AI features.\nPlease contact your account team for clarification. See [Abuse monitoring](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/abuse-monitoring) for more information.\n\n- ",
+          "sourceLineEnd": 30,
+          "sourceLineStart": 23
+        },
+        {
+          "quote": "**Grounding with Google Search**: As outlined in Section\n20 \"Generative AI Services: Grounding with Google Search\" of the\n[Service Specific Terms](https://cloud.google.com/terms/service-terms),\nGoogle collects and stores logs, which contains the following Customer Data:\nqueries derived from End User prompts and contextual information that\nCustomer may provide along with the prompts that are not associated with any\nCustomer or its End Users for up to three (3) days, this stored information\nmay be used for debugging of systems that support Grounding with\nGoogle Search. There is no way to disable the storage of this\ninformation if you use Grounding with Google Search. If you require\nzero data retention, we recommend using [Web Grounding for Enterprise](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/web-grounding-enterprise).",
+          "sourceLineEnd": 41,
+          "sourceLineStart": 31
+        },
+        {
+          "quote": "\n- \n**Grounding with Google Maps**: As outlined in Section\n20 \"Generative AI Services: Grounding with Google Maps\" of the [Service Specific Terms](https://cloud.google.com/terms/service-terms), Google stores\nprompts and contextual information that customers may provide, and generated\noutput for thirty (30) days for the purposes of creating grounded results,\nand this stored information may only be used for reliability engineering,\nsuch as debugging in case of service issues, of systems that support",
+          "sourceLineEnd": 49,
+          "sourceLineStart": 42
+        },
+        {
+          "quote": "grounding with Google Maps. There is no way to disable the storage of this\ninformation if you use Grounding with Google Maps.\n\n- \n**Request-response logging**: This feature is disabled by default. It can be\nenabled using a configuration setting on a per-model, per-project basis.\nEnabling this logging causes certain requests and responses to the specified",
+          "sourceLineEnd": 56,
+          "sourceLineStart": 50
+        },
+        {
+          "quote": "model to be written to a designated BigQuery table. To achieve zero\ndata retention, do not enable this feature. For more information about this\nfeature, including how to enable or disable it, or read the current\nconfiguration setting, see [Log requests and responses](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/request-response-logging).\n\n- \n**Interactions API**: When using the [Interactions API](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/interactions-api)\nwith `store = true`, Google stores user data (such as prompts, responses,\nand conversation state) to enable multi-turn conversations and later",
+          "sourceLineEnd": 65,
+          "sourceLineStart": 57
+        }
+      ],
+      "supports": "Vertex AI / Gemini Enterprise Agent Platform per-feature retention: Google model abuse monitoring, Advanced AI model abuse monitoring (ZDR may not be possible), Grounding with Google Search 3-day retention, Grounding with Google Maps 30-day, Request-response logging (disabled by default), Interactions API store defaults to true"
+    }
+  ],
+  "generatedAt": "2026-09-27T19:25:26.890Z",
+  "knowledgeBaseId": "kb5CHIYGXCMJ",
+  "path": "data_retention_and_privacy",
+  "revisionId": "61fb984c-2775-42a0-8f5e-1ccaf67d1b43",
+  "schemaVersion": 1,
+  "status": "filled",
+  "title": "Data Retention, Privacy & API Policies",
+  "tldr": {
+    "centrality": "peripheral",
+    "excludes": "Prompt injection security; API pricing; authentication and billing.",
+    "scope": "Zero data retention conditions across Gemini Developer API, Vertex AI, OpenAI; feature-specific retention (grounding, File API, caching, interactions, abuse logging); opt-out availability; Google Cloud enterprise retention scenarios."
+  },
+  "topicHeadings": [
+    "Training restriction (Gemini Developer API)",
+    "Gemini Developer API — per-feature retention",
+    "Vertex AI / Gemini Enterprise Agent Platform — per-feature retention",
+    "Summary: achieving ZDR"
+  ]
+}

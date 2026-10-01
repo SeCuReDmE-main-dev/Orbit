@@ -119,4 +119,12 @@ export const BROKER_MIGRATIONS: readonly SqliteMigration[] = [
     },
     down(database) { database.exec('DROP INDEX research_points_mission_status; DROP TABLE research_points;') },
   },
+  {
+    version: 4,
+    name: 'checkpoint-snapshots',
+    up(database) { database.exec(`CREATE TABLE checkpoint_snapshots (mission_id TEXT NOT NULL REFERENCES missions(id), sequence INTEGER NOT NULL, payload_json TEXT NOT NULL, PRIMARY KEY (mission_id, sequence)) STRICT;`) },
+    down(database) { database.exec('DROP TABLE checkpoint_snapshots;') },
+  },
+  { version: 5, name: 'mission-sources', up(database) { database.exec(`CREATE TABLE mission_sources (mission_id TEXT NOT NULL REFERENCES missions(id), source_id TEXT NOT NULL REFERENCES source_receipts(id), PRIMARY KEY (mission_id, source_id)) STRICT; CREATE INDEX mission_sources_source ON mission_sources(source_id, mission_id);`) }, down(database) { database.exec('DROP INDEX mission_sources_source; DROP TABLE mission_sources;') } },
+  { version: 6, name: 'mission-search-cache', up(database) { database.exec(`CREATE TABLE mission_search_attempts (mission_id TEXT PRIMARY KEY REFERENCES missions(id), attempts INTEGER NOT NULL) STRICT; CREATE TABLE mission_search_cache (mission_id TEXT NOT NULL REFERENCES missions(id), cache_key TEXT NOT NULL, result_json TEXT NOT NULL, PRIMARY KEY (mission_id, cache_key)) STRICT;`) }, down(database) { database.exec('DROP TABLE mission_search_cache; DROP TABLE mission_search_attempts;') } },
 ]

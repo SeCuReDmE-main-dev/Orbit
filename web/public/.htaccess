@@ -1,0 +1,32 @@
+# Security headers for the static public preview. HTTPS is configured by the host.
+<IfModule mod_headers.c>
+    # HTML changes must be revalidated; hashed JS/CSS keep their own caching.
+    <FilesMatch "\.html$">
+        Header always set Cache-Control "no-cache, max-age=0, must-revalidate"
+    </FilesMatch>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    # /studio is the authenticated Sanity Studio. Its generated shell needs its
+    # own inline bootstrap styles and the exact Sanity origins below. Scripts
+    # remain same-origin only; no application secret is exposed to the browser.
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://accounts.google.com/gsi/client https://apis.google.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: blob: https://cdn.sanity.io https://images.sanity.io https://media.sanity.io; font-src 'self' https://studio-static.sanity.io https://design-system-static.sanity.io; connect-src 'self' https://www.googleapis.com https://accounts.google.com/gsi/ https://apis.google.com https://api.sanity.io https://*.api.sanity.io https://cdn.sanity.io https://*.sanity-cdn.com https://media.sanity.io https://public.sanity.io https://www.sanity.io wss://*.api.sanity.io; frame-src https://accounts.google.com https://docs.google.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+</IfModule>
+
+# The public application is static, while the authenticated Sanity Studio lives
+# under /studio. Preserve direct Studio links for its client-side router without
+# sending them back to the landing page.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} ^/studio(?:/|$)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^studio(?:/.*)?$ /studio/index.html [L]
+</IfModule>
+
+# Keep the private Laravel Context gateway on the PHP runtime selected for this
+# cPanel document root. Packaging replaces the directory atomically, so the
+# handler must travel with the release instead of depending on a generated
+# line in the previous .htaccess file.
+<IfModule mime_module>
+    AddHandler application/x-httpd-ea-php84 .php .php8 .phtml
+</IfModule>

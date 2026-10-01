@@ -1,0 +1,99 @@
+{
+  "host": "scripted MCP transport test over native public-page WebMCP",
+  "autonomousAgent": false,
+  "tools": 15,
+  "protocol": "2025-03-26",
+  "privateDossierRead": "CONSENT_REQUIRED",
+  "capabilities": {
+    "state": "READY",
+    "contractVersion": "orbit-webmcp-v6",
+    "tools": [
+      {
+        "name": "orbit_get_capabilities",
+        "readOnly": true
+      },
+      {
+        "name": "orbit_get_research_protocol",
+        "readOnly": true
+      },
+      {
+        "name": "orbit_sanity_initial_context",
+        "readOnly": true
+      },
+      {
+        "name": "orbit_sanity_read_entries",
+        "readOnly": true
+      },
+      {
+        "name": "orbit_get_research_request",
+        "readOnly": true
+      },
+      {
+        "name": "orbit_get_mission_summary",
+        "readOnly": true
+      },
+      {
+        "name": "orbit_list_research_points",
+        "readOnly": true
+      },
+      {
+        "name": "orbit_search_sources",
+        "readOnly": true
+      },
+      {
+        "name": "orbit_read_source_record",
+        "readOnly": true
+      },
+      {
+        "name": "orbit_present_research",
+        "readOnly": false
+      },
+      {
+        "name": "orbit_classify_evidence",
+        "readOnly": true
+      },
+      {
+        "name": "orbit_compare_claims",
+        "readOnly": true
+      },
+      {
+        "name": "orbit_find_relations",
+        "readOnly": true
+      },
+      {
+        "name": "orbit_resolve_hold",
+        "readOnly": true
+      },
+      {
+        "name": "orbit_trace_impact",
+        "readOnly": true
+      }
+    ],
+    "classification": {
+      "engine": "n",
+      "version": "orbit-classification-1.0.0",
+      "semantics": "Evidence sets and operational decisions, never truth probabilities.",
+      "additionalTools": 5
+    },
+    "method": "orbit_get_research_protocol",
+    "sanity": {
+      "state": "NOT_CHECKED",
+      "initialTool": "orbit_sanity_initial_context",
+      "readTool": "orbit_sanity_read_entries",
+      "knowledgeBase": "kb5CHIYGXCMJ",
+      "authentication": "Server-side organization Context Viewer token. Never supply a token to a browser tool."
+    },
+    "workspace": {
+      "readable": false,
+      "presentationAllowed": false,
+      "entry": "/app/"
+    },
+    "automaticActions": [],
+    "externalSearch": "Use your own authorized browser-agent tools and budget.",
+    "removedV1Tools": [
+      "orbit_search_web",
+      "orbit_get_physics_snapshot"
+    ]
+  },
+  "passed": true
+}

@@ -1,0 +1,73 @@
+---
+import OrbitLayout from '../layouts/OrbitLayout.astro';
+import OrbitMark from '../components/OrbitMark.astro';
+---
+<OrbitLayout title="Orbit — revue du nouveau personnage" bodyClass="avatar-review">
+  <header class="review-header"><a href="/"><OrbitMark /></a><span>ATELIER DU PERSONNAGE</span><a href="/app/">Retour à Orbit ↗</a></header>
+  <main>
+    <div class="review-intro"><div><p class="eyebrow">LE VISAGE AVANT LES EFFETS</p><h1>Une présence à reconnaître.</h1><p>Même caméra, même lumière. Examinez le volume, puis les expressions.</p></div><span class="review-badge">Revue locale · aucun remplacement automatique</span></div>
+    <section class="review-controls" aria-label="Comparer les rendus">
+      <fieldset><legend>Perspective</legend><button data-view="front" aria-pressed="true">Face</button><button data-view="three-quarter" aria-pressed="false">Trois quarts</button><button data-view="profile" aria-pressed="false">Profil</button><button data-turntable aria-pressed="false">Rotation 360°</button></fieldset>
+      <fieldset><legend>Surface</legend><button data-surface="solid" aria-pressed="true">Matières</button><button data-surface="clay" aria-pressed="false">Sans textures</button><button data-surface="holographic" aria-pressed="false">Hologramme</button></fieldset>
+      <label class="motion"><input type="checkbox" data-reduced /> Réduire le mouvement</label>
+    </section>
+    <div class="review-models">
+      <section class="model-host" data-host="baseline"><div class="model-label"><span>01 / RÉFÉRENCE TECHNIQUE</span><h2>Modèle actuel</h2></div><canvas data-baseline tabindex="0" aria-label="Modèle actuel. Glissez pour tourner ; flèches au clavier. E disperse, R recentre."></canvas><p class="model-status" data-baseline-status role="status">Chargement…</p><output data-baseline-metrics aria-label="Mesures du modèle actuel"></output></section>
+      <section class="model-host candidate" data-host="candidate"><div class="model-label"><span>02 / CANDIDAT À ÉVALUER</span><h2 data-candidate-title>Nouveau buste</h2></div><canvas data-candidate hidden tabindex="0" aria-label="Nouveau candidat 3D. Glissez pour tourner ; flèches au clavier."></canvas><figure data-reference><img src="/avatar-review/reference-bust-v1.png" alt="Image de référence détourée : visage ivoire, yeux sauge et mécanique argentée. Ce n’est pas encore un modèle 3D." width="1122" height="1402"/><figcaption>Référence 2D préparée · pas encore un modèle 3D</figcaption></figure><p class="model-status" data-candidate-status role="status">Lecture du reçu du candidat…</p><output data-candidate-metrics aria-label="Mesures du candidat"></output></section>
+    </div>
+    <p class="candidate-notice" data-candidate-notice>Le candidat n’est pas encore chargé. Les commandes 3D agissent sur le modèle actuel.</p>
+    <section class="expression-controls" aria-label="Essayer les expressions"><p>Expressions <span>uniquement sur les maillages équipés</span></p><label>Clignement<input type="range" min="0" max="1" step=".05" value="0" data-expression="blink" /></label><label>Curiosité<input type="range" min="0" max="1" step=".05" value="0" data-expression="curiosity" /></label><label>Accueil<input type="range" min="0" max="1" step=".05" value="0" data-expression="warmth" /></label><label>Mâchoire<input type="range" min="0" max="1" step=".05" value="0" data-expression="jawOpen" /></label><button data-scatter>Disperser / reformer</button><button data-reset>Réinitialiser</button></section>
+    <details class="review-evidence"><summary>Ce que cette comparaison permet de vérifier</summary><p>La vue « Sans textures » retire les images et le relief des matériaux pour révéler la géométrie. Les deux hôtes utilisent un éclairage neutre identique. La référence 2D ne constitue jamais une preuve de géométrie ou d’animation.</p><p>Les mesures affichent les intervalles entre images sur les 240 dernières images au maximum ; elles incluent les ralentissements du navigateur et ne constituent pas une mesure GPU isolée. Avec les deux hôtes visibles, elles ne remplacent pas le test de performance d’un personnage seul dans Orbit.</p><button data-measure>Actualiser les mesures</button><pre data-receipt>En attente de mesure.</pre></details>
+  </main>
+  <script>
+    import { mountPresence, type Presence, type PresenceAppearance } from '../../../packages/synthia-presence/src/index';
+    const hosts: Record<string,Presence> = {};
+    const reduced=document.querySelector<HTMLInputElement>('[data-reduced]')!;
+    reduced.checked=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const mount=(name:string,modelUrl:string,animations:Record<string,string>)=>{
+      const canvas=document.querySelector<HTMLCanvasElement>(`[data-${name}]`)!;canvas.hidden=false;
+      const host=mountPresence(canvas,{modelUrl,animations},{quality:'high',appearance:'solid',lighting:'studio',decoration:false,reducedMotion:reduced.checked,onStatus(state,message){document.querySelector(`[data-${name}-status]`)!.textContent=state==='ready'?'Géométrie 3D chargée · glissez pour tourner':message;canvas.dataset.status=state;}});
+      hosts[name]=host;host.setView('front');
+      host.ready.then(ok=>{
+        if(!ok)return;
+        const view=document.querySelector<HTMLButtonElement>('[data-view][aria-pressed="true"]')?.dataset.view ?? 'front';
+        const surface=document.querySelector<HTMLButtonElement>('[data-surface][aria-pressed="true"]')?.dataset.surface ?? 'solid';
+        host.setView(view as 'front'|'three-quarter'|'profile');
+        host.setAppearance(surface as PresenceAppearance);
+        host.setTurntable(document.querySelector('[data-turntable]')!.getAttribute('aria-pressed')==='true');
+        if(name==='candidate')document.querySelector('[data-candidate-notice]')!.textContent=Object.keys(host.getDiagnostics().expressions).length
+          ? 'Deux maillages chargés. Examinez les déformations ; aucune synchronisation labiale n’est simulée.'
+          : 'Candidat statique : rotation et matériaux disponibles. Les curseurs d’expression agissent uniquement sur le modèle actuel ; le visage du candidat reste à équiper.';
+        update();
+      });return host;
+    };
+    mount('baseline','/presence-review/orbit-study.glb',{idle:'Idle',listening:'Listening',thinking:'Thinking',speaking:'Speaking'});
+    const each=(action:(host:Presence)=>void)=>Object.values(hosts).forEach(action);
+    const update=()=>{
+      const report=Object.fromEntries(Object.entries(hosts).map(([name,host])=>[name,host.getDiagnostics()]));
+      for(const [name,value] of Object.entries(report)) document.querySelector(`[data-${name}-metrics]`)!.textContent=`${value.triangles.toLocaleString('fr-CA')} triangles · ${value.renderCalls} appels de rendu · p95 ${value.frameIntervalP95Ms?.toFixed(1) ?? '—'} ms (${value.frameSamples} images)`;
+      document.querySelector('[data-receipt]')!.textContent=JSON.stringify(report,null,2);
+    };
+    fetch('/avatar-review/candidate.json',{cache:'no-store',credentials:'omit'}).then(r=>{if(!r.ok)throw Error('Reçu indisponible');return r.json();}).then(candidate=>{
+      document.querySelector('[data-candidate-title]')!.textContent=candidate.label;
+      document.querySelector('[data-candidate-status]')!.textContent=candidate.modelUrl ? candidate.message : 'Export 3D indisponible · référence 2D ci-dessus';
+      document.querySelector('[data-candidate-notice]')!.textContent=candidate.message;
+      if(typeof candidate.modelUrl==='string' && candidate.modelUrl.startsWith('/avatar-review/') && !candidate.modelUrl.includes('..')) {
+        document.querySelector<HTMLElement>('[data-reference]')!.hidden=true;
+        mount('candidate',candidate.modelUrl,candidate.animations ?? {});
+      }
+    }).catch(()=>{document.querySelector('[data-candidate-status]')!.textContent='Reçu du candidat indisponible. Aucun remplacement effectué.';});
+    document.querySelectorAll<HTMLButtonElement>('[data-view]').forEach(button=>button.addEventListener('click',()=>{each(host=>{host.setTurntable(false);host.setView(button.dataset.view as 'front'|'three-quarter'|'profile');});document.querySelector('[data-turntable]')!.setAttribute('aria-pressed','false');document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));}));
+    document.querySelector<HTMLButtonElement>('[data-turntable]')!.addEventListener('click',event=>{const b=event.currentTarget as HTMLButtonElement;const on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(on));each(host=>host.setTurntable(on));});
+    document.querySelectorAll<HTMLButtonElement>('[data-surface]').forEach(button=>button.addEventListener('click',()=>{each(host=>host.setAppearance(button.dataset.surface as PresenceAppearance));document.querySelectorAll('[data-surface]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));}));
+    document.querySelectorAll<HTMLInputElement>('[data-expression]').forEach(input=>input.addEventListener('input',()=>{each(host=>host.setExpression(input.dataset.expression!,Number(input.value)));update();}));
+    reduced.addEventListener('change',()=>each(host=>host.setReducedMotion(reduced.checked)));
+    document.querySelector('[data-scatter]')!.addEventListener('click',()=>each(host=>host.scatter()));
+    document.querySelector('[data-reset]')!.addEventListener('click',()=>{each(host=>{host.reset();host.setTurntable(false);host.setView('front');});document.querySelector('[data-turntable]')!.setAttribute('aria-pressed','false');document.querySelectorAll<HTMLInputElement>('[data-expression]').forEach(input=>{input.value='0';each(host=>host.setExpression(input.dataset.expression!,0));});update();});
+    document.querySelector('[data-measure]')!.addEventListener('click',update);
+    Promise.all(Object.values(hosts).map(host=>host.ready)).then(update);
+  </script>
+</OrbitLayout>
+<style is:global>
+.avatar-review{margin:0;background:#07091b;color:#eeeefa;font-family:var(--s-body);min-height:100svh}.avatar-review *, .avatar-review *::before,.avatar-review *::after{box-sizing:border-box}.review-header{display:flex;align-items:center;justify-content:space-between;padding:25px 4vw;border-bottom:1px solid #b5a0ef25}.review-header>a{color:#c1cbea;text-decoration:none}.review-header>span{font-size:10px;letter-spacing:.2em;color:#baabd8}.avatar-review main{max-width:1500px;margin:auto;padding:36px 4vw 64px}.review-intro{display:flex;align-items:center;justify-content:space-between;gap:20px}.review-intro h1{font:500 clamp(26px,3.1vw,44px)/1.1 var(--s-display);letter-spacing:-.03em;margin:12px 0}.review-intro p:not(.eyebrow){color:#b0bad2;font-size:14px}.eyebrow{font-size:10px;letter-spacing:.18em;color:#ffcb82}.review-badge{border:1px solid #bb95ff44;border-radius:30px;padding:10px 15px;font-size:11px;color:#d8c2f5}.review-controls{display:flex;gap:28px;flex-wrap:wrap;align-items:center;padding:23px 0}.review-controls fieldset{border:0;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}.review-controls legend{font-size:10px;color:#9faccd;margin-bottom:9px;letter-spacing:.1em}.avatar-review button{border:1px solid #a49adb3d;background:#11142a;color:#c6cee8;border-radius:24px;padding:10px 16px;font:inherit;font-size:12px;cursor:pointer}.avatar-review button:hover{border-color:#98dcf0}.avatar-review button[aria-pressed=true]{background:#65519c44;border-color:#c7a5ff;color:#f2e5ff}.avatar-review :focus-visible{outline:2px solid #8bdcfb;outline-offset:4px}.motion{font-size:12px;color:#b6bfd9;display:flex;align-items:center;gap:8px}.review-models{display:grid;grid-template-columns:1fr 1fr;gap:24px}.model-host{min-width:0;height:560px;position:relative;border-top:1px solid #aab9d33b;background:radial-gradient(ellipse at 50% 38%,#484b5340,transparent 67%)}.model-label{position:absolute;top:18px;left:8px;z-index:1;pointer-events:none}.model-label span{font-size:9px;letter-spacing:.13em;color:#a2acce}.model-label h2{font:500 19px var(--s-body);margin:8px 0}.model-host canvas{position:absolute;top:62px;width:100%;height:calc(100% - 122px);display:block;touch-action:none;cursor:grab}.model-host canvas[hidden]{display:none}.model-host figure{margin:0;position:absolute;inset:75px 20px 85px;display:flex;flex-direction:column;align-items:center}.model-host figure[hidden]{display:none}.model-host figure img{height:100%;max-height:calc(100% - 28px);width:100%;object-fit:contain}.model-host figcaption{font-size:11px;color:#ffcb82;margin-top:12px;text-align:center}.model-status{position:absolute;bottom:22px;left:8px;right:8px;text-align:center;color:#b9c3d9;font-size:12px;line-height:1.6;pointer-events:none}.model-host output{position:absolute;bottom:0;left:8px;right:8px;text-align:center;font-size:10px;color:#91a2c2}.candidate-notice{color:#ffcc8b;font-size:12px;line-height:1.7;max-width:85ch}.expression-controls{display:flex;align-items:center;gap:18px;flex-wrap:wrap;border-top:1px solid #aab9d32b;margin-top:25px;padding:22px 0}.expression-controls>p{font-size:12px;min-width:170px}.expression-controls>p span{display:block;color:#8797b6;font-size:10px;margin-top:6px}.expression-controls label{display:flex;flex-direction:column;gap:8px;font-size:11px;color:#bec9dd}.expression-controls input{width:110px;accent-color:#b994ff}.review-evidence{margin-top:15px;color:#a6b7d3;font-size:12px;line-height:1.7}.review-evidence summary{cursor:pointer;color:#c9bcf0}.review-evidence pre{white-space:pre-wrap;font-size:11px}.avatar-review [hidden]{display:none!important}@media(max-width:760px){.review-intro{display:block}.review-badge{display:inline-block;margin:10px 0}.review-header>span{display:none}.review-models{grid-template-columns:1fr}.model-host{height:510px}.review-controls{gap:18px}.candidate-notice{color:#ffcc8b;font-size:12px;line-height:1.7;max-width:85ch}.expression-controls{gap:15px}.review-header{padding:20px}.avatar-review main{padding:25px 20px 45px}}
+</style>

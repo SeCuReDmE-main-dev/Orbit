@@ -1,0 +1,85 @@
+{
+  "format": "orbit-evidence-v1",
+  "id": "case-provider-20260929",
+  "title": "Background research and zero-data-retention constraints",
+  "question": "Under which documented conditions can background deep research coexist with zero-data-retention requirements across named OpenAI and Google product surfaces?",
+  "objective": "Separate provider, product, execution mode, data-retention terms, effective date and account-specific exceptions before any conclusion.",
+  "context": "Demonstration case. The result must distinguish a genuine conflict from a difference of scope and must remain indeterminate when the original provider document was not read.",
+  "revision": 0,
+  "createdAt": "2026-09-29T19:45:00.000Z",
+  "updatedAt": "2026-09-29T19:45:00.000Z",
+  "axes": [],
+  "sources": [],
+  "claims": [],
+  "screeningCriteria": [],
+  "sourceDecisions": [],
+  "extractions": [],
+  "knowledgeReads": [],
+  "answer": "",
+  "report": "",
+  "proposals": [
+    {
+      "id": "8e711372332b4eba8bf266df20cbb42d",
+      "baseRevision": 0,
+      "stage": "plan",
+      "answer": "",
+      "report": "Le plan doit d’abord vérifier les distinctions de surface et de mode d’exécution, car les Context entries rapportent des comportements différents entre OpenAI, Gemini Developer API et Vertex AI/Enterprise Agent Platform. Il doit ensuite tester séparément la rétention intrinsèque du mode background et celle introduite par les outils, fichiers, caches, interactions ou journaux d’abus. Les durées d’environ 10 minutes pour OpenAI, l’exigence store=true pour Gemini Deep Research, les durées de grounding et les possibilités d’exception sont des éléments à vérifier dans les sources primaires; dans les données fournies, ils restent des affirmations rapportées par les Context entries, et non des pages que nous pouvons déclarer lues. Restent notamment inconnus les dates d’effet exactes, les conditions contractuelles propres au compte, la portée précise des organisations MAM, les exceptions réellement disponibles et la compatibilité de chaque modèle Advanced AI avec une garantie ZDR. Prochaine action concrète : vérifier d’abord les pages primaires OpenAI et Google correspondant exactement aux quatre surfaces et aux modes background concernés, en enregistrant pour chacune l’URL effectivement ouverte, la date, le texte de rétention, les paramètres obligatoires et les exceptions de compte.",
+      "axes": [
+        "Fournisseur et surface produit : distinguer OpenAI Responses API, OpenAI deep-research models, Gemini Developer API/Interactions API et Vertex AI ou Gemini Enterprise Agent Platform.",
+        "Mode d’exécution : comparer exécution synchrone, background=true, polling, webhooks et reprise de session.",
+        "Obligation de stockage pour la recherche approfondie : vérifier notamment la rétention temporaire d’OpenAI en mode background et l’exigence store=true rapportée pour Gemini Deep Research.",
+        "Définition opérationnelle de ZDR : séparer absence de rétention applicative, absence de journaux d’abus, absence de stockage de fichiers, absence de cache, absence de conservation de session et restrictions de formation.",
+        "Fonctionnalités et outils activés : examiner séparément Google Search grounding, Maps grounding, URL Context, File Search, File API, explicit ou implicit caching, MCP, code execution et interactions persistantes.",
+        "Paramètres et valeurs par défaut : vérifier si store=false, désactivation de SessionResumptionConfig, suppression manuelle des fichiers ou exclusion d’une fonctionnalité sont nécessaires à chaque surface.",
+        "Exceptions et engagements de compte : rechercher les différences entre comptes standards, services payants, organisations MAM/OpenAI, contrats enterprise, exceptions d’abuse monitoring et modèles Advanced AI.",
+        "Temporalité et niveau de preuve : relever la date d’effet, la version ou le statut preview, puis séparer les pages effectivement vérifiées des liens seulement découverts dans les Context entries."
+      ],
+      "sources": [],
+      "claims": [],
+      "screeningCriteria": [
+        "Pour chaque affirmation, enregistrer le fournisseur, le produit exact, l’API, le modèle et le mode d’exécution concernés; refuser les généralisations entre surfaces.",
+        "Exiger une page primaire effectivement consultée pour confirmer toute durée de rétention, valeur par défaut, incompatibilité ZDR, possibilité d’opt-out ou exception de compte.",
+        "Traiter les URL citées dans les Context entries comme des pistes de vérification uniquement; elles ne constituent pas une preuve de lecture de la page.",
+        "Comparer séparément la rétention imposée par le mode background et celle provoquée par les outils ou fonctions annexes; ne pas les considérer comme équivalentes.",
+        "Vérifier si le terme ZDR désigne une garantie contractuelle, un paramètre technique, une politique de journalisation ou seulement une restriction de formation.",
+        "Vérifier les dates d’effet et le statut preview des produits Gemini Deep Research, ainsi que toute modification ultérieure des conditions documentées.",
+        "Marquer comme inconnu tout point dépendant d’un contrat, d’un compte, d’une organisation MAM ou d’une exception accordée par une équipe commerciale tant qu’il n’est pas documenté pour le compte concerné.",
+        "Produire un tableau de compatibilité par surface avec les états compatible, compatible sous conditions, incompatible ou inconnu, accompagné de la preuve primaire et de sa date.",
+        "Ne conclure à la coexistence background + ZDR que si l’exécution, le stockage de contrôle, les outils activés et les exceptions applicables sont tous documentés pour la même surface."
+      ],
+      "extractions": [],
+      "knowledgeReads": [
+        {
+          "path": "data_retention_and_privacy",
+          "digest": "2413d2c3392917957d3667b7d90df1fd12b60dfdf38a531d702ca2267d5a45b6",
+          "retrievedAt": "2026-09-29T19:44:12+00:00"
+        },
+        {
+          "path": "deep_research/models_and_apis",
+          "digest": "653999417c107742bb41df6e25923e72887fd1cc39681b8cb2b022c038d570bc",
+          "retrievedAt": "2026-09-29T19:44:13+00:00"
+        },
+        {
+          "path": "multi_agent_systems/operations",
+          "digest": "e8e08e6c123faa47a9fe31407b4ff3508fa336eb54a42b6ded94dae4bf5cc380",
+          "retrievedAt": "2026-09-29T19:44:15+00:00"
+        },
+        {
+          "path": "search_apis/google_grounding",
+          "digest": "8ff2c71e6effedaeaa7ce7629a4ef4eac5963e918c4898a3efe0b5e56cbcb6ac",
+          "retrievedAt": "2026-09-29T19:44:16+00:00"
+        },
+        {
+          "path": "research_methodology/question_disambiguation",
+          "digest": "2abe8b69a2adc5a47bc79e894fc9fd32a915eab62aba6af5d36ebabac17ca91b",
+          "retrievedAt": "2026-09-29T19:44:17+00:00"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-09-29T19:44:42.110Z"
+    }
+  ],
+  "reviews": [],
+  "history": [],
+  "example": false
+}

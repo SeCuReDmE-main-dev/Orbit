@@ -1,0 +1,368 @@
+{
+  "schema_version": "orbit.sanity-methodology-import/v1",
+  "knowledge_base_id": "kb5CHIYGXCMJ",
+  "status": "prepared_not_uploaded",
+  "catalog_sha256": "c6539774105cb6e02cde8019c35e287ad10c7a9e7e1a1212b88fd8b0b2472977",
+  "representation": "Original source-linked notes; no third-party full text",
+  "pilot": {
+    "path": "P01.md",
+    "sha256": "1de43b2ff008461528833fea945bd6985dcaea5ef3dbfce8c81f80e478464428"
+  },
+  "archive": {
+    "path": "orbit-methodology-other-49.zip",
+    "sha256": "39827d303209870d390f0eda8e541547329561e2091ee1814d18c0f742a5b4f9"
+  },
+  "source_count": 50,
+  "items": [
+    {
+      "id": "P01",
+      "original_url": "https://arxiv.org/abs/2210.03629",
+      "note": "notes/P01.md",
+      "sha256": "1de43b2ff008461528833fea945bd6985dcaea5ef3dbfce8c81f80e478464428",
+      "bytes": 1510
+    },
+    {
+      "id": "P02",
+      "original_url": "https://aclanthology.org/2024.naacl-long.347/",
+      "note": "notes/P02.md",
+      "sha256": "f50d76a2f2e6224c0bbd0fae3dcf810365a407a140cdf9034509084b497646ff",
+      "bytes": 1559
+    },
+    {
+      "id": "P03",
+      "original_url": "https://aclanthology.org/2023.findings-emnlp.378/",
+      "note": "notes/P03.md",
+      "sha256": "54e23dd80a819e26f1a4e7b79cd394eb9db82a8b5c10ccbd6daf6711a64ec4c6",
+      "bytes": 1541
+    },
+    {
+      "id": "P04",
+      "original_url": "https://arxiv.org/abs/2205.10625",
+      "note": "notes/P04.md",
+      "sha256": "b5b19590ea72d3eb8f12773ccca29c25ed1cda75c0c5218305d5bb7e10b4aa02",
+      "bytes": 1684
+    },
+    {
+      "id": "P05",
+      "original_url": "https://arxiv.org/abs/2305.04091",
+      "note": "notes/P05.md",
+      "sha256": "f1859169f92e1154b158f895c04f24f31927aef005189a6e97ed11997cf973fa",
+      "bytes": 1538
+    },
+    {
+      "id": "P06",
+      "original_url": "https://aclanthology.org/2020.emnlp-main.466/",
+      "note": "notes/P06.md",
+      "sha256": "c7ba8b370508641dca9efcdc57bc03459f9f0077c2b99a45a75ca092ea21a613",
+      "bytes": 1465
+    },
+    {
+      "id": "P07",
+      "original_url": "https://arxiv.org/abs/1907.06554",
+      "note": "notes/P07.md",
+      "sha256": "480e79734c5b23fc74b97a0a8cf8f170153aea68e869937a5efd900919446bb4",
+      "bytes": 1543
+    },
+    {
+      "id": "P08",
+      "original_url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-02",
+      "note": "notes/P08.md",
+      "sha256": "5b8a549bad32968520a5914c9eec7adecc65cd79ede8168a3591aea46b5b1c4f",
+      "bytes": 1662
+    },
+    {
+      "id": "S01",
+      "original_url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-04",
+      "note": "notes/S01.md",
+      "sha256": "76d4480aca0e1dc70376d32431b1db018eb5894c73834ef193a6b0c0ce0eb075",
+      "bytes": 1762
+    },
+    {
+      "id": "S02",
+      "original_url": "https://jmla.mlanet.org/ojs/jmla/article/view/962",
+      "note": "notes/S02.md",
+      "sha256": "f7935be98a4e162fc73e1be072a998840fe8dc7c2cf5536c01c8d2d1d5c6db24",
+      "bytes": 1687
+    },
+    {
+      "id": "S03",
+      "original_url": "https://europepmc.org/article/MED/27005575",
+      "note": "notes/S03.md",
+      "sha256": "657058bdbd181c80478cf7fcf2cc667467b272481e552fc4605858129746fbcb",
+      "bytes": 1659
+    },
+    {
+      "id": "S04",
+      "original_url": "https://pages.gseis.ucla.edu/faculty/bates/berrypicking.html",
+      "note": "notes/S04.md",
+      "sha256": "10dca50a9028f845f1092725a5162e04d5746d8e50fd2e4082e6caaed4274c96",
+      "bytes": 1514
+    },
+    {
+      "id": "S05",
+      "original_url": "https://ub.unibas.ch/en/university-medical-library/tarcis/",
+      "note": "notes/S05.md",
+      "sha256": "7bfc6be4309f3ce4035e4aaf6cf3128877e7302718e531029efbf57d796f6784",
+      "bytes": 1705
+    },
+    {
+      "id": "S06",
+      "original_url": "https://wohlin.eu/ease14.pdf",
+      "note": "notes/S06.md",
+      "sha256": "c9001623424530ac41cf6290cd5a88b781200d4fe7d38e5088f8a07025d296c2",
+      "bytes": 1648
+    },
+    {
+      "id": "S07",
+      "original_url": "https://cormack.uwaterloo.ca/cormacksigir09-rrf.pdf",
+      "note": "notes/S07.md",
+      "sha256": "93add3d63f3d6c74f6451f6a54eb83e13c475d9de7d250dc75f6c59eaaf6c06f",
+      "bytes": 1600
+    },
+    {
+      "id": "S08",
+      "original_url": "https://nlp.stanford.edu/IR-book/html/htmledition/relevance-feedback-and-query-expansion-1.html",
+      "note": "notes/S08.md",
+      "sha256": "2c19ee63ff3a8a51942aa58f80f1294a6534c1f7fb04f8715909c12542d49ad4",
+      "bytes": 1571
+    },
+    {
+      "id": "R01",
+      "original_url": "https://arxiv.org/html/2408.09869v5",
+      "note": "notes/R01.md",
+      "sha256": "ce6f890b5ed4108706af50f0a6b6cbd428450f82d960f9641b65f580bca6af15",
+      "bytes": 1746
+    },
+    {
+      "id": "R02",
+      "original_url": "https://openaccess.thecvf.com/content/CVPR2022/html/Smock_PubTables-1M_Towards_Comprehensive_Table_Extraction_From_Unstructured_Documents_CVPR_2022_paper.html",
+      "note": "notes/R02.md",
+      "sha256": "9385089793d083109a49fcef5facfbcb8fb3a2bbe14c3b7f3c47f64967f1a171",
+      "bytes": 1868
+    },
+    {
+      "id": "R03",
+      "original_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/a39a9aceda771cded859ae7560530e09-Abstract-Conference.html",
+      "note": "notes/R03.md",
+      "sha256": "b406801076b1ba76794a000e630c79b0cd8f27099aa926841b803d4a40502968",
+      "bytes": 1856
+    },
+    {
+      "id": "R04",
+      "original_url": "https://www.w3.org/TR/annotation-model/",
+      "note": "notes/R04.md",
+      "sha256": "ac8dac0238f81e6cc90eb2b64a12f05e0d608052d23c74ef6f9e90dbb9d12685",
+      "bytes": 1770
+    },
+    {
+      "id": "R05",
+      "original_url": "https://grobid.readthedocs.io/en/latest/TEI-encoding-of-results/",
+      "note": "notes/R05.md",
+      "sha256": "0f375e8c2311f4bc48e704758e63e727d44a9d7a90ec8be4ce09cf00a7cad9eb",
+      "bytes": 1667
+    },
+    {
+      "id": "R06",
+      "original_url": "https://pypdf.readthedocs.io/en/stable/user/extract-text.html",
+      "note": "notes/R06.md",
+      "sha256": "569846c5a741175617e8d7f5e2da8af89bda0df7014f2a551781c69bafd8ec28",
+      "bytes": 1746
+    },
+    {
+      "id": "R07",
+      "original_url": "https://ocrmypdf.readthedocs.io/en/latest/introduction.html",
+      "note": "notes/R07.md",
+      "sha256": "6beb951fe3efa23de279061cc930ccdd7142ad4515695b2d4d535bae17f93907",
+      "bytes": 1857
+    },
+    {
+      "id": "R08",
+      "original_url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Nassar_SmolDocling_An_ultra-compact_vision-language_model_for_end-to-end_multi-modal_document_conversion_ICCV_2025_paper.pdf",
+      "note": "notes/R08.md",
+      "sha256": "4555e4d92e0f78c31e1a159236d294afba9e420647691d07a85dca6e25eded8a",
+      "bytes": 1936
+    },
+    {
+      "id": "E01",
+      "original_url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-07",
+      "note": "notes/E01.md",
+      "sha256": "322eee50c556513cb8e90ea5722064f344329dee6df1f47672140b7f859a8f5d",
+      "bytes": 1610
+    },
+    {
+      "id": "E02",
+      "original_url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-13",
+      "note": "notes/E02.md",
+      "sha256": "51ef1288ebda7457754e66173fd49ea88e4d6bb652acd31c3dc38f7ca1ddcb14",
+      "bytes": 1603
+    },
+    {
+      "id": "E03",
+      "original_url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-14",
+      "note": "notes/E03.md",
+      "sha256": "2d5057e46a4beb7e2740fb3db52fbd4e565a6684f58f745dd6fde6d516cdd69c",
+      "bytes": 1620
+    },
+    {
+      "id": "E04",
+      "original_url": "https://www.nature.com/articles/sdata201618",
+      "note": "notes/E04.md",
+      "sha256": "cebae344be44eabea38fd0e240063f5a01ae1390931a8ecb57ecf359dda1decc",
+      "bytes": 1549
+    },
+    {
+      "id": "E05",
+      "original_url": "https://www.w3.org/TR/prov-dm/",
+      "note": "notes/E05.md",
+      "sha256": "2da5c3ede478395ef8db0e60c9c88405a4b1b1618fd8d145155a55759ef14526",
+      "bytes": 1455
+    },
+    {
+      "id": "E06",
+      "original_url": "https://www.crossref.org/documentation/principles-practices/best-practices/versioning/",
+      "note": "notes/E06.md",
+      "sha256": "b793a887af950084d185d9c662d630c4c5f4e29d76c65ac081cba6ed7aa6c7f7",
+      "bytes": 1513
+    },
+    {
+      "id": "E07",
+      "original_url": "https://www.nist.gov/pml/nist-technical-note-1297",
+      "note": "notes/E07.md",
+      "sha256": "40ca875f52f696c7ae724c375bb23bd367d0c1d7fdd932bb8cf0aebdfc97cb10",
+      "bytes": 1578
+    },
+    {
+      "id": "E08",
+      "original_url": "https://arxiv.org/abs/1803.09010",
+      "note": "notes/E08.md",
+      "sha256": "f659b1566de31aec136fd513b9bd57cac4a299b2a153a901c85bda500ec382fe",
+      "bytes": 1477
+    },
+    {
+      "id": "E09",
+      "original_url": "https://www.w3.org/TR/vocab-dqv/",
+      "note": "notes/E09.md",
+      "sha256": "b060692c982afee19e39b80ae998ee557855fda0bdbb94d9edc75e8827faf0c5",
+      "bytes": 1534
+    },
+    {
+      "id": "E10",
+      "original_url": "https://www.crossref.org/publications/guide-metadata-research-integrity.pdf",
+      "note": "notes/E10.md",
+      "sha256": "bece8178a780fa3de351e24dd59fb45ad538ce3229ed07a2581d91a4729d5423",
+      "bytes": 1644
+    },
+    {
+      "id": "W01",
+      "original_url": "https://aclanthology.org/2023.emnlp-main.398/",
+      "note": "notes/W01.md",
+      "sha256": "6f524f220567c237206b18ee61269f5ec11342c6f2903dc11a0743b026779085",
+      "bytes": 1802
+    },
+    {
+      "id": "W02",
+      "original_url": "https://aclanthology.org/2021.naacl-main.365/",
+      "note": "notes/W02.md",
+      "sha256": "4a0527bdf37d87b8cd9117c61c772259881548280fe136e951007c8ac5a68fde",
+      "bytes": 1829
+    },
+    {
+      "id": "W03",
+      "original_url": "https://aclanthology.org/2020.emnlp-main.648/",
+      "note": "notes/W03.md",
+      "sha256": "ca34d27bac0ba5399af12851f2c22872633d50a6258aaad24b0eaa1fe5ad3b8b",
+      "bytes": 1868
+    },
+    {
+      "id": "W04",
+      "original_url": "https://aclanthology.org/2022.naacl-main.137/",
+      "note": "notes/W04.md",
+      "sha256": "b623bfa459946eb694ce4f6f504ba2d6a3d02948e73b34e2a6d958246353b5ba",
+      "bytes": 1746
+    },
+    {
+      "id": "W05",
+      "original_url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003583",
+      "note": "notes/W05.md",
+      "sha256": "a327599a09e85e0ccca0d7c992606a11b80c9c8ba99dfe443d7ba8f14ed12d61",
+      "bytes": 1833
+    },
+    {
+      "id": "W06",
+      "original_url": "https://aclanthology.org/2023.cl-4.2/",
+      "note": "notes/W06.md",
+      "sha256": "db6d4ca61c36c1b48717515572455e2201baa07caed8a1bff4caba8d07d9707e",
+      "bytes": 1938
+    },
+    {
+      "id": "W07",
+      "original_url": "https://aclanthology.org/2020.emnlp-main.609/",
+      "note": "notes/W07.md",
+      "sha256": "127611ad33f74aaba1a31882da60b411408375380d88410ee5282ecaf8cde09b",
+      "bytes": 1888
+    },
+    {
+      "id": "W08",
+      "original_url": "https://aclanthology.org/2024.naacl-long.216/",
+      "note": "notes/W08.md",
+      "sha256": "25f00aee1cb093022bc7b114ced6654743293f3776100bd60b11682853620c91",
+      "bytes": 1786
+    },
+    {
+      "id": "C01",
+      "original_url": "https://openai.github.io/openai-agents-js/guides/sessions/",
+      "note": "notes/C01.md",
+      "sha256": "d3d337d27463b2b6bb92ee974fff48f1e3c06113c51b2a8835b553d64622cf83",
+      "bytes": 1504
+    },
+    {
+      "id": "C02",
+      "original_url": "https://openai.github.io/openai-agents-js/guides/handoffs/",
+      "note": "notes/C02.md",
+      "sha256": "c0b345f62fea8ed469b3bec9db97a3b3eefb85bdd8516e108f08cd7c7aec97f0",
+      "bytes": 1512
+    },
+    {
+      "id": "C03",
+      "original_url": "https://openai.github.io/openai-agents-js/guides/tracing/",
+      "note": "notes/C03.md",
+      "sha256": "16b18f83087de42daa9ca7169ef3b682e87c0a374517d9e7f57fe07107708894",
+      "bytes": 1465
+    },
+    {
+      "id": "C04",
+      "original_url": "https://docs.langchain.com/oss/python/langgraph/persistence",
+      "note": "notes/C04.md",
+      "sha256": "f79a28c93fcee8560a99b34deeaf72e920a4fc056179052d643c0b88e508ed3c",
+      "bytes": 1491
+    },
+    {
+      "id": "C05",
+      "original_url": "https://google.github.io/adk-docs/sessions/memory/",
+      "note": "notes/C05.md",
+      "sha256": "69e8fb728be53686e4ec3c48aa781b8a547024c6a5ea15cb1fe65a9457257810",
+      "bytes": 1531
+    },
+    {
+      "id": "C06",
+      "original_url": "https://aclanthology.org/2024.tacl-1.9/",
+      "note": "notes/C06.md",
+      "sha256": "ff7ed882d96e21f1326c87fb33acb39d84566311550c18425ecc5575019e1e40",
+      "bytes": 1532
+    },
+    {
+      "id": "C07",
+      "original_url": "https://arxiv.org/abs/2406.13352",
+      "note": "notes/C07.md",
+      "sha256": "5fd62f147d5185dfdec3cf8561b0628f4fc7cfe8f790e1f7720f8f785329c6e8",
+      "bytes": 1639
+    },
+    {
+      "id": "C08",
+      "original_url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices",
+      "note": "notes/C08.md",
+      "sha256": "2fec4f0da15c1d5559bb8b7dcb9c883806bebd4a249a6384b997c47553a5a7ea",
+      "bytes": 1513
+    }
+  ]
+}

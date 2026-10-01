@@ -1,0 +1,78 @@
+{
+  "date": "2026-09-25",
+  "host": "bishop.web-dns1.com",
+  "destination": "/home/xacm7978/orbit.securedme.ca",
+  "authorization": "User requested this preview live; user created domain",
+  "prior_root": [
+    ".well-known",
+    "cgi-bin"
+  ],
+  "upload_status": 1,
+  "extraction_success": true,
+  "package_sha256": "e8a94406546f7eac8ca455d0a52cf2fe0b79b85fc26cdaeeb30c728b574d3c74",
+  "files": [
+    ".htaccess",
+    "_astro/CompanionConsole.astro_astro_type_script_index_0_lang.CRwERBlX.js",
+    "_astro/index.astro_astro_type_script_index_0_lang.DsiIdrBC.js",
+    "_astro/index.BBFC2BiR.css",
+    "_astro/MissionWorkspace.astro_astro_type_script_index_0_lang.CQBINHCM.js",
+    "_astro/OrbitLab.astro_astro_type_script_index_0_lang.CeDvPZno.js",
+    "index.html"
+  ],
+  "verification": {
+    "https_validated": true,
+    "files": [
+      {
+        "path": "_astro/CompanionConsole.astro_astro_type_script_index_0_lang.CRwERBlX.js",
+        "status": 200,
+        "hash_match": true
+      },
+      {
+        "path": "_astro/index.astro_astro_type_script_index_0_lang.DsiIdrBC.js",
+        "status": 200,
+        "hash_match": true
+      },
+      {
+        "path": "_astro/index.BBFC2BiR.css",
+        "status": 200,
+        "hash_match": true
+      },
+      {
+        "path": "_astro/MissionWorkspace.astro_astro_type_script_index_0_lang.CQBINHCM.js",
+        "status": 200,
+        "hash_match": true
+      },
+      {
+        "path": "_astro/OrbitLab.astro_astro_type_script_index_0_lang.CeDvPZno.js",
+        "status": 200,
+        "hash_match": true
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "hash_match": true
+      }
+    ]
+  },
+  "rollback": "Remove only the seven manifest files from the new Orbit root; preserve .well-known and cgi-bin.",
+  "headers": {
+    "Content-Type": "text/html",
+    "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "browser": {
+    "render": "observed",
+    "pause_reset": "observed",
+    "altitude_meters": 600000,
+    "speed_meters_per_second": 7561.7,
+    "source_cards": 4,
+    "webmcp_registration": "observed; client invocation not tested",
+    "console_errors_observed": 0
+  },
+  "private_paths": {
+    ".env": 403,
+    ".git/config": 403,
+    "manifest.json": 404
+  }
+}

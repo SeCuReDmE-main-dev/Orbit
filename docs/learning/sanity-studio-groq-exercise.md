@@ -20,10 +20,13 @@ Create or inspect one structured source and retrieve only the fields needed for 
 4. Keep it as a draft until attribution and values are reviewed.
 5. In Vision, run:
 
-    *[_type == "source" && sourceId == "NASA-EARTH"][0]{
-      sourceId, title, url, authority, accessedAt,
-      claims[]{name, value, unit, qualifier}
+    *[_type == "source" && _id == "orbit-source-nasa-earth"][0]{
+      _id, title, url, publisher, observedAt, notes,
+      "claims": *[_type == "claim" && references(^._id)]{
+        statement, status, value, unit, qualifier
+      }
     }
+
 
 6. Confirm the result preserves units and the radius qualifier.
 7. Explain why 6371 km and 6378.137 km can both be correct.

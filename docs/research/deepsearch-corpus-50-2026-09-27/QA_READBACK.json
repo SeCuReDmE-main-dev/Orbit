@@ -1,0 +1,34 @@
+{
+  "scope": "Archived selection readback before ingestion. Current remote state: sanity-ingestion-2026-09-27/INGESTION_STATUS.json.",
+  "date": "2026-09-27",
+  "catalogue_entries": 50,
+  "source_records": 50,
+  "csv_rows": 50,
+  "proposed_tests": 50,
+  "checks": {
+    "unique_ids": true,
+    "unique_urls": true,
+    "approved25_url_overlap": 0,
+    "cross_format_identity_match": true,
+    "relative_links_exist": true,
+    "required_fields": true,
+    "targeted_secret_and_personal_path_scan": "no matches"
+  },
+  "commands": [
+    {
+      "command": "python output\\research\\2026-09-27-orbit-corpus-50\\assemble.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python output\\research\\2026-09-27-orbit-corpus-50\\validate_delivery.py",
+      "exit_code": 0
+    }
+  ],
+  "command_location": "Current Codex workspace; scripts and lane evidence retained there.",
+  "limitations": [
+    "Source review bounded to abstracts/selected sections.",
+    "No Orbit benchmark or runtime tests performed.",
+    "At this selection audit, no new sources had yet been imported or built; see the later ingestion receipt.",
+    "Fulltext rights held for45 references;5 conditionally admissible after attribution and asset checks."
+  ]
+}

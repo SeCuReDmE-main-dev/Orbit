@@ -1,0 +1,63 @@
+{
+  "observedAt": "2026-09-30T03:51:43.113Z",
+  "origin": "https://orbit.securedme.ca",
+  "host": "scripted deployed native WebMCP check; no model or human decision",
+  "nativeTools": 15,
+  "path": "deep_research/models_and_apis",
+  "state": "READY",
+  "provenance": {
+    "format": "orbit-context-provenance-v1",
+    "requestedPaths": [
+      "deep_research/models_and_apis"
+    ],
+    "references": [
+      {
+        "number": 1,
+        "title": "Deep research | OpenAI API § overview",
+        "kind": "web",
+        "url": null,
+        "entryTitle": "Deep Research Models, APIs & Tool Config"
+      },
+      {
+        "number": 2,
+        "title": "Deep research | OpenAI API § Replace the illustrative IDs and URLs below with your own resource values. › Prompting deep research models",
+        "kind": "web",
+        "url": null,
+        "entryTitle": "Deep Research Models, APIs & Tool Config"
+      },
+      {
+        "number": 3,
+        "title": "Gemini Deep Research agent  |  Gemini API  |  Google AI for Developers § Reconnect if the connection drops",
+        "kind": "web",
+        "url": null,
+        "entryTitle": "Deep Research Models, APIs & Tool Config"
+      },
+      {
+        "number": 4,
+        "title": "Gemini Deep Research agent  |  Gemini API  |  Google AI for Developers § overview",
+        "kind": "web",
+        "url": null,
+        "entryTitle": "Deep Research Models, APIs & Tool Config"
+      },
+      {
+        "number": 5,
+        "title": "PROVIDER_RESEARCH_STORAGE_SCOPE_2026-09-27.md",
+        "kind": "file",
+        "url": null,
+        "entryTitle": "Deep Research Models, APIs & Tool Config"
+      },
+      {
+        "number": 6,
+        "title": "Gemini Deep Research agent  |  Gemini API  |  Google AI for Developers § Third interaction: approve the plan and kick off research › Supported tools",
+        "kind": "web",
+        "url": null,
+        "entryTitle": "Deep Research Models, APIs & Tool Config"
+      }
+    ],
+    "referencesWithoutOriginalUrl": 6,
+    "status": "incomplete",
+    "originalDocumentsRead": false,
+    "interpretation": "Only citation metadata present in the returned Context text is recorded. A title without a URL stays unresolved. A URL does not establish that the original document was read or supports the claim."
+  },
+  "passed": true
+}

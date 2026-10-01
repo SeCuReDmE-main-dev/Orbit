@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-27",
+  "count": 25,
+  "unique_urls": 25,
+  "unique_ids": 25,
+  "json_url_list_match": true,
+  "sanity_import_verified": false,
+  "checks": "Local structure only; not API integration or full-paper review",
+  "sha256": {
+    "README.md": "c36369b92e297f397e78bc04b6fb844023933652b2b74bf32a6c06e540ffdc31",
+    "SOURCES.json": "6703fbe580c722c0d0ebc5f83e5ab2cd7d9a6a7cedd7964cd72441ac0b3ad53e",
+    "URLS.txt": "aeeaa60f28f141ee2c1fab561921f8822b1d84350532fb0fb0eec4e08372f548"
+  }
+}

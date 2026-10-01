@@ -1,0 +1,28 @@
+<section class="hologram" data-hologram data-state="idle" aria-label="Présence Orbit">
+  <div class="hologram__top"><span class="hologram__signature">ORBIT <span>/ COMPANION</span></span><a class="hologram__study" href="/presence-lab/" target="_blank" rel="noopener">Étude 3D ↗</a></div>
+  <div class="hologram__stage" data-hologram-stage>
+    <div class="hologram__fallback" data-hologram-fallback><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><ellipse cx="50" cy="50" rx="40" ry="15" transform="rotate(-35 50 50)"/><ellipse cx="50" cy="50" rx="40" ry="15" transform="rotate(35 50 50)"/><circle cx="50" cy="50" r="6"/></svg><span>La conversation reste disponible.</span></div>
+    <canvas data-hologram-canvas tabindex="0" aria-label="Orbit, étude articulée en trois dimensions. Glissez ou utilisez les flèches pour faire pivoter le personnage. Home recentre la vue."></canvas>
+    <div class="presence-orbit" aria-label="Les espaces autour d’Orbit">
+      <div class="presence-orbit__ellipse" aria-hidden="true"></div>
+      <button class="presence-node" data-presence-conversation type="button"><i aria-hidden="true">◉</i><span>Conversation</span></button>
+      <a class="presence-node" data-view-link="research" href="/app/?view=research"><i aria-hidden="true">⌕</i><span>Recherches</span></a>
+      <a class="presence-node" data-view-link="library" href="/app/?view=library"><i aria-hidden="true">◇</i><span>Sources</span></a>
+      <a class="presence-node" data-view-link="report" href="/app/?view=report"><i aria-hidden="true">≡</i><span>Rapport</span></a>
+    </div>
+    <details class="presence-play"><summary>✧ Manipuler Orbit</summary><div><button type="button" data-presence-scatter>Disperser / reformer</button><button type="button" data-presence-reset>Recentrer</button><button type="button" data-presence-solid aria-pressed="false">Matière</button></div><p>Glisser pour déplacer · Maj + glisser pour tourner · E pour disperser · R pour recentrer.</p></details>
+    <div class="hologram__caption"><span class="hologram__dot"></span><span data-hologram-state>Préparation de la présence…</span></div>
+  </div>
+  <div class="hologram__voice">
+    <div class="hologram__actions"><button type="button" data-hologram-speak aria-describedby="hologram-privacy">◉ Parler</button><button type="button" data-hologram-stop disabled>Arrêter</button><label><input type="checkbox" data-hologram-read /> Lire les réponses</label></div>
+    <p class="hologram__privacy" id="hologram-privacy">La voix est facultative. Votre navigateur peut transmettre l’audio et le texte lu à son fournisseur vocal. Vérifiez la transcription avant d’envoyer.</p>
+    <p class="hologram__status" data-hologram-voice-status role="status" aria-live="polite">Vous pouvez aussi écrire votre question.</p>
+  </div>
+</section>
+<style>
+.hologram{position:relative;width:100%;color:#e2eadc;font-family:'Segoe UI',system-ui,sans-serif}.hologram__top{display:flex;align-items:center;justify-content:space-between;gap:12px;position:absolute;top:12px;left:12px;right:12px;z-index:2}.hologram__signature{font-size:10px;letter-spacing:.19em;color:#bbcfb1}.hologram__signature span{font-size:8px;color:#86a08c}.hologram__study{color:#98b598;font-size:9px;text-decoration:none}.hologram__stage{position:relative;height:420px}.hologram__stage canvas{display:block;width:100%;height:100%;cursor:grab;touch-action:none;background:radial-gradient(ellipse at 50% 50%,#3d65461a,transparent 68%)}.hologram__stage canvas:active{cursor:grabbing}.hologram__stage canvas[hidden]{display:none}.hologram__caption{display:flex;align-items:center;justify-content:center;gap:8px;position:absolute;bottom:0;inset-inline:0;pointer-events:none;font-size:10px;color:#b8ceb0;background:linear-gradient(transparent,#0d1514cc);padding:10px}.hologram__dot{width:4px;height:4px;background:#a6c998;border-radius:50%}.hologram__voice{padding:16px 12px 0;border-top:1px solid #abc5a324}.hologram__actions{display:flex;flex-wrap:wrap;align-items:center;gap:7px}.hologram__actions button{font-family:inherit;font-size:12px;min-height:40px;padding:10px 16px;border-radius:5px;border:1px solid #afc9a438;color:#c9dfbf;background:#203521}.hologram__actions button:first-child{background:#c7dcb6;color:#1b2916}.hologram__actions label{display:flex;align-items:center;gap:7px;color:#aec6a3;font-size:11px;margin-left:auto}.hologram__actions input{width:14px;height:14px;accent-color:#b2ce9f}.hologram__privacy{font-size:10px;color:#849e8a;line-height:1.7;margin:12px 0 0}.hologram__status{font-size:10px;line-height:1.6;color:#a9c0a8;margin:8px 0}.hologram__fallback{position:absolute;inset:15% 10%;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#809984;font-size:11px}.hologram__fallback svg{width:130px;stroke:#819f7c;stroke-width:1;margin-bottom:25px}.hologram__fallback[hidden]{display:none}@media(max-width:500px){.hologram__stage{height:320px}.hologram__actions label{margin-left:0}.hologram__top{top:8px}}
+</style>
+<script>
+  import { mountHologramCompanion } from '../lib/hologram-companion'
+  document.querySelectorAll<HTMLElement>('[data-hologram]').forEach(mountHologramCompanion)
+</script>

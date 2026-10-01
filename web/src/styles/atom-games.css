@@ -1,0 +1,60 @@
+.atom-games{position:absolute;inset:90px 16px 66px;z-index:8;pointer-events:none;text-align:center;color:#eee4ff;font-family:var(--s-body)}
+.atom-games[hidden]{display:none!important}
+.atom-games>label{display:block;font-size:11px;color:#ffce89;margin-bottom:6px}
+.atom-games select{pointer-events:auto;max-width:90%;min-width:220px;min-height:44px;padding:8px 18px;border:1px solid #bd98ff66;border-radius:24px;background:#10162ae8;color:#eee4ff;font:500 16px var(--s-body)}
+.atom-games>p{font-size:12px;max-width:540px;margin:10px auto;line-height:1.5}
+.atom-games>div{position:absolute;bottom:32px;left:0;right:0;display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.atom-games button{pointer-events:auto;min-height:44px;min-width:44px;border:1px solid #bd98ff77;border-radius:24px;background:#19182fe8;color:#eee4ff;padding:8px 16px;font:500 12px var(--s-body)}
+.atom-games button:hover,.atom-games button:focus-visible{border-color:#ffce89;box-shadow:0 0 25px #ffc97a33}
+.atom-games [data-game-result]{position:absolute;bottom:0;left:0;right:0;margin:0 auto;font-size:11px;color:#73d7ff}
+[data-game-open=true] .atom-toolbar{visibility:hidden;pointer-events:none}
+[data-game-open=true] .atom-toolbar .atom-buttons button{pointer-events:none}
+@media(max-width:600px){.atom-games{inset:78px 10px 50px}.atom-games>div{gap:6px;bottom:45px}.atom-games button{padding:8px 10px}.atom-games>p{font-size:11px;max-width:310px}.atom-games [data-game-result]{bottom:10px}}
+.landing-preferences{position:fixed;z-index:20;right:3vw;top:24px;display:flex;gap:6px;align-items:center}
+.landing-preferences select,.landing-preferences button{min-height:36px;background:#0b1026dd;color:#d8d8ee;border:1px solid #bd98ff55;border-radius:18px;padding:5px 10px;font:500 11px var(--s-body)}
+.landing-preferences :focus-visible{outline:2px solid #73d7ff;outline-offset:3px}
+.publication-lab-link{position:absolute;top:4px;left:50%;transform:translateX(-50%);height:44px;width:auto;pointer-events:auto;mix-blend-mode:screen}
+.publication-lab-signature{display:block;width:auto;height:44px}
+.publication-lab-link:focus-visible{outline:2px solid #73d7ff;outline-offset:3px}
+[data-motion=static] *,[data-motion=static] *::before,[data-motion=static] *::after{animation:none!important;transition:none!important}
+[data-motion=static] [data-atom-canvas]{pointer-events:none;cursor:default}
+@media(max-width:600px){.landing-preferences{right:16px;top:22px}.atom-games>div{bottom:74px}.atom-games [data-game-result]{bottom:45px}}
+
+.orbit-access{background:#10142a;color:#f0edff;border:1px solid #bd98ff88;border-radius:18px;padding:24px;max-width:min(420px,calc(100vw - 32px));font-family:var(--s-body);box-sizing:border-box}
+.orbit-access::backdrop{background:#0008}
+.orbit-access h2{font-size:20px;margin-top:0}.orbit-access label{display:flex;gap:12px;align-items:center;min-height:48px}.orbit-access input{width:20px;height:20px;accent-color:#73d7ff}
+.orbit-access p{font-size:14px;line-height:1.5}.orbit-access>div{display:flex;gap:10px;flex-wrap:wrap}.orbit-access button{background:#191e37;color:#fff;border:1px solid #bd98ff77;border-radius:12px;min-height:44px;padding:8px 14px}
+.orbit-access :focus-visible{outline:2px solid #73d7ff;outline-offset:3px}
+html[data-orbit-contrast=high] .landing-preferences :is(button,select),html[data-orbit-contrast=high] .atom-links span,html[data-orbit-contrast=high] .atom-games :is(button,select){color:#fff;background:#050818;border-color:#fff}
+html[data-orbit-text=large] .landing-preferences :is(button,select),html[data-orbit-text=large] .atom-links span,html[data-orbit-text=large] .atom-games button{font-size:14px}
+
+.orbit-workspace-preferences{position:fixed;right:24px;top:20px;z-index:30}
+.orbit-display-controls{display:flex;gap:6px;align-items:center}.orbit-display-controls :is(select,button){font:500 12px sans-serif;min-height:36px;border:1px solid #bd98ff77;border-radius:12px;background:#10142a;color:#f0edff;padding:6px 10px}
+html[data-orbit-contrast=high] .orbit-access{background:#050818;color:white;border-color:white}
+html[data-orbit-text=large] .orbit-access{font-size:18px}html[data-orbit-text=large] .orbit-access :is(p,button){font-size:17px}
+html[data-orbit-motion=static] .orbit-display-controls *,html[data-orbit-motion=static] .orbit-workspace-preferences *{transition:none!important;animation:none!important}
+
+html[data-orbit-text=large] body.workshop-page{font-size:18px}
+html[data-orbit-contrast=high] body.workshop-page{background:#030611;color:#fff}
+html[data-orbit-contrast=high] body.workshop-page :is(p,label,button,input,textarea){color:#fff}
+html[data-orbit-contrast=high] body.workshop-page :is(input,textarea,button){border-color:#b6c6ea}
+html[data-orbit-text=large] .orbit-guide :is(p,li,dd,td){font-size:20px!important}
+html[data-orbit-contrast=high] .orbit-guide :is(p,li,dd,td,th,a){color:#fff!important}
+html[data-orbit-contrast=high] .orbit-guide h2{color:#ffc66e!important}
+html[data-orbit-motion=static] .orbit-guide *,html[data-orbit-motion=static] body.workshop-page *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+html[data-orbit-text=large] body.workshop-page :is(p,label,button,input,textarea,a){font-size:18px!important}
+html[data-orbit-text=large] .orbit-studio-surface :is([data-ui=Text],[data-ui=Label],button,input,textarea){font-size:18px!important}
+html[data-orbit-contrast=high] .orbit-studio-surface :is([data-ui=Text],[data-ui=Label],a){color:#fff!important}
+html[data-orbit-motion=static] .orbit-studio-surface *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+@media(max-width:600px){.orbit-guide{padding-top:76px!important}.orbit-workspace-preferences{right:16px;top:12px}}
+
+/* The four-second hold converts only the decorative background wordmark. */
+.orbit-wordmark.is-ascii [data-logo-letter]{position:relative;color:transparent!important;text-shadow:none!important;}
+.orbit-wordmark.is-ascii [data-logo-letter]::after{content:attr(data-ascii);position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);white-space:pre;font-family:Consolas,monospace;font-size:clamp(12px,2.4vw,34px);line-height:1.15;font-weight:400;color:rgba(178,222,255,.65);text-shadow:0 0 15px rgba(160,116,255,.35);}
+
+/* Split the i by its glyph height: orange dot, original-colored stem. */
+.orbit-brand .brand-i{background:linear-gradient(to bottom,#ff941f 0 35%,#f3efff 35% 100%);background-clip:text;-webkit-background-clip:text;color:transparent!important;}
+.orbit-wordmark .brand-i{background:linear-gradient(to bottom,rgba(255,148,31,.8) 0 35%,rgba(212,193,252,.18) 35% 100%);background-clip:text;-webkit-background-clip:text;color:transparent!important;}
+.orbit-wordmark.is-ascii .brand-i{background:none;}
+
+.atom-links a i,.atom-links button i{border-color:#ff941f!important;box-shadow:0 0 24px #ff941f55!important;}

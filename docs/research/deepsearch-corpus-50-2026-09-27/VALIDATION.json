@@ -1,0 +1,30 @@
+{
+  "scope": "Archived selection validation before ingestion. Current remote state: sanity-ingestion-2026-09-27/INGESTION_STATUS.json.",
+  "validated_at": "2026-09-27",
+  "source_count": 50,
+  "unique_ids": 50,
+  "unique_normalized_urls": 50,
+  "unique_normalized_titles": 50,
+  "duplicate_urls_with_approved25": [],
+  "category_counts": {
+    "planning": 8,
+    "search": 8,
+    "reading": 8,
+    "evidence": 10,
+    "writing": 8,
+    "continuity": 8
+  },
+  "all_required_fields_present": true,
+  "test_questions": 50,
+  "test_execution": "not_run",
+  "sanity_import": "not_performed",
+  "sanity_build": "not_started",
+  "fulltext_import_gates": {
+    "admit_with_attribution_conditions": 5,
+    "hold": 45
+  },
+  "limitation": "Structure validation and bounded source review, not scientific or runtime validation.",
+  "repo_branch": "master",
+  "repo_head": "3c6806b9cb77b81b5bea2e3debb7146f5ee0b821",
+  "repository_preexisting_dirty": true
+}

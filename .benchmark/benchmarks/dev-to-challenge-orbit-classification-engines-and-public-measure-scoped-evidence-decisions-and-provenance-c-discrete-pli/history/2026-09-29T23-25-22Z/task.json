@@ -1,0 +1,21 @@
+{
+  "slug": "dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli",
+  "title": "Orbit Evidence and Agent Benchmark",
+  "timestamp": "2026-09-29T23:25:22Z",
+  "objective": "Measure scoped evidence decisions and provenance continuity in real WebMCP agents",
+  "primary_subject": "Orbit classification engines and public agent trajectories",
+  "comparators": [
+    "Simple three-way baseline",
+    "Neutrosophic evidence sets",
+    "Discrete plithogenic relations"
+  ],
+  "task_intent": "",
+  "product_hypothesis": "Structured evidence and bounded HOLD reduce unjustified conclusions without excessive abstention",
+  "benchmark_lens": "Correctness, scope, provenance, tool use, authorization and measured resource use",
+  "repo_summary": [],
+  "research_questions": [],
+  "competitor_candidates": [],
+  "selected_benchmark_targets": [],
+  "source_index": [],
+  "next_steps": []
+}

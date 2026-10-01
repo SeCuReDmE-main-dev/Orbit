@@ -1,8 +1,19 @@
-# Orbit Companion
+# Orbit — observatory for contested answers
 
-Orbit Companion is a local-first research-companion experiment for the DEV/Sanity challenge. The current repository implements a verified vertical slice: versioned contracts, a loopback mission broker backed by SQLite, a static Astro side panel, a fixed-step orbital simulation, a standalone Sanity Studio configuration, bounded read-only WebMCP discovery, and evidence-oriented project documentation.
+Orbit is an Astro application for the DEV/Sanity Challenge **Path One**. It gives an agent and a human a shared research dossier: question, plan, evidence, claim-by-claim verification and an auditable answer. Its intended contribution is to show when the structure and conflict-aware entries of a Sanity Context Knowledge Base materially change an agent’s reasoning.
 
-It is not yet a release candidate. Codex, Antigravity, Exa, Sanity Knowledge Base and live WebMCP client invocation remain explicit external integration work. No deployment or challenge submission has been performed.
+The public static surfaces are live:
+
+- [interactive landing](https://orbit.securedme.ca/)
+- [research observatory](https://orbit.securedme.ca/app/)
+- [human guide](https://orbit.securedme.ca/guide/)
+- [Sanity Studio for the existing Orbit project](https://orbit.securedme.ca/studio/)
+
+The landing’s atom is interactive but separate from the research workflow. The observatory itself uses one central dossier with five URL-restorable views: **Question, Plan, Evidence, Verification, Report**. A browser agent can discover exactly ten WebMCP tools. It can submit a version-bound proposal, but it cannot claim human approval or overwrite an approved dossier.
+
+**Current delivery status:** the static public application, Studio route and WebMCP registration are verified. The private Laravel gateway to Sanity Context is implemented and verified locally, but has not yet been deployed with its server-side organization Viewer token; public Context calls therefore return an explicit unavailable state. No challenge submission or claim of a completed comparative evaluation is made.
+
+**Start here:** [human walkthrough](HUMAN.md) · [current public deployment receipt](docs/delivery-2026-09-29/observatory/LIVE_DEPLOYMENT_STATUS.md) · [agent and baseline artifacts](docs/delivery-2026-09-29/observatory/).
 
 ## Repository layout
 
@@ -36,7 +47,7 @@ $env:ORBIT_ALLOWED_EXTENSION_ORIGINS = 'chrome-extension://<32-character-extensi
 npm run broker
 ```
 
-The broker validates this value strictly, echoes CORS only for the exact allowed origin, and continues to require its process-scoped bearer token for mutations. Requests without a browser `Origin` remain available to loopback command-line clients.
+The broker validates this value strictly, echoes CORS only for the exact allowed origin, and continues to require its process-scoped bearer token for mutations. Private operations require authorization even from loopback command-line clients. The browser exchanges a single-use, five-minute association code for a scoped session; the process token is never sent to the page.
 
 To load the side panel locally, build `@orbit/web`, run `python tools/package_mv3.py` to create the reproducible package, open Chrome's extension management page, enable developer mode, and load `web/dist` as an unpacked extension. This is a manual browser action; it has not yet been counted as a verified integration in this repository.
 
@@ -44,7 +55,7 @@ A reviewable snapshot is available at `artifacts/orbit-companion-mv3-unpacked-bu
 
 ## Sanity status
 
-`studio/sanity.config.ts` references the existing project `pzscx4w8` and dataset `production`. Six local schema types are present. Schema extraction and the local Studio build pass with the pinned dependency procedure. Authentication, remote content, Knowledge Base and Context MCP remain unverified external work. No remote Sanity content was changed.
+`studio/sanity.config.ts` references the existing project `pzscx4w8` and dataset `production`. The local Context-agent receipts record real `initial_context` and `knowledge_base_read` calls against Knowledge Base `kb5CHIYGXCMJ`; the agent keeps entry paths and SHA-256 digests in a pending dossier. The public browser must still reach the private Laravel proxy before those same reads can be demonstrated live. Four source cards are retrieved at static build time and are not presented as a replacement for Context.
 
 ## Safety and scope
 

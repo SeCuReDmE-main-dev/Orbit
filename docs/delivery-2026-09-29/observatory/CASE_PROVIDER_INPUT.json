@@ -1,0 +1,23 @@
+{
+  "format": "orbit-evidence-v1",
+  "id": "case-provider-20260929",
+  "title": "Background research and zero-data-retention constraints",
+  "question": "Under which documented conditions can background deep research coexist with zero-data-retention requirements across named OpenAI and Google product surfaces?",
+  "objective": "Separate provider, product, execution mode, data-retention terms, effective date and account-specific exceptions before any conclusion.",
+  "context": "Demonstration case. The result must distinguish a genuine conflict from a difference of scope and must remain indeterminate when the original provider document was not read.",
+  "revision": 0,
+  "createdAt": "2026-09-29T19:45:00.000Z",
+  "updatedAt": "2026-09-29T19:45:00.000Z",
+  "axes": [],
+  "sources": [],
+  "claims": [],
+  "screeningCriteria": [],
+  "sourceDecisions": [],
+  "extractions": [],
+  "knowledgeReads": [],
+  "report": "",
+  "proposals": [],
+  "reviews": [],
+  "history": [],
+  "example": false
+}

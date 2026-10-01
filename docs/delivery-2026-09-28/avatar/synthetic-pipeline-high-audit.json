@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "file": "orbit-candidate-high.glb",
+  "sha256": "5562313fbc5b92a0764c9e0a4c60b79df4e5a91819576bf441997130ce2870c5",
+  "quality": "high",
+  "bytes": 6265056,
+  "triangles": 79000,
+  "primitives": 1,
+  "materials": 0,
+  "textures": 0,
+  "skins": 0,
+  "animations": [],
+  "morphTargets": [],
+  "checks": {
+    "triangles": true,
+    "primitives": true,
+    "bytes": true,
+    "embeddedAssets": true
+  },
+  "technicalBudgetsPass": true,
+  "notChecked": [
+    "texture dimensions",
+    "facial fidelity",
+    "deformations",
+    "frame time",
+    "license"
+  ],
+  "approvedForApplication": false,
+  "evidenceKind": "synthetic_tooling_fixture",
+  "subject": "UV sphere; not an Orbit avatar candidate"
+}

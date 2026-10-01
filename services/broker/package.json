@@ -6,7 +6,7 @@
   "exports": {
     ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" }
   },
-  "dependencies": { "@orbit/contracts": "file:../../packages/contracts", "@orbit/core": "file:../../packages/core" },
+  "dependencies": { "@orbit/contracts": "file:../../packages/contracts", "@orbit/core": "file:../../packages/core", "@orbit/providers": "file:../../packages/providers" },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "dev": "tsx src/main.ts"

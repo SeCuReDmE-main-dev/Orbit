@@ -1,4 +1,6 @@
 node_modules/
+.venv/
+__pycache__/
 node_modules.corrupt-*/
 package-lock.corrupt-*.json
 dist/
@@ -10,3 +12,13 @@ dist/
 .env
 .env.*
 !.env.example
+# Generated browser configuration. Credentials remain in the private .env.
+web/public/integrations/google-drive.json
+# Private continuity and author voice material are not public project sources.
+docs/editorial-notes/
+docs/learning/orbit-atom-guide-2026-09-30/voice_samples.md
+docs/learning/orbit-atom-guide-2026-09-30/voice_profile.json
+docs/learning/orbit-atom-guide-2026-09-30/voice-extraction.log
+docs/learning/orbit-atom-guide-2026-09-30/drive-delivery.json
+docs/learning/orbit-atom-guide-2026-09-30/build_guide.py
+docs/delivery-2026-09-30/landing-2.1.6-cloture.md

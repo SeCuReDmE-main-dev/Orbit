@@ -1,0 +1,72 @@
+{
+  "stage": "plan",
+  "question": "Which documented distinctions in Sanity Context require a structured Knowledge Base read rather than a keyword search alone?",
+  "revision": 0,
+  "proposalId": "4f2a3eb835164cdeb0ab54678c999a3b",
+  "trace": {
+    "calls": [
+      {
+        "tool": "initial_context",
+        "state": "READY"
+      },
+      {
+        "tool": "knowledge_base_read",
+        "paths": [
+          "sanity/knowledge_bases"
+        ],
+        "state": "READY"
+      },
+      {
+        "tool": "knowledge_base_read",
+        "paths": [
+          "research_methodology/question_disambiguation"
+        ],
+        "state": "READY"
+      },
+      {
+        "tool": "knowledge_base_read",
+        "paths": [
+          "research_methodology/systematic_review"
+        ],
+        "state": "READY"
+      },
+      {
+        "tool": "knowledge_base_read",
+        "paths": [
+          "provenance_and_annotation"
+        ],
+        "state": "READY"
+      },
+      {
+        "tool": "knowledge_base_read",
+        "paths": [
+          "rag_evaluation/attribution_frameworks"
+        ],
+        "state": "READY"
+      }
+    ],
+    "model": "gpt-5.6-luna",
+    "entryDigests": [
+      {
+        "path": "sanity/knowledge_bases",
+        "digest": "40b290d959cd77fdd52b7b2152dbc1c84202cfdc7346e4057b0e96c5d84878d8"
+      },
+      {
+        "path": "research_methodology/question_disambiguation",
+        "digest": "2abe8b69a2adc5a47bc79e894fc9fd32a915eab62aba6af5d36ebabac17ca91b"
+      },
+      {
+        "path": "research_methodology/systematic_review",
+        "digest": "c6b1a38851d59fd8e0ca875e1d29aa139459dc50575f8dd599f5ae0bec6b6852"
+      },
+      {
+        "path": "provenance_and_annotation",
+        "digest": "69144d620c4a9cdf023008e09d60a437252f60c7e83a0964bb56049667d7a427"
+      },
+      {
+        "path": "rag_evaluation/attribution_frameworks",
+        "digest": "edd33e1a37b47cb313e260d3321ac03f95281398e542e3f7e78835b47a009ba4"
+      }
+    ]
+  }
+}

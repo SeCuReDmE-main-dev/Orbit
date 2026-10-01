@@ -1,0 +1,751 @@
+{
+  "status": "development-pilot",
+  "model": "gemini-3.1-pro-high",
+  "host": "Antigravity official CLI 1.2.13",
+  "answerSha256": "025d23a7e2cb6426101970a86403bc84a52a33dcd091e870f28401d0ad2c3ec0",
+  "executedAt": "2026-09-30T00:41:19.665476+00:00",
+  "questions": 6,
+  "modelDecisionsCorrect": 6,
+  "quoteChecks": 8,
+  "quotesExact": 8,
+  "engines": {
+    "baseline": {
+      "evaluated": 5,
+      "correctEvaluated": 5,
+      "schemaErrors": 1
+    },
+    "n": {
+      "evaluated": 5,
+      "correctEvaluated": 5,
+      "schemaErrors": 1
+    },
+    "p": {
+      "evaluated": 5,
+      "correctEvaluated": 5,
+      "schemaErrors": 1
+    }
+  },
+  "rows": [
+    {
+      "questionId": "q01",
+      "modelDecision": "ADMIT",
+      "expected": "ADMIT",
+      "modelDecisionCorrect": true,
+      "quoteChecks": [
+        {
+          "sourceId": "d01",
+          "found": true
+        }
+      ]
+    },
+    {
+      "questionId": "q02",
+      "modelDecision": "REJECT",
+      "expected": "REJECT",
+      "modelDecisionCorrect": true,
+      "quoteChecks": [
+        {
+          "sourceId": "d03",
+          "found": true
+        }
+      ]
+    },
+    {
+      "questionId": "q03",
+      "modelDecision": "HOLD",
+      "expected": "HOLD",
+      "modelDecisionCorrect": true,
+      "quoteChecks": [
+        {
+          "sourceId": "d05",
+          "found": true
+        },
+        {
+          "sourceId": "d06",
+          "found": true
+        }
+      ]
+    },
+    {
+      "questionId": "q04",
+      "modelDecision": "ADMIT",
+      "expected": "ADMIT",
+      "modelDecisionCorrect": true,
+      "quoteChecks": [
+        {
+          "sourceId": "d07",
+          "found": true
+        }
+      ]
+    },
+    {
+      "questionId": "q05",
+      "modelDecision": "HOLD",
+      "expected": "HOLD",
+      "modelDecisionCorrect": true,
+      "quoteChecks": [
+        {
+          "sourceId": "d09",
+          "found": true
+        },
+        {
+          "sourceId": "d10",
+          "found": true
+        }
+      ]
+    },
+    {
+      "questionId": "q06",
+      "modelDecision": "REJECT",
+      "expected": "REJECT",
+      "modelDecisionCorrect": true,
+      "quoteChecks": [
+        {
+          "sourceId": "d12",
+          "found": true
+        }
+      ]
+    }
+  ],
+  "engineRows": [
+    {
+      "questionId": "q01",
+      "engine": "baseline",
+      "expected": "ADMIT",
+      "ok": true,
+      "result": [
+        {
+          "claimId": "q01",
+          "truth": [
+            {
+              "sourceId": "d01",
+              "title": "d01",
+              "url": "https://example.org/orbit-pilot/d01",
+              "quote": "Aster service, provider Test Lab, local mode, version 1: batch processing is supported.",
+              "independentSource": "https://example.org/orbit-pilot/d01",
+              "passages": [
+                "Aster service, provider Test Lab, local mode, version 1: batch processing is supported."
+              ]
+            }
+          ],
+          "indeterminacy": [],
+          "falsity": [],
+          "priority": "supported",
+          "engine": "baseline",
+          "engineVersion": "orbit-classification-1.0.0",
+          "revision": 0,
+          "decision": "ADMIT",
+          "independentSources": 1,
+          "reasons": [
+            "Only eligible supporting passages remain."
+          ],
+          "semanticVerification": "agent-asserted-relation"
+        }
+      ],
+      "durationMs": 3.116899999999987,
+      "decisionCorrect": true
+    },
+    {
+      "questionId": "q01",
+      "engine": "n",
+      "expected": "ADMIT",
+      "ok": true,
+      "result": [
+        {
+          "claimId": "q01",
+          "truth": [
+            {
+              "sourceId": "d01",
+              "title": "d01",
+              "url": "https://example.org/orbit-pilot/d01",
+              "quote": "Aster service, provider Test Lab, local mode, version 1: batch processing is supported.",
+              "independentSource": "https://example.org/orbit-pilot/d01",
+              "passages": [
+                "Aster service, provider Test Lab, local mode, version 1: batch processing is supported."
+              ]
+            }
+          ],
+          "indeterminacy": [],
+          "falsity": [],
+          "priority": "supported",
+          "engine": "n",
+          "engineVersion": "orbit-classification-1.0.0",
+          "revision": 0,
+          "decision": "ADMIT",
+          "independentSources": 1,
+          "reasons": [
+            "Only eligible supporting passages remain."
+          ],
+          "semanticVerification": "agent-asserted-relation"
+        }
+      ],
+      "durationMs": 0.21719999999993433,
+      "decisionCorrect": true
+    },
+    {
+      "questionId": "q01",
+      "engine": "p",
+      "expected": "ADMIT",
+      "ok": true,
+      "result": [
+        {
+          "claimId": "q01",
+          "truth": [
+            {
+              "sourceId": "d01",
+              "title": "d01",
+              "url": "https://example.org/orbit-pilot/d01",
+              "quote": "Aster service, provider Test Lab, local mode, version 1: batch processing is supported.",
+              "independentSource": "https://example.org/orbit-pilot/d01",
+              "passages": [
+                "Aster service, provider Test Lab, local mode, version 1: batch processing is supported."
+              ]
+            }
+          ],
+          "indeterminacy": [],
+          "falsity": [],
+          "priority": "supported",
+          "engine": "p",
+          "engineVersion": "orbit-classification-1.0.0",
+          "revision": 0,
+          "decision": "ADMIT",
+          "independentSources": 1,
+          "reasons": [
+            "Only eligible supporting passages remain."
+          ],
+          "semanticVerification": "agent-asserted-relation"
+        }
+      ],
+      "durationMs": 6.921999999999912,
+      "decisionCorrect": true
+    },
+    {
+      "questionId": "q02",
+      "engine": "baseline",
+      "expected": "REJECT",
+      "ok": true,
+      "result": [
+        {
+          "claimId": "q02",
+          "truth": [],
+          "indeterminacy": [],
+          "falsity": [
+            {
+              "sourceId": "d03",
+              "title": "d03",
+              "url": "https://example.org/orbit-pilot/d03",
+              "quote": "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported.",
+              "independentSource": "https://example.org/orbit-pilot/d03",
+              "passages": [
+                "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported."
+              ]
+            }
+          ],
+          "priority": "refutation",
+          "engine": "baseline",
+          "engineVersion": "orbit-classification-1.0.0",
+          "revision": 0,
+          "decision": "REJECT",
+          "independentSources": 1,
+          "reasons": [
+            "Only eligible refuting passages remain."
+          ],
+          "semanticVerification": "agent-asserted-relation"
+        }
+      ],
+      "durationMs": 0.7026999999999362,
+      "decisionCorrect": true
+    },
+    {
+      "questionId": "q02",
+      "engine": "n",
+      "expected": "REJECT",
+      "ok": true,
+      "result": [
+        {
+          "claimId": "q02",
+          "truth": [],
+          "indeterminacy": [],
+          "falsity": [
+            {
+              "sourceId": "d03",
+              "title": "d03",
+              "url": "https://example.org/orbit-pilot/d03",
+              "quote": "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported.",
+              "independentSource": "https://example.org/orbit-pilot/d03",
+              "passages": [
+                "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported."
+              ]
+            }
+          ],
+          "priority": "refutation",
+          "engine": "n",
+          "engineVersion": "orbit-classification-1.0.0",
+          "revision": 0,
+          "decision": "REJECT",
+          "independentSources": 1,
+          "reasons": [
+            "Only eligible refuting passages remain."
+          ],
+          "semanticVerification": "agent-asserted-relation"
+        }
+      ],
+      "durationMs": 1.7795999999999594,
+      "decisionCorrect": true
+    },
+    {
+      "questionId": "q02",
+      "engine": "p",
+      "expected": "REJECT",
+      "ok": true,
+      "result": [
+        {
+          "claimId": "q02",
+          "truth": [],
+          "indeterminacy": [],
+          "falsity": [
+            {
+              "sourceId": "d03",
+              "title": "d03",
+              "url": "https://example.org/orbit-pilot/d03",
+              "quote": "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported.",
+              "independentSource": "https://example.org/orbit-pilot/d03",
+              "passages": [
+                "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported."
+              ]
+            }
+          ],
+          "priority": "refutation",
+          "engine": "p",
+          "engineVersion": "orbit-classification-1.0.0",
+          "revision": 0,
+          "decision": "REJECT",
+          "independentSources": 1,
+          "reasons": [
+            "Only eligible refuting passages remain."
+          ],
+          "semanticVerification": "agent-asserted-relation"
+        }
+      ],
+      "durationMs": 0.28539999999998145,
+      "decisionCorrect": true
+    },
+    {
+      "questionId": "q03",
+      "engine": "baseline",
+      "expected": "HOLD",
+      "ok": true,
+      "result": [
+        {
+          "claimId": "q03",
+          "truth": [
+            {
+              "sourceId": "d05",
+              "title": "d05",
+              "url": "https://example.org/orbit-pilot/d05",
+              "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported.",
+              "independentSource": "https://example.org/orbit-pilot/d05",
+              "passages": [
+                "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported."
+              ]
+            }
+          ],
+          "indeterminacy": [],
+          "falsity": [
+            {
+              "sourceId": "d06",
+              "title": "d06",
+              "url": "https://example.org/orbit-pilot/d06",
+              "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other.",
+              "independentSource": "https://example.org/orbit-pilot/d06",
+              "passages": [
+                "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other."
+              ]
+            }
+          ],
+          "priority": "same-scope-conflict",
+          "engine": "baseline",
+          "engineVersion": "orbit-classification-1.0.0",
+          "revision": 0,
+          "decision": "HOLD",
+          "independentSources": 2,
+          "reasons": [
+            "Supporting and refuting passages coexist under the recorded scope."
+          ],
+          "hold": {
+            "missing": [
+              "Explain or adjudicate the opposing same-scope passages."
+            ],
+            "resumeWhen": "Supply the missing passage, scope or reviewed distinction, then rerun against the new revision.",
+            "maxAdditionalRequests": 2
+          },
+          "semanticVerification": "agent-asserted-relation"
+        }
+      ],
+      "durationMs": 56.17369999999994,
+      "decisionCorrect": true
+    },
+    {
+      "questionId": "q03",
+      "engine": "n",
+      "expected": "HOLD",
+      "ok": true,
+      "result": [
+        {
+          "claimId": "q03",
+          "truth": [
+            {
+              "sourceId": "d05",
+              "title": "d05",
+              "url": "https://example.org/orbit-pilot/d05",
+              "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported.",
+              "independentSource": "https://example.org/orbit-pilot/d05",
+              "passages": [
+                "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported."
+              ]
+            }
+          ],
+          "indeterminacy": [],
+          "falsity": [
+            {
+              "sourceId": "d06",
+              "title": "d06",
+              "url": "https://example.org/orbit-pilot/d06",
+              "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other.",
+              "independentSource": "https://example.org/orbit-pilot/d06",
+              "passages": [
+                "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other."
+              ]
+            }
+          ],
+          "priority": "same-scope-conflict",
+          "engine": "n",
+          "engineVersion": "orbit-classification-1.0.0",
+          "revision": 0,
+          "decision": "HOLD",
+          "independentSources": 2,
+          "reasons": [
+            "Supporting and refuting passages coexist under the recorded scope."
+          ],
+          "hold": {
+            "missing": [
+              "Explain or adjudicate the opposing same-scope passages."
+            ],
+            "resumeWhen": "Supply the missing passage, scope or reviewed distinction, then rerun against the new revision.",
+            "maxAdditionalRequests": 2
+          },
+          "semanticVerification": "agent-asserted-relation"
+        }
+      ],
+      "durationMs": 0.27969999999993433,
+      "decisionCorrect": true
+    },
+    {
+      "questionId": "q03",
+      "engine": "p",
+      "expected": "HOLD",
+      "ok": true,
+      "result": [
+        {
+          "claimId": "q03",
+          "truth": [
+            {
+              "sourceId": "d05",
+              "title": "d05",
+              "url": "https://example.org/orbit-pilot/d05",
+              "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported.",
+              "independentSource": "https://example.org/orbit-pilot/d05",
+              "passages": [
+                "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported."
+              ]
+            }
+          ],
+          "indeterminacy": [],
+          "falsity": [
+            {
+              "sourceId": "d06",
+              "title": "d06",
+              "url": "https://example.org/orbit-pilot/d06",
+              "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other.",
+              "independentSource": "https://example.org/orbit-pilot/d06",
+              "passages": [
+                "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other."
+              ]
+            }
+          ],
+          "priority": "same-scope-conflict",
+          "engine": "p",
+          "engineVersion": "orbit-classification-1.0.0",
+          "revision": 0,
+          "decision": "HOLD",
+          "independentSources": 2,
+          "reasons": [
+            "Supporting and refuting passages coexist under the recorded scope."
+          ],
+          "hold": {
+            "missing": [
+              "Explain or adjudicate the opposing same-scope passages."
+            ],
+            "resumeWhen": "Supply the missing passage, scope or reviewed distinction, then rerun against the new revision.",
+            "maxAdditionalRequests": 2
+          },
+          "semanticVerification": "agent-asserted-relation"
+        }
+      ],
+      "durationMs": 0.21929999999997563,
+      "decisionCorrect": true
+    },
+    {
+      "questionId": "q04",
+      "engine": "baseline",
+      "expected": "ADMIT",
+      "ok": true,
+      "result": [
+        {
+          "claimId": "q04",
+          "truth": [
+            {
+              "sourceId": "d07",
+              "title": "d07",
+              "url": "https://example.org/orbit-pilot/d07",
+              "quote": "Draco service, provider Test Lab, local mode, version 1: batch processing is supported.",
+              "independentSource": "https://example.org/orbit-pilot/d07",
+              "passages": [
+                "Draco service, provider Test Lab, local mode, version 1: batch processing is supported."
+              ]
+            }
+          ],
+          "indeterminacy": [],
+          "falsity": [],
+          "priority": "supported",
+          "engine": "baseline",
+          "engineVersion": "orbit-classification-1.0.0",
+          "revision": 0,
+          "decision": "ADMIT",
+          "independentSources": 1,
+          "reasons": [
+            "Only eligible supporting passages remain."
+          ],
+          "semanticVerification": "agent-asserted-relation"
+        }
+      ],
+      "durationMs": 0.15829999999994016,
+      "decisionCorrect": true
+    },
+    {
+      "questionId": "q04",
+      "engine": "n",
+      "expected": "ADMIT",
+      "ok": true,
+      "result": [
+        {
+          "claimId": "q04",
+          "truth": [
+            {
+              "sourceId": "d07",
+              "title": "d07",
+              "url": "https://example.org/orbit-pilot/d07",
+              "quote": "Draco service, provider Test Lab, local mode, version 1: batch processing is supported.",
+              "independentSource": "https://example.org/orbit-pilot/d07",
+              "passages": [
+                "Draco service, provider Test Lab, local mode, version 1: batch processing is supported."
+              ]
+            }
+          ],
+          "indeterminacy": [],
+          "falsity": [],
+          "priority": "supported",
+          "engine": "n",
+          "engineVersion": "orbit-classification-1.0.0",
+          "revision": 0,
+          "decision": "ADMIT",
+          "independentSources": 1,
+          "reasons": [
+            "Only eligible supporting passages remain."
+          ],
+          "semanticVerification": "agent-asserted-relation"
+        }
+      ],
+      "durationMs": 0.15390000000002146,
+      "decisionCorrect": true
+    },
+    {
+      "questionId": "q04",
+      "engine": "p",
+      "expected": "ADMIT",
+      "ok": true,
+      "result": [
+        {
+          "claimId": "q04",
+          "truth": [
+            {
+              "sourceId": "d07",
+              "title": "d07",
+              "url": "https://example.org/orbit-pilot/d07",
+              "quote": "Draco service, provider Test Lab, local mode, version 1: batch processing is supported.",
+              "independentSource": "https://example.org/orbit-pilot/d07",
+              "passages": [
+                "Draco service, provider Test Lab, local mode, version 1: batch processing is supported."
+              ]
+            }
+          ],
+          "indeterminacy": [],
+          "falsity": [],
+          "priority": "supported",
+          "engine": "p",
+          "engineVersion": "orbit-classification-1.0.0",
+          "revision": 0,
+          "decision": "ADMIT",
+          "independentSources": 1,
+          "reasons": [
+            "Only eligible supporting passages remain."
+          ],
+          "semanticVerification": "agent-asserted-relation"
+        }
+      ],
+      "durationMs": 0.16639999999995325,
+      "decisionCorrect": true
+    },
+    {
+      "questionId": "q05",
+      "engine": "baseline",
+      "expected": "HOLD",
+      "ok": false,
+      "error": "Texte absent ou trop long.",
+      "decisionCorrect": null
+    },
+    {
+      "questionId": "q05",
+      "engine": "n",
+      "expected": "HOLD",
+      "ok": false,
+      "error": "Texte absent ou trop long.",
+      "decisionCorrect": null
+    },
+    {
+      "questionId": "q05",
+      "engine": "p",
+      "expected": "HOLD",
+      "ok": false,
+      "error": "Texte absent ou trop long.",
+      "decisionCorrect": null
+    },
+    {
+      "questionId": "q06",
+      "engine": "baseline",
+      "expected": "REJECT",
+      "ok": true,
+      "result": [
+        {
+          "claimId": "q06",
+          "truth": [],
+          "indeterminacy": [],
+          "falsity": [
+            {
+              "sourceId": "d12",
+              "title": "d12",
+              "url": "https://example.org/orbit-pilot/d12",
+              "quote": "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode.",
+              "independentSource": "https://example.org/orbit-pilot/d12",
+              "passages": [
+                "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode."
+              ]
+            }
+          ],
+          "priority": "refutation",
+          "engine": "baseline",
+          "engineVersion": "orbit-classification-1.0.0",
+          "revision": 0,
+          "decision": "REJECT",
+          "independentSources": 1,
+          "reasons": [
+            "Only eligible refuting passages remain."
+          ],
+          "semanticVerification": "agent-asserted-relation"
+        }
+      ],
+      "durationMs": 0.12459999999998672,
+      "decisionCorrect": true
+    },
+    {
+      "questionId": "q06",
+      "engine": "n",
+      "expected": "REJECT",
+      "ok": true,
+      "result": [
+        {
+          "claimId": "q06",
+          "truth": [],
+          "indeterminacy": [],
+          "falsity": [
+            {
+              "sourceId": "d12",
+              "title": "d12",
+              "url": "https://example.org/orbit-pilot/d12",
+              "quote": "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode.",
+              "independentSource": "https://example.org/orbit-pilot/d12",
+              "passages": [
+                "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode."
+              ]
+            }
+          ],
+          "priority": "refutation",
+          "engine": "n",
+          "engineVersion": "orbit-classification-1.0.0",
+          "revision": 0,
+          "decision": "REJECT",
+          "independentSources": 1,
+          "reasons": [
+            "Only eligible refuting passages remain."
+          ],
+          "semanticVerification": "agent-asserted-relation"
+        }
+      ],
+      "durationMs": 0.08710000000007767,
+      "decisionCorrect": true
+    },
+    {
+      "questionId": "q06",
+      "engine": "p",
+      "expected": "REJECT",
+      "ok": true,
+      "result": [
+        {
+          "claimId": "q06",
+          "truth": [],
+          "indeterminacy": [],
+          "falsity": [
+            {
+              "sourceId": "d12",
+              "title": "d12",
+              "url": "https://example.org/orbit-pilot/d12",
+              "quote": "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode.",
+              "independentSource": "https://example.org/orbit-pilot/d12",
+              "passages": [
+                "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode."
+              ]
+            }
+          ],
+          "priority": "refutation",
+          "engine": "p",
+          "engineVersion": "orbit-classification-1.0.0",
+          "revision": 0,
+          "decision": "REJECT",
+          "independentSources": 1,
+          "reasons": [
+            "Only eligible refuting passages remain."
+          ],
+          "semanticVerification": "agent-asserted-relation"
+        }
+      ],
+      "durationMs": 0.08550000000002456,
+      "decisionCorrect": true
+    }
+  ],
+  "limitations": [
+    "One development repetition, not final benchmark.",
+    "Exact quotation does not establish semantic relevance.",
+    "Schema errors are retained, not repaired or counted as engine decisions.",
+    "Model identity and effort are labels observed in the host UI, not independent provider attestations."
+  ]
+}

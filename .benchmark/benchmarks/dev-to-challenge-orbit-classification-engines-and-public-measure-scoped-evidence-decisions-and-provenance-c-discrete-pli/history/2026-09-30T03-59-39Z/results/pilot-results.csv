@@ -1,0 +1,6 @@
+model,host,promptVersion,correct,questions,exactQuotes,quoteChecks,schemaErrors
+Gemini 3.8 Flash High,Antigravity 2.18.1 desktop,1,6,6,8,8,1
+gemini-3.1-pro-high,Antigravity official CLI 1.2.13,1,6,6,8,8,1
+gemini-3.8-flash-high,Antigravity official CLI 1.2.13,1,6,6,8,8,1
+google/gemini-3.8-flash,Kaggle Benchmarks 0.6.1,2,6,6,8,8,0
+google/gemini-3.1-pro-preview,Kaggle Benchmarks 0.6.1,2,6,6,8,8,0

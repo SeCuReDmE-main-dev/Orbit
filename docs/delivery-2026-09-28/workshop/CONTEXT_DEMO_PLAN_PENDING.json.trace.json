@@ -1,0 +1,50 @@
+{
+  "stage": "plan",
+  "question": "Under which documented conditions can background deep research coexist with zero-data-retention requirements across OpenAI and Google API surfaces?",
+  "revision": 0,
+  "proposalId": "58d3c41dc40941f9bea4304c5ea10981",
+  "trace": {
+    "calls": [
+      {
+        "tool": "initial_context",
+        "state": "READY"
+      },
+      {
+        "tool": "knowledge_base_read",
+        "paths": [
+          "data_retention_and_privacy"
+        ],
+        "state": "READY"
+      },
+      {
+        "tool": "knowledge_base_read",
+        "paths": [
+          "deep_research/models_and_apis"
+        ],
+        "state": "READY"
+      },
+      {
+        "tool": "knowledge_base_read",
+        "paths": [
+          "search_apis/google_grounding"
+        ],
+        "state": "READY"
+      }
+    ],
+    "model": "gpt-5.6-luna",
+    "entryDigests": [
+      {
+        "path": "data_retention_and_privacy",
+        "digest": "2413d2c3392917957d3667b7d90df1fd12b60dfdf38a531d702ca2267d5a45b6"
+      },
+      {
+        "path": "deep_research/models_and_apis",
+        "digest": "653999417c107742bb41df6e25923e72887fd1cc39681b8cb2b022c038d570bc"
+      },
+      {
+        "path": "search_apis/google_grounding",
+        "digest": "8ff2c71e6effedaeaa7ce7629a4ef4eac5963e918c4898a3efe0b5e56cbcb6ac"
+      }
+    ]
+  }
+}

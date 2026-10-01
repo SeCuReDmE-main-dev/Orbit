@@ -1,0 +1,17 @@
+{
+  "kb": "kb5CHIYGXCMJ",
+  "oldComparisonImportId": "b08594ef-d025-428e-8ee1-83662f728fa8",
+  "replacementFilename": "PROVIDER_RESEARCH_STORAGE_SCOPE_2026-09-27.md",
+  "replacementImportJobId": "ctx-ingest-9f4c1199-4c60-4e3c-9534-4c06cc7205ac",
+  "sha256": "414fb2acb6b95a0c478fb81a91f7337e48e592d16796204fa9daf619006d310a",
+  "createdAt": "2026-09-27T18:49:47.127Z",
+  "replacementImportId": "9f4c1199-4c60-4e3c-9534-4c06cc7205ac",
+  "replacementSourceId": "22e952d2-fa8f-471b-974d-64f1e0b00476",
+  "replacementVerifiedAt": "2026-09-27T18:50:20.455Z",
+  "supersededComparisonImportRemoved": true,
+  "glossaryImportJobId": "ctx-ingest-e9377078-11cf-4c4f-87b3-2c45651a01c6",
+  "glossarySourceId": "4ed1f92b-8195-4a15-b6f5-6ef601036390",
+  "instructionsBeforeBuild": 0,
+  "buildJobId": "ctx-build-a22131ab-85c8-4887-8467-b657d3d3c3dd-1790535142832",
+  "buildSubmittedAt": "2026-09-27T18:52:22.197Z"
+}

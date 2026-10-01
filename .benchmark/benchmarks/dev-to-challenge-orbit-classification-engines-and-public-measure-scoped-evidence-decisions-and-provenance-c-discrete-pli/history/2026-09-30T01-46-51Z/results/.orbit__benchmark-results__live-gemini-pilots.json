@@ -1,0 +1,42 @@
+{
+  "release": "512c77badfd449dedb2da9bc",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 7652,
+      "sha256": "70166b3c19f3386ff6220b3d9a644dd584fd22ea4bf5df525bc4adaa61bc3f05"
+    },
+    {
+      "path": "/app/",
+      "status": 200,
+      "bytes": 3090,
+      "sha256": "55f86158ed20f2543f7ecebdbda9cab9aa3fa276ccef2fffe912a4284a8d8d7b"
+    },
+    {
+      "path": "/guide/",
+      "status": 200,
+      "bytes": 16587,
+      "sha256": "b85a1ee94a4c9d15c6f5545f15bdd868666636300a4a76ab9c6bdc68e3350898"
+    },
+    {
+      "path": "/benchmark/",
+      "status": 200,
+      "bytes": 13042,
+      "sha256": "12d8844028a0c8cc8f220f434a571a453583886637175906d51aeb6cf66e09f0"
+    },
+    {
+      "path": "/studio/",
+      "status": 200,
+      "bytes": 8715,
+      "sha256": "f85151df2c881425d288e6d72a76145f3f7588d9d78e2220eba5302910160c83"
+    },
+    {
+      "path": "/benchmark/gemini-development-pilots.json",
+      "status": 200,
+      "bytes": 6332,
+      "sha256": "052c6a1771ef529b1c51c49e64b730a5aa35c724c2f037ca887c67416dd7be07"
+    }
+  ],
+  "aggregateExact": true
+}

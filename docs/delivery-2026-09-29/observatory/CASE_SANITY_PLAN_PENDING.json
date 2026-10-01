@@ -1,0 +1,86 @@
+{
+  "format": "orbit-evidence-v1",
+  "id": "case-sanity-20260929",
+  "title": "When Sanity Context changes the answer",
+  "question": "Which documented distinctions in Sanity Context require a structured Knowledge Base read rather than a keyword search alone?",
+  "objective": "Show the entry paths, references, versions and scope limits that affect the answer, then compare the result with a keyword-only baseline over the same corpus.",
+  "context": "Demonstration case. The result must not call a difference a contradiction unless passages from the same applicable scope truly disagree.",
+  "revision": 0,
+  "createdAt": "2026-09-29T19:45:00.000Z",
+  "updatedAt": "2026-09-29T19:45:00.000Z",
+  "axes": [],
+  "sources": [],
+  "claims": [],
+  "screeningCriteria": [],
+  "sourceDecisions": [],
+  "extractions": [],
+  "knowledgeReads": [],
+  "answer": "",
+  "report": "",
+  "proposals": [
+    {
+      "id": "4f2a3eb835164cdeb0ab54678c999a3b",
+      "baseRevision": 0,
+      "stage": "plan",
+      "answer": "",
+      "report": "The supplied Sanity Context entry supports a bounded comparison focused on whether structured Knowledge Base navigation exposes distinctions that keyword matching alone may miss: purpose-guided outlines, entry paths, initial_context retrieval, source references, mode-specific tools, refresh and rebuild state, issue and instruction handling, and source-type limits. The available evidence is a retrieved Context entry whose Sanity documentation URLs are discovered references; no URL-listed page should be described as read from the supplied material alone. The first research action should therefore be to verify the primary Sanity pages corresponding to the documented claims, especially the pages on Knowledge Bases, source types, creation, issue resolution, maintenance, and Context behavior. Then freeze an identical, version-recorded corpus and run two bounded procedures: structured retrieval using the Knowledge Base outline and entry-fetch path, and keyword-only retrieval using the same corpus and an explicitly recorded query budget. Compare entry-path coverage, relevant distinctions recovered, source-reference visibility, version and scope awareness, conflict handling, and unsupported or unresolved claims. Unknowns requiring verification include the current primary-page wording and version, exact MCP tool schemas and response fields, the precise keyword-search implementation, corpus size and composition, available Knowledge Base build/version state, issue state, and whether the cited originals support the Context summaries. A concrete next action is to open and read the six Sanity documentation pages listed in the Context entry, recording page title, URL, access date, version indicators, and read status before designing the baseline queries.",
+      "axes": [
+        "Entry paths and retrieval flow: verify how purpose, outline via initial_context, and selected entries work together, and compare this structured path with a keyword-only search over the same corpus.",
+        "Mode and endpoint scope: verify the documented distinction between GROQ mode and Knowledge Base mode, including mode=knowledge_base, knowledgeBases selection, and the tools each mode exposes.",
+        "References and provenance: verify how Knowledge Base entries cite original sources, and distinguish entry-level citations from evidence that has been independently checked against the originals.",
+        "Versions and freshness: verify the distinction between source refresh, issue generation, applied changes, full rebuilds, outline versions, restoration, and the serving behavior while issues remain open.",
+        "Source-type boundaries: verify how dataset, website, and file sources differ in selection, publication status, crawling, re-sync behavior, and limits.",
+        "Conflict and issue handling: verify how conflicting claims, Critical issues, instructions, suggested fixes, dismissal, reopening, and manual action affect the content agents receive.",
+        "Purpose and scope steering: verify how the required Knowledge Base purpose shapes outline tagging and entry selection, and assess whether the keyword baseline receives equivalent scope information.",
+        "Corpus and access constraints: verify organization enablement, Context Viewer permissions, Knowledge Base access, source-count and document limits, and whether the comparison corpus is identical for both retrieval methods.",
+        "Evaluation design: define recall, precision, attribution, coverage of relevant entry paths, version-awareness, and unresolved cases for a controlled structured-retrieval versus keyword-only comparison."
+      ],
+      "sources": [],
+      "claims": [],
+      "screeningCriteria": [
+        "Include only pages or documents that directly document Sanity Context, Knowledge Base retrieval, source types, creation, maintenance, issue resolution, or version behavior.",
+        "Treat the supplied Context entries as the currently available evidence; treat every URL listed inside them as a discovered link requiring separate verification, not as a page read in this plan.",
+        "For each candidate source, record whether it was discovered, opened, read in full, or only partially read; do not infer read status from a citation or URL.",
+        "Retain distinctions that affect retrieval behavior, entry selection, references, freshness, versions, scope, access, or evaluation comparability.",
+        "Exclude general prompting and systematic-review guidance from the Sanity product answer unless it is used explicitly to define the research procedure or evidence labels.",
+        "For the structured method, record the outline or initial_context path, selected entry paths, fetched entries, cited originals, build or version state, and unresolved issues.",
+        "For the keyword baseline, use the same corpus, query budget, access boundary, and stopping rule, and record which relevant distinctions are missed or retrieved without their structural context.",
+        "Do not treat a citation, provenance record, selector, attribution label, or retrieved entry as proof that the underlying claim is true; independently verify claims against the relevant original source where possible.",
+        "Report source, version, access, or corpus gaps as unknown rather than filling them with assumptions."
+      ],
+      "extractions": [],
+      "knowledgeReads": [
+        {
+          "path": "sanity/knowledge_bases",
+          "digest": "40b290d959cd77fdd52b7b2152dbc1c84202cfdc7346e4057b0e96c5d84878d8",
+          "retrievedAt": "2026-09-29T19:45:33+00:00"
+        },
+        {
+          "path": "research_methodology/question_disambiguation",
+          "digest": "2abe8b69a2adc5a47bc79e894fc9fd32a915eab62aba6af5d36ebabac17ca91b",
+          "retrievedAt": "2026-09-29T19:45:34+00:00"
+        },
+        {
+          "path": "research_methodology/systematic_review",
+          "digest": "c6b1a38851d59fd8e0ca875e1d29aa139459dc50575f8dd599f5ae0bec6b6852",
+          "retrievedAt": "2026-09-29T19:45:35+00:00"
+        },
+        {
+          "path": "provenance_and_annotation",
+          "digest": "69144d620c4a9cdf023008e09d60a437252f60c7e83a0964bb56049667d7a427",
+          "retrievedAt": "2026-09-29T19:45:37+00:00"
+        },
+        {
+          "path": "rag_evaluation/attribution_frameworks",
+          "digest": "edd33e1a37b47cb313e260d3321ac03f95281398e542e3f7e78835b47a009ba4",
+          "retrievedAt": "2026-09-29T19:45:38+00:00"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-09-29T19:46:01.251Z"
+    }
+  ],
+  "reviews": [],
+  "history": [],
+  "example": false
+}

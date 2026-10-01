@@ -1,0 +1,21 @@
+---
+import OrbitMark from '../../components/OrbitMark.astro'
+import '../../styles/cosmic.css'
+import '../../styles/workshop.css'
+import '../../styles/atom-games.css'
+---
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><meta name="theme-color" content="#07091b" /><title>Orbit — atelier de recherche</title><meta name="description" content="Un dossier de recherche, des preuves consultables et un rapport à vérifier. Avec votre agent et Sanity Context." /></head>
+<body class="workshop-page">
+  <a href="#workshop-surface" class="skip-link">Aller au dossier</a>
+  <div class="workshop-shell">
+    <header class="workshop-header"><a class="workshop-brand" href="/" aria-label="Accueil Orbit"><OrbitMark small /></a><button data-action="dossiers" class="breadcrumb-button">Mes dossiers</button><span class="header-divider">/</span><span data-dossier-title class="dossier-title">Chargement…</span><nav aria-label="Commandes générales"><button data-action="search" title="Rechercher dans ce dossier (Ctrl+K)">Rechercher <kbd>⌘ K</kbd></button><button data-action="help">Aide</button><a href="/guide/#workspace" data-fr="Guide" data-en="Guide" data-es="Guía">Guide</a><button data-action="settings">Réglages</button></nav><div data-workspace-preferences></div></header>
+    <nav class="workshop-tabs" aria-label="Étapes de recherche">{[['question','Question'],['plan','Plan'],['evidence','Preuves'],['review','Vérification'],['report','Rapport']].map(([id,label],i)=><a href={`?view=${id}`} data-view={id}><span class="step-number">0{i+1}</span>{label}<span data-count={id}></span></a>)}<button class="agent-access" data-action="sharing"><i></i><span data-sharing-label>Partager avec mon agent</span></button></nav>
+    <main id="workshop-surface" data-surface tabindex="-1"><p class="loading-note">Ouverture de votre espace…</p></main>
+    <footer class="workshop-footer"><div><span class="state-dot"></span><span data-storage-state>Session en mémoire</span><button data-action="storage" class="footer-link">Conserver sur cet appareil</button></div><div data-stage-action></div></footer>
+  </div>
+  <div role="status" aria-live="polite" class="workshop-toast" data-notice hidden></div>
+  <dialog class="workshop-dialog" data-dialog><button class="close-dialog" data-close aria-label="Fermer">×</button><div data-dialog-content></div></dialog>
+  <input type="file" data-import accept="application/json,.json" hidden />
+  <script>import { mountWorkshop } from '../../lib/workshop'; import {mountOrbitPreferences} from '../../lib/landing-preferences'; import {mountUiLanguage} from '../../lib/orbit-ui-language'; const preferences=document.querySelector<HTMLElement>('[data-workspace-preferences]');if(preferences){const stop=mountOrbitPreferences(preferences,document.querySelector<HTMLElement>('.workshop-shell')??preferences);document.addEventListener('astro:before-swap',stop,{once:true});} const stopLanguage=mountUiLanguage(document.querySelector<HTMLElement>('.workshop-shell')!);document.addEventListener('astro:before-swap',stopLanguage,{once:true});void mountWorkshop()</script>
+</body></html>

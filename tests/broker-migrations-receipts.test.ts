@@ -9,8 +9,9 @@ describe('broker migrations and receipts', () => {
   it('backs up before migration, persists typed receipts, and rolls back the latest schema change', () => {
     const directory = mkdtempSync(join(tmpdir(), 'orbit-migration-'))
     const databasePath = join(directory, 'broker.sqlite')
+    let store: SqliteMissionStore | undefined
     try {
-      const store = new SqliteMissionStore(databasePath)
+      store = new SqliteMissionStore(databasePath)
       const mission = store.create({ id: 'mission_receipts', title: 'Receipt migration' })
       const source = store.receipts.sources.create({
         id: 'source_imerg', title: 'IMERG', uri: 'https://example.test/imerg?utm_source=fixture', normalizedUri: 'https://example.test/imerg', observedAt: '2026-09-21T00:00:00.000Z',
@@ -23,6 +24,9 @@ describe('broker migrations and receipts', () => {
       expect(store.receipts.decisions.get(decision.id)).toEqual(decision)
 
       expect(store.listResearchPoints()).toEqual([point])
+      expect(store.rollbackLatestMigration()).toMatchObject({ version: 6 })
+      expect(store.rollbackLatestMigration()).toMatchObject({ version: 5, name: 'mission-sources' })
+      expect(store.rollbackLatestMigration()).toMatchObject({ version: 4, name: 'checkpoint-snapshots' })
       const rollback = store.rollbackLatestMigration()
       expect(rollback).toMatchObject({ version: 3, name: 'research-points' })
       expect(rollback?.backupPath).toBeDefined()
@@ -33,27 +37,35 @@ describe('broker migrations and receipts', () => {
       backup.close()
       expect(store.rollbackLatestMigration()).toMatchObject({ version: 2, name: 'research-receipts' })
       store.close()
+      store = undefined
       const migrated = new DatabaseSync(databasePath)
       expect(migrated.prepare("SELECT name FROM sqlite_master WHERE type = 'table' AND name = 'source_receipts'").get()).toBeUndefined()
       migrated.close()
     } finally {
-      rmSync(directory, { recursive: true, force: true })
+      store?.close()
+      rmSync(directory, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 })
     }
   })
 
   it('adopts the legacy mission schema and migrates only the receipt addition', () => {
     const directory = mkdtempSync(join(tmpdir(), 'orbit-legacy-'))
     const databasePath = join(directory, 'legacy.sqlite')
+    let store: SqliteMissionStore | undefined
     try {
       const legacy = new DatabaseSync(databasePath)
       legacy.exec('CREATE TABLE missions (id TEXT PRIMARY KEY, title TEXT NOT NULL, status TEXT NOT NULL, budget_json TEXT NOT NULL, created_at TEXT NOT NULL, updated_at TEXT NOT NULL) STRICT; CREATE TABLE checkpoints (mission_id TEXT NOT NULL, sequence INTEGER NOT NULL, label TEXT NOT NULL, detail TEXT, created_at TEXT NOT NULL, PRIMARY KEY (mission_id, sequence)) STRICT;')
       legacy.close()
-      const store = new SqliteMissionStore(databasePath)
+      store = new SqliteMissionStore(databasePath)
+      expect(store.migrations.rollbackLatest()).toMatchObject({ version: 6 })
+      expect(store.migrations.rollbackLatest()).toMatchObject({ version: 5 })
+      expect(store.migrations.rollbackLatest()).toMatchObject({ version: 4 })
       expect(store.migrations.rollbackLatest()).toMatchObject({ version: 3 })
       expect(store.migrations.rollbackLatest()).toMatchObject({ version: 2 })
       store.close()
+      store = undefined
     } finally {
-      rmSync(directory, { recursive: true, force: true })
+      store?.close()
+      rmSync(directory, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 })
     }
   })
 })

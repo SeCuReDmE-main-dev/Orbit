@@ -1,0 +1,8 @@
+---
+import LandingExperience from '../../components/LandingExperience.astro'
+export function getStaticPaths() {
+  return ['question', 'sources', 'synthia'].map((stage, i) => ({params:{stage},props:{chapter:i+1}}))
+}
+const { chapter } = Astro.props
+---
+<LandingExperience chapter={chapter} />

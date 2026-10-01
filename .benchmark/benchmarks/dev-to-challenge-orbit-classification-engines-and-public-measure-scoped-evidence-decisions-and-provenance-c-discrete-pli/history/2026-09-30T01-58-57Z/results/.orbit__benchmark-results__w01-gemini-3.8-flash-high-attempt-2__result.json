@@ -1,0 +1,57 @@
+{
+  "mission": "W01",
+  "attempt": 2,
+  "host": "Antigravity CLI 1.2.13 -> MCP adapter -> native public-page WebMCP",
+  "model": "gemini-3.8-flash-high",
+  "startedAt": "2026-09-30T01:05:50.327995+00:00",
+  "observedCompletedAt": "2026-09-30T01:06:21.090811+00:00",
+  "exitCode": 0,
+  "quotaBefore": [
+    {
+      "id": "gemini-weekly",
+      "window": "weekly",
+      "remaining_fraction": 0.9976214170455933,
+      "reset_time": "2026-10-07T00:24:00Z"
+    },
+    {
+      "id": "gemini-5h",
+      "window": "5h",
+      "remaining_fraction": 0.9857283234596252,
+      "reset_time": "2026-09-30T05:24:00Z"
+    }
+  ],
+  "permissionPolicy": "Unchanged: no auto-approval bypass or global allow rule",
+  "transportTest": "Already passed separately; this record must contain real agent calls to count as an autonomous trajectory.",
+  "status": "SUCCESS",
+  "response": "",
+  "usage": {
+    "input_tokens": 2602,
+    "output_tokens": 1453,
+    "thinking_tokens": 1401,
+    "cache_read_tokens": 15421,
+    "total_tokens": 4055
+  },
+  "duration_seconds": 19.7582933,
+  "observedNativeCalls": [],
+  "autonomousNativeExecutionObserved": false,
+  "transportMethods": [
+    "server/discover",
+    "initialize",
+    "tools/list"
+  ],
+  "missionStatus": "NOT_EXECUTED",
+  "quotaAfter": [
+    {
+      "id": "gemini-weekly",
+      "window": "weekly",
+      "remaining_fraction": 0.9975500702857971,
+      "reset_time": "2026-10-07T00:24:00Z"
+    },
+    {
+      "id": "gemini-5h",
+      "window": "5h",
+      "remaining_fraction": 0.9853004813194275,
+      "reset_time": "2026-09-30T05:24:00Z"
+    }
+  ]
+}

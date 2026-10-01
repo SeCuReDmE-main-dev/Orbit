@@ -1,0 +1,61 @@
+{
+  "format": "orbit-agent-mission-v1",
+  "mission": "W01",
+  "experiment": "w01-json-loop-flash-dev3",
+  "model": "gemini-3.8-flash-high",
+  "host": "Antigravity official CLI 1.2.13, external JSON planner -> native public WebMCP",
+  "nativeAntigravityMcpIntegration": false,
+  "agentDefinitionSha256": "5568ec0bd38f2dbd6997b11b99a0c62c228db42527ca25eed5190f48113977ab",
+  "startedAt": "2026-09-30T02:35:12.789668+00:00",
+  "maxCalls": 20,
+  "maxMinutes": 8,
+  "permissions": "Page consent unchanged; no persistent approval policy or human decision added.",
+  "turns": [
+    {
+      "durationSeconds": 105.1426215,
+      "usage": {
+        "input_tokens": 71975,
+        "output_tokens": 21082,
+        "thinking_tokens": 20844,
+        "cache_read_tokens": 31759,
+        "total_tokens": 93057
+      },
+      "numTurns": 4,
+      "outputSha256": "ed1b487ba5b975f6ebf929731f1935a1a42cc23b4163cabf42cc4a0150e621a0"
+    }
+  ],
+  "calls": [],
+  "missionStatus": "INCOMPLETE",
+  "final": null,
+  "quotaBefore": [
+    {
+      "id": "gemini-weekly",
+      "window": "weekly",
+      "remaining_fraction": 0.9943729043006897,
+      "reset_time": "2026-10-07T00:24:00Z"
+    },
+    {
+      "id": "gemini-5h",
+      "window": "5h",
+      "remaining_fraction": 0.9662374258041382,
+      "reset_time": "2026-09-30T05:24:00Z"
+    }
+  ],
+  "error": "JSONDecodeError: Extra data: line 2 column 1 (char 68)",
+  "quotaAfter": [
+    {
+      "id": "gemini-weekly",
+      "window": "weekly",
+      "remaining_fraction": 0.9932444095611572,
+      "reset_time": "2026-10-07T00:24:00Z"
+    },
+    {
+      "id": "gemini-5h",
+      "window": "5h",
+      "remaining_fraction": 0.9594665765762329,
+      "reset_time": "2026-09-30T05:24:00Z"
+    }
+  ],
+  "observedCompletedAt": "2026-09-30T02:37:20.518888+00:00",
+  "durationSeconds": 127.73399999993853
+}

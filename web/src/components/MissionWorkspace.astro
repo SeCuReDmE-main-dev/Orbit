@@ -1,0 +1,27 @@
+<section class="mission-workspace panel" aria-labelledby="mission-workspace-title">
+  <div class="workspace-heading"><div><p class="eyebrow">Mission brief</p><h3 id="mission-workspace-title">Start with one answerable question.</h3></div><p data-mission-status role="status" aria-live="polite" class="status-line">Loading local workspace…</p></div>
+  <form data-mission-form class="mission-question-form"><label for="mission-question">Mission question</label><textarea id="mission-question" data-mission-question maxlength="500" placeholder="What documented source supports this orbital observation?"></textarea><button class="button button--violet" type="submit">Set mission plan</button></form>
+  <form data-association-form class="association-form"><div><label for="association-code">Associate this browser</label><input id="association-code" data-association-code autocomplete="off" required placeholder="One-time local code" /></div><button class="button button--quiet" type="submit">Associate with consent</button><span data-association-status class="status-line">No browser association.</span></form>
+  <div class="mission-grid"><section class="mission-plan" aria-labelledby="plan-title"><div class="panel__header"><div><p class="eyebrow">Research path</p><h4 id="plan-title">Manual planning scaffold</h4></div><div class="button-row"><button data-mission-pause class="button button--quiet" type="button" aria-pressed="false">Pause mission</button><button data-mission-checkpoint class="button button--quiet" type="button">Save checkpoint</button></div></div><details class="plan-details"><summary>Open the manual template (not an AI research plan)</summary><ol data-mission-plan></ol></details></section>
+    <section class="source-ledger" aria-labelledby="evidence-title"><div class="panel__header"><div><p class="eyebrow">Working ledger</p><h4 id="evidence-title">Sources observed</h4></div></div><p class="supporting-copy">A recorded link is a lead, not a verified claim. Save only the sources you have actually opened or need to examine.</p><form data-source-form class="source-form"><input data-source-title aria-label="Source title" maxlength="200" placeholder="Source title" required /><input data-source-uri aria-label="Source URL" maxlength="1000" placeholder="https://source.example" type="url" required /><button class="button button--cyan" type="submit">Record source</button></form><ul data-mission-sources class="source-list"></ul></section></div>
+  <details class="handoff-details"><summary>CCP handoff preview</summary><div><p>Includes the current local question, plan, receipts and checkpoints. No provider is represented as used unless the record says so.</p><button data-mission-handoff class="button button--amber" type="button">Download preview</button></div><pre data-mission-handoff-preview></pre></details>
+</section>
+<script>
+  import { mountMissionWorkspace } from '../lib/mission-workspace'
+  const form = document.querySelector<HTMLFormElement>('[data-mission-form]')
+  const question = document.querySelector<HTMLTextAreaElement>('[data-mission-question]')
+  const plan = document.querySelector<HTMLElement>('[data-mission-plan]')
+  const status = document.querySelector<HTMLElement>('[data-mission-status]')
+  const pause = document.querySelector<HTMLButtonElement>('[data-mission-pause]')
+  const checkpoint = document.querySelector<HTMLButtonElement>('[data-mission-checkpoint]')
+  const sourceForm = document.querySelector<HTMLFormElement>('[data-source-form]')
+  const sourceTitle = document.querySelector<HTMLInputElement>('[data-source-title]')
+  const sourceUri = document.querySelector<HTMLInputElement>('[data-source-uri]')
+  const sources = document.querySelector<HTMLElement>('[data-mission-sources]')
+  const handoff = document.querySelector<HTMLButtonElement>('[data-mission-handoff]')
+  const handoffPreview = document.querySelector<HTMLPreElement>('[data-mission-handoff-preview]')
+  const associationForm = document.querySelector<HTMLFormElement>('[data-association-form]')
+  const associationCode = document.querySelector<HTMLInputElement>('[data-association-code]')
+  const associationStatus = document.querySelector<HTMLElement>('[data-association-status]')
+  if (form && question && plan && status && pause && checkpoint && sourceForm && sourceTitle && sourceUri && sources && handoff && handoffPreview && associationForm && associationCode && associationStatus) mountMissionWorkspace({ form, question, plan, status, pause, checkpoint, sourceForm, sourceTitle, sourceUri, sources, handoff, handoffPreview, associationForm, associationCode, associationStatus })
+</script>

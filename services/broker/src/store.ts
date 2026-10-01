@@ -43,10 +43,12 @@ export class SqliteMissionStore implements MissionStore {
   constructor(filename = '.orbit/broker.sqlite') {
     mkdirSync(dirname(filename), { recursive: true })
     this.db = new DatabaseSync(filename)
-    this.db.exec('PRAGMA journal_mode = WAL; PRAGMA foreign_keys = ON;')
-    this.migrations = new SqliteMigrationRunner(this.db, filename, BROKER_MIGRATIONS)
-    this.migrations.applyAll()
-    this.receipts = createBrokerReceiptRepositories(this.db)
+    try {
+      this.db.exec('PRAGMA journal_mode = WAL; PRAGMA foreign_keys = ON;')
+      this.migrations = new SqliteMigrationRunner(this.db, filename, BROKER_MIGRATIONS)
+      this.migrations.applyAll()
+      this.receipts = createBrokerReceiptRepositories(this.db)
+    } catch (error) { this.db.close(); throw error }
   }
 
   rollbackLatestMigration(): MigrationResult | undefined { return this.migrations.rollbackLatest() }
@@ -78,6 +80,15 @@ export class SqliteMissionStore implements MissionStore {
     return (this.db.prepare('SELECT * FROM missions ORDER BY created_at DESC').all() as MissionRow[]).map(toMission)
   }
 
+  setStatus(id: MissionId, status: Mission['status']): Mission {
+    const current = this.get(id)
+    if (!current) throw new Error(`Unknown mission: ${id}`)
+    if (!['draft', 'active', 'blocked', 'completed'].includes(status)) throw new Error('Invalid mission status.')
+    const updatedAt = new Date().toISOString()
+    this.db.prepare('UPDATE missions SET status = ?, updated_at = ? WHERE id = ?').run(status, updatedAt, id)
+    return Object.freeze({ ...current, status, updatedAt })
+  }
+
   checkpoint(input: Omit<MissionCheckpoint, 'sequence' | 'createdAt'>): MissionCheckpoint {
     if (!this.get(input.missionId)) throw new Error(`Unknown mission: ${input.missionId}`)
     if (!input.label.trim()) throw new Error('A checkpoint needs a label.')
@@ -96,6 +107,18 @@ export class SqliteMissionStore implements MissionStore {
   checkpoints(missionId: string): MissionCheckpoint[] {
     return (this.db.prepare('SELECT * FROM checkpoints WHERE mission_id = ? ORDER BY sequence').all(missionId) as CheckpointRow[])
       .map((row) => Object.freeze({ missionId: row.mission_id as MissionId, sequence: row.sequence, label: row.label, detail: row.detail ?? undefined, createdAt: row.created_at }))
+  }
+
+  saveCheckpointSnapshot(missionId: MissionId, sequence: number, payload: Record<string, unknown>): void {
+    if (!this.get(missionId)) throw new Error(`Unknown mission: ${missionId}`)
+    const serialized = JSON.stringify(payload)
+    if (Buffer.byteLength(serialized, 'utf8') > 65_536) throw new Error('Checkpoint snapshot exceeds 64 KiB.')
+    this.db.prepare('INSERT INTO checkpoint_snapshots VALUES (?, ?, ?)').run(missionId, sequence, serialized)
+  }
+
+  latestCheckpointSnapshot(missionId: MissionId): Record<string, unknown> | undefined {
+    const row = this.db.prepare('SELECT payload_json FROM checkpoint_snapshots WHERE mission_id = ? ORDER BY sequence DESC LIMIT 1').get(missionId) as { payload_json: string } | undefined
+    return row ? JSON.parse(row.payload_json) as Record<string, unknown> : undefined
   }
 
   upsertResearchPoint(input: Omit<ResearchPointRecord, 'updatedAt'>): ResearchPointRecord {
@@ -119,6 +142,9 @@ export class SqliteMissionStore implements MissionStore {
     return (this.db.prepare('SELECT COUNT(*) AS count FROM research_points').get() as { count: number }).count
   }
 
+  listMissionResearchPoints(missionId: MissionId, offset: number, limit: number): readonly ResearchPointRecord[] { requirePage(offset, limit); return (this.db.prepare('SELECT * FROM research_points WHERE mission_id = ? ORDER BY id LIMIT ? OFFSET ?').all(missionId, limit, offset) as ResearchPointRow[]).map(toResearchPoint) }
+  countMissionResearchPoints(missionId: MissionId): number { return (this.db.prepare('SELECT COUNT(*) AS count FROM research_points WHERE mission_id = ?').get(missionId) as { count: number }).count }
+
   searchSources(query: string, offset = 0, limit = 25): readonly SourceReceipt[] {
     requirePage(offset, limit)
     const pattern = `%${query.replace(/[\\%_]/g, (value) => `\\${value}`)}%`
@@ -131,6 +157,18 @@ export class SqliteMissionStore implements MissionStore {
     const pattern = `%${query.replace(/[\\%_]/g, (value) => `\\${value}`)}%`
     return (this.db.prepare(`SELECT COUNT(*) AS count FROM source_receipts WHERE title LIKE ? ESCAPE '\\' OR uri LIKE ? ESCAPE '\\'`).get(pattern, pattern) as { count: number }).count
   }
+
+  linkSource(missionId: MissionId, sourceId: `source_${string}`): void { this.db.prepare('INSERT OR IGNORE INTO mission_sources VALUES (?, ?)').run(missionId, sourceId) }
+  searchMissionSources(missionId: MissionId, query: string, offset: number, limit: number): readonly SourceReceipt[] {
+    requirePage(offset, limit); const pattern = `%${query.replace(/[\\%_]/g, (value) => `\\${value}`)}%`
+    const rows = this.db.prepare(`SELECT source_id FROM mission_sources JOIN source_receipts ON source_id = id WHERE mission_id = ? AND (title LIKE ? ESCAPE '\\' OR uri LIKE ? ESCAPE '\\') ORDER BY observed_at, source_id LIMIT ? OFFSET ?`).all(missionId, pattern, pattern, limit, offset) as Array<{ source_id: string }>
+    return rows.map(({ source_id }) => this.receipts.sources.get(source_id as `source_${string}`)).filter((source): source is SourceReceipt => source !== undefined)
+  }
+  countMissionSources(missionId: MissionId, query: string): number { const pattern = `%${query.replace(/[\\%_]/g, (value) => `\\${value}`)}%`; return (this.db.prepare(`SELECT COUNT(*) AS count FROM mission_sources JOIN source_receipts ON source_id = id WHERE mission_id = ? AND (title LIKE ? ESCAPE '\\' OR uri LIKE ? ESCAPE '\\')`).get(missionId, pattern, pattern) as { count: number }).count }
+  missionOwnsSource(missionId: MissionId, sourceId: `source_${string}`): boolean { return !!this.db.prepare('SELECT 1 FROM mission_sources WHERE mission_id = ? AND source_id = ?').get(missionId, sourceId) }
+  reserveSearchAttempt(missionId: MissionId): number { const current = (this.db.prepare('SELECT attempts FROM mission_search_attempts WHERE mission_id = ?').get(missionId) as { attempts: number } | undefined)?.attempts ?? 0; if (current >= 18) throw new Error('Mission search limit of 18 attempts reached.'); this.db.prepare('INSERT INTO mission_search_attempts VALUES (?, ?) ON CONFLICT(mission_id) DO UPDATE SET attempts = excluded.attempts').run(missionId, current + 1); return current + 1 }
+  getSearchCache(missionId: MissionId, key: string): unknown[] | undefined { const row = this.db.prepare('SELECT result_json FROM mission_search_cache WHERE mission_id = ? AND cache_key = ?').get(missionId, key) as { result_json: string } | undefined; return row ? JSON.parse(row.result_json) as unknown[] : undefined }
+  saveSearchCache(missionId: MissionId, key: string, results: unknown[]): void { this.db.prepare('INSERT INTO mission_search_cache VALUES (?, ?, ?) ON CONFLICT(mission_id, cache_key) DO UPDATE SET result_json=excluded.result_json').run(missionId, key, JSON.stringify(results)) }
 
   close(): void { this.db.close() }
 }

@@ -1,0 +1,109 @@
+{
+  "format": "orbit-keyword-baseline-v1",
+  "status": "candidate",
+  "corpusMode": "frozen-context-plan",
+  "planProposalId": "8e711372332b4eba8bf266df20cbb42d",
+  "question": "Under which documented conditions can background deep research coexist with zero-data-retention requirements across named OpenAI and Google product surfaces?",
+  "objective": "Separate provider, product, execution mode, data-retention terms, effective date and account-specific exceptions before any conclusion.",
+  "keywords": [
+    "conditions",
+    "background",
+    "deep",
+    "research",
+    "coexist",
+    "zero-data-retention",
+    "requirements",
+    "named",
+    "openai",
+    "google",
+    "product",
+    "surfaces"
+  ],
+  "entriesRead": 5,
+  "selectedEntries": [
+    {
+      "path": "deep_research/models_and_apis",
+      "digest": "653999417c107742bb41df6e25923e72887fd1cc39681b8cb2b022c038d570bc",
+      "score": 92,
+      "retrievedAt": "2026-09-29T19:51:03+00:00"
+    },
+    {
+      "path": "data_retention_and_privacy",
+      "digest": "2413d2c3392917957d3667b7d90df1fd12b60dfdf38a531d702ca2267d5a45b6",
+      "score": 20,
+      "retrievedAt": "2026-09-29T19:51:02+00:00"
+    },
+    {
+      "path": "search_apis/google_grounding",
+      "digest": "8ff2c71e6effedaeaa7ce7629a4ef4eac5963e918c4898a3efe0b5e56cbcb6ac",
+      "score": 15,
+      "retrievedAt": "2026-09-29T19:51:06+00:00"
+    },
+    {
+      "path": "multi_agent_systems/operations",
+      "digest": "e8e08e6c123faa47a9fe31407b4ff3508fa336eb54a42b6ded94dae4bf5cc380",
+      "score": 7,
+      "retrievedAt": "2026-09-29T19:51:05+00:00"
+    },
+    {
+      "path": "research_methodology/question_disambiguation",
+      "digest": "2abe8b69a2adc5a47bc79e894fc9fd32a915eab62aba6af5d36ebabac17ca91b",
+      "score": 7,
+      "retrievedAt": "2026-09-29T19:51:07+00:00"
+    }
+  ],
+  "candidateAnswer": "Unreviewed keyword-baseline candidate: Background deep research appears compatible with zero-data-retention requirements only under narrowly separated conditions. For OpenAI, background execution is reported to retain response data for roughly 10 minutes for polling, so it appears incompatible with strict ZDR; a ZDR-compatible path is reported to require background=false. A reported exception applies to Modified Abuse Monitoring organizations, but the account-specific terms are not established here. For Google Gemini Deep Research through the Interactions API, background=true is reported as required and store=true as required, so this path appears incompatible with a strict zero-data-footprint requirement. Separately, Google Search grounding is reported to retain data for a period that cannot be disabled: 30 days on one Google API surface and up to 3 days on one Google Cloud surface. Google Maps grounding is reported to retain data for 30 days. Setting store=false is reported as necessary for ordinary Interactions API usage, but that condition conflicts with the reported Gemini Deep Research requirement for store=true. A possible Google Cloud exception for abuse-monitoring logging and account-team handling for some advanced features is mentioned, but cannot be treated as confirmed eligibility. Therefore, the baseline candidate is: OpenAI background research requires background=false for strict ZDR unless a qualifying MAM policy applies; Google Gemini Deep Research does not appear compatible with strict zero retention because its background mode requires stored interactions, and grounding tools may impose additional non-optional retention.",
+  "limitations": [
+    "This is a keyword-baseline candidate from flat text matches only, not a reviewed conclusion.",
+    "The original linked web pages and documents were not read; discovered or mentioned links therefore do not establish verified evidence.",
+    "The flat matches do not establish the complete product scope, exact API or account tier, model/version applicability, regional applicability, or whether the reported conditions remain current.",
+    "The flat matches do not establish effective dates. References to particular 2026 model or policy versions are not sufficient to determine when each retention rule became effective.",
+    "The flat matches do not establish account-specific exceptions, contractual terms, Modified Abuse Monitoring eligibility, Google Cloud exceptions, or the meaning of zero-data-retention versus zero-data-footprint in each provider policy.",
+    "The reported OpenAI and Google conditions may apply to different products, APIs, tools, or execution modes; equivalence across those surfaces has not been demonstrated.",
+    "No conclusion should be used for deployment, compliance, or data-handling approval until the named primary documentation and the relevant account terms are read and compared."
+  ],
+  "trace": {
+    "calls": [
+      {
+        "tool": "initial_context",
+        "state": "READY"
+      },
+      {
+        "tool": "knowledge_base_read",
+        "paths": [
+          "data_retention_and_privacy"
+        ],
+        "state": "READY"
+      },
+      {
+        "tool": "knowledge_base_read",
+        "paths": [
+          "deep_research/models_and_apis"
+        ],
+        "state": "READY"
+      },
+      {
+        "tool": "knowledge_base_read",
+        "paths": [
+          "multi_agent_systems/operations"
+        ],
+        "state": "READY"
+      },
+      {
+        "tool": "knowledge_base_read",
+        "paths": [
+          "search_apis/google_grounding"
+        ],
+        "state": "READY"
+      },
+      {
+        "tool": "knowledge_base_read",
+        "paths": [
+          "research_methodology/question_disambiguation"
+        ],
+        "state": "READY"
+      }
+    ],
+    "model": "gpt-5.6-luna"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "at": "2026-09-27T19:00:51.259Z",
+  "reason": "One official saved-progress resume after thin_leaves convergence failure; no corpus or instructions change",
+  "priorJobId": "ctx-build-a22131ab-85c8-4887-8467-b657d3d3c3dd-1790535142832",
+  "response": {
+    "jobId": "ctx-build-a22131ab-85c8-4887-8467-b657d3d3c3dd-1790535651881"
+  }
+}

@@ -1,0 +1,27 @@
+title: "Orbit — jouer, comprendre, transmettre"
+subtitle: "Les quinze interactions de l’atome, du geste au code"
+language: fr-CA
+author: "Jean-Sébastien Beaulieu — support pédagogique préparé avec Codex"
+edition: "2026-09-30 / 2.1.6 — exemplaire de travail"
+audience: "Développeur apprenant et enseignant accompagnant un étudiant"
+readiness_goal: review-ready
+outputs: [markdown, docx, latex, pdf]
+deferred: [epub, audio, publication, editorial]
+sources:
+  - {path: "web/src/lib/atom-playground.ts", role: "code des quinze jeux et des gestes naturels", status: inspected}
+  - {path: "web/src/lib/atom-scene.ts", role: "scène, déplacement, rendu et nettoyage", status: inspected}
+  - {path: "live-validation.json", role: "validation Kaggle avec navigateur E2B", status: observed}
+  - {path: "figures/", role: "captures du domaine public", status: observed}
+  - {path: "conversation utilisateur", role: "courts indices de style", status: authorized}
+skipped_sources:
+  - {path: "trois livres du profil par défaut", reason: "chemins absents lors du précontrôle"}
+design:
+  profile: technical-manual
+  page: Letter
+  margins_inches: 0.85
+  body: "Segoe UI 11 pt"
+  headings: "Segoe UI Semibold"
+  mono: "Consolas 8.5 pt"
+  palette: {cyan: "137DA0", violet: "6D4AA6", amber: "AC6A15", navy: "080B20"}
+  print: "texte sombre sur fond clair ; couverture et figures Orbit"
+authority: "Les scripts oraux sont des propositions à adapter ; signature et décisions restent humaines."

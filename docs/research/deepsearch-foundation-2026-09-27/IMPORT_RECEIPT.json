@@ -1,0 +1,156 @@
+{
+  "at": "2026-09-27T15:58:13.543Z",
+  "kb": "kb5CHIYGXCMJ",
+  "items": [
+    {
+      "id": "DS01",
+      "url": "https://developers.openai.com/api/docs/guides/deep-research",
+      "status": "submitted",
+      "jobId": "ctx-ingest-3d3276da-b7c5-4805-a471-9ba4b08f3a8f"
+    },
+    {
+      "id": "DS02",
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "status": "submitted",
+      "jobId": "ctx-ingest-3967cf12-969b-45ff-8182-f177b3af399d"
+    },
+    {
+      "id": "DS03",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "status": "submitted",
+      "jobId": "ctx-ingest-99f0d31f-17ea-4730-83e7-87754dfd4c67"
+    },
+    {
+      "id": "DS04",
+      "url": "https://arxiv.org/abs/2402.14207",
+      "status": "submitted",
+      "jobId": "ctx-ingest-52be4464-be84-4139-a46d-365472cfb11d"
+    },
+    {
+      "id": "DS05",
+      "url": "https://ai.google.dev/gemini-api/docs/deep-research",
+      "status": "submitted",
+      "jobId": "ctx-ingest-3a3ef054-7eef-418d-82bd-668cf0731eed"
+    },
+    {
+      "id": "DS06",
+      "url": "https://exa.ai/docs/reference/search",
+      "status": "submitted",
+      "jobId": "ctx-ingest-bfb42942-3f0b-4354-a394-0900e07af230"
+    },
+    {
+      "id": "DS07",
+      "url": "https://exa.ai/docs/reference/contents",
+      "status": "submitted",
+      "jobId": "ctx-ingest-8513cd4b-d1e6-4cbe-a8c0-ddfa2982a56b"
+    },
+    {
+      "id": "DS08",
+      "url": "https://exa.ai/docs/reference/search-api-guide-for-coding-agents",
+      "status": "submitted",
+      "jobId": "ctx-ingest-e277fb15-2ee3-4542-b1af-6b045c3b5ceb"
+    },
+    {
+      "id": "DS09",
+      "url": "https://ai.google.dev/gemini-api/docs/interactions/google-search",
+      "status": "submitted",
+      "jobId": "ctx-ingest-02bdbef4-8c65-4459-89be-59fd807f071e"
+    },
+    {
+      "id": "DS10",
+      "url": "https://docs.firecrawl.dev/features/map",
+      "status": "submitted",
+      "jobId": "ctx-ingest-9ec973e4-eba5-4bb6-8d94-2eae2b32d857"
+    },
+    {
+      "id": "DS11",
+      "url": "https://docs.firecrawl.dev/features/scrape",
+      "status": "submitted",
+      "jobId": "ctx-ingest-b2d3b8ce-283a-4e9d-8788-b741f06ffb52"
+    },
+    {
+      "id": "DS12",
+      "url": "https://docs.firecrawl.dev/features/crawl",
+      "status": "submitted",
+      "jobId": "ctx-ingest-fcc0b51e-1206-4c44-b931-7545efc31d54"
+    },
+    {
+      "id": "DS13",
+      "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+      "status": "submitted",
+      "jobId": "ctx-ingest-65786aa1-24ab-472f-bf11-5a2a9a3d69b5"
+    },
+    {
+      "id": "DS14",
+      "url": "https://developers.openalex.org/api-reference/works",
+      "status": "submitted",
+      "jobId": "ctx-ingest-e3f03c81-93f7-4b18-a82f-1d2c0d38c721"
+    },
+    {
+      "id": "DS15",
+      "url": "https://www.semanticscholar.org/product/api",
+      "status": "submitted",
+      "jobId": "ctx-ingest-f7619451-5274-4c22-a45f-92afe70fc79a"
+    },
+    {
+      "id": "DS16",
+      "url": "https://www.prisma-statement.org/prisma-2020-flow-diagram",
+      "status": "submitted",
+      "jobId": "ctx-ingest-7e4252f4-27c1-424e-b0b7-3a95ba11f88f"
+    },
+    {
+      "id": "DS17",
+      "url": "https://www.w3.org/TR/prov-dm/",
+      "status": "submitted",
+      "jobId": "ctx-ingest-7c8f7839-f6d4-4a35-b117-cf4c04ceb383"
+    },
+    {
+      "id": "DS18",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+      "status": "failed",
+      "error": "Conflict - This knowledge base has reached its limit of 25 website sources. Delete one before adding another. (traceId: 76d85db2e113afc685c0b0eae963e4c2)"
+    },
+    {
+      "id": "DS19",
+      "url": "https://www.rfc-editor.org/rfc/rfc9309.html",
+      "status": "failed",
+      "error": "Conflict - This knowledge base has reached its limit of 25 website sources. Delete one before adding another. (traceId: 9fd39751923332e37d767b689cd7a488)"
+    },
+    {
+      "id": "DS20",
+      "url": "https://www.sanity.io/docs/ai/sanity-context-resolve-issues",
+      "status": "failed",
+      "error": "Conflict - This knowledge base has reached its limit of 25 website sources. Delete one before adding another. (traceId: f1668fd400f05b1785c0b0eae963e645)"
+    },
+    {
+      "id": "DS21",
+      "url": "https://www.sanity.io/docs/ai/sanity-context-maintain-knowledge-base",
+      "status": "failed",
+      "error": "Conflict - This knowledge base has reached its limit of 25 website sources. Delete one before adding another. (traceId: cd3cd67b2c2bc4207d767b689cd7a055)"
+    },
+    {
+      "id": "DS22",
+      "url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_precision/",
+      "status": "failed",
+      "error": "Conflict - This knowledge base has reached its limit of 25 website sources. Delete one before adding another. (traceId: 1ffe9c594a26a9a585c0b0eae963e4d9)"
+    },
+    {
+      "id": "DS23",
+      "url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_recall/",
+      "status": "failed",
+      "error": "Conflict - This knowledge base has reached its limit of 25 website sources. Delete one before adding another. (traceId: ef410e04e8a447377d767b689cd7acf9)"
+    },
+    {
+      "id": "DS24",
+      "url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/",
+      "status": "failed",
+      "error": "Conflict - This knowledge base has reached its limit of 25 website sources. Delete one before adding another. (traceId: 97c868f7d089fecc85c0b0eae963ef50)"
+    },
+    {
+      "id": "DS25",
+      "url": "https://aclanthology.org/2023.emnlp-main.398/",
+      "status": "failed",
+      "error": "Conflict - This knowledge base has reached its limit of 25 website sources. Delete one before adding another. (traceId: 2a5ab9127cd069657d767b689cd7a99d)"
+    }
+  ]
+}

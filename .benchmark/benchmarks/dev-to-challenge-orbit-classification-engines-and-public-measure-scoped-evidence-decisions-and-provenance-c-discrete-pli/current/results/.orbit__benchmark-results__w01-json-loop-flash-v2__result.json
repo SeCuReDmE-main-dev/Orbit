@@ -1,0 +1,222 @@
+{
+  "format": "orbit-agent-mission-v1",
+  "mission": "W01",
+  "experiment": "w01-json-loop-flash-v2",
+  "model": "gemini-3.8-flash-high",
+  "host": "Antigravity official CLI 1.2.13, external JSON planner -> native public WebMCP",
+  "nativeAntigravityMcpIntegration": false,
+  "agentDefinitionSha256": "0d2307ac00df158e40af91c1c213d4f263bdda07a6f77dd3a7f752fbfad26114",
+  "plannerProtocol": "orbit-json-planner-v2",
+  "startedAt": "2026-09-30T02:39:05.487548+00:00",
+  "maxCalls": 20,
+  "maxMinutes": 8,
+  "permissions": "Page consent unchanged; no persistent approval policy or human decision added.",
+  "turns": [
+    {
+      "durationSeconds": 33.1956977,
+      "usage": {
+        "input_tokens": 8629,
+        "output_tokens": 9790,
+        "thinking_tokens": 9749,
+        "cache_read_tokens": 0,
+        "total_tokens": 18419
+      },
+      "numTurns": 1,
+      "outputSha256": "310238c82af80ec59243f805f9b2e53ea1a9ea923c04521ea8662f0aee050297",
+      "actions": [
+        {
+          "type": "tool_call",
+          "name": "orbit_get_capabilities",
+          "arguments": {}
+        },
+        {
+          "type": "tool_call",
+          "name": "orbit_get_research_request",
+          "arguments": {}
+        }
+      ]
+    },
+    {
+      "durationSeconds": 24.204863,
+      "usage": {
+        "input_tokens": 9162,
+        "output_tokens": 6006,
+        "thinking_tokens": 5926,
+        "cache_read_tokens": 0,
+        "total_tokens": 15168
+      },
+      "numTurns": 1,
+      "outputSha256": "b4c83d88c4cdf8f34536cc024a77754b74551ee7e8c0d16cbe8d0f13cff1a087",
+      "actions": [
+        {
+          "type": "final",
+          "answer": {
+            "observedToolCount": 15,
+            "workspaceReadable": false,
+            "privateQuestionState": "CONSENT_REQUIRED",
+            "toolsUsed": [
+              "orbit_get_capabilities",
+              "orbit_get_research_request"
+            ],
+            "limitations": [
+              "Private research question is unreadable without owner sharing (CONSENT_REQUIRED)",
+              "Workspace readable is false",
+              "Context entries and research execution cannot proceed without consent"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "calls": [
+    {
+      "name": "orbit_get_capabilities",
+      "arguments": {},
+      "result": {
+        "state": "READY",
+        "contractVersion": "orbit-webmcp-v6",
+        "tools": [
+          {
+            "name": "orbit_get_capabilities",
+            "readOnly": true
+          },
+          {
+            "name": "orbit_get_research_protocol",
+            "readOnly": true
+          },
+          {
+            "name": "orbit_sanity_initial_context",
+            "readOnly": true
+          },
+          {
+            "name": "orbit_sanity_read_entries",
+            "readOnly": true
+          },
+          {
+            "name": "orbit_get_research_request",
+            "readOnly": true
+          },
+          {
+            "name": "orbit_get_mission_summary",
+            "readOnly": true
+          },
+          {
+            "name": "orbit_list_research_points",
+            "readOnly": true
+          },
+          {
+            "name": "orbit_search_sources",
+            "readOnly": true
+          },
+          {
+            "name": "orbit_read_source_record",
+            "readOnly": true
+          },
+          {
+            "name": "orbit_present_research",
+            "readOnly": false
+          },
+          {
+            "name": "orbit_classify_evidence",
+            "readOnly": true
+          },
+          {
+            "name": "orbit_compare_claims",
+            "readOnly": true
+          },
+          {
+            "name": "orbit_find_relations",
+            "readOnly": true
+          },
+          {
+            "name": "orbit_resolve_hold",
+            "readOnly": true
+          },
+          {
+            "name": "orbit_trace_impact",
+            "readOnly": true
+          }
+        ],
+        "classification": {
+          "engine": "n",
+          "version": "orbit-classification-1.0.0",
+          "semantics": "Evidence sets and operational decisions, never truth probabilities.",
+          "additionalTools": 5
+        },
+        "method": "orbit_get_research_protocol",
+        "sanity": {
+          "state": "NOT_CHECKED",
+          "initialTool": "orbit_sanity_initial_context",
+          "readTool": "orbit_sanity_read_entries",
+          "knowledgeBase": "kb5CHIYGXCMJ",
+          "authentication": "Server-side organization Context Viewer token. Never supply a token to a browser tool."
+        },
+        "workspace": {
+          "readable": false,
+          "presentationAllowed": false,
+          "entry": "/app/"
+        },
+        "automaticActions": [],
+        "externalSearch": "Use your own authorized browser-agent tools and budget.",
+        "removedV1Tools": [
+          "orbit_search_web",
+          "orbit_get_physics_snapshot"
+        ]
+      }
+    },
+    {
+      "name": "orbit_get_research_request",
+      "arguments": {},
+      "result": {
+        "state": "CONSENT_REQUIRED",
+        "message": "Ask the human to enable dossier sharing in Orbit."
+      }
+    }
+  ],
+  "missionStatus": "PASSED",
+  "final": {
+    "observedToolCount": 15,
+    "workspaceReadable": false,
+    "privateQuestionState": "CONSENT_REQUIRED",
+    "toolsUsed": [
+      "orbit_get_capabilities",
+      "orbit_get_research_request"
+    ],
+    "limitations": [
+      "Private research question is unreadable without owner sharing (CONSENT_REQUIRED)",
+      "Workspace readable is false",
+      "Context entries and research execution cannot proceed without consent"
+    ]
+  },
+  "quotaBefore": [
+    {
+      "id": "gemini-weekly",
+      "window": "weekly",
+      "remaining_fraction": 0.9932444095611572,
+      "reset_time": "2026-10-07T00:24:00Z"
+    },
+    {
+      "id": "gemini-5h",
+      "window": "5h",
+      "remaining_fraction": 0.9594665765762329,
+      "reset_time": "2026-09-30T05:24:00Z"
+    }
+  ],
+  "nativeExecutionObserved": true,
+  "quotaAfter": [
+    {
+      "id": "gemini-weekly",
+      "window": "weekly",
+      "remaining_fraction": 0.9926396012306213,
+      "reset_time": "2026-10-07T00:24:00Z"
+    },
+    {
+      "id": "gemini-5h",
+      "window": "5h",
+      "remaining_fraction": 0.9558377265930176,
+      "reset_time": "2026-09-30T05:24:00Z"
+    }
+  ],
+  "observedCompletedAt": "2026-09-30T02:40:35.998812+00:00",
+  "durationSeconds": 90.51600000006147
+}

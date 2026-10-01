@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "orbit-presence-v12-study",
+  "model": "/presence-review/orbit-study.glb",
+  "status": "technical-study-not-approved-for-release",
+  "bytes": 11925404,
+  "sha256": "bdb21c1d62d21d92f1e0d5de3db3883cae947b3f356600275140209bfbaf1e94",
+  "animations": [
+    "Idle",
+    "Listening",
+    "Thinking",
+    "Speaking"
+  ],
+  "expressions": [
+    "warmth",
+    "curiosity",
+    "jawOpen",
+    "blink"
+  ],
+  "attribution": "Synthia identity: Jean-Sebastien Beaulieu. Anatomy: MakeHuman Community CC0 (commit 3edf9df0551765be43563d047888cf7877eb89b4). Sculpt, mechanics, rig and rendering: Codex, personally directed in this task.",
+  "sourceFiles": [
+    {
+      "name": "base.obj",
+      "sha256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c"
+    },
+    {
+      "name": "basemesh_vertex_groups.json",
+      "sha256": "8cb1417bc55ae5ec8aa99f90734e81ed5fbb556511ff6a2c00e0534b70911444"
+    },
+    {
+      "name": "caucasian-female-young.target.gz",
+      "sha256": "e9d6212373ac5f1e2c596fa145e363385f4d169c3c6c88ede3bab93b681af041"
+    },
+    {
+      "name": "LICENSE.ASSETS.md",
+      "sha256": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c"
+    },
+    {
+      "name": "universal-female-young-averagemuscle-averageweight.target.gz",
+      "sha256": "30046c85a461249824548d5319d74c16392842a1ee00ca9a4485ea3eeb06e2e8"
+    }
+  ],
+  "method": "real rigged anatomy with canonical frontal texture projection; not a completed multi-view reconstruction",
+  "canonicalTextureSha256": "93622ccfaa49e3eac981068fa2ec0bf395135f523d436f7d17c86e38c44e1429"
+}

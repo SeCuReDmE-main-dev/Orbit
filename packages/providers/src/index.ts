@@ -1,4 +1,4 @@
-import type { Mission } from '@orbit/core'
+import type { Mission, MissionCheckpoint, SourceReceipt } from '@orbit/core'
 import { createHash } from 'node:crypto'
 import {
   CCP_PACKAGE_KIND,
@@ -62,9 +62,31 @@ export class ContractBlockedExternalProvider implements ProviderAdapter {
 
 export type CcpHandoff = CCPPackage
 
-export function createCcpHandoff(mission: Mission): CcpHandoff {
+export type CcpMissionContext = Readonly<{
+  question?: string
+  plan?: readonly Readonly<{ id: string; title: string; status: string; detail?: string }>[]
+  sources?: readonly SourceReceipt[]
+  decisions?: readonly Readonly<{ title: string; rationale: string; decidedAt?: string }>[]
+  checkpoints?: readonly MissionCheckpoint[]
+}>
+
+/**
+ * Creates a portable, read-only continuity package from locally observed state.
+ * Callers must only pass source receipts and decisions they actually persisted or
+ * collected; this helper never represents a provider as having been contacted.
+ */
+export function createCcpHandoff(mission: Mission, context: CcpMissionContext = {}): CcpHandoff {
   const createdAt = new Date().toISOString()
   const packageId = `ccp_${mission.id}_${Date.now()}` as CCPPackage['packageId']
+  const sources = context.sources ?? []
+  const decisions = context.decisions ?? []
+  const checkpoints = context.checkpoints ?? []
+  const plan = context.plan ?? []
+  const evidence = [
+    ...sources.map((source) => ({ id: source.id, kind: 'source' as const, uri: source.normalizedUri, observedAt: source.observedAt, note: source.title })),
+    ...decisions.map((decision, index) => ({ id: `decision_local_${index + 1}`, kind: 'decision' as const, observedAt: decision.decidedAt ?? createdAt, note: `${decision.title}: ${decision.rationale}` })),
+    ...checkpoints.map((checkpoint) => ({ id: `checkpoint_${checkpoint.sequence}`, kind: 'receipt' as const, observedAt: checkpoint.createdAt, note: `${checkpoint.label}${checkpoint.detail ? `: ${checkpoint.detail}` : ''}` })),
+  ]
   const payload = {
     kind: CCP_PACKAGE_KIND,
     protocol: CCP_PROTOCOL_NAME,
@@ -74,14 +96,23 @@ export function createCcpHandoff(mission: Mission): CcpHandoff {
     createdAt,
     producer: { name: 'orbit-companion', version: '0.1.0' },
     context: {
-      objective: mission.title,
-      constraints: [`budget: ${JSON.stringify(mission.budget)}`, 'read-only handoff'],
-      decisions: [],
-      openQuestions: [],
+      objective: context.question?.trim() || mission.title,
+      constraints: [
+        `budget: ${JSON.stringify(mission.budget)}`,
+        `plan-points: ${plan.length}`,
+        `local-source-receipts: ${sources.length}`,
+        'read-only handoff',
+      ],
+      decisions: decisions.map((decision) => `${decision.title}: ${decision.rationale}`),
+      openQuestions: plan.filter((point) => point.status !== 'complete').map((point) => point.title),
     },
-    actionCards: [], ledgerTail: [], gates: [], evidence: [],
+    actionCards: [], ledgerTail: [], gates: [], evidence,
     externalDependencies: [{ id: 'providers', description: 'Live providers are not configured.', owner: 'human' as const, state: 'BLOCKED_EXTERNAL' as const, unblockEvidence: 'Approved credentials and query scope.' }],
   }
   const contentDigest = `sha256:${createHash('sha256').update(JSON.stringify(payload)).digest('hex')}` as CCPPackage['integrity']['contentDigest']
   return Object.freeze({ ...payload, integrity: { contentDigest, previousPackageDigest: null }, retention: { class: 'PROJECT' as const, deleteAfter: null } })
 }
+
+export { CodexConnection, ProviderConnectionError } from "./codex-connection.js"
+export { SanityKnowledge } from "./sanity-knowledge.js"
+export { ExaSearch, ExaSearchError, type ExaSearchResult } from "./exa-search.js"

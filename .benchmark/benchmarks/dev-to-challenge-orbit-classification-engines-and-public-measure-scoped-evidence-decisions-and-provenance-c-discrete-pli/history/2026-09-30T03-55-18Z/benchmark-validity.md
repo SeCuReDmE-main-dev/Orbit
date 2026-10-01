@@ -1,0 +1,2 @@
+# Benchmark validity — partial development only
+Valid dimensions: input-contract failures, exact quote occurrence, deterministic invariants, native registration and refusals. Comparators share the same inputs and implementation. Baseline and N have the same decision rules. Invalid current claims: scientific superiority, independent generalization, normalized host ranking, successful end-to-end agent mission, fully adjudicated 120-document corpus. Final gold, real source review, packet-aware repetitions and human end-to-end audit remain required.

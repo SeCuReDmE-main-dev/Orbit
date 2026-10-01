@@ -1,0 +1,50 @@
+{
+  "format": "orbit-agent-mission-v1",
+  "mission": "W02",
+  "experiment": "w02-json-loop-flash-v1",
+  "model": "gemini-3.8-flash-high",
+  "host": "Antigravity official CLI 1.2.13, external JSON planner -> native public WebMCP",
+  "nativeAntigravityMcpIntegration": false,
+  "agentDefinitionSha256": "4ee50d99e3927aded0c904931d89a061965342e4c2661f748cd0b1c11f4494a4",
+  "plannerProtocol": "orbit-json-planner-v2",
+  "missionSha256": "e426958df7df40570b683ddc5f373be53065f5f7eed5641cc651d2ed6edc2dd0",
+  "startedAt": "2026-09-30T03:09:01.854080+00:00",
+  "maxCalls": 20,
+  "maxMinutes": 8,
+  "permissions": "Page consent unchanged; no persistent approval policy or human decision added.",
+  "turns": [],
+  "calls": [],
+  "missionStatus": "INCOMPLETE",
+  "final": null,
+  "quotaBefore": [
+    {
+      "id": "gemini-weekly",
+      "window": "weekly",
+      "remaining_fraction": 0.9921781420707703,
+      "reset_time": "2026-10-07T00:24:00Z"
+    },
+    {
+      "id": "gemini-5h",
+      "window": "5h",
+      "remaining_fraction": 0.9530689120292664,
+      "reset_time": "2026-09-30T05:24:00Z"
+    }
+  ],
+  "error": "RuntimeError: Native adapter closed; no partial success.",
+  "quotaAfter": [
+    {
+      "id": "gemini-weekly",
+      "window": "weekly",
+      "remaining_fraction": 0.9921781420707703,
+      "reset_time": "2026-10-07T00:24:00Z"
+    },
+    {
+      "id": "gemini-5h",
+      "window": "5h",
+      "remaining_fraction": 0.9530689120292664,
+      "reset_time": "2026-09-30T05:24:00Z"
+    }
+  ],
+  "observedCompletedAt": "2026-09-30T03:09:25.162948+00:00",
+  "durationSeconds": 23.313000000081956
+}

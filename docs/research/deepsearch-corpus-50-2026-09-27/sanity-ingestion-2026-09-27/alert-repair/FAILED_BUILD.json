@@ -1,0 +1,108 @@
+{
+  "kb": {
+    "id": "a22131ab-85c8-4887-8467-b657d3d3c3dd",
+    "publicId": "kb5CHIYGXCMJ",
+    "organizationId": "oatv1mmu8",
+    "title": "Orbit Companion — Sanity & Deep Research",
+    "description": "Support Orbit Companion and its developers with cited official guidance for Sanity Context, Astro integration, schemas and GROQ, and rigorous deep research: clarify questions, plan distinct research axes, search and read sources with Exa/Google/Firecrawl, track provenance and contradictions, discover scholarly works, evaluate retrieval and citation support, and resist prompt injection. Distinguish documentation from implemented capabilities and measured results. Preserve provider-specific authentication, costs, version and beta limitations; API access is not implied by subscriptions. This is a methods and implementation knowledge base, not a NASA scientific corpus or a store of private missions.",
+    "state": "review",
+    "activeJobId": "ctx-build-a22131ab-85c8-4887-8467-b657d3d3c3dd-1790535142832",
+    "isBuilding": false,
+    "buildStageState": {
+      "jobId": "ctx-build-a22131ab-85c8-4887-8467-b657d3d3c3dd-1790535142832",
+      "stages": [
+        {
+          "id": "tldr",
+          "status": "done"
+        },
+        {
+          "id": "map",
+          "status": "done"
+        },
+        {
+          "id": "triage",
+          "status": "done",
+          "units": {
+            "unit": "sources",
+            "done": 96,
+            "total": 96
+          }
+        },
+        {
+          "id": "plan",
+          "status": "done",
+          "units": {
+            "unit": "groups",
+            "done": 10,
+            "total": 10
+          }
+        },
+        {
+          "id": "organize",
+          "status": "done",
+          "units": {
+            "unit": "sources",
+            "done": 92,
+            "total": 92
+          }
+        },
+        {
+          "id": "arrange",
+          "status": "failed",
+          "units": {
+            "unit": "rounds",
+            "done": 3
+          }
+        },
+        {
+          "id": "write",
+          "status": "failed"
+        },
+        {
+          "id": "review",
+          "status": "failed"
+        },
+        {
+          "id": "polish",
+          "status": "failed"
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-27T18:49:50.667Z",
+    "lastChangedAt": "2026-09-27T17:39:42.109Z",
+    "hasPendingChanges": true,
+    "pendingChanges": {
+      "added": 2,
+      "changed": 0,
+      "removed": 0
+    },
+    "pipelineOutdated": false,
+    "rebuildRecommended": null,
+    "hasWebSource": true,
+    "hasDatasetSource": false,
+    "sourceUsage": {
+      "used": 96,
+      "limit": 5000
+    },
+    "buildRestriction": null,
+    "refreshEnabled": false,
+    "refreshFrequency": "weekly",
+    "refreshNextRunAt": null,
+    "refreshInFlight": false,
+    "openIssueCount": 3,
+    "instructionCount": 0,
+    "createdBy": {
+      "id": "gtuNb4s8T",
+      "displayName": "Jean-Sebastien Beaulieu"
+    },
+    "createdAt": "2026-09-27T15:13:18.045Z",
+    "updatedAt": "2026-09-27T18:54:00.514Z"
+  },
+  "job": {
+    "id": "ctx-build-a22131ab-85c8-4887-8467-b657d3d3c3dd-1790535142832",
+    "status": "failed",
+    "startedAt": "2026-09-27T18:52:22.864Z",
+    "completedAt": "2026-09-27T18:56:45.197Z",
+    "error": "The outline's structure stopped converging at \"thin_leaves\" (1 remaining) after 3 round(s). Rebuilding resumes from the saved progress."
+  }
+}

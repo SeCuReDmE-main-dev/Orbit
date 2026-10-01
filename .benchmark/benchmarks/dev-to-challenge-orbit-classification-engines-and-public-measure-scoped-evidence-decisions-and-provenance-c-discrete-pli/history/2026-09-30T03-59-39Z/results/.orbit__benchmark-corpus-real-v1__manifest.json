@@ -1,0 +1,33 @@
+{
+  "format": "orbit-real-corpus-candidate-v1",
+  "status": "candidate-not-frozen",
+  "createdAt": "2026-09-30T02:36:44.095960+00:00",
+  "packets": 4,
+  "documents": 48,
+  "questions": 24,
+  "humanReviewedGoldQuestions": 0,
+  "structuredSourcesReviewed": false,
+  "sanityImports": 0,
+  "limitations": [
+    "These are candidate packets, not completed independent benchmark evidence.",
+    "The earlier six synthetic packets remain development material; they must not be pooled as a blind final campaign.",
+    "Abstract-only content cannot substantiate unreported endpoints or detailed methods.",
+    "Dates of retrieval and crawler metadata do not establish an effective policy date or explicit replacement.",
+    "Licenses and human reference answers remain to be adjudicated before redistribution and final scoring."
+  ],
+  "hashes": {
+    "documents": "fb22931526179586befaec51e6cbb86285d972f4ecfe579381f5308ff191cc23",
+    "questions": "2528ed8ff8552c17813af0e5d24e9bc25e3d2910fce33d7f00e4ef9d53e36b93"
+  },
+  "retrievalErrors": [
+    "https://antigravity.google/docs/cli/permissions-and-sandbox/: CRAWL_NOT_FOUND",
+    "https://www.sanity.io/docs/studio/schema-introspection: CRAWL_NOT_FOUND",
+    "https://www.sanity.io/docs/groq/reference: CRAWL_NOT_FOUND",
+    "https://www.sanity.io/docs/ai/sanity-mcp-server: CRAWL_NOT_FOUND",
+    "https://doi.org/10.1109/TRO.2018.2853613: CRAWL_LIVECRAWL_TIMEOUT"
+  ],
+  "rejectedOffTopicUrls": [
+    "https://arxiv.org/abs/1807.00987",
+    "https://arxiv.org/abs/1807.07291"
+  ]
+}

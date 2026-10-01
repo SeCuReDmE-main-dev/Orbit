@@ -1,0 +1,14 @@
+{
+  "observedAt": "2026-09-30T03:59:37.926926+00:00",
+  "origin": "https://orbit.securedme.ca",
+  "method": "Browser UI: Plan -> Consulter Sanity -> Lire le sommaire -> single-entry read -> keyboard focus on guide link.",
+  "publicOutlineRead": true,
+  "privateDossierShared": false,
+  "humanDecisionAdded": false,
+  "entryPath": "deep_research/models_and_apis",
+  "observedNotice": "Provenance incompl\u00e8te. 6 r\u00e9f\u00e9rence(s) sans URL d\u2019origine dans le texte re\u00e7u.",
+  "guideLink": "https://orbit.securedme.ca/guide/#context-provenance",
+  "screenshot": "live-context-provenance-ui.jpg",
+  "passed": true,
+  "limits": "UI and connectivity verification, not semantic or scientific scoring."
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@orbit/learning-studio",
+  "version": "1.0.0",
+  "description": "Portable Sanity Studio learning workbench with local-first student artefacts and explicit publication.",
+  "type": "module",
+  "private": true,
+  "files": ["dist", "README.md"],
+  "exports": {".": {"types": "./dist/index.d.ts", "import": "./dist/index.js"}},
+  "scripts": {"build": "node build.mjs"},
+  "peerDependencies": {"react": "^19.0.0", "sanity": "^5.1.0 || ^6.0.0"},
+  "devDependencies": {"esbuild": "0.28.2"}
+}

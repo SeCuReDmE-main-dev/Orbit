@@ -1,0 +1,34 @@
+{
+  "format": "orbit-agent-mission-v1",
+  "mission": "W01",
+  "experiment": "w01-json-loop-flash-dev2",
+  "model": "gemini-3.8-flash-high",
+  "host": "Antigravity official CLI 1.2.13, external JSON planner -> native public WebMCP",
+  "nativeAntigravityMcpIntegration": false,
+  "agentDefinitionSha256": "3fc399e166b441c9b312a9a93a26b4f1fee0879a671c0c6d6beb0791801990f9",
+  "startedAt": "2026-09-30T02:27:37.761787+00:00",
+  "maxCalls": 20,
+  "maxMinutes": 8,
+  "permissions": "Page consent unchanged; no persistent approval policy or human decision added.",
+  "turns": [],
+  "calls": [],
+  "missionStatus": "INCOMPLETE",
+  "final": null,
+  "quotaBefore": [
+    {
+      "id": "gemini-weekly",
+      "window": "weekly",
+      "remaining_fraction": 0.9958919286727905,
+      "reset_time": "2026-10-07T00:24:00Z"
+    },
+    {
+      "id": "gemini-5h",
+      "window": "5h",
+      "remaining_fraction": 0.9753516912460327,
+      "reset_time": "2026-09-30T05:24:00Z"
+    }
+  ],
+  "error": "JSONDecodeError: Extra data: line 2 column 1 (char 68)",
+  "observedCompletedAt": "2026-09-30T02:30:02.562449+00:00",
+  "durationSeconds": 144.7970000000205
+}

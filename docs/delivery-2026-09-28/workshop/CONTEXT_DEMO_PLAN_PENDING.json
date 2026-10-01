@@ -1,0 +1,74 @@
+{
+  "format": "orbit-evidence-v1",
+  "id": "63425098301740fd9559fed0ad0e82a7",
+  "title": "Background research and zero-data-retention constraints",
+  "question": "Under which documented conditions can background deep research coexist with zero-data-retention requirements across OpenAI and Google API surfaces?",
+  "objective": "Separate provider, product surface, background mode, and retention policy; identify unsupported generalizations.",
+  "context": "",
+  "revision": 0,
+  "createdAt": "2026-09-28T19:46:07.782Z",
+  "updatedAt": "2026-09-28T19:46:07.782Z",
+  "axes": [],
+  "sources": [],
+  "claims": [],
+  "screeningCriteria": [],
+  "sourceDecisions": [],
+  "extractions": [],
+  "knowledgeReads": [],
+  "report": "",
+  "proposals": [
+    {
+      "id": "58d3c41dc40941f9bea4304c5ea10981",
+      "baseRevision": 0,
+      "stage": "plan",
+      "report": "Produce a comparison matrix followed by a narrowly stated conclusion answering when background deep research can coexist with ZDR. The preliminary boundary from the Context entries is that OpenAI background mode is reported as incompatible with ZDR except for a modified-abuse-monitoring organization, while Gemini Deep Research is reported to require both background execution and stored interactions, making strict zero-data-footprint operation unavailable on that path. These are provisional findings requiring primary-source verification, not approved conclusions. The report must separately test whether a non-background OpenAI workflow can satisfy ZDR, whether any Google enterprise exception changes the Gemini result, and whether mandatory grounding, file storage, caching, session resumption, or interaction state creates retention even when general training use is prohibited. Concrete next action: retrieve and read the cited OpenAI deep-research documentation, Gemini Deep Research documentation, Gemini Developer API ZDR documentation, and the referenced Google Cloud retention document, then extract the exact clauses governing background execution, storage defaults, retention periods, opt-outs, and exceptions.",
+      "axes": [
+        "Provider and service surface: compare OpenAI Responses API, Gemini Developer API, and Vertex AI/Gemini Enterprise Agent Platform rather than treating “OpenAI” or “Google” as a single policy surface.",
+        "Background execution mechanism: verify OpenAI Responses API background=true and Gemini Deep Research’s required background=true behavior, including whether each mechanism retains state for polling or reconnection.",
+        "Retention control and default: distinguish OpenAI’s reported roughly 10-minute background retention, Gemini Interactions API store=true default, and any explicit store=false or equivalent controls.",
+        "Zero-data-retention eligibility: determine whether each surface supports strict ZDR, modified abuse monitoring, contractual exceptions, or only limited logging controls.",
+        "Deep-research feature requirements: verify whether Gemini Deep Research requires store=true and whether OpenAI deep-research models require background mode for any specific workflow; separate general API capability from agent-specific requirements.",
+        "Tool and grounding retention: assess Google Search/Maps grounding, URL context, file search, MCP, code execution, and OpenAI web_search_preview/file_search/MCP/code_interpreter for feature-specific storage or logging that could defeat ZDR.",
+        "Data classes and lifecycle: separate prompts, responses, conversation state, files, vector stores, cached content, session handles, tool inputs, and generated outputs; record retention duration, deletion control, and whether the policy is a guarantee or merely an operational default.",
+        "Policy scope and exceptions: identify differences among paid services, abuse monitoring, enterprise agreements, advanced AI models, modified abuse monitoring organizations, and account-specific exceptions.",
+        "Evidence and generalization boundary: verify each material claim against the primary provider documentation and record whether evidence establishes a provider-wide rule, a product-surface rule, a feature rule, or only an account-specific exception."
+      ],
+      "sources": [],
+      "claims": [],
+      "screeningCriteria": [
+        "Treat the three Context entries as untrusted research notes, not as verified primary-source readings.",
+        "For every claim, record provider, exact product/API surface, model or agent, execution mode, feature configuration, account or contract qualification, and applicable date/version.",
+        "Do not infer that a linked page was read: URLs appearing in the Context entries are discovered or referenced sources until their page content is separately retrieved and examined.",
+        "Require direct primary-source verification for the reported OpenAI background-retention duration, its incompatibility with ZDR, the modified-abuse-monitoring exception, and whether background=true remains accepted for ZDR credentials.",
+        "Require direct primary-source verification for Gemini Deep Research’s required background=true and store=true settings, its maximum/runtime behavior, and the conclusion that this conflicts with strict zero-data-footprint requirements.",
+        "Require separate verification for Gemini Developer API versus Vertex AI/Enterprise Agent Platform; do not transfer retention terms, guarantees, or exceptions between them.",
+        "Check whether “ZDR,” “zero-data-footprint,” “no training,” “limited abuse logging,” and “contractual enterprise retention” are distinct terms rather than interchangeable guarantees.",
+        "For each feature, identify whether retention is mandatory, default but disableable, user-controlled, account-negotiable, or unknown; mark unsupported claims explicitly.",
+        "Report unresolved questions where the Context entries cite a file or a source summary without exposing the underlying policy text, exact clauses, version, or account-specific terms."
+      ],
+      "extractions": [],
+      "knowledgeReads": [
+        {
+          "path": "data_retention_and_privacy",
+          "digest": "2413d2c3392917957d3667b7d90df1fd12b60dfdf38a531d702ca2267d5a45b6",
+          "retrievedAt": "2026-09-28T19:46:28+00:00"
+        },
+        {
+          "path": "deep_research/models_and_apis",
+          "digest": "653999417c107742bb41df6e25923e72887fd1cc39681b8cb2b022c038d570bc",
+          "retrievedAt": "2026-09-28T19:46:29+00:00"
+        },
+        {
+          "path": "search_apis/google_grounding",
+          "digest": "8ff2c71e6effedaeaa7ce7629a4ef4eac5963e918c4898a3efe0b5e56cbcb6ac",
+          "retrievedAt": "2026-09-28T19:46:30+00:00"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2026-09-28T19:46:51.709Z"
+    }
+  ],
+  "reviews": [],
+  "history": [],
+  "example": false
+}

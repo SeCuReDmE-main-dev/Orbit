@@ -1,0 +1,24 @@
+{
+  "mission": "W01",
+  "model": "gemini-3.1-pro-high",
+  "host": "Antigravity CLI 1.2.13 interactive",
+  "requestedNewProject": true,
+  "effectiveProjectIsolation": "unverified",
+  "promptSha256": "3d1d217056bccfeabf20feaa96ee82a07d523e5056d2d8389a2a94f3c1fb104d",
+  "observedAt": "2026-09-30T01:58:52.479450+00:00",
+  "modelReportedStatus": "unavailable",
+  "observedNativeCalls": [],
+  "autonomousNativeExecutionObserved": false,
+  "missionStatus": "NOT_EXECUTED",
+  "permissions": null,
+  "privateQuestionReadable": null,
+  "usage": null,
+  "capture": "Final displayed response and native trace only. Internal model reasoning excluded.",
+  "modelReportedServers": [
+    "gemini-memory-systeme_gemini-memory-systeme",
+    "gemini-memory-systeme_securedme-education-coordination",
+    "tiger"
+  ],
+  "conclusion": "A fresh project request did not expose Orbit tools to the model. No fallback tools used.",
+  "permissionPolicy": "Unchanged; no persistent allow rule."
+}

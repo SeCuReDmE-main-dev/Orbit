@@ -1,0 +1,8 @@
+---
+import OrbitLayout from '../../layouts/OrbitLayout.astro'
+import OrbitMark from '../../components/OrbitMark.astro'
+import HologramCompanion from '../../components/HologramCompanion.astro'
+import CompanionConsole from '../../components/CompanionConsole.astro'
+import MissionWorkspace from '../../components/MissionWorkspace.astro'
+---
+<OrbitLayout title="Orbit — Compagnon de navigation" bodyClass="panel-page"><header class="panel-header"><OrbitMark small /><span>COMPAGNON DE NAVIGATION</span></header><main class="extension-workspace"><HologramCompanion /><CompanionConsole /><details class="workspace-manual"><summary>Association locale et carnet de recherche <span>↗</span></summary><MissionWorkspace /></details><p class="panel-explanation">Le panneau utilise votre courtier local. La capture de page et le partage de contexte restent sous votre contrôle.</p><a class="text-button" href="https://orbit.securedme.ca/app/" target="_blank" rel="noopener noreferrer">Ouvrir mon espace Orbit ↗</a><p data-webmcp-status class="status-line" role="status">Vérification des outils du navigateur…</p></main><script>import { registerReadOnlyOrbitTools } from '../../lib/webmcp'; const status = document.querySelector<HTMLElement>('[data-webmcp-status]'); registerReadOnlyOrbitTools().then(result => { if (status) status.textContent = result === 'registered' ? 'Outils disponibles. Partage désactivé jusqu’à votre accord.' : 'Outils du navigateur indisponibles.' }).catch(() => { if (status) status.textContent = 'Outils indisponibles.' })</script></OrbitLayout>

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "status": "blocked_external",
+  "evidenceStatus": "observed",
+  "label": "Candidat TRELLIS.2",
+  "modelUrl": null,
+  "lowModelUrl": null,
+  "animations": {},
+  "rigged": false,
+  "approvedForApplication": false,
+  "message": "Aperçu TRELLIS.2 généré. Export GLB bloqué par le quota gratuit ZeroGPU : aucun nouveau maillage local. Cette image est la référence d’entrée, pas le résultat 3D."
+}

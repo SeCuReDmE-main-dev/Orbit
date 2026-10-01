@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-25",
+  "branch": "master",
+  "head": "3c6806b9cb77b81b5bea2e3debb7146f5ee0b821",
+  "tests": {
+    "vitest": 31,
+    "policy": 5,
+    "exit": 0
+  },
+  "full_build_exit": 0,
+  "audit": {
+    "high": 3,
+    "moderate": 10,
+    "critical": 0
+  },
+  "secret_value_matches": 0,
+  "archive_sha256": "659fd72740dd98f5b6d2396f3dedf29fe97ef49aabb04ea7f33bf7c33a100606",
+  "browser": {
+    "surface": "localhost, not installed extension",
+    "sources": 4,
+    "webmcp": "registered, agent invocation not verified",
+    "narrow_actual_width": 450,
+    "horizontal_overflow": false
+  },
+  "release": "hold"
+}

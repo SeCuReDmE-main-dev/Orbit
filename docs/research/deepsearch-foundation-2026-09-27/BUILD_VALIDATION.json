@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-09-27",
+  "scope": "Intermediate build of first web foundation, not complete corpus",
+  "job": {
+    "id": "ctx-build-a22131ab-85c8-4887-8467-b657d3d3c3dd-1790526036697",
+    "status": "running",
+    "startedAt": "2026-09-27T16:20:36.734Z",
+    "completedAt": null,
+    "error": null
+  },
+  "full_corpus_complete": false,
+  "agent_retrieval_tested": false,
+  "next_step": "Continue corpus acquisition in reviewed batches; do not rebuild after every import."
+}

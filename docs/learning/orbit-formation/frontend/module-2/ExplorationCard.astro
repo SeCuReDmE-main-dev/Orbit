@@ -1,0 +1,9 @@
+---
+interface Props { id?: string; title?: string }
+const { id = 'learning-cards', title = 'Mes éléments explorables' } = Astro.props;
+---
+<section id={id} aria-label={title}>
+  <h2>{title}</h2>
+  <ul data-learning-cards></ul>
+  <p data-learning-description aria-live="polite">Sélectionnez un élément.</p>
+</section>

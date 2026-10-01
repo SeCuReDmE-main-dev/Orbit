@@ -1,0 +1,51 @@
+---
+import ExplorationCard from '../learning/module-2/ExplorationCard.astro';
+---
+<!doctype html>
+<html lang="fr">
+  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><title>Mon frontend exploratoire</title></head>
+  <body>
+    <main data-student-frontend>
+      <h1>Mon frontend exploratoire</h1>
+      <p>Le raccordement est fourni. Les huit briques ci-dessous viennent de mes exports de modules.</p>
+      <nav aria-label="Vues du projet">
+        <button data-view="mission">Mission</button><button data-view="experience">Expérience</button>
+        <button data-view="proofs">Preuves</button><button data-view="summary">Bilan</button>
+      </nav>
+      <p data-view-description aria-live="polite"></p>
+      <label><input data-static type="checkbox" /> Figer le mouvement</label>
+      <label><input data-particles type="checkbox" checked /> Afficher les particules</label>
+      <label><input data-share type="checkbox" /> Autoriser mon assistant à lire ce seul aperçu</label>
+      <button data-register>Enregistrer la capacité WebMCP</button>
+      <p data-capability-status role="status">Capacité non enregistrée ; aucune lecture autorisée.</p>
+      <section data-stage role="group" tabindex="0" aria-label="Déplacer le premier élément avec le pointeur ou les flèches">
+        <div data-three></div><span data-marker aria-hidden="true"></span>
+      </section>
+      <p data-state></p>
+      <ExplorationCard />
+      <h2>Ce que je dois encore vérifier</h2>
+      <p>Mes observations ne certifient pas ma compréhension. J’explique une décision et je transfère une brique à un autre contexte.</p>
+    </main>
+    <script>
+      import { mountStudentFrontend } from '../student-frontend.js';
+      const root = document.querySelector('[data-student-frontend]');
+      if (root) {
+        const dispose = mountStudentFrontend(root);
+        window.addEventListener('pagehide', dispose, { once: true });
+        document.addEventListener('astro:before-swap', dispose, { once: true });
+      }
+    </script>
+    <style is:global>
+      :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #090c1c; color: #f3f2fa; }
+      body { margin: 0; } main { max-width: 60rem; margin: 2rem auto; padding: 1rem; }
+      button { margin: .3rem; padding: .6rem .9rem; background: #162239; color: inherit; border: 1px solid #8b9cbd; border-radius: .4rem; }
+      button:focus-visible, [data-stage]:focus-visible { outline: 3px solid #ffa234; outline-offset: 3px; }
+      [aria-pressed="true"] { border-color: #ffa234; } label { display: block; margin: .8rem 0; }
+      [data-stage] { position: relative; height: 20rem; overflow: hidden; border: 1px solid #7986a3; touch-action: none; }
+      [data-three] { position: absolute; inset: 0; } [data-three] canvas { width: 100%; height: 100%; display: block; }
+      [data-marker] { position: absolute; width: 1.2rem; height: 1.2rem; border-radius: 50%; background: #ffa234; transform: translate(-50%, -50%); pointer-events: none; }
+      [data-stage][data-webgl="true"] [data-marker] { display: none; } [data-state] { min-height: 1.5em; }
+      @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
+    </style>
+  </body>
+</html>

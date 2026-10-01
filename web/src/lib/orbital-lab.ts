@@ -29,7 +29,14 @@ export function mountOrbitalLab(elements: LabElements): () => void {
   let initialState = createOrbitState(number(elements.altitudeInput.value) * 1_000, number(elements.speedInput.value))
   try {
     const saved = localStorage.getItem(STORAGE_KEY)
-    if (saved) { initialState = restoreOrbitState(saved); restored = true }
+    if (saved) {
+      initialState = restoreOrbitState(saved); restored = true
+      const settings = JSON.parse(localStorage.getItem(`${STORAGE_KEY}.settings`) || 'null')
+      if (settings && Number.isFinite(settings.altitude) && settings.altitude >= 1 && settings.altitude <= 50000 && Number.isFinite(settings.multiplier) && settings.multiplier >= 0 && settings.multiplier <= 2) {
+        elements.altitudeInput.value = String(settings.altitude)
+        elements.speedInput.value = String(settings.multiplier)
+      }
+    }
   } catch { /* A corrupt or inaccessible local snapshot must not prevent the lab. */ }
   const loop = new FixedStepOrbitLoop(initialState)
   let paused = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -37,13 +44,35 @@ export function mountOrbitalLab(elements: LabElements): () => void {
   let animationFrame = 0
   let disposed = false
   let renderer: THREE.WebGLRenderer | undefined
+  let inView = true
   const scene = new THREE.Scene()
+  scene.background = new THREE.Color(0x07111e)
+  const displayScale = 2.5 / (EARTH_REFERENCE.earthRadiusMeters + 400_000)
   const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100)
-  camera.position.set(0, 3, 7)
+  camera.position.set(0, 5, 9)
   camera.lookAt(0, 0, 0)
-  const earth = new THREE.Mesh(new THREE.SphereGeometry(1.15, 32, 32), new THREE.MeshStandardMaterial({ color: 0x1d78c9, roughness: 0.8 }))
+  const earth = new THREE.Mesh(new THREE.SphereGeometry(EARTH_REFERENCE.earthRadiusMeters * displayScale, 64, 48), new THREE.MeshStandardMaterial({ color: 0x176587, roughness: 0.72, metalness: 0.15 }))
   const satellite = new THREE.Mesh(new THREE.BoxGeometry(0.25, 0.2, 0.45), new THREE.MeshStandardMaterial({ color: 0xf2d269 }))
-  scene.add(earth, satellite, new THREE.AmbientLight(0xffffff, 1.5))
+  const sunlight = new THREE.DirectionalLight(0xc9f5ff, 3)
+  sunlight.position.set(-4, 5, 4)
+  scene.add(earth, satellite, sunlight, new THREE.AmbientLight(0x577eae, 0.35))
+  const grid = new THREE.Mesh(new THREE.SphereGeometry(EARTH_REFERENCE.earthRadiusMeters * displayScale * 1.002, 32, 16), new THREE.MeshBasicMaterial({ color: 0x71bac6, wireframe: true, transparent: true, opacity: 0.12 }))
+  scene.add(grid)
+  const trailPoints: THREE.Vector3[] = []
+  const trail = new THREE.Line(new THREE.BufferGeometry(), new THREE.LineBasicMaterial({ color: 0xf5b041, transparent: true, opacity: 0.8 }))
+  scene.add(trail)
+  let lastTrailTime = -1
+  const starsGeometry = new THREE.BufferGeometry()
+  const starPositions = new Float32Array(180 * 3)
+  for (let i = 0; i < 180; i++) {
+    const angle = i * 2.399963229728653
+    const z = 1 - 2 * (i + 0.5) / 180
+    const r = Math.sqrt(1 - z * z)
+    starPositions.set([15 * r * Math.cos(angle), 15 * z, 15 * r * Math.sin(angle)], i * 3)
+  }
+  starsGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3))
+  const stars = new THREE.Points(starsGeometry, new THREE.PointsMaterial({ color: 0x9bbbd5, size: 0.035 }))
+  scene.add(stars)
   try { renderer = new THREE.WebGLRenderer({ canvas: elements.canvas, antialias: true }) } catch {
     elements.canvas.hidden = true
     elements.status.textContent = 'WebGL unavailable; the numerical view remains active.'
@@ -60,8 +89,15 @@ export function mountOrbitalLab(elements: LabElements): () => void {
   const update = (state: NewtonianOrbitState) => {
     const radius = magnitude(state.positionMeters)
     const speed = magnitude(state.velocityMetersPerSecond)
-    const scale = 2.5 / (EARTH_REFERENCE.earthRadiusMeters + 400_000)
-    satellite.position.set(state.positionMeters.x * scale, 0.35, state.positionMeters.y * scale)
+    satellite.position.set(state.positionMeters.x * displayScale, 0, state.positionMeters.y * displayScale)
+    if (state.elapsedSeconds < lastTrailTime) { trailPoints.length = 0; lastTrailTime = -1 }
+    if (state.elapsedSeconds - lastTrailTime >= 5 || lastTrailTime < 0) {
+      trailPoints.push(satellite.position.clone())
+      if (trailPoints.length > 720) trailPoints.shift()
+      trail.geometry.dispose()
+      trail.geometry = new THREE.BufferGeometry().setFromPoints(trailPoints)
+      lastTrailTime = state.elapsedSeconds
+    }
     satellite.rotation.y = -Math.atan2(state.positionMeters.y, state.positionMeters.x)
     const summary = `${state.disposition}; altitude ${Math.max(0, radius - EARTH_REFERENCE.earthRadiusMeters).toFixed(0)} m; speed ${speed.toFixed(1)} m/s; elapsed ${state.elapsedSeconds.toFixed(0)} s.`
     elements.telemetry.textContent = `${summary} Specific energy ${specificOrbitalEnergy(state).toExponential(4)} J/kg.`
@@ -71,13 +107,14 @@ export function mountOrbitalLab(elements: LabElements): () => void {
   }
   const render = (now: number) => {
     if (disposed) return
-    if (document.hidden) {
+    if (document.hidden || !inView) {
       previous = now
       animationFrame = requestAnimationFrame(render)
       return
     }
-    if (!paused) loop.tick((now - previous) / 1_000)
-    previous = now
+    // A visibility callback can run after rAF's timestamp was sampled.
+    if (!paused) loop.tick(Math.max(0, now - previous) / 1_000)
+    previous = Math.max(previous, now)
     update(loop.snapshot())
     animationFrame = requestAnimationFrame(render)
   }
@@ -87,7 +124,8 @@ export function mountOrbitalLab(elements: LabElements): () => void {
     const multiplier = clamp(number(elements.speedInput.value), 0, 2)
     loop.reset(createOrbitState(altitude, multiplier))
     restored = false
-    localStorage.removeItem(STORAGE_KEY)
+    trailPoints.length = 0; lastTrailTime = -1
+    try { localStorage.removeItem(STORAGE_KEY) } catch { /* Restricted storage does not block reset. */ }
     update(loop.snapshot())
   }
   const togglePause = () => {
@@ -97,10 +135,14 @@ export function mountOrbitalLab(elements: LabElements): () => void {
     previous = performance.now()
   }
   const save = () => {
-    try { localStorage.setItem(STORAGE_KEY, serializeOrbitState(loop.snapshot())) } catch { /* local persistence is best effort */ }
+    try { localStorage.setItem(STORAGE_KEY, serializeOrbitState(loop.snapshot())); localStorage.setItem(`${STORAGE_KEY}.settings`, JSON.stringify({ altitude: number(elements.altitudeInput.value), multiplier: number(elements.speedInput.value) })) } catch { /* local persistence is best effort */ }
   }
+  const visibilityObserver = new IntersectionObserver(entries => { inView = entries[0]?.isIntersecting ?? false; previous = performance.now() })
+  visibilityObserver.observe(elements.canvas)
   const resizeObserver = new ResizeObserver(resize)
   resizeObserver.observe(elements.canvas)
+  elements.altitudeInput.addEventListener('change', reset)
+  elements.speedInput.addEventListener('change', reset)
   elements.resetButton.addEventListener('click', reset)
   elements.pauseButton.addEventListener('click', togglePause)
   document.addEventListener('visibilitychange', handleVisibilityChange)
@@ -116,11 +158,17 @@ export function mountOrbitalLab(elements: LabElements): () => void {
     save()
     cancelAnimationFrame(animationFrame)
     resizeObserver.disconnect()
+    visibilityObserver.disconnect()
+    elements.altitudeInput.removeEventListener('change', reset)
+    elements.speedInput.removeEventListener('change', reset)
     elements.resetButton.removeEventListener('click', reset)
     elements.pauseButton.removeEventListener('click', togglePause)
     document.removeEventListener('visibilitychange', handleVisibilityChange)
     earth.geometry.dispose(); (earth.material as THREE.Material).dispose()
     satellite.geometry.dispose(); (satellite.material as THREE.Material).dispose()
+    grid.geometry.dispose(); grid.material.dispose()
+    trail.geometry.dispose(); trail.material.dispose()
+    stars.geometry.dispose(); stars.material.dispose()
     renderer?.dispose()
   }
   window.addEventListener('pagehide', dispose, { once: true })

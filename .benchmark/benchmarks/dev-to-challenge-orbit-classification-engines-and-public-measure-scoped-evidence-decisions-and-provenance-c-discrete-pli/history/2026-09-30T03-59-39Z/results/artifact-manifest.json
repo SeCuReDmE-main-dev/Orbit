@@ -1,0 +1,322 @@
+[
+  {
+    "source": "web/public/benchmark/suite-a-development.json",
+    "sha256": "1539930dbb7000a884dfba1ab4f0718f6ca9083dbde673ed371ec37fc7fbe566",
+    "archivedAs": "web__public__benchmark__suite-a-development.json"
+  },
+  {
+    "source": "web/public/benchmark/gemini-development-pilots.json",
+    "sha256": "18f7648699e4c03c95c85fa26f0b903ff79d1ed966431199ede6b5f8879558ef",
+    "archivedAs": "web__public__benchmark__gemini-development-pilots.json"
+  },
+  {
+    "source": ".orbit/kaggle-pilot-v2/observed-runs.json",
+    "sha256": "c8b8da4ba8ca4e1edfe1e419fe464a76368f1d99948700ede44d924082794e4a",
+    "archivedAs": ".orbit__kaggle-pilot-v2__observed-runs.json"
+  },
+  {
+    "source": ".orbit/kaggle-pilot-v2/manifest.json",
+    "sha256": "0d9f6094b178ba84c86ea16e795ee436ecf74d63232936b19ce4e74ae1afd3f5",
+    "archivedAs": ".orbit__kaggle-pilot-v2__manifest.json"
+  },
+  {
+    "source": ".orbit/kaggle-pilot-v2/orbit-kaggle-pilot.ipynb",
+    "sha256": "4dde63ef8c2fb570c70c6bba5058148c856d163b792ae8a2da14c0a8d9af8772",
+    "archivedAs": ".orbit__kaggle-pilot-v2__orbit-kaggle-pilot.ipynb"
+  },
+  {
+    "source": ".orbit/benchmark-results/webmcp-transport-test.json",
+    "sha256": "1c4c3ecd57229b7e0b9c969fb9b8680942262e5530ff4c6bea96a790eea41211",
+    "archivedAs": ".orbit__benchmark-results__webmcp-transport-test.json"
+  },
+  {
+    "source": ".orbit/benchmark-results/webmcp-transport-test-trace.jsonl",
+    "sha256": "a097445f5b1aa74787750a267933f605e36daa86d1bb5b3427405ff72d35d2fe",
+    "archivedAs": ".orbit__benchmark-results__webmcp-transport-test-trace.jsonl"
+  },
+  {
+    "source": ".orbit/benchmark-results/public-context-cases.json",
+    "sha256": "46445f05b93deaaa3b765be95498faf75ce5a6e66f137aa4ea621fd88c40cd25",
+    "archivedAs": ".orbit__benchmark-results__public-context-cases.json"
+  },
+  {
+    "source": ".orbit/benchmark-results/live-gemini-pilots.json",
+    "sha256": "7835f5ff40b7e0c92e0ff465b255c2ddc8af78d4bd44841692740148f11c5d92",
+    "archivedAs": ".orbit__benchmark-results__live-gemini-pilots.json"
+  },
+  {
+    "source": ".orbit/benchmark-results/live-gemini-report.json",
+    "sha256": "67f5074627ef82b65987e072e3831be1de28a55fa518ce2e44861c6b66f8f513",
+    "archivedAs": ".orbit__benchmark-results__live-gemini-report.json"
+  },
+  {
+    "source": ".orbit/benchmark-results/live-context-provenance.json",
+    "sha256": "146450cc2642847a9991863d33012e92148d455cffca4f5c287e00a7598cacf8",
+    "archivedAs": ".orbit__benchmark-results__live-context-provenance.json"
+  },
+  {
+    "source": ".orbit/benchmark-results/deployment-context-provenance.json",
+    "sha256": "7951a554a08b5fdbee59b71e19389460bc7e8f9976ed8de03b932070da528812",
+    "archivedAs": ".orbit__benchmark-results__deployment-context-provenance.json"
+  },
+  {
+    "source": ".orbit/benchmark-results/live-real-corpus-agents.json",
+    "sha256": "1bbf7cdaa66963744d2820e010f0ba344dee778ab4fabd88e2de182ac7902801",
+    "archivedAs": ".orbit__benchmark-results__live-real-corpus-agents.json"
+  },
+  {
+    "source": ".orbit/benchmark-results/deployment-real-corpus-agents.json",
+    "sha256": "6779e4f9edc0aca8a800b14ed059dc17351bb33499f9e61d701248a7355970ae",
+    "archivedAs": ".orbit__benchmark-results__deployment-real-corpus-agents.json"
+  },
+  {
+    "source": ".orbit/benchmark-results/kb-live-budget-provenance.json",
+    "sha256": "f694e5059f902321d58e6ead514d8519777902cf2c74bb6927744632adafd9da",
+    "archivedAs": ".orbit__benchmark-results__kb-live-budget-provenance.json"
+  },
+  {
+    "source": ".orbit/benchmark-results/webmcp-startup-regression.json",
+    "sha256": "e48d0b0ab47a673e5f63539e23081b1be7a4cab092b68f2b7b75e66004670bc1",
+    "archivedAs": ".orbit__benchmark-results__webmcp-startup-regression.json"
+  },
+  {
+    "source": ".orbit/benchmark-results/webmcp-startup-regression-trace.jsonl",
+    "sha256": "b565c70d4560998211932c77a14da38e3f8a17de96f3b36072a143e00edaaa7f",
+    "archivedAs": ".orbit__benchmark-results__webmcp-startup-regression-trace.jsonl"
+  },
+  {
+    "source": ".orbit/benchmark-results/public-context-provenance.json",
+    "sha256": "ddb7ad5baa1faf15ac15bd0cc652b1894728ce8f91df0710428d6f69d8a460fa",
+    "archivedAs": ".orbit__benchmark-results__public-context-provenance.json"
+  },
+  {
+    "source": ".orbit/benchmark-results/live-context-provenance-ui.json",
+    "sha256": "0e53e83f9d5bde76e99a7a2cfa91f46e4d8c8dd0d69c4c21ad3460f8f0fe0a84",
+    "archivedAs": ".orbit__benchmark-results__live-context-provenance-ui.json"
+  },
+  {
+    "source": ".orbit/benchmark-results/live-context-provenance-ui.jpg",
+    "sha256": "f6f8547f431e849760b29cb2065db9ffaa9ee2de09772ceae984f8d421d07678",
+    "archivedAs": ".orbit__benchmark-results__live-context-provenance-ui.jpg"
+  },
+  {
+    "source": "docs/delivery-2026-09-29/benchmark-pilot/real-corpus-review/review-worksheet.md",
+    "sha256": "1ad4175839022cd65ad171ad0734d85d4e8c9c8fafe3bc7340c57efe6ad462f0",
+    "archivedAs": "docs__delivery-2026-09-29__benchmark-pilot__real-corpus-review__review-worksheet.md"
+  },
+  {
+    "source": "docs/delivery-2026-09-29/benchmark-pilot/real-corpus-review/annotation-template.csv",
+    "sha256": "a91926996041be0fd5d714f5483d1f4e34b9c4b9e9f2f7e28b1ae9c78774d801",
+    "archivedAs": "docs__delivery-2026-09-29__benchmark-pilot__real-corpus-review__annotation-template.csv"
+  },
+  {
+    "source": "docs/delivery-2026-09-29/benchmark-pilot/publication_qa.json",
+    "sha256": "5187607d949a62f80f4da8fb65b75bb79cd8f025b3297805ab1172f78c3c8cc5",
+    "archivedAs": "docs__delivery-2026-09-29__benchmark-pilot__publication_qa.json"
+  },
+  {
+    "source": ".orbit/benchmark-corpus-real-v1/manifest.json",
+    "sha256": "c982bfb87fc4ceb33b12af49377cfe318260d16458d32ed376d1f468f975e351",
+    "archivedAs": ".orbit__benchmark-corpus-real-v1__manifest.json"
+  },
+  {
+    "source": ".orbit/benchmark-corpus-real-v1/documents.json",
+    "sha256": "bea51e4c3ae4512840eb78b05f43546348868f832add9202b915f7a1d4d7d03b",
+    "archivedAs": ".orbit__benchmark-corpus-real-v1__documents.json"
+  },
+  {
+    "source": ".orbit/benchmark-corpus-real-v1/questions.json",
+    "sha256": "844b683e6c3ccb46846f4a5a73f52e1a741ef95810425a9d12332ee4c9f6159e",
+    "archivedAs": ".orbit__benchmark-corpus-real-v1__questions.json"
+  },
+  {
+    "source": "web/public/benchmark/real-corpus-candidates.json",
+    "sha256": "ab52514b90deb24741b0101f7b6f5401f040850063601b668a349b2300362c0c",
+    "archivedAs": "web__public__benchmark__real-corpus-candidates.json"
+  },
+  {
+    "source": "web/public/benchmark/agent-mission-observations.json",
+    "sha256": "7701fbc37874d0440e8a001fb0ab62afbffbd13cbb23c8f26d2193d0643cccdd",
+    "archivedAs": "web__public__benchmark__agent-mission-observations.json"
+  },
+  {
+    "source": "docs/delivery-2026-09-29/benchmark-pilot/orbit-scoped-evidence-pilot-report.pdf",
+    "sha256": "6b7bd5b81ca83da9b69db41760f2f2f6e0e682b79f7d0ef3d9909f1efcaffadd",
+    "archivedAs": "docs__delivery-2026-09-29__benchmark-pilot__orbit-scoped-evidence-pilot-report.pdf"
+  },
+  {
+    "source": ".orbit\\gemini-pilot-v1\\flash-answer-scored.json",
+    "sha256": "81067f24a1e71bcc3497e4b84958fd4c76210708955405d12fede0b9ef7047a2",
+    "archivedAs": ".orbit__gemini-pilot-v1__flash-answer-scored.json"
+  },
+  {
+    "source": ".orbit\\gemini-pilot-v1\\flash-answer.json",
+    "sha256": "ea6341c8a2c314a1b3bcc09f1a5ad52e93dbd74c76b8c4466b2408d9907c8671",
+    "archivedAs": ".orbit__gemini-pilot-v1__flash-answer.json"
+  },
+  {
+    "source": ".orbit\\gemini-pilot-v1\\gemini-3.1-pro-high-cli-answer-scored.json",
+    "sha256": "bdeafa278cae719bc8a74e95213023dccb26bd6c66b226d05eb227d961c4c934",
+    "archivedAs": ".orbit__gemini-pilot-v1__gemini-3.1-pro-high-cli-answer-scored.json"
+  },
+  {
+    "source": ".orbit\\gemini-pilot-v1\\gemini-3.1-pro-high-cli-answer.json",
+    "sha256": "025d23a7e2cb6426101970a86403bc84a52a33dcd091e870f28401d0ad2c3ec0",
+    "archivedAs": ".orbit__gemini-pilot-v1__gemini-3.1-pro-high-cli-answer.json"
+  },
+  {
+    "source": ".orbit\\gemini-pilot-v1\\gemini-3.8-flash-high-cli-answer-scored.json",
+    "sha256": "ae2dd2d4ef99029ca766600fc547c619afc0fcfe370c5e0e6f76ce6782580d22",
+    "archivedAs": ".orbit__gemini-pilot-v1__gemini-3.8-flash-high-cli-answer-scored.json"
+  },
+  {
+    "source": ".orbit\\gemini-pilot-v1\\gemini-3.8-flash-high-cli-answer.json",
+    "sha256": "6d2abc5db545c26cbaae196cf5e08cd3b2e13d10db154d9c73851e07a0c7b267",
+    "archivedAs": ".orbit__gemini-pilot-v1__gemini-3.8-flash-high-cli-answer.json"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w01-gemini-3.8-flash-high\\result.json",
+    "sha256": "1ea58a0bfa22f446c398fb1326e3d83e46d91c0696d279db715cd6f793717334",
+    "archivedAs": ".orbit__benchmark-results__w01-gemini-3.8-flash-high__result.json"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w01-gemini-3.8-flash-high-attempt-2\\result.json",
+    "sha256": "3c18b433200378e43c7df62f5c62a29ca8b213a1ac47a6026ba425e73ad83407",
+    "archivedAs": ".orbit__benchmark-results__w01-gemini-3.8-flash-high-attempt-2__result.json"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w01-json-loop-flash-dev1\\result.json",
+    "sha256": "c5ff78eb1ca3b322533e17fb5785042615ac2dc232cbf80baa25db9f5a246a61",
+    "archivedAs": ".orbit__benchmark-results__w01-json-loop-flash-dev1__result.json"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w01-json-loop-flash-dev2\\result.json",
+    "sha256": "c5ad9e82107ddbc5528878c76c26a46115951c1c5984da10f9c0d7643aa75b76",
+    "archivedAs": ".orbit__benchmark-results__w01-json-loop-flash-dev2__result.json"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w01-json-loop-flash-dev3\\result.json",
+    "sha256": "05c668633e9ab8b40dd9aefd7566012bdd4930e5210d55d95734d6f4ea4265e8",
+    "archivedAs": ".orbit__benchmark-results__w01-json-loop-flash-dev3__result.json"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w01-json-loop-flash-v2\\result.json",
+    "sha256": "e8954e74b4d52bc314232d72fb5fc1c76ea5e97e626ba05148869fdbf00bf503",
+    "archivedAs": ".orbit__benchmark-results__w01-json-loop-flash-v2__result.json"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w01-json-loop-pro-v2\\result.json",
+    "sha256": "ca289e569c572819075bad0b807f8946704039d7c820949710295b7f2e7c9f43",
+    "archivedAs": ".orbit__benchmark-results__w01-json-loop-pro-v2__result.json"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w02-json-loop-flash-v1\\result.json",
+    "sha256": "33c306f6eb3c460feaf263b70f05add5b9468e853c50ba827d12265f2b8a7ac0",
+    "archivedAs": ".orbit__benchmark-results__w02-json-loop-flash-v1__result.json"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w02-json-loop-flash-v2\\result.json",
+    "sha256": "40a55125f2a467d6268e195b7e37fdf57168c5ac5d2b4e2feb8a50e8d7bd7ff9",
+    "archivedAs": ".orbit__benchmark-results__w02-json-loop-flash-v2__result.json"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w02-json-loop-pro-v2\\result.json",
+    "sha256": "49fcec12db6584b23b6712512abdf705683e45d418e4b6a1fd5700fbb0f998f4",
+    "archivedAs": ".orbit__benchmark-results__w02-json-loop-pro-v2__result.json"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w02-json-loop-pro-v3\\result.json",
+    "sha256": "293b8a4fde7c5b98b111f0624f27f460e5f14edb09c700f35e76cea35deb71d2",
+    "archivedAs": ".orbit__benchmark-results__w02-json-loop-pro-v3__result.json"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w02-json-loop-pro-v4\\result.json",
+    "sha256": "ec542240cacb1aff47436cc896b50fed4aec120d6ed1d779d21c6a733b891ce0",
+    "archivedAs": ".orbit__benchmark-results__w02-json-loop-pro-v4__result.json"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w01-gemini-3.8-flash-high\\native-page-trace.jsonl",
+    "sha256": "0d2b631ef0a3102dda79cfc755ee475c42fcaaba77815c876b84ceff7ce6d725",
+    "archivedAs": ".orbit__benchmark-results__w01-gemini-3.8-flash-high__native-page-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w01-gemini-3.8-flash-high-attempt-2\\native-page-trace.jsonl",
+    "sha256": "7f61b446559305fdcb39b351e3bb0be3af0676cb50820d2039929b4aba9e09e6",
+    "archivedAs": ".orbit__benchmark-results__w01-gemini-3.8-flash-high-attempt-2__native-page-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w01-json-loop-flash-dev1\\native-page-trace.jsonl",
+    "sha256": "bd9bc87a5748fbeb120837e5bd0f1a8c96f8188b41e83bcc31507e6dc3acd7ae",
+    "archivedAs": ".orbit__benchmark-results__w01-json-loop-flash-dev1__native-page-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w01-json-loop-flash-dev2\\native-page-trace.jsonl",
+    "sha256": "622a22e4f2b7792a458d4963de987a53019df823c6ae1c35e0d71bda653ba09a",
+    "archivedAs": ".orbit__benchmark-results__w01-json-loop-flash-dev2__native-page-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w01-json-loop-flash-dev3\\native-page-trace.jsonl",
+    "sha256": "6bed176ea29c3b92be31d7ede787fd14ae276c8602df4e7a3ef4a3540790ebd0",
+    "archivedAs": ".orbit__benchmark-results__w01-json-loop-flash-dev3__native-page-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w01-json-loop-flash-v2\\native-page-trace.jsonl",
+    "sha256": "1b2b8230231e943489816e8dc05c9d5091903affa2f1fcfd5eb7d8e3d1b1dbb2",
+    "archivedAs": ".orbit__benchmark-results__w01-json-loop-flash-v2__native-page-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w01-json-loop-pro-v2\\native-page-trace.jsonl",
+    "sha256": "f9748a80b734f877bb6382263938bfd2ae7daa8fd04046bbf1c8fb126cd3a80c",
+    "archivedAs": ".orbit__benchmark-results__w01-json-loop-pro-v2__native-page-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w02-json-loop-flash-v2\\native-page-trace.jsonl",
+    "sha256": "cf263bdd72bbe28ec302cce1dda2c6f20d4a3293e4b33427903518df95e2f69e",
+    "archivedAs": ".orbit__benchmark-results__w02-json-loop-flash-v2__native-page-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w02-json-loop-pro-v2\\native-page-trace.jsonl",
+    "sha256": "b5d641d9420a55cc11d83d203b30cc0e5818f380bbd3bddb3152cf520e4938c3",
+    "archivedAs": ".orbit__benchmark-results__w02-json-loop-pro-v2__native-page-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w02-json-loop-pro-v3\\native-page-trace.jsonl",
+    "sha256": "3cb057bb2cc8ae6a31178b4a3b4b947bf9072a25a49a1a107c5e818bbc99891f",
+    "archivedAs": ".orbit__benchmark-results__w02-json-loop-pro-v3__native-page-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\benchmark-results\\w02-json-loop-pro-v4\\native-page-trace.jsonl",
+    "sha256": "9c6474723bb46562ecb0f875d5400a15a9ae1e04d99a5e08d05fe602fade2973",
+    "archivedAs": ".orbit__benchmark-results__w02-json-loop-pro-v4__native-page-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\antigravity-missions\\w01-fresh-session\\native-page-trace.jsonl",
+    "sha256": "2c0d2fa2574a781ba40ae3cab3cde07751ff8aa3c1efe6fa5351b83881e59f79",
+    "archivedAs": ".orbit__antigravity-missions__w01-fresh-session__native-page-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\antigravity-missions\\w01-fresh-session\\new-project-trace.jsonl",
+    "sha256": "46643ca55bd3f70315e82d23d8e99bf926e35d95008decde67819e8242f8fe17",
+    "archivedAs": ".orbit__antigravity-missions__w01-fresh-session__new-project-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\antigravity-missions\\w01-fresh-session\\registered-trace.jsonl",
+    "sha256": "9b375e91f5a37d0150f6354db79b9a5e8df0f0e6624f6dcf9677b1549a272bc4",
+    "archivedAs": ".orbit__antigravity-missions__w01-fresh-session__registered-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\antigravity-missions\\w01-interactive\\native-page-trace.jsonl",
+    "sha256": "08296899c34ff50da512a793bbf5c7bffc5e55e0b56cd0c609a227c3e7f76679",
+    "archivedAs": ".orbit__antigravity-missions__w01-interactive__native-page-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\antigravity-missions\\w01-interactive\\registered-native-page-trace.jsonl",
+    "sha256": "c8ff48332b0ced4b313651084856e5055d7905f6d8dc4090c8a58c5c18a3f09a",
+    "archivedAs": ".orbit__antigravity-missions__w01-interactive__registered-native-page-trace.jsonl"
+  },
+  {
+    "source": ".orbit\\antigravity-missions\\w01-fresh-session\\pro-new-project-result.json",
+    "sha256": "04cf241754b2ad7571a15af843fb79c0162a17cb37046da6378faf27fc13b4ba",
+    "archivedAs": ".orbit__antigravity-missions__w01-fresh-session__pro-new-project-result.json"
+  }
+]

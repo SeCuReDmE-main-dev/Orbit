@@ -1,0 +1,3192 @@
+[
+  {
+    "taskVersion": {
+      "versionNumber": 1,
+      "name": "Orbit scoped evidence pilot v2",
+      "description": "Development only: scoped decisions, exact passages and a shared TypeScript engine; no calibrated truth score.",
+      "definition": "@kbench.task(name=\"Orbit scoped evidence pilot v2\", description=\"Development only: scoped decisions, exact passages and a shared TypeScript engine; no calibrated truth score.\")\ndef orbit_pilot(llm) -> dict:\n    if not NODE:\n        raise RuntimeError('Shared TypeScript engine requires Node >=20; no divergent Python engine is substituted.')\n    raw = llm.prompt(PROMPT)\n    if raw.strip().startswith('```'):\n        raw = '\\n'.join(raw.strip().splitlines()[1:-1])\n    answer = json.loads(raw)\n    rows = answer['results']\n    kbench.assertions.assert_equal(set(GOLD), {r['questionId'] for r in rows}, expectation='Every question appears exactly once.')\n    kbench.assertions.assert_equal(6, len(rows), expectation='Six distinct questions, without duplicate output.')\n    docs = {d['id']: d for d in PUBLIC['documents']}\n    qs = {q['id']: q for q in PUBLIC['questions']}\n    requests, metadata = [], []\n    for row in rows:\n        q = qs[row['questionId']]\n        kbench.assertions.assert_equal(GOLD[q['id']], row['decision'], expectation='Decision respects the exact question scope: '+q['id'])\n        for e in row['evidence']:\n            kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')\n        d = {'format':'orbit-evidence-v1','id':q['id'],'title':'Synthetic pilot v2','question':q['statement'],'objective':'','context':'','revision':0,'createdAt':'2026-09-29T00:00:00.000Z','updatedAt':'2026-09-29T00:00:00.000Z','axes':[], 'sources':[{'id':x['id'],'title':x['id'],'url':'https://example.org/orbit-pilot/'+x['id'],'status':'read','text':x['text'],'contentHash':hashlib.sha256(x['text'].encode()).hexdigest()} for x in docs.values()], 'claims':[{'id':q['id'],'statement':q['statement'],'kind':'reported','disposition':'indeterminate','scopeAttributes':q['scope'],'evidence':row['evidence']}],'screeningCriteria':[],'sourceDecisions':[],'extractions':[],'knowledgeReads':[],'answer':'','report':'','proposals':[],'reviews':[],'history':[],'example':True}\n        for engine in ('baseline','n','p'):\n            requests.append({'dossier':d,'engine':engine})\n            metadata.append((q['id'],engine))\n    process = subprocess.run([NODE,str(ENGINE_PATH)], input=''.join(json.dumps(x)+'\\n' for x in requests), capture_output=True, text=True, timeout=60)\n    if process.returncode:\n        raise RuntimeError('Shared engine process failed, without scoring a partial output.')\n    calculated = [json.loads(x) for x in process.stdout.splitlines() if x.strip()]\n    kbench.assertions.assert_equal(len(metadata),len(calculated), expectation='Engine returned every evaluation.')\n    evaluations=[]\n    for (qid,engine),result in zip(metadata,calculated):\n        kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)\n        if result['ok']:\n            kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)\n        evaluations.append({'questionId':qid,'engine':engine,**result})\n    return {'status':'development-only','promptSha256':hashlib.sha256(PROMPT.encode()).hexdigest(),'engineSha256':ENGINE_SHA256,'model':getattr(llm,'name',None),'answer':answer,'engineEvaluations':evaluations,'limitations':['Six synthetic development cases; not independent final validation.','Exact quotations do not establish semantic relevance.','Baseline and N share integrity rules; equality is possible.','Host and reasoning budgets differ from Antigravity.']}\n"
+    },
+    "modelVersion": {
+      "slug": "google/gemini-3.8-flash"
+    },
+    "state": "BENCHMARK_TASK_RUN_STATE_COMPLETED",
+    "startTime": "2026-09-30T00:59:50.765996Z",
+    "endTime": "2026-09-30T00:59:58.110640Z",
+    "results": [
+      {
+        "type": "AGGREGATED",
+        "dictResult": {
+          "promptSha256": "785070d61245c64226ad070dff0196b3473edde8644fc333c501342d807e9c5f",
+          "answer": {
+            "results": [
+              {
+                "decision": "ADMIT",
+                "evidence": [
+                  {
+                    "relation": "supports",
+                    "quote": "Aster service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                    "scope": {
+                      "version": "1",
+                      "value": "yes",
+                      "subject": "Aster",
+                      "property": "supported",
+                      "provider": "Test Lab",
+                      "mode": "local",
+                      "product": "Aster service"
+                    },
+                    "sourceId": "d01"
+                  }
+                ],
+                "questionId": "q01",
+                "excluded": [
+                  {
+                    "sourceId": "d02",
+                    "reason": "Does not address batch processing."
+                  }
+                ],
+                "justification": "Direct applicable support is present in d01 without opposing evidence or blocking uncertainties.",
+                "uncertainties": []
+              },
+              {
+                "decision": "REJECT",
+                "evidence": [
+                  {
+                    "relation": "contradicts",
+                    "quote": "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported.",
+                    "scope": {
+                      "version": "1",
+                      "value": "no",
+                      "subject": "Boreal",
+                      "property": "supported",
+                      "provider": "Test Lab",
+                      "mode": "local",
+                      "product": "Boreal service"
+                    },
+                    "sourceId": "d03"
+                  }
+                ],
+                "questionId": "q02",
+                "excluded": [
+                  {
+                    "sourceId": "d04",
+                    "reason": "Does not address batch processing."
+                  }
+                ],
+                "justification": "Direct applicable refutation is present in d03 without supporting evidence.",
+                "uncertainties": []
+              },
+              {
+                "decision": "HOLD",
+                "evidence": [
+                  {
+                    "relation": "supports",
+                    "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                    "scope": {
+                      "version": "1",
+                      "value": "yes",
+                      "subject": "Cygnus",
+                      "property": "supported",
+                      "provider": "Test Lab",
+                      "mode": "local",
+                      "product": "Cygnus service"
+                    },
+                    "sourceId": "d05"
+                  },
+                  {
+                    "relation": "contradicts",
+                    "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other.",
+                    "scope": {
+                      "version": "1",
+                      "value": "no",
+                      "subject": "Cygnus",
+                      "property": "supported",
+                      "provider": "Test Lab",
+                      "mode": "local",
+                      "product": "Cygnus service"
+                    },
+                    "sourceId": "d06"
+                  }
+                ],
+                "questionId": "q03",
+                "excluded": [],
+                "justification": "Applicable passages directly conflict and neither supersedes the other.",
+                "uncertainties": [
+                  "Directly contradictory independent records coexist without precedence."
+                ]
+              },
+              {
+                "decision": "ADMIT",
+                "evidence": [
+                  {
+                    "relation": "supports",
+                    "quote": "Draco service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                    "scope": {
+                      "version": "1",
+                      "value": "yes",
+                      "subject": "Draco",
+                      "property": "supported",
+                      "provider": "Test Lab",
+                      "mode": "local",
+                      "product": "Draco service"
+                    },
+                    "sourceId": "d07"
+                  }
+                ],
+                "questionId": "q04",
+                "excluded": [
+                  {
+                    "sourceId": "d08",
+                    "reason": "Applies strictly to remote mode; a different mode does not constitute a refutation for local mode."
+                  }
+                ],
+                "justification": "Direct applicable support for local mode is provided in d07; d08 governs only remote mode and is inapplicable.",
+                "uncertainties": []
+              },
+              {
+                "decision": "HOLD",
+                "evidence": [
+                  {
+                    "relation": "contextualizes",
+                    "quote": "Equinox service, provider Test Lab, version 1: batch processing is supported. The execution mode is not recorded.",
+                    "scope": {
+                      "version": "1",
+                      "value": "yes",
+                      "subject": "Equinox",
+                      "property": "supported",
+                      "product": "Equinox service",
+                      "provider": "Test Lab"
+                    },
+                    "sourceId": "d09"
+                  },
+                  {
+                    "relation": "contextualizes",
+                    "quote": "Equinox service, provider Test Lab, version 1: local and remote modes are distinct. This note does not specify which mode supports batch processing.",
+                    "sourceId": "d10"
+                  }
+                ],
+                "questionId": "q05",
+                "excluded": [],
+                "justification": "Information is insufficient to determine whether batch processing support applies specifically to local mode.",
+                "uncertainties": [
+                  "Execution mode for batch processing support is unknown, and local and remote modes are distinct."
+                ]
+              },
+              {
+                "decision": "REJECT",
+                "evidence": [
+                  {
+                    "relation": "contradicts",
+                    "quote": "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode.",
+                    "scope": {
+                      "version": "2",
+                      "value": "no",
+                      "subject": "Fornax",
+                      "property": "supported",
+                      "provider": "Test Lab",
+                      "mode": "local",
+                      "product": "Fornax service"
+                    },
+                    "sourceId": "d12"
+                  }
+                ],
+                "questionId": "q06",
+                "excluded": [
+                  {
+                    "sourceId": "d11",
+                    "reason": "Applies to version 1, which is explicitly replaced by version 2 for local mode."
+                  }
+                ],
+                "justification": "Direct applicable refutation for version 2 is present in d12, superseding version 1.",
+                "uncertainties": []
+              }
+            ]
+          },
+          "engineEvaluations": [
+            {
+              "questionId": "q01",
+              "result": [
+                {
+                  "decision": "ADMIT",
+                  "falsity": [],
+                  "reasons": [
+                    "Only eligible supporting passages remain."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d01",
+                      "title": "d01",
+                      "quote": "Aster service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Aster service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d01",
+                      "url": "https://example.org/orbit-pilot/d01"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "claimId": "q01",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "baseline",
+                  "independentSources": 1,
+                  "priority": "supported",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "baseline",
+              "durationMs": 1.0832630000000023,
+              "ok": true
+            },
+            {
+              "questionId": "q01",
+              "result": [
+                {
+                  "decision": "ADMIT",
+                  "falsity": [],
+                  "reasons": [
+                    "Only eligible supporting passages remain."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d01",
+                      "title": "d01",
+                      "quote": "Aster service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Aster service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d01",
+                      "url": "https://example.org/orbit-pilot/d01"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "claimId": "q01",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "n",
+                  "independentSources": 1,
+                  "priority": "supported",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "n",
+              "durationMs": 0.11147499999999866,
+              "ok": true
+            },
+            {
+              "questionId": "q01",
+              "result": [
+                {
+                  "decision": "ADMIT",
+                  "falsity": [],
+                  "reasons": [
+                    "Only eligible supporting passages remain."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d01",
+                      "title": "d01",
+                      "quote": "Aster service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Aster service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d01",
+                      "url": "https://example.org/orbit-pilot/d01"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "claimId": "q01",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "p",
+                  "independentSources": 1,
+                  "priority": "supported",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "p",
+              "durationMs": 0.15218399999999832,
+              "ok": true
+            },
+            {
+              "questionId": "q02",
+              "result": [
+                {
+                  "decision": "REJECT",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d03",
+                      "title": "d03",
+                      "quote": "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported.",
+                      "passages": [
+                        "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported."
+                      ],
+                      "sourceId": "d03",
+                      "url": "https://example.org/orbit-pilot/d03"
+                    }
+                  ],
+                  "reasons": [
+                    "Only eligible refuting passages remain."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [],
+                  "claimId": "q02",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "baseline",
+                  "independentSources": 1,
+                  "priority": "refutation",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "baseline",
+              "durationMs": 0.09695500000000123,
+              "ok": true
+            },
+            {
+              "questionId": "q02",
+              "result": [
+                {
+                  "decision": "REJECT",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d03",
+                      "title": "d03",
+                      "quote": "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported.",
+                      "passages": [
+                        "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported."
+                      ],
+                      "sourceId": "d03",
+                      "url": "https://example.org/orbit-pilot/d03"
+                    }
+                  ],
+                  "reasons": [
+                    "Only eligible refuting passages remain."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [],
+                  "claimId": "q02",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "n",
+                  "independentSources": 1,
+                  "priority": "refutation",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "n",
+              "durationMs": 1.287581000000003,
+              "ok": true
+            },
+            {
+              "questionId": "q02",
+              "result": [
+                {
+                  "decision": "REJECT",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d03",
+                      "title": "d03",
+                      "quote": "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported.",
+                      "passages": [
+                        "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported."
+                      ],
+                      "sourceId": "d03",
+                      "url": "https://example.org/orbit-pilot/d03"
+                    }
+                  ],
+                  "reasons": [
+                    "Only eligible refuting passages remain."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [],
+                  "claimId": "q02",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "p",
+                  "independentSources": 1,
+                  "priority": "refutation",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "p",
+              "durationMs": 0.1834309999999988,
+              "ok": true
+            },
+            {
+              "questionId": "q03",
+              "result": [
+                {
+                  "decision": "HOLD",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d06",
+                      "title": "d06",
+                      "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other.",
+                      "passages": [
+                        "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other."
+                      ],
+                      "sourceId": "d06",
+                      "url": "https://example.org/orbit-pilot/d06"
+                    }
+                  ],
+                  "reasons": [
+                    "Supporting and refuting passages coexist under the recorded scope."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d05",
+                      "title": "d05",
+                      "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d05",
+                      "url": "https://example.org/orbit-pilot/d05"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "hold": {
+                    "missing": [
+                      "Explain or adjudicate the opposing same-scope passages."
+                    ],
+                    "maxAdditionalRequests": 2,
+                    "resumeWhen": "Supply the missing passage, scope or reviewed distinction, then rerun against the new revision."
+                  },
+                  "claimId": "q03",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "baseline",
+                  "independentSources": 2,
+                  "priority": "same-scope-conflict",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "baseline",
+              "durationMs": 13.918962,
+              "ok": true
+            },
+            {
+              "questionId": "q03",
+              "result": [
+                {
+                  "decision": "HOLD",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d06",
+                      "title": "d06",
+                      "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other.",
+                      "passages": [
+                        "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other."
+                      ],
+                      "sourceId": "d06",
+                      "url": "https://example.org/orbit-pilot/d06"
+                    }
+                  ],
+                  "reasons": [
+                    "Supporting and refuting passages coexist under the recorded scope."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d05",
+                      "title": "d05",
+                      "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d05",
+                      "url": "https://example.org/orbit-pilot/d05"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "hold": {
+                    "missing": [
+                      "Explain or adjudicate the opposing same-scope passages."
+                    ],
+                    "maxAdditionalRequests": 2,
+                    "resumeWhen": "Supply the missing passage, scope or reviewed distinction, then rerun against the new revision."
+                  },
+                  "claimId": "q03",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "n",
+                  "independentSources": 2,
+                  "priority": "same-scope-conflict",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "n",
+              "durationMs": 0.2556279999999944,
+              "ok": true
+            },
+            {
+              "questionId": "q03",
+              "result": [
+                {
+                  "decision": "HOLD",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d06",
+                      "title": "d06",
+                      "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other.",
+                      "passages": [
+                        "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other."
+                      ],
+                      "sourceId": "d06",
+                      "url": "https://example.org/orbit-pilot/d06"
+                    }
+                  ],
+                  "reasons": [
+                    "Supporting and refuting passages coexist under the recorded scope."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d05",
+                      "title": "d05",
+                      "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d05",
+                      "url": "https://example.org/orbit-pilot/d05"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "hold": {
+                    "missing": [
+                      "Explain or adjudicate the opposing same-scope passages."
+                    ],
+                    "maxAdditionalRequests": 2,
+                    "resumeWhen": "Supply the missing passage, scope or reviewed distinction, then rerun against the new revision."
+                  },
+                  "claimId": "q03",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "p",
+                  "independentSources": 2,
+                  "priority": "same-scope-conflict",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "p",
+              "durationMs": 0.10446499999999048,
+              "ok": true
+            },
+            {
+              "questionId": "q04",
+              "result": [
+                {
+                  "decision": "ADMIT",
+                  "falsity": [],
+                  "reasons": [
+                    "Only eligible supporting passages remain."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d07",
+                      "title": "d07",
+                      "quote": "Draco service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Draco service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d07",
+                      "url": "https://example.org/orbit-pilot/d07"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "claimId": "q04",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "baseline",
+                  "independentSources": 1,
+                  "priority": "supported",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "baseline",
+              "durationMs": 0.07995999999999981,
+              "ok": true
+            },
+            {
+              "questionId": "q04",
+              "result": [
+                {
+                  "decision": "ADMIT",
+                  "falsity": [],
+                  "reasons": [
+                    "Only eligible supporting passages remain."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d07",
+                      "title": "d07",
+                      "quote": "Draco service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Draco service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d07",
+                      "url": "https://example.org/orbit-pilot/d07"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "claimId": "q04",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "n",
+                  "independentSources": 1,
+                  "priority": "supported",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "n",
+              "durationMs": 0.0433050000000037,
+              "ok": true
+            },
+            {
+              "questionId": "q04",
+              "result": [
+                {
+                  "decision": "ADMIT",
+                  "falsity": [],
+                  "reasons": [
+                    "Only eligible supporting passages remain."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d07",
+                      "title": "d07",
+                      "quote": "Draco service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Draco service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d07",
+                      "url": "https://example.org/orbit-pilot/d07"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "claimId": "q04",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "p",
+                  "independentSources": 1,
+                  "priority": "supported",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "p",
+              "durationMs": 0.039893000000006396,
+              "ok": true
+            },
+            {
+              "questionId": "q05",
+              "result": [
+                {
+                  "decision": "HOLD",
+                  "falsity": [],
+                  "reasons": [
+                    "scope-mismatch: d09 ne porte pas sur le même périmètre structuré.",
+                    "evidence-scope-missing: La portée du passage de d10 est absente."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [
+                    {
+                      "message": "d09 ne porte pas sur le même périmètre structuré.",
+                      "sourceId": "d09",
+                      "code": "scope-mismatch"
+                    },
+                    {
+                      "message": "La portée du passage de d10 est absente.",
+                      "sourceId": "d10",
+                      "code": "evidence-scope-missing"
+                    }
+                  ],
+                  "hold": {
+                    "missing": [
+                      "d09 ne porte pas sur le même périmètre structuré.",
+                      "La portée du passage de d10 est absente."
+                    ],
+                    "maxAdditionalRequests": 2,
+                    "resumeWhen": "Supply the missing passage, scope or reviewed distinction, then rerun against the new revision."
+                  },
+                  "claimId": "q05",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "baseline",
+                  "independentSources": 0,
+                  "priority": "indeterminate",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "baseline",
+              "durationMs": 0.19544500000000653,
+              "ok": true
+            },
+            {
+              "questionId": "q05",
+              "result": [
+                {
+                  "decision": "HOLD",
+                  "falsity": [],
+                  "reasons": [
+                    "scope-mismatch: d09 ne porte pas sur le même périmètre structuré.",
+                    "evidence-scope-missing: La portée du passage de d10 est absente."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [
+                    {
+                      "message": "d09 ne porte pas sur le même périmètre structuré.",
+                      "sourceId": "d09",
+                      "code": "scope-mismatch"
+                    },
+                    {
+                      "message": "La portée du passage de d10 est absente.",
+                      "sourceId": "d10",
+                      "code": "evidence-scope-missing"
+                    }
+                  ],
+                  "hold": {
+                    "missing": [
+                      "d09 ne porte pas sur le même périmètre structuré.",
+                      "La portée du passage de d10 est absente."
+                    ],
+                    "maxAdditionalRequests": 2,
+                    "resumeWhen": "Supply the missing passage, scope or reviewed distinction, then rerun against the new revision."
+                  },
+                  "claimId": "q05",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "n",
+                  "independentSources": 0,
+                  "priority": "indeterminate",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "n",
+              "durationMs": 0.06462499999999238,
+              "ok": true
+            },
+            {
+              "questionId": "q05",
+              "result": [
+                {
+                  "decision": "HOLD",
+                  "falsity": [],
+                  "reasons": [
+                    "scope-mismatch: d09 ne porte pas sur le même périmètre structuré.",
+                    "evidence-scope-missing: La portée du passage de d10 est absente."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [
+                    {
+                      "message": "d09 ne porte pas sur le même périmètre structuré.",
+                      "sourceId": "d09",
+                      "code": "scope-mismatch"
+                    },
+                    {
+                      "message": "La portée du passage de d10 est absente.",
+                      "sourceId": "d10",
+                      "code": "evidence-scope-missing"
+                    }
+                  ],
+                  "hold": {
+                    "missing": [
+                      "d09 ne porte pas sur le même périmètre structuré.",
+                      "La portée du passage de d10 est absente."
+                    ],
+                    "maxAdditionalRequests": 2,
+                    "resumeWhen": "Supply the missing passage, scope or reviewed distinction, then rerun against the new revision."
+                  },
+                  "claimId": "q05",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "p",
+                  "independentSources": 0,
+                  "priority": "indeterminate",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "p",
+              "durationMs": 0.04831399999999064,
+              "ok": true
+            },
+            {
+              "questionId": "q06",
+              "result": [
+                {
+                  "decision": "REJECT",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d12",
+                      "title": "d12",
+                      "quote": "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode.",
+                      "passages": [
+                        "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode."
+                      ],
+                      "sourceId": "d12",
+                      "url": "https://example.org/orbit-pilot/d12"
+                    }
+                  ],
+                  "reasons": [
+                    "Only eligible refuting passages remain."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [],
+                  "claimId": "q06",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "baseline",
+                  "independentSources": 1,
+                  "priority": "refutation",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "baseline",
+              "durationMs": 0.050651999999999475,
+              "ok": true
+            },
+            {
+              "questionId": "q06",
+              "result": [
+                {
+                  "decision": "REJECT",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d12",
+                      "title": "d12",
+                      "quote": "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode.",
+                      "passages": [
+                        "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode."
+                      ],
+                      "sourceId": "d12",
+                      "url": "https://example.org/orbit-pilot/d12"
+                    }
+                  ],
+                  "reasons": [
+                    "Only eligible refuting passages remain."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [],
+                  "claimId": "q06",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "n",
+                  "independentSources": 1,
+                  "priority": "refutation",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "n",
+              "durationMs": 0.07607000000000141,
+              "ok": true
+            },
+            {
+              "questionId": "q06",
+              "result": [
+                {
+                  "decision": "REJECT",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d12",
+                      "title": "d12",
+                      "quote": "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode.",
+                      "passages": [
+                        "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode."
+                      ],
+                      "sourceId": "d12",
+                      "url": "https://example.org/orbit-pilot/d12"
+                    }
+                  ],
+                  "reasons": [
+                    "Only eligible refuting passages remain."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [],
+                  "claimId": "q06",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "p",
+                  "independentSources": 1,
+                  "priority": "refutation",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "p",
+              "durationMs": 0.035061999999996374,
+              "ok": true
+            }
+          ],
+          "engineSha256": "886f7cf3fbfcb445f4c1af7ebf1d3f8cb581964fe20d3bce706e8b4f4b880bd9",
+          "model": "google/gemini-3.8-flash",
+          "status": "development-only",
+          "limitations": [
+            "Six synthetic development cases; not independent final validation.",
+            "Exact quotations do not establish semantic relevance.",
+            "Baseline and N share integrity rules; equality is possible.",
+            "Host and reasoning budgets differ from Antigravity."
+          ]
+        }
+      }
+    ],
+    "assertions": [
+      {
+        "expectation": "Every question appears exactly once.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 44,
+        "definition": "kbench.assertions.assert_equal(set(GOLD), {r['questionId'] for r in rows}, expectation='Every question appears exactly once.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Six distinct questions, without duplicate output.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 45,
+        "definition": "kbench.assertions.assert_equal(6, len(rows), expectation='Six distinct questions, without duplicate output.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Decision respects the exact question scope: q01",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 51,
+        "definition": "kbench.assertions.assert_equal(GOLD[q['id']], row['decision'], expectation='Decision respects the exact question scope: '+q['id'])",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Decision respects the exact question scope: q02",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 51,
+        "definition": "kbench.assertions.assert_equal(GOLD[q['id']], row['decision'], expectation='Decision respects the exact question scope: '+q['id'])",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Decision respects the exact question scope: q03",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 51,
+        "definition": "kbench.assertions.assert_equal(GOLD[q['id']], row['decision'], expectation='Decision respects the exact question scope: '+q['id'])",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Decision respects the exact question scope: q04",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 51,
+        "definition": "kbench.assertions.assert_equal(GOLD[q['id']], row['decision'], expectation='Decision respects the exact question scope: '+q['id'])",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Decision respects the exact question scope: q05",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 51,
+        "definition": "kbench.assertions.assert_equal(GOLD[q['id']], row['decision'], expectation='Decision respects the exact question scope: '+q['id'])",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Decision respects the exact question scope: q06",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 51,
+        "definition": "kbench.assertions.assert_equal(GOLD[q['id']], row['decision'], expectation='Decision respects the exact question scope: '+q['id'])",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Engine returned every evaluation.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 62,
+        "definition": "kbench.assertions.assert_equal(len(metadata),len(calculated), expectation='Engine returned every evaluation.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q01",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: baseline/q01",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q01",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: n/q01",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q01",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: p/q01",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q02",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: baseline/q02",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q02",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: n/q02",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q02",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: p/q02",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q03",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: baseline/q03",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q03",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: n/q03",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q03",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: p/q03",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q04",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: baseline/q04",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q04",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: n/q04",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q04",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: p/q04",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q05",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: baseline/q05",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q05",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: n/q05",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q05",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: p/q05",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q06",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: baseline/q06",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q06",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: n/q06",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q06",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: p/q06",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-2ca3b49d",
+            "requestId": "Orbit scoped evidence pilot v2-2ca3b49d-req-1"
+          }
+        ]
+      }
+    ],
+    "artifactName": "Orbit_scoped_evidence_pilot_v2-run_id_Run_1_google_gemini-3.8-flash.run.json",
+    "observedUsage": {
+      "task_name": "Orbit scoped evidence pilot v2",
+      "trial_name": "Orbit scoped evidence pilot v2-Run #1",
+      "trial_uri": "kbench://not-a-harbor-trial",
+      "task_id": {
+        "path": "kbench://not-a-harbor-task"
+      },
+      "task_checksum": "unknown (kbench)",
+      "config": {
+        "task": {
+          "path": "kbench://not-a-harbor-task"
+        }
+      },
+      "agent_info": {
+        "name": "kaggle-benchmarks",
+        "version": "0.6.1",
+        "model_info": {
+          "name": "google/gemini-3.8-flash"
+        }
+      },
+      "agent_result": {
+        "n_input_tokens": 1147,
+        "n_output_tokens": 2173,
+        "cost_usd": 0.009009
+      },
+      "started_at": "2026-09-30T00:59:50.765996Z",
+      "finished_at": "2026-09-30T00:59:58.110640Z"
+    }
+  },
+  {
+    "taskVersion": {
+      "versionNumber": 1,
+      "name": "Orbit scoped evidence pilot v2",
+      "description": "Development only: scoped decisions, exact passages and a shared TypeScript engine; no calibrated truth score.",
+      "definition": "@kbench.task(name=\"Orbit scoped evidence pilot v2\", description=\"Development only: scoped decisions, exact passages and a shared TypeScript engine; no calibrated truth score.\")\ndef orbit_pilot(llm) -> dict:\n    if not NODE:\n        raise RuntimeError('Shared TypeScript engine requires Node >=20; no divergent Python engine is substituted.')\n    raw = llm.prompt(PROMPT)\n    if raw.strip().startswith('```'):\n        raw = '\\n'.join(raw.strip().splitlines()[1:-1])\n    answer = json.loads(raw)\n    rows = answer['results']\n    kbench.assertions.assert_equal(set(GOLD), {r['questionId'] for r in rows}, expectation='Every question appears exactly once.')\n    kbench.assertions.assert_equal(6, len(rows), expectation='Six distinct questions, without duplicate output.')\n    docs = {d['id']: d for d in PUBLIC['documents']}\n    qs = {q['id']: q for q in PUBLIC['questions']}\n    requests, metadata = [], []\n    for row in rows:\n        q = qs[row['questionId']]\n        kbench.assertions.assert_equal(GOLD[q['id']], row['decision'], expectation='Decision respects the exact question scope: '+q['id'])\n        for e in row['evidence']:\n            kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')\n        d = {'format':'orbit-evidence-v1','id':q['id'],'title':'Synthetic pilot v2','question':q['statement'],'objective':'','context':'','revision':0,'createdAt':'2026-09-29T00:00:00.000Z','updatedAt':'2026-09-29T00:00:00.000Z','axes':[], 'sources':[{'id':x['id'],'title':x['id'],'url':'https://example.org/orbit-pilot/'+x['id'],'status':'read','text':x['text'],'contentHash':hashlib.sha256(x['text'].encode()).hexdigest()} for x in docs.values()], 'claims':[{'id':q['id'],'statement':q['statement'],'kind':'reported','disposition':'indeterminate','scopeAttributes':q['scope'],'evidence':row['evidence']}],'screeningCriteria':[],'sourceDecisions':[],'extractions':[],'knowledgeReads':[],'answer':'','report':'','proposals':[],'reviews':[],'history':[],'example':True}\n        for engine in ('baseline','n','p'):\n            requests.append({'dossier':d,'engine':engine})\n            metadata.append((q['id'],engine))\n    process = subprocess.run([NODE,str(ENGINE_PATH)], input=''.join(json.dumps(x)+'\\n' for x in requests), capture_output=True, text=True, timeout=60)\n    if process.returncode:\n        raise RuntimeError('Shared engine process failed, without scoring a partial output.')\n    calculated = [json.loads(x) for x in process.stdout.splitlines() if x.strip()]\n    kbench.assertions.assert_equal(len(metadata),len(calculated), expectation='Engine returned every evaluation.')\n    evaluations=[]\n    for (qid,engine),result in zip(metadata,calculated):\n        kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)\n        if result['ok']:\n            kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)\n        evaluations.append({'questionId':qid,'engine':engine,**result})\n    return {'status':'development-only','promptSha256':hashlib.sha256(PROMPT.encode()).hexdigest(),'engineSha256':ENGINE_SHA256,'model':getattr(llm,'name',None),'answer':answer,'engineEvaluations':evaluations,'limitations':['Six synthetic development cases; not independent final validation.','Exact quotations do not establish semantic relevance.','Baseline and N share integrity rules; equality is possible.','Host and reasoning budgets differ from Antigravity.']}\n"
+    },
+    "modelVersion": {
+      "slug": "google/gemini-3.1-pro-preview"
+    },
+    "state": "BENCHMARK_TASK_RUN_STATE_COMPLETED",
+    "startTime": "2026-09-30T00:59:58.129989Z",
+    "endTime": "2026-09-30T01:00:31.080826Z",
+    "results": [
+      {
+        "type": "AGGREGATED",
+        "dictResult": {
+          "promptSha256": "785070d61245c64226ad070dff0196b3473edde8644fc333c501342d807e9c5f",
+          "answer": {
+            "results": [
+              {
+                "decision": "ADMIT",
+                "evidence": [
+                  {
+                    "relation": "supports",
+                    "quote": "Aster service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                    "scope": {
+                      "version": "1",
+                      "value": "yes",
+                      "subject": "Aster",
+                      "property": "supported",
+                      "provider": "Test Lab",
+                      "mode": "local",
+                      "product": "Aster service"
+                    },
+                    "sourceId": "d01"
+                  }
+                ],
+                "questionId": "q01",
+                "excluded": [
+                  {
+                    "sourceId": "d02",
+                    "reason": "Does not contain any statement about batch processing."
+                  }
+                ],
+                "justification": "The document provides direct applicable support stating Aster supports batch processing in local mode version 1.",
+                "uncertainties": []
+              },
+              {
+                "decision": "REJECT",
+                "evidence": [
+                  {
+                    "relation": "contradicts",
+                    "quote": "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported.",
+                    "scope": {
+                      "version": "1",
+                      "value": "no",
+                      "subject": "Boreal",
+                      "property": "supported",
+                      "provider": "Test Lab",
+                      "mode": "local",
+                      "product": "Boreal service"
+                    },
+                    "sourceId": "d03"
+                  }
+                ],
+                "questionId": "q02",
+                "excluded": [
+                  {
+                    "sourceId": "d04",
+                    "reason": "Irrelevant statement about the user interface."
+                  }
+                ],
+                "justification": "The document explicitly refutes the statement by noting that Boreal does not support batch processing in local mode version 1.",
+                "uncertainties": []
+              },
+              {
+                "decision": "HOLD",
+                "evidence": [
+                  {
+                    "relation": "supports",
+                    "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                    "scope": {
+                      "version": "1",
+                      "value": "yes",
+                      "subject": "Cygnus",
+                      "property": "supported",
+                      "provider": "Test Lab",
+                      "mode": "local",
+                      "product": "Cygnus service"
+                    },
+                    "sourceId": "d05"
+                  },
+                  {
+                    "relation": "contradicts",
+                    "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other.",
+                    "scope": {
+                      "version": "1",
+                      "value": "no",
+                      "subject": "Cygnus",
+                      "property": "supported",
+                      "provider": "Test Lab",
+                      "mode": "local",
+                      "product": "Cygnus service"
+                    },
+                    "sourceId": "d06"
+                  }
+                ],
+                "questionId": "q03",
+                "excluded": [],
+                "justification": "There is unresolvable conflict between independent notes stating that batch processing is both supported and not supported.",
+                "uncertainties": [
+                  "Conflicting statements exist without a resolution or priority."
+                ]
+              },
+              {
+                "decision": "ADMIT",
+                "evidence": [
+                  {
+                    "relation": "supports",
+                    "quote": "Draco service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                    "scope": {
+                      "version": "1",
+                      "value": "yes",
+                      "subject": "Draco",
+                      "property": "supported",
+                      "provider": "Test Lab",
+                      "mode": "local",
+                      "product": "Draco service"
+                    },
+                    "sourceId": "d07"
+                  }
+                ],
+                "questionId": "q04",
+                "excluded": [
+                  {
+                    "sourceId": "d08",
+                    "reason": "Applies exclusively to remote mode, which does not refute local mode."
+                  }
+                ],
+                "justification": "The text directly supports batch processing in local mode, and the differing remote mode is not an applicable refutation.",
+                "uncertainties": []
+              },
+              {
+                "decision": "HOLD",
+                "evidence": [
+                  {
+                    "relation": "contextualizes",
+                    "quote": "Equinox service, provider Test Lab, version 1: batch processing is supported. The execution mode is not recorded.",
+                    "scope": {
+                      "version": "1",
+                      "value": "yes",
+                      "subject": "Equinox",
+                      "property": "supported",
+                      "product": "Equinox service",
+                      "provider": "Test Lab"
+                    },
+                    "sourceId": "d09"
+                  },
+                  {
+                    "relation": "contextualizes",
+                    "quote": "Equinox service, provider Test Lab, version 1: local and remote modes are distinct. This note does not specify which mode supports batch processing.",
+                    "sourceId": "d10"
+                  }
+                ],
+                "questionId": "q05",
+                "excluded": [],
+                "justification": "Support for batch processing is confirmed for version 1, but the execution mode is explicitly not recorded, leaving insufficient information for local mode.",
+                "uncertainties": [
+                  "The execution mode for Equinox's batch processing support is unrecorded and therefore unknown."
+                ]
+              },
+              {
+                "decision": "REJECT",
+                "evidence": [
+                  {
+                    "relation": "contradicts",
+                    "quote": "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode.",
+                    "scope": {
+                      "version": "2",
+                      "value": "no",
+                      "subject": "Fornax",
+                      "property": "supported",
+                      "provider": "Test Lab",
+                      "mode": "local",
+                      "product": "Fornax service"
+                    },
+                    "sourceId": "d12"
+                  }
+                ],
+                "questionId": "q06",
+                "excluded": [
+                  {
+                    "sourceId": "d11",
+                    "reason": "Applies to version 1, which is explicitly replaced by version 2 for local mode and therefore inapplicable to this question."
+                  }
+                ],
+                "justification": "The document explicitly refutes the statement, noting that version 2 explicitly replaces version 1 and states batch processing is not supported for local mode.",
+                "uncertainties": []
+              }
+            ]
+          },
+          "engineEvaluations": [
+            {
+              "questionId": "q01",
+              "result": [
+                {
+                  "decision": "ADMIT",
+                  "falsity": [],
+                  "reasons": [
+                    "Only eligible supporting passages remain."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d01",
+                      "title": "d01",
+                      "quote": "Aster service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Aster service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d01",
+                      "url": "https://example.org/orbit-pilot/d01"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "claimId": "q01",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "baseline",
+                  "independentSources": 1,
+                  "priority": "supported",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "baseline",
+              "durationMs": 1.0685919999999953,
+              "ok": true
+            },
+            {
+              "questionId": "q01",
+              "result": [
+                {
+                  "decision": "ADMIT",
+                  "falsity": [],
+                  "reasons": [
+                    "Only eligible supporting passages remain."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d01",
+                      "title": "d01",
+                      "quote": "Aster service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Aster service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d01",
+                      "url": "https://example.org/orbit-pilot/d01"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "claimId": "q01",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "n",
+                  "independentSources": 1,
+                  "priority": "supported",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "n",
+              "durationMs": 0.09701600000000354,
+              "ok": true
+            },
+            {
+              "questionId": "q01",
+              "result": [
+                {
+                  "decision": "ADMIT",
+                  "falsity": [],
+                  "reasons": [
+                    "Only eligible supporting passages remain."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d01",
+                      "title": "d01",
+                      "quote": "Aster service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Aster service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d01",
+                      "url": "https://example.org/orbit-pilot/d01"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "claimId": "q01",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "p",
+                  "independentSources": 1,
+                  "priority": "supported",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "p",
+              "durationMs": 0.16314999999999458,
+              "ok": true
+            },
+            {
+              "questionId": "q02",
+              "result": [
+                {
+                  "decision": "REJECT",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d03",
+                      "title": "d03",
+                      "quote": "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported.",
+                      "passages": [
+                        "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported."
+                      ],
+                      "sourceId": "d03",
+                      "url": "https://example.org/orbit-pilot/d03"
+                    }
+                  ],
+                  "reasons": [
+                    "Only eligible refuting passages remain."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [],
+                  "claimId": "q02",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "baseline",
+                  "independentSources": 1,
+                  "priority": "refutation",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "baseline",
+              "durationMs": 0.13080200000000275,
+              "ok": true
+            },
+            {
+              "questionId": "q02",
+              "result": [
+                {
+                  "decision": "REJECT",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d03",
+                      "title": "d03",
+                      "quote": "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported.",
+                      "passages": [
+                        "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported."
+                      ],
+                      "sourceId": "d03",
+                      "url": "https://example.org/orbit-pilot/d03"
+                    }
+                  ],
+                  "reasons": [
+                    "Only eligible refuting passages remain."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [],
+                  "claimId": "q02",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "n",
+                  "independentSources": 1,
+                  "priority": "refutation",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "n",
+              "durationMs": 1.4506340000000009,
+              "ok": true
+            },
+            {
+              "questionId": "q02",
+              "result": [
+                {
+                  "decision": "REJECT",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d03",
+                      "title": "d03",
+                      "quote": "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported.",
+                      "passages": [
+                        "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported."
+                      ],
+                      "sourceId": "d03",
+                      "url": "https://example.org/orbit-pilot/d03"
+                    }
+                  ],
+                  "reasons": [
+                    "Only eligible refuting passages remain."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [],
+                  "claimId": "q02",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "p",
+                  "independentSources": 1,
+                  "priority": "refutation",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "p",
+              "durationMs": 0.2709949999999992,
+              "ok": true
+            },
+            {
+              "questionId": "q03",
+              "result": [
+                {
+                  "decision": "HOLD",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d06",
+                      "title": "d06",
+                      "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other.",
+                      "passages": [
+                        "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other."
+                      ],
+                      "sourceId": "d06",
+                      "url": "https://example.org/orbit-pilot/d06"
+                    }
+                  ],
+                  "reasons": [
+                    "Supporting and refuting passages coexist under the recorded scope."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d05",
+                      "title": "d05",
+                      "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d05",
+                      "url": "https://example.org/orbit-pilot/d05"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "hold": {
+                    "missing": [
+                      "Explain or adjudicate the opposing same-scope passages."
+                    ],
+                    "maxAdditionalRequests": 2,
+                    "resumeWhen": "Supply the missing passage, scope or reviewed distinction, then rerun against the new revision."
+                  },
+                  "claimId": "q03",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "baseline",
+                  "independentSources": 2,
+                  "priority": "same-scope-conflict",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "baseline",
+              "durationMs": 14.742853999999994,
+              "ok": true
+            },
+            {
+              "questionId": "q03",
+              "result": [
+                {
+                  "decision": "HOLD",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d06",
+                      "title": "d06",
+                      "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other.",
+                      "passages": [
+                        "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other."
+                      ],
+                      "sourceId": "d06",
+                      "url": "https://example.org/orbit-pilot/d06"
+                    }
+                  ],
+                  "reasons": [
+                    "Supporting and refuting passages coexist under the recorded scope."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d05",
+                      "title": "d05",
+                      "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d05",
+                      "url": "https://example.org/orbit-pilot/d05"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "hold": {
+                    "missing": [
+                      "Explain or adjudicate the opposing same-scope passages."
+                    ],
+                    "maxAdditionalRequests": 2,
+                    "resumeWhen": "Supply the missing passage, scope or reviewed distinction, then rerun against the new revision."
+                  },
+                  "claimId": "q03",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "n",
+                  "independentSources": 2,
+                  "priority": "same-scope-conflict",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "n",
+              "durationMs": 0.22561699999999973,
+              "ok": true
+            },
+            {
+              "questionId": "q03",
+              "result": [
+                {
+                  "decision": "HOLD",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d06",
+                      "title": "d06",
+                      "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other.",
+                      "passages": [
+                        "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other."
+                      ],
+                      "sourceId": "d06",
+                      "url": "https://example.org/orbit-pilot/d06"
+                    }
+                  ],
+                  "reasons": [
+                    "Supporting and refuting passages coexist under the recorded scope."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d05",
+                      "title": "d05",
+                      "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d05",
+                      "url": "https://example.org/orbit-pilot/d05"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "hold": {
+                    "missing": [
+                      "Explain or adjudicate the opposing same-scope passages."
+                    ],
+                    "maxAdditionalRequests": 2,
+                    "resumeWhen": "Supply the missing passage, scope or reviewed distinction, then rerun against the new revision."
+                  },
+                  "claimId": "q03",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "p",
+                  "independentSources": 2,
+                  "priority": "same-scope-conflict",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "p",
+              "durationMs": 0.10802300000000287,
+              "ok": true
+            },
+            {
+              "questionId": "q04",
+              "result": [
+                {
+                  "decision": "ADMIT",
+                  "falsity": [],
+                  "reasons": [
+                    "Only eligible supporting passages remain."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d07",
+                      "title": "d07",
+                      "quote": "Draco service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Draco service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d07",
+                      "url": "https://example.org/orbit-pilot/d07"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "claimId": "q04",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "baseline",
+                  "independentSources": 1,
+                  "priority": "supported",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "baseline",
+              "durationMs": 0.07153300000000229,
+              "ok": true
+            },
+            {
+              "questionId": "q04",
+              "result": [
+                {
+                  "decision": "ADMIT",
+                  "falsity": [],
+                  "reasons": [
+                    "Only eligible supporting passages remain."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d07",
+                      "title": "d07",
+                      "quote": "Draco service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Draco service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d07",
+                      "url": "https://example.org/orbit-pilot/d07"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "claimId": "q04",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "n",
+                  "independentSources": 1,
+                  "priority": "supported",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "n",
+              "durationMs": 0.05079700000000287,
+              "ok": true
+            },
+            {
+              "questionId": "q04",
+              "result": [
+                {
+                  "decision": "ADMIT",
+                  "falsity": [],
+                  "reasons": [
+                    "Only eligible supporting passages remain."
+                  ],
+                  "truth": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d07",
+                      "title": "d07",
+                      "quote": "Draco service, provider Test Lab, local mode, version 1: batch processing is supported.",
+                      "passages": [
+                        "Draco service, provider Test Lab, local mode, version 1: batch processing is supported."
+                      ],
+                      "sourceId": "d07",
+                      "url": "https://example.org/orbit-pilot/d07"
+                    }
+                  ],
+                  "indeterminacy": [],
+                  "claimId": "q04",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "p",
+                  "independentSources": 1,
+                  "priority": "supported",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "p",
+              "durationMs": 0.05319300000000737,
+              "ok": true
+            },
+            {
+              "questionId": "q05",
+              "result": [
+                {
+                  "decision": "HOLD",
+                  "falsity": [],
+                  "reasons": [
+                    "scope-mismatch: d09 ne porte pas sur le même périmètre structuré.",
+                    "evidence-scope-missing: La portée du passage de d10 est absente."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [
+                    {
+                      "message": "d09 ne porte pas sur le même périmètre structuré.",
+                      "sourceId": "d09",
+                      "code": "scope-mismatch"
+                    },
+                    {
+                      "message": "La portée du passage de d10 est absente.",
+                      "sourceId": "d10",
+                      "code": "evidence-scope-missing"
+                    }
+                  ],
+                  "hold": {
+                    "missing": [
+                      "d09 ne porte pas sur le même périmètre structuré.",
+                      "La portée du passage de d10 est absente."
+                    ],
+                    "maxAdditionalRequests": 2,
+                    "resumeWhen": "Supply the missing passage, scope or reviewed distinction, then rerun against the new revision."
+                  },
+                  "claimId": "q05",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "baseline",
+                  "independentSources": 0,
+                  "priority": "indeterminate",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "baseline",
+              "durationMs": 0.1940400000000011,
+              "ok": true
+            },
+            {
+              "questionId": "q05",
+              "result": [
+                {
+                  "decision": "HOLD",
+                  "falsity": [],
+                  "reasons": [
+                    "scope-mismatch: d09 ne porte pas sur le même périmètre structuré.",
+                    "evidence-scope-missing: La portée du passage de d10 est absente."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [
+                    {
+                      "message": "d09 ne porte pas sur le même périmètre structuré.",
+                      "sourceId": "d09",
+                      "code": "scope-mismatch"
+                    },
+                    {
+                      "message": "La portée du passage de d10 est absente.",
+                      "sourceId": "d10",
+                      "code": "evidence-scope-missing"
+                    }
+                  ],
+                  "hold": {
+                    "missing": [
+                      "d09 ne porte pas sur le même périmètre structuré.",
+                      "La portée du passage de d10 est absente."
+                    ],
+                    "maxAdditionalRequests": 2,
+                    "resumeWhen": "Supply the missing passage, scope or reviewed distinction, then rerun against the new revision."
+                  },
+                  "claimId": "q05",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "n",
+                  "independentSources": 0,
+                  "priority": "indeterminate",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "n",
+              "durationMs": 0.07470600000000616,
+              "ok": true
+            },
+            {
+              "questionId": "q05",
+              "result": [
+                {
+                  "decision": "HOLD",
+                  "falsity": [],
+                  "reasons": [
+                    "scope-mismatch: d09 ne porte pas sur le même périmètre structuré.",
+                    "evidence-scope-missing: La portée du passage de d10 est absente."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [
+                    {
+                      "message": "d09 ne porte pas sur le même périmètre structuré.",
+                      "sourceId": "d09",
+                      "code": "scope-mismatch"
+                    },
+                    {
+                      "message": "La portée du passage de d10 est absente.",
+                      "sourceId": "d10",
+                      "code": "evidence-scope-missing"
+                    }
+                  ],
+                  "hold": {
+                    "missing": [
+                      "d09 ne porte pas sur le même périmètre structuré.",
+                      "La portée du passage de d10 est absente."
+                    ],
+                    "maxAdditionalRequests": 2,
+                    "resumeWhen": "Supply the missing passage, scope or reviewed distinction, then rerun against the new revision."
+                  },
+                  "claimId": "q05",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "p",
+                  "independentSources": 0,
+                  "priority": "indeterminate",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "p",
+              "durationMs": 0.059905999999998016,
+              "ok": true
+            },
+            {
+              "questionId": "q06",
+              "result": [
+                {
+                  "decision": "REJECT",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d12",
+                      "title": "d12",
+                      "quote": "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode.",
+                      "passages": [
+                        "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode."
+                      ],
+                      "sourceId": "d12",
+                      "url": "https://example.org/orbit-pilot/d12"
+                    }
+                  ],
+                  "reasons": [
+                    "Only eligible refuting passages remain."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [],
+                  "claimId": "q06",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "baseline",
+                  "independentSources": 1,
+                  "priority": "refutation",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "baseline",
+              "durationMs": 0.05922099999999375,
+              "ok": true
+            },
+            {
+              "questionId": "q06",
+              "result": [
+                {
+                  "decision": "REJECT",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d12",
+                      "title": "d12",
+                      "quote": "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode.",
+                      "passages": [
+                        "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode."
+                      ],
+                      "sourceId": "d12",
+                      "url": "https://example.org/orbit-pilot/d12"
+                    }
+                  ],
+                  "reasons": [
+                    "Only eligible refuting passages remain."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [],
+                  "claimId": "q06",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "n",
+                  "independentSources": 1,
+                  "priority": "refutation",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "n",
+              "durationMs": 0.054006999999998584,
+              "ok": true
+            },
+            {
+              "questionId": "q06",
+              "result": [
+                {
+                  "decision": "REJECT",
+                  "falsity": [
+                    {
+                      "independentSource": "https://example.org/orbit-pilot/d12",
+                      "title": "d12",
+                      "quote": "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode.",
+                      "passages": [
+                        "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode."
+                      ],
+                      "sourceId": "d12",
+                      "url": "https://example.org/orbit-pilot/d12"
+                    }
+                  ],
+                  "reasons": [
+                    "Only eligible refuting passages remain."
+                  ],
+                  "truth": [],
+                  "indeterminacy": [],
+                  "claimId": "q06",
+                  "engineVersion": "orbit-classification-1.0.0",
+                  "revision": 0,
+                  "engine": "p",
+                  "independentSources": 1,
+                  "priority": "refutation",
+                  "semanticVerification": "agent-asserted-relation"
+                }
+              ],
+              "engine": "p",
+              "durationMs": 0.05176300000000822,
+              "ok": true
+            }
+          ],
+          "engineSha256": "886f7cf3fbfcb445f4c1af7ebf1d3f8cb581964fe20d3bce706e8b4f4b880bd9",
+          "model": "google/gemini-3.1-pro-preview",
+          "status": "development-only",
+          "limitations": [
+            "Six synthetic development cases; not independent final validation.",
+            "Exact quotations do not establish semantic relevance.",
+            "Baseline and N share integrity rules; equality is possible.",
+            "Host and reasoning budgets differ from Antigravity."
+          ]
+        }
+      }
+    ],
+    "assertions": [
+      {
+        "expectation": "Every question appears exactly once.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 44,
+        "definition": "kbench.assertions.assert_equal(set(GOLD), {r['questionId'] for r in rows}, expectation='Every question appears exactly once.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Six distinct questions, without duplicate output.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 45,
+        "definition": "kbench.assertions.assert_equal(6, len(rows), expectation='Six distinct questions, without duplicate output.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Decision respects the exact question scope: q01",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 51,
+        "definition": "kbench.assertions.assert_equal(GOLD[q['id']], row['decision'], expectation='Decision respects the exact question scope: '+q['id'])",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Decision respects the exact question scope: q02",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 51,
+        "definition": "kbench.assertions.assert_equal(GOLD[q['id']], row['decision'], expectation='Decision respects the exact question scope: '+q['id'])",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Decision respects the exact question scope: q03",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 51,
+        "definition": "kbench.assertions.assert_equal(GOLD[q['id']], row['decision'], expectation='Decision respects the exact question scope: '+q['id'])",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Decision respects the exact question scope: q04",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 51,
+        "definition": "kbench.assertions.assert_equal(GOLD[q['id']], row['decision'], expectation='Decision respects the exact question scope: '+q['id'])",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Decision respects the exact question scope: q05",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 51,
+        "definition": "kbench.assertions.assert_equal(GOLD[q['id']], row['decision'], expectation='Decision respects the exact question scope: '+q['id'])",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Decision respects the exact question scope: q06",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 51,
+        "definition": "kbench.assertions.assert_equal(GOLD[q['id']], row['decision'], expectation='Decision respects the exact question scope: '+q['id'])",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Quotation occurs verbatim in the named source. This is not semantic verification.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 53,
+        "definition": "kbench.assertions.assert_true(e['sourceId'] in docs and bool(e['quote']) and e['quote'] in docs[e['sourceId']]['text'], expectation='Quotation occurs verbatim in the named source. This is not semantic verification.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Engine returned every evaluation.",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 62,
+        "definition": "kbench.assertions.assert_equal(len(metadata),len(calculated), expectation='Engine returned every evaluation.')",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q01",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: baseline/q01",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q01",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: n/q01",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q01",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: p/q01",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q02",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: baseline/q02",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q02",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: n/q02",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q02",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: p/q02",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q03",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: baseline/q03",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q03",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: n/q03",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q03",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: p/q03",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q04",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: baseline/q04",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q04",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: n/q04",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q04",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: p/q04",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q05",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: baseline/q05",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q05",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: n/q05",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q05",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: p/q05",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q06",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: baseline/q06",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q06",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: n/q06",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Evidence satisfies the portable schema: q06",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 65,
+        "definition": "kbench.assertions.assert_true(result['ok'], expectation='Evidence satisfies the portable schema: '+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      },
+      {
+        "expectation": "Shared engine decision is correct: p/q06",
+        "status": "BENCHMARK_TASK_RUN_ASSERTION_STATUS_PASSED",
+        "lineNumber": 67,
+        "definition": "kbench.assertions.assert_equal(GOLD[qid], result['result'][0]['decision'], expectation='Shared engine decision is correct: '+engine+'/'+qid)",
+        "conversationRequestIds": [
+          {
+            "conversationId": "Orbit scoped evidence pilot v2-83e73674",
+            "requestId": "Orbit scoped evidence pilot v2-83e73674-req-1"
+          }
+        ]
+      }
+    ],
+    "artifactName": "Orbit_scoped_evidence_pilot_v2-run_id_Run_2_google_gemini-3.1-pro-preview.run.json",
+    "observedUsage": {
+      "task_name": "Orbit scoped evidence pilot v2",
+      "trial_name": "Orbit scoped evidence pilot v2-Run #2",
+      "trial_uri": "kbench://not-a-harbor-trial",
+      "task_id": {
+        "path": "kbench://not-a-harbor-task"
+      },
+      "task_checksum": "unknown (kbench)",
+      "config": {
+        "task": {
+          "path": "kbench://not-a-harbor-task"
+        }
+      },
+      "agent_info": {
+        "name": "kaggle-benchmarks",
+        "version": "0.6.1",
+        "model_info": {
+          "name": "google/gemini-3.1-pro-preview"
+        }
+      },
+      "agent_result": {
+        "n_input_tokens": 1147,
+        "n_output_tokens": 5261,
+        "cost_usd": 0.065426
+      },
+      "started_at": "2026-09-30T00:59:58.129989Z",
+      "finished_at": "2026-09-30T01:00:31.080826Z"
+    }
+  }
+]

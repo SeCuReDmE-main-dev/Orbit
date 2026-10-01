@@ -1,0 +1,21 @@
+{
+  "observedAt": "2026-09-30T03:23:00Z",
+  "method": "Read-only Sanity Dashboard UI and direct Context RPC inspection; no source, instruction or issue modified.",
+  "knowledgeBase": "kb5CHIYGXCMJ",
+  "sourceImportsDisplayed": 30,
+  "sumOfSourceDocumentCountsDisplayed": 82,
+  "entriesDisplayed": 20,
+  "pendingIssuesDisplayed": 0,
+  "resolvedIssuesDisplayed": 1,
+  "dismissedIssuesDisplayed": 7,
+  "budgetLimitFromChallenge": 150,
+  "limits": "Displayed source-document counts are recorded separately from entries and are not a hidden internal index counter. No sources were imported or deleted in this observation.",
+  "contextReadInspection": {
+    "path": "deep_research/models_and_apis",
+    "resultKeys": ["content"],
+    "blockKeys": ["type", "text"],
+    "structuredContentPresent": false,
+    "metaPresent": false,
+    "finding": "Several named Web citations have no original URL in the upstream text. No link is reconstructed from a title."
+  }
+}

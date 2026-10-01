@@ -1,23 +1,9 @@
-<section class="rounded-2xl border border-sky-300/20 bg-slate-950/70 p-5 shadow-2xl shadow-sky-950/40" aria-labelledby="orbit-lab-title">
-  <div class="mb-3 flex flex-wrap items-baseline justify-between gap-4">
-    <h2 id="orbit-lab-title" class="text-lg font-semibold">Orbital lab</h2>
-    <p data-orbit-status role="status" aria-live="polite" class="text-xs text-slate-400">Loading local simulation…</p>
+<section id="orbital-workshop" class="orbit-workshop panel" aria-labelledby="orbit-lab-title">
+  <div class="section-heading section-heading--compact"><p class="eyebrow">Orbital Workshop</p><div class="heading-row"><div><h2 id="orbit-lab-title">A small, legible orbit.</h2><p>Adjust the initial conditions and watch a Newtonian two-body experiment unfold.</p></div><p data-orbit-status role="status" aria-live="polite" class="status-line">Loading local simulation…</p></div></div>
+  <div class="orbit-workshop__layout">
+    <div class="orbit-workshop__instrument"><canvas data-orbit-canvas class="orbit-canvas" aria-label="Illustrative view of a local Newtonian two-body orbit"></canvas><div class="orbit-readout"><p data-orbit-telemetry></p><span>Fixed-step local model</span></div></div>
+    <aside class="orbit-controls" aria-label="Orbital experiment controls"><div class="control-intro"><p class="eyebrow">Initial conditions</p><p>Changes reset the experiment so each path has a clear beginning.</p></div><label>Altitude <span>km</span><input data-orbit-altitude type="number" min="1" max="50000" step="1" value="400" /></label><label>Circular-speed multiplier<input data-orbit-speed type="number" min="0" max="2" step="0.05" value="1" /></label><div class="button-row"><button data-orbit-pause class="button button--cyan" type="button" aria-pressed="false">Pause</button><button data-orbit-reset class="button button--quiet" type="button">Reset</button></div><details class="model-notes"><summary>Model notes and text alternative</summary><p data-orbit-text></p><p>Fixed spherical Earth, point satellite and no atmosphere, thrust, oblateness, Moon or Sun. This is a learning model, not a flight prediction.</p></details></aside>
   </div>
-  <div class="mb-4 grid gap-3 sm:grid-cols-2">
-    <label class="text-sm">Altitude (km)<input data-orbit-altitude class="mt-1 w-full rounded bg-slate-900 p-2" type="number" min="1" max="50000" step="1" value="400" /></label>
-    <label class="text-sm">Initial circular-speed multiplier<input data-orbit-speed class="mt-1 w-full rounded bg-slate-900 p-2" type="number" min="0" max="2" step="0.05" value="1" /></label>
-  </div>
-  <div class="mb-4 flex gap-3">
-    <button data-orbit-pause type="button" class="rounded bg-cyan-700 px-4 py-2 font-medium" aria-pressed="false">Pause</button>
-    <button data-orbit-reset type="button" class="rounded bg-slate-700 px-4 py-2 font-medium">Reset experiment</button>
-  </div>
-  <canvas data-orbit-canvas class="h-72 w-full rounded-xl bg-[#030711]" aria-label="Illustrative view of a local Newtonian two-body orbit"></canvas>
-  <p data-orbit-telemetry class="mt-3 font-mono text-xs text-slate-300"></p>
-  <details class="mt-3 rounded border border-slate-700 p-3">
-    <summary class="cursor-pointer font-medium">Text and numerical alternative</summary>
-    <p data-orbit-text class="mt-2 text-sm text-slate-300"></p>
-    <p class="mt-2 text-xs text-amber-200">Educational two-body model: fixed spherical Earth, point satellite, no atmosphere, thrust, oblateness, Moon or Sun. This is not flight software or an operational prediction.</p>
-  </details>
 </section>
 <script>
   import { mountOrbitalLab } from '../lib/orbital-lab'

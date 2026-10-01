@@ -1,0 +1,478 @@
+{
+  "format": "orbit-agent-observations-v1",
+  "updatedAt": "2026-09-30T03:41:05.388472+00:00",
+  "status": "development-partial",
+  "missions": [
+    {
+      "experiment": "w01-json-loop-flash-v2",
+      "mission": "W01",
+      "model": "gemini-3.8-flash-high",
+      "adapter": "Antigravity official CLI 1.2.13, external JSON planner -> native public WebMCP",
+      "plannerProtocol": "orbit-json-planner-v2",
+      "nativeAntigravityMcpIntegration": false,
+      "coreChecksPassed": true,
+      "overallReview": "core-passed-interpretation-defect",
+      "citationAudit": null,
+      "successfulNativeCalls": [
+        {
+          "name": "orbit_get_capabilities",
+          "state": "READY"
+        },
+        {
+          "name": "orbit_get_research_request",
+          "state": "CONSENT_REQUIRED"
+        }
+      ],
+      "final": {
+        "observedToolCount": 15,
+        "workspaceReadable": false,
+        "privateQuestionState": "CONSENT_REQUIRED",
+        "toolsUsed": [
+          "orbit_get_capabilities",
+          "orbit_get_research_request"
+        ],
+        "limitations": [
+          "Private research question is unreadable without owner sharing (CONSENT_REQUIRED)",
+          "Workspace readable is false",
+          "Context entries and research execution cannot proceed without consent"
+        ]
+      },
+      "error": null,
+      "reviewFindings": [
+        {
+          "reviewer": "Codex source-code and actual Context-read audit; not a human decision",
+          "kind": "unsupported-permission-generalization",
+          "finding": "The final answer says Context entries cannot proceed without consent. Public corpus reads do not require private dossier sharing. The agent did not test that limitation.",
+          "status": "unresolved-agent-interpretation-defect"
+        }
+      ],
+      "durationSeconds": 90.51600000006147,
+      "turnUsage": [
+        {
+          "input_tokens": 8629,
+          "output_tokens": 9790,
+          "thinking_tokens": 9749,
+          "cache_read_tokens": 0,
+          "total_tokens": 18419
+        },
+        {
+          "input_tokens": 9162,
+          "output_tokens": 6006,
+          "thinking_tokens": 5926,
+          "cache_read_tokens": 0,
+          "total_tokens": 15168
+        }
+      ],
+      "resultSha256": "e8954e74b4d52bc314232d72fb5fc1c76ea5e97e626ba05148869fdbf00bf503",
+      "scope": "W01 development only; no private dossier, engine classification, subagent handoff, original-document verification or report presentation."
+    },
+    {
+      "experiment": "w01-json-loop-pro-v2",
+      "mission": "W01",
+      "model": "gemini-3.1-pro-high",
+      "adapter": "Antigravity official CLI 1.2.13, external JSON planner -> native public WebMCP",
+      "plannerProtocol": "orbit-json-planner-v2",
+      "nativeAntigravityMcpIntegration": false,
+      "coreChecksPassed": false,
+      "overallReview": "incomplete",
+      "citationAudit": null,
+      "successfulNativeCalls": [
+        {
+          "name": "orbit_get_capabilities",
+          "state": "READY"
+        }
+      ],
+      "final": null,
+      "error": "RuntimeError: Native call failed: Error: PAGE_GENERATION_CHANGED",
+      "reviewFindings": [],
+      "durationSeconds": 58.20299999997951,
+      "turnUsage": [
+        {
+          "input_tokens": 8905,
+          "output_tokens": 841,
+          "thinking_tokens": 822,
+          "cache_read_tokens": 0,
+          "total_tokens": 9746
+        },
+        {
+          "input_tokens": 9393,
+          "output_tokens": 724,
+          "thinking_tokens": 703,
+          "cache_read_tokens": 0,
+          "total_tokens": 10117
+        }
+      ],
+      "resultSha256": "ca289e569c572819075bad0b807f8946704039d7c820949710295b7f2e7c9f43",
+      "scope": "W01 development only; no private dossier, engine classification, subagent handoff, original-document verification or report presentation."
+    },
+    {
+      "experiment": "w02-json-loop-flash-v1",
+      "mission": "W02",
+      "model": "gemini-3.8-flash-high",
+      "adapter": "Antigravity official CLI 1.2.13, external JSON planner -> native public WebMCP",
+      "plannerProtocol": "orbit-json-planner-v2",
+      "nativeAntigravityMcpIntegration": false,
+      "coreChecksPassed": false,
+      "overallReview": "incomplete",
+      "citationAudit": null,
+      "successfulNativeCalls": [],
+      "final": null,
+      "error": "RuntimeError: Native adapter closed; no partial success.",
+      "reviewFindings": [],
+      "durationSeconds": 23.313000000081956,
+      "turnUsage": [],
+      "resultSha256": "33c306f6eb3c460feaf263b70f05add5b9468e853c50ba827d12265f2b8a7ac0",
+      "scope": "W02 development only; no private dossier, engine classification, subagent handoff, original-document verification or report presentation."
+    },
+    {
+      "experiment": "w02-json-loop-flash-v2",
+      "mission": "W02",
+      "model": "gemini-3.8-flash-high",
+      "adapter": "Antigravity official CLI 1.2.13, external JSON planner -> native public WebMCP",
+      "plannerProtocol": "orbit-json-planner-v2",
+      "nativeAntigravityMcpIntegration": false,
+      "coreChecksPassed": false,
+      "overallReview": "citation-provenance-incomplete",
+      "citationAudit": {
+        "observableChecksPassed": false,
+        "outlineRead": true,
+        "entryReads": 2,
+        "citationChecks": [
+          {
+            "entryPath": "deep_research/models_and_apis",
+            "pathInObservedOutline": true,
+            "quoteExact": true,
+            "sourceUrlsPresent": false,
+            "scopeComplete": true,
+            "decisionDeclared": true
+          },
+          {
+            "entryPath": "deep_research/models_and_apis",
+            "pathInObservedOutline": true,
+            "quoteExact": true,
+            "sourceUrlsPresent": false,
+            "scopeComplete": true,
+            "decisionDeclared": true
+          },
+          {
+            "entryPath": "data_retention_and_privacy",
+            "pathInObservedOutline": true,
+            "quoteExact": true,
+            "sourceUrlsPresent": true,
+            "scopeComplete": true,
+            "decisionDeclared": true
+          },
+          {
+            "entryPath": "deep_research/models_and_apis",
+            "pathInObservedOutline": true,
+            "quoteExact": true,
+            "sourceUrlsPresent": false,
+            "scopeComplete": true,
+            "decisionDeclared": true
+          }
+        ],
+        "semanticRelevance": "not-scored",
+        "sourceOriginalVerification": false,
+        "humanReview": false
+      },
+      "successfulNativeCalls": [
+        {
+          "name": "orbit_get_capabilities",
+          "state": "READY"
+        },
+        {
+          "name": "orbit_sanity_initial_context",
+          "state": "READY"
+        },
+        {
+          "name": "orbit_sanity_read_entries",
+          "state": "READY"
+        },
+        {
+          "name": "orbit_sanity_read_entries",
+          "state": "READY"
+        }
+      ],
+      "final": {
+        "answer": "Neither OpenAI Responses background research nor Gemini Developer API Deep Research can satisfy strict zero-data-retention (ZDR) requirements. There is a critical distinction between execution being technically accepted and meeting the privacy requirement: OpenAI Responses technically accepts background=true on ZDR credentials for legacy reasons, but fails ZDR compliance because response data is retained for roughly 10 minutes to facilitate polling. Meanwhile, Gemini Developer API Deep Research strictly mandates both background=true and store=True to execute, inherently violating zero-data-retention requirements, in addition to Developer API Paid Services logging prompts and responses for abuse monitoring without guaranteed ZDR.",
+        "claims": [
+          {
+            "statement": "OpenAI Responses background mode retains response data for roughly 10 minutes to allow polling, which is incompatible with zero data retention even though requests with background=true are technically accepted on ZDR credentials for legacy reasons.",
+            "entryPath": "deep_research/models_and_apis",
+            "quote": "Background mode retains response data for **roughly 10 minutes** to allow polling, making it **incompatible with Zero Data Retention (ZDR)** \u2014 leave `background=false` if ZDR is required (OpenAI still accepts `background=true` on ZDR credentials for legacy reasons).",
+            "sourceUrls": [],
+            "scope": {
+              "provider": "OpenAI",
+              "product": "Responses API (o3-deep-research / o4-mini-deep-research)",
+              "mode": "background execution (background=true)"
+            },
+            "decision": "supported"
+          },
+          {
+            "statement": "Gemini Developer API Deep Research requires background execution and store=True, which makes it incompatible with strict zero-data-footprint and zero-data-retention requirements.",
+            "entryPath": "deep_research/models_and_apis",
+            "quote": "`background=True` requires `store=True`, which is incompatible with strict zero-data-footprint requirements [3][4].",
+            "sourceUrls": [],
+            "scope": {
+              "provider": "Google",
+              "product": "Gemini Developer API Deep Research agent",
+              "mode": "background execution (background=true)"
+            },
+            "decision": "supported"
+          },
+          {
+            "statement": "Gemini Developer API Paid Services do not provide guaranteed zero data retention due to abuse monitoring logging, requiring migration to Vertex AI for enterprise-grade ZDR controls.",
+            "entryPath": "data_retention_and_privacy",
+            "quote": "**Developer API**: guaranteed ZDR is not achievable for abuse monitoring on Paid Services. Migrate to Vertex AI for enterprise-grade ZDR controls.",
+            "sourceUrls": [
+              "https://ai.google.dev/gemini-api/docs/zdr"
+            ],
+            "scope": {
+              "provider": "Google",
+              "product": "Gemini Developer API",
+              "mode": "Paid Services"
+            },
+            "decision": "supported"
+          },
+          {
+            "statement": "OpenAI Responses background research and Gemini Developer API Deep Research can both satisfy strict zero-data-retention requirements.",
+            "entryPath": "deep_research/models_and_apis",
+            "quote": "These are distinct controls: OpenAI's ~10-minute polling window vs. Gemini's `store=True` interaction requirement are not equivalent [4].",
+            "sourceUrls": [],
+            "scope": {
+              "provider": "OpenAI / Google",
+              "product": "Deep Research APIs",
+              "mode": "background execution"
+            },
+            "decision": "contested"
+          }
+        ],
+        "unknowns": [
+          "Whether OpenAI will support an alternative webhook-only push mechanism for background responses that completely eliminates the ~10-minute polling retention window for strict ZDR credentials.",
+          "Whether Gemini Developer API will offer an ephemeral execution mode for Deep Research that waives the store=True prerequisite."
+        ],
+        "limitations": [
+          "Grounded exclusively on the retrieved Sanity Context corpus snapshot without original vendor document verification or direct API trial.",
+          "Enterprise-negotiated custom data protection agreements or private exemptions are outside the scope of the public Context corpus."
+        ]
+      },
+      "error": null,
+      "reviewFindings": [
+        {
+          "reviewer": "Codex literal citation audit; not human review",
+          "kind": "incomplete-original-source-provenance",
+          "finding": "An original source URL is missing, or a quote is not bound to an individually read entry. Literal occurrence alone does not establish the source chain. This is a failed provenance requirement, not a repaired score.",
+          "status": "unresolved"
+        },
+        {
+          "reviewer": "Codex semantic inspection; not gold or human review",
+          "kind": "citation-relevance-requires-review",
+          "finding": "The fourth quote distinguishes two controls; this quote alone does not refute the broader claim about satisfying ZDR. The first two claims contain more direct retention conditions. Byte matching does not settle entailment.",
+          "status": "review-required"
+        }
+      ],
+      "durationSeconds": 123.06199999991804,
+      "turnUsage": [
+        {
+          "input_tokens": 8985,
+          "output_tokens": 1406,
+          "thinking_tokens": 1387,
+          "cache_read_tokens": 0,
+          "total_tokens": 10391
+        },
+        {
+          "input_tokens": 9511,
+          "output_tokens": 1105,
+          "thinking_tokens": 1084,
+          "cache_read_tokens": 0,
+          "total_tokens": 10616
+        },
+        {
+          "input_tokens": 10230,
+          "output_tokens": 1632,
+          "thinking_tokens": 1601,
+          "cache_read_tokens": 0,
+          "total_tokens": 11862
+        },
+        {
+          "input_tokens": 11490,
+          "output_tokens": 2214,
+          "thinking_tokens": 2182,
+          "cache_read_tokens": 0,
+          "total_tokens": 13704
+        },
+        {
+          "input_tokens": 13996,
+          "output_tokens": 8630,
+          "thinking_tokens": 7897,
+          "cache_read_tokens": 0,
+          "total_tokens": 22626
+        }
+      ],
+      "resultSha256": "40a55125f2a467d6268e195b7e37fdf57168c5ac5d2b4e2feb8a50e8d7bd7ff9",
+      "scope": "W02 development only; no private dossier, engine classification, subagent handoff, original-document verification or report presentation."
+    },
+    {
+      "experiment": "w02-json-loop-pro-v2",
+      "mission": "W02",
+      "model": "gemini-3.1-pro-high",
+      "adapter": "Antigravity official CLI 1.2.13, external JSON planner -> native public WebMCP",
+      "plannerProtocol": "orbit-json-planner-v2",
+      "nativeAntigravityMcpIntegration": false,
+      "coreChecksPassed": false,
+      "overallReview": "incomplete",
+      "citationAudit": null,
+      "successfulNativeCalls": [],
+      "final": null,
+      "error": "Empty: ",
+      "reviewFindings": [],
+      "durationSeconds": 53.39099999994505,
+      "turnUsage": [],
+      "resultSha256": "49fcec12db6584b23b6712512abdf705683e45d418e4b6a1fd5700fbb0f998f4",
+      "scope": "W02 development only; no private dossier, engine classification, subagent handoff, original-document verification or report presentation."
+    },
+    {
+      "experiment": "w02-json-loop-pro-v3",
+      "mission": "W02",
+      "model": "gemini-3.1-pro-high",
+      "adapter": "Antigravity official CLI 1.2.13, external JSON planner -> native public WebMCP",
+      "plannerProtocol": "orbit-json-planner-v2",
+      "nativeAntigravityMcpIntegration": false,
+      "coreChecksPassed": false,
+      "overallReview": "incomplete",
+      "citationAudit": null,
+      "successfulNativeCalls": [],
+      "final": null,
+      "error": "TimeoutError: Native page RPC deadline; no tool result observed.",
+      "reviewFindings": [],
+      "durationSeconds": 87.79700000002049,
+      "turnUsage": [],
+      "resultSha256": "293b8a4fde7c5b98b111f0624f27f460e5f14edb09c700f35e76cea35deb71d2",
+      "scope": "W02 development only; no private dossier, engine classification, subagent handoff, original-document verification or report presentation."
+    },
+    {
+      "experiment": "w02-json-loop-pro-v4",
+      "mission": "W02",
+      "model": "gemini-3.1-pro-high",
+      "adapter": "Antigravity official CLI 1.2.13, external JSON planner -> native public WebMCP",
+      "plannerProtocol": "orbit-json-planner-v2",
+      "nativeAntigravityMcpIntegration": false,
+      "coreChecksPassed": false,
+      "overallReview": "citation-provenance-incomplete",
+      "citationAudit": {
+        "observableChecksPassed": false,
+        "outlineRead": true,
+        "entryReads": 1,
+        "citationChecks": [
+          {
+            "entryPath": "deep_research/models_and_apis",
+            "pathInObservedOutline": true,
+            "quoteExact": false,
+            "sourceUrlsPresent": false,
+            "scopeComplete": true,
+            "decisionDeclared": true
+          },
+          {
+            "entryPath": "deep_research/models_and_apis",
+            "pathInObservedOutline": true,
+            "quoteExact": false,
+            "sourceUrlsPresent": false,
+            "scopeComplete": true,
+            "decisionDeclared": true
+          }
+        ],
+        "semanticRelevance": "not-scored",
+        "sourceOriginalVerification": false,
+        "humanReview": false
+      },
+      "successfulNativeCalls": [
+        {
+          "name": "orbit_sanity_initial_context",
+          "state": "READY"
+        },
+        {
+          "name": "orbit_sanity_read_entries",
+          "state": "READY"
+        }
+      ],
+      "final": {
+        "answer": "Neither OpenAI Responses background research nor Gemini Developer API Deep Research satisfy strict zero-data-retention (ZDR) requirements. OpenAI technically accepts the `background=true` parameter on ZDR credentials for legacy reasons, but it retains response data for approximately 10 minutes, making it incompatible with strict ZDR. Gemini Deep Research strictly requires background execution and `store=True`, which inherently violates zero-data-footprint requirements.",
+        "claims": [
+          {
+            "statement": "OpenAI Responses background research satisfies strict zero-data-retention requirements.",
+            "entryPath": "deep_research/models_and_apis",
+            "quote": "Background mode retains response data for **roughly 10 minutes** to allow polling, making it **incompatible with Zero Data Retention (ZDR)** \u2014 leave `background=false` if ZDR is required (OpenAI still accepts `background=true` on ZDR credentials for legacy reasons).",
+            "sourceUrls": [],
+            "scope": {
+              "provider": "OpenAI",
+              "product": "Responses API",
+              "mode": "background=true"
+            },
+            "decision": "contested"
+          },
+          {
+            "statement": "Gemini Developer API Deep Research satisfies strict zero-data-retention requirements.",
+            "entryPath": "deep_research/models_and_apis",
+            "quote": "Gemini Developer API: background execution requires `store=True`; this agent path does not meet strict zero-data-footprint requirements [4].",
+            "sourceUrls": [],
+            "scope": {
+              "provider": "Google",
+              "product": "Gemini Deep Research",
+              "mode": "background execution"
+            },
+            "decision": "contested"
+          }
+        ],
+        "unknowns": [],
+        "limitations": []
+      },
+      "error": null,
+      "reviewFindings": [
+        {
+          "reviewer": "Codex literal citation audit; not human review",
+          "kind": "incomplete-original-source-provenance",
+          "finding": "An original source URL is missing, or a quote is not bound to an individually read entry. Literal occurrence alone does not establish the source chain. This is a failed provenance requirement, not a repaired score.",
+          "status": "unresolved"
+        },
+        {
+          "reviewer": "Codex actual-call inspection; not human review",
+          "kind": "combined-entry-read-despite-mission-boundary",
+          "finding": "Pro reads two entries in one call, despite the instruction to read each separately. The audit cannot attribute its quotes to a single observed path. Original URLs are also absent and the final limitations array is empty.",
+          "status": "unresolved"
+        }
+      ],
+      "durationSeconds": 67.25,
+      "turnUsage": [
+        {
+          "input_tokens": 9252,
+          "output_tokens": 459,
+          "thinking_tokens": 438,
+          "cache_read_tokens": 0,
+          "total_tokens": 9711
+        },
+        {
+          "input_tokens": 9980,
+          "output_tokens": 886,
+          "thinking_tokens": 845,
+          "cache_read_tokens": 0,
+          "total_tokens": 10866
+        },
+        {
+          "input_tokens": 13647,
+          "output_tokens": 2231,
+          "thinking_tokens": 1786,
+          "cache_read_tokens": 0,
+          "total_tokens": 15878
+        }
+      ],
+      "resultSha256": "ec542240cacb1aff47436cc896b50fed4aec120d6ed1d779d21c6a733b891ce0",
+      "scope": "W02 development only; no private dossier, engine classification, subagent handoff, original-document verification or report presentation."
+    }
+  ],
+  "limits": [
+    "Model chooses calls in an external JSON planner loop; this does not repair native Antigravity MCP injection.",
+    "Successful core checks do not validate every final-answer claim.",
+    "Public Context reads and W01 observations do not establish a fully audited research trajectory or human decision.",
+    "Earlier failures and protocol changes remain archived; they are not pooled as identical trials."
+  ]
+}

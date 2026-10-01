@@ -1,0 +1,34 @@
+{
+  "format": "orbit-agent-mission-v1",
+  "mission": "W01",
+  "experiment": "w01-json-loop-flash-dev1",
+  "model": "gemini-3.8-flash-high",
+  "host": "Antigravity official CLI 1.2.13, external JSON planner -> native public WebMCP",
+  "nativeAntigravityMcpIntegration": false,
+  "agentDefinitionSha256": "18ed78fa5e85e0b5c8f4d260a179b14ee6549dd10e9108c182570c555fdd73b0",
+  "startedAt": "2026-09-30T02:24:10.823492+00:00",
+  "maxCalls": 20,
+  "maxMinutes": 8,
+  "permissions": "Page consent unchanged; no persistent approval policy or human decision added.",
+  "turns": [],
+  "calls": [],
+  "missionStatus": "INCOMPLETE",
+  "final": null,
+  "quotaBefore": [
+    {
+      "id": "gemini-weekly",
+      "window": "weekly",
+      "remaining_fraction": 0.9958919286727905,
+      "reset_time": "2026-10-07T00:24:00Z"
+    },
+    {
+      "id": "gemini-5h",
+      "window": "5h",
+      "remaining_fraction": 0.9753516912460327,
+      "reset_time": "2026-09-30T05:24:00Z"
+    }
+  ],
+  "error": "RuntimeError: Official CLI did not return exactly one successful final envelope. No partial response will be scored. Exit=1",
+  "observedCompletedAt": "2026-09-30T02:24:37.695157+00:00",
+  "durationSeconds": 26.875
+}

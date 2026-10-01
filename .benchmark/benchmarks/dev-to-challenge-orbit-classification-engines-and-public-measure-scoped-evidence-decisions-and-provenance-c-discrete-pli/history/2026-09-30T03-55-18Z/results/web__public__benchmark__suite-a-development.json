@@ -1,0 +1,40 @@
+{
+  "format": "orbit-benchmark-results-v1",
+  "suite": "A",
+  "executedAt": "2026-09-29T19:47:00.953024-04:00",
+  "corpusStatus": "development-not-frozen",
+  "engineSha256": "d0f5a482ed1ce1f81abf991d7a028328a25a73236a9e967e61de656a3fe51f0a",
+  "relationEngineSha256": "d5da24352b213c55cede9559e2faa48b3b8451c57a3257b882c77ff82ee495a4",
+  "oracleSha256": "aabe0f8b121f32a5eda7795dfe730f70993829a30b18c1857974b5cdf4e6fcd0",
+  "summary": {
+    "baseline": {
+      "questions": 36,
+      "correct": 36,
+      "invariantsPassed": 108,
+      "invariantsTotal": 108,
+      "relationPassed": 18,
+      "relationTotal": 18
+    },
+    "n": {
+      "questions": 36,
+      "correct": 36,
+      "invariantsPassed": 108,
+      "invariantsTotal": 108,
+      "relationPassed": 18,
+      "relationTotal": 18
+    },
+    "p": {
+      "questions": 36,
+      "correct": 36,
+      "invariantsPassed": 108,
+      "invariantsTotal": 108,
+      "relationPassed": 18,
+      "relationTotal": 18
+    }
+  },
+  "limitations": [
+    "Development synthetic corpus, not a held-out final evaluation.",
+    "Baseline and N intentionally share the same admissibility controls.",
+    "No autonomous model or WebMCP agent result is represented here."
+  ]
+}

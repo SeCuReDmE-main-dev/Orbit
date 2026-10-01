@@ -1,0 +1,20 @@
+{
+  "profile": "technical-manual",
+  "bodyFont": "Calibri 11pt",
+  "headingFont": "Segoe UI Semibold",
+  "monoFont": "Consolas",
+  "fallback": "Fail if local font missing; no silent substitution",
+  "colors": {
+    "navy": "#15172D",
+    "cyan": "#00788C",
+    "violet": "#6843A3",
+    "amber": "#946313"
+  },
+  "page": "A4",
+  "marginsPt": 45,
+  "lineSpacingPt": 15.5,
+  "opening": "Explicit five-page report",
+  "cover": "Typographic evidence report; no authority implied",
+  "print": "White pages and darker accessible accents derived from the Orbit landing; review-ready, not print-ready",
+  "outputs": "PDF and Markdown requested; EPUB, podcast and editable DOCX outside this pilot scope"
+}

@@ -1,0 +1,11 @@
+---
+import sections from '../content/guide-research.json'
+---
+{sections.map(section => <section aria-labelledby={section.id}>
+ <h2 id={section.id} data-fr={section.fr.title} data-en={section.en.title} data-es={section.es.title}>{section.fr.title}</h2>
+ {(['fr','en','es'] as const).map(language=><div data-guide-language={language} lang={language} set:html={section[language].html} />)}
+</section>)}
+<style>
+ [data-guide-language]{display:none}:global(html:lang(fr)) [data-guide-language=fr],:global(html:lang(en)) [data-guide-language=en],:global(html:lang(es)) [data-guide-language=es]{display:block}
+ section{padding:28px 0;border-top:1px solid var(--s-line)}h2{font:500 25px var(--s-display);color:var(--s-gold)}section :global(p),section :global(dd),section :global(li),section :global(td){color:#c1cbe4;font:400 17px/1.8 var(--s-body)}section :global(dt){color:var(--s-cyan);margin-top:15px;font-weight:600}section :global(dd){margin-left:0}section :global(table){width:100%;border-collapse:collapse;text-align:left;margin:24px 0}section :global(td),section :global(th){border-bottom:1px solid var(--s-line);padding:12px 8px;vertical-align:top}section :global(code){font-size:.85em;overflow-wrap:anywhere}@media(max-width:600px){section :global(td),section :global(th){padding:10px 3px}section :global(td){font-size:14px}}
+</style>

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "orbit-colab-source-v1",
+  "files": [
+    {
+      "path": "notebooks/module-1.ipynb",
+      "sha256": "accdb45c528b5a4f9cdcb1282b40ebe067ea4391987217e4f447bd2112f57085",
+      "missionId": "module-1",
+      "state": "prepared-not-executed"
+    },
+    {
+      "path": "notebooks/instructor/module-1.ipynb",
+      "sha256": "e519183e815aab4a98141e2fa3fcf524201708801f15f13e3496ecb85e794f89",
+      "missionId": "module-1",
+      "state": "prepared-not-executed"
+    },
+    {
+      "path": "notebooks/module-2.ipynb",
+      "sha256": "ec94bb61c413fa08cb3490053580ac52c882e7b4320ef885ac7412d46780dd46",
+      "missionId": "module-2",
+      "state": "prepared-not-executed"
+    },
+    {
+      "path": "notebooks/instructor/module-2.ipynb",
+      "sha256": "91faad69adb824796f8ae9c2e81e0cecea01e92f6d93c89aa017f7d5703f227e",
+      "missionId": "module-2",
+      "state": "prepared-not-executed"
+    },
+    {
+      "path": "notebooks/module-3.ipynb",
+      "sha256": "341c94e06c1c9645f2869d8483ba7b73d5c930c022ced32bd5f859d4e6ad8224",
+      "missionId": "module-3",
+      "state": "prepared-not-executed"
+    },
+    {
+      "path": "notebooks/instructor/module-3.ipynb",
+      "sha256": "fb9910334a0317f818dc8d529df9c5695c0e273bceccd6bb96fbfc13df788784",
+      "missionId": "module-3",
+      "state": "prepared-not-executed"
+    },
+    {
+      "path": "notebooks/module-4.ipynb",
+      "sha256": "c6db8b7898e35ff4ba6847a8b9622841d58128da67f9b842147ee9ebd3065364",
+      "missionId": "module-4",
+      "state": "prepared-not-executed"
+    },
+    {
+      "path": "notebooks/instructor/module-4.ipynb",
+      "sha256": "e1eb0a85aff14c99abf802af1845fc290d5adc909ada23f25ba8787dd9b4eac4",
+      "missionId": "module-4",
+      "state": "prepared-not-executed"
+    },
+    {
+      "path": "notebooks/module-5.ipynb",
+      "sha256": "fff0987ca7801577d81d5c9f6898caf5fdd5333c2ffcf23f02517dc1bc4231ce",
+      "missionId": "module-5",
+      "state": "prepared-not-executed"
+    },
+    {
+      "path": "notebooks/instructor/module-5.ipynb",
+      "sha256": "58179d58801336559767ddfcc1e0ae7ba078b27a5c28001835fbe2f840abb910",
+      "missionId": "module-5",
+      "state": "prepared-not-executed"
+    },
+    {
+      "path": "notebooks/module-6.ipynb",
+      "sha256": "2f4f8d7a427a1d5b5c909fecaee276ae9248f4c5dbe9395d0d0ed7efca5b38ec",
+      "missionId": "module-6",
+      "state": "prepared-not-executed"
+    },
+    {
+      "path": "notebooks/instructor/module-6.ipynb",
+      "sha256": "287e4812fd873791e304e371f99056aed25ae87a3426b9c2fd05f673f4325342",
+      "missionId": "module-6",
+      "state": "prepared-not-executed"
+    },
+    {
+      "path": "notebooks/module-7.ipynb",
+      "sha256": "2d6ac00e5a9635e8b031a31bbb92c8092b94b5a25db26584b5e8c6e6fa7894ca",
+      "missionId": "module-7",
+      "state": "prepared-not-executed"
+    },
+    {
+      "path": "notebooks/instructor/module-7.ipynb",
+      "sha256": "e2af6ed91afca036378797b1bd55cb4cc93b71c08722b408e1d90f5e20d99caa",
+      "missionId": "module-7",
+      "state": "prepared-not-executed"
+    },
+    {
+      "path": "notebooks/module-8.ipynb",
+      "sha256": "93699e909ae53a821b4929e05a9b1485fe7e3eb11a6791cd276b47148d8b3e54",
+      "missionId": "module-8",
+      "state": "prepared-not-executed"
+    },
+    {
+      "path": "notebooks/instructor/module-8.ipynb",
+      "sha256": "ed9d1e96b12f0aaf66d7427b56c5af35f75a615fa1aa08491761da7dd8c399d7",
+      "missionId": "module-8",
+      "state": "prepared-not-executed"
+    }
+  ]
+}

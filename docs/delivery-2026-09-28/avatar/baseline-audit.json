@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "file": "orbit-study.glb",
+  "sha256": "bdb21c1d62d21d92f1e0d5de3db3883cae947b3f356600275140209bfbaf1e94",
+  "quality": "high",
+  "bytes": 11925404,
+  "triangles": 272522,
+  "primitives": 333,
+  "materials": 9,
+  "textures": 1,
+  "skins": 1,
+  "animations": [
+    "Idle",
+    "Listening",
+    "Thinking",
+    "Speaking"
+  ],
+  "morphTargets": [
+    "blink",
+    "curiosity",
+    "jawOpen",
+    "warmth"
+  ],
+  "checks": {
+    "triangles": false,
+    "primitives": false,
+    "bytes": false,
+    "embeddedAssets": true
+  },
+  "technicalBudgetsPass": false,
+  "notChecked": [
+    "texture dimensions",
+    "facial fidelity",
+    "deformations",
+    "frame time",
+    "license"
+  ],
+  "approvedForApplication": false
+}

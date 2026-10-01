@@ -1,0 +1,84 @@
+/* One fixed world; native document scrolling moves through its viewpoints. */
+.landing-journey { height:auto;min-height:100svh;overflow:clip;isolation:isolate;background:#07091b; }
+.landing-journey .atom-experience {position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse at 57% 46%,#292e4570,transparent 60%);}
+.landing-journey .atom-experience canvas {touch-action:pan-y;transition:opacity .3s;}
+.landing-journey .landing-grain {position:fixed;inset:0;background:linear-gradient(90deg,#07091b5c,transparent 43%),radial-gradient(ellipse,transparent 35%,#07091b44);}
+.landing-journey .landing-header,.landing-journey .landing-footer {position:fixed;z-index:8;}
+.landing-journey .landing-header {background:linear-gradient(#07091be0,transparent);padding:24px 3vw;}
+.landing-journey .landing-footer {inset:auto 3vw 18px;font-size:8px;pointer-events:none;}
+.landing-journey .atom-label {top:18%;opacity:.65;}
+.journey-chapters {position:relative;z-index:2;pointer-events:none;}
+.journey-chapter {position:relative;height:100svh;min-height:580px;pointer-events:none;}
+.landing-journey .landing-copy {left:max(100px,8vw);bottom:24%;max-width:390px;pointer-events:none;}
+.landing-journey .landing-copy h1,.landing-journey .landing-copy h2 {font:400 clamp(36px,4.2vw,67px)/1.04 var(--s-display);letter-spacing:-.045em;margin:14px 0 20px;}
+.landing-journey .landing-description {font-size:13px;max-width:275px;color:#b3b8d0;}
+.landing-journey .landing-copy button {pointer-events:auto;}
+.landing-journey [data-journey-chapter="0"] .landing-copy {bottom:18%;max-width:430px;}
+.landing-journey [data-journey-chapter="0"] h1 {font-size:clamp(31px,3vw,48px);}
+.journey-continue {display:inline-flex;gap:30px;align-items:center;padding:10px 0;border:0;border-bottom:1px solid #d6b4ff44;background:none;color:#ced2e6;font-size:12px;}
+.journey-continue span:last-child {font-size:23px;}
+.journey-navigation {position:fixed;z-index:8;left:25px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:18px;}
+.journey-navigation a {position:relative;width:38px;height:38px;background:transparent;border:0;color:#9fa6c4;display:flex;align-items:center;justify-content:center;}
+.journey-navigation a i {width:8px;height:8px;border:1px solid #858eb5;background:#07091b;transform:rotate(45deg);transition:.25s;}
+.journey-navigation a span {position:absolute;left:39px;font-size:10px;opacity:0;pointer-events:none;transition:opacity .2s;white-space:nowrap;}
+.journey-navigation a[aria-current] i {transform:rotate(0);border-radius:50%;background:#ffc97a;box-shadow:0 0 24px #9098be6b;}
+.journey-navigation a:hover span,.journey-navigation a:focus-visible span {opacity:1;}
+.journey-track {position:absolute;left:18px;top:18px;bottom:18px;width:1px;background:#a5abc830;}
+.journey-track:after {content:'';position:absolute;inset:0;background:#979fc0;transform-origin:top;transform:scaleY(var(--journey-progress,0));}
+.atom-links {position:absolute;inset:0;pointer-events:none;}
+.atom-links a {position:absolute;left:0;top:0;display:flex;align-items:center;gap:12px;min-height:44px;min-width:44px;border:0;background:transparent;color:#bbc0d6;padding:0;pointer-events:auto;white-space:nowrap;}
+.atom-links i {position:absolute;top:-19px;left:-19px;width:38px;height:38px;border:1px solid #a6adc966;border-radius:50%;box-shadow:0 0 30px #a6adcb1b;}
+.atom-links span {margin-left:28px;position:relative;top:-17px;font-size:9px;letter-spacing:.13em;padding:7px 9px;background:#07091bb5;border-radius:2px;backdrop-filter:blur(6px);}
+.atom-links a:hover i,.atom-links a:focus-visible i {background:#9ea6c738;box-shadow:0 0 45px #c5cced55;}
+.landing-journey .atom-toolbar {position:fixed;bottom:66px;right:3vw;z-index:7;max-width:350px;transition:opacity .3s;}
+.landing-journey .atom-toolbar p {margin-bottom:10px;font-size:10px;}
+.landing-journey .atom-buttons button {background:#161925a8;backdrop-filter:blur(8px);font-size:10px;min-height:36px;padding:8px 11px;border-radius:0;}
+.landing-journey .atom-status {max-width:280px;margin-left:auto;font-size:9px;}
+.journey-directions {position:fixed;z-index:8;right:3vw;top:43%;display:flex;align-items:center;flex-direction:column;gap:12px;}
+.journey-directions a {width:40px;height:40px;border:1px solid #aeb4ce3d;border-radius:50%;background:#15172288;color:#c8cde1;font-size:18px;}
+.journey-directions a:disabled {opacity:.2;}
+.journey-directions span {font-size:9px;letter-spacing:.15em;color:#adb3cd;writing-mode:vertical-rl;}
+.landing-presence {position:fixed;z-index:1;inset:8% 8% 6% 33%;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s;}
+.landing-presence canvas {width:100%;height:100%;display:block;pointer-events:none;}
+.landing-presence span {position:absolute;left:50%;bottom:5%;transform:translateX(-50%);color:#9ea5c3;font-size:10px;}
+.landing-journey[data-chapter="3"] .atom-toolbar,.landing-journey[data-chapter="3"] .atom-label {opacity:0;pointer-events:none;visibility:hidden;}
+/* The research surface is a tool beside the presence, not the entire screen. */
+@media (min-width: 721px) {
+ .app-shell .workspace-stage,.app-shell[data-view="companion"] .workspace-stage {display:block;position:relative;background:radial-gradient(ellipse at 25% 45%,#3c436337,transparent 57%);}
+ .app-shell .app-presence,.app-shell[data-view="companion"] .app-presence {position:absolute;inset:1% 46% 0 0;display:flex;flex-direction:column;justify-content:center;padding:10px 2vw;}
+ .app-shell .hologram {width:100%;}
+ .app-shell .hologram__stage,.app-shell[data-view="companion"] .hologram__stage {height:clamp(310px,65vh,820px);}
+ .app-shell .app-view,.app-shell[data-view="companion"] .companion-view {position:absolute;right:2.5%;top:5%;width:min(600px,48%);height:90%;min-height:0;border:1px solid #b0b6cf1c;border-radius:14px;padding:25px;overflow:auto;background:#121520ea;box-shadow:0 26px 90px #0002;backdrop-filter:blur(20px);}
+ .app-shell[data-view="companion"] .companion-view {background:transparent;border:0;box-shadow:none;backdrop-filter:none;padding:16px 12px;gap:10px;}
+ .app-shell .view-heading {margin-bottom:20px;flex-direction:column;align-items:flex-start;gap:8px;}
+ .app-shell .view-heading h1 {font-size:32px;}
+ .app-shell .report-paper {padding:18px;border-radius:6px;}
+ .app-shell .report-paper textarea {min-height:220px;font-size:14px;}
+ .app-shell .report-paper input {font-size:21px;}
+ .app-shell .presence-return {border:0;justify-content:center;margin:0;}
+ .app-shell[data-panel-expanded="true"] .app-view:not([hidden]) {width:min(1000px,90%);z-index:5;background:#121520fa;}
+ .panel-size-toggle {color:#b1b6cf;border:1px solid #a5abc82a;background:#1b1e2c88;border-radius:4px;padding:6px 10px;min-height:32px;font-size:11px;}
+}
+@media (max-width: 720px) {
+ .landing-journey .landing-header {padding:19px 22px;}
+ .landing-journey .landing-footer {left:22px;right:22px;bottom:14px;}
+ .landing-journey .landing-footer span:nth-child(2) {display:none;}
+ .journey-chapter {min-height:640px;}
+ .landing-journey .landing-copy {left:55px;right:35px;bottom:140px;max-width:320px;}
+ .landing-journey .landing-copy h1,.landing-journey .landing-copy h2 {font-size:39px;}
+ .landing-journey .landing-description {font-size:12px;max-width:270px;}
+ .landing-journey .landing-kicker {margin-bottom:10px;}
+ .journey-navigation {left:8px;gap:9px;}
+ .journey-navigation a {width:27px;}
+ .journey-track {left:13px;}
+ .journey-directions {right:14px;top:31%;}
+ .journey-directions a {width:32px;height:32px;}
+ .landing-journey .atom-toolbar {right:22px;bottom:46px;max-width:290px;}
+ .landing-journey .atom-toolbar p,.landing-journey .atom-status {display:none;}
+ .landing-journey .atom-label {top:13%;font-size:7px;}
+ .atom-links span {display:none;}
+ .landing-presence {inset:8% 0 28% 16%;}
+ .landing-presence span {display:none;}
+ .panel-size-toggle {display:none;}
+}
+@media (prefers-reduced-motion:reduce) { .landing-journey * {scroll-behavior:auto!important;transition:none!important;} }

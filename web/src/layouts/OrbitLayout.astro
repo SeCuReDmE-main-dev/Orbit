@@ -1,0 +1,18 @@
+---
+import '../styles/global.css'
+import '../styles/synthia.css'
+import '../styles/journey.css'
+import '../styles/cosmic.css'
+import '../styles/presence-space.css'
+import '../styles/atom-games.css'
+interface Props { title?: string; bodyClass?: string }
+const { title = 'Orbit — Un espace pour votre curiosité', bodyClass = '' } = Astro.props
+---
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="theme-color" content="#07091b" /><meta name="description" content="Un espace de recherche personnel. Explorez vos questions avec Orbit, reliez vos sources et retrouvez le fil de vos idées." /><title>{title}</title></head><body class={bodyClass}><slot /><script>
+import {mountOrbitPreferences} from '../lib/landing-preferences';
+if(!document.querySelector('[data-landing]')){
+  const controls=document.createElement('aside');controls.className='orbit-workspace-preferences';document.body.append(controls);
+  const stop=mountOrbitPreferences(controls,document.querySelector<HTMLElement>('.orbit-guide')??controls);document.addEventListener('astro:before-swap',()=>{stop();controls.remove();},{once:true});
+}
+</script></body></html>

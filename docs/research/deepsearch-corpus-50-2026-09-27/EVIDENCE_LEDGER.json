@@ -1,0 +1,1360 @@
+{
+  "count_definitions": "Result slots are search results, not unique documents read; URL fetch attempts include alternative representations and failures. Metadata checks via web additionally documented in planning lane.",
+  "total_exa_search_calls": 27,
+  "total_requested_result_slots": 228,
+  "total_returned_result_slots": 228,
+  "total_exa_fetch_calls": 20,
+  "total_url_fetch_attempts": 71,
+  "selected_references": 50,
+  "full_papers_read_claim": false,
+  "lanes": {
+    "evidence-continuity": {
+      "date": "2026-09-27",
+      "tool": "Exa",
+      "search_queries": 7,
+      "requested_result_slots": 43,
+      "returned_result_entries": 43,
+      "url_fetch_attempts": 22,
+      "unique_selected_references": 18,
+      "scope": "Metadata, abstracts/introduction or selected official documentation. Not full-text scientific review; fetched characters bounded.",
+      "decisions": [
+        {
+          "url": "https://openreview.net/forum?id=m1YYAQjO3w",
+          "decision": "replace_representation",
+          "reason": "Browser verification page returned; AgentDojo original arXiv document used."
+        },
+        {
+          "url": "https://docs.langchain.com/oss/python/langgraph/durable-execution",
+          "decision": "canonicalize",
+          "reason": "Returned Persistence content. Canonical persistence page fetched and selected instead."
+        },
+        {
+          "url": "https://www.cochrane.org/authors/handbooks-and-manuals/mecir-manual/standards-conduct-new-cochrane-intervention-reviews-c1-c75/performing-review-c24-c75/assessing-quality-evidence-and-summarizing-findings-c74-c75",
+          "decision": "reject_duplicate_coverage",
+          "reason": "Chapter14 supplies detailed evidence-certainty framework."
+        },
+        {
+          "url": "https://www.w3.org/TR/prov-overview/Overview.html",
+          "decision": "reject_duplicate_coverage",
+          "reason": "PROV-DM selected."
+        },
+        {
+          "url": "https://www.crossref.org/documentation/crossmark/",
+          "decision": "defer",
+          "reason": "Version/correction policy selected, product-specific implementation not needed for this lot."
+        },
+        {
+          "url": "https://www.nature.com/articles/sdata201618",
+          "decision": "date_corrected",
+          "reason": "Publisher page says15March2016; Exa metadata says2019. Publisher publication date retained."
+        }
+      ],
+      "documents": [
+        {
+          "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-07",
+          "extracted_characters": 6685,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-13",
+          "extracted_characters": 6682,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-14",
+          "extracted_characters": 6698,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://www.nature.com/articles/sdata201618",
+          "extracted_characters": 6669,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://www.w3.org/TR/prov-dm/",
+          "extracted_characters": 6570,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://www.crossref.org/documentation/principles-practices/best-practices/versioning/",
+          "extracted_characters": 5517,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://www.nist.gov/pml/nist-technical-note-1297",
+          "extracted_characters": 1629,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://arxiv.org/abs/1803.09010",
+          "extracted_characters": 6567,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://www.w3.org/TR/vocab-dqv/",
+          "extracted_characters": 6599,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://www.crossref.org/publications/guide-metadata-research-integrity.pdf",
+          "extracted_characters": 6645,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://openai.github.io/openai-agents-js/guides/sessions/",
+          "extracted_characters": 6598,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://openai.github.io/openai-agents-js/guides/handoffs/",
+          "extracted_characters": 6596,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://openai.github.io/openai-agents-js/guides/tracing/",
+          "extracted_characters": 6596,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://docs.langchain.com/oss/python/langgraph/durable-execution",
+          "extracted_characters": 4318,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://google.github.io/adk-docs/sessions/memory/",
+          "extracted_characters": 6598,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://aclanthology.org/2024.tacl-1.9/",
+          "extracted_characters": 2260,
+          "status": "selected_passages_available"
+        },
+        {
+          "url": "https://openreview.net/forum?id=m1YYAQjO3w",
+          "extracted_characters": 555,
+          "status": "unusable_access_challenge"
+        },
+        {
+          "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices",
+          "extracted_characters": 6619,
+          "status": "selected_passages_available"
+        }
+      ]
+    },
+    "planning-search": {
+      "reviewed_at": "2026-09-27",
+      "scope": "Orbit Companion DEV/Sanity research references: exactly 8 question/planning and 8 search/coverage sources. No product execution, ingestion, Sanity changes, or repository code edits.",
+      "counts": {
+        "exa_search_calls": 10,
+        "exa_requested_result_slots": 75,
+        "exa_actual_result_slots": 75,
+        "exa_fetch_batch_calls": 7,
+        "exa_url_fetch_attempts": 21,
+        "exa_unique_url_fetch_attempts": 21,
+        "exa_readable_url_responses": 20,
+        "exa_access_error_responses": 1,
+        "selected_unique_sources_with_readable_main_content_or_abstract": 16,
+        "additional_readable_supporting_pages_or_representations": 3,
+        "readable_but_rejected_wrong_document": 1,
+        "planning_sources": 8,
+        "search_sources": 8,
+        "knowledge_admit": 16,
+        "redistribution_conditional_admit": 5,
+        "redistribution_hold": 11,
+        "proposed_test_questions": 16,
+        "tests_executed": 0,
+        "web_open_operations": 9,
+        "web_find_operations": 3,
+        "web_click_operations": 4,
+        "web_click_failures": 1,
+        "web_open_failures": 1,
+        "notes": "Exa main-content review was supplemented with web metadata reads because Exa omitted dates, PDF hrefs, and page license footers. No additional discovery queries."
+      },
+      "search_log": [
+        {
+          "id": "P-search-1",
+          "query": "category:research paper original ReAct Synergizing Reasoning and Acting in Language Models and STORM Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking",
+          "objective": "Find original arXiv or ACL Anthology papers, not tutorials or repositories. Need exact paper titles and canonical URLs, author metadata, dates, abstracts for research planning. Two named papers ReAct and STORM.",
+          "requested_results": 5,
+          "actual_result_slots": 5
+        },
+        {
+          "id": "P-search-2",
+          "query": "category:research paper original Self-Ask Measuring and Narrowing the Compositionality Gap in Language Models Least-to-Most Prompting Plan-and-Solve Prompting",
+          "objective": "Prefer original publications/arXiv/ACL/ICLR papers for task decomposition and explicit planning. Exclude promotional surveys/tutorials and locate the named methods.",
+          "requested_results": 10,
+          "actual_result_slots": 10
+        },
+        {
+          "id": "P-search-3",
+          "query": "category:research paper original AmbigQA Answering Ambiguous Open-domain Questions Asking Clarifying Questions in Open-Domain Information-Seeking Conversations Qulac",
+          "objective": "Find original ACL Anthology, arXiv or ACM publications on ambiguous question interpretation and clarification. Need abstracts author metadata and canonical links.",
+          "requested_results": 10,
+          "actual_result_slots": 10
+        },
+        {
+          "id": "P-search-4",
+          "query": "Cochrane Handbook chapter 2 Determining the scope of the review and the questions it will address official question formulation",
+          "objective": "Find the official Cochrane Handbook chapter on defining the scope, structuring review questions and question priority. Exclude summary blogs and university paraphrases.",
+          "requested_results": 5,
+          "actual_result_slots": 5
+        },
+        {
+          "id": "P-search-5",
+          "query": "category:research paper Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models STORM Stanford",
+          "objective": "Find the original STORM paper in ACL Anthology or arXiv; exact canonical title, authors, abstract, and date.",
+          "requested_results": 5,
+          "actual_result_slots": 5
+        },
+        {
+          "id": "S-search-1",
+          "query": "Cochrane Handbook chapter 4 searching selecting studies PRISMA-S extension literature searches systematic reviews PRESS 2015 evidence based checklist",
+          "objective": "Find official primary methodologies: Cochrane chapter 4, original PRISMA-S reporting guideline, original PRESS 2015 search strategy review guideline. Exclude institutional paraphrases.",
+          "requested_results": 10,
+          "actual_result_slots": 10
+        },
+        {
+          "id": "S-search-2",
+          "query": "Marcia Bates The design of browsing and berrypicking techniques for the online search interface original 1989 paper",
+          "objective": "Find original author or publisher paper on evolving queries and diverse search techniques, precise title and author-hosted full text.",
+          "requested_results": 5,
+          "actual_result_slots": 5
+        },
+        {
+          "id": "S-search-3",
+          "query": "category:research paper TARCiS statement citation searching systematic literature reviews recommendations Wohlin guidelines snowballing systematic literature studies",
+          "objective": "Find original TARCiS BMJ statement and original Claes Wohlin 2014 snowballing guidelines paper author-hosted or publisher text.",
+          "requested_results": 10,
+          "actual_result_slots": 10
+        },
+        {
+          "id": "S-search-4",
+          "query": "Reciprocal rank fusion outperforms condorcet and individual rank learning methods Cormack Clarke Buettcher 2009 Stanford Introduction Information Retrieval relevance feedback query expansion",
+          "objective": "Find original RRF paper from authors' Waterloo site and official Stanford IR textbook chapter on relevance feedback and query expansion. Exclude library vendor blogs and tutorials.",
+          "requested_results": 10,
+          "actual_result_slots": 10
+        },
+        {
+          "id": "S-search-5",
+          "query": "category:research paper PRESS Peer Review of Electronic Search Strategies 2015 Guideline Statement McGowan Sampson Salzwedel Cogo Foerster Lefebvre",
+          "objective": "Find original published guideline by its authors via publisher/PubMed/author repository. Need abstract and full-text or publisher metadata; exclude checklist adaptations.",
+          "requested_results": 5,
+          "actual_result_slots": 5
+        }
+      ],
+      "selected_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08"
+      ],
+      "fetch_batches": [
+        {
+          "batch": "P-fetch-0",
+          "maxCharacters": 12000,
+          "urls": [
+            "https://arxiv.org/abs/2210.03629",
+            "https://aclanthology.org/2023.findings-emnlp.378/",
+            "https://arxiv.org/abs/2205.10625",
+            "https://aclanthology.org/2023.acl-long.447/"
+          ]
+        },
+        {
+          "batch": "P-fetch-1",
+          "maxCharacters": 12000,
+          "urls": [
+            "https://aclanthology.org/2020.emnlp-main.466/",
+            "https://arxiv.org/abs/1907.06554",
+            "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-02"
+          ]
+        },
+        {
+          "batch": "PS-fetch-0",
+          "maxCharacters": 6500,
+          "urls": [
+            "https://aclanthology.org/2024.naacl-long.347/",
+            "https://arxiv.org/abs/2305.04091"
+          ]
+        },
+        {
+          "batch": "PS-fetch-1",
+          "maxCharacters": 6500,
+          "urls": [
+            "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-04",
+            "https://jmla.mlanet.org/ojs/jmla/article/view/962",
+            "https://www.sciencedirect.com/science/article/pii/S0895435616000585"
+          ]
+        },
+        {
+          "batch": "PS-fetch-2",
+          "maxCharacters": 6500,
+          "urls": [
+            "https://pages.gseis.ucla.edu/faculty/bates/berrypicking.html",
+            "https://escholarship.org/uc/item/51t229mk",
+            "https://wohlin.eu/ease14.pdf"
+          ]
+        },
+        {
+          "batch": "PS-fetch-3",
+          "maxCharacters": 6500,
+          "urls": [
+            "https://cormack.uwaterloo.ca/cormacksigir09-rrf.pdf",
+            "https://nlp.stanford.edu/IR-book/html/htmledition/relevance-feedback-and-query-expansion-1.html"
+          ]
+        },
+        {
+          "batch": "aux-fetch",
+          "maxCharacters": 6000,
+          "urls": [
+            "https://europepmc.org/article/MED/27005575",
+            "https://ub.unibas.ch/en/university-medical-library/tarcis/",
+            "https://nlp.stanford.edu/IR-book/",
+            "https://pages.gseis.ucla.edu/faculty/bates/articles/berrypicking.pdf"
+          ]
+        }
+      ],
+      "extraction_scope": "All sixteen were actually fetched with Exa and read at abstract/main-section level. Character caps bound each extraction; no source is claimed fully reviewed. The sources file records each scope. Additional web reads only restored omitted metadata or license links; they are not included in Exa search/fetch counts.",
+      "rights_policy": "Admit knowledge means an attributed bibliographic link and an independently written method note may enter the candidate knowledge corpus. It does not authorize full-text copying, embedding ingestion, redistribution, or publication. Eleven such actions remain on hold. Five verified CC BY 4.0 items are conditional on attribution, license links, change notices, and separate-material checks.",
+      "rights_confirmed": {
+        "cc_by_4_0": [
+          "P01",
+          "P02",
+          "P03",
+          "P05",
+          "P06"
+        ],
+        "arxiv_nonexclusive_only": [
+          "P04"
+        ],
+        "explicit_all_rights_reserved": [
+          "S04"
+        ],
+        "acm_limited_copy_notice": [
+          "S06",
+          "S07"
+        ],
+        "acm_marker_without_resolved_reuse_license": [
+          "P07"
+        ],
+        "license_unverified": [
+          "P08",
+          "S01",
+          "S02",
+          "S03",
+          "S05",
+          "S08"
+        ]
+      },
+      "rejected_or_not_admitted": [
+        {
+          "url": "https://aclanthology.org/2023.acl-long.447/",
+          "title": "ParaAMR: A Large-Scale Syntactically Diverse Paraphrase Dataset by AMR Back-Translation",
+          "decision": "reject",
+          "reason": "An incorrectly recalled candidate URL resolved to an unrelated paper. Actually fetched and excluded; replaced by verified Plan-and-Solve arXiv record."
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S0895435616000585",
+          "decision": "hold_this_representation",
+          "reason": "Returned a Cloudflare/access error, not article content. PRESS was admitted only after reading the original abstract at Europe PMC."
+        },
+        {
+          "url": "https://escholarship.org/uc/item/51t229mk",
+          "decision": "supporting_representation_only",
+          "reason": "Original TARCiS abstract read with Exa. Individual authors were not resolved and a later web metadata read met bot protection. The selected primary source is the official University of Basel methodology page."
+        },
+        {
+          "url": "https://github.com/stanford-oval/storm",
+          "decision": "not_counted",
+          "reason": "Project repository surfaced in discovery, but the original STORM publication was selected."
+        },
+        {
+          "url": "https://exa.ai/library/publication/5c5xlyndt51",
+          "decision": "not_counted",
+          "reason": "Discovery metadata is not the original PRESS source; institutional abstract selected."
+        },
+        {
+          "url": "https://arxiv.org/pdf/1907.06554",
+          "decision": "not_counted",
+          "reason": "Duplicate representation of selected Qulac paper; not a new source and not independently fetched."
+        },
+        {
+          "url": "https://pages.gseis.ucla.edu/faculty/bates/articles/berrypicking.pdf",
+          "decision": "supporting_representation_only",
+          "reason": "Fetched to verify original publication details; same work as selected Bates HTML."
+        },
+        {
+          "url": "https://nlp.stanford.edu/IR-book/",
+          "decision": "supporting_page_only",
+          "reason": "Fetched for textbook authors and edition date; not an additional source."
+        }
+      ],
+      "interpretation_boundaries": [
+        "ReAct and STORM were previously considered in the earlier corpus, but are absent from the supplied approved25 exclusion list; they are explicitly labeled.",
+        "Exa returns semantic similarity. Boolean/proximity advice in PRESS and Cochrane applies to engines that implement that syntax; no literal Boolean behavior is assumed for Exa.",
+        "Wohlin's snowballing-as-an-alternative claim is scoped to its software-engineering replication. TARCiS explicitly rejects standalone citation searching for completeness-of-recall claims; these positions are preserved rather than flattened.",
+        "The Qulac extract contains different reported relative-improvement summaries; no numerical headline is adopted.",
+        "STORM's publication title differs from the expansion of its acronym; the exact publication title is retained.",
+        "Publication/version dates remain as precise as the observed metadata permits. TARCiS statement publication year and page timestamp conflict is recorded.",
+        "All test questions and expected behaviors are local proposals, not author-prescribed product requirements and not executed validation."
+      ],
+      "excluded_approved25_file": "C:/Users/jeans/Desktop/challenge-work-hacketon/dev.to-challenge/docs/research/deepsearch-foundation-2026-09-27/REPAIR_approved-25.json",
+      "provenance_guidance": [
+        "C:/Users/jeans/.codex/plugins/cache/openai-curated-remote/app-69ea4ed2cf7c8191b742ef3622479ddd/4.0.1/skills/Search/references/searching.md",
+        "C:/Users/jeans/.codex/plugins/cache/openai-curated-remote/app-69ea4ed2cf7c8191b742ef3622479ddd/4.0.1/skills/Search/references/patterns-papers.md",
+        "C:/Users/jeans/.codex/plugins/cache/local-codex-plugins/coding-research/0.1.0/skills/source-policy-skill/SKILL.md"
+      ]
+    },
+    "reading-synthesis": {
+      "schema_version": "1.0",
+      "reviewed_at": "2026-09-27",
+      "scope": "Orbit Companion DEV/Sanity source corpus; document reading/extraction and synthesis/citation/reporting. No NASA lane.",
+      "method": "Exa primary-source search and Exa fetch. Search result listings triaged; 16 selected works consulted at abstract/main-section scope. Coding Research primary-source evidence labels applied.",
+      "authorization": "Read-only research followed by parent authorization for isolated local output under lanes/reading-synthesis. No repository code, UI, Sanity API, knowledge-base or external publication changes.",
+      "counts": {
+        "exa_search_calls": 10,
+        "requested_result_entries": 110,
+        "returned_result_entries": 110,
+        "unique_search_result_urls": 110,
+        "exa_fetch_calls": 8,
+        "fetch_url_requests": 28,
+        "distinct_fetched_urls": 26,
+        "selected_unique_works": 16,
+        "selected_unique_canonical_urls": 16,
+        "reading_sources": 8,
+        "synthesis_sources": 8
+      },
+      "count_definitions": {
+        "requested_result_entries": "Sum of numResults across Exa search calls; a search-budget/coverage figure, not a reading claim.",
+        "returned_result_entries": "Count of Exa returned URL result entries including repeated works and URLs.",
+        "distinct_fetched_urls": "Unique exact URLs supplied to successful Exa fetch calls; landing pages and their PDFs can represent the same work.",
+        "selected_unique_works": "16 works with consulted abstract or main-section evidence; no complete-paper review claim."
+      },
+      "queries": [
+        {
+          "id": "EXA-01",
+          "lane": "reading",
+          "query": "category:research paper original papers document conversion PDF layout structured extraction Docling Technical Report GROBID scholarly documents",
+          "requested_results": 10,
+          "returned_result_entries": 10,
+          "results": [
+            {
+              "url": "https://arxiv.org/pdf/2408.09869",
+              "title": "N/A"
+            },
+            {
+              "url": "https://arxiv.org/html/2408.09869v5",
+              "title": "Docling Technical Report"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2501.17887",
+              "title": "N/A"
+            },
+            {
+              "url": "https://arxiv.org/html/2509.11720",
+              "title": "Advanced Layout Analysis Models for Docling"
+            },
+            {
+              "url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Nassar_SmolDocling_An_ultra-compact_vision-language_model_for_end-to-end_multi-modal_document_conversion_ICCV_2025_paper.pdf",
+              "title": "SmolDocling: An ultra-compact vision-language model for end-to-end multi-modal document conversion"
+            },
+            {
+              "url": "https://github.laiyagushi.com/cactuscommunications/grobid",
+              "title": "GitHub - cactuscommunications/grobid: A machine learning software for extracting information from scholarly documents · GitHub"
+            },
+            {
+              "url": "https://docling.ai/papers/",
+              "title": "Papers"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2609.26381",
+              "title": "Layout-Guided Masking for GROBID: Lightweight Structural Gains in Large-Scale Scientific PDF Ingestion"
+            },
+            {
+              "url": "https://github.com/docling-project/docling/issues/74",
+              "title": "docling vs GROBID · Issue #74 · docling-project/docling"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2503.11576",
+              "title": "N/A"
+            }
+          ]
+        },
+        {
+          "id": "EXA-02",
+          "lane": "reading",
+          "query": "category:research paper PubTables-1M Towards comprehensive table extraction from unstructured documents table detection structure recognition dataset original paper",
+          "requested_results": 10,
+          "returned_result_entries": 10,
+          "results": [
+            {
+              "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Smock_PubTables-1M_Towards_Comprehensive_Table_Extraction_From_Unstructured_Documents_CVPR_2022_paper.html",
+              "title": "CVPR 2022 Open Access Repository"
+            },
+            {
+              "url": "https://openaccess.thecvf.com/content/CVPR2022/papers/Smock_PubTables-1M_Towards_Comprehensive_Table_Extraction_From_Unstructured_Documents_CVPR_2022_paper.pdf",
+              "title": "PubTables-1M: Towards Comprehensive Table Extraction From Unstructured Documents"
+            },
+            {
+              "url": "https://arxiv.org/abs/2110.00061",
+              "title": "PubTables-1M: Towards comprehensive table extraction ..."
+            },
+            {
+              "url": "https://www.microsoft.com/en-us/research/publication/pubtables-1m/",
+              "title": "PubTables-1M: Towards comprehensive table extraction ..."
+            },
+            {
+              "url": "https://huggingface.co/papers/2110.00061",
+              "title": "Paper page - PubTables-1M: Towards comprehensive table extraction from unstructured"
+            },
+            {
+              "url": "https://ar5iv.labs.arxiv.org/html/2110.00061",
+              "title": "[2110.00061] PubTables-1M: Towards comprehensive table extraction from unstructured documents"
+            },
+            {
+              "url": "https://huggingface.co/datasets/bsmock/pubtables-1m/raw/main/README.md",
+              "title": "Readme"
+            },
+            {
+              "url": "https://mlanthology.org/cvpr/2022/smock2022cvpr-pubtables1m/",
+              "title": "PubTables-1m: Towards Comprehensive Table Extraction from Unstructured Documents | ML Anthology"
+            },
+            {
+              "url": "https://paperswithcode.co/paper/2110.00061",
+              "title": "PubTables-1M: Towards comprehensive table extraction from unstructured documents"
+            },
+            {
+              "url": "https://github.com/microsoft/table-transformer",
+              "title": "Table Transformer (TATR) is a deep learning model for ..."
+            }
+          ]
+        },
+        {
+          "id": "EXA-03",
+          "lane": "reading",
+          "query": "category:research paper Nougat neural optical understanding academic documents OCR LaTeX original paper scientific PDFs",
+          "requested_results": 10,
+          "returned_result_entries": 10,
+          "results": [
+            {
+              "url": "https://arxiv.org/abs/2308.13418",
+              "title": "Neural Optical Understanding for Academic Documents"
+            },
+            {
+              "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/a39a9aceda771cded859ae7560530e09-Paper-Conference.pdf",
+              "title": "NOUGAT:"
+            },
+            {
+              "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/a39a9aceda771cded859ae7560530e09-Abstract-Conference.html",
+              "title": "Nougat: Neural Optical Understanding for Academic Documents"
+            },
+            {
+              "url": "https://export.arxiv.org/pdf/2308.13418v1.pdf",
+              "title": "N/A"
+            },
+            {
+              "url": "https://facebookresearch.github.io/nougat/",
+              "title": "Nougat"
+            },
+            {
+              "url": "https://github.com/facebookresearch/nougat",
+              "title": "Nougat: Neural Optical Understanding for Academic ..."
+            },
+            {
+              "url": "https://huggingface.co/papers/2308.13418",
+              "title": "Paper page - Nougat: Neural Optical Understanding for Academic Documents"
+            },
+            {
+              "url": "https://iclr.cc/virtual/2024/poster/18185",
+              "title": "ICLR Poster Nougat: Neural Optical Understanding for Academic Documents"
+            },
+            {
+              "url": "https://github.com/facebookresearch/nougat/blob/main/README.md",
+              "title": "README.md at main · facebookresearch/nougat"
+            },
+            {
+              "url": "https://mlanthology.org/iclr/2024/blecher2024iclr-nougat/",
+              "title": "Nougat: Neural Optical Understanding for Academic Documents | ML Anthology"
+            }
+          ]
+        },
+        {
+          "id": "EXA-04",
+          "lane": "reading",
+          "query": "official W3C Web Annotation data model text quote selector text position selector document provenance scholarly extraction",
+          "requested_results": 10,
+          "returned_result_entries": 10,
+          "results": [
+            {
+              "url": "https://www.w3.org/TR/annotation-model/",
+              "title": "Web Annotation Data Model"
+            },
+            {
+              "url": "https://www.w3.org/TR/2017/REC-annotation-model-20170223/",
+              "title": "Web Annotation Data Model"
+            },
+            {
+              "url": "https://w3c.github.io/web-annotation/model/wd/",
+              "title": "Web Annotation Data Model"
+            },
+            {
+              "url": "https://www.w3.org/TR/selectors-states/",
+              "title": "Selectors and States"
+            },
+            {
+              "url": "https://www.w3.org/TR/2016/CR-annotation-model-20161122/",
+              "title": "Web Annotation Data Model"
+            },
+            {
+              "url": "https://www.w3.org/TR/2016/CR-annotation-vocab-20160906/",
+              "title": "Web Annotation Vocabulary"
+            },
+            {
+              "url": "https://www.w3.org/TR/annotation-html/",
+              "title": "Embedding Web Annotations in HTML"
+            },
+            {
+              "url": "https://www.w3.org/TR/2017/REC-annotation-vocab-20170223/diff.html",
+              "title": "Web Annotation Vocabulary"
+            },
+            {
+              "url": "https://www.w3.org/TR/annotation-vocab/",
+              "title": "Web Annotation Vocabulary"
+            },
+            {
+              "url": "https://w3c.github.io/test-results/annotation-model/all.html",
+              "title": "Annotation Model: All Results"
+            }
+          ]
+        },
+        {
+          "id": "EXA-05",
+          "lane": "synthesis",
+          "query": "category:research paper Enabling Large Language Models to Generate Text with Citations ALCE original paper citation completeness correctness",
+          "requested_results": 10,
+          "returned_result_entries": 10,
+          "results": [
+            {
+              "url": "https://aclanthology.org/2023.emnlp-main.398/",
+              "title": "Enabling Large Language Models to Generate Text with ..."
+            },
+            {
+              "url": "https://aclanthology.org/2023.emnlp-main.398.pdf",
+              "title": "Enabling Large Language Models to Generate Text with Citations"
+            },
+            {
+              "url": "https://arxiv.org/abs/2305.14627",
+              "title": "Enabling Large Language Models to Generate Text with ..."
+            },
+            {
+              "url": "https://github.com/princeton-nlp/ALCE",
+              "title": "Enabling Large Language Models to Generate Text with ..."
+            },
+            {
+              "url": "https://openreview.net/forum?id=bxFwIn0wZ0&noteId=PwrzCuM4n5",
+              "title": "Enabling Large Language Models to Generate Text with ..."
+            },
+            {
+              "url": "https://collaborate.princeton.edu/en/publications/enabling-large-language-models-to-generate-text-with-citations/",
+              "title": "Enabling Large Language Models to Generate Text with ..."
+            },
+            {
+              "url": "https://github.com/haojiepan1/ALCE",
+              "title": "haojiepan1/ALCE"
+            },
+            {
+              "url": "https://www.alphaxiv.org/abs/2305.14627",
+              "title": "Enabling Large Language Models to Generate Text with Citations | alphaXiv"
+            },
+            {
+              "url": "https://www.emergentmind.com/papers/2305.14627",
+              "title": "ALCE Benchmark: Citation-Grounded Text Generation"
+            },
+            {
+              "url": "https://api.deepai.org/publication/enabling-large-language-models-to-generate-text-with-citations",
+              "title": "Enabling Large Language Models to Generate Text with Citations | DeepAI"
+            }
+          ]
+        },
+        {
+          "id": "EXA-06",
+          "lane": "synthesis",
+          "query": "category:research paper Qasper dataset information seeking questions answers scientific research papers evidence annotations multi paragraph",
+          "requested_results": 10,
+          "returned_result_entries": 10,
+          "results": [
+            {
+              "url": "https://aclanthology.org/2021.naacl-main.365/",
+              "title": "A Dataset of Information-Seeking Questions and Answers ..."
+            },
+            {
+              "url": "https://aclanthology.org/2021.naacl-main.365.pdf",
+              "title": "A Dataset of Information-Seeking Questions and Answers Anchored in Research Papers"
+            },
+            {
+              "url": "https://arxiv.org/abs/2105.03011",
+              "title": "A Dataset of Information-Seeking Questions and Answers ..."
+            },
+            {
+              "url": "https://huggingface.co/datasets/allenai/qasper",
+              "title": "allenai/qasper · Datasets at Hugging Face"
+            },
+            {
+              "url": "https://ar5iv.labs.arxiv.org/html/2105.03011",
+              "title": "[2105.03011] A Dataset of Information-Seeking Questions and Answers Anchored in Research Papers"
+            },
+            {
+              "url": "https://huggingface.co/datasets/allenai/qasper/blob/main/qasper.py",
+              "title": "qasper.py · allenai/qasper at main"
+            },
+            {
+              "url": "https://kyleclo.com/assets/pdf/a-dataset-of-information-seeking-questions-and-answers-anchored-in-research-papers.pdf",
+              "title": "a-dataset-of-information-seeking-questions-and-answers- ..."
+            },
+            {
+              "url": "https://github.com/EleutherAI/lm-evaluation-harness/blob/main/lm_eval/tasks/qasper/README.md",
+              "title": "qasper - EleutherAI/lm-evaluation-harness"
+            },
+            {
+              "url": "https://medium.com/ai2-blog/question-answering-on-scientific-research-papers-f6d6da9fd55c",
+              "title": "Medium"
+            },
+            {
+              "url": "https://exa.ai/library/publication/v55qjwrmrhc",
+              "title": "A Dataset of Information-Seeking Questions and Answers Anchored in Research Papers"
+            }
+          ]
+        },
+        {
+          "id": "EXA-07",
+          "lane": "synthesis",
+          "query": "category:research paper Multi-XScience MultiCite generating scientific related work multiple papers citation evidence summarization original paper",
+          "requested_results": 10,
+          "returned_result_entries": 10,
+          "results": [
+            {
+              "url": "https://aclanthology.org/2020.emnlp-main.648/",
+              "title": "Multi-XScience: A Large-scale Dataset for Extreme Multi-document Summarization of Scientific Articles - ACL Anthology"
+            },
+            {
+              "url": "https://arxiv.org/abs/2010.14235",
+              "title": "[2010.14235] Multi-XScience: A Large-scale Dataset for ..."
+            },
+            {
+              "url": "https://aclanthology.org/2020.emnlp-main.648.pdf",
+              "title": "Multi-XScience: A Large-scale Dataset for Extreme ..."
+            },
+            {
+              "url": "https://github.com/yaolu/Multi-XScience",
+              "title": "Multi-XScience: A Large-scale Dataset for Extreme ..."
+            },
+            {
+              "url": "https://arxiv.org/pdf/2010.14235.pdf",
+              "title": "Multi-XScience: A Large-scale Dataset for Extreme Multi-document Summarization of Scientific Articles"
+            },
+            {
+              "url": "https://aclanthology.org/2023.findings-emnlp.573/",
+              "title": "Citance-Contextualized Summarization of Scientific Papers - ACL Anthology"
+            },
+            {
+              "url": "http://www.cs.toronto.edu/%7Elcharlin/papers/Multi-XScience.pdf",
+              "title": "Multi-XScience: A Large-scale Dataset for Extreme Multi-document Summarization of Scientific Articles"
+            },
+            {
+              "url": "https://aclanthology.org/2022.naacl-main.137.pdf",
+              "title": "MULTICITE: Modeling realistic citations requires moving beyond the single-sentence single-label setting"
+            },
+            {
+              "url": "https://paperswithcode.co/paper/2010.14235",
+              "title": "Multi-XScience: A Large-scale Dataset for Extreme Multi-document Summarization of Scientific Articles"
+            },
+            {
+              "url": "https://exa.ai/library/publication/cn38wtbm11q",
+              "title": "Multi-XScience: A Large-scale Dataset for Extreme Multi-document Summarization of Scientific Articles"
+            }
+          ]
+        },
+        {
+          "id": "EXA-08",
+          "lane": "synthesis",
+          "query": "official PRISMA 2020 statement reporting systematic reviews synthesis evidence uncertainty checklist synthesis methods",
+          "requested_results": 10,
+          "returned_result_entries": 10,
+          "results": [
+            {
+              "url": "https://www.prisma-statement.org/prisma-2020",
+              "title": "prisma 2020"
+            },
+            {
+              "url": "https://journals.plos.org/plosmedicine/article?id=10.1371%2Fjournal.pmed.1003583",
+              "title": "The PRISMA 2020 statement: An updated guideline for ..."
+            },
+            {
+              "url": "https://www.bmj.com/content/bmj/372/bmj.n71.full.pdf?utm=",
+              "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews"
+            },
+            {
+              "url": "https://link.springer.com/article/10.1186/s13643-021-01626-4",
+              "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews | Systematic Reviews | Springer Nature Link"
+            },
+            {
+              "url": "https://www.bmj.com/content/372/bmj.n160",
+              "title": "PRISMA 2020 explanation and elaboration: updated guidance and exemplars for reporting systematic reviews"
+            },
+            {
+              "url": "https://www.prisma-statement.org/",
+              "title": "PRISMA statement"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/33782057",
+              "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews - PubMed"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8005925/",
+              "title": "PRISMA 2020 explanation and elaboration: updated guidance ..."
+            },
+            {
+              "url": "https://discovery.ucl.ac.uk/id/eprint/10130719/1/1-s2.0-S1743919121000406-main.pdf",
+              "title": "The PRISMA 2020 statement: An updated guideline for reporting systematic reviews"
+            },
+            {
+              "url": "https://hbg.cochrane.org/sites/hbg.cochrane.org/files/uploads/page-2020-the-prisma-statement-an-updated-gu.pdf",
+              "title": "PRISMA 2020 statement. MetaArXiv preprint (September 2020)"
+            }
+          ]
+        },
+        {
+          "id": "EXA-09",
+          "lane": "reading",
+          "query": "official documentation PDF text extraction pypdf OCRmyPDF GROBID TEI coordinates scanned documents limitations reading order",
+          "requested_results": 15,
+          "returned_result_entries": 15,
+          "results": [
+            {
+              "url": "https://grobid.readthedocs.io/en/latest/Coordinates-in-PDF/",
+              "title": "PDF coordinates - GROBID Documentation - Read the Docs"
+            },
+            {
+              "url": "https://ocrmypdf.readthedocs.io/en/latest/",
+              "title": "OCRmyPDF documentation "
+            },
+            {
+              "url": "https://ocrmypdf.readthedocs.io/en/v15.3.1/introduction.html",
+              "title": "N/A"
+            },
+            {
+              "url": "https://grobid.readthedocs.io/en/latest/TEI-encoding-of-results/",
+              "title": "Understanding the output (TEI) - GROBID Documentation"
+            },
+            {
+              "url": "https://pypdf.readthedocs.io/en/4.0.2/user/extract-text.html",
+              "title": "Extract Text from a PDF — pypdf 4.0.2 documentation"
+            },
+            {
+              "url": "https://github.com/ocrmypdf/ocrmypdf/blob/main/docs/introduction.md",
+              "title": "docs/introduction.md"
+            },
+            {
+              "url": "https://grobid.readthedocs.io/en/latest/",
+              "title": "GROBID Documentation"
+            },
+            {
+              "url": "https://grobid.readthedocs.io/en/latest/Introduction/",
+              "title": "N/A"
+            },
+            {
+              "url": "https://pypdf.readthedocs.io/en/3.11.0/user/extract-text.html",
+              "title": "Extract Text from a PDF — pypdf 3.11.0 documentation"
+            },
+            {
+              "url": "https://grobid.readthedocs.io/en/latest/Principles/",
+              "title": "How GROBID works"
+            },
+            {
+              "url": "https://ocrmypdf.readthedocs.io/_/downloads/en/v15.4.2/pdf/",
+              "title": "ocrmypdf Documentation"
+            },
+            {
+              "url": "https://github.com/grobidOrg/grobid/blob/master/doc/Grobid-batch.md",
+              "title": "doc/Grobid-batch.md at master · grobidOrg/grobid"
+            },
+            {
+              "url": "https://github.com/kermitt2/grobid/blob/master/doc/Coordinates-in-PDF.md",
+              "title": "doc/Coordinates-in-PDF.md"
+            },
+            {
+              "url": "https://ocrmypdf.readthedocs.io/_/downloads/en/v12.2.0/pdf/",
+              "title": "ocrmypdf Documentation"
+            },
+            {
+              "url": "https://github.com/grobidOrg/grobid-client-python",
+              "title": "grobidOrg/grobid-client-python"
+            }
+          ]
+        },
+        {
+          "id": "EXA-10",
+          "lane": "synthesis",
+          "query": "category:research paper language models attributable identified sources verified quotes scientific claims evidence attribution Rashkin Menick SciFact",
+          "requested_results": 15,
+          "returned_result_entries": 15,
+          "results": [
+            {
+              "url": "https://aclanthology.org/2023.cl-4.2/",
+              "title": "Measuring Attribution in Natural Language Generation Models - ACL Anthology"
+            },
+            {
+              "url": "https://aclanthology.org/2020.emnlp-main.609/",
+              "title": "Fact or Fiction: Verifying Scientific Claims - ACL Anthology"
+            },
+            {
+              "url": "https://ojs.aaai.org/index.php/AAAI-SS/article/download/31209/33369",
+              "title": "Faithful Reasoning over Scientific Claims"
+            },
+            {
+              "url": "https://aclanthology.org/anthology-files/pdf/findings/2023.findings-emnlp.307.pdf",
+              "title": "Automatic Evaluation of Attribution by Large Language ..."
+            },
+            {
+              "url": "https://arxiv.org/pdf/2405.02228",
+              "title": "N/A"
+            },
+            {
+              "url": "https://aclanthology.org/2025.findings-emnlp.339.pdf",
+              "title": "Where Did That Come From? Sentence-Level Error-Tolerant Attribution"
+            },
+            {
+              "url": "https://aclanthology.org/2026.acl-long.1430.pdf",
+              "title": "Attribution, Citation, and Quotation: A Survey of Evidence-based Text Generation with Large Language Models"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2112.12870v2.pdf",
+              "title": "Measuring Attribution in Natural Language Generation Models"
+            },
+            {
+              "url": "https://p.rst.im/q/aclanthology.org/2024.naacl-long.216.pdf",
+              "title": "Towards Improved Multi-Source Attribution for Long-Form Answer Generation"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12003634/",
+              "title": "An automated framework for assessing how well LLMs cite ..."
+            },
+            {
+              "url": "https://aclanthology.org/2024.findings-acl.886.pdf",
+              "title": "AttributionBench: How Hard is Automatic Attribution Evaluation?"
+            },
+            {
+              "url": "https://arxiv.org/html/2404.01019v2",
+              "title": "Source-Aware Training Enables Knowledge Attribution in Language Models"
+            },
+            {
+              "url": "https://aclanthology.org/2026.eacl-demo.27.pdf",
+              "title": "SciTrue: Evidence-Grounded Claim Verification in Science"
+            },
+            {
+              "url": "https://arxiv.org/html/2311.03731v2",
+              "title": "A Survey of Large Language Models Attribution"
+            },
+            {
+              "url": "https://openreview.net/attachment?id=Dg8NKcf7Fg&name=pdf",
+              "title": "arXiv:2305.06311v1 [cs.CL] 10 May 2023"
+            }
+          ]
+        }
+      ],
+      "fetch_batches": [
+        {
+          "batch": "F01",
+          "tool": "exa_web_fetch_exa",
+          "urls": [
+            "https://arxiv.org/html/2408.09869v5",
+            "https://openaccess.thecvf.com/content/CVPR2022/html/Smock_PubTables-1M_Towards_Comprehensive_Table_Extraction_From_Unstructured_Documents_CVPR_2022_paper.html",
+            "https://proceedings.iclr.cc/paper_files/paper/2024/hash/a39a9aceda771cded859ae7560530e09-Abstract-Conference.html",
+            "https://www.w3.org/TR/annotation-model/"
+          ],
+          "max_characters_per_page": 19000,
+          "status": "successful_content_returned",
+          "note": "Returned text was consulted selectively; a successful fetch or character allowance does not imply a complete read."
+        },
+        {
+          "batch": "F02",
+          "tool": "exa_web_fetch_exa",
+          "urls": [
+            "https://grobid.readthedocs.io/en/latest/TEI-encoding-of-results/",
+            "https://pypdf.readthedocs.io/en/stable/user/extract-text.html",
+            "https://ocrmypdf.readthedocs.io/en/latest/introduction.html",
+            "https://openaccess.thecvf.com/content/ICCV2025/papers/Nassar_SmolDocling_An_ultra-compact_vision-language_model_for_end-to-end_multi-modal_document_conversion_ICCV_2025_paper.pdf"
+          ],
+          "max_characters_per_page": 19000,
+          "status": "successful_content_returned",
+          "note": "Returned text was consulted selectively; a successful fetch or character allowance does not imply a complete read."
+        },
+        {
+          "batch": "F03",
+          "tool": "exa_web_fetch_exa",
+          "urls": [
+            "https://aclanthology.org/2023.emnlp-main.398/",
+            "https://aclanthology.org/2021.naacl-main.365/",
+            "https://aclanthology.org/2020.emnlp-main.648/",
+            "https://aclanthology.org/2022.naacl-main.137/"
+          ],
+          "max_characters_per_page": 16000,
+          "status": "successful_content_returned",
+          "note": "Returned text was consulted selectively; a successful fetch or character allowance does not imply a complete read."
+        },
+        {
+          "batch": "F04",
+          "tool": "exa_web_fetch_exa",
+          "urls": [
+            "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003583",
+            "https://aclanthology.org/2023.cl-4.2/",
+            "https://aclanthology.org/2020.emnlp-main.609/",
+            "https://aclanthology.org/2024.naacl-long.216/"
+          ],
+          "max_characters_per_page": 16000,
+          "status": "successful_content_returned",
+          "note": "Returned text was consulted selectively; a successful fetch or character allowance does not imply a complete read."
+        },
+        {
+          "batch": "F05",
+          "tool": "exa_web_fetch_exa",
+          "urls": [
+            "https://arxiv.org/abs/2408.09869",
+            "https://openaccess.thecvf.com/content/CVPR2022/papers/Smock_PubTables-1M_Towards_Comprehensive_Table_Extraction_From_Unstructured_Documents_CVPR_2022_paper.pdf",
+            "https://proceedings.iclr.cc/paper_files/paper/2024/file/a39a9aceda771cded859ae7560530e09-Paper-Conference.pdf",
+            "https://www.w3.org/TR/annotation-model/"
+          ],
+          "max_characters_per_page": 85000,
+          "status": "successful_content_returned",
+          "note": "Returned text was consulted selectively; a successful fetch or character allowance does not imply a complete read."
+        },
+        {
+          "batch": "F06",
+          "tool": "exa_web_fetch_exa",
+          "urls": [
+            "https://aclanthology.org/2023.emnlp-main.398.pdf",
+            "https://aclanthology.org/2021.naacl-main.365.pdf",
+            "https://aclanthology.org/2020.emnlp-main.648.pdf",
+            "https://aclanthology.org/2022.naacl-main.137.pdf"
+          ],
+          "max_characters_per_page": 17000,
+          "status": "successful_content_returned",
+          "note": "Returned text was consulted selectively; a successful fetch or character allowance does not imply a complete read."
+        },
+        {
+          "batch": "F07",
+          "tool": "exa_web_fetch_exa",
+          "urls": [
+            "https://aclanthology.org/2023.cl-4.2.pdf",
+            "https://aclanthology.org/2020.emnlp-main.609.pdf",
+            "https://aclanthology.org/2024.naacl-long.216.pdf"
+          ],
+          "max_characters_per_page": 17000,
+          "status": "successful_content_returned",
+          "note": "Returned text was consulted selectively; a successful fetch or character allowance does not imply a complete read."
+        },
+        {
+          "batch": "F08",
+          "tool": "exa_web_fetch_exa",
+          "urls": [
+            "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003583"
+          ],
+          "max_characters_per_page": 50000,
+          "status": "successful_content_returned",
+          "note": "Returned text was consulted selectively; a successful fetch or character allowance does not imply a complete read."
+        }
+      ],
+      "approved25_exclusion": {
+        "path": "C:/Users/jeans/Desktop/challenge-work-hacketon/dev.to-challenge/docs/research/deepsearch-foundation-2026-09-27/REPAIR_approved-25.json",
+        "observed_count": 25,
+        "overlap_with_selected_canonical_urls": 0,
+        "note": "ALCE is explicitly labeled previously considered, not present in this approved25 file. No other agent source collisions reported by parent."
+      },
+      "triage_rules": [
+        "Prefer original author papers, official maintainer documentation and normative standards.",
+        "Collapse publisher/arXiv/PDF/HTML mirrors of the same work into a single source record.",
+        "Do not treat unknown redistribution permission as evidence against a source's truth or usefulness; hold binary ingestion separately.",
+        "Do not use search result presence or similarity ranking as source validation."
+      ],
+      "exclusion_examples": [
+        {
+          "url": "https://github.laiyagushi.com/cactuscommunications/grobid",
+          "decision": "exclude",
+          "reason": "Noncanonical mirror/fork; official GROBID maintainer documentation selected."
+        },
+        {
+          "url": "https://pypdf.readthedocs.io/en/4.0.2/user/extract-text.html",
+          "decision": "replace",
+          "reason": "Older pinned documentation returned by search; current official stable route fetched for the reference, with exact package version left unverified."
+        },
+        {
+          "url": "https://pypdf.readthedocs.io/en/3.11.0/user/extract-text.html",
+          "decision": "exclude_duplicate_version",
+          "reason": "Repeated old version of the same extraction document."
+        },
+        {
+          "url": "https://ocrmypdf.readthedocs.io/en/v15.3.1/introduction.html",
+          "decision": "replace",
+          "reason": "Historical version; latest introduction fetched and its internal dependency contradiction retained."
+        },
+        {
+          "url": "https://w3c.github.io/web-annotation/model/wd/",
+          "decision": "exclude_superseded",
+          "reason": "Working draft; W3C Recommendation selected."
+        },
+        {
+          "url": "https://www.emergentmind.com/papers/2305.14627",
+          "decision": "exclude_secondary",
+          "reason": "Primary ALCE paper available."
+        },
+        {
+          "url": "https://www.alphaxiv.org/abs/2305.14627",
+          "decision": "exclude_mirror",
+          "reason": "Canonical ACL paper selected."
+        },
+        {
+          "url": "https://arxiv.org/abs/2010.14235",
+          "decision": "deduplicate_same_work",
+          "reason": "Multi-XScience ACL publication selected; not an additional source."
+        },
+        {
+          "url": "https://p.rst.im/q/aclanthology.org/2024.naacl-long.216.pdf",
+          "decision": "replace_mirror",
+          "reason": "Direct ACL landing page and PDF successfully fetched."
+        },
+        {
+          "url": "https://arxiv.org/pdf/2609.26381",
+          "decision": "not_selected",
+          "reason": "Unreviewed recent layout/GROBID candidate; no evidence claims derived from it."
+        }
+      ],
+      "extraction_scope": [
+        {
+          "id": "R01",
+          "url": "https://arxiv.org/html/2408.09869v5",
+          "pdf_url": null,
+          "evidence_status": "confirmed by primary sources; abstract and sections 1, 3, 4, 5 and 6 consulted through Exa. No full-paper review claimed.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        },
+        {
+          "id": "R02",
+          "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Smock_PubTables-1M_Towards_Comprehensive_Table_Extraction_From_Unstructured_Documents_CVPR_2022_paper.html",
+          "pdf_url": "https://openaccess.thecvf.com/content/CVPR2022/papers/Smock_PubTables-1M_Towards_Comprehensive_Table_Extraction_From_Unstructured_Documents_CVPR_2022_paper.pdf",
+          "evidence_status": "confirmed by primary sources; abstract, introduction and table-extraction/task descriptions consulted in landing page and PDF. No full-paper review claimed.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        },
+        {
+          "id": "R03",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/a39a9aceda771cded859ae7560530e09-Abstract-Conference.html",
+          "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/a39a9aceda771cded859ae7560530e09-Paper-Conference.pdf",
+          "evidence_status": "confirmed by primary sources; abstract, section 5.5 limitations/future work and conclusion consulted via Exa. No full-paper review claimed.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        },
+        {
+          "id": "R04",
+          "url": "https://www.w3.org/TR/annotation-model/",
+          "pdf_url": null,
+          "evidence_status": "confirmed by primary sources; model introduction, rights discussion and sections 4.2.4–4.2.5 consulted via Exa. No complete specification review claimed.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        },
+        {
+          "id": "R05",
+          "url": "https://grobid.readthedocs.io/en/latest/TEI-encoding-of-results/",
+          "pdf_url": null,
+          "evidence_status": "confirmed by primary sources; motivation, schemas and well-formedness/validation sections consulted via Exa.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        },
+        {
+          "id": "R06",
+          "url": "https://pypdf.readthedocs.io/en/stable/user/extract-text.html",
+          "pdf_url": null,
+          "evidence_status": "confirmed by primary sources; extraction examples, visitor caveats, extraction difficulties and OCR-versus-text sections consulted via Exa.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        },
+        {
+          "id": "R07",
+          "url": "https://ocrmypdf.readthedocs.io/en/latest/introduction.html",
+          "pdf_url": null,
+          "evidence_status": "confirmed by primary sources; introduction, processing description and limitations consulted via Exa; dependency contradiction explicitly retained.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        },
+        {
+          "id": "R08",
+          "url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Nassar_SmolDocling_An_ultra-compact_vision-language_model_for_end-to-end_multi-modal_document_conversion_ICCV_2025_paper.pdf",
+          "pdf_url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Nassar_SmolDocling_An_ultra-compact_vision-language_model_for_end-to-end_multi-modal_document_conversion_ICCV_2025_paper.pdf",
+          "evidence_status": "confirmed by primary sources; abstract, introduction and sections 3–3.2 consulted via Exa. No full-paper or experimental reproduction claim.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        },
+        {
+          "id": "W01",
+          "url": "https://aclanthology.org/2023.emnlp-main.398/",
+          "pdf_url": "https://aclanthology.org/2023.emnlp-main.398.pdf",
+          "evidence_status": "confirmed by primary sources; abstract, task setup and section 3.3 citation-quality explanation consulted via Exa. No benchmark run or full-paper review claimed.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        },
+        {
+          "id": "W02",
+          "url": "https://aclanthology.org/2021.naacl-main.365/",
+          "pdf_url": "https://aclanthology.org/2021.naacl-main.365.pdf",
+          "evidence_status": "confirmed by primary sources; abstract, section 2 dataset construction and section 3 answer/evidence analysis consulted via Exa. No evaluation execution claimed.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        },
+        {
+          "id": "W03",
+          "url": "https://aclanthology.org/2020.emnlp-main.648/",
+          "pdf_url": "https://aclanthology.org/2020.emnlp-main.648.pdf",
+          "evidence_status": "confirmed by primary sources; abstract and sections 2.1–2.3 dataset construction/analysis consulted via Exa. No full-paper review or benchmark execution claimed.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        },
+        {
+          "id": "W04",
+          "url": "https://aclanthology.org/2022.naacl-main.137/",
+          "pdf_url": "https://aclanthology.org/2022.naacl-main.137.pdf",
+          "evidence_status": "confirmed by primary sources; abstract and section 2 understudied citation phenomena consulted via Exa. No full-paper review claimed.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        },
+        {
+          "id": "W05",
+          "url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003583",
+          "pdf_url": null,
+          "evidence_status": "confirmed by primary sources; summary, scope, terminology and use guidance consulted via Exa. No full systematic-review compliance claim.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        },
+        {
+          "id": "W06",
+          "url": "https://aclanthology.org/2023.cl-4.2/",
+          "pdf_url": "https://aclanthology.org/2023.cl-4.2.pdf",
+          "evidence_status": "confirmed by primary sources; abstract and introductory AIS framing/scope consulted in the first PDF sections; licence notice verified. No full-paper review claimed.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        },
+        {
+          "id": "W07",
+          "url": "https://aclanthology.org/2020.emnlp-main.609/",
+          "pdf_url": "https://aclanthology.org/2020.emnlp-main.609.pdf",
+          "evidence_status": "confirmed by primary sources; abstract, introduction and section 2 task definition/supporting-and-refuting-evidence consulted via Exa. No medical use or benchmark execution claimed.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        },
+        {
+          "id": "W08",
+          "url": "https://aclanthology.org/2024.naacl-long.216/",
+          "pdf_url": "https://aclanthology.org/2024.naacl-long.216.pdf",
+          "evidence_status": "confirmed by primary sources; abstract, related-work attribution discussion and section 3 task formulation consulted via Exa. No training or evaluation run claimed.",
+          "source_capability_vs_local_inference": "Source descriptions are grounded in consulted primary text. test_question, expected_behavior, admission and ingestion recommendation are proposed local design judgments, not claims of implementation or measured performance."
+        }
+      ],
+      "rights": [
+        {
+          "id": "R01",
+          "licence_status": "The report explicitly states that Docling code is MIT-licensed. This does not establish the report, model-weight or dataset redistribution licence; those rights remain unverified.",
+          "ingestion_recommendation": "Store canonical URL, version, metadata and original notes; hold full-text or binary upload until relevant rights and authorization are verified."
+        },
+        {
+          "id": "R02",
+          "licence_status": "Publisher-hosted open-access copy verified. Redistribution terms for this paper and dataset were not established in the sections consulted.",
+          "ingestion_recommendation": "Ingest reference metadata and original extraction checklist; retain verified PDF link; hold binary/dataset upload pending rights verification."
+        },
+        {
+          "id": "R03",
+          "licence_status": "Public paper and code/model release are reported; no transferable licence for this exact PDF or model assets was established in the consulted sections.",
+          "ingestion_recommendation": "Store paper reference and limitation notes; retain PDF link; hold binary/model redistribution pending rights review."
+        },
+        {
+          "id": "R04",
+          "licence_status": "W3C normative source verified; the source's redistribution terms were not inspected. Rights examples inside the specification are examples, not the specification's own licence.",
+          "ingestion_recommendation": "Store canonical/version metadata and authored implementation notes; avoid copying large text ranges; hold full-spec upload until rights are checked."
+        },
+        {
+          "id": "R05",
+          "licence_status": "Official documentation verified; documentation and software redistribution terms were not established by this page.",
+          "ingestion_recommendation": "Store URL, retrieval date, metadata and original validation notes; hold document/code redistribution pending exact licence/version check."
+        },
+        {
+          "id": "R06",
+          "licence_status": "Official stable documentation verified; no redistribution licence for the documentation was established in this reading.",
+          "ingestion_recommendation": "Store canonical reference and original routing/limit notes; hold full documentation upload pending licence and version capture."
+        },
+        {
+          "id": "R07",
+          "licence_status": "Documentation rights unverified. Page mentions dependency licence obligations; its conflicting Ghostscript requirement must be resolved against a pinned version before adoption.",
+          "ingestion_recommendation": "Store reference and extraction limitations; hold transformed PDF upload and software adoption until source rights, runtime version and dependency terms are checked."
+        },
+        {
+          "id": "R08",
+          "licence_status": "Publisher-hosted open-access PDF verified; model weights/datasets are linked, but their redistribution terms and the PDF licence were not established.",
+          "ingestion_recommendation": "Store reference, verified PDF link and authored schema notes; hold binary/model/dataset upload pending licence and authorization checks."
+        },
+        {
+          "id": "W01",
+          "licence_status": "ACL publication/copyright notice verified; redistribution licence for this paper and its bundled datasets was not established in the consulted sections.",
+          "ingestion_recommendation": "Store reference, PDF link and original support-check design notes; keep any derived test question separate from held-out evaluation data."
+        },
+        {
+          "id": "W02",
+          "licence_status": "ACL publication/copyright notice verified; paper and dataset redistribution terms were not established in this reading.",
+          "ingestion_recommendation": "Store citation and original evidence/abstention design notes; retain PDF link; hold dataset or binary ingestion pending rights verification."
+        },
+        {
+          "id": "W03",
+          "licence_status": "Paper states reference full text was often unavailable due to copyright restrictions. Dataset and paper redistribution terms remain unverified.",
+          "ingestion_recommendation": "Store citation and authored synthesis pattern; retain PDF link; ingest neither reference full texts nor dataset binaries without rights checks."
+        },
+        {
+          "id": "W04",
+          "licence_status": "ACL publication/copyright notice verified; paper and annotation dataset redistribution terms unverified.",
+          "ingestion_recommendation": "Store citation and authored citation-context guidance; retain PDF link; hold full-text/dataset upload pending licence check."
+        },
+        {
+          "id": "W05",
+          "licence_status": "Publisher-hosted article verified; a licence statement was not present in the extracted sections, so redistribution terms remain unverified here.",
+          "ingestion_recommendation": "Store bibliographic metadata and an authored reporting checklist mapped to the task; hold article upload until rights are verified."
+        },
+        {
+          "id": "W06",
+          "licence_status": "PDF explicitly states Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0). Commercial scope and derivative uses remain to be assessed; no licence to modify/redistribute is inferred.",
+          "ingestion_recommendation": "Use bibliographic link and original notes; hold full-text/binary ingestion pending compatibility review of NC/ND restrictions and authorized use."
+        },
+        {
+          "id": "W07",
+          "licence_status": "Primary ACL paper verified; exact paper/dataset redistribution terms were not established in the consulted sections.",
+          "ingestion_recommendation": "Store citation and authored claim–evidence relation guidance; keep verified PDF link; hold corpus/binary ingestion pending rights review."
+        },
+        {
+          "id": "W08",
+          "licence_status": "ACL publication/copyright notice verified; paper and dataset redistribution terms were not established in this reading.",
+          "ingestion_recommendation": "Store citation, PDF link and original multi-source attribution design notes; hold paper/dataset upload pending rights review."
+        }
+      ],
+      "contradictions_and_caveats": [
+        "R07 OCRmyPDF latest introduction says in its version17 section that Ghostscript is no longer strictly required, while the footer says it is required. Do not use the footer as a current dependency contract.",
+        "R01 Docling report is a historical/versioned technical report; do not infer current API behavior from its sample code or transfer its reported performance to Orbit.",
+        "R05/R06/R07 are mutable latest/stable documentation URLs with no verified publication date or installed package version.",
+        "W06 PDF explicitly states CC BY-NC-ND4.0. No commercial compatibility or permission for derivative redistribution is inferred.",
+        "PRISMA is a reporting guideline, not evidence that this bounded source selection is an exhaustive systematic review.",
+        "All proposed questions are design/acceptance ideas, not held-out benchmark items and were not executed."
+      ],
+      "local_execution": {
+        "implementations_adopted": 0,
+        "tests_executed": 0,
+        "binaries_downloaded_to_workspace": 0,
+        "knowledge_base_mutations": 0
+      },
+      "memory_context": {
+        "used": "Quick read of MEMORY.md lines50-81 to confirm Orbit continuity boundaries; no historical product status relied upon for current source claims.",
+        "citation": "MEMORY.md:50-81",
+        "rollout_id": "01a08b65-9f68-7071-9839-8f634bc9c19a"
+      }
+    }
+  }
+}

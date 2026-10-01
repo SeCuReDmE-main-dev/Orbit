@@ -1,0 +1,11 @@
+{
+  "pages": 56,
+  "rendered_pages": 56,
+  "horizontal_overflow_candidates": [],
+  "visual_review": "passed: all 56 pages inspected in contact sheets, cover and figure details inspected; orphan cover line and duplicate figure numbers corrected",
+  "reader": "Poppler raster / PDFium text bounds",
+  "scope": "all pages, DOCX remains editable",
+  "pdf_sha256": "330915650699e08363d0581b9887df603623a85b794713f97f60ab403ade8c4c",
+  "docx_visual_pagination": "not separately rendered",
+  "external_publication": "not performed"
+}

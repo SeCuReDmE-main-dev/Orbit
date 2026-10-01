@@ -1,0 +1,26 @@
+{
+  "codebase_root": "C:\\Users\\jeans\\Desktop\\challenge-work-hacketon\\dev.to-challenge",
+  "updated_at": "2026-09-30T19:21:16.6276500Z",
+  "benchmarks": [
+    {
+      "slug": "dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli",
+      "title": "Orbit Evidence and Agent Benchmark",
+      "created_at": "2026-09-29T23:25:22Z",
+      "updated_at": "2026-09-30T19:21:16.6276500Z",
+      "status": "active",
+      "objective": "Measure scoped evidence decisions and provenance continuity in real WebMCP agents",
+      "product_hypothesis": "Structured evidence and bounded HOLD reduce unjustified conclusions without excessive abstention",
+      "primary_subject": "Orbit classification engines and public agent trajectories",
+      "comparators": [
+        "Simple three-way baseline",
+        "Neutrosophic evidence sets",
+        "Discrete plithogenic relations"
+      ],
+      "current_report_path": ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/cloud-campaign-status.md",
+      "current_memory_path": ".benchmark\\benchmarks\\dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli\\memory.md",
+      "validity_status": "partial-cloud; real annotations pending",
+      "execution_status": "kaggle-campaigns-executed-partially; sdk and quota failures",
+      "latest_history_path": ".benchmark\\benchmarks\\dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli\\history\\2026-09-30T03-59-39Z"
+    }
+  ]
+}

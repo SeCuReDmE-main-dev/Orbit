@@ -1,0 +1,60 @@
+{
+  "planned": {
+    "status": "planned",
+    "plan_id": "aee92d28a8a590dbf2c0ee6d",
+    "action": "deploy_static_site",
+    "transport": "brokered-ssh-sftp",
+    "destination_dir": "/home/xacm7978/orbit.securedme.ca",
+    "expected_paths": [
+      ".htaccess",
+      "api/index.php",
+      "app/index.html",
+      "benchmark/agent-mission-observations.json",
+      "benchmark/index.html",
+      "benchmark/orbit-pilot-report.pdf",
+      "guide/index.html",
+      "index.html",
+      "studio/index.html"
+    ],
+    "package": {
+      "name": "orbit-public-20260929-context-provenance-w02-r2.zip",
+      "size": 12413230,
+      "sha256": "92355c799d26ee112d53b0af429b10d1099b058d472aa62868c0ed39afe91c87"
+    },
+    "backup_path": "/home/xacm7978/orbit.securedme.ca.backup-aee92d28a8a590dbf2c0ee6d",
+    "archive_path": "~/.securedme-deploy/aee92d28a8a590dbf2c0ee6d/site.zip",
+    "steps": [
+      "lease SSH credentials from Settings in a child process",
+      "upload and hash-verify orbit-public-20260929-context-provenance-w02-r2.zip in an isolated staging directory",
+      "extract and verify the candidate tree before switching",
+      "atomically replace the destination and retain backup /home/xacm7978/orbit.securedme.ca.backup-aee92d28a8a590dbf2c0ee6d"
+    ],
+    "rollback": "restore /home/xacm7978/orbit.securedme.ca.backup-aee92d28a8a590dbf2c0ee6d",
+    "confirmation": "APPLY:aee92d28a8a590dbf2c0ee6d",
+    "dry_run": true,
+    "secret_values_exposed": false
+  },
+  "applied": {
+    "status": "success",
+    "transport": "brokered-ssh-sftp",
+    "backup_path": "/home/xacm7978/orbit.securedme.ca.backup-aee92d28a8a590dbf2c0ee6d",
+    "package_sha256": "92355c799d26ee112d53b0af429b10d1099b058d472aa62868c0ed39afe91c87",
+    "verified_paths": [
+      ".htaccess",
+      "api/index.php",
+      "app/index.html",
+      "benchmark/agent-mission-observations.json",
+      "benchmark/index.html",
+      "benchmark/orbit-pilot-report.pdf",
+      "guide/index.html",
+      "index.html",
+      "studio/index.html"
+    ],
+    "staging_cleaned": true,
+    "mutated": true,
+    "rollback_restored": false,
+    "secret_values_exposed": false,
+    "plan_id": "aee92d28a8a590dbf2c0ee6d",
+    "destination_dir": "/home/xacm7978/orbit.securedme.ca"
+  }
+}

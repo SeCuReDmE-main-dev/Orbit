@@ -1,0 +1,232 @@
+{
+  "model": "gemini-3.8-flash-high",
+  "host": "Antigravity official CLI 1.2.13",
+  "startedAt": "2026-09-30T00:41:51.877568+00:00",
+  "observedCompletedAt": "2026-09-30T00:42:55.315745+00:00",
+  "durationSeconds": 51.4249304,
+  "usage": {
+    "input_tokens": 18801,
+    "output_tokens": 17804,
+    "thinking_tokens": 16324,
+    "cache_read_tokens": 0,
+    "total_tokens": 36605
+  },
+  "quotaBefore": [
+    {
+      "id": "gemini-weekly",
+      "window": "weekly",
+      "remaining_fraction": 0.998295247554779,
+      "reset_time": "2026-10-07T00:24:00Z"
+    },
+    {
+      "id": "gemini-5h",
+      "window": "5h",
+      "remaining_fraction": 0.9897714853286743,
+      "reset_time": "2026-09-30T05:24:00Z"
+    }
+  ],
+  "context": "fresh conversation, temporary empty workspace, plan mode",
+  "capture": "Final response and usage only; no thinking trace saved.",
+  "results": [
+    {
+      "questionId": "q01",
+      "decision": "ADMIT",
+      "evidence": [
+        {
+          "sourceId": "d01",
+          "quote": "Aster service, provider Test Lab, local mode, version 1: batch processing is supported.",
+          "relation": "supports",
+          "scope": {
+            "subject": "Aster",
+            "property": "supported",
+            "value": "yes",
+            "provider": "Test Lab",
+            "product": "Aster service",
+            "mode": "local",
+            "version": "1"
+          }
+        }
+      ],
+      "excluded": [
+        {
+          "sourceId": "d02",
+          "reason": "The passage discusses housing color and makes no statement regarding batch processing support."
+        }
+      ],
+      "uncertainties": [],
+      "justification": "Document d01 directly supports batch processing for Aster service in local mode version 1 without contradiction or blocking uncertainty."
+    },
+    {
+      "questionId": "q02",
+      "decision": "REJECT",
+      "evidence": [
+        {
+          "sourceId": "d03",
+          "quote": "Boreal service, provider Test Lab, local mode, version 1: batch processing is not supported.",
+          "relation": "contradicts",
+          "scope": {
+            "subject": "Boreal",
+            "property": "supported",
+            "value": "no",
+            "provider": "Test Lab",
+            "product": "Boreal service",
+            "mode": "local",
+            "version": "1"
+          }
+        }
+      ],
+      "excluded": [
+        {
+          "sourceId": "d04",
+          "reason": "The passage discusses user interface buttons and does not address batch processing."
+        }
+      ],
+      "uncertainties": [],
+      "justification": "Document d03 provides a direct applicable refutation stating batch processing is not supported for Boreal service in local mode version 1."
+    },
+    {
+      "questionId": "q03",
+      "decision": "HOLD",
+      "evidence": [
+        {
+          "sourceId": "d05",
+          "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is supported.",
+          "relation": "supports",
+          "scope": {
+            "subject": "Cygnus",
+            "property": "supported",
+            "value": "yes",
+            "provider": "Test Lab",
+            "product": "Cygnus service",
+            "mode": "local",
+            "version": "1"
+          }
+        },
+        {
+          "sourceId": "d06",
+          "quote": "Cygnus service, provider Test Lab, local mode, version 1: batch processing is not supported. Neither of these two independent notes supersedes the other.",
+          "relation": "contradicts",
+          "scope": {
+            "subject": "Cygnus",
+            "property": "supported",
+            "value": "no",
+            "provider": "Test Lab",
+            "product": "Cygnus service",
+            "mode": "local",
+            "version": "1"
+          }
+        }
+      ],
+      "excluded": [],
+      "uncertainties": [
+        "Opposing applicable records coexist for Cygnus service in local mode version 1, and neither supersedes the other."
+      ],
+      "justification": "Applicable passages d05 and d06 directly contradict each other regarding batch processing support in local mode version 1 without either note superseding the other."
+    },
+    {
+      "questionId": "q04",
+      "decision": "ADMIT",
+      "evidence": [
+        {
+          "sourceId": "d07",
+          "quote": "Draco service, provider Test Lab, local mode, version 1: batch processing is supported.",
+          "relation": "supports",
+          "scope": {
+            "subject": "Draco",
+            "property": "supported",
+            "value": "yes",
+            "provider": "Test Lab",
+            "product": "Draco service",
+            "mode": "local",
+            "version": "1"
+          }
+        }
+      ],
+      "excluded": [
+        {
+          "sourceId": "d08",
+          "reason": "Applies exclusively to remote mode; a different mode is not applicable to or a refutation of local mode."
+        }
+      ],
+      "uncertainties": [],
+      "justification": "Document d07 directly supports batch processing in local mode version 1. Document d08 applies solely to remote mode and does not refute local mode."
+    },
+    {
+      "questionId": "q05",
+      "decision": "HOLD",
+      "evidence": [
+        {
+          "sourceId": "d09",
+          "quote": "Equinox service, provider Test Lab, version 1: batch processing is supported. The execution mode is not recorded.",
+          "relation": "supports",
+          "scope": {
+            "subject": "Equinox",
+            "property": "supported",
+            "value": "yes",
+            "provider": "Test Lab",
+            "product": "Equinox service",
+            "version": "1"
+          }
+        },
+        {
+          "sourceId": "d10",
+          "quote": "Equinox service, provider Test Lab, version 1: local and remote modes are distinct. This note does not specify which mode supports batch processing.",
+          "relation": "contextualizes",
+          "scope": {
+            "subject": "Equinox",
+            "provider": "Test Lab",
+            "product": "Equinox service",
+            "version": "1"
+          }
+        }
+      ],
+      "excluded": [],
+      "uncertainties": [
+        "Execution mode is unrecorded in document d09, and document d10 establishes that local and remote modes are distinct without specifying mode support."
+      ],
+      "justification": "Available information is insufficient to confirm batch processing in local mode, as the mode is missing in d09 and missing conditions cannot be assumed identical by default."
+    },
+    {
+      "questionId": "q06",
+      "decision": "REJECT",
+      "evidence": [
+        {
+          "sourceId": "d12",
+          "quote": "Fornax service, provider Test Lab, local mode, version 2: batch processing is not supported. Version 2 explicitly replaces version 1 for local mode.",
+          "relation": "contradicts",
+          "scope": {
+            "subject": "Fornax",
+            "property": "supported",
+            "value": "no",
+            "provider": "Test Lab",
+            "product": "Fornax service",
+            "mode": "local",
+            "version": "2"
+          }
+        }
+      ],
+      "excluded": [
+        {
+          "sourceId": "d11",
+          "reason": "Applies to version 1, which was explicitly replaced by version 2 for local mode."
+        }
+      ],
+      "uncertainties": [],
+      "justification": "Document d12 directly refutes batch processing for Fornax service in local mode version 2 and explicitly replaces version 1."
+    }
+  ],
+  "quotaAfter": [
+    {
+      "id": "gemini-weekly",
+      "window": "weekly",
+      "remaining_fraction": 0.9976214170455933,
+      "reset_time": "2026-10-07T00:24:00Z"
+    },
+    {
+      "id": "gemini-5h",
+      "window": "5h",
+      "remaining_fraction": 0.9857283234596252,
+      "reset_time": "2026-09-30T05:24:00Z"
+    }
+  ]
+}

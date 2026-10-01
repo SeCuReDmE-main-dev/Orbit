@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-28",
+  "operator": "Codex",
+  "manualUploadBy": "Jean-Sébastien",
+  "service": "https://huggingface.co/spaces/microsoft/TRELLIS.2",
+  "input": {
+    "file": "assets/orbit-avatar/reference-bust-v1.png",
+    "sha256": "15ccbe997ffd26c5e9b99937d63653280f2093e0af7c18628bcef8015c86399a",
+    "width": 1122,
+    "height": 1402,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "origin": "Image-generation edit of assets/synthia/direction/canonical-face.png; canonical reference retained unchanged.",
+    "editBriefSummary": "Preserve identity; frontal head, neck, shoulders and upper torso; neutral lighting and transparent background. This is a prepared input image, not a 3D model.",
+    "canonicalSHA256": "93622ccfaa49e3eac981068fa2ec0bf395135f523d436f7d17c86e38c44e1429"
+  },
+  "parameters": {
+    "resolution": 1024,
+    "seed": 42,
+    "randomizeSeed": false,
+    "decimationTarget": 100000,
+    "textureSize": 2048,
+    "advancedSettings": "UI defaults, unchanged; not independently pinned"
+  },
+  "generationAttempts": 1,
+  "preview": {
+    "status": "generated",
+    "evidenceStatus": "observed"
+  },
+  "extractionAttempts": 1,
+  "extraction": {
+    "status": "BLOCKED_EXTERNAL",
+    "evidenceStatus": "observed",
+    "message": "You've hit your daily ZeroGPU limit",
+    "resultView": "Error",
+    "glbDownloaded": false,
+    "localModel": null,
+    "resetAt": null
+  },
+  "purchaseOrUpgrade": false,
+  "approvedForApplication": false,
+  "nextAction": "After free quota renews, extract the existing preview if retained. If expired, regenerate from the same input and record another execution. Preserve and audit the raw GLB before Blender preparation."
+}

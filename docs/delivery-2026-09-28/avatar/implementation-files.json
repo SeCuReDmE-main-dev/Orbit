@@ -1,0 +1,54 @@
+{
+  "date": "2026-09-28T12:37:54.870726+00:00",
+  "head": "3c6806b9cb77b81b5bea2e3debb7146f5ee0b821",
+  "branch": "master",
+  "status": "partial_blocked_external",
+  "approvedForApplication": false,
+  "files": [
+    {
+      "path": "packages/synthia-presence/src/index.ts",
+      "bytes": 23738,
+      "sha256": "2a2c4ff69dd5d7d5cf6ee8e28bddf862dc6c4b7cc1b99dec54688ad39bd81ab6"
+    },
+    {
+      "path": "packages/synthia-presence/src/holographic.ts",
+      "bytes": 2844,
+      "sha256": "501c0d1f557591693383262b8dae04f889fe2588ae65788e9b92c1fe079fadde"
+    },
+    {
+      "path": "tests/presence-holographic.test.ts",
+      "bytes": 2346,
+      "sha256": "fd69c6d1263b77e3833ca1f6be4e2773cc81693fb095279b1eab87f023dfaae5"
+    },
+    {
+      "path": "web/src/pages/avatar-review.astro",
+      "bytes": 14025,
+      "sha256": "7af6ad5e977ef5ea68717fbac2494021425241741b69b5dfec8b2471bc44ac71"
+    },
+    {
+      "path": "web/public/avatar-review/candidate.json",
+      "bytes": 429,
+      "sha256": "fee9685e6e3aef8e94988a45f35affb5b97b379d052e8284fccb483d5debbb94"
+    },
+    {
+      "path": "assets/orbit-avatar/reference-bust-v1.png",
+      "bytes": 1782742,
+      "sha256": "15ccbe997ffd26c5e9b99937d63653280f2093e0af7c18628bcef8015c86399a"
+    },
+    {
+      "path": "web/public/avatar-review/reference-bust-v1.png",
+      "bytes": 1782742,
+      "sha256": "15ccbe997ffd26c5e9b99937d63653280f2093e0af7c18628bcef8015c86399a"
+    },
+    {
+      "path": "tools/audit_presence_asset.py",
+      "bytes": 2886,
+      "sha256": "ec7d95b1f2768c250b0175197d6afef2e38078848228e7b454a5e7c477cfc26c"
+    },
+    {
+      "path": "tools/prepare_avatar_candidate.py",
+      "bytes": 3137,
+      "sha256": "12703b2ac4ede25c5c7e59e1aafd70c1f1e231c3a92def63a6dc174e54351103"
+    }
+  ]
+}

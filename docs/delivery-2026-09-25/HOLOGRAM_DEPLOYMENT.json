@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-25",
+  "url": "https://orbit.securedme.ca",
+  "scope": "holographic companion foundation",
+  "files": [
+    {
+      "path": "index.html",
+      "sha256": "b276aedc903f76dc2b80078cae17c265f5c7bf9306217fe1357864f0a278d674",
+      "match": true
+    },
+    {
+      "path": "_astro/companion-state.CgCr8V_Z.js",
+      "sha256": "53040de865d429d14b49bef30e17f05154697507a2040c2855436c902e7b65f6",
+      "match": true
+    },
+    {
+      "path": "_astro/CompanionConsole.astro_astro_type_script_index_0_lang.BfRlQLXD.js",
+      "sha256": "beb20e8dcb6f239b5b965f80c145b67614e5809b87919c9d8dd4ee8e02c56945",
+      "match": true
+    },
+    {
+      "path": "_astro/HologramCompanion.astro_astro_type_script_index_0_lang.DRUsaT5z.js",
+      "sha256": "3fa454c312a57e3b7b90099fb6f99ae12df1c73fe55e60d2274dff4146dccfab",
+      "match": true
+    },
+    {
+      "path": "_astro/index.astro_astro_type_script_index_0_lang.B66BhB3l.js",
+      "sha256": "9f2aa6f210f0a7ece5343dce25cc0b16cb663b20cfd3a8f9444cc4ff5080d368",
+      "match": true
+    },
+    {
+      "path": "_astro/index.Bo8LieHD.css",
+      "sha256": "be0e9adbac3fdb1b07fe4ac20bf9756d5b8180ad89c778f37fd3999b685645cb",
+      "match": true
+    },
+    {
+      "path": "_astro/MissionWorkspace.astro_astro_type_script_index_0_lang.CQBINHCM.js",
+      "sha256": "2da6151955cd80fbcd29ca140f5819ac32e441258ed8fa6e481b70445d7a0d31",
+      "match": true
+    },
+    {
+      "path": "_astro/OrbitLab.astro_astro_type_script_index_0_lang.RjiJ5Lwk.js",
+      "sha256": "d8833035cfc3f6e957fd8c5d1d7716d36255faf6fb1085b3c10a65d56f6fd0fb",
+      "match": true
+    },
+    {
+      "path": "_astro/three.module.BXtc7Xox.js",
+      "sha256": "0face9235270dacee9ad21ea8523dc20ff1b1420324608c7938f6b9ccf28dcbe",
+      "match": true
+    }
+  ],
+  "previous_index_backup": ".orbit/backups/hologram-previous/index.html",
+  "no_secrets_uploaded": true,
+  "voice_and_real_extension": "not_yet_validated"
+}
