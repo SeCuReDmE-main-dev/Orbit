@@ -1,9 +1,11 @@
 /** Public method, not a system prompt or a claim of model training. */
 export const researchProtocol = {
-  version: 'orbit-observatory-v4',
+  version: 'orbit-observatory-v5',
   evidenceStatus: 'to_test',
   purpose: 'Examine contested answers through scoped claims, exact passages and structured Sanity Context. Help agents and their subagents preserve evidence and uncertainty.',
   target: { maxAxes: 9, maxSourcesPerProposal: 30, policy: 'Adaptive bounds, never quotas. Use the smallest sufficient dossier.' },
+  entryRoutes: { research: '/app/', learningMission: '/formation/lab/', learningProjects: '/formation/projets/' },
+  identifiers: { requestId: 'Returned by the current shared mission summary.', expectedRevision: 'The current dossier revision returned by the summary; re-read after edits or a stale response.', proposalId: 'Optional ID of a pending proposal returned by Orbit, never a human decision.', sourceIds: 'Read from saved source records before referring to them. Searching is required to discover unknown source IDs, not before every calculation.' },
   classification: {
     unit: 'One atomic claim under explicit conditions, never the truth of an entire document.',
     engines: ['baseline', 'n', 'p'],

@@ -1,0 +1,17 @@
+{
+  "schema": "orbit.official-desktop-chrome-update.v1",
+  "observedAt": "2026-10-01T21:48:22.571724+00:00",
+  "sandboxId": "i3svpb1bpfrzqnvrpsyv8",
+  "source": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
+  "packageSha256": "69e3f6ac0a4811f4689ca23f1fd5cc5b2c01550881928b3e196a97131165c4a2",
+  "beforeVersion": "150.0.7871.114",
+  "afterVersion": "154.0.8037.92",
+  "package": "google-chrome-stable",
+  "installedAndVersionReadBack": true,
+  "browserRestarted": false,
+  "securityProtectionsWeakened": false,
+  "userAgentSpoofed": false,
+  "ownerSessionExported": false,
+  "credentialTransferred": false,
+  "loginSuccessClaimed": false
+}

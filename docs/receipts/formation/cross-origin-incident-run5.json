@@ -1,0 +1,67 @@
+{
+  "version": "orbit-cross-origin-public-incident-v5",
+  "recordedAt": "2026-10-01T20:15:10.976725+00:00",
+  "state": "FAILED_WAF",
+  "kaggleVersion": 354491541,
+  "kaggleUrl": "https://www.kaggle.com/code/celebrum/orbit-v3-public-cross-origin-validation?scriptVersionId=354491541",
+  "workerSourceSha256": "77b0648ae95a461e535961e938ff1dcd114a83366e6623c944e5df8d4be2a45a",
+  "workerBundleSha256": "a5f9eda80644f857c4866ec8e96c69c0d1767c23f3503acda0ed79f18295623f",
+  "workerResultSha256": "0d31bbada23efd7b9d91102d80b60f19f0982b79de2523f87ad9dae774f280c4",
+  "result": {
+    "state": "complete",
+    "runId": "cross-origin-61e718cc-d5c7-4f20-b9ae-9e229356843d",
+    "checks": [
+      {
+        "name": "foreign-host-serves-pinned-formation-release",
+        "passed": true,
+        "observation": {
+          "httpStatus": 200,
+          "releaseSha256": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046"
+        }
+      },
+      {
+        "name": "public-orbit-serves-pinned-formation-release",
+        "passed": false,
+        "observation": {
+          "httpStatus": 403,
+          "releaseSha256": "269b3a43ad6cb11d80319383b1b4640e97bb042a80dea8b8061c6824f898cab6",
+          "bytes": 107,
+          "contentType": "application/json",
+          "publicPrefix": "{\n\t\"message\": \"Access denied by Imunify360 bot-protection. IPs used for automation should be whitelisted\"\n}"
+        }
+      }
+    ],
+    "errors": [
+      "CROSS_ORIGIN_CHECK_FAILED"
+    ],
+    "host": "E2B",
+    "orchestrator": "Kaggle",
+    "modelCalls": 0,
+    "foreignOrigin": "https://8000-i2tvc7sdcbh7bs3k86l7i.e2b.app",
+    "publicCourseOrigin": "https://orbit.securedme.ca",
+    "expectedRelease": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046",
+    "personalSessionExported": false,
+    "authenticatedStudio": false,
+    "publicationExecuted": false,
+    "humanAcknowledgement": false,
+    "fixtureAuthority": "Automated synthetic test setup only.",
+    "logout": {
+      "state": "NOT_RUN",
+      "reason": "Fresh isolated profile has no authenticated Sanity session."
+    },
+    "stage": "public-release-read",
+    "durationMs": 492,
+    "success": false
+  },
+  "retirement": {
+    "postRetirementStatus": 401,
+    "authorizationRefused": true,
+    "authority": "Executed Kaggle output reports retired=true only after observed401."
+  },
+  "fullMissionComplete": false,
+  "limits": [
+    "E2B Node HTTP transport was refused by Imunify360 with HTTP403. No Chrome or native-tool assertions ran.",
+    "No User-Agent modification, IP exception, authenticated access or security weakening was performed.",
+    "The next controlled attempt uses ordinary native Chrome navigation and keeps the exact release hash."
+  ]
+}

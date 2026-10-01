@@ -1,0 +1,199 @@
+{
+  "schema": "orbit.studio-publication-preparation.v1",
+  "state": "WAITING_FOR_NATIVE_HUMAN_LOGIN",
+  "observedAt": "2026-10-01T21:57:33.578290+00:00",
+  "fullMissionComplete": false,
+  "publicValidation": {
+    "receipt": "cross-origin-public-validation.json",
+    "checksPassed": 16,
+    "checksTotal": 16,
+    "kaggleVersion": 354497668,
+    "authenticatedPublicationIncluded": false
+  },
+  "host": {
+    "origin": "https://8000-i3svpb1bpfrzqnvrpsyv8.e2b.app",
+    "studioPath": "/formation/studio/",
+    "labPath": "/formation/studio/orbit-learning-lab/mission/1",
+    "projectsPath": "/formation/studio/orbit-learning-projects/files/1",
+    "publicationPath": "/formation/studio/orbit-learning-projects/sharing/1",
+    "projectId": "pzscx4w8",
+    "dataset": "production",
+    "sanityVersion": "6.16.0",
+    "reactVersion": "19.3.0",
+    "pluginArchiveSha256": "184358d01d9866ef7da0b5ac67f5d8020545656a31b66e39fece0c0e8e17ff64",
+    "releaseManifestSha256": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046",
+    "chromeVersion": "154.0.8037.92"
+  },
+  "authority": {
+    "personalSessionExported": false,
+    "ownerTokenTransferred": false,
+    "sanityCorsModified": true,
+    "sanityRolesModified": false,
+    "contentLakeWriteExecuted": false,
+    "humanPublicationAcknowledgementObtained": false,
+    "notebookContainsCredentials": false,
+    "temporaryCorsHumanApproved": true
+  },
+  "observedPrerequisites": {
+    "corsReadMethod": "Authenticated existing Sanity SDK, GET /projects/pzscx4w8/cors; returned origins only, no credentials or identities emitted.",
+    "corsOrigins": [
+      {
+        "origin": "http://localhost:3333",
+        "allowCredentials": true
+      },
+      {
+        "origin": "https://8000-i3svpb1bpfrzqnvrpsyv8.e2b.app",
+        "allowCredentials": true,
+        "temporary": true
+      }
+    ],
+    "foreignOriginPresent": true,
+    "currentVmPrograms": {
+      "google-chrome": true,
+      "Xvfb": true,
+      "officialDesktopStream": true
+    },
+    "interactiveHumanLoginTransport": "OFFICIAL_E2B_DESKTOP_PASSWORD_PROTECTED_STREAM_READY",
+    "existingWriteAccountInIsolatedBrowser": "NOT_PROVIDED",
+    "existingReadOnlyAccountInIsolatedBrowser": "NOT_PROVIDED",
+    "oldAuthenticatedReadback": "authenticated-second-studio.json",
+    "oldReadbackLimit": "Existing same-origin Windows session was observed read-only. It is not a login or write proof for the isolated E2B browser."
+  },
+  "blockers": [
+    "NATIVE_AUTHENTICATED_SESSION_REQUIRED",
+    "EXISTING_READ_ONLY_IDENTITY_REQUIRED_FOR_SERVER_REJECTION"
+  ],
+  "executionBoundary": {
+    "orchestrator": "Kaggle",
+    "browser": "E2B isolated native Chrome",
+    "modelCalls": 0,
+    "localWorkstationTests": false,
+    "currentBridge": "RETIRED; HTTP 401 observed in Kaggle run 7",
+    "nextBridge": "Native Chrome controller constructed with OS pipe; dedicated mission secret stored privately for Kaggle. No general browser/debugging TCP endpoint.",
+    "forbiddenSubstitutions": [
+      "Exporting a Windows session or owner token",
+      "Calling createIfNotExists with a server credential and presenting it as native Studio publication",
+      "Creating a fake currentUser or bypassing CORS",
+      "Treating a mock client rejection as a real read-only server rejection",
+      "Treating an unchecked publication preview as human acknowledgement"
+    ],
+    "kaggleNotebook": "https://www.kaggle.com/code/celebrum/orbit-v3-native-studio-publication-qa"
+  },
+  "fixture": {
+    "publicArtifactFilename": "orbit-publication-synthetic-brick.js",
+    "publicArtifactContent": "export const orbitQaFixture = Object.freeze({kind: 'synthetic-publication-test', module: 1});\n",
+    "unselectedArtifactFilename": "orbit-synthetic-private-note.txt",
+    "unselectedArtifactContent": "SYNTHETIC_UNSELECTED_ARTIFACT_20261001: must remain in this session.\n",
+    "localJournalText": "SYNTHETIC_PRIVATE_JOURNAL_20261001: test marker only; do not publish.",
+    "publicationTitle": "Orbit QA \u2014 synthetic selected artifact \u2014 2026-10-01",
+    "expectedDocumentType": "orbitLearningPublication",
+    "expectedDocumentId": "orbit.learning.<SHA-256 of actual destination, namespace and selected payload>",
+    "expectedSelectedArtifactCount": 1,
+    "noLearnerData": true
+  },
+  "preparedSteps": [
+    {
+      "step": 1,
+      "action": "Provide a supported interactive E2B desktop and mission-scoped human access. The human completes native Sanity login in the isolated Chrome profile; password and MFA remain outside agent control.",
+      "requiredEvidence": "Authenticated plugin UI on the exact foreign host, with project/dataset checked but user identity omitted from public logs.",
+      "state": "TRANSPORT_PREPARED_LOGIN_NOT_COMPLETED"
+    },
+    {
+      "step": 2,
+      "action": "After the transport is concrete and approved, add only the exact temporary HTTPS origin to Sanity CORS with credentials. Preserve all existing origins and record the new rule identifier for removal.",
+      "requiredEvidence": "Exact-origin readback and bounded cleanup plan. Wildcard credential CORS is forbidden.",
+      "state": "TEMPORARY_EXACT_ORIGIN_CREATED_AND_READ_BACK"
+    },
+    {
+      "step": 3,
+      "action": "From Kaggle, verify exact release/plugin pins, native 25-tool registry, fresh permissions and empty engine selection. Import the public artifact and the unselected artifact through the actual Studio file input, then add the synthetic local journal through the actual UI.",
+      "requiredEvidence": "Actual native tools and selected fixture content, not injected registry or fake identity.",
+      "state": "NOT_RUN"
+    },
+    {
+      "step": 4,
+      "action": "Enable only the human publication-preparation permission. In Sharing, enter the fixture title, select only the public artifact and preview the exact JSON. Check pzscx4w8/production, one selected artifact, and absence of journal, permissions, proposals and unselected markers. Leave the human acknowledgement unchecked.",
+      "requiredEvidence": "Selected payload bytes and hash; publication button disabled before acknowledgement; no mutation request.",
+      "state": "NOT_RUN"
+    },
+    {
+      "step": 5,
+      "action": "Change title or selection and verify the preview acknowledgement is invalidated. Rebuild the exact synthetic preview. The human reviews this concrete payload and separately acknowledges it; Kaggle can continue the reviewed publication only under that recorded authority.",
+      "requiredEvidence": "Actual human acknowledgement attribution and exact preview hash. A software checkbox mutation does not establish human approval.",
+      "state": "NOT_RUN"
+    },
+    {
+      "step": 6,
+      "action": "Use the actual native publication button. Observe the real mutation status without collecting authorization headers. Read back only the exact returned synthetic document using the public dataset with CDN disabled, and compare type, selected payload, title, revision and markers to the reviewed bytes.",
+      "requiredEvidence": "Real Content Lake mutation and exact-document readback; never count a preview as a write.",
+      "state": "NOT_RUN"
+    },
+    {
+      "step": 7,
+      "action": "Prepare the same unchanged selection again under a separately valid acknowledgement. Verify that createIfNotExists addresses the same digest-derived document and does not replace its first publishedAt or content.",
+      "requiredEvidence": "One immutable document with unchanged payload and first publication timestamp after replay.",
+      "state": "NOT_RUN"
+    },
+    {
+      "step": 8,
+      "action": "In a second clean browser profile, an existing read-only user logs in natively. Prepare a distinct synthetic publication with the same UI controls and reviewed test authority. Attempt it once and verify the real server refusal, plus absence of that proposed document from public exact-ID readback.",
+      "requiredEvidence": "Actual insufficient-rights response and no write; no role creation, privilege downgrade or fake user.",
+      "state": "NOT_RUN"
+    },
+    {
+      "step": 9,
+      "action": "Use native Sanity logout; verify the learning surface and private selections disappear and its 25 tools are unregistered. Retire the new mission bridge and verify HTTP401, remove only the temporary CORS rule, then stop only the owned microVM after collecting results.",
+      "requiredEvidence": "Real logout, native registry cleanup, observed token refusal and exact scoped resource cleanup.",
+      "state": "NOT_RUN"
+    }
+  ],
+  "sourceReferences": [
+    "tools/learning-studio-host/sanity.config.ts",
+    "tools/learning-studio-host/README.md",
+    "packages/learning-studio/src/index.tsx",
+    "packages/learning-studio/src/publication.ts",
+    "tests/learning-studio-publication.test.ts"
+  ],
+  "officialReferences": [
+    "https://www.sanity.io/docs/studio/deployment",
+    "https://www.sanity.io/docs/content-lake/cors",
+    "https://github.com/e2b-dev/desktop"
+  ],
+  "limits": [
+    "This is a concrete preparation record, not an executed authenticated test.",
+    "Public foreign-origin Context transport passed independently; it does not authorize authenticated Content Lake access.",
+    "No learner understanding or pedagogical approval is certified."
+  ],
+  "controllerPreparation": {
+    "source": "tools/learning-studio-authenticated-validation.ts",
+    "sourceSha256": "c3f7912cfd8c332d32594583b38804f98d4f258ae8ea862518098ca70bf6837b",
+    "bundleSha256": "e4e177ae566dfc88d9718f7fd664b718366906325415c443e824ce546db634e1",
+    "stateReadBack": "WAITING_FOR_NATIVE_HUMAN_LOGIN",
+    "checksExecuted": 0,
+    "contentLakeWriteExecuted": false,
+    "humanLoginCompleted": false,
+    "remoteDebuggingTcpExposed": false,
+    "loginReloadEndpoint": "Kaggle-dispatched POST /login, exact existing Studio page only"
+  },
+  "temporaryCors": {
+    "origin": "https://8000-i3svpb1bpfrzqnvrpsyv8.e2b.app",
+    "allowCredentials": true,
+    "actionTimeHumanApproval": true,
+    "createdAndReadBack": true,
+    "removal": "Pending tests and logout; delete only the privately recorded new rule ID."
+  },
+  "officialChromeUpdate": {
+    "receipt": "studio-chrome-official-update.json",
+    "officialVendor": true,
+    "securityProtectionsWeakened": false,
+    "loginGuaranteed": false
+  },
+  "loginPreparationEvidence": {
+    "receipt": "native-studio-login-chrome154-kaggle.json",
+    "kaggleVersion": 354506752,
+    "loginScreen": true,
+    "corsError": false,
+    "chromeMajor": 154,
+    "authenticatedTestsExecuted": false
+  }
+}

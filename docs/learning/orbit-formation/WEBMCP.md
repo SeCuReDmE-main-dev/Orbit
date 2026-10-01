@@ -50,6 +50,16 @@ The two Context tools use the explicit course origin and the read-only GET route
 
 ## Public course Context admission — current qualification
 
+The dedicated course KB `kbbBvrClyweF` is now admitted at audited revision `d2c6279c-4ded-44de-a45e-f5e8e63bdf94`. The nine canonical sources are Modules 1–8 and `PROJECT.md`, pinned to their actual source commit and digests. The admitted generated paths are `agents`, `course/assessment`, `course/structure`, `modules/interaction`, `modules/motion`, `modules/navigation`, `project`, `threejs/particles` and `threejs/scenes`. Entry count and source coverage are different quantities. [Ingestion and provenance](../../receipts/formation/course-context-ingestion.json), [technical issue triage](../../receipts/formation/course-context-issue-triage.json).
+
+Both public GET routes serve the admitted course without credentials, and the root research profile still serves its separate corpus. The caller cannot supply a knowledge-base ID, endpoint or token. [HTTP readback](../../receipts/formation/course-context-live-transport.json) records the actual responses. [Kaggle-dispatched native cross-origin validation](../../receipts/formation/cross-origin-public-validation.json) passes 16 checks, including native discovery of 25 tools, real course reads, consent refusal and a credential-free read from a different HTTPS Studio origin. Authenticated Studio publication is a separate test; these 16 checks do not establish it.
+
+Calendar warnings were examined against the canonical documents: Module 8 still has three solo hours and its own one-hour webinar. The additional project hour shown on days 15–16 belongs to the final project's six solo hours; its closure hour is separate. This technical triage did not rewrite generated entries or approve a learner's understanding.
+
+### Historical admission refusal — retained, superseded
+
+The following observations concern the earlier mixed research KB attempt, not the currently admitted dedicated course KB. Their failures and limits remain retained.
+
 The [bounded ingestion receipt](../../receipts/formation/course-context-import-status.json) records nine completed one-source imports from a pinned public course snapshot: Modules 1–8 and `PROJECT.md`. This is an import result, not proof that the resulting Knowledge Base entries preserve their scope.
 
 The final guided build completed on October 1, 2026 at 14:10:25 UTC, revision `8b6797ec-8622-4ad0-9789-4c5be3b0aa31`. Its observed `learning_modules` entry cites Modules 1–7 together with two legacy sources. Module 8 is ready but not cited; the protocol source is skipped. No entry passed the exact nine-document, course-only admission contract. The 33 nodes reported by the build job and 24 entries read through the SDK are retained as different observations. They are not interchangeable counts.

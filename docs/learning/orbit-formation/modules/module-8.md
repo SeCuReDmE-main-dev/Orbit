@@ -61,7 +61,13 @@ Consacrer 10 minutes au choix des preuves, 10 minutes à votre explication et 10
 
 Vous avez conservé huit briques. **Elles peuvent maintenant former un socle de frontend :** geste et état, carte, scène, inertie, transition, particules, parcours et capacité.
 
-Dans la partie finale du notebook 8, charger vos **huit ZIP réels**. Le raccordement fourni vérifie les manifestes et prépare un projet avec vos fichiers. Il ne comble pas une absence avec un corrigé caché. Si un module manque ou si une empreinte ne correspond pas, conserver l'erreur et réexporter le bon rendu.
+Pendant les 25 minutes de construction du webinaire, ouvrir la partie finale du notebook 8. Le parcours comporte trois étapes distinctes :
+
+1. **Charger — cellule 13.** Choisir vos huit ZIP réels avec le sélecteur officiel `files.upload()`. Une annulation laisse la sélection vide et permet de relancer la cellule. Si le dialogue reste indisponible, téléverser les mêmes ZIP par le panneau **Fichiers → Importer dans l'espace de stockage de la session** de Colab. Activer alors `USE_RUNTIME_FILE_SELECTION = True` et écrire exactement leurs huit noms dans `RUNTIME_SELECTED_EXPORT_FILENAMES`. Cette alternative lit les fichiers explicitement nommés dans `/content` ; elle ne recherche ni ne télécharge de rendus à votre place. Une session Colab est temporaire : conserver les originaux et télécharger le résultat avant sa fermeture.
+2. **Examiner — cellule 14.** Vérifier les huit lignes : module, nom du fichier choisi, tentative, formats déclarés du résultat et du manifeste, taille et SHA-256. Chaque module doit apparaître une seule fois. Un fichier absent, un doublon ou une empreinte différente appelle une correction et un nouvel examen.
+3. **Assembler — cellule 15.** Copier l'empreinte de la sélection examinée dans `ASSEMBLY_REVIEWED_SELECTION_SHA256`, puis exécuter la cellule. Une confirmation vide ou ancienne laisse l'assemblage bloqué. Télécharger `orbit-mon-frontend-<empreinte12>.zip` et conserver sa provenance. Le statut `ASSEMBLED_NOT_BUILT` indique que le ZIP est préparé ; il ne déclare pas une compilation.
+
+Le raccordement fourni contrôle les manifestes et conserve vos fichiers. Il ne comble pas une absence avec un corrigé caché. Si un rendu doit être remplacé, choisir et expliquer sa nouvelle version, puis reprendre **charger → examiner → assembler**. Ce raccordement reste inclus dans la construction du webinaire ; il n'ajoute aucune heure au cours.
 
 Le code d'intégration est fourni et attribué au cours dans [assembly/](../assembly/README.md). Vos modifications sont dans les dossiers `src/learning/module-N/`. L'assemblage du ZIP ne compile pas Astro : la compilation et le parcours du projet sont vérifiés séparément. Une modification hors du contrat appelle une adaptation expliquée ; elle ne justifie pas une substitution silencieuse du travail.
 

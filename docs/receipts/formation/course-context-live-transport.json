@@ -1,0 +1,480 @@
+{
+  "version": "orbit-course-context-live-transport-v1",
+  "recordedAt": "2026-10-01T19:01:27.749353+00:00",
+  "state": "PUBLIC_TRANSPORT_VERIFIED",
+  "kind": "Public deployment transport readback, not a software or model benchmark",
+  "executionHost": "Windows orchestration workstation",
+  "credentialsSent": false,
+  "cookiesSent": false,
+  "privateLearnerDataSent": false,
+  "sourceRoutes": [
+    "services/account-api/routes/api.php",
+    "services/account-api/routes/web.php",
+    "services/account-api/bootstrap/app.php",
+    "web/src/lib/webmcp.ts",
+    "web/src/lib/learning-webmcp.ts"
+  ],
+  "reportedDeployment": {
+    "backendArchiveSha256": "d94080019fe615cfd2b86f59775aea10632638c87d0eb30b78b051887a581a42",
+    "backupId": "a27d7348cd03eba9545e31bc",
+    "attribution": "Parent deployment receipt; this record independently reads the resulting public transport."
+  },
+  "knowledgeBase": "kbbBvrClyweF",
+  "auditedRevision": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94",
+  "expectedPaths": [
+    "agents",
+    "course/assessment",
+    "course/structure",
+    "modules/interaction",
+    "modules/motion",
+    "modules/navigation",
+    "project",
+    "threejs/particles",
+    "threejs/scenes"
+  ],
+  "reads": [
+    {
+      "url": "https://orbit.securedme.ca/api/v1/course-context/outline",
+      "method": "GET",
+      "requestedAt": "2026-10-01T19:01:27.749353+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "finalUrl": "https://orbit.securedme.ca/api/v1/course-context/outline",
+      "bytes": 1371,
+      "responseSha256": "482a9f3a34a9d738486388dc9a529aa9a6151ee28242988f371bf1fa2881d20d",
+      "elapsedMs": 1203,
+      "state": "READY",
+      "source": "sanity-context-mcp",
+      "knowledgeBase": "kbbBvrClyweF",
+      "projection": "public-course-allowlist-v1",
+      "upstreamTool": "initial_context",
+      "auditedRevision": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94",
+      "retrievedAt": "2026-10-01T19:01:29+00:00",
+      "contentSha256": "7bba8137e91d8646e89356d6dd3de6917f11cec03f815f902e8bdf4f69be0c65",
+      "role": "course-outline",
+      "admittedPaths": [
+        "agents",
+        "course/assessment",
+        "course/structure",
+        "modules/interaction",
+        "modules/motion",
+        "modules/navigation",
+        "project",
+        "threejs/particles",
+        "threejs/scenes"
+      ],
+      "allExpectedPathsPresent": true,
+      "outlineIsAuditedProjection": true,
+      "rawUpstreamOutlineHashComparison": "Not applicable: the transport intentionally returns a projection."
+    },
+    {
+      "url": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22agents%22%5D",
+      "method": "GET",
+      "requestedAt": "2026-10-01T19:01:28.963791+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "finalUrl": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22agents%22%5D",
+      "bytes": 6897,
+      "responseSha256": "ab33ca54ffdd3708d0282ac34a90020c4427d2fcfb47aad4c3cb1087fbdcca5f",
+      "elapsedMs": 578,
+      "state": "READY",
+      "source": "sanity-context-mcp",
+      "knowledgeBase": "kbbBvrClyweF",
+      "projection": "public-course-allowlist-v1",
+      "upstreamTool": "knowledge_base_read",
+      "auditedRevision": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94",
+      "retrievedAt": "2026-10-01T19:01:30+00:00",
+      "contentSha256": "27e29dd81bcfd6cd5366c32e7c0b7eb3f048042d83d5847510c5db415a5fd3c6",
+      "role": "course-entry",
+      "path": "agents",
+      "expectedContentSha256": "27e29dd81bcfd6cd5366c32e7c0b7eb3f048042d83d5847510c5db415a5fd3c6",
+      "matchesAuditedContent": true,
+      "auditedCitations": [
+        {
+          "path": "agents",
+          "sourceIds": [
+            "e576a374-db6d-4dc3-bb6b-19cea9411a65"
+          ],
+          "citationSourceIds": [
+            "e576a374-db6d-4dc3-bb6b-19cea9411a65"
+          ],
+          "verifiedFragments": [],
+          "fragmentsAreIndependentSources": false
+        }
+      ]
+    },
+    {
+      "url": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22course%2Fassessment%22%5D",
+      "method": "GET",
+      "requestedAt": "2026-10-01T19:01:29.542193+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "finalUrl": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22course%2Fassessment%22%5D",
+      "bytes": 8446,
+      "responseSha256": "0b617dbd50387892609fa23042c754f5f59e4ab1db7facbe5ac0f8d094c83fda",
+      "elapsedMs": 375,
+      "state": "READY",
+      "source": "sanity-context-mcp",
+      "knowledgeBase": "kbbBvrClyweF",
+      "projection": "public-course-allowlist-v1",
+      "upstreamTool": "knowledge_base_read",
+      "auditedRevision": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94",
+      "retrievedAt": "2026-10-01T19:01:30+00:00",
+      "contentSha256": "4e9d37fcde3b46ae3fc9f1ad4de04f2ea449d8e6587f083bdfe6ed00100200b4",
+      "role": "course-entry",
+      "path": "course/assessment",
+      "expectedContentSha256": "4e9d37fcde3b46ae3fc9f1ad4de04f2ea449d8e6587f083bdfe6ed00100200b4",
+      "matchesAuditedContent": true,
+      "auditedCitations": [
+        {
+          "path": "course/assessment",
+          "sourceIds": [
+            "102721c3-1907-4dd7-917d-5bb105cf201e"
+          ],
+          "citationSourceIds": [
+            "7d06d827-14cc-85d0-bdda-359d8aaaa350",
+            "326bf40c-26db-80dd-8d62-2b7a67697108"
+          ],
+          "verifiedFragments": {
+            "7d06d827-14cc-85d0-bdda-359d8aaaa350": {
+              "parent_source_id": "102721c3-1907-4dd7-917d-5bb105cf201e",
+              "parent_sha256": "c74ee4c116c087baaf01ef1b06cd3952b35b5c0c87d866f5ddce9a140927ce2c",
+              "filename": "ORBIT_FORMATION_PROTOCOL_784dbca3f71c.md § Orbit Formation — parcours et projet personnel › Clôture du projet — 1 heure avec l'enseignant › Script enseignant — séquence de 5 minutes",
+              "sha256": "7030a4ac427c50cbbf6086f8f0a298cad6729a59fe07211951762911cdbd2d9c",
+              "canonical_projection_sha256": "6c21a75805929574087a627bad5f4d43cbf4ab8cb0feefc924272174c4828aa4",
+              "normalization": "empty-lines-and-crlf-after-provider-wrapper"
+            },
+            "326bf40c-26db-80dd-8d62-2b7a67697108": {
+              "parent_source_id": "102721c3-1907-4dd7-917d-5bb105cf201e",
+              "parent_sha256": "c74ee4c116c087baaf01ef1b06cd3952b35b5c0c87d866f5ddce9a140927ce2c",
+              "filename": "ORBIT_FORMATION_PROTOCOL_784dbca3f71c.md § Orbit Formation — Public course protocol",
+              "sha256": "d4de01e6048d8d6654cf67292c081ac9a5301d2cae334b06c1d2fca7a6d600dd",
+              "canonical_projection_sha256": "8479043d2ecdbb6f5f4c2f8c4782d9ba12edb95a2749c830c2d0ca1558c6be0b",
+              "normalization": "empty-lines-and-crlf-after-provider-wrapper"
+            }
+          },
+          "fragmentsAreIndependentSources": false
+        }
+      ]
+    },
+    {
+      "url": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22course%2Fstructure%22%5D",
+      "method": "GET",
+      "requestedAt": "2026-10-01T19:01:29.907076+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "finalUrl": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22course%2Fstructure%22%5D",
+      "bytes": 8178,
+      "responseSha256": "a6cd2686dbbe310b67ea8396df6a3d0e65d8868313518bfa859e20cda62a3f4c",
+      "elapsedMs": 563,
+      "state": "READY",
+      "source": "sanity-context-mcp",
+      "knowledgeBase": "kbbBvrClyweF",
+      "projection": "public-course-allowlist-v1",
+      "upstreamTool": "knowledge_base_read",
+      "auditedRevision": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94",
+      "retrievedAt": "2026-10-01T19:01:31+00:00",
+      "contentSha256": "a58be0ea8300e0f44ab23586041cbeb302f8c6d356d19d122f7f0d698759da46",
+      "role": "course-entry",
+      "path": "course/structure",
+      "expectedContentSha256": "a58be0ea8300e0f44ab23586041cbeb302f8c6d356d19d122f7f0d698759da46",
+      "matchesAuditedContent": true,
+      "auditedCitations": [
+        {
+          "path": "course/structure",
+          "sourceIds": [
+            "102721c3-1907-4dd7-917d-5bb105cf201e"
+          ],
+          "citationSourceIds": [
+            "326bf40c-26db-80dd-8d62-2b7a67697108",
+            "7d06d827-14cc-85d0-bdda-359d8aaaa350"
+          ],
+          "verifiedFragments": {
+            "7d06d827-14cc-85d0-bdda-359d8aaaa350": {
+              "parent_source_id": "102721c3-1907-4dd7-917d-5bb105cf201e",
+              "parent_sha256": "c74ee4c116c087baaf01ef1b06cd3952b35b5c0c87d866f5ddce9a140927ce2c",
+              "filename": "ORBIT_FORMATION_PROTOCOL_784dbca3f71c.md § Orbit Formation — parcours et projet personnel › Clôture du projet — 1 heure avec l'enseignant › Script enseignant — séquence de 5 minutes",
+              "sha256": "7030a4ac427c50cbbf6086f8f0a298cad6729a59fe07211951762911cdbd2d9c",
+              "canonical_projection_sha256": "6c21a75805929574087a627bad5f4d43cbf4ab8cb0feefc924272174c4828aa4",
+              "normalization": "empty-lines-and-crlf-after-provider-wrapper"
+            },
+            "326bf40c-26db-80dd-8d62-2b7a67697108": {
+              "parent_source_id": "102721c3-1907-4dd7-917d-5bb105cf201e",
+              "parent_sha256": "c74ee4c116c087baaf01ef1b06cd3952b35b5c0c87d866f5ddce9a140927ce2c",
+              "filename": "ORBIT_FORMATION_PROTOCOL_784dbca3f71c.md § Orbit Formation — Public course protocol",
+              "sha256": "d4de01e6048d8d6654cf67292c081ac9a5301d2cae334b06c1d2fca7a6d600dd",
+              "canonical_projection_sha256": "8479043d2ecdbb6f5f4c2f8c4782d9ba12edb95a2749c830c2d0ca1558c6be0b",
+              "normalization": "empty-lines-and-crlf-after-provider-wrapper"
+            }
+          },
+          "fragmentsAreIndependentSources": false
+        }
+      ]
+    },
+    {
+      "url": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22modules%2Finteraction%22%5D",
+      "method": "GET",
+      "requestedAt": "2026-10-01T19:01:30.465442+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "finalUrl": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22modules%2Finteraction%22%5D",
+      "bytes": 8728,
+      "responseSha256": "70293df7ad226b61c5122bdd968f5bce5410a72712eb8a82ebb6e09a30352b95",
+      "elapsedMs": 469,
+      "state": "READY",
+      "source": "sanity-context-mcp",
+      "knowledgeBase": "kbbBvrClyweF",
+      "projection": "public-course-allowlist-v1",
+      "upstreamTool": "knowledge_base_read",
+      "auditedRevision": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94",
+      "retrievedAt": "2026-10-01T19:01:31+00:00",
+      "contentSha256": "83ef6de2761400a07373b020292e42268f2aa56e8c7bf3f169da84bee04dd9ab",
+      "role": "course-entry",
+      "path": "modules/interaction",
+      "expectedContentSha256": "83ef6de2761400a07373b020292e42268f2aa56e8c7bf3f169da84bee04dd9ab",
+      "matchesAuditedContent": true,
+      "auditedCitations": [
+        {
+          "path": "modules/interaction",
+          "sourceIds": [
+            "27d958d3-3484-4e91-8e0c-c7ac61cca26c",
+            "0cf4f5ca-3e3d-4dd0-990e-e816d1f301e1"
+          ],
+          "citationSourceIds": [
+            "27d958d3-3484-4e91-8e0c-c7ac61cca26c",
+            "0cf4f5ca-3e3d-4dd0-990e-e816d1f301e1"
+          ],
+          "verifiedFragments": [],
+          "fragmentsAreIndependentSources": false
+        }
+      ]
+    },
+    {
+      "url": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22modules%2Fmotion%22%5D",
+      "method": "GET",
+      "requestedAt": "2026-10-01T19:01:30.936399+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "finalUrl": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22modules%2Fmotion%22%5D",
+      "bytes": 7273,
+      "responseSha256": "ff161da4aec7083375f59a0eae7dfacd750694679a89bb61185e48ba0bb5e243",
+      "elapsedMs": 531,
+      "state": "READY",
+      "source": "sanity-context-mcp",
+      "knowledgeBase": "kbbBvrClyweF",
+      "projection": "public-course-allowlist-v1",
+      "upstreamTool": "knowledge_base_read",
+      "auditedRevision": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94",
+      "retrievedAt": "2026-10-01T19:01:32+00:00",
+      "contentSha256": "38b86b203b05e2b96383aeacb41c4db33d6e780d36d3ea61de3ba9b75c58baf5",
+      "role": "course-entry",
+      "path": "modules/motion",
+      "expectedContentSha256": "38b86b203b05e2b96383aeacb41c4db33d6e780d36d3ea61de3ba9b75c58baf5",
+      "matchesAuditedContent": true,
+      "auditedCitations": [
+        {
+          "path": "modules/motion",
+          "sourceIds": [
+            "8216c9dc-88bf-49fe-8dbf-8a42d21f7b00",
+            "a2cf9e6f-821e-4b15-bbf9-732595e93fcb"
+          ],
+          "citationSourceIds": [
+            "8216c9dc-88bf-49fe-8dbf-8a42d21f7b00",
+            "a2cf9e6f-821e-4b15-bbf9-732595e93fcb"
+          ],
+          "verifiedFragments": [],
+          "fragmentsAreIndependentSources": false
+        }
+      ]
+    },
+    {
+      "url": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22modules%2Fnavigation%22%5D",
+      "method": "GET",
+      "requestedAt": "2026-10-01T19:01:31.474936+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "finalUrl": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22modules%2Fnavigation%22%5D",
+      "bytes": 5563,
+      "responseSha256": "4a2c6c93ece8ea7bd588611d18fd601dcbd6b2ac96d3b775d30ed95352cf955d",
+      "elapsedMs": 406,
+      "state": "READY",
+      "source": "sanity-context-mcp",
+      "knowledgeBase": "kbbBvrClyweF",
+      "projection": "public-course-allowlist-v1",
+      "upstreamTool": "knowledge_base_read",
+      "auditedRevision": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94",
+      "retrievedAt": "2026-10-01T19:01:32+00:00",
+      "contentSha256": "c9a08644eb1ed54747d2f97563f79b366ab2b50f618eb4c5977c65d7d9b439b9",
+      "role": "course-entry",
+      "path": "modules/navigation",
+      "expectedContentSha256": "c9a08644eb1ed54747d2f97563f79b366ab2b50f618eb4c5977c65d7d9b439b9",
+      "matchesAuditedContent": true,
+      "auditedCitations": [
+        {
+          "path": "modules/navigation",
+          "sourceIds": [
+            "c164e70b-522d-479f-8db2-e9367b8c95f1"
+          ],
+          "citationSourceIds": [
+            "c164e70b-522d-479f-8db2-e9367b8c95f1"
+          ],
+          "verifiedFragments": [],
+          "fragmentsAreIndependentSources": false
+        }
+      ]
+    },
+    {
+      "url": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22project%22%5D",
+      "method": "GET",
+      "requestedAt": "2026-10-01T19:01:31.874403+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "finalUrl": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22project%22%5D",
+      "bytes": 3530,
+      "responseSha256": "b83b700f9047c4f4dfd08b077c8b148195e66b43b92a8550bcbb085e823cfd51",
+      "elapsedMs": 391,
+      "state": "READY",
+      "source": "sanity-context-mcp",
+      "knowledgeBase": "kbbBvrClyweF",
+      "projection": "public-course-allowlist-v1",
+      "upstreamTool": "knowledge_base_read",
+      "auditedRevision": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94",
+      "retrievedAt": "2026-10-01T19:01:32+00:00",
+      "contentSha256": "ef8a3f32450855cc2b9fc7074c8bc7ac0b2d3a4461b19b005f8158e6befbabc9",
+      "role": "course-entry",
+      "path": "project",
+      "expectedContentSha256": "ef8a3f32450855cc2b9fc7074c8bc7ac0b2d3a4461b19b005f8158e6befbabc9",
+      "matchesAuditedContent": true,
+      "auditedCitations": [
+        {
+          "path": "project",
+          "sourceIds": [
+            "e576a374-db6d-4dc3-bb6b-19cea9411a65"
+          ],
+          "citationSourceIds": [
+            "e576a374-db6d-4dc3-bb6b-19cea9411a65"
+          ],
+          "verifiedFragments": [],
+          "fragmentsAreIndependentSources": false
+        }
+      ]
+    },
+    {
+      "url": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22threejs%2Fparticles%22%5D",
+      "method": "GET",
+      "requestedAt": "2026-10-01T19:01:32.264862+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "finalUrl": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22threejs%2Fparticles%22%5D",
+      "bytes": 6667,
+      "responseSha256": "337904cabc9e54b636b0f5fced40c18de12a71179f362fe0dbe9eaf8bf0e135e",
+      "elapsedMs": 375,
+      "state": "READY",
+      "source": "sanity-context-mcp",
+      "knowledgeBase": "kbbBvrClyweF",
+      "projection": "public-course-allowlist-v1",
+      "upstreamTool": "knowledge_base_read",
+      "auditedRevision": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94",
+      "retrievedAt": "2026-10-01T19:01:33+00:00",
+      "contentSha256": "bdc187319815fb794be1853de2706f06ca1142a5a76de2fdc19b7acb1dd0678b",
+      "role": "course-entry",
+      "path": "threejs/particles",
+      "expectedContentSha256": "bdc187319815fb794be1853de2706f06ca1142a5a76de2fdc19b7acb1dd0678b",
+      "matchesAuditedContent": true,
+      "auditedCitations": [
+        {
+          "path": "threejs/particles",
+          "sourceIds": [
+            "f3ceebb9-ff5b-4645-a5ac-8fce99b597cf"
+          ],
+          "citationSourceIds": [
+            "f3ceebb9-ff5b-4645-a5ac-8fce99b597cf"
+          ],
+          "verifiedFragments": [],
+          "fragmentsAreIndependentSources": false
+        }
+      ]
+    },
+    {
+      "url": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22threejs%2Fscenes%22%5D",
+      "method": "GET",
+      "requestedAt": "2026-10-01T19:01:32.644785+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "finalUrl": "https://orbit.securedme.ca/api/v1/course-context/entries?paths=%5B%22threejs%2Fscenes%22%5D",
+      "bytes": 6583,
+      "responseSha256": "828a4b5436819b045fbe8b96ea69d141d54c07dcd5e1700e70044d01cf1ab1b0",
+      "elapsedMs": 390,
+      "state": "READY",
+      "source": "sanity-context-mcp",
+      "knowledgeBase": "kbbBvrClyweF",
+      "projection": "public-course-allowlist-v1",
+      "upstreamTool": "knowledge_base_read",
+      "auditedRevision": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94",
+      "retrievedAt": "2026-10-01T19:01:33+00:00",
+      "contentSha256": "baf87a57389889dc698acd5ee352c4f477b59034cafd99f0507ba5602dee6503",
+      "role": "course-entry",
+      "path": "threejs/scenes",
+      "expectedContentSha256": "baf87a57389889dc698acd5ee352c4f477b59034cafd99f0507ba5602dee6503",
+      "matchesAuditedContent": true,
+      "auditedCitations": [
+        {
+          "path": "threejs/scenes",
+          "sourceIds": [
+            "b23415d9-dc2c-40b6-b3c9-ff72fe5bf820"
+          ],
+          "citationSourceIds": [
+            "b23415d9-dc2c-40b6-b3c9-ff72fe5bf820"
+          ],
+          "verifiedFragments": [],
+          "fragmentsAreIndependentSources": false
+        }
+      ]
+    },
+    {
+      "url": "https://orbit.securedme.ca/api/v1/knowledge/outline",
+      "method": "GET",
+      "requestedAt": "2026-10-01T19:01:33.032513+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "finalUrl": "https://orbit.securedme.ca/api/v1/knowledge/outline",
+      "bytes": 2873,
+      "responseSha256": "2a03c8917af0a8d7bfe08cd22b37b611c04d783326b54c212eaf1c6c06c116f8",
+      "elapsedMs": 375,
+      "state": "READY",
+      "source": "sanity-context-mcp",
+      "knowledgeBase": "kb5CHIYGXCMJ",
+      "projection": null,
+      "upstreamTool": null,
+      "auditedRevision": null,
+      "retrievedAt": "2026-10-01T19:01:34+00:00",
+      "contentSha256": "2256df05a6b37fbef4354d2698a885474c99fe40b6e9d9d35a1d99afc15e7c72",
+      "role": "existing-research-outline",
+      "expectedKnowledgeBase": "kb5CHIYGXCMJ",
+      "existingResearchCorpusAvailable": true
+    }
+  ],
+  "coverage": {
+    "canonicalSourceIds": [
+      "0cf4f5ca-3e3d-4dd0-990e-e816d1f301e1",
+      "102721c3-1907-4dd7-917d-5bb105cf201e",
+      "27d958d3-3484-4e91-8e0c-c7ac61cca26c",
+      "8216c9dc-88bf-49fe-8dbf-8a42d21f7b00",
+      "a2cf9e6f-821e-4b15-bbf9-732595e93fcb",
+      "b23415d9-dc2c-40b6-b3c9-ff72fe5bf820",
+      "c164e70b-522d-479f-8db2-e9367b8c95f1",
+      "e576a374-db6d-4dc3-bb6b-19cea9411a65",
+      "f3ceebb9-ff5b-4645-a5ac-8fce99b597cf"
+    ],
+    "canonicalSourceCount": 9,
+    "exactNineCanonicalOrigins": true,
+    "fragmentsCountAsIndependentOrigins": false
+  },
+  "courseReadbackVerified": true,
+  "researchReadbackVerified": true,
+  "limitations": [
+    "HTTP reads verify public content delivery only. Software behavior is validated separately in Kaggle.",
+    "Native browser tool discovery, cross-origin CORS and authenticated Studio publication are separate validations.",
+    "This receipt does not certify semantic correctness, learner understanding or completion of the full mission."
+  ]
+}

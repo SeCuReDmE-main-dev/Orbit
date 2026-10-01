@@ -12,7 +12,8 @@ class PublicCourseContextReader
     {
         $scope = config('course_context');
         if (! is_array($scope) || ($scope['enabled'] ?? false) !== true
-            || ($scope['knowledge_base'] ?? null) !== config('orbit.context.knowledge_base')
+            || ! is_string($scope['knowledge_base'] ?? null)
+            || ! preg_match('/^kb[a-zA-Z0-9_-]{1,100}$/D', $scope['knowledge_base'])
             || ! is_string($scope['revision_id'] ?? null)
             || ! $this->isDigest($scope['outline_sha256'] ?? null)
             || ! is_array($scope['sources'] ?? null) || count($scope['sources']) !== 9
@@ -22,6 +23,7 @@ class PublicCourseContextReader
         $covered = [];
         $sourceSnapshots = [];
         $sourceDocuments = [];
+        $sourceFilenames = [];
         foreach ($scope['sources'] as $id => $source) {
             $sourceMatch = [];
             if (! is_string($id) || ! preg_match('/^[a-zA-Z0-9_-]{1,160}$/D', $id)
@@ -32,6 +34,8 @@ class PublicCourseContextReader
             }
             $sourceSnapshots[] = $sourceMatch[1];
             $sourceDocuments[] = $sourceMatch[2];
+            $label = $sourceMatch[2] === 'PROJECT.md' ? 'PROTOCOL' : strtoupper(str_replace('-', '_', basename($sourceMatch[2], '.md')));
+            $sourceFilenames[$id] = 'ORBIT_FORMATION_'.$label.'_'.substr($sourceMatch[1], 0, 12).'.md';
         }
         if (count(array_unique(array_column($scope['sources'], 'url'))) !== 9) {
             throw new RuntimeException('COURSE_SOURCE_DUPLICATED');
@@ -41,6 +45,25 @@ class PublicCourseContextReader
         if (count(array_unique($sourceSnapshots)) !== 1 || count(array_unique($sourceDocuments)) !== 9
             || array_diff($requiredDocuments, $sourceDocuments) !== []) {
             throw new RuntimeException('COURSE_DOCUMENT_SET_NOT_CANONICAL');
+        }
+        $fragments = $scope['citation_sources'] ?? [];
+        if (! is_array($fragments) || count($fragments) > 40) {
+            throw new RuntimeException('COURSE_FRAGMENT_NOT_AUDITED');
+        }
+        foreach ($fragments as $id => $fragment) {
+            $parentId = is_array($fragment) ? ($fragment['parent_source_id'] ?? null) : null;
+            $parent = is_string($parentId) ? ($scope['sources'][$parentId] ?? null) : null;
+            if (! is_string($id) || ! preg_match('/^[a-zA-Z0-9_-]{1,160}$/D', $id)
+                || array_key_exists($id, $scope['sources']) || ! is_array($parent)
+                || ! $this->isDigest($fragment['sha256'] ?? null)
+                || ! $this->isDigest($fragment['canonical_projection_sha256'] ?? null)
+                || ($fragment['parent_sha256'] ?? null) !== $parent['sha256']
+                || ($fragment['normalization'] ?? null) !== 'empty-lines-and-crlf-after-provider-wrapper'
+                || ! is_string($fragment['filename'] ?? null) || strlen($fragment['filename']) > 2000
+                || ! str_starts_with($fragment['filename'], $sourceFilenames[$parentId].' § ')
+                || strlen($fragment['filename']) <= strlen($sourceFilenames[$parentId].' § ')) {
+                throw new RuntimeException('COURSE_FRAGMENT_NOT_AUDITED');
+            }
         }
         foreach ($scope['entries'] as $path => $entry) {
             if (! is_string($path) || strlen($path) > 200 || ! preg_match('~^[a-zA-Z0-9_-]+(?:/[a-zA-Z0-9_-]+)*$~D', $path)
@@ -55,6 +78,25 @@ class PublicCourseContextReader
                     throw new RuntimeException('COURSE_CITATION_OUTSIDE_SCOPE');
                 }
                 $covered[$sourceId] = true;
+            }
+            $citationIds = $entry['citation_source_ids'] ?? $entry['source_ids'];
+            if (! is_array($citationIds) || $citationIds === [] || count($citationIds) > 49
+                || count(array_unique($citationIds)) !== count($citationIds)) {
+                throw new RuntimeException('COURSE_CITATION_OUTSIDE_SCOPE');
+            }
+            $canonicalIds = [];
+            foreach ($citationIds as $citationId) {
+                if (! is_string($citationId)) {
+                    throw new RuntimeException('COURSE_CITATION_OUTSIDE_SCOPE');
+                }
+                $parentId = array_key_exists($citationId, $scope['sources']) ? $citationId : ($fragments[$citationId]['parent_source_id'] ?? null);
+                if (! is_string($parentId) || ! in_array($parentId, $entry['source_ids'], true)) {
+                    throw new RuntimeException('COURSE_CITATION_OUTSIDE_SCOPE');
+                }
+                $canonicalIds[$parentId] = true;
+            }
+            if (count($canonicalIds) !== count($entry['source_ids'])) {
+                throw new RuntimeException('COURSE_ENTRY_CITATION_COVERAGE_INCOMPLETE');
             }
         }
         if (count($covered) !== 9) {
@@ -72,7 +114,7 @@ class PublicCourseContextReader
     private function content(array $read): string
     {
         if (($read['state'] ?? null) !== 'READY' || ($read['source'] ?? null) !== 'sanity-context-mcp'
-            || ($read['knowledgeBase'] ?? null) !== config('orbit.context.knowledge_base')
+            || ($read['knowledgeBase'] ?? null) !== config('course_context.knowledge_base')
             || ! is_array($read['content'] ?? null)) {
             throw new RuntimeException('COURSE_READ_NOT_READY');
         }
@@ -93,7 +135,7 @@ class PublicCourseContextReader
     public function outline(SanityContext $context): array
     {
         $scope = $this->manifest();
-        $read = $context->read('outline');
+        $read = $context->readCourse('outline');
         $text = $this->content($read);
         if (! hash_equals($scope['outline_sha256'], hash('sha256', $text))) {
             throw new RuntimeException('COURSE_OUTLINE_CHANGED');
@@ -136,7 +178,7 @@ class PublicCourseContextReader
         $lastRead = null;
         foreach ($paths as $path) {
             // Single-entry reads keep their exact audited representation independent of request order.
-            $read = $context->read('entries', [$path]);
+            $read = $context->readCourse('entries', [$path]);
             $text = $this->content($read);
             if (! hash_equals($scope['entries'][$path]['sha256'], hash('sha256', $text))) {
                 throw new RuntimeException('COURSE_ENTRY_CHANGED');
@@ -146,7 +188,11 @@ class PublicCourseContextReader
                 throw new RuntimeException('COURSE_RESPONSE_TOO_LARGE');
             }
             array_push($contents, ...$read['content']);
-            $audits[] = ['path' => $path, 'sourceIds' => $scope['entries'][$path]['source_ids']];
+            $entry = $scope['entries'][$path];
+            $citationIds = $entry['citation_source_ids'] ?? $entry['source_ids'];
+            $audits[] = ['path' => $path, 'sourceIds' => $entry['source_ids'], 'citationSourceIds' => $citationIds,
+                'verifiedFragments' => array_intersect_key($scope['citation_sources'] ?? [], array_flip($citationIds)),
+                'fragmentsAreIndependentSources' => false];
             $lastRead = $read;
         }
         if ($lastRead === null) {

@@ -1,0 +1,48 @@
+{
+  "schema": "orbit.native-studio-kaggle-preview.v1",
+  "observedAt": "2026-10-01T21:41:32.272098+00:00",
+  "orchestrator": "Kaggle",
+  "modelCalls": 0,
+  "result": {
+    "schema": "orbit.authenticated-native-studio-qa.v1",
+    "state": "FAILED",
+    "orchestrator": "Kaggle",
+    "browserHost": "E2B Desktop",
+    "origin": "https://8000-i3svpb1bpfrzqnvrpsyv8.e2b.app",
+    "checks": [
+      {
+        "name": "native-authenticated-studio-on-exact-foreign-host",
+        "passed": false
+      }
+    ],
+    "modelCalls": 0,
+    "personalSessionExported": false,
+    "ownerTokenTransferred": false,
+    "remoteDebuggingTcpExposed": false,
+    "humanAcknowledgementFabricated": false,
+    "contentLakeWriteExecuted": false,
+    "readOnlyServerRejection": {
+      "state": "NOT_RUN",
+      "reason": "Requires a separate existing read-only native identity."
+    },
+    "fullMissionComplete": false,
+    "chromeMajor": 150,
+    "loginPreparation": {
+      "origin": "https://8000-i3svpb1bpfrzqnvrpsyv8.e2b.app",
+      "learningSurface": false,
+      "loginScreen": false,
+      "corsError": false,
+      "reloadedFromKaggle": true,
+      "credentialsEnteredByAgent": false
+    },
+    "error": "NATIVE_STUDIO_CHECK_FAILED",
+    "busy": false
+  },
+  "retirement": "DEFERRED_UNTIL_REVIEWED_PUBLICATION_AND_COLLECTION",
+  "fullMissionComplete": false,
+  "kaggle": {
+    "url": "https://www.kaggle.com/code/celebrum/orbit-v3-native-studio-publication-qa?scriptVersionId=354505154",
+    "version": 354505154,
+    "state": "FAILED"
+  }
+}

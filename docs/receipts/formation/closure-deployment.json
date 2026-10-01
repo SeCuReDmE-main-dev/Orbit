@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "orbit-v3-closure-deployment-v1",
+  "state": "DEPLOYED_PENDING_NATIVE_BROWSER_VALIDATION",
+  "static": {
+    "status": "success",
+    "transport": "brokered-ssh-sftp",
+    "package_sha256": "246bd711f6d24048a3c8e5a3387b074f4bdb9abba442b3424a715a69c13ca9e4",
+    "verified_paths": [
+      "SHA256SUMS.txt",
+      "app/index.html",
+      "brand/securedme-publication-lab-primary-dark.png",
+      "formation/assembly.zip",
+      "formation/lab/index.html",
+      "formation/notebooks/module-1.ipynb",
+      "formation/notebooks/module-2.ipynb",
+      "formation/notebooks/module-3.ipynb",
+      "formation/notebooks/module-4.ipynb",
+      "formation/notebooks/module-5.ipynb",
+      "formation/notebooks/module-6.ipynb",
+      "formation/notebooks/module-7.ipynb",
+      "formation/notebooks/module-8.ipynb",
+      "formation/plugins/orbit-learning-studio-1.0.0.tgz",
+      "formation/projets/index.html",
+      "formation/release.json",
+      "formation/studio/index.html",
+      "guide/index.html",
+      "index.html",
+      "orbit-release.json",
+      "studio/index.html"
+    ],
+    "staging_cleaned": true,
+    "mutated": true,
+    "rollback_restored": false,
+    "secret_values_exposed": false,
+    "plan_id": "ab40a2ac3f15eaba66e98b1c"
+  },
+  "backend": {
+    "status": "success",
+    "transport": "brokered-ssh-sftp",
+    "package_sha256": "d94080019fe615cfd2b86f59775aea10632638c87d0eb30b78b051887a581a42",
+    "verified_paths": [
+      "app/Services/PublicCourseContextReader.php",
+      "app/Services/SanityContext.php",
+      "config/course_context.php"
+    ],
+    "staging_cleaned": true,
+    "mutated": true,
+    "rollback_restored": false,
+    "secret_values_exposed": false,
+    "plan_id": "a27d7348cd03eba9545e31bc"
+  },
+  "landingVisualChanges": false,
+  "fullMissionComplete": false,
+  "testsExecutedLocally": false,
+  "backupRetained": true,
+  "courseContextReceipt": "docs/receipts/formation/course-context-live-transport.json",
+  "softwareEvidence": "docs/receipts/formation/closure-software-regressions-kaggle.json"
+}

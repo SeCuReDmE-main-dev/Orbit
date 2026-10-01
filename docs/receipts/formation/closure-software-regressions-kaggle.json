@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "orbit-closure-software-kaggle-v1",
+  "state": "PASS",
+  "host": "Kaggle",
+  "vitest": {
+    "suite": "A",
+    "host": "Kaggle",
+    "exitCode": 0,
+    "sourceSha256": "9f03f84f66022a8e2b86d84b4d6baba14195b546430de49dfcb3ce2f6f1ff5b7",
+    "tests": 141,
+    "passed": 141,
+    "failed": 0,
+    "success": true
+  },
+  "importAndDocumentReplay": {
+    "state": "PASS_SOFTWARE_IMPORT_AND_DOCUMENT_REPLAY",
+    "sourceSha256": "92ab4a00a5866e9ef624b05d5c4054e8aa230e162555eab280a4805818c775ba",
+    "orchestrator": "Kaggle",
+    "exitCode": 0,
+    "durationSeconds": 0.328,
+    "testCount": 14,
+    "modelCalls": 0,
+    "manualColabUploadVerified": false,
+    "freeColabAccountObserved": false,
+    "actualPdfRendered": false,
+    "learnerUnderstandingVerified": false,
+    "authority": "scripted software QA fixtures; no student observation or human approval",
+    "limits": [
+      "Official picker and download must still be observed on a fresh free-account Colab copy.",
+      "Real PDF/DOCX outputs and page renders retain their separate review."
+    ]
+  },
+  "coursePolicyAndProvenanceExitCode": 0,
+  "evidenceArchiveSha256": "daf637917fba4c69ef38f1bd409624c48d88e1b5cf6c80d3ac8bb4583bfbfcc8",
+  "notebookUrl": "https://www.kaggle.com/code/celebrum/orbit-v3-closure-regressions?scriptVersionId=354480684",
+  "noModelCalls": true,
+  "productionDeployed": false,
+  "versionId": 354480684
+}

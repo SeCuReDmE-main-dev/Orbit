@@ -1,0 +1,22 @@
+{
+  "version": "orbit-cross-origin-public-incident-v6",
+  "recordedAt": "2026-10-01T20:39:19.657157+00:00",
+  "state": "NOT_DISPATCHED_RESOURCE_UNAVAILABLE",
+  "kaggleVersion": 354495967,
+  "kaggleUrl": "https://www.kaggle.com/code/celebrum/orbit-v3-public-cross-origin-validation?scriptVersionId=354495967",
+  "runtimeSeconds": 20.9,
+  "workerSourceSha256": "6cf947c677f5cbd91008a1ef3053aa9c98ec593385955ecf06a8465ab9928cf6",
+  "modelCalls": 0,
+  "browserAssertionsRun": 0,
+  "retirement": {
+    "authorizationRefused": false,
+    "state": "NOT_VERIFIED",
+    "reason": "Kaggle printed retired=false after the owned one-hour resource became unavailable. Service disappearance is not an observed401."
+  },
+  "ownedResourceInventory": {
+    "active": 9,
+    "owned": 0
+  },
+  "fullMissionComplete": false,
+  "nextAction": "Provision one dedicated replacement for two hours, using the same pinned release and ordinary native Chrome navigation."
+}

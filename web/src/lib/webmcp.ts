@@ -57,10 +57,14 @@ function define(name: string, title: string, description: string, inputSchema: S
 export function orbitTools(): Tool[] {
   return [
     define('orbit_get_capabilities', 'Discover Orbit without starting it', 'Start here. Public capabilities and consent state only. No private data, voice, login, network or provider invocation.', object(), async () => ({
-      state: 'READY', contractVersion: 'orbit-webmcp-v6', tools: orbitTools().map(t => ({ name: t.name, readOnly: t.annotations.readOnlyHint })),
+      state: 'READY', contractVersion: 'orbit-webmcp-v7', tools: orbitTools().map(t => ({ name: t.name, readOnly: t.annotations.readOnlyHint })),
       classification: { engine: workshopActive() ? dossier().classificationEngine ?? 'n' : 'n', version: ENGINE_VERSION, semantics: 'Evidence sets and operational decisions, never truth probabilities.', additionalTools: 5 },
       method: 'orbit_get_research_protocol', sanity: { state: 'NOT_CHECKED', initialTool: 'orbit_sanity_initial_context', readTool: 'orbit_sanity_read_entries', knowledgeBase: 'kb5CHIYGXCMJ', dossierConsentRequired: false, access: 'Public read of the configured corpus; private dossier sharing is a separate permission. Availability is established by the read, not this capability description.', authentication: 'Server-side organization Context Viewer token. Never supply a token to a browser tool.' },
       workspace: { ...(workshopActive() ? workshopPermissions() : { readable: sharingAllowed(), presentationAllowed: presentationAllowed() }), entry: '/app/' }, automaticActions: [],
+      entries: { research: '/app/', lab: '/formation/lab/', projects: '/formation/projets/', guide: '/guide/' },
+      learning: { availableHere: false, toolCountOnEntryPages: 25, initialTool: 'orbit_get_learning_mission', contractVersion: 'orbit-formation-webmcp-v1', access: 'Open a learning entry page to discover its actual tools. Public missions and protocols require no private-work sharing. Private artifacts and journal selections require separate read consent; proposals require separate deposit consent.' },
+      references: { mission: 'Read orbit_get_mission_summary after sharing to obtain requestId and the current revision. Copy saved IDs from returned records; never invent them.', revision: 'Use the current dossier revision as expectedRevision. Re-read after a human edit or STALE_REVISION.', proposals: 'A proposalId selects a returned pending proposal; it never identifies a human approval.', sources: 'Use orbit_search_sources to discover source IDs when a source is needed. A relation calculation uses claim IDs already read from the selected dossier.' },
+      publicActions: ['orbit_get_capabilities', 'orbit_get_research_protocol', 'orbit_sanity_initial_context', 'orbit_sanity_read_entries'],
       externalSearch: 'Use your own authorized browser-agent tools and budget.', removedV1Tools: ['orbit_search_web', 'orbit_get_physics_snapshot'],
     })),
     define('orbit_get_research_protocol', 'Read the research method', 'Public draft method: clarification, Sanity retrieval, human plan approval, primary-source collection and cited synthesis. Does not train a model or start research.', object(), async () => ({ state: 'READY', ...researchProtocol })),
@@ -157,7 +161,7 @@ async function sanityRead(kind: 'outline' | 'entries', input: Record<string, unk
 async function brokerRead(path: string, signal?: AbortSignal): Promise<unknown> {
   checkAbort(signal)
   if (workshopActive()) return workshopRead(path)
-  if (!sharingAllowed()) return { state: 'CONSENT_REQUIRED', message: 'Enable workspace sharing. No mission read performed.' }
+  if (!sharingAllowed()) return { state: 'CONSENT_REQUIRED', message: 'Enable workspace sharing. No mission read performed. Public protocols and learning entry routes remain available.', nextTool: 'orbit_get_capabilities' }
   const revision = sharingRevision(), requestId = currentDraft().requestId
   const runtime = (globalThis as any).chrome?.runtime
   if (runtime?.sendMessage) {

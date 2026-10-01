@@ -1,0 +1,195 @@
+{
+  "version": "orbit-course-context-technical-issue-triage-v1",
+  "recordedAt": "2026-10-01T18:33:23.728Z",
+  "knowledgeBase": "kbbBvrClyweF",
+  "revision": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94",
+  "reviewer": "Codex",
+  "authority": "Technical triage under the approved implementation plan and requested warning review",
+  "humanPedagogicalApproval": false,
+  "entriesRewritten": false,
+  "additionalBuilds": 0,
+  "buildsAccepted": 2,
+  "canonicalSources": [
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-1.md",
+      "sha256": "38d5e9e48d35a04e8ed5e422e7339f7be04aa7e3e58dd691fa667b9e6b1ddeab"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-2.md",
+      "sha256": "cbdbc1f8430defa0518d81d6bb308e40969b7e7f59fb3c9b49c1cf3cac0dfa71"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-3.md",
+      "sha256": "085818229e531382c3fcfa83ce804ff75174c4738dae7fd3d7deda40ad084359"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-4.md",
+      "sha256": "12e77b6da7579434a5963a47769888cfb43c25a678c39fadd33af275727adc96"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-5.md",
+      "sha256": "ffee9a0b19c974b802a0135c5451219809c0dc1f4531ff41c674124d80f35079"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-6.md",
+      "sha256": "8215bd821676b00cc6f01842a39087af4a0dca2802fa4ccc4094eec777bb70d9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-7.md",
+      "sha256": "255f792ebf5afa43ccb6907f6351bd8caabd401bfbae76ff0fa29f757aac73ac"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-8.md",
+      "sha256": "99a3c887fff00f5e2c8564bc65b959f7f1f3ba187b4c17383cf3dc5dc818c720"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/PROJECT.md",
+      "sha256": "c74ee4c116c087baaf01ef1b06cd3952b35b5c0c87d866f5ddce9a140927ce2c"
+    }
+  ],
+  "entryProofs": [
+    {
+      "path": "course/structure",
+      "title": "Course Framework: Calendar, Time, and Protocols",
+      "bodySha256": "b9f7ab41969e827350bc3588208608bc299663a2bf0f0dfd2bd6e51150cb95c7",
+      "excerpts": [
+        "| Jours | Module : 3 h solo + 1 h avec l'enseignant | Projet : heures supplémentaires |",
+        "| 15–16 | Module 8 | 1 h solo + 1 h de clôture avec l'enseignant |"
+      ]
+    },
+    {
+      "path": "agents",
+      "title": "Module 8: Agent Capabilities and Content Provenance",
+      "bodySha256": "115534a0c31e6ba6339ca6f23a0497f7a4112668e53398bd2fdddf0aedce7844",
+      "excerpts": [
+        "3 solo hours, then 1 webinar hour with the teacher",
+        "additional and distinct from these module hours"
+      ]
+    },
+    {
+      "path": "project",
+      "title": "Final Project: Integration and Assembly",
+      "bodySha256": "9da7b93a99328bddbba3f004c6e4a52f1e79d53b2e154af88c15d065eeb75f44",
+      "excerpts": [
+        "Its timing is distinct from any module schedule: **1 teacher hour** (setup/scoping), **6 solo hours** (autonomous work with the personal assistant), and **1 teacher hour** (closure).",
+        "additional to and never replace module hours"
+      ]
+    },
+    {
+      "path": "threejs/scenes",
+      "title": "Module 3: Three.js Scene, Camera, and Selection",
+      "bodySha256": "6bfc6ed2d51cacfd997bad2b32afbcf40e1094c516a02a878330987b4b3b86cd",
+      "excerpts": [
+        "Module 3 covers days 5–6 of the course: **3 solo hours followed by a 1-hour webinar with the teacher** [1]."
+      ]
+    },
+    {
+      "path": "threejs/particles",
+      "title": "Module 6: Particle Systems and Resource Management",
+      "bodySha256": "b60d3b4e7e6d1c1b787022eff5135c43f5de7ba292358f316fb44580c491e905",
+      "excerpts": [
+        "Module 6 covers days 11–12 of the course. Schedule: **3 solo hours**, then **1 teacher webinar hour**. Project work adds **2 further solo hours** on those same days, kept separate from module hours. Total module time: 4 hours (3 solo + 1 webinar). [1]"
+      ]
+    },
+    {
+      "path": "modules/motion",
+      "title": "Modules 4–5: Inertia, Springs, and Interpolation",
+      "bodySha256": "6bb69f3fa0e1a7d233a193d5a8d59787cc06ee9b68b08553321eb09f4472c0e3",
+      "excerpts": [
+        "Modules 4 and 5 cover motion mechanics after pointer release: velocity-driven inertia (Module 4, days 7–8) and spring-based interpolation (Module 5, days 9–10). Each module follows the same schedule: **3 solo hours then 1 teacher webinar hour**."
+      ]
+    },
+    {
+      "path": "modules/navigation",
+      "title": "Module 7: View State and Navigation History",
+      "bodySha256": "80cd3153a74b2523d49ff59be72edb12369c3ee73f5996e607e97109e2d5bb3c",
+      "excerpts": [
+        "Module 7 covers view selection state, bounded navigation history, and browser URL/popstate restoration. It occupies **days 13–14**: 3 solo hours, then 1 webinar hour with the teacher. An additional 2 solo project hours run on those same days but are tracked separately (see the PROJECT protocol) [1]."
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "issueId": "issue.6CFVPZTMHEE68AK3H9F109Y0GW",
+      "kind": "update_required",
+      "entryPaths": [
+        "threejs/scenes"
+      ],
+      "action": "dismiss",
+      "resultStatus": "rejected",
+      "resolvedAt": "2026-10-01T18:33:26.028Z",
+      "reason": "False ordering inference: addition of teacher and solo hour totals does not mean the teacher session occurs first. Canonical sources specify solo preparation followed by the webinar."
+    },
+    {
+      "issueId": "issue.DSG8Y1Q5DYKMS559J7SX8XHCBR",
+      "kind": "update_required",
+      "entryPaths": [
+        "threejs/particles"
+      ],
+      "action": "dismiss",
+      "resultStatus": "rejected",
+      "resolvedAt": "2026-10-01T18:33:27.087Z",
+      "reason": "False ordering inference: addition of teacher and solo hour totals does not mean the teacher session occurs first. Canonical sources specify solo preparation followed by the webinar."
+    },
+    {
+      "issueId": "issue.KSGWHVSTTK4GRNCD6N3PJYN6W4",
+      "kind": "update_required",
+      "entryPaths": [
+        "modules/motion"
+      ],
+      "action": "dismiss",
+      "resultStatus": "rejected",
+      "resolvedAt": "2026-10-01T18:33:28.078Z",
+      "reason": "False ordering inference: addition of teacher and solo hour totals does not mean the teacher session occurs first. Canonical sources specify solo preparation followed by the webinar."
+    },
+    {
+      "issueId": "issue.P7EFN4QXTF2JZ313G08BSSM9PR",
+      "kind": "update_required",
+      "entryPaths": [
+        "modules/navigation"
+      ],
+      "action": "dismiss",
+      "resultStatus": "rejected",
+      "resolvedAt": "2026-10-01T18:33:29.320Z",
+      "reason": "False ordering inference: addition of teacher and solo hour totals does not mean the teacher session occurs first. Canonical sources specify solo preparation followed by the webinar."
+    },
+    {
+      "issueId": "issue.TDY5TKHNZK1A8YVZ05V1321R8G",
+      "kind": "conflict",
+      "entryPaths": [
+        "course/structure",
+        "agents",
+        "project"
+      ],
+      "action": "dismiss",
+      "resultStatus": "rejected",
+      "resolvedAt": "2026-10-01T18:33:30.770Z",
+      "reason": "False scope conflict: the 1 solo hour plus 1 closure hour is in the additional-project column. Module 8 retains 3 solo hours plus its 1-hour webinar."
+    }
+  ],
+  "readback": {
+    "state": "CONFIRMED",
+    "targetedOpenIssues": 0,
+    "allOpenIssues": 0,
+    "providerOpenIssueCount": 0,
+    "entries": [
+      {
+        "path": "course/structure",
+        "revisionId": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94",
+        "unchanged": true
+      },
+      {
+        "path": "agents",
+        "revisionId": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94",
+        "unchanged": true
+      },
+      {
+        "path": "project",
+        "revisionId": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94",
+        "unchanged": true
+      }
+    ]
+  },
+  "secretsIncluded": false,
+  "learnerWorkIncluded": false
+}

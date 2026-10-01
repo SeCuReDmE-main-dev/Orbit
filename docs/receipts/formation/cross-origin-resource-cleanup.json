@@ -1,0 +1,25 @@
+{
+  "schema": "orbit.cross-origin-resource-cleanup.v1",
+  "privateCredentialsIncluded": false,
+  "observedAt": "2026-10-01T21:39:27.4801724Z",
+  "expiryIncident": {
+    "sandboxId": "i2tvc7sdcbh7bs3k86l7i",
+    "state": "Expired before run 6 dispatch",
+    "notTokenRevocationProof": true
+  },
+  "otherCampaignsStopped": false,
+  "fullMissionComplete": false,
+  "campaign": "orbit-closure-cross-origin-20261001",
+  "tokenRefusal": {
+    "runVersion": 354497668,
+    "httpStatus": 401,
+    "proofPreserved": true,
+    "environment": "Kaggle"
+  },
+  "stopped": {
+    "stoppedAt": "2026-10-01T17:35:21.014928-04:00",
+    "sandboxId": "isb7cqp7nixk13m20h6jt",
+    "state": "stopped"
+  },
+  "proofReceipt": "cross-origin-public-validation.json"
+}

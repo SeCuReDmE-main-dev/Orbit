@@ -226,6 +226,7 @@ finally:
 
 MODIFIED = [
     'app/Http/Controllers/CourseContextController.php', 'app/Services/PublicCourseContextReader.php',
+    'app/Services/SanityContext.php',
     'app/Http/Middleware/PublicCourseContext.php', 'bootstrap/app.php',
     'config/cors.php', 'config/orbit.php', 'config/course_context.php', 'routes/api.php', 'tests/Feature/PublicCourseContextTest.php',
 ]

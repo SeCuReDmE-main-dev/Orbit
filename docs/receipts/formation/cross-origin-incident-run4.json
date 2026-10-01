@@ -1,0 +1,63 @@
+{
+  "version": "orbit-cross-origin-public-incident-v4",
+  "recordedAt": "2026-10-01T20:08:40.226924+00:00",
+  "state": "FAILED",
+  "kaggleVersion": 354490489,
+  "kaggleUrl": "https://www.kaggle.com/code/celebrum/orbit-v3-public-cross-origin-validation?scriptVersionId=354490489",
+  "workerSourceSha256": "92bb88d497f9a060d229e8f5ab35946c7c208653a51eebcf43ed7f2da5b2187f",
+  "workerBundleSha256": "36d16fa096b85ebde01220ceb06bb8332cbc244a0b9b3029e9e174d89f7c63a7",
+  "workerResultSha256": "f4239dfd4352df0241542aae1e25cf17a77cb37dba2e6c9b257d096057789094",
+  "result": {
+    "state": "complete",
+    "runId": "cross-origin-86dc131d-47cb-49a2-9c0b-50f769ddff7c",
+    "checks": [
+      {
+        "name": "foreign-host-serves-pinned-formation-release",
+        "passed": true,
+        "observation": {
+          "httpStatus": 200,
+          "releaseSha256": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046"
+        }
+      },
+      {
+        "name": "public-orbit-serves-pinned-formation-release",
+        "passed": false,
+        "observation": {
+          "httpStatus": 200,
+          "releaseSha256": "f532c9fd0e7e9d465b66d00912c389935853aae53df1b8b91ecb8f13bd79192a"
+        }
+      }
+    ],
+    "errors": [
+      "CROSS_ORIGIN_CHECK_FAILED"
+    ],
+    "host": "E2B",
+    "orchestrator": "Kaggle",
+    "modelCalls": 0,
+    "foreignOrigin": "https://8000-i2tvc7sdcbh7bs3k86l7i.e2b.app",
+    "publicCourseOrigin": "https://orbit.securedme.ca",
+    "expectedRelease": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046",
+    "personalSessionExported": false,
+    "authenticatedStudio": false,
+    "publicationExecuted": false,
+    "humanAcknowledgement": false,
+    "fixtureAuthority": "Automated synthetic test setup only.",
+    "logout": {
+      "state": "NOT_RUN",
+      "reason": "Fresh isolated profile has no authenticated Sanity session."
+    },
+    "stage": "public-release-read",
+    "durationMs": 526,
+    "success": false
+  },
+  "retirement": {
+    "postRetirementStatus": 401,
+    "authorizationRefused": true,
+    "authority": "Executed Kaggle output reports retired=true only after observed401."
+  },
+  "fullMissionComplete": false,
+  "limits": [
+    "No Chrome assertions ran: the public release SHA differed from its expected value in E2B Node HTTP transport. Windows credential-free HTTP inspection with Accept application/json still returned the pinned public release.",
+    "Retry adds only JSON Accept and bounded response-shape diagnostics; no pin, browser security, server or product guard was changed."
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "state": "NATIVE_SCHEMA_DISCOVERY_OBSERVED",
+  "origin": "https://orbit.securedme.ca/",
+  "observedAt": "2026-10-01T16:42:31.961Z",
+  "toolCount": 15,
+  "jsonStringCount": 15,
+  "jsonParsableCount": 15,
+  "rootObjectCount": 15,
+  "tools": [
+    {
+      "name": "orbit_classify_evidence",
+      "discoveredSchemaRepresentation": "string",
+      "parsedRootType": "object",
+      "required": [
+        "requestId",
+        "expectedRevision",
+        "claimIds"
+      ],
+      "propertyCount": 4,
+      "additionalProperties": false,
+      "annotations": {
+        "consequentialHint": false,
+        "readOnlyHint": true,
+        "untrustedContentHint": true
+      }
+    },
+    {
+      "name": "orbit_compare_claims",
+      "discoveredSchemaRepresentation": "string",
+      "parsedRootType": "object",
+      "required": [
+        "requestId",
+        "expectedRevision",
+        "leftClaimId",
+        "rightClaimId"
+      ],
+      "propertyCount": 5,
+      "additionalProperties": false,
+      "annotations": {
+        "consequentialHint": false,
+        "readOnlyHint": true,
+        "untrustedContentHint": true
+      }
+    },
+    {
+      "name": "orbit_find_relations",
+      "discoveredSchemaRepresentation": "string",
+      "parsedRootType": "object",
+      "required": [
+        "requestId",
+        "expectedRevision",
+        "claimIds"
+      ],
+      "propertyCount": 6,
+      "additionalProperties": false,
+      "annotations": {
+        "consequentialHint": false,
+        "readOnlyHint": true,
+        "untrustedContentHint": true
+      }
+    },
+    {
+      "name": "orbit_get_capabilities",
+      "discoveredSchemaRepresentation": "string",
+      "parsedRootType": "object",
+      "required": [],
+      "propertyCount": 0,
+      "additionalProperties": false,
+      "annotations": {
+        "consequentialHint": false,
+        "readOnlyHint": true,
+        "untrustedContentHint": true
+      }
+    },
+    {
+      "name": "orbit_get_mission_summary",
+      "discoveredSchemaRepresentation": "string",
+      "parsedRootType": "object",
+      "required": [],
+      "propertyCount": 1,
+      "additionalProperties": false,
+      "annotations": {
+        "consequentialHint": false,
+        "readOnlyHint": true,
+        "untrustedContentHint": true
+      }
+    },
+    {
+      "name": "orbit_get_research_protocol",
+      "discoveredSchemaRepresentation": "string",
+      "parsedRootType": "object",
+      "required": [],
+      "propertyCount": 0,
+      "additionalProperties": false,
+      "annotations": {
+        "consequentialHint": false,
+        "readOnlyHint": true,
+        "untrustedContentHint": true
+      }
+    },
+    {
+      "name": "orbit_get_research_request",
+      "discoveredSchemaRepresentation": "string",
+      "parsedRootType": "object",
+      "required": [],
+      "propertyCount": 0,
+      "additionalProperties": false,
+      "annotations": {
+        "consequentialHint": false,
+        "readOnlyHint": true,
+        "untrustedContentHint": true
+      }
+    },
+    {
+      "name": "orbit_list_research_points",
+      "discoveredSchemaRepresentation": "string",
+      "parsedRootType": "object",
+      "required": [],
+      "propertyCount": 2,
+      "additionalProperties": false,
+      "annotations": {
+        "consequentialHint": false,
+        "readOnlyHint": true,
+        "untrustedContentHint": true
+      }
+    },
+    {
+      "name": "orbit_present_research",
+      "discoveredSchemaRepresentation": "string",
+      "parsedRootType": "object",
+      "required": [
+        "requestId",
+        "report",
+        "axes",
+        "sources"
+      ],
+      "propertyCount": 13,
+      "additionalProperties": false,
+      "annotations": {
+        "consequentialHint": true,
+        "readOnlyHint": false,
+        "untrustedContentHint": true
+      }
+    },
+    {
+      "name": "orbit_read_source_record",
+      "discoveredSchemaRepresentation": "string",
+      "parsedRootType": "object",
+      "required": [
+        "sourceId"
+      ],
+      "propertyCount": 1,
+      "additionalProperties": false,
+      "annotations": {
+        "consequentialHint": false,
+        "readOnlyHint": true,
+        "untrustedContentHint": true
+      }
+    },
+    {
+      "name": "orbit_resolve_hold",
+      "discoveredSchemaRepresentation": "string",
+      "parsedRootType": "object",
+      "required": [
+        "requestId",
+        "expectedRevision",
+        "claimId",
+        "attempt",
+        "additionalEvidence"
+      ],
+      "propertyCount": 7,
+      "additionalProperties": false,
+      "annotations": {
+        "consequentialHint": false,
+        "readOnlyHint": true,
+        "untrustedContentHint": true
+      }
+    },
+    {
+      "name": "orbit_sanity_initial_context",
+      "discoveredSchemaRepresentation": "string",
+      "parsedRootType": "object",
+      "required": [],
+      "propertyCount": 0,
+      "additionalProperties": false,
+      "annotations": {
+        "consequentialHint": false,
+        "readOnlyHint": true,
+        "untrustedContentHint": true
+      }
+    },
+    {
+      "name": "orbit_sanity_read_entries",
+      "discoveredSchemaRepresentation": "string",
+      "parsedRootType": "object",
+      "required": [
+        "paths"
+      ],
+      "propertyCount": 1,
+      "additionalProperties": false,
+      "annotations": {
+        "consequentialHint": false,
+        "readOnlyHint": true,
+        "untrustedContentHint": true
+      }
+    },
+    {
+      "name": "orbit_search_sources",
+      "discoveredSchemaRepresentation": "string",
+      "parsedRootType": "object",
+      "required": [
+        "query"
+      ],
+      "propertyCount": 3,
+      "additionalProperties": false,
+      "annotations": {
+        "consequentialHint": false,
+        "readOnlyHint": true,
+        "untrustedContentHint": true
+      }
+    },
+    {
+      "name": "orbit_trace_impact",
+      "discoveredSchemaRepresentation": "string",
+      "parsedRootType": "object",
+      "required": [
+        "requestId",
+        "expectedRevision"
+      ],
+      "propertyCount": 4,
+      "additionalProperties": false,
+      "annotations": {
+        "consequentialHint": false,
+        "readOnlyHint": true,
+        "untrustedContentHint": true
+      }
+    }
+  ],
+  "auditScoringImplementationInspected": false,
+  "softwareTestsExecuted": false,
+  "modelCalls": 0
+}

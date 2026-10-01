@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "orbit-actual-manual-import-assembly-static-kaggle-v1",
+  "state": "PASS_ACTUAL_EXPORT_ASSEMBLY_STATIC_BUILD",
+  "environment": "Kaggle",
+  "startedAt": "2026-10-01T18:43:17.757418+00:00",
+  "inputMode": "direct-independent-colab-assembly",
+  "outerDownloadSha256": null,
+  "assemblySha256": "7ae43df9d3c7f44e39a2b545d28ff807660b85615551b2fca1a55913b339c7d6",
+  "exportsManifestSha256": "f81f828bffe0e4094b92284e5f30b7fdea2fbdf8cadd325ff24c1af245f5fd41",
+  "receiptSha256": "9b3c662a50997cb9d4bd85fd49043509dc1d3f1685b788e15a8cfcfbd89243a1",
+  "upstreamColabReceipt": {
+    "schemaVersion": "orbit-free-colab-manual-import-qualification-v1",
+    "host": "Google Colab",
+    "state": "PASS_NATIVE_EXPLICIT_RUNTIME_FILES_ASSEMBLED_NOT_BUILT",
+    "accountPlanObserved": "free account previously observed; this copy ran CPU/Python3 with premium GPU options disabled",
+    "humanUnderstanding": false,
+    "origin": "software-qa-fixture",
+    "notStudentObservation": true,
+    "frontendFileCountObserved": 9,
+    "assemblyManifestFileCountObserved": 46,
+    "archiveSha256": "7ae43df9d3c7f44e39a2b545d28ff807660b85615551b2fca1a55913b339c7d6",
+    "archiveBytes": 79149,
+    "humanApproval": false
+  },
+  "dependencies": {
+    "astro": "7.3.3",
+    "three": "0.181.2"
+  },
+  "dependencyInstallationStrategy": "frozen-lock-npm-ci",
+  "suppliedInstallationLockSha256": "423e48783d884b71827bef1e4aae380a3e15ca93735ef1a89423cf54e8a0edd8",
+  "nodeVersion": "22.20.0",
+  "stage": "astro-build",
+  "commands": [
+    {
+      "stage": "node-version",
+      "command": [
+        "/kaggle/temp/orbit-actual-assembly-7ae43df9d3c7-1790880197756831115/runtime/node-v22.20.0-linux-x64/bin/node",
+        "--version"
+      ],
+      "exitCode": 0,
+      "seconds": 0.006
+    },
+    {
+      "stage": "dependency-ci",
+      "command": [
+        "/kaggle/temp/orbit-actual-assembly-7ae43df9d3c7-1790880197756831115/runtime/node-v22.20.0-linux-x64/bin/npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "--include=optional"
+      ],
+      "exitCode": 0,
+      "seconds": 7.656
+    },
+    {
+      "stage": "astro-build",
+      "command": [
+        "/kaggle/temp/orbit-actual-assembly-7ae43df9d3c7-1790880197756831115/node_modules/.bin/astro",
+        "build"
+      ],
+      "exitCode": 0,
+      "seconds": 2.193
+    }
+  ],
+  "actualExportsUsed": true,
+  "replacementBricksUsed": false,
+  "staticBuildValidated": true,
+  "browserInteractionValidated": false,
+  "learnerUnderstandingExamined": false,
+  "nativeWebMcpValidated": false,
+  "credentialsRequired": false,
+  "modelsCalled": false,
+  "independentColabEnvironmentValidatedByThisSuite": false,
+  "manifestFilesVerified": 46,
+  "modulesLinked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "sourceBrickFilesLinked": 9,
+  "sourceGraphCoverageValidated": true,
+  "producedInstallationLockSha256": "423e48783d884b71827bef1e4aae380a3e15ca93735ef1a89423cf54e8a0edd8",
+  "producedInstallationLockBytes": 143730,
+  "installationLockGeneratedByThisRun": false,
+  "originalAssemblyFilesUnchanged": true,
+  "compiledClientScripts": [
+    "/_astro/index.astro_astro_type_script_index_0_lang.D44IJgOG.js"
+  ],
+  "staticBuildFiles": 2,
+  "compiledDistSha256": "a4d4a4ab1b678add1249c9a67fbb4a26908746bcecc9ac967cd3499661590038",
+  "limits": [
+    "Source linkage and static compilation only",
+    "No browser or trusted pointer interaction",
+    "This Kaggle suite does not validate the Colab account plan, CPU runtime or cold start",
+    "No learner comprehension or human approval",
+    "No replacement or corrected bricks",
+    "Upstream Colab state is retained as reported: PASS_NATIVE_EXPLICIT_RUNTIME_FILES_ASSEMBLED_NOT_BUILT"
+  ],
+  "finishedAt": "2026-10-01T18:43:33.553976+00:00",
+  "evidenceArchiveSha256": "daf637917fba4c69ef38f1bd409624c48d88e1b5cf6c80d3ac8bb4583bfbfcc8",
+  "notebookUrl": "https://www.kaggle.com/code/celebrum/orbit-v3-closure-regressions?scriptVersionId=354480684",
+  "upstreamReceipt": "docs/receipts/formation/free-colab-module-8-manual-import-assembled.json",
+  "versionId": 354480684
+}

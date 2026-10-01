@@ -1,0 +1,19 @@
+{
+  "version": "orbit-cross-origin-public-incident-v3",
+  "recordedAt": "2026-10-01T20:04:23.393260+00:00",
+  "state": "NOT_DISPATCHED",
+  "kaggleVersion": 354489594,
+  "kaggleUrl": "https://www.kaggle.com/code/celebrum/orbit-v3-public-cross-origin-validation?scriptVersionId=354489594",
+  "failure": "WORKER_VERSION_MISMATCH",
+  "runtimeSeconds": 22.4,
+  "workerSourceSha256": "92bb88d497f9a060d229e8f5ab35946c7c208653a51eebcf43ed7f2da5b2187f",
+  "modelCalls": 0,
+  "browserAssertionsRun": 0,
+  "outputFiles": 0,
+  "retirement": {
+    "state": "NOT_REACHED",
+    "reason": "The notebook refused the stale Secret configuration before making a bridge request."
+  },
+  "resolution": "Attach a new uniquely labelled mission Secret; preserve the version guard. The idle controller will be used once, then retired.",
+  "fullMissionComplete": false
+}

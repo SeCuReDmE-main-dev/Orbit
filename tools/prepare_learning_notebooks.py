@@ -283,6 +283,143 @@ def scaffold_content():
             for path in source.rglob('*') if path.is_file() and path.name != 'merge_modules.py' and '__pycache__' not in path.parts}
 
 
+ASSEMBLY_UPLOAD_CODE = '''from google.colab import files
+
+# Par défaut, utilisez le sélecteur officiel ci-dessous.
+# Si son dialogue reste indisponible, téléversez vos huit ZIP dans le panneau
+# Fichiers de Colab. Activez alors ce choix et écrivez les huit noms exacts.
+# Aucun fichier n'est recherché, téléchargé ou choisi automatiquement.
+USE_RUNTIME_FILE_SELECTION = False
+RUNTIME_SELECTED_EXPORT_FILENAMES = []
+
+def read_selected_runtime_exports(filenames):
+    if not isinstance(filenames, list) or len(filenames) != 8:
+        raise ValueError('Déclarez exactement huit noms de ZIP du panneau Fichiers.')
+    if any(not isinstance(name, str) or len(name) > 200 or
+           not re.fullmatch(r'[A-Za-z0-9_.-]+\\.zip', name) for name in filenames):
+        raise ValueError('Utilisez les noms de ZIP exportés, sans dossier ni chemin.')
+    if len(set(filenames)) != 8:
+        raise ValueError('Les huit noms de ZIP doivent être distincts.')
+    root = Path('/content').resolve()
+    selected = {}
+    for name in filenames:
+        path = root / name
+        if path.is_symlink() or path.resolve().parent != root or not path.is_file():
+            raise ValueError('ZIP déclaré absent ou non admissible : ' + name)
+        if path.stat().st_size > MAX_ARCHIVE_BYTES:
+            raise ValueError('ZIP déclaré trop volumineux : ' + name)
+        data = path.read_bytes()
+        if len(data) > MAX_ARCHIVE_BYTES:
+            raise ValueError('ZIP déclaré trop volumineux : ' + name)
+        selected[name] = data
+    return selected
+
+# Une nouvelle sélection invalide toujours l'examen et l'assemblage précédents.
+uploaded = {}
+examined_selection = None
+project_data = None
+assembly_filename = None
+upload_error = None
+upload_mode = 'runtime-files-explicit' if USE_RUNTIME_FILE_SELECTION else 'official-picker'
+try:
+    if USE_RUNTIME_FILE_SELECTION:
+        uploaded = read_selected_runtime_exports(RUNTIME_SELECTED_EXPORT_FILENAMES)
+    else:
+        uploaded = files.upload()  # Le sélecteur officiel : choisissez vos huit ZIP.
+except Exception as error:
+    upload_error = type(error).__name__
+    print(json.dumps({'state': 'RUNTIME_SELECTION_REFUSED' if USE_RUNTIME_FILE_SELECTION else 'UPLOAD_UNAVAILABLE',
+                      'sourceMode': upload_mode, 'errorType': type(error).__name__, 'reason': str(error),
+                      'nextStep': 'Corrigez le choix déclaré ou réexécutez le sélecteur officiel.'}, ensure_ascii=False))
+if upload_error is None and not uploaded:
+    print(json.dumps({'state': 'UPLOAD_CANCELLED', 'selectedFiles': 0,
+                      'nextStep': 'Aucun fichier assemblé. Vous pouvez relancer cette cellule.'}))
+elif uploaded:
+    print(json.dumps({'state': 'FILES_SELECTED_NOT_EXAMINED', 'selectedFiles': len(uploaded),
+                      'sourceMode': upload_mode,
+                      'nextStep': 'Exécutez la cellule suivante pour examiner les huit exports.'}))
+'''
+
+ASSEMBLY_EXAMINE_CODE = '''def examine_selected_exports(selected_files):
+    # Même lecteur borné et mêmes contrôles de manifeste que l'assemblage réel.
+    if not isinstance(selected_files, dict) or len(selected_files) != 8:
+        raise ValueError('Choisissez exactement un export par module, soit huit ZIP.')
+    modules = {}
+    rows = []
+    for filename, raw in selected_files.items():
+        if not isinstance(filename, str) or not isinstance(raw, bytes):
+            raise ValueError('Le sélecteur doit fournir des noms et des octets de fichiers.')
+        number, contents, result = load_module(raw)
+        manifest = json.loads(contents['manifest.json'])
+        if number in modules:
+            raise ValueError('Deux exports désignent le module ' + str(number) + '. Choisissez votre version.')
+        modules[number] = raw
+        rows.append({'moduleId': number, 'filename': filename, 'bytes': len(raw),
+                     'attemptId': str(result.get('attemptId', 'non déclaré'))[:120],
+                     'resultSchemaVersion': str(result['schemaVersion'])[:120],
+                     'manifestSchemaVersion': str(manifest.get('schemaVersion', 'non déclaré'))[:120],
+                     'sha256': hashlib.sha256(raw).hexdigest(),
+                     'frontendFiles': sum(name.startswith('frontend/') for name in contents)})
+    if set(modules) != set(REQUIRED):
+        raise ValueError('Les modules 1 à 8 doivent chacun apparaître exactement une fois.')
+    rows.sort(key=lambda row: row['moduleId'])
+    fingerprint = hashlib.sha256(json.dumps(rows, ensure_ascii=False, sort_keys=True,
+                                            separators=(',', ':')).encode('utf-8')).hexdigest()
+    return {'rows': rows, 'sha256': fingerprint, 'modules': modules}
+
+examined_selection = None
+project_data = None
+assembly_filename = None
+try:
+    examined_selection = examine_selected_exports(uploaded)
+    cells = ''.join('<tr><td>' + str(row['moduleId']) + '</td><td>' + html.escape(row['filename']) +
+                    '</td><td>' + str(row['bytes']) + '</td><td>' + html.escape(row['attemptId']) +
+                    '</td><td>' + html.escape(row['resultSchemaVersion']) +
+                    '</td><td>' + html.escape(row['manifestSchemaVersion']) +
+                    '</td><td><code>' + row['sha256'] + '</code></td></tr>'
+                    for row in examined_selection['rows'])
+    display(HTML('<table><caption>Vos huit exports contrôlés — provenance déclarée</caption>'
+                 '<thead><tr><th>Module</th><th>Fichier choisi</th><th>Octets</th><th>Tentative</th>'
+                 '<th>Format résultat déclaré</th><th>Format manifeste déclaré</th>'
+                 '<th>SHA-256 du ZIP</th></tr></thead><tbody>' + cells + '</tbody></table>'))
+    print('Empreinte de cette sélection à copier dans la cellule suivante :')
+    print(examined_selection['sha256'])
+    print('EXAMINED_DECLARED_EXPORTS : aucune exécution indépendante, compréhension ou approbation humaine certifiée.')
+except (ValueError, KeyError, TypeError, zipfile.BadZipFile) as error:
+    examined_selection = None
+    print(json.dumps({'state': 'SELECTION_REFUSED', 'reason': str(error),
+                      'nextStep': 'Corrigez la sélection, relancez son chargement puis son examen.'}, ensure_ascii=False))
+'''
+
+ASSEMBLY_BUILD_CODE = '''# Après avoir examiné les fichiers et leurs versions, copiez l'empreinte affichée.
+ASSEMBLY_REVIEWED_SELECTION_SHA256 = ''
+project_data = None
+assembly_filename = None
+if not examined_selection:
+    print('SELECTION_REQUIRED : chargez puis examinez vos huit exports avant cet assemblage.')
+elif ASSEMBLY_REVIEWED_SELECTION_SHA256 != examined_selection['sha256']:
+    print('SELECTION_ACKNOWLEDGEMENT_REQUIRED : copiez l’empreinte de la sélection examinée ci-dessus.')
+else:
+    try:
+        current_selection = examine_selected_exports(uploaded)
+        if current_selection['sha256'] != examined_selection['sha256']:
+            raise ValueError('La sélection a changé depuis son examen. Examinez-la à nouveau.')
+        project_data = assemble([current_selection['modules'][number] for number in range(1, 9)], scaffold_files)
+        assembly_filename = 'orbit-mon-frontend-' + current_selection['sha256'][:12] + '.zip'
+        Path(assembly_filename).write_bytes(project_data)
+        files.download(assembly_filename)
+        print(json.dumps({'state': 'ASSEMBLED_NOT_BUILT', 'selectionSha256': current_selection['sha256'],
+                          'archiveSha256': hashlib.sha256(project_data).hexdigest(), 'bytes': len(project_data),
+                          'executionVerified': False, 'understandingVerified': False,
+                          'humanApproval': False, 'nextStep': 'Compilation Astro et vrais appels WebMCP à vérifier.'}, ensure_ascii=False))
+    except (ValueError, KeyError, TypeError, zipfile.BadZipFile) as error:
+        project_data = None
+        assembly_filename = None
+        print(json.dumps({'state': 'ASSEMBLY_REFUSED', 'reason': str(error),
+                          'nextStep': 'Reprenez l’examen de la sélection. Aucun fichier remplacé par un corrigé.'}, ensure_ascii=False))
+'''
+
+
 def build_notebook(module, corrected=False):
     number = module['id']
     student = {name: (BASE / f'frontend/module-{number}' / name).read_text(encoding='utf-8') for name in module['files']}
@@ -343,14 +480,9 @@ Vous disposez maintenant de huit briques conservées pendant vos leçons. Le rac
 Cette étape prolonge la revue du Module 8 et le projet personnel. Elle ne constitue pas du temps ajouté à l’activité de trente minutes. Le projet garde ses **6 h solo + 2 h accompagnées**. Aucun `npm install` ou benchmark n’est lancé dans Colab. La compilation est vérifiée dans Kaggle et le projet cible.
 '''),
             make_cell('code', 'scaffold_files = ' + repr(scaffold_content()) + '\n' + merge_source),
-            make_cell('code', '''from google.colab import files
-uploaded = files.upload()  # Seulement les huit ZIP de modules que vous choisissez.
-if len(uploaded) != 8:
-    raise ValueError('Choisissez exactement un export par module, soit huit ZIP.')
-project_data = assemble(list(uploaded.values()), scaffold_files)
-Path('orbit-mon-frontend.zip').write_bytes(project_data)
-files.download('orbit-mon-frontend.zip')
-print('ASSEMBLED_NOT_BUILT : vos fichiers sont assemblés. La compilation Astro et les véritables appels WebMCP restent à vérifier.')'''),
+            make_cell('code', ASSEMBLY_UPLOAD_CODE),
+            make_cell('code', ASSEMBLY_EXAMINE_CODE),
+            make_cell('code', ASSEMBLY_BUILD_CODE),
         ]
     if corrected:
         cells.append(make_cell('markdown', '## Piste de correction, à ne pas confondre avec un résultat observé\n' + module['expected'] + '\nLe corrigé ne certifie ni l’exécution ni la compréhension. Accepter des observations différentes et rechercher leurs conditions.'))

@@ -1,0 +1,32 @@
+{
+  "schema": "orbit.native-studio-login-screen-observation.v1",
+  "observedAt": "2026-10-01T21:35:35.1527348Z",
+  "observationSource": "Root Codex agent inspected the protected E2B Desktop stream screenshot and reported the visible screen; no credentials entered by an agent.",
+  "state": "NATIVE_SANITY_LOGIN_VISIBLE_HUMAN_ACTION_REQUIRED",
+  "origin": "https://8000-i3svpb1bpfrzqnvrpsyv8.e2b.app",
+  "visibleText": [
+    "Orbit - Formation Studio",
+    "Choose login provider",
+    "Google",
+    "GitHub",
+    "E-mail password"
+  ],
+  "kaggleReload": {
+    "version": 354503924,
+    "receipt": "native-studio-login-incident-run1.json",
+    "nativeReloadExecuted": true,
+    "automatedScreenRecognition": "FALSE_NEGATIVE_LITERAL_TEXT_MISMATCH",
+    "failureReceiptPreserved": true
+  },
+  "temporaryExactCorsCreatedAndReadBack": true,
+  "personalSessionExported": false,
+  "credentialsEnteredByAgent": false,
+  "humanLoginCompleted": false,
+  "contentLakeWriteExecuted": false,
+  "authenticatedAssertionsExecuted": 0,
+  "fullMissionComplete": false,
+  "screenshotEvidence": {
+    "storage": "Private; not included in public artifacts",
+    "sha256": "39e0892dd94a59217e6c18c2808995cb1d88fc623b62d575e748e892d81aca86"
+  }
+}

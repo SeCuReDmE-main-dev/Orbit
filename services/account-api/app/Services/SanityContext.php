@@ -9,20 +9,35 @@ use RuntimeException;
 
 class SanityContext
 {
-    /** Read the curated Orbit corpus only. Clients cannot select tools or endpoints. */
+    /** Read the research corpus. Request parameters cannot select another profile. */
     public function read(string $kind, array $paths = []): array
     {
-        $endpoint = config('orbit.context.endpoint');
-        $token = config('orbit.context.token');
-        if (! is_string($endpoint) || ! preg_match('/^[a-z0-9-]{1,64}$/D', $endpoint) || ! is_string($token) || $token === '') {
+        return $this->readProfile('research', $kind, $paths);
+    }
+
+    /** Read only the server-selected public course Knowledge Base. */
+    public function readCourse(string $kind, array $paths = []): array
+    {
+        return $this->readProfile('course', $kind, $paths);
+    }
+
+    private function readProfile(string $profile, string $kind, array $paths): array
+    {
+        $context = $profile === 'course' ? config('course_context') : config('orbit.context');
+        $endpoint = $context['endpoint'] ?? null;
+        $token = $context['token'] ?? null;
+        $organization = $context['organization'] ?? null;
+        $kb = $context['knowledge_base'] ?? null;
+        if (! is_string($endpoint) || ! preg_match('/^[a-z0-9-]{1,64}$/D', $endpoint)
+            || ! is_string($token) || $token === ''
+            || ! is_string($organization) || ! preg_match('/^[a-zA-Z0-9_-]{1,160}$/D', $organization)
+            || ! is_string($kb) || ! preg_match('/^kb[a-zA-Z0-9_-]{1,100}$/D', $kb)) {
             throw new RuntimeException('CONTEXT_NOT_CONFIGURED');
         }
         if (! in_array($kind, ['outline', 'entries'], true)) {
             throw new RuntimeException('CONTEXT_OPERATION_REJECTED');
         }
-        $organization = config('orbit.context.organization');
-        $kb = config('orbit.context.knowledge_base');
-        $cacheKey = 'context:'.hash('sha256', json_encode([$organization, $endpoint, $kb, $kind, $paths, hash('sha256', $token)]));
+        $cacheKey = 'context:'.hash('sha256', json_encode([$profile, $organization, $endpoint, $kb, $kind, $paths, hash('sha256', $token)]));
 
         return Cache::remember($cacheKey, 60, function () use ($organization, $endpoint, $token, $kb, $kind, $paths): array {
             Cache::lock('context:upstream-budget-lock', 5)->block(2, function (): void {

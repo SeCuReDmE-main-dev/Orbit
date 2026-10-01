@@ -1,0 +1,801 @@
+{
+  "version": "orbit-closure-static-live-transport-v1",
+  "recordedAt": "2026-10-01T19:07:52.218257+00:00",
+  "state": "PUBLIC_STATIC_BYTES_VERIFIED",
+  "kind": "Credential-free public deployment byte readback, not software/browser/model testing",
+  "executionHost": "Windows orchestration workstation",
+  "credentialsSent": false,
+  "cookiesSent": false,
+  "releaseId": "orbit-v3-closure-20261001T180900Z",
+  "packageSha256": "246bd711f6d24048a3c8e5a3387b074f4bdb9abba442b3424a715a69c13ca9e4",
+  "reportedDeployment": {
+    "operationId": "ab40a2ac3f15eaba66e98b1c",
+    "status": "SUCCESS",
+    "backupRetained": true,
+    "attribution": "Parent broker deployment; independently read back here."
+  },
+  "expectedPathsCount": 21,
+  "readPathsCount": 46,
+  "allExpectedPathsRead": true,
+  "allReadBytesMatchPackage": true,
+  "htmlResources": [
+    {
+      "page": "index.html",
+      "reference": "/_astro/OrbitLayout.BRER8aZk.css",
+      "payloadPath": "_astro/OrbitLayout.BRER8aZk.css"
+    },
+    {
+      "page": "index.html",
+      "reference": "/_astro/atom-games.pEF6dAC6.css",
+      "payloadPath": "_astro/atom-games.pEF6dAC6.css"
+    },
+    {
+      "page": "index.html",
+      "reference": "/brand/securedme-publication-lab-primary-dark.png",
+      "payloadPath": "brand/securedme-publication-lab-primary-dark.png"
+    },
+    {
+      "page": "index.html",
+      "reference": "/_astro/LandingExperience.astro_astro_type_script_index_0_lang.C_S-G-Jn.js",
+      "payloadPath": "_astro/LandingExperience.astro_astro_type_script_index_0_lang.C_S-G-Jn.js"
+    },
+    {
+      "page": "index.html",
+      "reference": "/_astro/OrbitLayout.astro_astro_type_script_index_0_lang.DPLZ2h8g.js",
+      "payloadPath": "_astro/OrbitLayout.astro_astro_type_script_index_0_lang.DPLZ2h8g.js"
+    },
+    {
+      "page": "studio/index.html",
+      "reference": "/static/favicon.ico",
+      "payloadPath": "static/favicon.ico"
+    },
+    {
+      "page": "studio/index.html",
+      "reference": "/static/favicon.svg",
+      "payloadPath": "static/favicon.svg"
+    },
+    {
+      "page": "studio/index.html",
+      "reference": "/static/apple-touch-icon.png",
+      "payloadPath": "static/apple-touch-icon.png"
+    },
+    {
+      "page": "studio/index.html",
+      "reference": "/static/manifest.webmanifest",
+      "payloadPath": "static/manifest.webmanifest"
+    },
+    {
+      "page": "studio/index.html",
+      "reference": "/static/sanity-DRi8_Kad.css",
+      "payloadPath": "static/sanity-DRi8_Kad.css"
+    },
+    {
+      "page": "studio/index.html",
+      "reference": "/static/lib-Cq2Nx7v7.css",
+      "payloadPath": "static/lib-Cq2Nx7v7.css"
+    },
+    {
+      "page": "studio/index.html",
+      "reference": "/static/PerspectiveProvider-KZEIz8JI-Di-8vf7M.css",
+      "payloadPath": "static/PerspectiveProvider-KZEIz8JI-Di-8vf7M.css"
+    },
+    {
+      "page": "studio/index.html",
+      "reference": "/static/sanity-Cv8sHHkE.js",
+      "payloadPath": "static/sanity-Cv8sHHkE.js"
+    },
+    {
+      "page": "app/index.html",
+      "reference": "/_astro/atom-games.pEF6dAC6.css",
+      "payloadPath": "_astro/atom-games.pEF6dAC6.css"
+    },
+    {
+      "page": "app/index.html",
+      "reference": "/_astro/index.DxXnsDDg.css",
+      "payloadPath": "_astro/index.DxXnsDDg.css"
+    },
+    {
+      "page": "app/index.html",
+      "reference": "/_astro/index.astro_astro_type_script_index_0_lang.B2lr4WVW.js",
+      "payloadPath": "_astro/index.astro_astro_type_script_index_0_lang.B2lr4WVW.js"
+    },
+    {
+      "page": "formation/lab/index.html",
+      "reference": "/_astro/atom-games.pEF6dAC6.css",
+      "payloadPath": "_astro/atom-games.pEF6dAC6.css"
+    },
+    {
+      "page": "formation/lab/index.html",
+      "reference": "/_astro/FormationLayout.B0sGGvIL.css",
+      "payloadPath": "_astro/FormationLayout.B0sGGvIL.css"
+    },
+    {
+      "page": "formation/lab/index.html",
+      "reference": "/_astro/FormationLayout.astro_astro_type_script_index_0_lang.kxNMTqaU.js",
+      "payloadPath": "_astro/FormationLayout.astro_astro_type_script_index_0_lang.kxNMTqaU.js"
+    },
+    {
+      "page": "formation/studio/index.html",
+      "reference": "/static/favicon.ico",
+      "payloadPath": "static/favicon.ico"
+    },
+    {
+      "page": "formation/studio/index.html",
+      "reference": "/static/favicon.svg",
+      "payloadPath": "static/favicon.svg"
+    },
+    {
+      "page": "formation/studio/index.html",
+      "reference": "/static/apple-touch-icon.png",
+      "payloadPath": "static/apple-touch-icon.png"
+    },
+    {
+      "page": "formation/studio/index.html",
+      "reference": "/static/manifest.webmanifest",
+      "payloadPath": "static/manifest.webmanifest"
+    },
+    {
+      "page": "formation/studio/index.html",
+      "reference": "/formation/studio/static/sanity-CJox16-K.css",
+      "payloadPath": "formation/studio/static/sanity-CJox16-K.css"
+    },
+    {
+      "page": "formation/studio/index.html",
+      "reference": "/formation/studio/static/PerspectiveProvider-KZEIz8JI-Di-8vf7M.css",
+      "payloadPath": "formation/studio/static/PerspectiveProvider-KZEIz8JI-Di-8vf7M.css"
+    },
+    {
+      "page": "formation/studio/index.html",
+      "reference": "/formation/studio/static/sanity-5-Z22tVL.js",
+      "payloadPath": "formation/studio/static/sanity-5-Z22tVL.js"
+    },
+    {
+      "page": "formation/projets/index.html",
+      "reference": "/_astro/atom-games.pEF6dAC6.css",
+      "payloadPath": "_astro/atom-games.pEF6dAC6.css"
+    },
+    {
+      "page": "formation/projets/index.html",
+      "reference": "/_astro/FormationLayout.B0sGGvIL.css",
+      "payloadPath": "_astro/FormationLayout.B0sGGvIL.css"
+    },
+    {
+      "page": "formation/projets/index.html",
+      "reference": "/_astro/FormationLayout.astro_astro_type_script_index_0_lang.kxNMTqaU.js",
+      "payloadPath": "_astro/FormationLayout.astro_astro_type_script_index_0_lang.kxNMTqaU.js"
+    },
+    {
+      "page": "guide/index.html",
+      "reference": "/_astro/OrbitLayout.BRER8aZk.css",
+      "payloadPath": "_astro/OrbitLayout.BRER8aZk.css"
+    },
+    {
+      "page": "guide/index.html",
+      "reference": "/_astro/atom-games.pEF6dAC6.css",
+      "payloadPath": "_astro/atom-games.pEF6dAC6.css"
+    },
+    {
+      "page": "guide/index.html",
+      "reference": "/_astro/guide.Dweedfia.css",
+      "payloadPath": "_astro/guide.Dweedfia.css"
+    },
+    {
+      "page": "guide/index.html",
+      "reference": "/guide/orbit-atome-2.1.6-fr.pdf",
+      "payloadPath": "guide/orbit-atome-2.1.6-fr.pdf"
+    },
+    {
+      "page": "guide/index.html",
+      "reference": "/_astro/OrbitLayout.astro_astro_type_script_index_0_lang.DPLZ2h8g.js",
+      "payloadPath": "_astro/OrbitLayout.astro_astro_type_script_index_0_lang.DPLZ2h8g.js"
+    }
+  ],
+  "reads": [
+    {
+      "payloadPath": "SHA256SUMS.txt",
+      "url": "https://orbit.securedme.ca/SHA256SUMS.txt",
+      "method": "GET",
+      "expectedSha256": "008aaea923b92f9254477b85a44f4185bf677e116008aa3bfc802e1c353b8030",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/SHA256SUMS.txt",
+      "contentType": "text/plain",
+      "bytes": 78939,
+      "sha256": "008aaea923b92f9254477b85a44f4185bf677e116008aa3bfc802e1c353b8030",
+      "elapsedMs": 328,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "_astro/FormationLayout.B0sGGvIL.css",
+      "url": "https://orbit.securedme.ca/_astro/FormationLayout.B0sGGvIL.css",
+      "method": "GET",
+      "expectedSha256": "c64f1c5a80b9251e73f78b0bfa86649cd2adb11fb221a5eb0a6ce76a09e4541f",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/_astro/FormationLayout.B0sGGvIL.css",
+      "contentType": "text/css",
+      "bytes": 3621,
+      "sha256": "c64f1c5a80b9251e73f78b0bfa86649cd2adb11fb221a5eb0a6ce76a09e4541f",
+      "elapsedMs": 250,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "_astro/FormationLayout.astro_astro_type_script_index_0_lang.kxNMTqaU.js",
+      "url": "https://orbit.securedme.ca/_astro/FormationLayout.astro_astro_type_script_index_0_lang.kxNMTqaU.js",
+      "method": "GET",
+      "expectedSha256": "a523b4ea704e9cedf6f1c504730c20eb2cb2d0e99d40d23518fd65be983beebe",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/_astro/FormationLayout.astro_astro_type_script_index_0_lang.kxNMTqaU.js",
+      "contentType": "text/javascript",
+      "bytes": 135621,
+      "sha256": "a523b4ea704e9cedf6f1c504730c20eb2cb2d0e99d40d23518fd65be983beebe",
+      "elapsedMs": 391,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "_astro/LandingExperience.astro_astro_type_script_index_0_lang.C_S-G-Jn.js",
+      "url": "https://orbit.securedme.ca/_astro/LandingExperience.astro_astro_type_script_index_0_lang.C_S-G-Jn.js",
+      "method": "GET",
+      "expectedSha256": "be6a0d0f133975033d5656500636d1aed7ce4802c1a4ff5d57f5d0973ad06e29",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/_astro/LandingExperience.astro_astro_type_script_index_0_lang.C_S-G-Jn.js",
+      "contentType": "text/javascript",
+      "bytes": 47929,
+      "sha256": "be6a0d0f133975033d5656500636d1aed7ce4802c1a4ff5d57f5d0973ad06e29",
+      "elapsedMs": 297,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "_astro/OrbitLayout.BRER8aZk.css",
+      "url": "https://orbit.securedme.ca/_astro/OrbitLayout.BRER8aZk.css",
+      "method": "GET",
+      "expectedSha256": "b805abde45ad08d5b6e18a699e9c0d9353e78353fb668f23c5f81d2896c22a27",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/_astro/OrbitLayout.BRER8aZk.css",
+      "contentType": "text/css",
+      "bytes": 67255,
+      "sha256": "b805abde45ad08d5b6e18a699e9c0d9353e78353fb668f23c5f81d2896c22a27",
+      "elapsedMs": 203,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "_astro/OrbitLayout.astro_astro_type_script_index_0_lang.DPLZ2h8g.js",
+      "url": "https://orbit.securedme.ca/_astro/OrbitLayout.astro_astro_type_script_index_0_lang.DPLZ2h8g.js",
+      "method": "GET",
+      "expectedSha256": "7b4d4dfb4068693e09948e5a28860be9d6e76d59eb25d29f5cda9af6eb87fcd3",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/_astro/OrbitLayout.astro_astro_type_script_index_0_lang.DPLZ2h8g.js",
+      "contentType": "text/javascript",
+      "bytes": 335,
+      "sha256": "7b4d4dfb4068693e09948e5a28860be9d6e76d59eb25d29f5cda9af6eb87fcd3",
+      "elapsedMs": 78,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "_astro/atom-games.pEF6dAC6.css",
+      "url": "https://orbit.securedme.ca/_astro/atom-games.pEF6dAC6.css",
+      "method": "GET",
+      "expectedSha256": "8f017d7d59f3788cf823880c58d3532aba68fadad5b52e01c7b1937a0767050d",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/_astro/atom-games.pEF6dAC6.css",
+      "contentType": "text/css",
+      "bytes": 21687,
+      "sha256": "8f017d7d59f3788cf823880c58d3532aba68fadad5b52e01c7b1937a0767050d",
+      "elapsedMs": 125,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "_astro/guide.Dweedfia.css",
+      "url": "https://orbit.securedme.ca/_astro/guide.Dweedfia.css",
+      "method": "GET",
+      "expectedSha256": "16f5585a005249b1fdb136209fbdaaf1cb3fd2e9d0713d72f15d917d132a2bd8",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/_astro/guide.Dweedfia.css",
+      "contentType": "text/css",
+      "bytes": 2494,
+      "sha256": "16f5585a005249b1fdb136209fbdaaf1cb3fd2e9d0713d72f15d917d132a2bd8",
+      "elapsedMs": 125,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "_astro/index.DxXnsDDg.css",
+      "url": "https://orbit.securedme.ca/_astro/index.DxXnsDDg.css",
+      "method": "GET",
+      "expectedSha256": "848e043d97528ee2a5d82676e5e63c232a1f13f5f935a0d9d84c67653f2a4f7c",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/_astro/index.DxXnsDDg.css",
+      "contentType": "text/css",
+      "bytes": 12971,
+      "sha256": "848e043d97528ee2a5d82676e5e63c232a1f13f5f935a0d9d84c67653f2a4f7c",
+      "elapsedMs": 94,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "_astro/index.astro_astro_type_script_index_0_lang.B2lr4WVW.js",
+      "url": "https://orbit.securedme.ca/_astro/index.astro_astro_type_script_index_0_lang.B2lr4WVW.js",
+      "method": "GET",
+      "expectedSha256": "728040e48a1af7e05152780bf6a9704152c20e45ec7ceadb3d67c136d55af39c",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/_astro/index.astro_astro_type_script_index_0_lang.B2lr4WVW.js",
+      "contentType": "text/javascript",
+      "bytes": 67121,
+      "sha256": "728040e48a1af7e05152780bf6a9704152c20e45ec7ceadb3d67c136d55af39c",
+      "elapsedMs": 156,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "_astro/landing-preferences.BWzz2QTO.js",
+      "url": "https://orbit.securedme.ca/_astro/landing-preferences.BWzz2QTO.js",
+      "method": "GET",
+      "expectedSha256": "60c131ccbd2503eaeb199caab1956e0066bb176fc28d00da1f4b7e89232b0897",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/_astro/landing-preferences.BWzz2QTO.js",
+      "contentType": "text/javascript",
+      "bytes": 8076,
+      "sha256": "60c131ccbd2503eaeb199caab1956e0066bb176fc28d00da1f4b7e89232b0897",
+      "elapsedMs": 94,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "_astro/preload-helper.B3nfOi5I.js",
+      "url": "https://orbit.securedme.ca/_astro/preload-helper.B3nfOi5I.js",
+      "method": "GET",
+      "expectedSha256": "298e58483be1903930c5a1661df3e66b3ef02723b34237990ad3a5f5e6052628",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/_astro/preload-helper.B3nfOi5I.js",
+      "contentType": "text/javascript",
+      "bytes": 1364,
+      "sha256": "298e58483be1903930c5a1661df3e66b3ef02723b34237990ad3a5f5e6052628",
+      "elapsedMs": 93,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "_astro/three.module.CMpx1NI_.js",
+      "url": "https://orbit.securedme.ca/_astro/three.module.CMpx1NI_.js",
+      "method": "GET",
+      "expectedSha256": "36cc97c3b490fc650debb6d7151a7ed432eb9d41d7971ef924b738d283c62e64",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/_astro/three.module.CMpx1NI_.js",
+      "contentType": "text/javascript",
+      "bytes": 710442,
+      "sha256": "36cc97c3b490fc650debb6d7151a7ed432eb9d41d7971ef924b738d283c62e64",
+      "elapsedMs": 516,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "_astro/webmcp.C5DKb26p.js",
+      "url": "https://orbit.securedme.ca/_astro/webmcp.C5DKb26p.js",
+      "method": "GET",
+      "expectedSha256": "77749a29b7fd75e027a22e28041ddd67d6c3db51ffaaae68c91c57a3c0229ccb",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/_astro/webmcp.C5DKb26p.js",
+      "contentType": "text/javascript",
+      "bytes": 35351,
+      "sha256": "77749a29b7fd75e027a22e28041ddd67d6c3db51ffaaae68c91c57a3c0229ccb",
+      "elapsedMs": 125,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "app/index.html",
+      "url": "https://orbit.securedme.ca/app/",
+      "method": "GET",
+      "expectedSha256": "3c9dcdaec4c4680213f6d9d7861997703ba0ca7df97e824da90e0b7c28e7cc19",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/app/",
+      "contentType": "text/html",
+      "bytes": 3339,
+      "sha256": "3c9dcdaec4c4680213f6d9d7861997703ba0ca7df97e824da90e0b7c28e7cc19",
+      "elapsedMs": 79,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "brand/securedme-publication-lab-primary-dark.png",
+      "url": "https://orbit.securedme.ca/brand/securedme-publication-lab-primary-dark.png",
+      "method": "GET",
+      "expectedSha256": "f6ccf56d45727614481c100240f248c169bd481576aa62372fbfe792d5db533e",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/brand/securedme-publication-lab-primary-dark.png",
+      "contentType": "image/png",
+      "bytes": 2213895,
+      "sha256": "f6ccf56d45727614481c100240f248c169bd481576aa62372fbfe792d5db533e",
+      "elapsedMs": 1016,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/assembly.zip",
+      "url": "https://orbit.securedme.ca/formation/assembly.zip",
+      "method": "GET",
+      "expectedSha256": "b7c9218240d46e8ec8d992acdde0bf153a6c3b9cea165678fbb73cde6568ce4e",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/assembly.zip",
+      "contentType": "application/zip",
+      "bytes": 7280,
+      "sha256": "b7c9218240d46e8ec8d992acdde0bf153a6c3b9cea165678fbb73cde6568ce4e",
+      "elapsedMs": 93,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/lab/index.html",
+      "url": "https://orbit.securedme.ca/formation/lab/",
+      "method": "GET",
+      "expectedSha256": "4e2de284e638b3c3e84cb432cd4ceb36db047835cafdf11a540d32350c2b0008",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/lab/",
+      "contentType": "text/html",
+      "bytes": 4031,
+      "sha256": "4e2de284e638b3c3e84cb432cd4ceb36db047835cafdf11a540d32350c2b0008",
+      "elapsedMs": 94,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/notebooks/module-1.ipynb",
+      "url": "https://orbit.securedme.ca/formation/notebooks/module-1.ipynb",
+      "method": "GET",
+      "expectedSha256": "accdb45c528b5a4f9cdcb1282b40ebe067ea4391987217e4f447bd2112f57085",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/notebooks/module-1.ipynb",
+      "contentType": "application/octet-stream",
+      "bytes": 21792,
+      "sha256": "accdb45c528b5a4f9cdcb1282b40ebe067ea4391987217e4f447bd2112f57085",
+      "elapsedMs": 110,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/notebooks/module-2.ipynb",
+      "url": "https://orbit.securedme.ca/formation/notebooks/module-2.ipynb",
+      "method": "GET",
+      "expectedSha256": "ec94bb61c413fa08cb3490053580ac52c882e7b4320ef885ac7412d46780dd46",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/notebooks/module-2.ipynb",
+      "contentType": "application/octet-stream",
+      "bytes": 20109,
+      "sha256": "ec94bb61c413fa08cb3490053580ac52c882e7b4320ef885ac7412d46780dd46",
+      "elapsedMs": 109,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/notebooks/module-3.ipynb",
+      "url": "https://orbit.securedme.ca/formation/notebooks/module-3.ipynb",
+      "method": "GET",
+      "expectedSha256": "acdefdfc01a56da8bd782b0c338c562bda769fe02a0bfa732b820f828133e482",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/notebooks/module-3.ipynb",
+      "contentType": "application/octet-stream",
+      "bytes": 23943,
+      "sha256": "acdefdfc01a56da8bd782b0c338c562bda769fe02a0bfa732b820f828133e482",
+      "elapsedMs": 125,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/notebooks/module-4.ipynb",
+      "url": "https://orbit.securedme.ca/formation/notebooks/module-4.ipynb",
+      "method": "GET",
+      "expectedSha256": "c6db8b7898e35ff4ba6847a8b9622841d58128da67f9b842147ee9ebd3065364",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/notebooks/module-4.ipynb",
+      "contentType": "application/octet-stream",
+      "bytes": 21338,
+      "sha256": "c6db8b7898e35ff4ba6847a8b9622841d58128da67f9b842147ee9ebd3065364",
+      "elapsedMs": 125,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/notebooks/module-5.ipynb",
+      "url": "https://orbit.securedme.ca/formation/notebooks/module-5.ipynb",
+      "method": "GET",
+      "expectedSha256": "fff0987ca7801577d81d5c9f6898caf5fdd5333c2ffcf23f02517dc1bc4231ce",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/notebooks/module-5.ipynb",
+      "contentType": "application/octet-stream",
+      "bytes": 19401,
+      "sha256": "fff0987ca7801577d81d5c9f6898caf5fdd5333c2ffcf23f02517dc1bc4231ce",
+      "elapsedMs": 140,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/notebooks/module-6.ipynb",
+      "url": "https://orbit.securedme.ca/formation/notebooks/module-6.ipynb",
+      "method": "GET",
+      "expectedSha256": "2f4f8d7a427a1d5b5c909fecaee276ae9248f4c5dbe9395d0d0ed7efca5b38ec",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/notebooks/module-6.ipynb",
+      "contentType": "application/octet-stream",
+      "bytes": 19797,
+      "sha256": "2f4f8d7a427a1d5b5c909fecaee276ae9248f4c5dbe9395d0d0ed7efca5b38ec",
+      "elapsedMs": 110,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/notebooks/module-7.ipynb",
+      "url": "https://orbit.securedme.ca/formation/notebooks/module-7.ipynb",
+      "method": "GET",
+      "expectedSha256": "2d6ac00e5a9635e8b031a31bbb92c8092b94b5a25db26584b5e8c6e6fa7894ca",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/notebooks/module-7.ipynb",
+      "contentType": "application/octet-stream",
+      "bytes": 20575,
+      "sha256": "2d6ac00e5a9635e8b031a31bbb92c8092b94b5a25db26584b5e8c6e6fa7894ca",
+      "elapsedMs": 125,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/notebooks/module-8.ipynb",
+      "url": "https://orbit.securedme.ca/formation/notebooks/module-8.ipynb",
+      "method": "GET",
+      "expectedSha256": "798c6e030db6db9a789be6d21a987a04bb4a324fb2f4f059886561fc624e68f2",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/notebooks/module-8.ipynb",
+      "contentType": "application/octet-stream",
+      "bytes": 40800,
+      "sha256": "798c6e030db6db9a789be6d21a987a04bb4a324fb2f4f059886561fc624e68f2",
+      "elapsedMs": 109,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/plugins/orbit-learning-studio-1.0.0.tgz",
+      "url": "https://orbit.securedme.ca/formation/plugins/orbit-learning-studio-1.0.0.tgz",
+      "method": "GET",
+      "expectedSha256": "184358d01d9866ef7da0b5ac67f5d8020545656a31b66e39fece0c0e8e17ff64",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/plugins/orbit-learning-studio-1.0.0.tgz",
+      "contentType": "application/x-tar",
+      "bytes": 57550,
+      "sha256": "184358d01d9866ef7da0b5ac67f5d8020545656a31b66e39fece0c0e8e17ff64",
+      "elapsedMs": 141,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/projets/index.html",
+      "url": "https://orbit.securedme.ca/formation/projets/",
+      "method": "GET",
+      "expectedSha256": "35f67e772dd1257d279a7e915abea350ae29b8a83f2937b81e7660a35e565300",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/projets/",
+      "contentType": "text/html",
+      "bytes": 4036,
+      "sha256": "35f67e772dd1257d279a7e915abea350ae29b8a83f2937b81e7660a35e565300",
+      "elapsedMs": 94,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/release.json",
+      "url": "https://orbit.securedme.ca/formation/release.json",
+      "method": "GET",
+      "expectedSha256": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/release.json",
+      "contentType": "application/json",
+      "bytes": 86387,
+      "sha256": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046",
+      "elapsedMs": 203,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/studio/index.html",
+      "url": "https://orbit.securedme.ca/formation/studio/",
+      "method": "GET",
+      "expectedSha256": "873bb42366079d6462e8ae1993e92713838f553054b6c84dd4263e10f12fcecc",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/studio/",
+      "contentType": "text/html",
+      "bytes": 8819,
+      "sha256": "873bb42366079d6462e8ae1993e92713838f553054b6c84dd4263e10f12fcecc",
+      "elapsedMs": 109,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/studio/static/PerspectiveProvider-KZEIz8JI-Di-8vf7M.css",
+      "url": "https://orbit.securedme.ca/formation/studio/static/PerspectiveProvider-KZEIz8JI-Di-8vf7M.css",
+      "method": "GET",
+      "expectedSha256": "1eb93aa0b6e89aba67aceb95343a0aeabcd29ce8d4cdb7d1e809b4c77014da7f",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/studio/static/PerspectiveProvider-KZEIz8JI-Di-8vf7M.css",
+      "contentType": "text/css",
+      "bytes": 2706,
+      "sha256": "1eb93aa0b6e89aba67aceb95343a0aeabcd29ce8d4cdb7d1e809b4c77014da7f",
+      "elapsedMs": 109,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/studio/static/sanity-5-Z22tVL.js",
+      "url": "https://orbit.securedme.ca/formation/studio/static/sanity-5-Z22tVL.js",
+      "method": "GET",
+      "expectedSha256": "d595e7969aaa026bc58800697c62f4d73f9d7edee487d68ecfd9c085c0346a8f",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/studio/static/sanity-5-Z22tVL.js",
+      "contentType": "text/javascript",
+      "bytes": 1005693,
+      "sha256": "d595e7969aaa026bc58800697c62f4d73f9d7edee487d68ecfd9c085c0346a8f",
+      "elapsedMs": 766,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "formation/studio/static/sanity-CJox16-K.css",
+      "url": "https://orbit.securedme.ca/formation/studio/static/sanity-CJox16-K.css",
+      "method": "GET",
+      "expectedSha256": "4a133d9a87cb55804b41d351de5d54e4466826d1d896c905edb7abe6fff55f6e",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/formation/studio/static/sanity-CJox16-K.css",
+      "contentType": "text/css",
+      "bytes": 174015,
+      "sha256": "4a133d9a87cb55804b41d351de5d54e4466826d1d896c905edb7abe6fff55f6e",
+      "elapsedMs": 282,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "guide/index.html",
+      "url": "https://orbit.securedme.ca/guide/",
+      "method": "GET",
+      "expectedSha256": "d2b99aabf7f0003edb6b40ae34022f6e4163bc8b58194c5631d9d7e28a5419d2",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/guide/",
+      "contentType": "text/html",
+      "bytes": 59344,
+      "sha256": "d2b99aabf7f0003edb6b40ae34022f6e4163bc8b58194c5631d9d7e28a5419d2",
+      "elapsedMs": 203,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "guide/orbit-atome-2.1.6-fr.pdf",
+      "url": "https://orbit.securedme.ca/guide/orbit-atome-2.1.6-fr.pdf",
+      "method": "GET",
+      "expectedSha256": "330915650699e08363d0581b9887df603623a85b794713f97f60ab403ade8c4c",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/guide/orbit-atome-2.1.6-fr.pdf",
+      "contentType": "application/pdf",
+      "bytes": 6681176,
+      "sha256": "330915650699e08363d0581b9887df603623a85b794713f97f60ab403ade8c4c",
+      "elapsedMs": 2203,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "index.html",
+      "url": "https://orbit.securedme.ca/",
+      "method": "GET",
+      "expectedSha256": "ef358a42bc2acaf498c297b9f43c68469adcbddfc1cc8f9b2f4e95622f563881",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/",
+      "contentType": "text/html",
+      "bytes": 9589,
+      "sha256": "ef358a42bc2acaf498c297b9f43c68469adcbddfc1cc8f9b2f4e95622f563881",
+      "elapsedMs": 78,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "orbit-release.json",
+      "url": "https://orbit.securedme.ca/orbit-release.json",
+      "method": "GET",
+      "expectedSha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/orbit-release.json",
+      "contentType": "application/json",
+      "bytes": 86958,
+      "sha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e",
+      "elapsedMs": 203,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "static/PerspectiveProvider-KZEIz8JI-Di-8vf7M.css",
+      "url": "https://orbit.securedme.ca/static/PerspectiveProvider-KZEIz8JI-Di-8vf7M.css",
+      "method": "GET",
+      "expectedSha256": "1eb93aa0b6e89aba67aceb95343a0aeabcd29ce8d4cdb7d1e809b4c77014da7f",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/static/PerspectiveProvider-KZEIz8JI-Di-8vf7M.css",
+      "contentType": "text/css",
+      "bytes": 2706,
+      "sha256": "1eb93aa0b6e89aba67aceb95343a0aeabcd29ce8d4cdb7d1e809b4c77014da7f",
+      "elapsedMs": 141,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "static/apple-touch-icon.png",
+      "url": "https://orbit.securedme.ca/static/apple-touch-icon.png",
+      "method": "GET",
+      "expectedSha256": "c8f964dc9c5f98030def4c56501886aaea817c9c43c8c353eedee05fba029a54",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/static/apple-touch-icon.png",
+      "contentType": "image/png",
+      "bytes": 4132,
+      "sha256": "c8f964dc9c5f98030def4c56501886aaea817c9c43c8c353eedee05fba029a54",
+      "elapsedMs": 78,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "static/favicon.ico",
+      "url": "https://orbit.securedme.ca/static/favicon.ico",
+      "method": "GET",
+      "expectedSha256": "55dcce1e14499fb8aa5f339e9614b65bd73a463bc7aac513eb82fbfa8609e54f",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/static/favicon.ico",
+      "contentType": "image/x-icon",
+      "bytes": 1200,
+      "sha256": "55dcce1e14499fb8aa5f339e9614b65bd73a463bc7aac513eb82fbfa8609e54f",
+      "elapsedMs": 109,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "static/favicon.svg",
+      "url": "https://orbit.securedme.ca/static/favicon.svg",
+      "method": "GET",
+      "expectedSha256": "27fb9318f958b971c7edf1ffd73c2218005ee043fabf154e4632d4e7a0ab68db",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/static/favicon.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 1100,
+      "sha256": "27fb9318f958b971c7edf1ffd73c2218005ee043fabf154e4632d4e7a0ab68db",
+      "elapsedMs": 94,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "static/lib-Cq2Nx7v7.css",
+      "url": "https://orbit.securedme.ca/static/lib-Cq2Nx7v7.css",
+      "method": "GET",
+      "expectedSha256": "1cfd11c855a9b9c0e4c82d2f87950172c9a26349e0c1aea68c5b037295572cd5",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/static/lib-Cq2Nx7v7.css",
+      "contentType": "text/css",
+      "bytes": 173757,
+      "sha256": "1cfd11c855a9b9c0e4c82d2f87950172c9a26349e0c1aea68c5b037295572cd5",
+      "elapsedMs": 250,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "static/manifest.webmanifest",
+      "url": "https://orbit.securedme.ca/static/manifest.webmanifest",
+      "method": "GET",
+      "expectedSha256": "a66f5e90e96df1decc32304b65f9c212d04d63e665e116766f5d194bdd86bdf8",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/static/manifest.webmanifest",
+      "contentType": "application/octet-stream",
+      "bytes": 331,
+      "sha256": "a66f5e90e96df1decc32304b65f9c212d04d63e665e116766f5d194bdd86bdf8",
+      "elapsedMs": 125,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "static/sanity-Cv8sHHkE.js",
+      "url": "https://orbit.securedme.ca/static/sanity-Cv8sHHkE.js",
+      "method": "GET",
+      "expectedSha256": "742b1a5e10184678b7653dfde5d599779699e1b89021d5f4da94a561c6ccbaa8",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/static/sanity-Cv8sHHkE.js",
+      "contentType": "text/javascript",
+      "bytes": 505947,
+      "sha256": "742b1a5e10184678b7653dfde5d599779699e1b89021d5f4da94a561c6ccbaa8",
+      "elapsedMs": 422,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "static/sanity-DRi8_Kad.css",
+      "url": "https://orbit.securedme.ca/static/sanity-DRi8_Kad.css",
+      "method": "GET",
+      "expectedSha256": "b30cdde3e7524cdece12c2646101a96213b975a7f75f072aee698e3a83000fa2",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/static/sanity-DRi8_Kad.css",
+      "contentType": "text/css",
+      "bytes": 6529,
+      "sha256": "b30cdde3e7524cdece12c2646101a96213b975a7f75f072aee698e3a83000fa2",
+      "elapsedMs": 109,
+      "matchesPackage": true
+    },
+    {
+      "payloadPath": "studio/index.html",
+      "url": "https://orbit.securedme.ca/studio/",
+      "method": "GET",
+      "expectedSha256": "34790c58d190f0161db91d58b08cf80859eaf5c5f7fc67d1d080333e9af17685",
+      "status": 200,
+      "finalUrl": "https://orbit.securedme.ca/studio/",
+      "contentType": "text/html",
+      "bytes": 8774,
+      "sha256": "34790c58d190f0161db91d58b08cf80859eaf5c5f7fc67d1d080333e9af17685",
+      "elapsedMs": 109,
+      "matchesPackage": true
+    }
+  ],
+  "softwareTestsExecutedLocally": false,
+  "modelCalls": 0,
+  "fullMissionComplete": false,
+  "limitations": [
+    "Only the listed manifests, entry routes and their directly referenced/preserved landing assets were downloaded. Nested dynamic assets are covered separately by the Kaggle browser campaign.",
+    "Transport byte identity does not prove native WebMCP runtime behavior, authenticated Studio publication or learner understanding.",
+    "This receipt records no private credentials or browser session."
+  ]
+}

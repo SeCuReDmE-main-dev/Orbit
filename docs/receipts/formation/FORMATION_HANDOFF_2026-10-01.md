@@ -2,6 +2,20 @@
 
 This handoff identifies the delivered mechanisms, the observed validation and the remaining qualification. It does not declare the entire consolidated mission complete.
 
+## Definitive closure pass — current handoff
+
+The maintained [current delivery matrix](../FORMATION_DELIVERY_STATUS.md#definitive-closure-pass--current-evidence-october-1-2026) now records the dedicated nine-source Context `READY`, public native 15/25-tool discovery and execution, recoverable manual Colab import of the actual eight exports, their Kaggle compilation and nine published Canva documents. The earlier refusals and missing Canva observations below remain historical.
+
+Use the [Canva index](../../learning/orbit-formation/publication/CANVA_DELIVERY.md) for the eight module websites and final project. The regenerated [PDF](../../learning/orbit-formation/publication/outputs/book.pdf), [DOCX](../../learning/orbit-formation/publication/outputs/book.docx) and their final document receipt identify the current review copies.
+
+The [public closure notebook](https://www.kaggle.com/code/celebrum/orbit-v3-closure-regressions?scriptVersionId=354484426) exposes the preserved software results. Its V3 narrative corrects the count of import/document cases to 14; the actual earlier execution remains version 354480684. [Publication readback](closure-regressions-publication.json).
+
+The second-origin native Studio login is currently rejected by Google as an insecure browser. Authenticated selective publication, replay and logout are not inferred from the 16 public cross-origin checks. The provider-model campaigns also remain separate from this product qualification: SDK scheduling/cache reuse and the actual KB capacity are recorded incidents, not successful runs. No private session, paid plan or substitute model is used to conceal them.
+
+The approved landing and graphic design are preserved. Human learning review, the future tutorial and editorials remain separate. The author's WebMCP feedback document is in Drive; he will edit its presentation and submit the prefilled Chromium form himself.
+
+## Earlier handoff — historical evidence
+
 ## V3 public release
 
 The user requested V3 during live inspection. The public landing now displays **VERSION V3**; the application release is `3.0.0` while the unchanged atom mechanism retains its validated `2.1.7` identity. The fifth door **Apprendre / Learn / Aprender** opens `/formation/lab/`.

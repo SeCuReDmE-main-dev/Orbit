@@ -95,16 +95,18 @@ def review_docx(path: Path) -> dict:
 
 if __name__ == '__main__':
     QA.mkdir(exist_ok=True)
+    # A new review cannot retain a previous distribution inventory as current.
+    (QA / 'final-publication-artifacts.json').unlink(missing_ok=True)
     report = {'state':'OUTPUT_STRUCTURE_AND_ALL_PAGE_RENDER_OBSERVED',
               'recordedAt':datetime.now(timezone.utc).isoformat(),
               'courseSoftwareExecuted':False, 'learnerUnderstandingExamined':False,
               'readiness':'review-ready-provisional', 'deliveryReady':False, 'fullMissionComplete':False,
-              'pdf':[review_pdf(path) for path in sorted(OUTPUT.glob('*.pdf'))],
-              'docx':[review_docx(path) for path in sorted(OUTPUT.glob('*.docx')) if path.name != 'reference.docx'],
+              'pdf':[review_pdf(OUTPUT / 'book.pdf')],
+              'docx':[review_docx(OUTPUT / 'book.docx')],
               'limits':['Rendered pages still require visual review.',
                         'DOCX structure is distinct from native Word pagination.',
                         'External links need separate readback.',
-                        'Course Context admission HOLD; Canva not produced.',
+                        'Course Context HTTP9 and native cross-origin16 pass; nine Canva documents have separate public readback evidence.',
                         'Assembled browser and authenticated Studio retain separate evidence.']}
     (QA / 'output-review.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
     print(json.dumps({'state':report['state'],

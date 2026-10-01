@@ -1,0 +1,56 @@
+{
+  "version": "orbit-cross-origin-public-incident-v1",
+  "recordedAt": "2026-10-01T19:39:22.447924+00:00",
+  "kind": "Kaggle-dispatched E2B browser incident",
+  "state": "FAILED",
+  "kaggleVersion": 354483373,
+  "kaggleUrl": "https://www.kaggle.com/code/celebrum/orbit-v3-public-cross-origin-validation?scriptVersionId=354483373",
+  "workerSourceSha256": "ac15b7d059fee58029c1339507cac1e64b17254ca28c3720ec260c197cbcec7d",
+  "workerBundleSha256": "7d19b696cb8f2a4811a10e2f52dafbffa13fa5ffb954784e9bfbe473c0c309ea",
+  "workerResultSha256": "5cf551c2878afa89042d78f2b7ffc0d25a76ba861c7c5a3cdbbb4e2b40aa1030",
+  "result": {
+    "state": "complete",
+    "runId": "cross-origin-90c1f20d-dc81-4d27-9c58-4a08ba772745",
+    "checks": [
+      {
+        "name": "foreign-host-serves-pinned-formation-release",
+        "passed": true,
+        "observation": {
+          "httpStatus": 200,
+          "releaseSha256": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046"
+        }
+      }
+    ],
+    "errors": [
+      "PAGE_EVALUATION_FAILED"
+    ],
+    "host": "E2B",
+    "orchestrator": "Kaggle",
+    "modelCalls": 0,
+    "foreignOrigin": "https://8000-i2tvc7sdcbh7bs3k86l7i.e2b.app",
+    "expectedRelease": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046",
+    "personalSessionExported": false,
+    "authenticatedStudio": false,
+    "publicationExecuted": false,
+    "humanAcknowledgement": false,
+    "fixtureAuthority": "Automated synthetic test setup only.",
+    "logout": {
+      "state": "NOT_RUN",
+      "reason": "Fresh isolated profile has no authenticated Sanity session."
+    },
+    "chromeMajor": 154,
+    "durationMs": 13108,
+    "success": false
+  },
+  "retirement": {
+    "authorizationRefused": true,
+    "postRetirementStatus": 401,
+    "authority": "Kaggle notebook output reported retired=true only after observed HTTP 401; full output-file retrieval pending."
+  },
+  "fullMissionComplete": false,
+  "limits": [
+    "Only one pinned-release HTTP check passed before a page evaluation failed. Native tool discovery and later browser assertions were not reached.",
+    "No personal session, authenticated Studio publication, role rejection or logout was validated.",
+    "A bounded public-shape diagnostic was added to the harness; product code and pass conditions were unchanged."
+  ]
+}

@@ -2,7 +2,7 @@
   "package": "@orbit/learning-studio",
   "version": "1.0.0",
   "archive": "orbit-learning-studio-1.0.0.tgz",
-  "sha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973",
+  "sha256": "184358d01d9866ef7da0b5ac67f5d8020545656a31b66e39fece0c0e8e17ff64",
   "environmentDeclaredByOrchestrator": "e2b",
   "bundled": true,
   "installedInSecondStudio": false,

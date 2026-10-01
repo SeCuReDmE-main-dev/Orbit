@@ -640,10 +640,6 @@ chaque fichier, change une propriété sans dupliquer la logique et
 explique la différence entre l'aperçu et la compilation. La sélection
 doit garder un libellé et un état accessibles.
 
-Le squelette et les contrôleurs fournis sont attribués au cours. Votre
-contenu, vos modifications et les contributions de l'assistant sont
-identifiés dans le bilan.
-
 \textbf{Ressources et statut :}
 \href{https://docs.astro.build/en/basics/astro-components/}{Composants
 Astro --- documentation officielle} ·
@@ -1556,12 +1552,46 @@ Vous avez conservé huit briques. \textbf{Elles peuvent maintenant former
 un socle de frontend :} geste et état, carte, scène, inertie,
 transition, particules, parcours et capacité.
 
-Pendant les 25 minutes de construction du webinaire du Module 8, dans la
-partie finale du notebook 8, charger vos \textbf{huit ZIP réels}. Le
-raccordement fourni vérifie les manifestes et prépare un projet avec vos
-fichiers. Il ne comble pas une absence avec un corrigé caché. Si un
-module manque ou si une empreinte ne correspond pas, conserver l'erreur
-et réexporter le bon rendu.
+Pendant les 25 minutes de construction du webinaire, ouvrir la partie
+finale du notebook 8. Le parcours comporte trois étapes distinctes :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Charger --- cellule 13.} Choisir vos huit ZIP réels avec le
+  sélecteur officiel \texttt{files.upload()}. Une annulation laisse la
+  sélection vide et permet de relancer la cellule. Si le dialogue reste
+  indisponible, téléverser les mêmes ZIP par le panneau \textbf{Fichiers
+  → Importer dans l'espace de stockage de la session} de Colab. Activer
+  alors \texttt{USE\_\allowbreak{}RUNTIME\_\allowbreak{}FILE\_\allowbreak{}SELECTION\ =\ True} et écrire
+  exactement leurs huit noms dans
+  \texttt{RUNTIME\_\allowbreak{}SELECTED\_\allowbreak{}EXPORT\_\allowbreak{}FILENAMES}. Cette alternative lit
+  les fichiers explicitement nommés dans \texttt{/\allowbreak{}content} ; elle ne
+  recherche ni ne télécharge de rendus à votre place. Une session Colab
+  est temporaire : conserver les originaux et télécharger le résultat
+  avant sa fermeture.
+\item
+  \textbf{Examiner --- cellule 14.} Vérifier les huit lignes : module,
+  nom du fichier choisi, tentative, formats déclarés du résultat et du
+  manifeste, taille et SHA-256. Chaque module doit apparaître une seule
+  fois. Un fichier absent, un doublon ou une empreinte différente
+  appelle une correction et un nouvel examen.
+\item
+  \textbf{Assembler --- cellule 15.} Copier l'empreinte de la sélection
+  examinée dans \texttt{ASSEMBLY\_\allowbreak{}REVIEWED\_\allowbreak{}SELECTION\_\allowbreak{}SHA256}, puis
+  exécuter la cellule. Une confirmation vide ou ancienne laisse
+  l'assemblage bloqué. Télécharger
+  \texttt{orbit-mon-frontend-\textless{}empreinte12\textgreater{}.zip}
+  et conserver sa provenance. Le statut \texttt{ASSEMBLED\_\allowbreak{}NOT\_\allowbreak{}BUILT}
+  indique que le ZIP est préparé ; il ne déclare pas une compilation.
+\end{enumerate}
+
+Le raccordement fourni contrôle les manifestes et conserve vos fichiers.
+Il ne comble pas une absence avec un corrigé caché. Si un rendu doit
+être remplacé, choisir et expliquer sa nouvelle version, puis reprendre
+\textbf{charger → examiner → assembler}. Ce raccordement reste inclus
+dans la construction du webinaire ; il n'ajoute aucune heure au cours.
 
 Le code d'intégration est fourni et attribué au cours dans
 \href{../../assembly/README.md}{assembly/}. Vos modifications sont dans
@@ -1853,27 +1883,237 @@ les preuves d'une affirmation ; ils ne constituent pas une note de
 l'élève. Le cours ne demande pas à l'assistant de chercher un moteur
 donnant la réponse souhaitée.
 
+\chapter{Les neuf supports web
+élève}\label{les-neuf-supports-web-uxe9luxe8ve}
+
+Les documents Canva ci-dessous ont été produits après la qualification
+des mécanismes, puis ouverts et relus sur leur URL publique. Chaque
+support conserve ses ressources, sa trace à compléter et sa prochaine
+question. Le prototype original est préservé. Les scripts enseignant et
+les corrigés restent séparés.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Support
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Document web
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Module 1 --- Geste, état et rendu &
+\href{https://orbit-formation-module-1.my.canva.site/}{Ouvrir le
+support} \\
+Module 2 --- Organisation Astro &
+\href{https://orbit-formation-module-1.my.canva.site/orbit-formation-module-2-organisation-astro}{Ouvrir
+le support} \\
+Module 3 --- Scène Three.js et coordonnées &
+\href{https://orbit-formation-module-1.my.canva.site/orbit-formation-module-3-sc-ne-three-js-et-coordonn-es}{Ouvrir
+le support} \\
+Module 4 --- Vitesse et inertie &
+\href{https://orbit-formation-module-1.my.canva.site/orbit-formation-module-4-vitesse-et-inertie}{Ouvrir
+le support} \\
+Module 5 --- Interpolation et élasticité &
+\href{https://orbit-formation-module-1.my.canva.site/orbit-formation-module-5-interpolation-et-lasticit}{Ouvrir
+le support} \\
+Module 6 --- Particules et ressources &
+\href{https://orbit-formation-module-1.my.canva.site/orbit-formation-module-6-particules-et-ressources}{Ouvrir
+le support} \\
+Module 7 --- Parcours, états et mémoire &
+\href{https://orbit-formation-module-1.my.canva.site/orbit-formation-module-7-parcours-tats-et-m-moire}{Ouvrir
+le support} \\
+Module 8 --- Assistant, preuves et capacités &
+\href{https://orbit-formation-module-1.my.canva.site/orbit-formation-module-8-assistant-preuves-et-capacit-s}{Ouvrir
+le support} \\
+Projet personnel --- Mon frontend personnel &
+\href{https://orbit-formation-module-1.my.canva.site/orbit-formation-projet-mon-frontend-personnel}{Ouvrir
+le support} \\
+\end{longtable}
+}
+
+Les neuf pages portent une lecture de travail : \textbf{120 min guidées
++ 30 min Colab + 30 min bilan}, puis \textbf{60 min de webinaire} par
+module. Le projet conserve \textbf{1 h de cadrage + 6 h solo + 1 h de
+clôture}. L'assistant peut fournir une réponse complète ; l'élève
+vérifie, explique et transfère ce qu'il retient.
+
+Le \href{../CANVA_DELIVERY.json}{reçu des publications et lectures}
+identifie les liens observés et les captures. Les commandes ouvrent les
+environnements réels. Les pages Canva ne remplacent pas leurs
+exécutions. La visibilité dans les moteurs de recherche était désactivée
+lors de la publication ; ces URL demeurent publiques. Aucun journal
+personnel ni travail d'élève n'a été publié.
+
 \chapter{Qualification technique et lecture des
 preuves}\label{qualification-technique-et-lecture-des-preuves}
 
-Édition pédagogique : \texttt{orbit-course-1.0.0}. Point documentaire du
-\textbf{1er octobre 2026}. Les résultats ci-dessous décrivent les
-périmètres des reçus consultés et des observations du coordinateur ; la
-composition du manuel ne relance aucun test. Le
-\href{../../../../receipts/FORMATION_DELIVERY_STATUS.md}{reçu de
-livraison maintenu} conserve sa chronologie ; les reçus précis liés ici
-gouvernent cette édition lorsque ce résumé antérieur n'est pas encore
-synchronisé.
+Édition pédagogique \texttt{orbit-course-1.0.0}, point documentaire du
+\textbf{1er octobre 2026}. Ce chapitre associe chaque résultat à son
+entrée, son environnement et son reçu. Sa rédaction et ses exports ne
+relancent aucun logiciel du cours.
 
-\textbf{État de livraison : \texttt{delivery\allowbreak{}Ready:\ false},
-\texttt{full\allowbreak{}Mission\allowbreak{}Complete:\ false}.} Le site de formation et les
-logiciels ont leurs contrôles réussis ; le nouvel assemblage des huit
-exports a également passé ses 35 contrôles dans un vrai navigateur. Le
-transport public du cours Sanity Context reste \texttt{HOLD} et les
-pages Canva ne sont pas encore produites. La session du second Studio a
-été examinée en lecture seule ; ses appels d'agent et écritures restent
-distincts. Cette édition documente les mécanismes utilisables et leurs
-limites ; elle ne déclare pas l'ensemble de la mission terminé.
+\textbf{Les neuf supports Canva sont publiés et relus ; le manuel est
+préparé pour la revue de l'auteur.} Le logiciel et les parcours publics
+disposent de preuves techniques. La qualification complète conserve
+\texttt{delivery\allowbreak{}Ready:\ false} et \texttt{full\allowbreak{}Mission\allowbreak{}Complete:\ false} :
+les appels, changements de workspace, déconnexion et publication
+sélective d'un second Studio authentifié demandent encore leurs sessions
+réelles. La compréhension d'un élève reste à examiner pendant la
+formation. Les campagnes de modèles gardent leurs résultats distincts.
+
+\section{Résultats courants et
+limites}\label{ruxe9sultats-courants-et-limites}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Périmètre
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Preuve actuelle
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Limite à conserver
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Import manuel M8 gratuit &
+\href{../../../../receipts/formation/free-colab-module-8-manual-import-assembled.json}{Copie
+CPU gratuite} : annulation, refus sans sélection, huit ZIP originaux
+transférés par le panneau Fichiers, huit noms explicites, examen des
+versions et SHA, ACK vide refusé, assemblage et téléchargement & QA
+opérée par Codex. Le dialogue intégré \texttt{files.upload} a rencontré
+deux délais d'attente du contrôle ; son champ reste le premier choix.
+Cette limite du contrôleur n'est pas attribuée à l'exercice humain \\
+Nouvel assemblage exact &
+\href{../../../../receipts/formation/actual-manual-import-assembly-static-kaggle.json}{Build
+Kaggle de \texttt{7ae43df9…}}, 46 hashes, neuf briques et huit modules,
+\texttt{npm\ ci} avec lock \texttt{423e4878…}, Astro 7.3.3, Three.js
+0.181.2, Node 22.20.0 ; sortie \texttt{a4d4a4ab…} & Compilation statique
+réussie. Le statut Colab \texttt{ASSEMBLED\_\allowbreak{}NOT\_\allowbreak{}BUILT} garde son sens ;
+les nouveaux octets n'ont pas de nouvelle qualification navigateur \\
+Régressions logicielles de clôture &
+\href{../../../../receipts/formation/closure-software-regressions-kaggle.json}{Reçu
+immuable V2, version 354480684} : 141 tests TypeScript, huit contrôles
+Node de politique/provenance et quatorze contrôles d'import/document ;
+\href{../../../../receipts/formation/php-context-closure-pass-kaggle.json}{36
+tests PHP} & La
+\href{https://www.kaggle.com/code/celebrum/orbit-v3-closure-regressions?scriptVersionId=354484426}{version
+V3 publique 354484426} conserve ces résultats et corrige leur
+présentation Markdown : elle ne constitue pas un nouveau rejeu. Le
+coordinateur a observé sa publication ; la
+\href{../../../../receipts/formation/closure-regressions-public-kaggle.png}{capture}
+la conserve. Le reçu V2 reste inchangé. Ces contrôles n'examinent pas la
+compréhension \\
+Corpus pédagogique Context réel &
+\href{../../../../receipts/formation/course-context-ingestion.json}{Ingestion},
+\href{../../../../receipts/formation/course-context-issue-triage.json}{tri
+technique des références}, puis
+\href{../../../../receipts/formation/course-context-live-transport.json}{transport
+public} : outline et neuf entrées HTTP \texttt{READY}, passages et
+empreintes contrôlés & La projection admise est bornée aux neuf chemins
+audités de la KB et à leur révision. Elle ne transmet ni journal ni
+credentials. Les documents maintenus plus récents et les versions
+conservées dans Context ont leurs propres empreintes \\
+Origine étrangère et outils natifs publics &
+\href{../../../../receipts/formation/cross-origin-public-validation.json}{16
+contrôles réels Kaggle/E2B, version 354497668} : 25 outils découverts,
+refus privés avant partage, lectures Context réelles, partage
+synthétique, import déclaré, export, révocation et refus après retrait &
+CORS public sans credentials ; Chrome 154. La page d'authentification du
+Studio portable est observée, mais aucun appel privé authentifié,
+publication Content Lake, refus en lecture seule ou déconnexion n'est
+exécuté dans ce reçu \\
+Documents web élève & \href{../CANVA_DELIVERY.json}{Neuf Canva publiés
+et relus} : Module 1 pilote puis sept modules et projet, hiérarchie de
+titres, horaires, consignes et liens examinés & Le design a reçu un
+retour positif de l'utilisateur, rapporté par le coordinateur. Le texte
+pédagogique reste soumis à sa revue. Les pages ouvrent de vrais outils ;
+elles ne simulent pas leurs exécutions \\
+\end{longtable}
+}
+
+Le parcours public antérieur de l'assemblage \texttt{141466603…}
+conserve ses \textbf{35 contrôles natifs réussis}. Les \textbf{72
+contrôles de formation} et les \textbf{77 contrôles de l'atome} restent
+liés à leurs releases et reçus. Une recompilation ne transfère pas
+automatiquement leur portée à une autre archive.
+
+\section{Lire le corpus public admis}\label{lire-le-corpus-public-admis}
+
+Le sommaire et les entrées du cours sont disponibles par GET public avec
+credentials omis. Les neuf chemins contrôlés sont \texttt{agents},
+\texttt{course/\allowbreak{}assessment}, \texttt{course/\allowbreak{}structure},
+\texttt{modules/\allowbreak{}interaction}, \texttt{modules/\allowbreak{}motion},
+\texttt{modules/\allowbreak{}navigation}, \texttt{project},
+\texttt{threejs/\allowbreak{}particles} et \texttt{threejs/\allowbreak{}scenes}. La KB
+\texttt{kbb\allowbreak{}Bvr\allowbreak{}Clywe\allowbreak{}F} et la révision auditée
+\texttt{d2c6279c-4ded-44de-a45e-f5e8e63bdf94} identifient la provenance.
+Les entrées historiques hors portée restent exclues. Le tri des
+problèmes a été technique ; il n'est pas une approbation pédagogique
+humaine.
+
+Le readback HTTP de production a été fait depuis l'orchestrateur Windows
+; le reçu natif ultérieur exerce le vrai navigateur E2B piloté par
+Kaggle et une origine étrangère. Ces deux environnements gardent leurs
+attributions. Une entrée \texttt{READY} fournit un contenu admissible
+pour lecture ; elle ne certifie ni sa vérité générale ni la
+compréhension de l'élève.
+
+\section{Les huit archives sélectionnées au Module
+8}\label{les-huit-archives-suxe9lectionnuxe9es-au-module-8}
+
+Charger, examiner, puis assembler sont trois actions distinctes. La
+sélection contient les huit téléchargements récents, avec un seul module
+par ZIP et toutes les empreintes exigées. Les cellules conservent un
+refus compréhensible pour une sélection absente, un doublon, un contenu
+altéré ou une confirmation périmée. La reprise explicite par le panneau
+Fichiers utilise les ZIP réellement choisis ; aucun téléchargement de
+fixture ne remplace cette activité.
+
+Les manipulations documentées sont des fixtures de QA, avec observation
+de compte gratuit et de runtime CPU. Elles ne remplissent pas le journal
+d'un élève. L'archive assemblée \texttt{7ae43df9…39c7d6} contient les
+neuf briques inchangées et 46 fichiers de manifeste. La compilation
+Kaggle conserve son lock et ses entrées sans substituer un corrigé.
+
+\section{Documents et critères encore
+ouverts}\label{documents-et-crituxe8res-encore-ouverts}
+
+Les \href{../CANVA_DELIVERY.md}{neuf supports web}, le manuel, les
+fiches enseignant et les missions des assistants sont des supports de
+lecture et de travail. La revue documentaire examine structure, liens
+présents, pages rendues, extraits et métadonnées. La pagination native
+Word, l'acceptation du texte par l'auteur et l'efficacité pédagogique
+conservent leurs propres examens.
+
+Pour clôturer le Studio hors origine, utiliser ses vrais comptes et
+droits : monter les outils après authentification, changer de workspace,
+vérifier la révocation, publier uniquement le contenu sélectionné,
+constater un refus en lecture seule, puis déconnecter et vérifier les
+résultats tardifs. Aucun credential personnel n'est copié pour fabriquer
+cette validation. La revue graphique commune et le prochain tutoriel
+restent leurs tâches distinctes.
+
+\section{Chronologie historique --- résultats
+conservés}\label{chronologie-historique-ruxe9sultats-conservuxe9s}
+
+\textbf{Les paragraphes suivants décrivent les checkpoints antérieurs.}
+Leurs erreurs, refus Context, pages Canva encore absentes et statuts
+partiels restent des faits historiques. Les résultats actuels figurent
+ci-dessus ; ils ne changent ni ces champs ni leurs empreintes.
+
+\section{Historique --- Chronologie des qualifications
+conservées}\label{historique-chronologie-des-qualifications-conservuxe9es}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -1921,7 +2161,7 @@ suites, sept tests Python, compilation des huit exports indépendants,
 second Studio statique verrouillé et 29 tests PHP/185 assertions & Zéro
 appel de modèle. Le payload source \texttt{98a0c659…} et les sorties
 gardent cette exécution historique ; ils ne deviennent pas ceux de v5 \\
-Version publique Kaggle courante v5 &
+Version publique Kaggle historique v5 &
 \href{../../../../receipts/formation/software-version5-kaggle.json}{Readback
 conservé} de
 \href{https://www.kaggle.com/code/celebrum/orbit-formation-software-validation?scriptVersionId=354436854}{la
@@ -2149,11 +2389,12 @@ identifié une réponse Brotli ancienne distincte de la réponse sans
 compression, puis corrigé les dates et la compression du manifeste
 uniquement. Le nouveau reçu 72/72 établit le readback réussi ; les
 incidents gardent leurs résultats initiaux \\
-Critères encore ouverts & Transport public Context, appels natifs et
-publication du second Studio, documents Canva & \textbf{Qualification de
-mission encore incomplète} ; les versions Kaggle, le navigateur de
-l'assemblage, le readback formation et la lecture du Studio authentifié
-sont établis, mais ces résultats ne ferment pas les autres critères \\
+Critères ouverts au checkpoint antérieur & Transport public Context,
+appels natifs et publication du second Studio, documents Canva &
+\textbf{Qualification de mission encore incomplète} ; les versions
+Kaggle, le navigateur de l'assemblage, le readback formation et la
+lecture du Studio authentifié sont établis, mais ces résultats ne
+ferment pas les autres critères \\
 Save \& Run All après lecteur ZIP partagé & Le coordinateur rapporte
 pour
 \href{https://www.kaggle.com/code/celebrum/orbit-formation-software-validation?scriptVersionId=354391847}{la
@@ -2249,8 +2490,8 @@ critères de sortie. Le build Kaggle de l'assemblage indépendant complète
 le résultat Colab \texttt{ASSEMBLED\_\allowbreak{}NOT\_\allowbreak{}BUILT} sans modifier ses
 champs, ni attribuer le succès au dialogue d'import manuel indisponible.
 
-\section{Module 4 --- correctif et retest
-observé}\label{module-4-correctif-et-retest-observuxe9}
+\section{Historique --- Module 4 --- correctif et retest
+observé}\label{historique-module-4-correctif-et-retest-observuxe9}
 
 La source élève corrigée a l'empreinte \texttt{d8ff5bd2…c2d2ce}; son
 corrigé séparé a l'empreinte \texttt{3acb9425…66807b}. La brique
@@ -2264,8 +2505,8 @@ position/vitesse ont été observés. Son export téléchargé reste une
 fixture de QA opérée par Codex, séparée du corrigé et d'une production
 d'élève.
 
-\section{Module 7 --- correctif et retest
-observé}\label{module-7-correctif-et-retest-observuxe9}
+\section{Historique --- Module 7 --- correctif et retest
+observé}\label{historique-module-7-correctif-et-retest-observuxe9}
 
 Le notebook du Module 7 corrigé porte l'empreinte
 \texttt{6b85b378…cc0f45}; son corrigé séparé porte
@@ -2280,8 +2521,9 @@ finales restent \texttt{summary} et \texttt{element-3}. Le gel
 d'\texttt{elapsed} est observé. Ces résultats concernent l'historique
 interne de la copie Colab, distinct du véritable retour du projet Astro.
 
-\section{Modules 3 et 8 --- intégration du geste et retest
-observé}\label{modules-3-et-8-intuxe9gration-du-geste-et-retest-observuxe9}
+\section{Historique --- Modules 3 et 8 --- intégration du geste et
+retest
+observé}\label{historique-modules-3-et-8-intuxe9gration-du-geste-et-retest-observuxe9}
 
 Le défaut de l'ancien assemblage concernait l'intégration, malgré sa
 compilation réussie : le Module 1 capturait le geste sur le stage,
@@ -2303,8 +2545,8 @@ cet artefact. L'empreinte du manifeste Git HTTP et celle de la copie
 Windows CRLF sont distinctes et identifiées dans le reçu Colab ; les
 assertions de contenu ont été conservées.
 
-\section{Retour d'usage et prochaine
-revue}\label{retour-dusage-et-prochaine-revue}
+\section{Historique --- Retour d'usage et prochaine
+revue}\label{historique-retour-dusage-et-prochaine-revue}
 
 Le coordinateur transmet le retour de l'utilisateur : le laboratoire
 fonctionne pour son essai et ses boutons sont compréhensibles. La revue
@@ -2323,8 +2565,8 @@ une autre étape. Le \href{../TOOLCHAIN_AND_VERSIONS.md}{registre des
 versions} distingue versions déclarées, exécutions observées et outils
 d'export encore à qualifier.
 
-\section{Lire la suspension du corpus
-public}\label{lire-la-suspension-du-corpus-public}
+\section{Historique --- Lire la suspension du corpus
+public}\label{historique-lire-la-suspension-du-corpus-public}
 
 Les neuf documents de cours ont été importés. Deux tentatives guidées
 utiles ont ensuite terminé leur construction ; leurs contenus ne
@@ -3308,12 +3550,46 @@ Vous avez conservé huit briques. \textbf{Elles peuvent maintenant former
 un socle de frontend :} geste et état, carte, scène, inertie,
 transition, particules, parcours et capacité.
 
-Pendant les 25 minutes de construction du webinaire du Module 8, dans la
-partie finale du notebook 8, charger vos \textbf{huit ZIP réels}. Le
-raccordement fourni vérifie les manifestes et prépare un projet avec vos
-fichiers. Il ne comble pas une absence avec un corrigé caché. Si un
-module manque ou si une empreinte ne correspond pas, conserver l'erreur
-et réexporter le bon rendu.
+Pendant les 25 minutes de construction du webinaire, ouvrir la partie
+finale du notebook 8. Le parcours comporte trois étapes distinctes :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Charger --- cellule 13.} Choisir vos huit ZIP réels avec le
+  sélecteur officiel \texttt{files.upload()}. Une annulation laisse la
+  sélection vide et permet de relancer la cellule. Si le dialogue reste
+  indisponible, téléverser les mêmes ZIP par le panneau \textbf{Fichiers
+  → Importer dans l'espace de stockage de la session} de Colab. Activer
+  alors \texttt{USE\_\allowbreak{}RUNTIME\_\allowbreak{}FILE\_\allowbreak{}SELECTION\ =\ True} et écrire
+  exactement leurs huit noms dans
+  \texttt{RUNTIME\_\allowbreak{}SELECTED\_\allowbreak{}EXPORT\_\allowbreak{}FILENAMES}. Cette alternative lit
+  les fichiers explicitement nommés dans \texttt{/\allowbreak{}content} ; elle ne
+  recherche ni ne télécharge de rendus à votre place. Une session Colab
+  est temporaire : conserver les originaux et télécharger le résultat
+  avant sa fermeture.
+\item
+  \textbf{Examiner --- cellule 14.} Vérifier les huit lignes : module,
+  nom du fichier choisi, tentative, formats déclarés du résultat et du
+  manifeste, taille et SHA-256. Chaque module doit apparaître une seule
+  fois. Un fichier absent, un doublon ou une empreinte différente
+  appelle une correction et un nouvel examen.
+\item
+  \textbf{Assembler --- cellule 15.} Copier l'empreinte de la sélection
+  examinée dans \texttt{ASSEMBLY\_\allowbreak{}REVIEWED\_\allowbreak{}SELECTION\_\allowbreak{}SHA256}, puis
+  exécuter la cellule. Une confirmation vide ou ancienne laisse
+  l'assemblage bloqué. Télécharger
+  \texttt{orbit-mon-frontend-\textless{}empreinte12\textgreater{}.zip}
+  et conserver sa provenance. Le statut \texttt{ASSEMBLED\_\allowbreak{}NOT\_\allowbreak{}BUILT}
+  indique que le ZIP est préparé ; il ne déclare pas une compilation.
+\end{enumerate}
+
+Le raccordement fourni contrôle les manifestes et conserve vos fichiers.
+Il ne comble pas une absence avec un corrigé caché. Si un rendu doit
+être remplacé, choisir et expliquer sa nouvelle version, puis reprendre
+\textbf{charger → examiner → assembler}. Ce raccordement reste inclus
+dans la construction du webinaire ; il n'ajoute aucune heure au cours.
 
 Le code d'intégration est fourni et attribué au cours dans
 \href{../../assembly/README.md}{assembly/}. Vos modifications sont dans
@@ -3535,6 +3811,16 @@ redémarrage réel. Retrouver les fichiers sauvegardés après un
 redémarrage avant de relancer l'expérience. Un ZIP avec une tentative
 réutilisée et un contenu différent demande une correction de la
 tentative, pas une importation ambiguë.
+
+À la fin du Module 8, charger les huit exports, examiner leurs versions
+déclarées et leurs empreintes, puis confirmer l'empreinte de cette
+sélection avant d'assembler. Les cellules 13, 14 et 15 conservent ces
+trois étapes. Le sélecteur officiel permet l'annulation et la reprise.
+Si son dialogue reste indisponible, le panneau Fichiers de Colab permet
+de téléverser les mêmes ZIP ; l'élève active ensuite la lecture des huit
+noms qu'il a explicitement déclarés. L'assemblage téléchargé reste
+distinct de sa compilation et de la compréhension examinée pendant la
+séance.
 
 \section{B --- Les vingt-cinq outils dans le contexte
 pédagogique}\label{b-les-vingt-cinq-outils-dans-le-contexte-puxe9dagogique}
@@ -3885,25 +4171,26 @@ manuscrit :
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{01  28813ecbf712f4fb717aaa3f93444c7c7e14fbd737f2d3e3ac1ed6ca28f72531}
-\NormalTok{02  98a0c6594d176b3cb4fe7b921fd93e945e51d96f3fba3019d86037585062ed87}
-\NormalTok{03  689494986b4b6a9b02b5a22a8beb81e8de7cb7388a55ad20a122743d3de7966e}
-\NormalTok{04  ea0f93eff48e9dd6a07283f46067eafdc317b352e43409efac8e5e61d4992b90}
-\NormalTok{05  f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973}
-\NormalTok{06  7e6c739c0883e39aca491e6f6280cc353daf6745017a3bea5ce690746e4d67a5}
-\NormalTok{07  4b06da41e603d63acd33bbf75995a75d824d1bc6}
-\NormalTok{08  827528418863211e76307d3e3dbd2a21d17d2864bde0e59f4d8295948897f3ce}
-\NormalTok{09  96acc0ddfdd3728426980df39d2a1ccda07cc855eb95f950a552de776a5b2aed}
-\NormalTok{10  b202088c8f092630676273c7cdf97d89302983866f70f5b8df3305486d7c3335}
-\NormalTok{11  8d80562e069f26bb07ec097ad5763676548bf125d7ab06ce5529f8d590bd1654}
-\NormalTok{12  141466603afaca979af3e8ee011391c9516de2a723c52809bdca86f0dbb0b1ba}
-\NormalTok{13  423e48783d884b71827bef1e4aae380a3e15ca93735ef1a89423cf54e8a0edd8}
-\NormalTok{14  e4215188e3f702b8707d3992aaa0f917bbdca00e58118a0f6953d98697412938}
-\NormalTok{15  ed94c13524c078f84c44f074a3034d10850f81470a80603638c3404663b4ba06}
-\NormalTok{16  d8ff5bd2c54474cca831101f9992d4b92af273370c6f53dee07cd7b639c2d2ce}
-\NormalTok{17  3acb942558e5dc6e42104494238a6191af12c274d607f184843611be3166807b}
-\NormalTok{18  6b85b3780c50e10cb02a4e75e2ef553b15989f2487cef500ed15b6d572cc0f45}
-\NormalTok{19  1426f7985237d66f60736b2b55e96e8b47aa6d9736e161ce25bef40b461b031b}
+\NormalTok{01  7ae43df9d3c7f44e39a2b545d28ff807660b85615551b2fca1a55913b339c7d6}
+\NormalTok{02  28813ecbf712f4fb717aaa3f93444c7c7e14fbd737f2d3e3ac1ed6ca28f72531}
+\NormalTok{03  98a0c6594d176b3cb4fe7b921fd93e945e51d96f3fba3019d86037585062ed87}
+\NormalTok{04  689494986b4b6a9b02b5a22a8beb81e8de7cb7388a55ad20a122743d3de7966e}
+\NormalTok{05  ea0f93eff48e9dd6a07283f46067eafdc317b352e43409efac8e5e61d4992b90}
+\NormalTok{06  f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973}
+\NormalTok{07  7e6c739c0883e39aca491e6f6280cc353daf6745017a3bea5ce690746e4d67a5}
+\NormalTok{08  4b06da41e603d63acd33bbf75995a75d824d1bc6}
+\NormalTok{09  827528418863211e76307d3e3dbd2a21d17d2864bde0e59f4d8295948897f3ce}
+\NormalTok{10  96acc0ddfdd3728426980df39d2a1ccda07cc855eb95f950a552de776a5b2aed}
+\NormalTok{11  b202088c8f092630676273c7cdf97d89302983866f70f5b8df3305486d7c3335}
+\NormalTok{12  8d80562e069f26bb07ec097ad5763676548bf125d7ab06ce5529f8d590bd1654}
+\NormalTok{13  141466603afaca979af3e8ee011391c9516de2a723c52809bdca86f0dbb0b1ba}
+\NormalTok{14  423e48783d884b71827bef1e4aae380a3e15ca93735ef1a89423cf54e8a0edd8}
+\NormalTok{15  e4215188e3f702b8707d3992aaa0f917bbdca00e58118a0f6953d98697412938}
+\NormalTok{16  ed94c13524c078f84c44f074a3034d10850f81470a80603638c3404663b4ba06}
+\NormalTok{17  d8ff5bd2c54474cca831101f9992d4b92af273370c6f53dee07cd7b639c2d2ce}
+\NormalTok{18  3acb942558e5dc6e42104494238a6191af12c274d607f184843611be3166807b}
+\NormalTok{19  6b85b3780c50e10cb02a4e75e2ef553b15989f2487cef500ed15b6d572cc0f45}
+\NormalTok{20  1426f7985237d66f60736b2b55e96e8b47aa6d9736e161ce25bef40b461b031b}
 \end{Highlighting}
 \end{Shaded}
 

@@ -21,7 +21,7 @@ def main():
     for folder in ['docs/learning/orbit-formation', 'packages/learning-studio']:
         for path in (ROOT / folder).rglob('*'):
             if path.is_file() and not any(part in ['node_modules', 'dist','__pycache__', 'publication'] for part in path.parts):files[path.relative_to(ROOT).as_posix()] = path.read_bytes()
-    for name in ['tests/learning-notebooks-test.py','tools/prepare_learning_notebooks.py','vitest.config.ts', 'tools/engine-jsonl.ts']:
+    for name in ['tests/learning-notebooks-test.py','tools/prepare_learning_notebooks.py','vitest.config.ts', 'tools/engine-jsonl.ts', 'tools/course-context-build-policy.mjs', 'tests/course-context-build-policy.test.mjs', 'tools/course-context-source-provenance.mjs', 'tests/course-context-source-provenance.test.mjs']:
         files[name] = (ROOT / name).read_bytes()
     files['package.json'] = json.dumps({'name': 'orbit-kaggle-validation', 'private': True, 'type': 'module',
         'dependencies': {'vitest': '4.0.8', 'tsx': '4.20.6', 'typescript': '5.9.3', 'three': '0.181.2', 'esbuild':'0.25.12'}}).encode()
@@ -73,6 +73,11 @@ result=json.loads((ROOT/'software-results.json').read_text()) if (ROOT/'software
 status={'suite':'A','host':'Kaggle','exitCode':process.returncode,'sourceSha256':__DIGEST__,'tests':result.get('numTotalTests'),'passed':result.get('numPassedTests'),'failed':result.get('numFailedTests'),'success':result.get('success',False)}
 (ROOT/'validation-status.json').write_text(json.dumps(status,indent=2))
 print(json.dumps(status))
+policy=subprocess.run(['node','--test','tests/course-context-build-policy.test.mjs','tests/course-context-source-provenance.test.mjs'],cwd=ROOT,capture_output=True,text=True,timeout=60)
+(ROOT/'course-build-policy.log').write_text(policy.stdout+policy.stderr)
+shutil.copy2(ROOT/'course-build-policy.log',Path('/kaggle/working')/'course-build-policy.log')
+print(json.dumps({'suite':'course-build-policy','host':'Kaggle','exitCode':policy.returncode}))
+if policy.returncode:raise RuntimeError('Course build policy failed')
 py=subprocess.run(['python','tests/learning-notebooks-test.py'],cwd=ROOT,capture_output=True,text=True,timeout=120)
 (ROOT/'notebook-validation.log').write_text(py.stdout+py.stderr)
 shutil.copy2(ROOT/'notebook-validation.log',Path('/kaggle/working')/'notebook-validation.log')

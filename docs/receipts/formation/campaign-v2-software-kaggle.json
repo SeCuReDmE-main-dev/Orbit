@@ -1,0 +1,37 @@
+{
+  "format": "orbit-campaign-v2-software-kaggle-receipt",
+  "state": "PASS",
+  "observedAt": "2026-10-01T19:25:00Z",
+  "notebook": "https://www.kaggle.com/code/celebrum/orbit-v3-engines-campaign-v2/edit",
+  "archiveSha256": "8a224aa64e4b209fb60b98999b67791d25ce235fd2f689b64bd34ea74abfdd55",
+  "archiveBytes": 17669,
+  "results": {
+    "format": "orbit-campaign-v2-software-validation",
+    "host": "Kaggle",
+    "modelCalls": 0,
+    "harnessTestsRun": 13,
+    "harnessFailures": 0,
+    "harnessErrors": 0,
+    "sourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+    "references": "36-synthetic-scored-24-real-invariants-only-no-semantic-gold",
+    "corpusSha256": "c8d7f865ba2c9667f43759a053174e3250150704746141e52fc0dca236190f5a",
+    "harnessSha256": "de5b0522e4643b4764e65afdd978d09081ca254f3816e6f047e9a2ba24bfa1b0",
+    "deterministicStatus": {
+      "suite": "B",
+      "host": "Kaggle",
+      "coveredQuestions": 60,
+      "scorableQuestions": 36,
+      "evaluations": 180,
+      "scoredEvaluations": 108,
+      "unscoredRealEvaluations": 72,
+      "correct": 108,
+      "invariantsPassed": 540,
+      "invariantsTotal": 540,
+      "realQuestionsPendingArbitration": 24,
+      "sourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+      "engineSha256": "8c0a16a08fec3ea7b23213e4951cfb8cffdfdde1c37e1d8ddb69a3e849f1688d"
+    }
+  },
+  "scope": "Kaggle software harness and deterministic invariants only; no model calls; real semantic gold pending human",
+  "configurationIncident": "First run stopped before tests due obsolete dataset mount; corrected from actual Kaggle UI and rerun without logical harness change."
+}

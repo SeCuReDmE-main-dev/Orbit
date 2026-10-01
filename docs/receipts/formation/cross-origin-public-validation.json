@@ -1,0 +1,201 @@
+{
+  "version": "orbit-learning-cross-origin-kaggle-v1",
+  "environment": "Kaggle",
+  "workerEnvironment": "E2B",
+  "startedAt": "2026-10-01T20:41:08.850841+00:00",
+  "modelCalls": 0,
+  "workerSourceSha256": "6cf947c677f5cbd91008a1ef3053aa9c98ec593385955ecf06a8465ab9928cf6",
+  "workerBundleSha256": "9488532d61b4905d3d9860f8585913ff5548b839c251e89a23bf05b40cbaf238",
+  "formationReleaseSha256": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046",
+  "workerHashAuthority": "Pinned provisioning configuration; browser release bytes are checked by the worker.",
+  "personalSessionExported": false,
+  "tokensIncluded": false,
+  "state": "PASS_PUBLIC_CROSS_ORIGIN",
+  "result": {
+    "state": "complete",
+    "runId": "cross-origin-d8a81322-dd2b-4015-b8f2-98c51b267f3d",
+    "checks": [
+      {
+        "name": "foreign-host-serves-pinned-formation-release",
+        "passed": true,
+        "observation": {
+          "httpStatus": 200,
+          "releaseSha256": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046"
+        }
+      },
+      {
+        "name": "public-orbit-serves-pinned-formation-release",
+        "passed": true,
+        "observation": {
+          "httpStatus": 200,
+          "releaseSha256": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046",
+          "bytes": 86387,
+          "contentType": "application/json",
+          "transport": "Native Chrome navigation; no User-Agent modification or security exception."
+        }
+      },
+      {
+        "name": "public-orbit-astro-page-has-native-25-tools",
+        "passed": true,
+        "observation": {
+          "toolCount": 25,
+          "origin": "https://orbit.securedme.ca"
+        }
+      },
+      {
+        "name": "fresh-public-session-has-no-grants-or-engine",
+        "passed": true
+      },
+      {
+        "name": "public-private-read-refused-before-sharing",
+        "passed": true
+      },
+      {
+        "name": "public-native-course-context-is-ready",
+        "passed": true,
+        "observation": {
+          "state": "READY",
+          "httpStatus": null,
+          "knowledgeBase": "kbbBvrClyweF"
+        }
+      },
+      {
+        "name": "public-native-course-entry-read-is-ready",
+        "passed": true,
+        "observation": {
+          "state": "READY"
+        }
+      },
+      {
+        "name": "course-transport-has-no-credential-headers",
+        "passed": true,
+        "observation": {
+          "observedRequests": 2
+        }
+      },
+      {
+        "name": "public-import-remains-declared-and-not-executed",
+        "passed": true
+      },
+      {
+        "name": "public-native-selected-artifact-read",
+        "passed": true
+      },
+      {
+        "name": "public-real-download-removes-access-grants",
+        "passed": true,
+        "observation": {
+          "bytes": 2286,
+          "sha256": "c1cdb24cffc441f4b1d9209e8efa907ceea76cd29a2756a0acbe1be0b4070f42"
+        }
+      },
+      {
+        "name": "public-native-revocation-refuses-private-read",
+        "passed": true
+      },
+      {
+        "name": "public-unsaved-session-has-no-local-copy",
+        "passed": true
+      },
+      {
+        "name": "foreign-portable-studio-requires-native-login",
+        "passed": true,
+        "observation": {
+          "learningUI": false,
+          "loginVisible": true,
+          "registeredTools": 0
+        }
+      },
+      {
+        "name": "foreign-browser-can-read-public-course-context",
+        "passed": true,
+        "observation": {
+          "httpStatus": 200,
+          "state": "READY",
+          "knowledgeBase": "kbbBvrClyweF"
+        }
+      },
+      {
+        "name": "course-gateway-allows-foreign-read-without-credentials",
+        "passed": true,
+        "observation": [
+          {
+            "path": "/api/v1/course-context/outline",
+            "status": 200,
+            "allowOrigin": "*",
+            "allowCredentials": null
+          },
+          {
+            "path": "/api/v1/course-context/entries",
+            "status": 200,
+            "allowOrigin": "*",
+            "allowCredentials": null
+          },
+          {
+            "path": "/api/v1/course-context/outline",
+            "status": 200,
+            "allowOrigin": "*",
+            "allowCredentials": null
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "host": "E2B",
+    "orchestrator": "Kaggle",
+    "modelCalls": 0,
+    "foreignOrigin": "https://8000-isb7cqp7nixk13m20h6jt.e2b.app",
+    "publicCourseOrigin": "https://orbit.securedme.ca",
+    "expectedRelease": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046",
+    "personalSessionExported": false,
+    "authenticatedStudio": false,
+    "publicationExecuted": false,
+    "humanAcknowledgement": false,
+    "fixtureAuthority": "Automated synthetic test setup only.",
+    "logout": {
+      "state": "NOT_RUN",
+      "reason": "Fresh isolated profile has no authenticated Sanity session."
+    },
+    "stage": "portable-studio-navigation",
+    "chromeMajor": 154,
+    "portableStudioAttempted": true,
+    "authenticatedStudioValidation": {
+      "state": "NOT_RUN",
+      "reason": "No personal session or credentials are copied into E2B. HTTPS Sanity CORS and a native authenticated session are separate prerequisites."
+    },
+    "publicationValidation": {
+      "state": "NOT_RUN",
+      "reason": "A real Content Lake write and read-only rejection require authenticated native Studio sessions; public course checks are not substitutes."
+    },
+    "durationMs": 16537,
+    "success": true
+  },
+  "retirement": {
+    "httpStatus": 200,
+    "state": "RETIRED",
+    "requested": true,
+    "postRetirementStatus": 401,
+    "authorizationRefused": true
+  },
+  "finishedAt": "2026-10-01T20:41:28.858957+00:00",
+  "fullMissionComplete": false,
+  "limits": [
+    "No authenticated Studio session, Content Lake write, role rejection or logout is validated by this public campaign.",
+    "No software or model benchmark was executed on the Windows orchestration host.",
+    "Technical browser observations do not certify learner understanding."
+  ],
+  "kaggle": {
+    "version": 354497668,
+    "url": "https://www.kaggle.com/code/celebrum/orbit-v3-public-cross-origin-validation?scriptVersionId=354497668",
+    "runtimeSeconds": 43.1,
+    "source": "Read back from visible Kaggle Logs row 10."
+  },
+  "priorIncidents": [
+    "cross-origin-incident-run1.json",
+    "cross-origin-incident-run2.json",
+    "cross-origin-incident-run3.json",
+    "cross-origin-incident-run4.json",
+    "cross-origin-incident-run5.json",
+    "cross-origin-incident-run6.json"
+  ]
+}

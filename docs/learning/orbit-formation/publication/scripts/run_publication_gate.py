@@ -32,7 +32,7 @@ def main() -> int:
         'humanApproval': False,
         'deliveryReady': False,
         'fullMissionComplete': False,
-        'remaining': ['Context course-only admission HOLD', 'Canva not produced',
+        'remaining': ['Authenticated second Studio native/write/logout remain unvalidated', 'Canva public documents have separate readback evidence',
                       'Assembled browser and authenticated Studio retain separate evidence',
                       'Native Word pagination and external-link readback not certified'],
         'formatsExcluded': ['epub', 'podcast'],

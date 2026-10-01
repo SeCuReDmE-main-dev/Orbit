@@ -1,4 +1,4 @@
-"""Package only the eight public course transport files; preserve runtime account data."""
+"""Package only the public course transport files; preserve runtime account data."""
 from __future__ import annotations
 
 import hashlib
@@ -19,6 +19,7 @@ FILES = (
     "app/Http/Middleware/PublicCourseContext.php",
     "app/Http/Controllers/CourseContextController.php",
     "app/Services/PublicCourseContextReader.php",
+    "app/Services/SanityContext.php",
 )
 
 
@@ -28,6 +29,12 @@ def digest(data: bytes) -> str:
 
 def main() -> None:
     OUTPUT.mkdir(parents=True, exist_ok=True)
+    evidence_path = ROOT / "docs/receipts/formation/php-context-closure-pass-kaggle.json"
+    evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+    if evidence.get("state") != "PASS_PHP_REGRESSIONS" or any(
+        evidence.get("junit", {}).get(key, 1) != 0 for key in ("errors", "failures", "skipped")
+    ):
+        raise RuntimeError("KAGGLE_EVIDENCE_NOT_QUALIFIED")
     archive = OUTPUT / "backend-incremental.zip"
     records = []
     payload = {}
@@ -38,6 +45,8 @@ def main() -> None:
         if not data.startswith(b"<?php"):
             raise RuntimeError("NON_PHP_PAYLOAD_REJECTED")
         payload[relative] = data
+        if evidence.get("sourceFiles", {}).get(relative) != digest(data):
+            raise RuntimeError("PAYLOAD_DIFFERS_FROM_KAGGLE: " + relative)
         records.append({"path": relative, "bytes": len(data), "sha256": digest(data)})
     with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED) as output:
         for relative in FILES:
@@ -56,7 +65,9 @@ def main() -> None:
         "excluded": [".env", "vendor", "database", "storage", "bootstrap/cache", "public landing"],
         "deploymentPerformed": False,
         "testsExecutedLocally": False,
-        "softwareEvidence": "docs/receipts/formation/php-context-29-pass-kaggle.json",
+        "softwareEvidence": "docs/receipts/formation/php-context-closure-pass-kaggle.json",
+        "softwareEvidenceStatus": "Exact packaged PHP bytes passed the targeted Kaggle regressions.",
+        "softwareEvidenceArchiveSha256": evidence["evidenceArchiveSha256"],
         "deploymentPrerecondition": "Audited course manifest, remote backup and governed incremental overlay; preserve existing runtime data.",
     }
     (OUTPUT / "backend-incremental-manifest.json").write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")

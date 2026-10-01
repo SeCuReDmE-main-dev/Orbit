@@ -92,6 +92,10 @@ Results are retained in `/kaggle/working/learning-studio-validation/`:
 
 ## Separate authenticated and cross-origin QA
 
+The current [public cross-origin receipt](../../receipts/formation/cross-origin-public-validation.json) records 16 passing Kaggle-dispatched checks in an isolated E2B Linux browser. It observes native course-tool discovery and execution, public course reads, synthetic import/export and consent revocation on the public formation surface; the second HTTPS Studio serves the exact pinned package and public Context without credentials. Its signed-out Studio exposes no private tools. This receipt does not certify an authenticated Studio publication.
+
+The subsequent native desktop login is a separate owner-operated flow. Google rejected that browser with “This browser or app may not be secure”. No session was copied and no Google protection was bypassed. The authenticated publication, replay and logout scenarios remain unvalidated until a supported native sign-in succeeds. Their status must not be inferred from installation, a public Context read or the earlier authenticated UI-only inspection.
+
 After a passing integration run, inspect a real second Studio with its owner's normal session. Keep these outcomes separate from the static build:
 
 1. Open both tools, navigate forward/back, change module, and verify keyboard, small-screen, language, static display, contrast, and larger-text behavior.

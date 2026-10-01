@@ -1,0 +1,74 @@
+{
+  "version": "orbit-cross-origin-public-incident-v2",
+  "recordedAt": "2026-10-01T19:57:49.072514+00:00",
+  "kind": "Kaggle-dispatched E2B browser incident",
+  "state": "FAILED",
+  "kaggleVersion": 354485977,
+  "kaggleUrl": "https://www.kaggle.com/code/celebrum/orbit-v3-public-cross-origin-validation?scriptVersionId=354485977",
+  "workerSourceSha256": "19f4feec2e5e61ed1a33ddb064a1cc2400fe8a70fd3025d5bd631480e966a9cb",
+  "workerBundleSha256": "d4461637327e3aa4eb2c65f4e44dc6371fa2ebca311c2cc0e2feb1d0631faf22",
+  "workerResultSha256": "adb03797a80f637457b8e2b6dde4d747a7d7331752ec6d05debe0b62da8a6980",
+  "result": {
+    "state": "complete",
+    "runId": "cross-origin-570e5699-b559-4beb-b345-2589d367365d",
+    "checks": [
+      {
+        "name": "foreign-host-serves-pinned-formation-release",
+        "passed": true,
+        "observation": {
+          "httpStatus": 200,
+          "releaseSha256": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046"
+        }
+      }
+    ],
+    "errors": [
+      "PAGE_EVALUATION_FAILED:NATIVE_REGISTRY_NOT_READY"
+    ],
+    "host": "E2B",
+    "orchestrator": "Kaggle",
+    "modelCalls": 0,
+    "foreignOrigin": "https://8000-i2tvc7sdcbh7bs3k86l7i.e2b.app",
+    "expectedRelease": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046",
+    "personalSessionExported": false,
+    "authenticatedStudio": false,
+    "publicationExecuted": false,
+    "humanAcknowledgement": false,
+    "fixtureAuthority": "Automated synthetic test setup only.",
+    "logout": {
+      "state": "NOT_RUN",
+      "reason": "Fresh isolated profile has no authenticated Sanity session."
+    },
+    "stage": "native-tool-discovery",
+    "chromeMajor": 154,
+    "publicFailureDiagnostic": {
+      "origin": "https://8000-i2tvc7sdcbh7bs3k86l7i.e2b.app",
+      "path": "/formation/lab/",
+      "readyState": "complete",
+      "workspacePresent": true,
+      "mounted": true,
+      "registerTool": "function",
+      "getTools": "function",
+      "executeTool": "function",
+      "publicHeading": "Geste, \u00e9tat et rendu"
+    },
+    "durationMs": 6797,
+    "success": false
+  },
+  "retirement": {
+    "authorizationRefused": true,
+    "postRetirementStatus": 401,
+    "authority": "Executed Kaggle notebook output reported retired=true only after observed HTTP 401; full output-file retrieval pending."
+  },
+  "diagnosis": {
+    "state": "HARNESS_ORIGIN_ERROR",
+    "source": "web/src/lib/learning-workspace.ts:136 and web/src/lib/learning-webmcp.ts:23",
+    "reason": "The Astro workspace passed its E2B location.origin as courseOrigin. The strict course gateway allowlist accepts public Orbit and its development loopback, so tool registration was refused. This is distinct from the portable Studio, which accepts an explicit public courseOrigin.",
+    "resolution": "Keep gateway allowlist unchanged; validate public Astro tools on Orbit and native signed-out portable Studio on the owned foreign origin."
+  },
+  "proofScreenshot": "cross-origin-run2-kaggle.png",
+  "fullMissionComplete": false,
+  "limits": [
+    "Only a pinned-release read passed before native discovery timed out. No native 25-tool or learner permission assertion passed.",
+    "No personal session, authenticated Studio publication, role rejection or logout was validated."
+  ]
+}

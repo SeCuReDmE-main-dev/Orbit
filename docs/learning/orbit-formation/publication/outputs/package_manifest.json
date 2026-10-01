@@ -44,12 +44,12 @@
   ],
   "qualificationPending": true,
   "sha256": {
-    "MASTER_MANUSCRIPT.md": "facafeed550f0254910a72f3f8cdfee1d02159d277196099f31f5974f967cdb6",
-    "book.docx": "768e7611a2d8fa3a6cf2da2c534f3ce08a691b17f3bed77adccc18d57175c341",
-    "book.pdf": "2f1c30adbeed7185916c3e16921ea0092aa88d6559ce0a8779418f66981215f0",
-    "book.tex": "626102d19a836c2def0f972c29e471e84a71891f5c9458a0e0e92f66d2917531",
-    "fingerprints.json": "4bb763181454f69f1f1e2469ad1945bf7671bb6608caf112212c9c3fefba4ba7",
+    "MASTER_MANUSCRIPT.md": "e1a7d6a11596746fd45cbb8deeb6125573305e58c7dd78ac8aaa8901f678f976",
+    "book.docx": "6a4b8394e96f65d6ebbbf0fc23ab67ee3a788ffc9f2a7fe38e73e70040606601",
+    "book.pdf": "f35791dc743dcc293b032f277065a64487c33de1821fce73287d1933d6c5174e",
+    "book.tex": "cb03e44848d213275616cad18bd5bb3820e330657a23d092f8981f2ffeff8a48",
+    "fingerprints.json": "8fdcd0fef5154169aab41c438fada78270076e708c8f04b41b602ed0e69c9a0c",
     "header.tex": "fb475065985153cb62336099c42779182f027091ff862bb737943d5bc112efbc",
-    "reference.docx": "da5cf01d5eee3b13c2479318270fae9e0621a747670a9da726fa84e1fe42e5f1"
+    "reference.docx": "634c0fd34e387e5f73633c75c2b30c0f0922a0322fb4fbdf7801910f69d3805d"
   }
 }

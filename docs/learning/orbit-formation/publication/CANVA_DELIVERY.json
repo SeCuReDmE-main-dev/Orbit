@@ -1,0 +1,985 @@
+{
+  "schemaVersion": "orbit-formation-canva-delivery-v1",
+  "state": "NINE_PUBLIC_STUDENT_SUPPORTS_PUBLISHED_AND_READ_BACK",
+  "recordedAt": "2026-10-01T21:30:07.411238+00:00",
+  "attribution": "Codex directed the authorized Canva workflow; Canva generated drafts, then Codex corrected and inspected their public text, hierarchy and resource links.",
+  "originalPrototype": {
+    "url": "https://www.canva.com/design/DAHWvvn7Jt8/Sc5RT-4aqEBzk4YuT0IlOA/edit",
+    "modifiedByThisWorkflow": false
+  },
+  "pages": [
+    {
+      "moduleId": 1,
+      "title": "Geste, état et rendu",
+      "editorUrl": "https://www.canva.com/design/DAHWyq8Njy8/2Q8TxN9y9w6UJihBiANkWQ/edit",
+      "publicUrl": "https://orbit-formation-module-1.my.canva.site/",
+      "publication": "Canva Website success message observed in editor",
+      "publicReadback": {
+        "observedAt": "2026-10-01T21:23:03.686Z",
+        "characters": 10512,
+        "textSha256": "5f26394b50aa4dcd42cbd378c107723874110ffe31c4a9c24766d92486c0c77f",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Module 1 — Geste, état et rendu"
+          },
+          {
+            "level": "H2",
+            "text": "1. Accueil"
+          },
+          {
+            "level": "H2",
+            "text": "2. Objectif"
+          },
+          {
+            "level": "H2",
+            "text": "3. Horaires"
+          },
+          {
+            "level": "H2",
+            "text": "4. Notions"
+          },
+          {
+            "level": "H2",
+            "text": "5. Lecture"
+          },
+          {
+            "level": "H2",
+            "text": "6. Colab"
+          },
+          {
+            "level": "H2",
+            "text": "7. Bilan"
+          },
+          {
+            "level": "H2",
+            "text": "8. Webinaire"
+          },
+          {
+            "level": "H2",
+            "text": "9. Transfert"
+          },
+          {
+            "level": "H2",
+            "text": "10. Critères"
+          },
+          {
+            "level": "H2",
+            "text": "11. Ressources"
+          },
+          {
+            "level": "H2",
+            "text": "12. Prochaine question"
+          },
+          {
+            "level": "H2",
+            "text": "Terms & Support"
+          }
+        ],
+        "resourceLinks": [
+          {
+            "href": "https://orbit.securedme.ca/formation/lab/?module=1&view=mission",
+            "text": "Mission"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/notebooks/module-1.ipynb",
+            "text": "Carnet élève"
+          },
+          {
+            "href": "https://colab.research.google.com/",
+            "text": "Colab"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/projets/?module=1&view=files",
+            "text": "Mes fichiers"
+          },
+          {
+            "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/setPointerCapture",
+            "text": "Capture"
+          },
+          {
+            "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/pointercancel_event",
+            "text": "Annulation"
+          }
+        ]
+      },
+      "searchEngineVisibility": "unchecked setting observed before publication",
+      "capture": {
+        "path": "qa/canva/module-1-live.png",
+        "bytes": 25211,
+        "sha256": "f29ad617a12ecce55eac03a8746ba494edbfe9dd37941ec4b7a5781ae77ade32"
+      }
+    },
+    {
+      "moduleId": 2,
+      "title": "Organisation Astro",
+      "editorUrl": "https://www.canva.com/design/DAHWywWYmD0/LCv4aYBYQwwLcg9tstOumA/edit",
+      "publicUrl": "https://orbit-formation-module-1.my.canva.site/orbit-formation-module-2-organisation-astro",
+      "publication": "Canva Website success message observed in editor",
+      "publicReadback": {
+        "observedAt": "2026-10-01T21:23:06.592Z",
+        "characters": 3404,
+        "textSha256": "431f71dff58081de9f488f507960fd3afb66015af7727a52cb9da0c64e28928d",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Module 2 — Organisation Astro"
+          },
+          {
+            "level": "H2",
+            "text": "1. Accueil"
+          },
+          {
+            "level": "H2",
+            "text": "2. Objectif"
+          },
+          {
+            "level": "H2",
+            "text": "3. Horaires"
+          },
+          {
+            "level": "H2",
+            "text": "4. Notions"
+          },
+          {
+            "level": "H2",
+            "text": "5. Lecture guidée — 120 min"
+          },
+          {
+            "level": "H2",
+            "text": "6. Colab — 30 min"
+          },
+          {
+            "level": "H2",
+            "text": "7. Bilan — 30 min"
+          },
+          {
+            "level": "H2",
+            "text": "8. Webinaire — 60 min"
+          },
+          {
+            "level": "H2",
+            "text": "9. Transfert"
+          },
+          {
+            "level": "H2",
+            "text": "10. Critères observables"
+          },
+          {
+            "level": "H2",
+            "text": "11. Ressources"
+          },
+          {
+            "level": "H2",
+            "text": "12. Prochaine question"
+          },
+          {
+            "level": "H2",
+            "text": "Terms & Support"
+          }
+        ],
+        "resourceLinks": [
+          {
+            "href": "https://orbit.securedme.ca/formation/lab/?module=2&view=mission",
+            "text": "Mission"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/notebooks/module-2.ipynb",
+            "text": "Notebook"
+          },
+          {
+            "href": "https://colab.research.google.com",
+            "text": "Ouvrir Colab"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/projets/?module=2&view=files",
+            "text": "Mes fichiers"
+          },
+          {
+            "href": "https://docs.astro.build/en/basics/astro-components/",
+            "text": "Composants Astro"
+          },
+          {
+            "href": "https://docs.astro.build/en/concepts/islands/",
+            "text": "Îlots Astro"
+          }
+        ]
+      },
+      "searchEngineVisibility": "unchecked setting observed before publication",
+      "capture": {
+        "path": "qa/canva/module-2-live.png",
+        "bytes": 4781,
+        "sha256": "b841ac5584e2e76b4bac90deabd46205533e1b20587522af09805047f8641a01"
+      }
+    },
+    {
+      "moduleId": 3,
+      "title": "Scène Three.js et coordonnées",
+      "editorUrl": "https://www.canva.com/design/DAHWy3K5aYg/28Z-mSUpDrZZhgex9pwp5Q/edit",
+      "publicUrl": "https://orbit-formation-module-1.my.canva.site/orbit-formation-module-3-sc-ne-three-js-et-coordonn-es",
+      "publication": "Canva Website success message observed in editor",
+      "publicReadback": {
+        "observedAt": "2026-10-01T21:23:11.229Z",
+        "characters": 13924,
+        "textSha256": "470f2583a2301db9af5e325ce9f9fba972dd45abf2f895c706ee413b2a99c09c",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Module 3 — Scène Three.js et coordonnées"
+          },
+          {
+            "level": "H2",
+            "text": "1. Accueil"
+          },
+          {
+            "level": "H2",
+            "text": "2. Objectif"
+          },
+          {
+            "level": "H2",
+            "text": "3. Horaires"
+          },
+          {
+            "level": "H2",
+            "text": "4. Notions"
+          },
+          {
+            "level": "H2",
+            "text": "5. Lecture"
+          },
+          {
+            "level": "H2",
+            "text": "6. Colab"
+          },
+          {
+            "level": "H2",
+            "text": "7. Bilan"
+          },
+          {
+            "level": "H2",
+            "text": "8. Webinaire"
+          },
+          {
+            "level": "H2",
+            "text": "9. Transfert"
+          },
+          {
+            "level": "H2",
+            "text": "10. Critères"
+          },
+          {
+            "level": "H2",
+            "text": "11. Ressources"
+          },
+          {
+            "level": "H2",
+            "text": "12. Prochaine question"
+          },
+          {
+            "level": "H2",
+            "text": "Terms & Support"
+          }
+        ],
+        "resourceLinks": [
+          {
+            "href": "https://orbit.securedme.ca/formation/lab/?module=3&view=mission",
+            "text": "Mission"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/notebooks/module-3.ipynb",
+            "text": "Carnet"
+          },
+          {
+            "href": "https://colab.research.google.com/",
+            "text": "Colab"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/projets/?module=3&view=files",
+            "text": "Fichiers"
+          },
+          {
+            "href": "https://threejs.org/manual/#en/fundamentals",
+            "text": "Fondamentaux"
+          },
+          {
+            "href": "https://threejs.org/docs/#api/en/core/Raycaster",
+            "text": "Raycaster"
+          }
+        ]
+      },
+      "searchEngineVisibility": "unchecked setting observed before publication",
+      "capture": {
+        "path": "qa/canva/module-3-live.png",
+        "bytes": 30376,
+        "sha256": "d3823f8055ffbcfac4ad3309c9fa11487755dd4616485bb53ee743b51bf9ae81"
+      }
+    },
+    {
+      "moduleId": 4,
+      "title": "Vitesse et inertie",
+      "editorUrl": "https://www.canva.com/design/DAHWy3BZTeE/SwQThJujnUbaQcgmAQoPGQ/edit",
+      "publicUrl": "https://orbit-formation-module-1.my.canva.site/orbit-formation-module-4-vitesse-et-inertie",
+      "publication": "Canva Website success message observed in editor",
+      "publicReadback": {
+        "observedAt": "2026-10-01T21:23:52.396Z",
+        "characters": 6105,
+        "textSha256": "48f469d9771cc1599d441a582d920f1a9661aa8680bbbce6d1ec5e0f613fb1a5",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Module 4 — Vitesse et inertie"
+          },
+          {
+            "level": "H2",
+            "text": "1 Accueil"
+          },
+          {
+            "level": "H2",
+            "text": "2 Objectif"
+          },
+          {
+            "level": "H2",
+            "text": "3 Horaires"
+          },
+          {
+            "level": "H2",
+            "text": "4 Notions"
+          },
+          {
+            "level": "H2",
+            "text": "5 Lecture"
+          },
+          {
+            "level": "H2",
+            "text": "6 Colab"
+          },
+          {
+            "level": "H2",
+            "text": "7 Bilan"
+          },
+          {
+            "level": "H2",
+            "text": "8 Webinaire"
+          },
+          {
+            "level": "H2",
+            "text": "9 Transfert"
+          },
+          {
+            "level": "H2",
+            "text": "10 Critères"
+          },
+          {
+            "level": "H2",
+            "text": "11 Ressources"
+          },
+          {
+            "level": "H2",
+            "text": "12 Prochaine question"
+          },
+          {
+            "level": "H2",
+            "text": "Terms & Support"
+          }
+        ],
+        "resourceLinks": [
+          {
+            "href": "https://orbit.securedme.ca/formation/lab/?module=4&view=mission",
+            "text": "https://orbit.securedme.ca/formation/lab/?module=4&view=mission"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/notebooks/module-4.ipynb",
+            "text": "https://orbit.securedme.ca/formation/notebooks/module-4.ipynb"
+          },
+          {
+            "href": "https://colab.research.google.com/",
+            "text": "https://colab.research.google.com/"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/projets/?module=4&view=files",
+            "text": "https://orbit.securedme.ca/formation/projets/?module=4&view=files"
+          },
+          {
+            "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame",
+            "text": "https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame"
+          },
+          {
+            "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/now",
+            "text": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/now"
+          }
+        ]
+      },
+      "searchEngineVisibility": "unchecked setting observed before publication",
+      "capture": {
+        "path": "qa/canva/module-4-live.png",
+        "bytes": 46582,
+        "sha256": "882c6ad7bd659f7ca35baccc46d456f801ce7d8f3ad1dd5ce631193504336390"
+      }
+    },
+    {
+      "moduleId": 5,
+      "title": "Interpolation et élasticité",
+      "editorUrl": "https://www.canva.com/design/DAHWy1PmJKU/iQbGlQkjwZaGEAmPb5ramg/edit",
+      "publicUrl": "https://orbit-formation-module-1.my.canva.site/orbit-formation-module-5-interpolation-et-lasticit",
+      "publication": "Canva Website success message observed in editor",
+      "publicReadback": {
+        "observedAt": "2026-10-01T21:23:59.944Z",
+        "characters": 12755,
+        "textSha256": "3165863f959ed527bcc4586f4b7f97b534d2cb0e887d4f04897e0ecc3793e2aa",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Module 5 — Interpolation et élasticité"
+          },
+          {
+            "level": "H2",
+            "text": "Accueil"
+          },
+          {
+            "level": "H2",
+            "text": "Objectif"
+          },
+          {
+            "level": "H2",
+            "text": "Horaires"
+          },
+          {
+            "level": "H2",
+            "text": "Notions"
+          },
+          {
+            "level": "H2",
+            "text": "Lecture"
+          },
+          {
+            "level": "H2",
+            "text": "Colab"
+          },
+          {
+            "level": "H2",
+            "text": "Bilan"
+          },
+          {
+            "level": "H2",
+            "text": "Webinaire"
+          },
+          {
+            "level": "H2",
+            "text": "Transfert"
+          },
+          {
+            "level": "H2",
+            "text": "Critères"
+          },
+          {
+            "level": "H2",
+            "text": "Ressources"
+          },
+          {
+            "level": "H2",
+            "text": "Prochaine question"
+          },
+          {
+            "level": "H2",
+            "text": "Terms & Support"
+          }
+        ],
+        "resourceLinks": [
+          {
+            "href": "https://orbit.securedme.ca/formation/lab/?module=5&view=mission",
+            "text": "Mission"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/notebooks/module-5.ipynb",
+            "text": "Notebook"
+          },
+          {
+            "href": "https://colab.research.google.com/",
+            "text": "Colab"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/projets/?module=5&view=files",
+            "text": "Fichiers"
+          },
+          {
+            "href": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion",
+            "text": "Mouvement réduit"
+          }
+        ]
+      },
+      "searchEngineVisibility": "unchecked setting observed before publication",
+      "capture": {
+        "path": "qa/canva/module-5-live.png",
+        "bytes": 45427,
+        "sha256": "cc174c6df5ef235477c33537e98743d6bcdf2aec02e4add10a948a84c5620e32"
+      }
+    },
+    {
+      "moduleId": 6,
+      "title": "Particules et ressources",
+      "editorUrl": "https://www.canva.com/design/DAHWy6aZY_0/uqKB4w5K40y1k_KGaiClAQ/edit",
+      "publicUrl": "https://orbit-formation-module-1.my.canva.site/orbit-formation-module-6-particules-et-ressources",
+      "publication": "Canva Website success message observed in editor",
+      "publicReadback": {
+        "observedAt": "2026-10-01T21:24:07.029Z",
+        "characters": 13275,
+        "textSha256": "f00c48de589eedfee4c916c188e1b50942dbe86301a21cc049cbd5e4b707d3a5",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Module 6 — Particules et ressources"
+          },
+          {
+            "level": "H2",
+            "text": "Accueil"
+          },
+          {
+            "level": "H2",
+            "text": "Objectif"
+          },
+          {
+            "level": "H2",
+            "text": "Horaires"
+          },
+          {
+            "level": "H2",
+            "text": "Notions"
+          },
+          {
+            "level": "H2",
+            "text": "Lecture"
+          },
+          {
+            "level": "H2",
+            "text": "Colab"
+          },
+          {
+            "level": "H2",
+            "text": "Bilan"
+          },
+          {
+            "level": "H2",
+            "text": "Webinaire"
+          },
+          {
+            "level": "H2",
+            "text": "Transfert"
+          },
+          {
+            "level": "H2",
+            "text": "Critères"
+          },
+          {
+            "level": "H2",
+            "text": "Ressources"
+          },
+          {
+            "level": "H2",
+            "text": "Prochaine question"
+          },
+          {
+            "level": "H2",
+            "text": "Terms & Support"
+          }
+        ],
+        "resourceLinks": [
+          {
+            "href": "https://orbit.securedme.ca/formation/lab/?module=6&view=mission",
+            "text": "Mission"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/notebooks/module-6.ipynb",
+            "text": "Notebook"
+          },
+          {
+            "href": "https://colab.research.google.com",
+            "text": "Colab"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/projets/?module=6&view=files",
+            "text": "Fichiers"
+          },
+          {
+            "href": "https://threejs.org/manual/en/cleanup.html",
+            "text": "Three.js nettoyage"
+          }
+        ]
+      },
+      "searchEngineVisibility": "unchecked setting observed before publication",
+      "capture": {
+        "path": "qa/canva/module-6-live.png",
+        "bytes": 49848,
+        "sha256": "208f5ec39545ce84f161afb69d640f5ecd8bb553d6b3c2a68c71587a93a883a2"
+      }
+    },
+    {
+      "moduleId": 7,
+      "title": "Parcours, états et mémoire",
+      "editorUrl": "https://www.canva.com/design/DAHWyyVCh1s/xECOAY1Nxr5DYBibpKneMQ/edit",
+      "publicUrl": "https://orbit-formation-module-1.my.canva.site/orbit-formation-module-7-parcours-tats-et-m-moire",
+      "publication": "Canva Website success message observed in editor",
+      "publicReadback": {
+        "observedAt": "2026-10-01T21:24:30.588Z",
+        "characters": 12488,
+        "textSha256": "2a8cb5ddc8e02fdec9d3b59ac4edfc3b01e56b96bd950ad57076af935e404701",
+        "headings": [
+          {
+            "level": "H2",
+            "text": "Module 7 — Parcours, états et mémoire"
+          },
+          {
+            "level": "H2",
+            "text": "Accueil"
+          },
+          {
+            "level": "H2",
+            "text": "Objectif"
+          },
+          {
+            "level": "H2",
+            "text": "Horaires"
+          },
+          {
+            "level": "H2",
+            "text": "Notions"
+          },
+          {
+            "level": "H2",
+            "text": "Lecture"
+          },
+          {
+            "level": "H2",
+            "text": "Colab"
+          },
+          {
+            "level": "H2",
+            "text": "Bilan"
+          },
+          {
+            "level": "H2",
+            "text": "Webinaire"
+          },
+          {
+            "level": "H2",
+            "text": "Transfert"
+          },
+          {
+            "level": "H2",
+            "text": "Critères"
+          },
+          {
+            "level": "H2",
+            "text": "Ressources"
+          },
+          {
+            "level": "H2",
+            "text": "Prochaine question"
+          },
+          {
+            "level": "H2",
+            "text": "Terms & Support"
+          }
+        ],
+        "resourceLinks": [
+          {
+            "href": "https://orbit.securedme.ca/formation/lab/?module=7&view=mission",
+            "text": "Mission"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/lab/?module=7&view=mission",
+            "text": "https://orbit.securedme.ca/formation/lab/?module=7&view=mission"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/notebooks/module-7.ipynb",
+            "text": "Notebook"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/notebooks/module-7.ipynb",
+            "text": "https://orbit.securedme.ca/formation/notebooks/module-7.ipynb"
+          },
+          {
+            "href": "https://colab.research.google.com/",
+            "text": "Colab"
+          },
+          {
+            "href": "https://colab.research.google.com/",
+            "text": "https://colab.research.google.com/"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/projets/?module=7&view=files",
+            "text": "Fichiers"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/projets/?module=7&view=files",
+            "text": "https://orbit.securedme.ca/formation/projets/?module=7&view=files"
+          },
+          {
+            "href": "https://developer.mozilla.org/en-US/docs/Web/API/History_API",
+            "text": "Historique"
+          },
+          {
+            "href": "https://developer.mozilla.org/en-US/docs/Web/API/History_API",
+            "text": "https://developer.mozilla.org/en-US/docs/Web/API/History_API"
+          },
+          {
+            "href": "https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API",
+            "text": "Visibilité"
+          },
+          {
+            "href": "https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API",
+            "text": "https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API"
+          }
+        ]
+      },
+      "searchEngineVisibility": "unchecked setting observed before publication",
+      "capture": {
+        "path": "qa/canva/module-7-live.png",
+        "bytes": 23392,
+        "sha256": "a502b20b8b9d9187595ff612e716e116e60b9317d8aa04a85ae10df26b6307ca"
+      }
+    },
+    {
+      "moduleId": 8,
+      "title": "Assistant, preuves et capacités",
+      "editorUrl": "https://www.canva.com/design/DAHWy3YcMe8/VFzI5EG8jTUqeIEz4tOYNA/edit",
+      "publicUrl": "https://orbit-formation-module-1.my.canva.site/orbit-formation-module-8-assistant-preuves-et-capacit-s",
+      "publication": "Canva Website success message observed in editor",
+      "publicReadback": {
+        "observedAt": "2026-10-01T21:24:36.889Z",
+        "characters": 16139,
+        "textSha256": "69fc5c4fac7d7c127f8bc799924971573bafc2538e0d8bec68df4db887feac70",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Module 8 — Assistant, preuves et capacités"
+          },
+          {
+            "level": "H2",
+            "text": "Accueil"
+          },
+          {
+            "level": "H2",
+            "text": "Objectif"
+          },
+          {
+            "level": "H2",
+            "text": "Horaires"
+          },
+          {
+            "level": "H2",
+            "text": "Notions"
+          },
+          {
+            "level": "H2",
+            "text": "Lecture"
+          },
+          {
+            "level": "H2",
+            "text": "Colab"
+          },
+          {
+            "level": "H2",
+            "text": "Bilan"
+          },
+          {
+            "level": "H2",
+            "text": "Webinaire"
+          },
+          {
+            "level": "H2",
+            "text": "Transfert"
+          },
+          {
+            "level": "H2",
+            "text": "Critères"
+          },
+          {
+            "level": "H2",
+            "text": "Ressources"
+          },
+          {
+            "level": "H2",
+            "text": "Prochaine question"
+          },
+          {
+            "level": "H2",
+            "text": "Terms & Support"
+          }
+        ],
+        "resourceLinks": [
+          {
+            "href": "https://orbit.securedme.ca/formation/lab/?module=8&view=mission",
+            "text": "Mission"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/notebooks/module-8.ipynb",
+            "text": "Notebook"
+          },
+          {
+            "href": "https://colab.research.google.com/",
+            "text": "Colab"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/projets/?module=8&view=files",
+            "text": "Fichiers"
+          },
+          {
+            "href": "https://developer.chrome.com/docs/ai/webmcp/imperative-api",
+            "text": "WebMCP"
+          },
+          {
+            "href": "https://www.sanity.io/docs/ai/sanity-context",
+            "text": "Sanity Context"
+          }
+        ]
+      },
+      "searchEngineVisibility": "unchecked setting observed before publication",
+      "capture": {
+        "path": "qa/canva/module-8-live.png",
+        "bytes": 47115,
+        "sha256": "7b710b731138ee37d320db319892dc1b9ed2facc608e74dbb80ef3f1b7b55c41"
+      }
+    },
+    {
+      "moduleId": "project",
+      "title": "Mon frontend personnel",
+      "editorUrl": "https://www.canva.com/design/DAHWyyhvZ3E/QIKUvGcW6rulBaXjt1mFAA/edit",
+      "publicUrl": "https://orbit-formation-module-1.my.canva.site/orbit-formation-projet-mon-frontend-personnel",
+      "publication": "Canva Website success message observed in editor",
+      "publicReadback": {
+        "observedAt": "2026-10-01T21:24:42.912Z",
+        "characters": 11230,
+        "textSha256": "db41aa4afa12035d127be2b3bd124e087023c159aa13234aa1c95d5bd6296310",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Projet personnel — Mon frontend"
+          },
+          {
+            "level": "H2",
+            "text": "Mon intention"
+          },
+          {
+            "level": "H2",
+            "text": "Temps et calendrier"
+          },
+          {
+            "level": "H2",
+            "text": "Cadrage"
+          },
+          {
+            "level": "H2",
+            "text": "Travail solo"
+          },
+          {
+            "level": "H2",
+            "text": "Mes huit briques"
+          },
+          {
+            "level": "H2",
+            "text": "Mon expérience"
+          },
+          {
+            "level": "H2",
+            "text": "Capacité de mon assistant"
+          },
+          {
+            "level": "H2",
+            "text": "Remise sélectionnée"
+          },
+          {
+            "level": "H2",
+            "text": "Revue finale"
+          },
+          {
+            "level": "H2",
+            "text": "Critères observables"
+          },
+          {
+            "level": "H2",
+            "text": "Ressources"
+          },
+          {
+            "level": "H2",
+            "text": "Ma prochaine question"
+          },
+          {
+            "level": "H2",
+            "text": "Terms & Support"
+          }
+        ],
+        "resourceLinks": [
+          {
+            "href": "https://orbit.securedme.ca/formation/projets/?module=8&view=files",
+            "text": "https://orbit.securedme.ca/formation/projets/?module=8&view=files"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/lab/?module=8&view=mission",
+            "text": "https://orbit.securedme.ca/formation/lab/?module=8&view=mission"
+          },
+          {
+            "href": "https://orbit.securedme.ca/formation/notebooks/module-8.ipynb",
+            "text": "https://orbit.securedme.ca/formation/notebooks/module-8.ipynb"
+          },
+          {
+            "href": "https://colab.research.google.com/",
+            "text": "https://colab.research.google.com/"
+          },
+          {
+            "href": "https://docs.astro.build/en/getting-started/",
+            "text": "https://docs.astro.build/en/getting-started/"
+          },
+          {
+            "href": "https://developer.chrome.com/docs/ai/webmcp/imperative-api",
+            "text": "https://developer.chrome.com/docs/ai/webmcp/imperative-api"
+          },
+          {
+            "href": "https://research.google.com/colaboratory/faq.html",
+            "text": "https://research.google.com/colaboratory/faq.html"
+          }
+        ]
+      },
+      "searchEngineVisibility": "unchecked setting observed before publication",
+      "capture": {
+        "path": "qa/canva/project-live.png",
+        "bytes": 47795,
+        "sha256": "20dd2112447f595d2930edc4eb77d317d77d54ce9374c016ef62db96fbcd3cfd"
+      }
+    }
+  ],
+  "courseHours": {
+    "teacher": 10,
+    "solo": 30,
+    "total": 40,
+    "moduleMinutes": {
+      "guided": 120,
+      "colab": 30,
+      "reflection": 30,
+      "webinar": 60
+    },
+    "projectHours": {
+      "setting": 1,
+      "solo": 6,
+      "closure": 1
+    }
+  },
+  "reviewedContent": [
+    "Module-specific controlled change and observations left for learner",
+    "Free CPU Colab and selected cloud sharing",
+    "Real mission/notebook/project links",
+    "Code supplied/modified/executed/checked/understood remain distinct",
+    "M3 artistic scene is not a validated physical simulation",
+    "M4 pointer launch and keyboard without inertia",
+    "M7 internal history differs from browser navigation",
+    "M8 actual eight exports, examination and SHA acknowledgement before assembly"
+  ],
+  "limits": [
+    "Student observations and understanding are not prefilled or certified.",
+    "Linked destinations were read from published DOM; not every external destination was revisited in this document workflow.",
+    "Canva web documents provide navigation and links; they do not execute WebMCP or Colab in place of the real environment.",
+    "Search visibility off limits indexing intent; public URLs are still publicly accessible.",
+    "No new software/model benchmark, student publication, editorial or landing modification."
+  ],
+  "humanPedagogicalApproval": false,
+  "humanVisualFeedback": "Design approved by the user, reported by coordinator; this is distinct from acceptance of all instructional content."
+}

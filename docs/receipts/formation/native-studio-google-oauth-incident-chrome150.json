@@ -1,0 +1,29 @@
+{
+  "schema": "orbit.native-studio-oauth-incident.v1",
+  "state": "PROVIDER_REFUSAL_OBSERVED",
+  "recordedAt": "2026-10-01T21:56:58Z",
+  "observationTimePrecision": "The exact incident time was not recorded. The refusal was reported by the parent and shown in the human screenshot before the official browser update.",
+  "origin": "https://8000-i3svpb1bpfrzqnvrpsyv8.e2b.app",
+  "browserVersion": "150.0.7871.114",
+  "provider": "Google",
+  "message": "Couldn't sign you in. This browser or app may not be secure.",
+  "humanPerformedLogin": true,
+  "authenticatedStudioObserved": false,
+  "contentLakeWriteExecuted": false,
+  "ownerSessionExported": false,
+  "credentialsEnteredByAgent": false,
+  "securityProtectionBypassed": false,
+  "evidence": {
+    "kind": "Human-supplied screenshot relayed by the parent agent",
+    "privateScreenshotSha256": "aa5c4e5b76175022d27654ca16e0dd23ba3f052e0df7a81fc9f73b8e919010a4",
+    "publicScreenshotIncluded": false,
+    "reason": "The full screenshot contains the private desktop stream URL."
+  },
+  "diagnosis": {
+    "confirmed": "Google refused this isolated browser login attempt.",
+    "notConfirmed": "An older browser version is not established as the cause.",
+    "authorizedNextStep": "Update pre-existing Chrome from Google's official package, then allow one new manual native login attempt."
+  },
+  "officialReference": "https://support.google.com/accounts/answer/7675428?hl=en",
+  "fullMissionComplete": false
+}

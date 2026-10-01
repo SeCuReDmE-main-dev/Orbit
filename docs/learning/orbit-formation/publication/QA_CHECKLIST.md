@@ -1,6 +1,6 @@
 # Contrôle de publication — Orbit Formation
 
-État courant : sources composées, exports DOCX/PDF provisoires construits, pages Canva non produites. Les rapports dans `qa/` identifient les contrôles exécutés et la copie examinée ; cette liste définit les critères et ne vaut pas résultat d'exécution.
+État courant : sources composées, exports DOCX/PDF provisoires construits, neuf pages Canva publiées et relues. Les rapports dans `qa/` identifient les contrôles exécutés et la copie examinée ; cette liste définit les critères et ne vaut pas résultat d'exécution.
 
 ## Contenu et preuves
 
@@ -15,8 +15,8 @@
 - Relier `TOOLCHAIN_AND_VERSIONS.md` aux sources et reçus ; distinguer version déclarée, version réellement observée et relevé de précontrôle des outils d'export.
 - Conserver les registres distincts : 25 outils sur le contexte pédagogique d'Orbit, capacité du projet élève, registre réel des autres pages ; vérifier le propriétaire de montage et les nettoyages tardifs.
 - Qualifier séparément le transport public GET `/api/v1/course-context/{outline,entries}` et les droits de la vraie session Sanity.
-- Conserver l'admission Context en `HOLD` : références mixtes, Module 8 non cité et protocole sauté. Aucune entrée publique ni revue humaine fabriquée ; transport désactivé jusqu'à qualification réelle.
-- Garder `deliveryReady: false` et `fullMissionComplete: false` tant que Context, les documents Canva et les autres critères ouverts ne satisfont pas leur définition de fin.
+- Conserver les refus Context antérieurs comme historiques ; rattacher la projection actuelle à ses neuf chemins, passages et empreintes audités, au readback HTTP READY et aux 16 contrôles natifs publics. La lecture du cours n'est pas une revue pédagogique humaine.
+- Garder `deliveryReady: false` et `fullMissionComplete: false` tant que les parcours du Studio authentifié, la revue humaine et les autres critères ouverts ne satisfont pas leur définition de fin.
 - Distinguer aperçu HTML/compilation Astro, trace préparée/appel natif, empreinte/exécution, proposition/revue humaine, test logiciel/compréhension et mesure Canvas/coût GPU.
 - Vérifier code fourni, modification de l'élève, aide reçue et raccordement attribués.
 - Conserver les métriques indisponibles comme indisponibles ; examiner reformulation et transfert lors des vraies séances.

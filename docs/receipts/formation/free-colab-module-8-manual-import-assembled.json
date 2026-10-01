@@ -1,0 +1,277 @@
+{
+  "schemaVersion": "orbit-free-colab-manual-import-qualification-v1",
+  "state": "PASS_NATIVE_EXPLICIT_RUNTIME_FILES_ASSEMBLED_NOT_BUILT",
+  "host": "Google Colab",
+  "observedAt": "2026-10-01T18:39:13.410589+00:00",
+  "origin": "software-qa-fixture",
+  "notStudentObservation": true,
+  "authority": "Synthetic Codex QA in an actual free-account CPU notebook; no student understanding or human approval",
+  "notebookSource": "docs/learning/orbit-formation/notebooks/module-8.ipynb",
+  "notebookSha256": "97f4dffd5ac1e7335fd8ab739f57c0b828619f54af6ebbc23fb4c33fbb833f88",
+  "initialUploadedNotebookSha256": "e7d48239ed71d62354f2b45f1e751dda8850031a14c7c3168da9fdaa665a2e05",
+  "currentSourceIntegration": "Uploaded initial e7d notebook; cell13 replaced through visible editor with source97f4 plus explicit selected filenames; cell15 acknowledged displayed SHA. Other source cells unchanged.",
+  "capturedSelectionCellMatchesDeclaredSource": true,
+  "colabUrl": "https://colab.research.google.com/drive/1yh-iNgkWetvzD_zcI-q13LC64MA_mBKU",
+  "tabId": "1038654385",
+  "accountPlanObserved": "free account previously observed; this copy ran CPU/Python3 with premium GPU options disabled",
+  "runtimeTypeObserved": "Processeur / Python3",
+  "runtimeRetiredAfterDownloads": true,
+  "nativeUploadMode": "runtime-files-explicit; top-level Colab Files panel picker controlled through documented CUA filechooser",
+  "manualNotebookUploadCompleted": true,
+  "manualZipUploadCompleted": true,
+  "explicitEightOriginalFilenames": true,
+  "publicFixtureDownloadsUsed": false,
+  "directoryAutodiscoveryUsed": false,
+  "fallbackDataReplacementUsed": false,
+  "officialPickerDefaultPreserved": true,
+  "officialPickerCancellationObserved": true,
+  "officialPickerEightUploadObserved": false,
+  "cancelResumeTested": true,
+  "versionsAndHashesExaminedInColab": true,
+  "observedGateStates": [
+    "UPLOAD_CANCELLED",
+    "SELECTION_REFUSED",
+    "SELECTION_REQUIRED",
+    "FILES_SELECTED_NOT_EXAMINED",
+    "EXAMINED_DECLARED_EXPORTS",
+    "SELECTION_ACKNOWLEDGEMENT_REQUIRED",
+    "ASSEMBLED_NOT_BUILT"
+  ],
+  "selectionSha256": "bacf0e277d567deb1ec2cbe4c61b7e751f5af6ff7cbae9cd218883a1579ef55a",
+  "declaredFormatsObserved": [
+    "orbit-learning-colab-v1",
+    "orbit-learning-artifact-bundle-v1"
+  ],
+  "inputOriginalDownloads": [
+    {
+      "moduleId": 1,
+      "filename": "orbit-module-1-module-1-1790856466671821618.zip",
+      "bytes": 20957,
+      "sha256": "a23ae46e529314289fc098acdc165e1e2a1bfc29df61966d2e765ecba2a35794",
+      "origin": "Original independent Colab download retained locally; not downloaded from the public fixture copies"
+    },
+    {
+      "moduleId": 2,
+      "filename": "orbit-module-2-module-2-1790856924151822979.zip",
+      "bytes": 16764,
+      "sha256": "211de817002cca08c08d16ff379df3849a8b1b9f7f62d8c1dbef87700b6a9073",
+      "origin": "Original independent Colab download retained locally; not downloaded from the public fixture copies"
+    },
+    {
+      "moduleId": 3,
+      "filename": "orbit-module-3-module-3-1790866518144191457.zip",
+      "bytes": 26869,
+      "sha256": "b202088c8f092630676273c7cdf97d89302983866f70f5b8df3305486d7c3335",
+      "origin": "Original independent Colab download retained locally; not downloaded from the public fixture copies"
+    },
+    {
+      "moduleId": 4,
+      "filename": "orbit-module-4-module-4-1790859685366309850.zip",
+      "bytes": 22095,
+      "sha256": "7e6c739c0883e39aca491e6f6280cc353daf6745017a3bea5ce690746e4d67a5",
+      "origin": "Original independent Colab download retained locally; not downloaded from the public fixture copies"
+    },
+    {
+      "moduleId": 5,
+      "filename": "orbit-module-5-module-5-1790858418976494724.zip",
+      "bytes": 14814,
+      "sha256": "ebdcd2c1ff8409390515aa6f20c603c03b7f04e91c36fb86e487d79703ff8d19",
+      "origin": "Original independent Colab download retained locally; not downloaded from the public fixture copies"
+    },
+    {
+      "moduleId": 6,
+      "filename": "orbit-module-6-module-6-1790858929087479712.zip",
+      "bytes": 15606,
+      "sha256": "4f0d2c98c5a3cf7d8f1bd6ed7ad1d76a5d3ee9474cf137955a18a59de425c23d",
+      "origin": "Original independent Colab download retained locally; not downloaded from the public fixture copies"
+    },
+    {
+      "moduleId": 7,
+      "filename": "orbit-module-7-module-7-1790860375433734440.zip",
+      "bytes": 19939,
+      "sha256": "827528418863211e76307d3e3dbd2a21d17d2864bde0e59f4d8295948897f3ce",
+      "origin": "Original independent Colab download retained locally; not downloaded from the public fixture copies"
+    },
+    {
+      "moduleId": 8,
+      "filename": "orbit-module-8-module-8-1790866741165183562.zip",
+      "bytes": 19925,
+      "sha256": "8d80562e069f26bb07ec097ad5763676548bf125d7ab06ce5529f8d590bd1654",
+      "origin": "Original independent Colab download retained locally; not downloaded from the public fixture copies"
+    }
+  ],
+  "inputFiles": [
+    {
+      "moduleId": 1,
+      "path": "docs/receipts/fixtures/free-colab-module-1-export-a23ae46e.zip",
+      "sha256": "a23ae46e529314289fc098acdc165e1e2a1bfc29df61966d2e765ecba2a35794",
+      "bytes": 20957,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 2,
+      "path": "docs/receipts/fixtures/free-colab-module-2-export-211de817.zip",
+      "sha256": "211de817002cca08c08d16ff379df3849a8b1b9f7f62d8c1dbef87700b6a9073",
+      "bytes": 16764,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 3,
+      "path": "docs/receipts/fixtures/free-colab-module-3-export-b202088c.zip",
+      "sha256": "b202088c8f092630676273c7cdf97d89302983866f70f5b8df3305486d7c3335",
+      "bytes": 26869,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true,
+      "previousExportPreserved": "docs/receipts/fixtures/free-colab-module-3-export-50f48e5a.zip"
+    },
+    {
+      "moduleId": 4,
+      "path": "docs/receipts/fixtures/free-colab-module-4-export-7e6c739c.zip",
+      "sha256": "7e6c739c0883e39aca491e6f6280cc353daf6745017a3bea5ce690746e4d67a5",
+      "bytes": 22095,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 5,
+      "path": "docs/receipts/fixtures/free-colab-module-5-export-ebdcd2c1.zip",
+      "sha256": "ebdcd2c1ff8409390515aa6f20c603c03b7f04e91c36fb86e487d79703ff8d19",
+      "bytes": 14814,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 6,
+      "path": "docs/receipts/fixtures/free-colab-module-6-export-4f0d2c98.zip",
+      "sha256": "4f0d2c98c5a3cf7d8f1bd6ed7ad1d76a5d3ee9474cf137955a18a59de425c23d",
+      "bytes": 15606,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 7,
+      "path": "docs/receipts/fixtures/free-colab-module-7-export-82752841.zip",
+      "sha256": "827528418863211e76307d3e3dbd2a21d17d2864bde0e59f4d8295948897f3ce",
+      "bytes": 19939,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 8,
+      "path": "docs/receipts/fixtures/free-colab-module-8-export-8d80562e.zip",
+      "sha256": "8d80562e069f26bb07ec097ad5763676548bf125d7ab06ce5529f8d590bd1654",
+      "bytes": 19925,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true,
+      "previousExportPreserved": "docs/receipts/fixtures/free-colab-module-8-export-63f4384c.zip"
+    }
+  ],
+  "assemblyCreated": true,
+  "assemblyCompiled": false,
+  "nativeWebMcpVerified": false,
+  "archiveFilename": "orbit-mon-frontend-bacf0e277d56.zip",
+  "archiveBytes": 79149,
+  "archiveSha256": "7ae43df9d3c7f44e39a2b545d28ff807660b85615551b2fca1a55913b339c7d6",
+  "frontendFileCountObserved": 9,
+  "assemblyManifestFileCountObserved": 46,
+  "originalFrontendCopyComparisons": [
+    {
+      "path": "src/learning/module-1/interaction-state.js",
+      "identicalToOriginalExport": true,
+      "sha256": "53ddf2356fca2ccd0dd2c7260cb5cf21db10fb2bf628ce5d10e05fd19ca0b54e"
+    },
+    {
+      "path": "src/learning/module-2/ExplorationCard.astro",
+      "identicalToOriginalExport": true,
+      "sha256": "a3f9cd51282d2a5a8e285a81354d21a5cbb34b110c82f98a7a876afc2bc6313b"
+    },
+    {
+      "path": "src/learning/module-2/exploration-card.js",
+      "identicalToOriginalExport": true,
+      "sha256": "339f0a75fe1693b348e05aa71626527b5625dd1cc7c5e144414f5fbbc10abeee"
+    },
+    {
+      "path": "src/learning/module-3/scene-controller.js",
+      "identicalToOriginalExport": true,
+      "sha256": "08329e08bb5da2f1581c47a7c5c4ab1f0f39a348cc3414febe9771c48e848bc1"
+    },
+    {
+      "path": "src/learning/module-4/inertia.js",
+      "identicalToOriginalExport": true,
+      "sha256": "1f88d82e8893e46373764fe20fa3ef21dcd77d04ae0334a3f479437a21d6cdd6"
+    },
+    {
+      "path": "src/learning/module-5/transitions.js",
+      "identicalToOriginalExport": true,
+      "sha256": "b104624db7a6fe3657c78903b4f013818ebfa94c409b26d438b863f1a08d2d68"
+    },
+    {
+      "path": "src/learning/module-6/particle-layer.js",
+      "identicalToOriginalExport": true,
+      "sha256": "304112b8e16945437d969d5e2a756f2f62a87f05f6b27d2720d0636f5070939f"
+    },
+    {
+      "path": "src/learning/module-7/interaction-flow.js",
+      "identicalToOriginalExport": true,
+      "sha256": "1943082707c3bc8c3c27a9685e91133e03177796a6e995b32ccd2b9d3c81da7c"
+    },
+    {
+      "path": "src/learning/module-8/register-capabilities.js",
+      "identicalToOriginalExport": true,
+      "sha256": "bd867aca60e133bbbf2839016303b308b30779efc508a681371fd50b101e6e1d"
+    }
+  ],
+  "actualNotebookCaptureBytes": 58894,
+  "actualNotebookCaptureSha256": "52ba0b7ec0508933d5ad1a915911c99a62a711f081b8c3b556a960444a71658b",
+  "executedCellIndicesObservedInDownloadedNotebook": [
+    1,
+    12,
+    13,
+    14,
+    15
+  ],
+  "learnerUnderstandingVerified": false,
+  "humanUnderstanding": false,
+  "humanApproval": false,
+  "previousIncidentReceipt": "docs/receipts/formation/free-colab-module-8-manual-import-blocked.json",
+  "incidents": [
+    {
+      "stage": "initial notebook upload",
+      "reason": "Extension file URL permission initially disabled; later enabled by the human",
+      "protectionChangedByAgent": false
+    },
+    {
+      "stage": "official output iframe picker",
+      "reason": "Filechooser event not relayed to controller after click10s and Enter7s; input visible/enabled. Cancellation succeeded. This does not prove a learner-facing upload defect.",
+      "reasonCategory": "controller-observation-timeout"
+    },
+    {
+      "stage": "documented CDP child input",
+      "reason": "Previously observed child session detached; raw Target.setAutoAttach unsupported. No unsupported method or page-internal mutation used."
+    },
+    {
+      "stage": "Files panel upload",
+      "reason": "Temporary runtime-storage warning acknowledged; original downloads retained locally."
+    },
+    {
+      "stage": "download observation",
+      "reason": "CUA download event timed out for archive15s/notebook10s although both actual files arrived in Downloads; archive digest equals actual Colab output."
+    }
+  ],
+  "privateEvidenceFiles": [
+    "manual-import-upload-blocked.png",
+    "manual-import-cpu.png",
+    "manual-import-examined.png",
+    "manual-import-assembled.png",
+    "manual-import-actual-notebook.ipynb"
+  ],
+  "limits": [
+    "Assembly is not built by this Colab run; root must compile exact archive in Kaggle.",
+    "No claim of student observation, comprehension or human approval.",
+    "The primary official iframe picker remains default but its successful eight-file transfer is not observed through this controller.",
+    "Activity0–10 was not repeated here; imported eight real independent QA module exports retain their prior receipts.",
+    "Forty-hour course allocation is unchanged."
+  ]
+}

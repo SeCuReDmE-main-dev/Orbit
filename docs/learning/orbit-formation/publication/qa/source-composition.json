@@ -2,7 +2,9 @@
   "status": "DOCUMENT_SOURCES_COMPOSED",
   "softwareExecuted": false,
   "officeExportsExecuted": false,
-  "canvaProduced": false,
+  "canvaProduced": true,
+  "canvaProducedByComposition": false,
+  "canvaDeliveryReceipt": "CANVA_DELIVERY.json",
   "learnerUnderstandingExamined": false,
   "deliveryReady": false,
   "fullMissionComplete": false,
@@ -10,12 +12,12 @@
   "projectBriefs": 1,
   "teacherSheets": 9,
   "assistantMissions": 9,
-  "inputFiles": 91,
+  "inputFiles": 101,
   "outputCharacters": {
-    "MASTER_MANUSCRIPT.md": 138925,
-    "TEACHER_GUIDE.md": 74511,
+    "MASTER_MANUSCRIPT.md": 151385,
+    "TEACHER_GUIDE.md": 82593,
     "ASSISTANT_MISSIONS.md": 29015,
-    "CANVA_BRIEFS.md": 43644
+    "CANVA_BRIEFS.md": 44061
   },
-  "pending": "Public Context admission HOLD; second Studio native calls and writes unvalidated; Canva not produced. Actual assembly browser35/35 and authenticated read-only Studio session observed; document exports and visual QA retain their own receipts."
+  "pending": "Public Context HTTP9 and native cross-origin16 pass; nine Canva public documents read back. Authenticated second Studio native calls, writes and logout remain unvalidated. Actual assembly browser35/35 and authenticated read-only Studio session observed; document exports and visual QA retain their own receipts."
 }

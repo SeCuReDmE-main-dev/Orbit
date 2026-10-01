@@ -1,0 +1,268 @@
+{
+  "schemaVersion": "orbit-closure-php-kaggle-validation-v1",
+  "state": "PASS_PHP_REGRESSIONS",
+  "host": "Kaggle",
+  "notebookUrl": "https://www.kaggle.com/code/celebrum/orbit-v3-closure-regressions?scriptVersionId=354480684",
+  "versionId": 354480684,
+  "execution": {
+    "state": "PASS_PHP_REGRESSIONS",
+    "host": "Kaggle",
+    "startedAt": "2026-10-01T18:41:26.898323+00:00",
+    "sourceSha256": "c4d24b17a7dc966b64d608a5fe9eb4cbe3ac939bebe3906e166c17a20e88464d",
+    "requiredPhpMinimum": "8.4.1",
+    "testsExecuted": true,
+    "modelsCalled": false,
+    "realCredentialsUsed": false,
+    "publicTransportActivatedInProduction": false,
+    "commands": [
+      {
+        "stage": "official-php-runtime",
+        "command": [
+          "/kaggle/temp/orbit-php-v1.12.7-1790880086902147403/php",
+          "-r",
+          "echo json_encode([\"versionId\"=>PHP_VERSION_ID,\"version\"=>PHP_VERSION,\"sapi\"=>PHP_SAPI,\"binaryConstant\"=>PHP_BINARY,\"extensions\"=>get_loaded_extensions()]);"
+        ],
+        "exitCode": 0,
+        "seconds": 0.102
+      },
+      {
+        "stage": "php-subprocess-compatibility",
+        "command": [
+          "/kaggle/temp/orbit-php-v1.12.7-1790880086902147403/php",
+          "-r",
+          "require 'vendor/autoload.php';\n$binary=(new Symfony\\Component\\Process\\PhpExecutableFinder())->find(false);\nif($binary===false){fwrite(STDERR,'Missing PHP executable');exit(1);}\n$process=new Symfony\\Component\\Process\\Process([$binary,'-r','echo json_encode([\"versionId\"=>PHP_VERSION_ID,\"sapi\"=>PHP_SAPI]);']);\n$process->setTimeout(20);$process->mustRun();echo $process->getOutput();"
+        ],
+        "exitCode": 0,
+        "seconds": 0.233
+      },
+      {
+        "stage": "artisan-public-routes",
+        "command": [
+          "/kaggle/temp/orbit-php-v1.12.7-1790880086902147403/php",
+          "artisan",
+          "route:list",
+          "--path=api/v1/course-context",
+          "--json",
+          "--no-interaction"
+        ],
+        "exitCode": 0,
+        "seconds": 0.298
+      },
+      {
+        "stage": "targeted-php-format",
+        "command": [
+          "/kaggle/temp/orbit-php-v1.12.7-1790880086902147403/php",
+          "vendor/bin/pint",
+          "--format",
+          "agent",
+          "app/Http/Controllers/CourseContextController.php",
+          "app/Services/PublicCourseContextReader.php",
+          "app/Services/SanityContext.php",
+          "app/Http/Middleware/PublicCourseContext.php",
+          "bootstrap/app.php",
+          "config/cors.php",
+          "config/orbit.php",
+          "config/course_context.php",
+          "routes/api.php",
+          "tests/Feature/PublicCourseContextTest.php"
+        ],
+        "exitCode": 0,
+        "seconds": 0.739
+      },
+      {
+        "stage": "php-regressions",
+        "command": [
+          "/kaggle/temp/orbit-php-v1.12.7-1790880086902147403/php",
+          "vendor/bin/phpunit",
+          "--testsuite",
+          "Feature",
+          "--filter",
+          "PublicCourseContextTest|SanityKnowledgeTest|OrbitAccountTest|OrbitWorkspaceTest",
+          "--log-junit",
+          "/kaggle/working/course-context-validation/php-tests.xml"
+        ],
+        "exitCode": 0,
+        "seconds": 1.264
+      }
+    ],
+    "runtimePlatform": {
+      "system": "Linux",
+      "machine": "x86_64",
+      "libc": "glibc",
+      "libcVersion": "2.35"
+    },
+    "stage": "php-regressions",
+    "runtimePin": {
+      "release": "v1.12.7",
+      "asset": "frankenphp-linux-x86_64-gnu",
+      "url": "https://github.com/php/frankenphp/releases/download/v1.12.7/frankenphp-linux-x86_64-gnu",
+      "sha256": "b8eed5e4d2215874a8ca1f9b812d5394b4722d02c44dbcbf5c782b322d6baa43",
+      "bytes": 169209640,
+      "releaseSource": "https://github.com/php/frankenphp/releases/tag/v1.12.7",
+      "digestSource": "https://api.github.com/repos/php/frankenphp/releases/tags/v1.12.7",
+      "runtimeDocs": "https://frankenphp.dev/docs/static/",
+      "cliLimits": "https://frankenphp.dev/docs/known-issues/",
+      "extensionBuildSource": "https://raw.githubusercontent.com/php/frankenphp/v1.12.7/build-static.sh"
+    },
+    "runtimeOrigin": "official-frankenphp-release",
+    "runtimeVerified": {
+      "bytes": 169209640,
+      "sha256": "b8eed5e4d2215874a8ca1f9b812d5394b4722d02c44dbcbf5c782b322d6baa43",
+      "release": "v1.12.7"
+    },
+    "runtimeCompatibilityLimits": {
+      "phpFlags": "Script arguments and -r are forwarded unchanged; unsupported PHP CLI flags are never stripped.",
+      "composerScripts": "Not executed: this release does not support every Composer-generated PHP flag.",
+      "phpunitProcessIsolation": "Not used by the frozen targeted tests; compatibility is not claimed."
+    },
+    "phpRuntime": {
+      "versionId": 80511,
+      "version": "8.5.11",
+      "sapi": "cli",
+      "binaryConstant": "",
+      "extensions": [
+        "Core",
+        "date",
+        "lexbor",
+        "uri",
+        "pcre",
+        "sqlite3",
+        "zlib",
+        "amqp",
+        "apcu",
+        "ast",
+        "bcmath",
+        "brotli",
+        "bz2",
+        "calendar",
+        "ctype",
+        "curl",
+        "dba",
+        "json",
+        "SPL",
+        "mbstring",
+        "session",
+        "fileinfo",
+        "filter",
+        "ftp",
+        "gd",
+        "gettext",
+        "gmp",
+        "hash",
+        "iconv",
+        "standard",
+        "libxml",
+        "exif",
+        "dom",
+        "igbinary",
+        "imagick",
+        "intl",
+        "ldap",
+        "lz4",
+        "memcached",
+        "mysqlnd",
+        "mysqli",
+        "Zend OPcache",
+        "parallel",
+        "pcntl",
+        "PDO",
+        "pdo_mysql",
+        "pdo_pgsql",
+        "pdo_sqlite",
+        "pgsql",
+        "openssl",
+        "posix",
+        "protobuf",
+        "random",
+        "readline",
+        "redis",
+        "Reflection",
+        "shmop",
+        "SimpleXML",
+        "soap",
+        "sockets",
+        "sodium",
+        "ssh2",
+        "sysvmsg",
+        "sysvsem",
+        "sysvshm",
+        "tidy",
+        "tokenizer",
+        "Phar",
+        "xlswriter",
+        "xml",
+        "xmlreader",
+        "xmlwriter",
+        "xsl",
+        "xz",
+        "yaml",
+        "zip",
+        "zstd"
+      ],
+      "missingExtensions": [],
+      "qualified": true
+    },
+    "missingExtensions": [],
+    "verifiedFiles": 9730,
+    "subprocessRuntime": {
+      "versionId": 80511,
+      "sapi": "cli"
+    },
+    "registeredPublicRoutes": [
+      {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "api/v1/course-context/entries",
+        "name": null,
+        "action": "App\\Http\\Controllers\\CourseContextController@entries",
+        "middleware": [
+          "api",
+          "App\\Http\\Middleware\\PublicCourseContext",
+          "throttle:20,1"
+        ],
+        "path": null
+      },
+      {
+        "domain": null,
+        "method": "GET|HEAD",
+        "uri": "api/v1/course-context/outline",
+        "name": null,
+        "action": "App\\Http\\Controllers\\CourseContextController@outline",
+        "middleware": [
+          "api",
+          "App\\Http\\Middleware\\PublicCourseContext",
+          "throttle:20,1"
+        ],
+        "path": null
+      }
+    ],
+    "formatterChangedFiles": [],
+    "executedPhpFingerprint": "5ebdf5703a7966fc26b915759891dddae634ba69b6561bdf1e5a438c60a3e5d8",
+    "exitCode": 0,
+    "finishedAt": "2026-10-01T18:41:33.966676+00:00"
+  },
+  "junit": {
+    "tests": 36,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "sourceFiles": {
+    "app/Http/Controllers/CourseContextController.php": "370e7878781d813e80c4d35ab1db00a7af5a53eb18177502faa1ec12f3a12e90",
+    "app/Services/PublicCourseContextReader.php": "ad8b5171f92534003987c2b22f8690d3e52407c2f7c291ae5e67af38577030af",
+    "app/Services/SanityContext.php": "1143d9eb63014ebbf8b05eb9d6022b7fab3c8fe68c7aaac6657ce8a4ede8cfdf",
+    "app/Http/Middleware/PublicCourseContext.php": "a9666c422a79063ac9c5502eef521407463813e0e78befd2c59e97da620901c2",
+    "bootstrap/app.php": "971c5c2c0db42ca3c0d884388d2462c0c358a12843b7c9f04be596fdbba32f73",
+    "config/cors.php": "9a74f474a978656c46dad0e21c353e09cbb8b2342617464a8abed6105cdea499",
+    "config/orbit.php": "8b2e6350e82b091e8ae9038d6a8cda62432eab2c6d4b13b75b3b43f33fef4bd2",
+    "config/course_context.php": "6ce9fad60d32939f8432e61c7ce0539a736a71bbd11487e438fb838d9c77ee55",
+    "routes/api.php": "e7204c88d56e3471e8d556129ea34410b9eff34ce49f698f3bdd3e464c172551",
+    "tests/Feature/PublicCourseContextTest.php": "8bc71637efdb45ddc8605e0bae015f435e71a4a5bf25d61e89f340bbed00fe08"
+  },
+  "evidenceArchiveSha256": "daf637917fba4c69ef38f1bd409624c48d88e1b5cf6c80d3ac8bb4583bfbfcc8",
+  "productionDeployed": false,
+  "courseScopeEnabledInValidatedSource": true,
+  "noLocalTests": true,
+  "noCredentialsUsed": true,
+  "humanPedagogicalApproval": false
+}

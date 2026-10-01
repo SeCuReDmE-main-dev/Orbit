@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "orbit-kaggle-publication-readback-v1",
+  "observedDate": "2026-10-01",
+  "notebookUrl": "https://www.kaggle.com/code/celebrum/orbit-v3-closure-regressions?scriptVersionId=354484426",
+  "versionId": 354484426,
+  "state": "PUBLIC_UI_READBACK",
+  "visibility": "public",
+  "observation": "Share dialog was saved as Public. Subsequent native Chrome DOM showed the public Share icon and no Private label.",
+  "screenshot": "closure-regressions-public-kaggle.png",
+  "executionReceipt": "closure-software-regressions-kaggle.json",
+  "executedVersionId": 354480684,
+  "versionDifference": "V3 corrects the narrative count to 14 import/document replay tests; it preserves the previously observed V2 outputs.",
+  "newSoftwareExecution": false,
+  "modelCalls": 0,
+  "limits": [
+    "Publication readback is not a new software execution.",
+    "No learner understanding or human pedagogical approval is certified."
+  ]
+}

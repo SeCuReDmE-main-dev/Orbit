@@ -1,6 +1,6 @@
 {
   "state": "DOCUMENT_SOURCE_REVIEW_PREPARED",
-  "preparedAt": "2026-10-01T16:04:45.266789+00:00",
+  "preparedAt": "2026-10-01T21:48:06.787048+00:00",
   "softwareExecuted": false,
   "documentExportsExecutedByThisStep": false,
   "canvaProduced": false,
@@ -19,12 +19,12 @@
   "files": [
     {
       "path": "MASTER_MANUSCRIPT.md",
-      "sha256": "fb09a0da2692e3130b5bca90ae6a4e6173d3baf3ea61dcca4c28379256dc935e",
-      "normalizedTextSha256": "fb09a0da2692e3130b5bca90ae6a4e6173d3baf3ea61dcca4c28379256dc935e",
+      "sha256": "1ed1656889b204fded2b0a6cf683069e678a9273b8042c2fc7e3ffd2a09bd172",
+      "normalizedTextSha256": "1ed1656889b204fded2b0a6cf683069e678a9273b8042c2fc7e3ffd2a09bd172",
       "hashScope": "sha256 identifies exact file bytes; normalizedTextSha256 identifies the text used by this review",
-      "characters": 138925,
+      "characters": 151385,
       "localReferencesMissing": [],
-      "negativeConstructionMatches": 286,
+      "negativeConstructionMatches": 318,
       "negativeConstructionLocations": [
         {
           "line": 21,
@@ -240,7 +240,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 216,
+          "line": 214,
           "matches": 1,
           "markers": [
             "sans"
@@ -249,7 +249,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 222,
+          "line": 220,
           "matches": 1,
           "markers": [
             "pas"
@@ -258,7 +258,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 224,
+          "line": 222,
           "matches": 2,
           "markers": [
             "n'",
@@ -268,7 +268,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 233,
+          "line": 231,
           "matches": 1,
           "markers": [
             "sans"
@@ -277,7 +277,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 240,
+          "line": 238,
           "matches": 2,
           "markers": [
             "pas",
@@ -287,7 +287,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 243,
+          "line": 241,
           "matches": 1,
           "markers": [
             "pas"
@@ -296,7 +296,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 249,
+          "line": 247,
           "matches": 2,
           "markers": [
             "pas",
@@ -306,10 +306,20 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 253,
+          "line": 251,
           "matches": 1,
           "markers": [
             "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 270,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
           ],
           "proposedPurpose": "technical-or-status-boundary",
           "humanReviewStatus": "pending"
@@ -318,16 +328,6 @@
           "line": 272,
           "matches": 2,
           "markers": [
-            "pas",
-            "pas"
-          ],
-          "proposedPurpose": "technical-or-status-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 274,
-          "matches": 2,
-          "markers": [
             "n'",
             "pas"
           ],
@@ -335,7 +335,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 281,
+          "line": 279,
           "matches": 1,
           "markers": [
             "n'"
@@ -344,7 +344,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 295,
+          "line": 293,
           "matches": 1,
           "markers": [
             "sans"
@@ -353,7 +353,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 303,
+          "line": 301,
           "matches": 1,
           "markers": [
             "pas"
@@ -362,7 +362,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 306,
+          "line": 304,
           "matches": 1,
           "markers": [
             "sans"
@@ -371,7 +371,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 311,
+          "line": 309,
           "matches": 2,
           "markers": [
             "sans",
@@ -381,7 +381,16 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 314,
+          "line": 312,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 316,
           "matches": 1,
           "markers": [
             "pas"
@@ -393,22 +402,13 @@
           "line": 318,
           "matches": 1,
           "markers": [
-            "pas"
-          ],
-          "proposedPurpose": "technical-or-status-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 320,
-          "matches": 1,
-          "markers": [
             "sans"
           ],
           "proposedPurpose": "manual-review-required",
           "humanReviewStatus": "pending"
         },
         {
-          "line": 324,
+          "line": 322,
           "matches": 3,
           "markers": [
             "pas",
@@ -419,7 +419,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 332,
+          "line": 330,
           "matches": 5,
           "markers": [
             "pas",
@@ -432,7 +432,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 340,
+          "line": 338,
           "matches": 1,
           "markers": [
             "pas"
@@ -441,7 +441,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 348,
+          "line": 346,
           "matches": 1,
           "markers": [
             "pas"
@@ -450,7 +450,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 354,
+          "line": 352,
           "matches": 2,
           "markers": [
             "sans",
@@ -460,7 +460,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 362,
+          "line": 360,
           "matches": 1,
           "markers": [
             "pas"
@@ -469,7 +469,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 370,
+          "line": 368,
           "matches": 1,
           "markers": [
             "sans"
@@ -478,7 +478,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 373,
+          "line": 371,
           "matches": 1,
           "markers": [
             "pas"
@@ -487,7 +487,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 379,
+          "line": 377,
           "matches": 1,
           "markers": [
             "pas"
@@ -496,7 +496,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 385,
+          "line": 383,
           "matches": 1,
           "markers": [
             "pas"
@@ -505,7 +505,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 393,
+          "line": 391,
           "matches": 2,
           "markers": [
             "n'",
@@ -515,7 +515,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 407,
+          "line": 405,
           "matches": 2,
           "markers": [
             "ni",
@@ -525,7 +525,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 414,
+          "line": 412,
           "matches": 2,
           "markers": [
             "n'",
@@ -535,7 +535,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 418,
+          "line": 416,
           "matches": 1,
           "markers": [
             "sans"
@@ -544,7 +544,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 422,
+          "line": 420,
           "matches": 1,
           "markers": [
             "pas"
@@ -553,7 +553,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 423,
+          "line": 421,
           "matches": 2,
           "markers": [
             "n'",
@@ -563,7 +563,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 426,
+          "line": 424,
           "matches": 1,
           "markers": [
             "pas"
@@ -572,7 +572,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 436,
+          "line": 434,
           "matches": 2,
           "markers": [
             "sans",
@@ -582,7 +582,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 444,
+          "line": 442,
           "matches": 1,
           "markers": [
             "sans"
@@ -591,7 +591,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 460,
+          "line": 458,
           "matches": 1,
           "markers": [
             "pas"
@@ -600,7 +600,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 476,
+          "line": 474,
           "matches": 1,
           "markers": [
             "pas"
@@ -609,7 +609,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 479,
+          "line": 477,
           "matches": 2,
           "markers": [
             "pas",
@@ -619,7 +619,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 485,
+          "line": 483,
           "matches": 4,
           "markers": [
             "n'",
@@ -631,7 +631,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 489,
+          "line": 487,
           "matches": 3,
           "markers": [
             "sans",
@@ -642,7 +642,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 513,
+          "line": 511,
           "matches": 1,
           "markers": [
             "pas"
@@ -651,7 +651,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 519,
+          "line": 517,
           "matches": 4,
           "markers": [
             "n'",
@@ -663,7 +663,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 530,
+          "line": 528,
           "matches": 1,
           "markers": [
             "pas"
@@ -672,7 +672,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 534,
+          "line": 532,
           "matches": 2,
           "markers": [
             "ni",
@@ -682,7 +682,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 535,
+          "line": 533,
           "matches": 2,
           "markers": [
             "pas",
@@ -692,7 +692,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 538,
+          "line": 536,
           "matches": 2,
           "markers": [
             "pas",
@@ -702,7 +702,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 542,
+          "line": 540,
           "matches": 1,
           "markers": [
             "sans"
@@ -712,16 +712,35 @@
         },
         {
           "line": 548,
-          "matches": 2,
+          "matches": 1,
           "markers": [
-            "pas",
-            "pas"
+            "ni"
           ],
           "proposedPurpose": "technical-or-status-boundary",
           "humanReviewStatus": "pending"
         },
         {
           "line": 550,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 552,
+          "matches": 3,
+          "markers": [
+            "pas",
+            "n'",
+            "aucune"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 554,
           "matches": 2,
           "markers": [
             "pas",
@@ -731,7 +750,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 556,
+          "line": 560,
           "matches": 3,
           "markers": [
             "pas",
@@ -742,7 +761,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 564,
+          "line": 568,
           "matches": 1,
           "markers": [
             "sans"
@@ -751,7 +770,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 591,
+          "line": 595,
           "matches": 1,
           "markers": [
             "pas"
@@ -760,7 +779,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 604,
+          "line": 608,
           "matches": 2,
           "markers": [
             "n'",
@@ -770,7 +789,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 608,
+          "line": 612,
           "matches": 2,
           "markers": [
             "pas",
@@ -780,7 +799,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 614,
+          "line": 618,
           "matches": 3,
           "markers": [
             "ni",
@@ -791,7 +810,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 616,
+          "line": 620,
           "matches": 2,
           "markers": [
             "pas",
@@ -801,7 +820,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 626,
+          "line": 630,
           "matches": 1,
           "markers": [
             "sans"
@@ -810,7 +829,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 631,
+          "line": 635,
           "matches": 2,
           "markers": [
             "non",
@@ -820,7 +839,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 641,
+          "line": 645,
           "matches": 5,
           "markers": [
             "n'",
@@ -833,7 +852,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 643,
+          "line": 647,
           "matches": 1,
           "markers": [
             "pas"
@@ -842,7 +861,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 645,
+          "line": 649,
           "matches": 2,
           "markers": [
             "pas",
@@ -852,169 +871,42 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 649,
-          "matches": 3,
-          "markers": [
-            "aucun",
-            "n'",
-            "pas"
-          ],
-          "proposedPurpose": "technical-or-status-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 651,
-          "matches": 2,
-          "markers": [
-            "pas",
-            "pas"
-          ],
-          "proposedPurpose": "security-or-authority-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 657,
-          "matches": 1,
-          "markers": [
-            "pas"
-          ],
-          "proposedPurpose": "technical-or-status-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 658,
-          "matches": 1,
-          "markers": [
-            "pas"
-          ],
-          "proposedPurpose": "technical-or-status-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 659,
-          "matches": 3,
-          "markers": [
-            "ni",
-            "ni",
-            "ni"
-          ],
-          "proposedPurpose": "technical-or-status-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 662,
-          "matches": 2,
-          "markers": [
-            "aucune",
-            "pas"
-          ],
-          "proposedPurpose": "security-or-authority-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 671,
+          "line": 669,
           "matches": 4,
           "markers": [
+            "pas",
             "Aucun",
             "ni",
-            "n'",
-            "pas"
+            "n’"
           ],
           "proposedPurpose": "security-or-authority-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 673,
-          "matches": 2,
-          "markers": [
-            "non",
-            "non"
-          ],
-          "proposedPurpose": "technical-or-status-boundary",
           "humanReviewStatus": "pending"
         },
         {
           "line": 674,
-          "matches": 3,
-          "markers": [
-            "sans",
-            "sans",
-            "ni"
-          ],
-          "proposedPurpose": "technical-or-status-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 675,
-          "matches": 1,
-          "markers": [
-            "non"
-          ],
-          "proposedPurpose": "technical-or-status-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 676,
-          "matches": 2,
-          "markers": [
-            "sans",
-            "pas"
-          ],
-          "proposedPurpose": "technical-or-status-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 677,
-          "matches": 1,
-          "markers": [
-            "pas"
-          ],
-          "proposedPurpose": "technical-or-status-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 678,
-          "matches": 1,
-          "markers": [
-            "sans"
-          ],
-          "proposedPurpose": "technical-or-status-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 679,
           "matches": 1,
           "markers": [
             "aucun"
           ],
-          "proposedPurpose": "technical-or-status-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 680,
-          "matches": 1,
-          "markers": [
-            "pas"
-          ],
-          "proposedPurpose": "technical-or-status-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 681,
-          "matches": 4,
-          "markers": [
-            "n'",
-            "pas",
-            "n'",
-            "pas"
-          ],
-          "proposedPurpose": "technical-or-status-boundary",
+          "proposedPurpose": "manual-review-required",
           "humanReviewStatus": "pending"
         },
         {
           "line": 682,
-          "matches": 1,
+          "matches": 3,
           "markers": [
+            "sans",
+            "n’",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 683,
+          "matches": 2,
+          "markers": [
+            "n’",
             "pas"
           ],
           "proposedPurpose": "technical-or-status-boundary",
@@ -1022,20 +914,20 @@
         },
         {
           "line": 684,
-          "matches": 2,
+          "matches": 3,
           "markers": [
-            "aucune",
-            "sans"
+            "pas",
+            "n’",
+            "pas"
           ],
           "proposedPurpose": "technical-or-status-boundary",
           "humanReviewStatus": "pending"
         },
         {
           "line": 685,
-          "matches": 3,
+          "matches": 2,
           "markers": [
-            "sans",
-            "pas",
+            "ni",
             "ni"
           ],
           "proposedPurpose": "technical-or-status-boundary",
@@ -1043,9 +935,11 @@
         },
         {
           "line": 686,
-          "matches": 1,
+          "matches": 3,
           "markers": [
-            "sans"
+            "sans",
+            "aucun",
+            "n’"
           ],
           "proposedPurpose": "technical-or-status-boundary",
           "humanReviewStatus": "pending"
@@ -1063,13 +957,72 @@
           "line": 689,
           "matches": 1,
           "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 693,
+          "matches": 2,
+          "markers": [
+            "n’",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 695,
+          "matches": 2,
+          "markers": [
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 699,
+          "matches": 1,
+          "markers": [
+            "aucun"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 701,
+          "matches": 2,
+          "markers": [
+            "pas",
             "sans"
           ],
           "proposedPurpose": "technical-or-status-boundary",
           "humanReviewStatus": "pending"
         },
         {
-          "line": 690,
+          "line": 707,
+          "matches": 2,
+          "markers": [
+            "Aucun",
+            "n’"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 711,
+          "matches": 2,
+          "markers": [
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 719,
           "matches": 1,
           "markers": [
             "pas"
@@ -1078,7 +1031,203 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 691,
+          "line": 720,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 721,
+          "matches": 3,
+          "markers": [
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 724,
+          "matches": 2,
+          "markers": [
+            "aucune",
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 733,
+          "matches": 4,
+          "markers": [
+            "Aucun",
+            "ni",
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 735,
+          "matches": 2,
+          "markers": [
+            "non",
+            "non"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 736,
+          "matches": 3,
+          "markers": [
+            "sans",
+            "sans",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 737,
+          "matches": 1,
+          "markers": [
+            "non"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 738,
+          "matches": 2,
+          "markers": [
+            "sans",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 739,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 740,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 741,
+          "matches": 1,
+          "markers": [
+            "aucun"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 742,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 743,
+          "matches": 4,
+          "markers": [
+            "n'",
+            "pas",
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 744,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 746,
+          "matches": 2,
+          "markers": [
+            "aucune",
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 747,
+          "matches": 3,
+          "markers": [
+            "sans",
+            "pas",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 748,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 749,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 751,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 752,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 753,
           "matches": 2,
           "markers": [
             "pas",
@@ -1088,7 +1237,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 693,
+          "line": 755,
           "matches": 1,
           "markers": [
             "pas"
@@ -1097,7 +1246,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 694,
+          "line": 756,
           "matches": 9,
           "markers": [
             "sans",
@@ -1114,7 +1263,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 695,
+          "line": 757,
           "matches": 3,
           "markers": [
             "sans",
@@ -1125,7 +1274,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 697,
+          "line": 759,
           "matches": 1,
           "markers": [
             "aucune"
@@ -1134,7 +1283,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 700,
+          "line": 762,
           "matches": 2,
           "markers": [
             "pas",
@@ -1144,7 +1293,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 704,
+          "line": 766,
           "matches": 2,
           "markers": [
             "n'",
@@ -1154,7 +1303,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 706,
+          "line": 768,
           "matches": 3,
           "markers": [
             "pas",
@@ -1165,7 +1314,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 710,
+          "line": 772,
           "matches": 1,
           "markers": [
             "sans"
@@ -1174,7 +1323,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 718,
+          "line": 780,
           "matches": 1,
           "markers": [
             "pas"
@@ -1183,7 +1332,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 720,
+          "line": 782,
           "matches": 2,
           "markers": [
             "aucune",
@@ -1193,7 +1342,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 730,
+          "line": 792,
           "matches": 5,
           "markers": [
             "pas",
@@ -1206,7 +1355,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 732,
+          "line": 794,
           "matches": 1,
           "markers": [
             "pas"
@@ -1215,7 +1364,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 745,
+          "line": 807,
           "matches": 1,
           "markers": [
             "sans"
@@ -1224,7 +1373,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 756,
+          "line": 818,
           "matches": 2,
           "markers": [
             "pas",
@@ -1234,7 +1383,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 767,
+          "line": 829,
           "matches": 1,
           "markers": [
             "sans"
@@ -1243,7 +1392,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 771,
+          "line": 833,
           "matches": 1,
           "markers": [
             "pas"
@@ -1252,7 +1401,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 775,
+          "line": 837,
           "matches": 2,
           "markers": [
             "n'",
@@ -1262,7 +1411,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 786,
+          "line": 848,
           "matches": 1,
           "markers": [
             "pas"
@@ -1271,7 +1420,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 790,
+          "line": 852,
           "matches": 1,
           "markers": [
             "pas"
@@ -1280,7 +1429,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 803,
+          "line": 865,
           "matches": 1,
           "markers": [
             "sans"
@@ -1289,7 +1438,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 807,
+          "line": 869,
           "matches": 2,
           "markers": [
             "sans",
@@ -1299,7 +1448,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 809,
+          "line": 871,
           "matches": 1,
           "markers": [
             "sans"
@@ -1308,7 +1457,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 811,
+          "line": 873,
           "matches": 1,
           "markers": [
             "pas"
@@ -1317,7 +1466,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 838,
+          "line": 900,
           "matches": 1,
           "markers": [
             "pas"
@@ -1326,7 +1475,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 847,
+          "line": 909,
           "matches": 1,
           "markers": [
             "sans"
@@ -1335,7 +1484,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 861,
+          "line": 923,
           "matches": 1,
           "markers": [
             "pas"
@@ -1344,7 +1493,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 886,
+          "line": 948,
           "matches": 1,
           "markers": [
             "pas"
@@ -1353,7 +1502,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 905,
+          "line": 967,
           "matches": 1,
           "markers": [
             "pas"
@@ -1362,7 +1511,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 907,
+          "line": 969,
           "matches": 2,
           "markers": [
             "pas",
@@ -1372,7 +1521,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 924,
+          "line": 986,
           "matches": 1,
           "markers": [
             "sans"
@@ -1381,7 +1530,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 930,
+          "line": 992,
           "matches": 2,
           "markers": [
             "pas",
@@ -1391,7 +1540,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 934,
+          "line": 996,
           "matches": 2,
           "markers": [
             "pas",
@@ -1401,7 +1550,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 949,
+          "line": 1011,
           "matches": 1,
           "markers": [
             "n'"
@@ -1410,7 +1559,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 955,
+          "line": 1017,
           "matches": 1,
           "markers": [
             "pas"
@@ -1419,7 +1568,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 957,
+          "line": 1019,
           "matches": 2,
           "markers": [
             "sans",
@@ -1429,7 +1578,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 972,
+          "line": 1034,
           "matches": 2,
           "markers": [
             "sans",
@@ -1439,7 +1588,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 982,
+          "line": 1044,
           "matches": 1,
           "markers": [
             "pas"
@@ -1448,7 +1597,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1003,
+          "line": 1065,
           "matches": 2,
           "markers": [
             "sans",
@@ -1458,7 +1607,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1030,
+          "line": 1092,
           "matches": 1,
           "markers": [
             "pas"
@@ -1467,7 +1616,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1049,
+          "line": 1111,
           "matches": 3,
           "markers": [
             "aucune",
@@ -1478,7 +1627,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1051,
+          "line": 1113,
           "matches": 1,
           "markers": [
             "sans"
@@ -1487,7 +1636,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1053,
+          "line": 1115,
           "matches": 1,
           "markers": [
             "pas"
@@ -1496,7 +1645,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1078,
+          "line": 1140,
           "matches": 1,
           "markers": [
             "pas"
@@ -1505,7 +1654,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1126,
+          "line": 1188,
           "matches": 1,
           "markers": [
             "pas"
@@ -1514,7 +1663,36 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1141,
+          "line": 1205,
+          "matches": 1,
+          "markers": [
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1207,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1209,
+          "matches": 3,
+          "markers": [
+            "pas",
+            "n'",
+            "aucune"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1211,
           "matches": 2,
           "markers": [
             "pas",
@@ -1524,17 +1702,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1143,
-          "matches": 2,
-          "markers": [
-            "pas",
-            "pas"
-          ],
-          "proposedPurpose": "technical-or-status-boundary",
-          "humanReviewStatus": "pending"
-        },
-        {
-          "line": 1147,
+          "line": 1215,
           "matches": 1,
           "markers": [
             "pas"
@@ -1543,7 +1711,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1185,
+          "line": 1253,
           "matches": 2,
           "markers": [
             "aucune",
@@ -1553,7 +1721,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1207,
+          "line": 1275,
           "matches": 1,
           "markers": [
             "sans"
@@ -1562,7 +1730,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1209,
+          "line": 1277,
           "matches": 2,
           "markers": [
             "n'",
@@ -1572,7 +1740,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1232,
+          "line": 1300,
           "matches": 1,
           "markers": [
             "pas"
@@ -1581,7 +1749,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1234,
+          "line": 1302,
           "matches": 1,
           "markers": [
             "pas"
@@ -1590,7 +1758,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1256,
+          "line": 1326,
           "matches": 1,
           "markers": [
             "pas"
@@ -1599,7 +1767,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1258,
+          "line": 1328,
           "matches": 4,
           "markers": [
             "n'",
@@ -1611,7 +1779,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1264,
+          "line": 1334,
           "matches": 1,
           "markers": [
             "pas"
@@ -1620,7 +1788,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1266,
+          "line": 1336,
           "matches": 1,
           "markers": [
             "pas"
@@ -1629,7 +1797,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1270,
+          "line": 1340,
           "matches": 1,
           "markers": [
             "pas"
@@ -1638,7 +1806,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1318,
+          "line": 1388,
           "matches": 1,
           "markers": [
             "sans"
@@ -1647,7 +1815,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1321,
+          "line": 1391,
           "matches": 1,
           "markers": [
             "sans"
@@ -1656,7 +1824,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1327,
+          "line": 1397,
           "matches": 1,
           "markers": [
             "pas"
@@ -1668,12 +1836,12 @@
     },
     {
       "path": "TEACHER_GUIDE.md",
-      "sha256": "ba7c36900295e5ff1103d5294131ef1f6eeaf07abd8bc97da183008fdb761b04",
-      "normalizedTextSha256": "ba7c36900295e5ff1103d5294131ef1f6eeaf07abd8bc97da183008fdb761b04",
+      "sha256": "f7830eddebd3acff4089095e76f246b92500c55643ac9787b466b04a5487268a",
+      "normalizedTextSha256": "f7830eddebd3acff4089095e76f246b92500c55643ac9787b466b04a5487268a",
       "hashScope": "sha256 identifies exact file bytes; normalizedTextSha256 identifies the text used by this review",
-      "characters": 74511,
+      "characters": 82593,
       "localReferencesMissing": [],
-      "negativeConstructionMatches": 136,
+      "negativeConstructionMatches": 161,
       "negativeConstructionLocations": [
         {
           "line": 15,
@@ -2038,20 +2206,18 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 460,
-          "matches": 2,
+          "line": 462,
+          "matches": 1,
           "markers": [
-            "pas",
-            "pas"
+            "ni"
           ],
           "proposedPurpose": "technical-or-status-boundary",
           "humanReviewStatus": "pending"
         },
         {
-          "line": 462,
-          "matches": 2,
+          "line": 464,
+          "matches": 1,
           "markers": [
-            "pas",
             "pas"
           ],
           "proposedPurpose": "technical-or-status-boundary",
@@ -2059,6 +2225,27 @@
         },
         {
           "line": 466,
+          "matches": 3,
+          "markers": [
+            "pas",
+            "n'",
+            "aucune"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 468,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 472,
           "matches": 1,
           "markers": [
             "pas"
@@ -2067,7 +2254,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 493,
+          "line": 499,
           "matches": 1,
           "markers": [
             "Aucun"
@@ -2076,7 +2263,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 511,
+          "line": 517,
           "matches": 2,
           "markers": [
             "aucune",
@@ -2086,7 +2273,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 533,
+          "line": 539,
           "matches": 1,
           "markers": [
             "sans"
@@ -2095,7 +2282,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 535,
+          "line": 541,
           "matches": 2,
           "markers": [
             "n'",
@@ -2105,28 +2292,78 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 546,
+          "line": 552,
+          "matches": 1,
+          "markers": [
+            "aucun"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 560,
           "matches": 3,
           "markers": [
-            "aucun",
-            "n'",
+            "sans",
+            "n’",
             "pas"
           ],
           "proposedPurpose": "technical-or-status-boundary",
           "humanReviewStatus": "pending"
         },
         {
-          "line": 548,
+          "line": 561,
           "matches": 2,
           "markers": [
+            "n’",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 562,
+          "matches": 3,
+          "markers": [
             "pas",
+            "n’",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 563,
+          "matches": 2,
+          "markers": [
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 564,
+          "matches": 3,
+          "markers": [
+            "sans",
+            "aucun",
+            "n’"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 565,
+          "matches": 1,
+          "markers": [
             "pas"
           ],
           "proposedPurpose": "security-or-authority-boundary",
           "humanReviewStatus": "pending"
         },
         {
-          "line": 554,
+          "line": 567,
           "matches": 1,
           "markers": [
             "pas"
@@ -2135,7 +2372,66 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 555,
+          "line": 571,
+          "matches": 2,
+          "markers": [
+            "n’",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 573,
+          "matches": 2,
+          "markers": [
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 577,
+          "matches": 1,
+          "markers": [
+            "aucun"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 579,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 585,
+          "matches": 2,
+          "markers": [
+            "Aucun",
+            "n’"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 589,
+          "matches": 2,
+          "markers": [
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 597,
           "matches": 1,
           "markers": [
             "pas"
@@ -2144,7 +2440,16 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 556,
+          "line": 598,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 599,
           "matches": 3,
           "markers": [
             "ni",
@@ -2155,7 +2460,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 559,
+          "line": 602,
           "matches": 2,
           "markers": [
             "aucune",
@@ -2165,7 +2470,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 568,
+          "line": 611,
           "matches": 4,
           "markers": [
             "Aucun",
@@ -2177,7 +2482,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 570,
+          "line": 613,
           "matches": 2,
           "markers": [
             "non",
@@ -2187,7 +2492,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 571,
+          "line": 614,
           "matches": 3,
           "markers": [
             "sans",
@@ -2198,7 +2503,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 572,
+          "line": 615,
           "matches": 1,
           "markers": [
             "non"
@@ -2207,7 +2512,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 573,
+          "line": 616,
           "matches": 2,
           "markers": [
             "sans",
@@ -2217,7 +2522,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 574,
+          "line": 617,
           "matches": 1,
           "markers": [
             "pas"
@@ -2226,7 +2531,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 575,
+          "line": 618,
           "matches": 1,
           "markers": [
             "sans"
@@ -2235,7 +2540,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 576,
+          "line": 619,
           "matches": 1,
           "markers": [
             "aucun"
@@ -2244,7 +2549,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 577,
+          "line": 620,
           "matches": 1,
           "markers": [
             "pas"
@@ -2253,7 +2558,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 578,
+          "line": 621,
           "matches": 4,
           "markers": [
             "n'",
@@ -2265,7 +2570,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 579,
+          "line": 622,
           "matches": 1,
           "markers": [
             "pas"
@@ -2274,7 +2579,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 581,
+          "line": 624,
           "matches": 2,
           "markers": [
             "aucune",
@@ -2284,7 +2589,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 582,
+          "line": 625,
           "matches": 3,
           "markers": [
             "sans",
@@ -2295,7 +2600,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 583,
+          "line": 626,
           "matches": 1,
           "markers": [
             "sans"
@@ -2304,7 +2609,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 584,
+          "line": 627,
           "matches": 1,
           "markers": [
             "pas"
@@ -2313,7 +2618,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 586,
+          "line": 629,
           "matches": 1,
           "markers": [
             "sans"
@@ -2322,7 +2627,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 587,
+          "line": 630,
           "matches": 1,
           "markers": [
             "pas"
@@ -2331,7 +2636,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 588,
+          "line": 631,
           "matches": 2,
           "markers": [
             "pas",
@@ -2341,7 +2646,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 590,
+          "line": 633,
           "matches": 1,
           "markers": [
             "pas"
@@ -2350,7 +2655,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 591,
+          "line": 634,
           "matches": 9,
           "markers": [
             "sans",
@@ -2367,7 +2672,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 592,
+          "line": 635,
           "matches": 3,
           "markers": [
             "sans",
@@ -2378,7 +2683,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 594,
+          "line": 637,
           "matches": 1,
           "markers": [
             "aucune"
@@ -2387,7 +2692,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 597,
+          "line": 640,
           "matches": 2,
           "markers": [
             "pas",
@@ -2397,7 +2702,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 601,
+          "line": 644,
           "matches": 2,
           "markers": [
             "n'",
@@ -2407,7 +2712,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 603,
+          "line": 646,
           "matches": 3,
           "markers": [
             "pas",
@@ -2418,7 +2723,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 607,
+          "line": 650,
           "matches": 1,
           "markers": [
             "sans"
@@ -2427,7 +2732,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 615,
+          "line": 658,
           "matches": 1,
           "markers": [
             "pas"
@@ -2436,7 +2741,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 617,
+          "line": 660,
           "matches": 2,
           "markers": [
             "aucune",
@@ -2446,7 +2751,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 627,
+          "line": 670,
           "matches": 5,
           "markers": [
             "pas",
@@ -2459,7 +2764,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 629,
+          "line": 672,
           "matches": 1,
           "markers": [
             "pas"
@@ -2742,12 +3047,12 @@
     },
     {
       "path": "CANVA_BRIEFS.md",
-      "sha256": "5360694f0f333f5578f83dffe13f4aa7c375a0c2d0558982823c8e941a34ac40",
-      "normalizedTextSha256": "5360694f0f333f5578f83dffe13f4aa7c375a0c2d0558982823c8e941a34ac40",
+      "sha256": "90f18a85bf40d2053df4fbb55433639e96696199acc609264fb3097de0d45658",
+      "normalizedTextSha256": "90f18a85bf40d2053df4fbb55433639e96696199acc609264fb3097de0d45658",
       "hashScope": "sha256 identifies exact file bytes; normalizedTextSha256 identifies the text used by this review",
-      "characters": 43644,
+      "characters": 44061,
       "localReferencesMissing": [],
-      "negativeConstructionMatches": 85,
+      "negativeConstructionMatches": 87,
       "negativeConstructionLocations": [
         {
           "line": 3,
@@ -3092,6 +3397,16 @@
           "matches": 1,
           "markers": [
             "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 363,
+          "matches": 2,
+          "markers": [
+            "ni",
+            "ni"
           ],
           "proposedPurpose": "technical-or-status-boundary",
           "humanReviewStatus": "pending"

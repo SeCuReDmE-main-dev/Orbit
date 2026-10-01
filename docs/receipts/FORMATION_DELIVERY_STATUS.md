@@ -1,5 +1,29 @@
 # Orbit Formation — current delivery and qualification record
 
+## Definitive closure pass — current evidence, October 1, 2026
+
+This section supersedes the earlier checkpoint archived below. The approved landing V3, atom mechanism 2.1.7 and fifth learning door remain intact. The course remains **40 hours: 10 accompanied and 30 solo**, with the final project ordered **1 teacher setup hour → 6 solo hours → 1 teacher closure hour**. No graphic redesign, learner assessment or editorial is part of this pass.
+
+| Requirement | Current result | Evidence and boundary |
+|---|---|---|
+| Dedicated pedagogical Context | Nine canonical course sources admitted; actual public outline and entry reads `READY`; separate research corpus preserved | [Provenance](formation/course-context-ingestion.json), [issue review](formation/course-context-issue-triage.json), [deployed HTTP readback](formation/course-context-live-transport.json). Exact audited revision and allowlist; generated content was not hand-rewritten |
+| Root and course WebMCP | Root `orbit-webmcp-v7` retains 15 tools; pedagogical contexts retain 25 | [Native root schemas](formation/native-root-schema-discovery.json), [Kaggle/E2B cross-origin run](formation/cross-origin-public-validation.json): 16/16 checks. Tool discovery, tool execution and authenticated publication are distinct |
+| Software closure regressions | Kaggle: 141 Vitest assertions, 8 Node policy/provenance tests, 7 Python tests, 14 import/document replay cases; separate PHP suite 36 tests | [Software](formation/closure-software-regressions-kaggle.json), [PHP](formation/php-context-closure-pass-kaggle.json). [Public V3 notebook](formation/closure-regressions-publication.json) preserves executed V2 results and corrects the narrative count; it is not a rerun |
+| Manual Colab import and assembly | Fresh free CPU copy, explicitly selected actual eight exports, recoverable loading, inspection and assembly | [Colab observation](formation/free-colab-module-8-manual-import-assembled.json), [Kaggle compilation](formation/actual-manual-import-assembly-static-kaggle.json). Exact assembly `7ae43df9…`; no instructor substitution. Its static build does not inherit the earlier assembly's 35 browser checks |
+| Course web documents | Nine actual Canva websites published and read back: eight modules and final project | [Maintained index and publication receipt](../learning/orbit-formation/publication/CANVA_DELIVERY.md). Real mission/notebook links; no simulated agent execution or learner observation |
+| Reading and teaching manuals | French maintained manuscript, teacher scripts, assistant missions, DOCX and PDF regenerated from the delivered mechanisms | [Publication directory](../learning/orbit-formation/publication/README.md). The final export receipt identifies reviewed bytes and pagination; pedagogical human approval remains separate |
+| Studio portable runtime | Exact package installed on a second HTTPS origin, signed-out refusal and public Context verified | [Cross-origin receipt](formation/cross-origin-public-validation.json). Authenticated synthetic publication, replay and logout are still separate; Google refused the native Linux login as an insecure browser |
+| Deterministic engine campaign | 60 questions on three engines; 36 synthetic questions scored and 24 real questions retained as pending human review | [Campaign software/engine receipt](formation/campaign-v2-software-kaggle.json). Real cases do not enter definitive accuracy ranking |
+| Model and native-agent campaigns | Campaign identities, checkpoints and actual results are retained; full C/D/E volumes are not yet qualified | C exposed SDK cache reuse after only two real extractions/eight comparative productions. D is blocked by the observed KB plan capacity. E is not dispatched on a defective scheduler. No replacement provider or fabricated completion |
+
+The [static deployment and backup](formation/closure-deployment.json) and [live transport readback](formation/closure-static-live-transport.json) identify the actual deployed release. A later document-only overlay must keep its own receipt and must not silently replace a frozen campaign identity.
+
+The separate WebMCP Origin Trial feedback report was delivered privately in Drive. At the author's request, the completed Chromium form is retained for **his own submission after his graphic edits**. This is no longer an agent submission blocker and no submitted Chromium issue is claimed.
+
+Disposable test access is retired only after its results are recovered and refusal is verified. Campaign-specific cleanup must identify the actual retired tokens, sandboxes and temporary Sanity CORS record. Earlier cleanup receipts below do not establish cleanup of new resources. The primary E2B account key remains unchanged.
+
+## Historical consolidated checkpoint — retained, superseded
+
 ## Current consolidated checkpoint — October 1, 2026
 
 Public inspection release: **V3 / 3.0.0**, with the previously validated atom mechanism `2.1.7` unchanged and the fifth **Apprendre / Learn / Aprender** door active. The [V3 handoff](formation/FORMATION_HANDOFF_2026-10-01.md#v3-public-release) distinguishes this version-only deployment and origin readback from the historical Kaggle/E2B executions. It does not mark the unresolved Context, portable Studio or Canva work complete.

@@ -13,13 +13,15 @@ describe('External-agent WebMCP v2', () => {
   expect(registered.filter(t => !t.annotations.readOnlyHint).map(t => t.name)).toEqual(['orbit_present_research'])
   expect(registered.every(t => t.inputSchema.additionalProperties === false && t.outputSchema.required.includes('state'))).toBe(true)
   const capabilities = await tool('orbit_get_capabilities').execute({})
-  expect(capabilities).toMatchObject({ automaticActions: [], workspace: { readable: false }, sanity: { state: 'NOT_CHECKED', dossierConsentRequired: false } })
+  expect(capabilities).toMatchObject({ contractVersion: 'orbit-webmcp-v7', automaticActions: [], workspace: { readable: false }, sanity: { state: 'NOT_CHECKED', dossierConsentRequired: false }, entries: { lab: '/formation/lab/', projects: '/formation/projets/' }, learning: { availableHere: false, toolCountOnEntryPages: 25 } })
+  expect(capabilities.tools).toHaveLength(15)
   await tool('orbit_get_research_protocol').execute({})
   expect(network).not.toHaveBeenCalled(); expect(sendMessage).not.toHaveBeenCalled()
  })
  it('denies private reads even when an extension is present', async () => {
   const sendMessage = vi.fn(); vi.stubGlobal('chrome', { runtime: { sendMessage } })
   for (const name of ['orbit_get_research_request','orbit_get_mission_summary','orbit_list_research_points']) expect(await tool(name).execute({})).toMatchObject({state:'CONSENT_REQUIRED'})
+  expect(await tool('orbit_get_mission_summary').execute({})).toMatchObject({state:'CONSENT_REQUIRED',nextTool:'orbit_get_capabilities'})
   expect(sendMessage).not.toHaveBeenCalled()
  })
  it('paginates saved evidence and rejects foreign mission references', async () => {
