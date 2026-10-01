@@ -2,7 +2,7 @@
  * No model calls, polyfill, injected registry, publication or human approval.
  */
 import { createServer } from 'node:http';
-import { timingSafeEqual, randomUUID } from 'node:crypto';
+import { timingSafeEqual, randomUUID, createHash } from 'node:crypto';
 import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { WebMcpBrowser } from './webmcp-browser';
@@ -19,6 +19,38 @@ let status: Status = { state: 'idle', host: 'E2B', orchestrator: 'Kaggle', model
 const pedagogical = ['orbit_get_learning_mission', 'orbit_get_learning_protocol', 'orbit_plan_learning_activity', 'orbit_prepare_experiment', 'orbit_read_learning_artifact', 'orbit_get_learning_support', 'orbit_check_understanding', 'orbit_prepare_transfer', 'orbit_present_learning_work', 'orbit_get_learning_journal'];
 const originals = ['orbit_get_capabilities', 'orbit_get_research_protocol', 'orbit_sanity_initial_context', 'orbit_sanity_read_entries', 'orbit_get_research_request', 'orbit_get_mission_summary', 'orbit_list_research_points', 'orbit_search_sources', 'orbit_read_source_record', 'orbit_present_research', 'orbit_classify_evidence', 'orbit_compare_claims', 'orbit_find_relations', 'orbit_resolve_hold', 'orbit_trace_impact'];
 
+/** Standards-compliant stored ZIP fixture. This creates test input only, never page tools. */
+function storedZip(files: Record<string, string>): Buffer {
+  const local: Buffer[] = [], directory: Buffer[] = []; let offset = 0;
+  for (const [name, content] of Object.entries(files)) {
+    if (!/^[A-Za-z0-9_.\/-]+$/.test(name) || name.split('/').some(part => !part || part === '..' || part === '.')) throw Error('UNSAFE_FIXTURE_PATH');
+    const path = Buffer.from(name), data = Buffer.from(content, 'utf8'); let crc = 0xffffffff;
+    for (const byte of data) { crc ^= byte; for (let bit = 0; bit < 8; bit++) crc = crc & 1 ? (crc >>> 1) ^ 0xedb88320 : crc >>> 1; }
+    crc = (crc ^ 0xffffffff) >>> 0;
+    const date=((2026-1980)<<9)|(10<<5)|1;
+    const header = Buffer.alloc(30); header.writeUInt32LE(0x04034b50); header.writeUInt16LE(20, 4); header.writeUInt16LE(0x0800, 6); header.writeUInt16LE(date,12); header.writeUInt32LE(crc, 14); header.writeUInt32LE(data.length, 18); header.writeUInt32LE(data.length, 22); header.writeUInt16LE(path.length, 26);
+    local.push(header, path, data);
+    const central = Buffer.alloc(46); central.writeUInt32LE(0x02014b50); central.writeUInt16LE(0x0314, 4); central.writeUInt16LE(20, 6); central.writeUInt16LE(0x0800, 8); central.writeUInt16LE(date,14); central.writeUInt32LE(crc, 16); central.writeUInt32LE(data.length, 20); central.writeUInt32LE(data.length, 24); central.writeUInt16LE(path.length, 28); central.writeUInt32LE((0o100644 << 16) >>> 0, 38); central.writeUInt32LE(offset, 42);
+    directory.push(central, path); offset += header.length + path.length + data.length;
+  }
+  const centralBytes = Buffer.concat(directory), end = Buffer.alloc(22), count = Object.keys(files).length;
+  end.writeUInt32LE(0x06054b50); end.writeUInt16LE(count, 8); end.writeUInt16LE(count, 10); end.writeUInt32LE(centralBytes.length, 12); end.writeUInt32LE(offset, 16);
+  return Buffer.concat([...local, centralBytes, end]);
+}
+function archiveFixture() {
+  const sha = (content: string) => createHash('sha256').update(content, 'utf8').digest('hex');
+  const path = 'frontend/interaction-state.js', content = 'export const syntheticArchiveFixture = true;\n';
+  const result = { schemaVersion:'orbit-learning-colab-v1', missionId:'module-4', moduleId:4, attemptId:'synthetic-browser-archive-1', parameters:{fixture:true}, prediction:'Synthetic import fixture, not a notebook execution.', observations:['The harness tests the real browser import boundary.'], explanation:'No learner understanding is examined.', assistance:['Automated synthetic validation harness.'], limitations:['No notebook execution or learning review.'], openQuestion:'', status:'external-declared', artifacts:[{path,content,sha256:sha(content),mediaType:'text/javascript'}] };
+  const files: Record<string,string> = {
+    'orbit-learning-result.json':JSON.stringify(result),
+    'notebook.ipynb':JSON.stringify({nbformat:4,nbformat_minor:5,metadata:{orbit_fixture:true},cells:[]}),
+    'INTEGRATION.md':'Synthetic browser-import test only. This is not an executed learner notebook.\n',
+    [path]:content,
+  };
+  files['manifest.json'] = JSON.stringify({schemaVersion:'orbit-learning-artifact-manifest-v1',files:Object.entries(files).map(([path,content])=>({path,sha256:sha(content)}))});
+  return {valid:storedZip(files),tampered:storedZip({...files,[path]:'export const syntheticArchiveFixture = false;\n'}),fileCount:Object.keys(files).length,frontendSha256:sha(content)};
+}
+
 async function campaign(live: boolean, runId: string) {
   // Reserve the final seconds for closing Chrome and preserving the result.
   const started = Date.now(), deadline = started + 85_000;
@@ -27,7 +59,7 @@ async function campaign(live: boolean, runId: string) {
   status = { ...status, state: 'running', runId, targetUrl, success: undefined, checks: [], errors: [], screenshots: [], nativeWebMCP: false, completed: false };
   let browser: WebMcpBrowser | undefined;
   const signal = AbortSignal.timeout(85_000);
-  const bound = () => { if (Date.now() >= deadline || signal.aborted) throw Error('CAMPAIGN_TIME_BOUND'); if (status.checks.length >= 60) throw Error('CHECK_COUNT_BOUND'); };
+  const bound = () => { if (Date.now() >= deadline || signal.aborted) throw Error('CAMPAIGN_TIME_BOUND'); if (status.checks.length >= 90) throw Error('CHECK_COUNT_BOUND'); };
   const timed = async <T>(promise: Promise<T>, maximum = 60_000): Promise<T> => {
     bound(); let timer: ReturnType<typeof setTimeout> | undefined;
     try {
@@ -48,6 +80,11 @@ async function campaign(live: boolean, runId: string) {
   const discover = async () => { bound(); return timed(browser!.discover()); };
   const execute = async (name: string, input: unknown = {}) => { bound(); return await timed(browser!.execute(name, input, signal)) as Record<string, any>; };
   const click = async (selector: string) => evaluate(`(()=>{const e=document.querySelector(${JSON.stringify(selector)});if(!e)throw Error('CONTROL_NOT_FOUND');e.click();return true})()`);
+  const importFile = async (file: string) => {
+    await click('[data-import-artifact]');
+    const doc = await command('DOM.getDocument', {}), input = await command('DOM.querySelector', {nodeId:doc.root.nodeId,selector:'[data-learning-import]'});
+    await command('DOM.setFileInputFiles', {nodeId:input.nodeId,files:[file]});
+  };
   const route = async (view: string) => { await click(`[data-view="${view}"]`); await waitFor(`new URL(location.href).searchParams.get('view')===${JSON.stringify(view)}`); await discover(); };
   const screenshot = async (name: string) => {
     const image = await command('Page.captureScreenshot', { format: 'png' }, 5000) as { data: string };
@@ -62,6 +99,46 @@ async function campaign(live: boolean, runId: string) {
   const selectModule = async (moduleId: number) => {
     await evaluate(`(()=>{const e=document.querySelector('[data-module]');e.value='${moduleId}';e.dispatchEvent(new Event('change',{bubbles:true}));return true})()`);
     await waitFor(`document.querySelector('[data-learning-surface] h1')&&new URL(location.href).searchParams.get('module')==='${moduleId}'`); await discover();
+  };
+  const verifyLiveRelease = async () => {
+    const origin = new URL(targetUrl).origin;
+    const readPublic = async (path: string, maximum = 32_000_000) => {
+      const url = new URL(path, origin); if (url.origin !== origin || url.search || url.hash) throw Error('PUBLIC_RESOURCE_ORIGIN_BOUND');
+      // A fresh proof request avoids an intermediary reusing a previous fixed
+      // URL. The origin/path guard above still applies; no credential is sent.
+      url.searchParams.set('orbit-release-check',runId);
+      const response = await timed(fetch(url,{credentials:'omit',redirect:'error',cache:'no-store',signal:AbortSignal.any([signal,AbortSignal.timeout(6000)]),headers:{'cache-control':'no-cache'}}),6500);
+      const chunks: Buffer[] = []; let length = 0;
+      if (Number(response.headers.get('content-length')) > maximum) throw Error('PUBLIC_RESOURCE_SIZE_BOUND');
+      if (response.body) for await (const chunk of response.body as any) {bound();length+=chunk.length;if(length>maximum)throw Error('PUBLIC_RESOURCE_SIZE_BOUND');chunks.push(Buffer.from(chunk));}
+      return {url:url.href,status:response.status,type:response.headers.get('content-type')??'',bytes:Buffer.concat(chunks),sha256:createHash('sha256').update(Buffer.concat(chunks)).digest('hex')};
+    };
+    const published = await readPublic('/formation/release.json',100_000);
+    append('live-release-json-is-accessible',published.status===200&&published.type.includes('json'),{url:published.url,status:published.status});
+    const release=JSON.parse(published.bytes.toString('utf8')),files=release.files as Record<string,string>;
+    const names=files&&typeof files==='object'&&!Array.isArray(files)?Object.keys(files):[];
+    // The portable Studio contributes hundreds of hashed chunks; retain the
+    // exact 3,000-file packaging bound rather than the earlier page-only limit.
+    append('live-release-manifest-is-formation-only',release.scope==='formation-only'&&release.landingModified===false&&names.length>0&&names.length<=3000&&names.every(name=>/^formation\/[A-Za-z0-9_./-]+$/.test(name)&&!name.split('/').some(part=>!part||part==='.'||part==='..')&&/^[a-f0-9]{64}$/.test(files[name])),{files:names.length});
+    const usedAssets=await evaluate(`[...document.querySelectorAll('script[src],link[rel="stylesheet"][href]')].map(element=>new URL(element.getAttribute('src')??element.getAttribute('href'),location.href)).filter(url=>url.origin===location.origin&&url.pathname.startsWith('/formation/_astro/')).map(url=>url.pathname.slice(1))`) as string[];
+    const roles: Array<[string,string[]]> = [
+      ['html',['formation/lab/index.html','formation/projets/index.html']],
+      ['javascript',names.filter(name=>name.endsWith('.js')&&usedAssets.includes(name))],
+      ['stylesheet',names.filter(name=>name.endsWith('.css')&&usedAssets.includes(name))],
+      ['studio-plugin',names.filter(name=>name.startsWith('formation/plugins/')&&name.endsWith('.tgz'))],
+    ];
+    for(const [role,paths] of roles){
+      const selected=role==='html'?paths:paths.slice(0,1),observed=[];
+      for(const name of selected)observed.push(await readPublic('/'+name));
+      append(`live-${role}-matches-release-digest`,selected.length>0&&observed.every((resource,index)=>resource.status===200&&resource.sha256===files[selected[index]]),observed.map(resource=>({url:resource.url,status:resource.status,sha256:resource.sha256})));
+    }
+    // Inspect fetched HTML in detached documents. No landing interaction or navigation is changed.
+    for(const path of ['/','/guide/']){
+      const resource=await readPublic(path,2_000_000);
+      append(path==='/'?'live-landing-html-accessible':'live-guide-html-accessible',resource.status===200&&resource.type.includes('html'),{url:resource.url,status:resource.status,sha256:resource.sha256});
+      const details=await evaluate(`(()=>{const d=new DOMParser().parseFromString(${JSON.stringify(resource.bytes.toString('utf8'))},'text/html');return{brand:d.querySelector('.orbit-brand')?.textContent?.trim(),atom:!!d.querySelector('[data-atom-canvas]'),learningHref:d.querySelector('[data-atom-link="4"]')?.getAttribute('href'),formationLinks:[...d.querySelectorAll('a[href]')].filter(a=>new URL(a.getAttribute('href'),location.origin).pathname.startsWith('/formation/')).length,landingEdition:d.querySelector('.landing-edition')?.textContent?.trim(),navigation:[...d.querySelectorAll('[data-atom-link]')].map(element=>element.textContent.trim()),guideTitle:d.querySelector('h1')?.textContent?.trim()}})()`);
+      append(path==='/'?'live-landing-branding-and-five-navigation-doors':'live-guide-branding-preserved',details.brand==='Orbit.'&&(path!=='/'||details.atom&&details.formationLinks===1&&details.learningHref==='/formation/lab/'&&details.landingEdition==='UN ESPACE POUR LES ESPRITS CURIEUX'&&JSON.stringify(details.navigation)===JSON.stringify(['DOCUMENTATION','INTERFACE ORBIT','JOUER','STUDIO SANITY','APPRENDRE'])),details);
+    }
   };
   const startExperiment = async (parameter?: number) => {
     await route('experiment');
@@ -171,6 +248,65 @@ async function campaign(live: boolean, runId: string) {
     await click('[data-view="versions"]'); await discover(); await check('version-view-preserves-artifact-identity', `document.querySelector('[data-learning-surface]').textContent.includes('synthetic-browser-fixture')`);
     await evaluate('history.back();true'); await waitFor(`new URL(location.href).searchParams.get('view')!=='versions'`); await discover();
     await check('browser-back-restores-files-view', `document.querySelector('[data-learning-tabs] [aria-current="page"]').dataset.view==='files'&&document.querySelectorAll('[data-share-artifact]').length===2`);
+    // New checks use real human controls and native tools in the disposable profile.
+    // They never upgrade a synthetic fixture to learner work or human approval.
+    await check('unsaved-session-is-labelled-memory', `document.querySelector('[data-learning-state]').textContent.includes('mémoire')&&Object.keys(localStorage).filter(key=>key.startsWith('orbit.learning.v1:')).length===0`);
+    const originalBrick='colab-synthetic-browser-fixture:1',brickSha=createHash('sha256').update(artifactFixture.artifacts[0].content).digest('hex');
+    await click(`[data-verify-artifact="${originalBrick}"]`);
+    await waitFor(`document.querySelector('[data-new-artifact-version="${originalBrick}"]').closest('article').textContent.includes('matched')`);
+    await check('real-sha-control-preserves-declared-status', `(()=>{const a=document.querySelector('[data-new-artifact-version="${originalBrick}"]').closest('article');return a.textContent.includes('external-declared')&&a.textContent.includes('matched')&&!a.textContent.includes('verified-technical')&&!a.textContent.includes('human-reviewed')})()`);
+    await click(`[data-artifact="${originalBrick}"]`);await discover();
+    await check('real-sha-control-displays-exact-digest', `document.querySelector('[data-learning-surface]').textContent.includes(${JSON.stringify(brickSha)})&&document.querySelector('[data-learning-notice]').textContent.includes('compréhension')`);
+    await click(`[data-new-artifact-version="${originalBrick}"]`);
+    const modifiedContent='export const fixture = false;\n';
+    await evaluate(`(()=>{const form=document.querySelector('[data-artifact-version]');form.querySelector('[name="content"]').value=${JSON.stringify(modifiedContent)};form.requestSubmit();return true})()`);
+    await waitFor(`new URL(location.href).searchParams.get('artifact')&&new URL(location.href).searchParams.get('artifact')!==${JSON.stringify(originalBrick)}&&!document.querySelector('[data-learning-dialog]').open`);
+    const newArtifactId=await evaluate(`new URL(location.href).searchParams.get('artifact')`);await discover();
+    await check('new-version-preserves-text-and-resets-verification', `document.querySelector('[data-learning-surface] pre').textContent===${JSON.stringify(modifiedContent)}&&document.querySelector('[data-learning-surface]').textContent.includes('v2')&&document.querySelector('[data-learning-surface]').textContent.includes('modified')&&document.querySelector('[data-learning-surface]').textContent.includes('not-checked')&&!document.querySelector('[data-learning-surface]').textContent.includes(${JSON.stringify(brickSha)})`);
+    const versionSummary=await execute('orbit_get_mission_summary'),unsharedVersion=await execute('orbit_read_learning_artifact',{sessionId:versionSummary.requestId,expectedRevision:versionSummary.revision,artifactId:newArtifactId});
+    append('new-version-has-no-implicit-agent-sharing',unsharedVersion.state==='NOT_FOUND');
+    await click('[data-artifact-back]');await discover();
+    await check('new-version-keeps-original-artifact', `document.querySelectorAll('[data-share-artifact]').length===3&&!!document.querySelector('[data-share-artifact="${originalBrick}"]')&&!!document.querySelector('[data-share-artifact="${newArtifactId}"]')&&!document.querySelector('[data-share-artifact="${newArtifactId}"]').checked&&document.querySelector('[data-share-artifact="${originalBrick}"]').closest('article').textContent.includes('external-declared')`);
+    // A native proposal changes the revision while the human version form is open.
+    await share(true,true);await discover();const raceSummary=await execute('orbit_get_mission_summary');
+    await click(`[data-new-artifact-version="${originalBrick}"]`);
+    const race=await execute('orbit_present_learning_work',{sessionId:raceSummary.requestId,expectedRevision:raceSummary.revision,id:'synthetic-version-race',kind:'reflection',payload:{text:'Automated concurrency fixture, not a learning review.'}});
+    append('version-concurrency-fixture-remains-agent-proposal',race.state==='PRESENTED'&&race.data.humanApproved===false);
+    await evaluate(`document.querySelector('[data-artifact-version]').requestSubmit();true`);
+    await check('stale-version-form-does-not-create-artifact', `document.querySelector('[data-learning-notice]').textContent.includes('STALE_REVISION')&&document.querySelector('[data-learning-dialog]').open&&document.querySelectorAll('[data-share-artifact]').length===3`);
+    await click('[data-dialog-close]');
+    await click('[data-permissions]');await permission('localSave',true);await click('[data-dialog-close]');
+    await check('local-save-label-is-confirmed-only-with-browser-copy', `document.querySelector('[data-learning-state]').textContent.includes('confirmée')&&Object.keys(localStorage).filter(key=>key.startsWith('orbit.learning.v1:')).length===1&&document.querySelector('[data-learning-persistence]').hidden`);
+    const storedBefore=await evaluate(`(()=>{const key=Object.keys(localStorage).find(key=>key.startsWith('orbit.learning.v1:'));const value=JSON.parse(localStorage.getItem(key));return{revision:value.revision,artifacts:value.artifacts.length}})()`);
+    const unsavedFile=join(runFolder,'synthetic-unsaved-fixture.txt');await writeFile(unsavedFile,'Synthetic memory-only work after an injected storage failure.\n');
+    // Fault injection is restricted to this worker's learning-storage key.
+    // Preferences, agent registrations and application code are not replaced.
+    await evaluate(`(()=>{const original=Storage.prototype.setItem;window.__formationStorageOriginal=original;Storage.prototype.setItem=function(key,value){if(String(key).startsWith('orbit.learning.v1:'))throw new DOMException('Synthetic quota test','QuotaExceededError');return original.call(this,key,value)};return true})()`);
+    try{
+      await importFile(unsavedFile);await waitFor(`document.querySelectorAll('[data-share-artifact]').length===4`);
+      await check('failed-save-keeps-work-and-shows-durable-memory-warning', `!document.querySelector('[data-learning-persistence]').hidden&&document.querySelector('[data-learning-persistence]').textContent.includes('mémoire')&&document.querySelector('[data-learning-state]').textContent.includes('indisponible')&&document.querySelector('[data-learning-surface]').textContent.includes('synthetic-unsaved-fixture.txt')`);
+      await check('failed-save-does-not-overwrite-last-confirmed-copy', `(()=>{const key=Object.keys(localStorage).find(key=>key.startsWith('orbit.learning.v1:'));const value=JSON.parse(localStorage.getItem(key));return value.revision===${storedBefore.revision}&&value.artifacts.length===${storedBefore.artifacts}})()`);
+      await route('versions');await route('files');
+      await check('save-failure-warning-survives-view-change', `!document.querySelector('[data-learning-persistence]').hidden&&document.querySelector('[data-learning-persistence]').textContent.includes('exporte')`);
+    }finally{await evaluate(`(()=>{if(window.__formationStorageOriginal){Storage.prototype.setItem=window.__formationStorageOriginal;delete window.__formationStorageOriginal}return true})()`);}
+    await click('[data-permissions]');await click('[data-save-local]');await click('[data-dialog-close]');
+    await check('explicit-save-recovers-after-storage-failure', `(()=>{const key=Object.keys(localStorage).find(key=>key.startsWith('orbit.learning.v1:'));const value=JSON.parse(localStorage.getItem(key));return document.querySelector('[data-learning-persistence]').hidden&&document.querySelector('[data-learning-state]').textContent.includes('confirmée')&&value.revision>${storedBefore.revision}&&value.artifacts.some(a=>a.title==='synthetic-unsaved-fixture.txt')})()`);
+    const archive=archiveFixture(),validArchive=join(runFolder,'synthetic-colab-valid.zip'),tamperedArchive=join(runFolder,'synthetic-colab-tampered.zip');
+    await writeFile(validArchive,archive.valid);await writeFile(tamperedArchive,archive.tampered);
+    const beforeArchive=await evaluate(`document.querySelectorAll('[data-share-artifact]').length`);
+    await importFile(validArchive);await waitFor(`document.querySelectorAll('[data-share-artifact]').length===${beforeArchive+archive.fileCount}`);
+    await check('real-colab-zip-import-validates-manifest-and-remains-declared', `document.querySelector('[data-learning-notice]').textContent.includes('Archive contrôlée')&&document.querySelector('[data-learning-notice]').textContent.includes('non vérifiées')&&document.querySelector('[data-learning-surface]').textContent.includes('synthetic-browser-archive-1')&&!document.querySelector('[data-learning-surface]').textContent.includes('human-reviewed')`);
+    const archiveBrick='colab-synthetic-browser-archive-1:4';
+    await click(`[data-artifact="${archiveBrick}"]`);await discover();
+    await check('zip-import-preserves-actual-frontend-text-and-digest', `document.querySelector('[data-learning-surface] pre').textContent===${JSON.stringify('export const syntheticArchiveFixture = true;\n')}&&document.querySelector('[data-learning-surface]').textContent.includes(${JSON.stringify(archive.frontendSha256)})&&document.querySelector('[data-learning-surface]').textContent.includes('external-declared')`);
+    await click('[data-artifact-back]');await discover();
+    const beforeTamper=await execute('orbit_get_mission_summary');
+    await importFile(tamperedArchive);await waitFor(`document.querySelector('[data-learning-notice]').textContent.includes('DECLARED_FRONTEND_DIFFERS_FROM_ARCHIVE')||document.querySelector('[data-learning-notice]').textContent.includes('Integrity mismatch')`);
+    await check('tampered-colab-zip-is-rejected-without-partial-artifacts', `document.querySelectorAll('[data-share-artifact]').length===${beforeArchive+archive.fileCount}`);
+    const afterTamper=await execute('orbit_get_mission_summary');append('tampered-archive-does-not-change-session-revision',afterTamper.revision===beforeTamper.revision);
+    await click('[data-permissions]');await permission('localSave',false);await click('[data-dialog-close]');
+    await check('local-saving-revocation-removes-worker-copy', `Object.keys(localStorage).filter(key=>key.startsWith('orbit.learning.v1:')).length===0&&document.querySelector('[data-learning-state]').textContent.includes('mémoire')`);
+    if(live)await verifyLiveRelease();
     await command('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
     await check('small-screen-has-no-horizontal-overflow', `document.documentElement.scrollWidth<=document.documentElement.clientWidth+2&&document.querySelector('[data-module]').getBoundingClientRect().right<=390`);
     status.runtimeErrors = await evaluate('window.__formationCheckErrors'); append('no-runtime-errors', status.runtimeErrors?.length === 0, status.runtimeErrors);

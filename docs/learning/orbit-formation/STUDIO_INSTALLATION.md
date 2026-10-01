@@ -9,12 +9,14 @@ Download [orbit-learning-studio-1.0.0.tgz](../../../artifacts/learning-studio/or
 The collected archive SHA-256 is:
 
 ```text
-bc222bd2e3553ddfa0a659986ab3c26354d6ae36b424fe7a9f6d96dacab32bdf
+3e3a499db12d0af2a84bd8d48eeea9fa893636e6a5a624271ef73e32a2c614fe
 ```
 
-The hash was independently checked against the cloud packaging report. The archive contains its JavaScript bundle, TypeScript declaration, build-input record, package manifest, and README. The learning core and engines are embedded; React and Sanity come from the host. No npm publication is required.
+The archive hash was checked in the separate Kaggle installation and in the final public HTTP digest readback. The archive contains its JavaScript bundle, TypeScript declaration, build-input record, package manifest, and README. The learning core and engines are embedded; React and Sanity come from the host. No npm publication is required.
 
-**At preparation, installation into a second Studio is not yet declared successful.** The separate Kaggle validation cell must complete and its results must be inspected. The earlier formation software checks do not replace this integration check.
+**Installation, import and static build in a fresh second Studio passed in Kaggle.** The [retained integration receipt](../../receipts/formation/second-studio-static.json) records `PASS_STATIC_INSTALL_BUILD`, all command exits 0, the archive above and 315 generated build files. This credential-free blank host used the exact versions below and a fictitious project configuration.
+
+Authenticated UI, cross-origin Context, native WebMCP runtime and real Sanity writes remain **unvalidated**. No account was created, no one logged in, no dataset was changed and the plugin was not published to npm. The [delivery receipt](../../receipts/FORMATION_DELIVERY_STATUS.md) keeps this static result separate from the 72 live checks on Orbit's public formation pages.
 
 ## Add the plugin to an existing Studio
 

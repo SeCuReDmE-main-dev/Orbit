@@ -113,7 +113,7 @@ const server=createServer(async(req,res)=>{
     await check('escape-returns',`document.querySelector('.atom-games').hidden`);
     await check('ambient-reduced-motion',`Number(document.querySelector('[data-landing]').dataset.ambientVortex)===0`);
     await browser.evaluate(`document.querySelector('[data-play-close]').click();true`);
-    await check('navigation-preserved',`Array.from(document.querySelectorAll('.atom-links a'),a=>a.getAttribute('href')).join(',')==='/guide/,/app/,/studio/'`);
+    await check('navigation-preserved',`Array.from(document.querySelectorAll('.atom-links a'),a=>a.getAttribute('href')).join(',')==='/guide/,/app/,/studio/,/formation/lab/'&&Array.from(document.querySelectorAll('[data-atom-link]'),element=>element.dataset.atomLink).join(',')==='0,1,2,3,4'`);
     await rpc.call('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'no-preference'}]},session);
     await browser.evaluate(`document.querySelector('[data-landing-access]').click();document.querySelector('[data-landing-motion]').click();document.querySelector('[data-access-close]').click();true`);
     await check('static-mode',`document.querySelector('[data-landing]').dataset.motion==='static'&&!document.querySelector('[data-atom-canvas]').hidden&&document.querySelector('[data-atom-fallback]').hidden&&!document.querySelector('.atom-links').hidden`);
@@ -135,7 +135,7 @@ const server=createServer(async(req,res)=>{
     await browser.evaluate(`(()=>{window.__atomErrors=[];window.addEventListener('error',e=>window.__atomErrors.push(e.message));document.querySelector('[data-landing-access]').click();document.querySelector('[data-landing-motion]').click();document.querySelector('[data-access-close]').click();return true})()`);
     await browser.evaluate(`(async()=>{for(let i=0;i<100;i++){if(document.querySelector('.atom-games'))return true;await new Promise(r=>setTimeout(r,100));}throw Error('ANIMATED_NOT_RESTORED')})()`);
     await check('animated-resumed',`!document.querySelector('[data-atom-canvas]').hidden`);
-    await check('publication-lab-and-version-2.1.6',`document.querySelector('.publication-lab-signature').naturalWidth>0&&document.querySelector('.landing-footer').textContent.includes('2.1.6')&&document.querySelector('.publication-lab-link').href==='https://securedme.ca/'`);
+    await check('publication-lab-and-version-2.1.7',`document.querySelector('.publication-lab-signature').naturalWidth>0&&document.querySelector('.landing-footer').textContent.includes('2.1.7')&&document.querySelector('.publication-lab-link').href==='https://securedme.ca/'`);
     await check('logo-below-separator',`(()=>{const f=document.querySelector('.landing-footer').getBoundingClientRect(),l=document.querySelector('.publication-lab-link'),r=l.getBoundingClientRect();return r.top>f.top&&r.bottom<=f.bottom&&getComputedStyle(l).mixBlendMode==='screen'})()`);
     const lost=await browser.evaluate(`(()=>{const c=document.querySelector('[data-atom-canvas]'),gl=c.getContext('webgl2');const ext=gl?.getExtension('WEBGL_lose_context');ext?.loseContext();return !!ext})()`);
     if(lost){await browser.evaluate(`new Promise(r=>setTimeout(r,200))`);await check('context-loss-fallback',`document.querySelector('[data-landing]').dataset.graphics==='unavailable'`);}

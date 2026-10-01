@@ -1,0 +1,33 @@
+{
+  "state": "PARTIAL_ACCESSIBILITY_WITH_INDEPENDENT_CPU_COPY_EXPORT",
+  "host": "Google Colab",
+  "moduleId": 4,
+  "sourceCommit": "b9411526cd6e06faee398c60d7afe5d68421e257",
+  "operator": "Codex",
+  "origin": "software-qa-fixture",
+  "notStudentObservation": true,
+  "freshDriveCopy": true,
+  "copyName": "Orbit QA gratuit — Module 4 — copie neuve",
+  "accountPlan": "free account reported by user; Processeur radio checked observed",
+  "trustedUIEvents": [
+    "ArrowRight on the focusable preview stage did not move x=0.5 or vx=0. Runtime template has no keydown handler despite the stage label advertising arrows.",
+    "Trusted Chrome Input pointer drag and release at damping 0.65 produced held=false and nonzero velocity: x=0.917619664, y=0.812963224, vx=-1.616536043, vy=1.366840608 at one observed frame.",
+    "Space on freeze checkbox checked it; x=0.628467060 and y=0.653111288 unchanged in two subsequent reads.",
+    "Actual student_files damping changed to 1.3 with restitution 0.9 preserved.",
+    "Second trusted pointer drag produced x=0.948786100, y=0.785358341, vx=-0.575066683, vy=0.486240556 and held=false. Different real gesture durations preclude a quantitative damping comparison."
+  ],
+  "pointerTransport": "documented Chrome CDP Input.dispatchMouseEvent, real UI input; no JavaScript dispatchEvent fixture",
+  "archiveSha256": "9bfa155ce1a5ec8c30798d85965371f5f876d9de6ebf821893bb1a0c49295551",
+  "archiveFile": "orbit-module-4-module-4-1790857839306690303.zip",
+  "downloadConfirmedByFilesystem": true,
+  "exportFileCountReported": 5,
+  "incident": "Locator checkbox click did not change state; trusted Space changed it. Keyboard movement is absent in this notebook source and was reported for correction.",
+  "runtimeStoppedAfterExport": true,
+  "driveSavedObserved": "Toutes les modifications ont été enregistrées",
+  "keyboardMovementVerified": false,
+  "pointerInertiaVerified": true,
+  "quantitativeDampingComparisonVerified": false,
+  "understandingExamined": false,
+  "humanApproval": false,
+  "privateEvidenceDirectory": ".orbit/formation-20261001/colab-independent"
+}

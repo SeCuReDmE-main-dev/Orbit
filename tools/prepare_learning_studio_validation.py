@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import base64
+import gzip
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -40,13 +41,16 @@ CLI_CONFIG = """import {defineCliConfig} from 'sanity/cli';
 export default defineCliConfig({api:{projectId:'abc123xy', dataset:'production'}});
 """
 
-CELL = r'''import base64, hashlib, io, json, os, re, shutil, subprocess, tarfile, time, urllib.request
+CELL = r'''import base64, gzip, hashlib, io, json, os, re, shutil, subprocess, tarfile, time, urllib.request
 from pathlib import Path
 from datetime import datetime, timezone
 if not Path('/kaggle').is_dir():
     raise RuntimeError('Run this validation in Kaggle. No workstation installation is authorized.')
 SPEC = __SPEC__
 PAYLOAD = base64.b64decode(__PAYLOAD__, validate=True)
+LOCK_PAYLOAD = gzip.decompress(base64.b64decode(__LOCK_PAYLOAD__, validate=True))
+if hashlib.sha256(LOCK_PAYLOAD).hexdigest() != SPEC['lockSha256']:
+    raise RuntimeError('Installation lock integrity failure')
 if hashlib.sha256(PAYLOAD).hexdigest() != SPEC['archiveSha256']:
     raise RuntimeError('Plugin archive integrity failure')
 with tarfile.open(fileobj=io.BytesIO(PAYLOAD), mode='r:gz') as archive:
@@ -63,6 +67,7 @@ NPM_CONFIG = ROOT/'empty.npmrc'; NPM_CONFIG.write_text('')
 status = {'state':'RUNNING', 'environment':'Kaggle', 'startedAt':datetime.now(timezone.utc).isoformat(),
           'archiveSha256':SPEC['archiveSha256'], 'fixedHostDependencies':SPEC['hostDependencies'],
           'nodeVersion':SPEC['nodeVersion'], 'archiveVerified':True,
+          'installationLockSha256':SPEC['lockSha256'], 'lockedDependencies':True,
           'installedInBlankStudio':False, 'importValidated':False, 'staticBuildValidated':False,
           'authenticatedRuntimeValidated':False, 'crossOriginContextValidated':False,
           'nativeWebMcpValidated':False, 'sanityWritesPerformed':False, 'publishedToNpm':False,
@@ -98,10 +103,11 @@ try:
     dependencies={**SPEC['hostDependencies'], '@orbit/learning-studio':'file:./'+SPEC['archiveName']}
     (ROOT/'package.json').write_text(json.dumps({'name':'orbit-empty-studio-validation','private':True,
       'type':'module','dependencies':dependencies},indent=2))
+    (ROOT/'package-lock.json').write_bytes(LOCK_PAYLOAD)
     (ROOT/'sanity.config.ts').write_text(SPEC['studioConfig'])
     (ROOT/'sanity.cli.ts').write_text(SPEC['cliConfig'])
     (ROOT/'smoke.mjs').write_text(SPEC['smoke'])
-    command([npm,'install','--ignore-scripts','--no-audit','--no-fund','--include=optional'],'dependency-install',900)
+    command([npm,'ci','--ignore-scripts','--no-audit','--no-fund','--include=optional'],'dependency-install',900)
     status['installedInBlankStudio']=True; checkpoint()
     resolved=json.loads((ROOT/'package-lock.json').read_text())['packages']
     for name, expected in SPEC['hostDependencies'].items():
@@ -148,13 +154,25 @@ def main() -> None:
     studio = json.loads((root/'studio/package.json').read_text(encoding='utf-8-sig'))
     lock = json.loads((root/'package-lock.json').read_text(encoding='utf-8-sig'))
     versions = {name:lock['packages']['node_modules/'+name]['version'] for name in HOST_DEPENDENCIES}
+    installation_lock_path = root/'artifacts/learning-studio/installation-package-lock.json'
+    installation_lock = json.loads(installation_lock_path.read_text(encoding='utf-8-sig'))
+    expected_dependencies = {**versions, '@orbit/learning-studio':'file:./'+archive_name}
+    if installation_lock['packages']['']['dependencies'] != expected_dependencies:
+        raise ValueError('Tested installation lock and host dependencies disagree')
+    plugin_lock = installation_lock['packages']['node_modules/@orbit/learning-studio']
+    if plugin_lock['resolved'] != 'file:'+archive_name:
+        raise ValueError('The installation lock references a different plugin')
+    plugin_lock['integrity'] = 'sha512-'+base64.b64encode(hashlib.sha512(payload).digest()).decode()
+    lock_payload = (json.dumps(installation_lock,indent=2)+'\n').encode()
+    installation_lock_path.write_bytes(lock_payload)
     if studio['dependencies']['sanity'] != versions['sanity']:
         raise ValueError('Sanity host manifest and root lockfile disagree')
     spec = {'archiveName':archive_name, 'archiveSha256':digest, 'hostDependencies':versions,
+            'lockSha256':hashlib.sha256(lock_payload).hexdigest(),
             'nodeVersion':NODE_VERSION, 'nodeSha256':NODE_SHA256,
             'nodeUrl':f'https://nodejs.org/dist/v{NODE_VERSION}/node-v{NODE_VERSION}-linux-x64.tar.xz',
             'studioConfig':CONFIG, 'cliConfig':CLI_CONFIG, 'smoke':SMOKE}
-    cell = CELL.replace('__SPEC__', repr(spec)).replace('__PAYLOAD__', repr(base64.b64encode(payload).decode()))
+    cell = CELL.replace('__SPEC__', repr(spec)).replace('__PAYLOAD__', repr(base64.b64encode(payload).decode())).replace('__LOCK_PAYLOAD__',repr(base64.b64encode(gzip.compress(lock_payload, mtime=0)).decode()))
     notebook = {'nbformat':4, 'nbformat_minor':5,
                 'metadata':{'kernelspec':{'name':'python3','display_name':'Python 3','language':'python'}},
                 'cells':[{'cell_type':'markdown','metadata':{},'source':[
@@ -166,7 +184,7 @@ def main() -> None:
     (output/'orbit-learning-studio-installation.ipynb').write_text(json.dumps(notebook),encoding='utf-8')
     (output/'kaggle-cell.py').write_text(cell,encoding='utf-8')
     preparation = {'state':'PREPARED_NOT_RUN', 'preparedAt':datetime.now(timezone.utc).isoformat(),
-                   'archiveSha256':digest, 'hostDependencies':versions, 'nodeVersion':NODE_VERSION,
+                   'archiveSha256':digest, 'hostDependencies':versions, 'installationLockSha256':spec['lockSha256'], 'nodeVersion':NODE_VERSION,
                    'notebook':'orbit-learning-studio-installation.ipynb','codeCells':1,
                    'credentialInputs':[], 'testsExecutedLocally':False}
     (output/'preparation.json').write_text(json.dumps(preparation,indent=2),encoding='utf-8')

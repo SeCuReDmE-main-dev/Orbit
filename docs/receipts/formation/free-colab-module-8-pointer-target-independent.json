@@ -1,5 +1,5 @@
 {
-  "state": "PASS_INDEPENDENT_FREE_CPU_COPY_EXPORT_PREPARED_TRACE_ASSEMBLY_PENDING",
+  "state": "PASS_INDEPENDENT_FREE_CPU_COPY_EXPORT_PREPARED_TRACE",
   "host": "Google Colab",
   "moduleId": 8,
   "sourceCommit": "6a60234965685dd753391b23d0c3ebc5481df023",
@@ -23,8 +23,8 @@
   "downloadConfirmedByFilesystem": true,
   "exportFileCount": 5,
   "resultAttemptId": "module-8-1790866741165183562",
-  "runtimeStoppedAfterExport": false,
-  "runtimeReason": "Remains active solely for the same fresh-copy assembly step; will be stopped after assembly download.",
+  "runtimeStoppedAfterExport": true,
+  "runtimeReason": "Stopped only this new copy runtime after module export and final assembly archive downloads were confirmed.",
   "nativeWebMcpCallVerified": false,
   "snapshotLimitExecuted": false,
   "understandingExamined": false,
@@ -32,6 +32,9 @@
   "providedHostPointerTarget": "stage",
   "sharedStageIntegrationVerified": false,
   "previousReceiptPreserved": "free-colab-module-8-independent.json",
-  "assemblyStatus": "PENDING_HTTP_QA_FIXTURE_IMPORT_8_REAL_EXPORTS",
-  "manualUploadVerified": false
+  "assemblyStatus": "PASS_REAL_FREE_CPU_COLAB_ASSEMBLY_NOT_BUILT; HTTP_QA_FIXTURE_IMPORT, manualUploadVerified false",
+  "manualUploadVerified": false,
+  "runtimeStopObserved": "Reconnecter Cliquez pour établir la connexion",
+  "driveSavedObserved": "Toutes les modifications ont été enregistrées",
+  "assemblyReceipt": "free-colab-module-8-pointer-target-assembly.json"
 }

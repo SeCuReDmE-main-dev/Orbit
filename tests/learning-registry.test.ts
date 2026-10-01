@@ -105,14 +105,15 @@ describe('public Context transport and tool lifetime', () => {
     expect(await tool('orbit_sanity_initial_context').execute({})).toMatchObject({ state: 'READY' });
     expect(fetchSpy).toHaveBeenCalledTimes(1);
     const [url, request] = fetchSpy.mock.calls[0];
-    expect(url).toBe('https://orbit.securedme.ca/api/v1/knowledge/outline'); expect(request?.credentials).toBe('omit');
+    expect(url).toBe('https://orbit.securedme.ca/api/v1/course-context/outline'); expect(request?.credentials).toBe('omit');
     expect(request?.body).toBeUndefined(); expect(JSON.stringify(fetchSpy.mock.calls)).not.toContain('Private student journal');
   });
   it('sends only selected paths and reports an unavailable gateway honestly', async () => {
     const { tool } = fixture(false);
     const fetchSpy = vi.spyOn(globalThis, 'fetch').mockResolvedValue(new Response(JSON.stringify({ state: 'UNAVAILABLE' }), { status: 503, headers: { 'Content-Type': 'application/json' } }));
     expect(await tool('orbit_sanity_read_entries').execute({ paths: ['example/path'] })).toMatchObject({ state: 'UNAVAILABLE' });
-    expect(JSON.parse(String(fetchSpy.mock.calls[0][1]?.body))).toEqual({ paths: ['example/path'] });
+    expect(new URL(String(fetchSpy.mock.calls[0][0])).searchParams.get('paths')).toBe(JSON.stringify(['example/path']));
+    expect(fetchSpy.mock.calls[0][1]?.method).toBe('GET'); expect(fetchSpy.mock.calls[0][1]?.body).toBeUndefined();
     await expect(tool('orbit_sanity_read_entries').execute({ paths: ['https://foreign.example/endpoint'] })).rejects.toThrow();
   });
   it('does not deliver a Context result after its execution was cancelled', async () => {
@@ -139,5 +140,42 @@ describe('public Context transport and tool lifetime', () => {
     expect(await registerFormationTools(store)).toBe('unavailable');
     expect(store.snapshot().proposals).toEqual([]); expect(store.snapshot().permissions.agentRead).toBe(false);
     unregisterFormationTools(store);
+  });
+  it('keeps the successor registry when a pending previous mount rejects and cleans up late', async () => {
+    const { store } = fixture();
+    const active = new Map<string, LearningBrowserTool>();
+    let releaseFirst!: () => void, markStarted!: () => void;
+    const held = new Promise<void>(resolve => { releaseFirst = resolve; });
+    const started = new Promise<void>(resolve => { markStarted = resolve; });
+    let first = true;
+    const registerTool = vi.fn(async (tool: LearningBrowserTool, options: { signal: AbortSignal }) => {
+      if (active.has(tool.name)) throw Error('DUPLICATE_NATIVE_TOOL');
+      active.set(tool.name, tool);
+      options.signal.addEventListener('abort', () => {
+        if (active.get(tool.name) === tool) active.delete(tool.name);
+      }, { once: true });
+      if (first) { first = false; markStarted(); await held; }
+      if (options.signal.aborted) throw Error('ABORTED');
+    });
+    vi.stubGlobal('document', Object.assign(new EventTarget(), { modelContext: { registerTool } }));
+    vi.stubGlobal('window', new EventTarget());
+    const lab = Symbol('lab-mount'), projects = Symbol('projects-mount');
+    const former = registerFormationTools(store, { owner: lab });
+    const formerRejected = expect(former).rejects.toThrow('ABORTED');
+    await started;
+    const retainedFormer = active.get('orbit_get_capabilities')!;
+    const successor = registerFormationTools(store, { owner: projects });
+    unregisterFormationTools(store, lab);
+    releaseFirst();
+    await formerRejected;
+    expect(await successor).toBe('registered');
+    expect(registerFormationTools(store, { owner: projects })).toBe(successor);
+    expect(registerTool).toHaveBeenCalledTimes(26);
+    expect([...active.keys()]).toEqual([...originalNames, ...LEARNING_TOOL_NAMES]);
+    await expect(retainedFormer.execute({})).rejects.toThrow('ABORTED');
+    expect(await active.get('orbit_get_capabilities')!.execute({})).toMatchObject({ state: 'READY' });
+    expect(store.snapshot().permissions.agentRead).toBe(false);
+    unregisterFormationTools(store, projects);
+    expect(active.size).toBe(0);
   });
 });

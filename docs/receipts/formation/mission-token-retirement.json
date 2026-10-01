@@ -1,0 +1,14 @@
+{
+  "state": "RETIRED_AND_REFUSED",
+  "revokedCredentialHttpStatus": 401,
+  "host": "Kaggle",
+  "observedAt": "2026-10-01T07:29:45.224461-04:00",
+  "credentialScope": "disposable Orbit browser mission only",
+  "accountE2BKeyEmbedded": false,
+  "provenance": {
+    "observer": "coordinator",
+    "preparation": "Sanitized copy of a retained execution report; no workstation rerun.",
+    "originalReportSha256": "49379543f19917bed79bf084ac56a904f1cafd364259ad4dbb3f77a3254c6022",
+    "omitted": "Retired credential value, bridge URL, account identity and operational access values."
+  }
+}

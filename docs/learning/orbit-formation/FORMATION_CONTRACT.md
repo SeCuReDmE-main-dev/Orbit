@@ -182,26 +182,73 @@ Dataset permissions and plan changes must not be the sole privacy safeguard for 
 
 ## Validation record and remaining qualification
 
-The coordinator observed a successful Kaggle software validation version on October 1, 2026:
+### Current consolidated checkpoint — October 1, 2026
 
-- Saved run: [Orbit formation software validation — version 354372770](https://www.kaggle.com/code/celebrum/orbit-formation-software-validation?scriptVersionId=354372770).
-- Test payload SHA-256: `0c2dd93d1378bbfb41fa62dd811d76d17a74cd4124c037e7c1095ec78f77931f`.
-- **117 passing Vitest assertions across 13 suites**: 21 learning-contract, 14 formation-registry, 6 Studio-publication, 4 Studio-registry, 13 frontend-brick, and 59 existing classification/evidence/relations/WebMCP/workshop/provenance checks.
-- Seven separate Python notebook-validation tests completed with exit code 0. They are not included in the 117 Vitest assertions.
-- Provenance: observed by the coordinator; writing this document did not independently rerun the tests. The [timeline receipt](../../receipts/CHALLENGE_WORK_TIMELINE.md) records the execution and scope.
+This section supersedes the historical checkpoint retained below. It reads the coordinator's retained execution receipts; no software test was rerun on the workstation. A passing fixture, a compiled export, an authenticated page and an examined learning outcome remain separate qualifications.
 
-This result covers that test payload. Later modifications require their own result. It does not establish a complete model benchmark, free-Colab runtime execution, a human teaching review, native browser tool missions, installation in a second Studio, or successful public deployment.
+| Checkpoint | Current evidence | Qualification and limit |
+|---|---|---|
+| Software contracts and regressions | [Successful immutable v5 receipt](../../receipts/formation/software-version5-kaggle.json), version [354436854](https://www.kaggle.com/code/celebrum/orbit-formation-software-validation?scriptVersionId=354436854): 141/141 assertions across 15 suites, plus seven separate Python tests, exit 0; source `689494986b4b6a9b02b5a22a8beb81e8de7cb7388a55ad20a122743d3de7966e` | Actual Kaggle readback, 120.7 s, zero model calls. Corrected actual assembly, Studio installation and PHP statuses are retained in this version; earlier v4 remains historical |
+| Current public laboratory and projects | [72/72 native browser checks](../../receipts/formation/live-browser-pointer-target-final.json), run `formation-de718cf4-ef62-4333-a2ac-aadf1f49a267`, 5,093 ms | Kaggle dispatch into an isolated E2B browser, zero model calls and explicit synthetic fixtures; twenty-five native names and selected actual calls, not every possible agent trajectory |
+| Atom and current navigation | [77/77 public checks](../../receipts/formation/atom-five-navigation-live.json) | Five destinations, including the explicitly authorized Apprendre link to `/formation/lab/`; exercised atom interactions and preference paths. No all-device frame-rate or scientific claim |
+| Eight independent notebook copies | [Eight-export manifest](../../receipts/fixtures/free-colab-eight-export-manifest.json), [corrected fresh M3](../../receipts/formation/free-colab-module-3-pointer-target-independent.json) and [corrected fresh M8](../../receipts/formation/free-colab-module-8-pointer-target-independent.json) | CPU selection observed on the user's reported free account, bounded edits, previews and downloads. Latest M3 export `b202088c…`, M8 `8d80562e…`; six other original exports preserved. Codex-operated QA fixtures, not student work or a mastery assessment |
+| Actual independent export assembly | [Corrected free-CPU Colab assembly](../../receipts/formation/free-colab-module-8-pointer-target-assembly.json), archive `141466603afaca979af3e8ee011391c9516de2a723c52809bdca86f0dbb0b1ba`; nine frontend bricks, 46 manifest files | Eight exact public synthetic exports imported through bounded HTTPS with size/SHA checks; supplied host uses `pointerTarget: stage`. No instructor replacement; manual multiple-file upload remains unvalidated |
+| Independent assembly compilation | [Corrected locked Kaggle build](../../receipts/formation/actual-pointer-target-assembly-static-kaggle.json), all eight modules and nine bricks linked, exit 0 | Node 22.20.0, Astro 7.3.3, Three.js 0.181.2; supplied lock preserved. Compilation qualifies exact archive `14146660…`, not learner understanding or the Colab account plan |
+| Actual assembled browser | [35/35 native checks](../../receipts/formation/actual-pointer-target-assembly-browser-kaggle.json), run `assembly-038e527c-85d9-44d8-bc93-0997ccb771e7`, 4,917 ms | Kaggle-dispatched E2B run on the actual compiled exports: raycast, trusted keyboard, inertia after pointer release, static frame, particles, native bounded capability, HTML alternative and cleanup. Zero model calls or recorded runtime errors; no human approval or comprehension claim |
+| Portable Studio installation | [Blank-host install/import/build](../../receipts/formation/portable-studio-v2-install-kaggle.json), archive `f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973`, 315 build files | Static installation qualified in Kaggle. The separate [authenticated fresh-session readback](../../receipts/formation/authenticated-second-studio.json) observes eight modules, FR/EN/ES, memory storage, all permissions off and a registered UI status. It executes no native agent call, private-user mutation or Content Lake write; cross-origin Context and publication remain separate |
+| Course transport software | [29 PHP tests / 185 assertions](../../receipts/formation/php-context-29-pass-kaggle.json), exit 0 | Kaggle runtime and fixtures verify bounded reads, disabled response and unchanged private-route protections; this is not a successful real public course Context read |
+| Deployed transport refusal | [Actual Kaggle HTTPS probe](../../receipts/formation/course-context-production-disabled.json) after the [eight-file backend overlay](../../receipts/formation/course-backend-deployment.json) | Both public course routes return 503 `UNAVAILABLE / CONTEXT_NOT_READY`, without credentials, with no-store and non-credentialed CORS. The private gateway still refuses a foreign origin with 403. This verifies a refusal, not course availability |
+| Actual course Context admission | [Nine completed imports and bounded final build](../../receipts/formation/course-context-import-status.json) | **HOLD**: the generated candidate cites M1–M7 plus two legacy sources, omits M8 and skips `PROJECT.md`. The imported documents remain available as sources; zero entries qualify for the strict public subset, and its activation manifest remains disabled |
 
-At this documentation checkpoint, the native formation browser campaign and fresh free-Colab learner journeys were **not yet performed**. The [browser worker](../../../tools/formation-browser-check.ts) is implemented for Kaggle dispatch into an isolated E2B Chrome worker; source presence is not its execution proof. Candidate checks, live route checks and plugin installation must each have a versioned receipt before their status is upgraded.
+The [current formation-only deployment](../../receipts/formation/pointer-target-deployment.json) records package `4f58a1efbd32510e3c7561cfee527b7eebb17f3e5e9b9f7733468f30ab7c0e2c`, a retained remote backup and cleaned staging. Its browser receipt verifies a **358-entry formation-only manifest**, laboratory/projects HTML digests `993d933c…` and `bbdc991b…`, JavaScript, CSS and the unchanged `f2b0dc68…` portable archive. The older four-door landing and earlier release below are historical. Adding the fifth navigation door does not authorize a course promotion block or a change to the atom's existing mechanisms.
 
-Required qualification retains distinct steps:
+Earlier v4 version 354422952, source `98a0c659…` and assembly `96acc0dd…` remain preserved as earlier checkpoints. The [first checker failure](../../receipts/formation/actual-assembly-browser-first-failure.json), [keyboard-activation failure](../../receipts/formation/actual-assembly-browser-keyboard-failure.json), [raycast failure](../../receipts/formation/actual-assembly-browser-raycast-failure.json) and [snapshot-controller revision race](../../receipts/formation/actual-assembly-browser-snapshot-controller-failure.json) retain their failed outcomes. The corrected controller polls for a native READY result at the current revision; its 35-check pass qualifies that later run only.
 
-1. Run the targeted software validations in Kaggle against the delivered payload.
-2. Compile an assembly made from the actual eight notebook exports, retaining the generated lockfile.
-3. Dispatch native browser checks from Kaggle to E2B: discovery, permissions, eight experiments, cancellation, history, imported statuses, comparisons, keyboard, static mode, small screen and resource cleanup.
-4. Run each notebook from a fresh free Colab copy: prediction, change, observation, export, restart and replay. Observe the browser outputs and time assumptions in their target environment.
-5. Install the portable package in a second authorized Studio and verify workspace/logout revocation and selected publication without private journal leakage.
-6. Verify the deployed URLs, dependencies and public permissions. Preserve the approved landing and secrets.
-7. Examine learning through an actual teacher session, reformulation and transfer; software checks cannot perform this review.
+The separate authenticated Studio observation was read-only, in a fresh session on the deployed formation Studio. Seeing an authenticated user or the word `registered` is not a native tool execution, a check of foreign-origin transport or a human approval. Personal work remains in memory until storage consent is explicitly given; publication still requires selected content, rights, destination and the separate human action.
 
-No local Codex or Antigravity model benchmark is used to fill these gaps. Failures, partial runs and unavailable metrics remain explicit. Temporary test access is retired after its required runs; removing a secret from a notebook is not revocation of that secret.
+The coordinator also inspected the real [Context Dashboard](https://www.sanity.io/@oatv1mmu8/context) at 14:39 UTC. The [retained UI receipt](../../receipts/formation/context-ui-correction-inspection.json) reads `learning_modules`, titled “Orbit Learning Modules & Assessment”, and observes History, Rewrite page and Rebuild. Rewrite page provides an optional instruction, a rule and Save & rebuild; it does not expose a direct content/citation editor. The dialog was cancelled without saving, source mutation or another build. This observation keeps course admission on HOLD and does not establish a manual way to repair the missing M8/protocol coverage.
+
+Remaining qualification:
+
+1. Preserve the corrected 35-check browser receipt for actual assembly `14146660…` and all preceding failures separately. Any broader device, performance or autonomous model campaign requires its own evidence.
+2. Keep public course Context on HOLD until the exact nine-source set is admitted with real citations and a qualifying outline/readback. Source import completeness is not entry-generation correctness; no further automatic rebuild or invented entry fills this gap.
+3. Examine authorized workspace/logout transitions, native tools and selective-publication controls in the portable Studio. The authenticated fresh-session receipt is an additional bounded observation, not full validation of all these actions.
+4. Retire each new disposable diagnostic or mission credential after its own checks and verify rejection. The [earlier retirement](../../receipts/formation/mission-token-retirement.json) covers only its original bounded credential.
+5. Review Canva web documents and final DOCX/PDF outputs after the technical gate, and examine reformulation and transfer in actual teacher sessions. These documents, the visual tutorial, autonomous Gemini campaigns and learner outcomes are not declared completed here.
+
+### Historical checkpoint — preserved without retroactive changes
+
+The following record describes its own earlier payload, grouped Colab run, four-door landing and pending gates. References to “final” below belong to that historical checkpoint and do not supersede the current evidence above.
+
+The coordinator observed the following separate checkpoints on October 1, 2026. This document was prepared from retained reports and readbacks; no tests were rerun on the workstation.
+
+| Checkpoint | Scope and retained evidence |
+|---|---|
+| Initial saved Kaggle software run | [Version 354372770](https://www.kaggle.com/code/celebrum/orbit-formation-software-validation?scriptVersionId=354372770), source `0c2dd93d1378bbfb41fa62dd811d76d17a74cd4124c037e7c1095ec78f77931f`: 117 passing assertions across 13 suites; seven separate Python tests, exit 0 |
+| Final software payload | [133/133 in Kaggle](../../receipts/formation/software-133-final.json), source `cae9a0f4d7c842be6ebeac68ff1721beee9cb8f4fe57be46cc794e08775551c8`, exit 0; immutable final saved-version readback pending |
+| Final public formation browser | [72/72 native checks](../../receipts/formation/live-browser-72.json), dispatched from Kaggle into E2B; no model calls, synthetic fixtures explicitly labelled |
+| Colab grouped exports and probes | [Eight Python export/replay namespaces and eight browser reports](../../receipts/formation/colab-eight-grouped.json), one CPU session; original state `PARTIAL_VALIDATION` |
+| Real Colab recovery | [One observed runtime restart and eight captured-source replays](../../receipts/formation/colab-recovery.json); earlier browser reports imported, not rerun |
+| Actual notebook-export assembly | [`PASS_ACTUAL_EXPORT_ASSEMBLY_STATIC_BUILD`](../../receipts/formation/actual-export-assembly.json) in Kaggle, 46 manifest files and nine actual exported brick files linked across modules 1–8 |
+| Second blank Studio | [`PASS_STATIC_INSTALL_BUILD`](../../receipts/formation/second-studio-static.json) in Kaggle; archive installed, imported and compiled without a real account |
+
+The initial 117-assertion payload contains 21 learning-contract, 14 formation-registry, six Studio-publication, four Studio-registry, 13 frontend-brick and 59 existing classification/evidence/relations/WebMCP/workshop/provenance assertions. The later 133-assertion payload covers added persistence, atomic artifact-version and archive-integrity cases. Its notebook-software step exited 0 but keeps `colabRuntimeVerified: false`; it is not the runtime Colab result.
+
+The [delivery receipt](../../receipts/FORMATION_DELIVERY_STATUS.md) preserves the initial 44-check browser run, failed first deployment attempt, permission repair, final package, HTTP/digest readback and later 72-check result. Only `formation/**` was packaged. The live landing kept its four existing destinations and zero formation links; the guide remained reachable. The final native run checks the corrected storage/version/ZIP flows and small-screen layout. Native tool discovery is not execution of every tool or an autonomous model mission.
+
+The Colab report does not establish eight independent cold starts, trusted pointer work or learner understanding. The coordinator's free-CPU UI observation is kept separate from `accountPlanObserved: "not-observed"` in the grouped JSON. The later recovery proves one actual restart through a pinned public synthetic checkpoint, not eight cold learner copies or a tested upload widget.
+
+The actual-export build used Node 22.20.0, Astro 7.3.3 and Three.js 0.181.2. No corrected instructor brick replaced an actual export. Its assembled-browser, native-tool and learner-understanding flags remain false. Static compilation cannot establish those outcomes.
+
+The separate Studio installation used the verified archive in a blank host with Node 22.20.0, Sanity 6.16.0, React/react-dom 19.3.0 and styled-components 6.5.3. Authentication, cross-origin Context, native WebMCP runtime and Sanity writes remain unexamined. This result does not create a personal student project or grant authority to publish.
+
+Remaining qualification is explicit:
+
+1. Archive final software and integration saved-version readbacks with their fingerprints.
+2. Open selected learner notebooks as independent cold copies; complete trusted pointer/cancellation/keyboard checks and the Module 3 pixel/raycast and import-widget paths.
+3. Exercise the actual assembled frontend in its browser target.
+4. Examine the second Studio with an authorized user: account/workspace/logout boundaries, cross-origin Context, native tool lifecycle and selected publication controls. Static build success does not authorize a real write.
+5. Retain the [dedicated mission-token retirement receipt](../../receipts/formation/mission-token-retirement.json): `RETIRED_AND_REFUSED`, HTTP 401. The value and bridge URL were removed from the notebook draft before saving. The account E2B key was not the embedded mission credential. Any new test access needs its own retirement.
+6. Examine learning through an actual teacher session, reformulation and transfer, then produce the complete teaching documents.
+
+No local Codex or Antigravity model benchmark fills these gaps. No full Gemini campaign, human review, scientific validation or teaching outcome is claimed. The [timeline](../../receipts/CHALLENGE_WORK_TIMELINE.md) and delivery receipt keep failures, partial runs and earlier versions distinct.

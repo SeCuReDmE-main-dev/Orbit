@@ -1,0 +1,38 @@
+{
+  "state": "PASS_INDEPENDENT_CPU_COPY_EXPORT_SELECTION_RETEST",
+  "host": "Google Colab",
+  "moduleId": 7,
+  "sourceCommit": "4b06da41e603d63acd33bbf75995a75d824d1bc6",
+  "operator": "Codex",
+  "origin": "software-qa-fixture",
+  "notStudentObservation": true,
+  "accountPlan": "free account reported by user; Processeur radio checked observed",
+  "freshDriveCopy": true,
+  "copyName": "Orbit QA gratuit — Module 7 — copie neuve corrigée",
+  "priorPartialScopeReceipt": "free-colab-module-7-independent.json",
+  "trustedUIEvents": [
+    "Enter Observation selectedelement-2; Enter experience preservedelement-2.",
+    "Space Transfert selectedelement-3; proofs/summary preservedelement-3; aria-pressedfalse/true for Observation/Transfert.",
+    "Same five choices: limit32 retained five entries, limit4 retained experience2/experience3/proofs3/summary3, initialmission2 removed.",
+    "Space froze elapsed29.27129999999984, identical after sourceedit.",
+    "Finalselectedelement-3, summary, fourentries and statictrue at elapsed45.09139999999981."
+  ],
+  "archiveSha256": "827528418863211e76307d3e3dbd2a21d17d2864bde0e59f4d8295948897f3ce",
+  "archiveFile": "orbit-module-7-module-7-1790860375433734440.zip",
+  "downloadConfirmedByFilesystem": true,
+  "exportFileCountReported": 5,
+  "runtimeStoppedAfterExport": true,
+  "runtimeStopObserved": "Reconnecter Cliquez pour établir la connexion",
+  "driveSavedObserved": "Toutes les modifications ont été enregistrées",
+  "incidents": [
+    "Saved modified output stalled; reload restored preview, no security setting changed.",
+    "CPU menu semantic input stalled; screenshot-grounded trusted mouse selected visible menu row."
+  ],
+  "selectionVariantsVerified": true,
+  "historyBoundComparisonVerified": true,
+  "staticElapsedVerified": true,
+  "realBrowserHistoryVerified": false,
+  "understandingExamined": false,
+  "humanApproval": false,
+  "privateEvidenceDirectory": ".orbit/formation-20261001/colab-independent"
+}

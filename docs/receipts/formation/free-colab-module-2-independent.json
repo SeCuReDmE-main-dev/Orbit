@@ -1,0 +1,32 @@
+{
+  "state": "PASS_INDEPENDENT_CPU_COPY_EXPORT_WITH_UI_DRIVER_INCIDENT",
+  "host": "Google Colab",
+  "moduleId": 2,
+  "sourceCommit": "b9411526cd6e06faee398c60d7afe5d68421e257",
+  "operator": "Codex",
+  "origin": "software-qa-fixture",
+  "notStudentObservation": true,
+  "studentObservation": false,
+  "accountPlan": "free account reported by user; Processeur radio checked in runtime dialog observed",
+  "freshDriveCopy": true,
+  "copyName": "Orbit QA gratuit — Module 2 — copie neuve",
+  "trustedUIEvents": [
+    "Initial HTML preview contains Geste, Observation and Transfert buttons.",
+    "One automated pointer click targeting Observation selected element-1; driver/frame target remains a limitation.",
+    "Modified only descriptionPrefix from Mon observation : to Ma décision expliquée : in actual student_files source.",
+    "Enter on Observation selected element-2 with aria-pressed=true and description Ma décision expliquée : Un résultat à examiner."
+  ],
+  "archiveSha256": "211de817002cca08c08d16ff379df3849a8b1b9f7f62d8c1dbef87700b6a9073",
+  "downloadConfirmedByFilesystem": true,
+  "archiveFile": "orbit-module-2-module-2-1790856924151822979.zip",
+  "exportFileCountReported": 6,
+  "filesExpectedFromExportSource": ["INTEGRATION.md", "frontend/ExplorationCard.astro", "frontend/exploration-card.js", "manifest.json", "notebook.ipynb", "orbit-learning-result.json"],
+  "incident": "Browser download-event waiter timed out, but ZIP was downloaded and its filesystem SHA256 matched the notebook output. First nested-iframe pointer click selected the neighboring card; keyboard selection confirmed target.",
+  "runtimeStoppedAfterExport": true,
+  "runtimeStopObserved": "Reconnecter Cliquez pour établir la connexion",
+  "driveSavedObserved": "Toutes les modifications ont été enregistrées",
+  "astroCompilationVerifiedByThisRun": false,
+  "understandingExamined": false,
+  "humanApproval": false,
+  "privateEvidenceDirectory": ".orbit/formation-20261001/colab-independent"
+}

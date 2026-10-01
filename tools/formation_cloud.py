@@ -1,6 +1,6 @@
 """Own isolated formation build resources; tests are dispatched from Kaggle only."""
 from pathlib import Path
-import argparse, hashlib, io, json, zipfile
+import argparse, hashlib, io, json, tarfile, zipfile
 from datetime import datetime, timezone
 from e2b import Sandbox
 from orbit_cloud_lab import ROOT, credentials
@@ -38,7 +38,7 @@ def main():
             for file in sorted(set(files)):
                 if not file.is_file():continue
                 rel=file.relative_to(ROOT)
-                if any(x in ['node_modules','dist','.git','.venv','.astro','.sanity','__pycache__'] for x in rel.parts) or file.name.startswith('.env') or file.suffix in ['.db','.log','.sqlite']:continue
+                if any(x in ['node_modules','dist','.git','.venv','.astro','.sanity','__pycache__','.runtime','.build-home','.npm-cache'] for x in rel.parts) or file.name.startswith('.env') or file.name in ['.build.npmrc','host-build-status.json'] or file.suffix in ['.db','.log','.sqlite']:continue
                 data=file.read_bytes();z.writestr(rel.as_posix(),data);hashes[rel.as_posix()]=hashlib.sha256(data).hexdigest()
             z.writestr('formation-source-manifest.json',json.dumps(hashes))
         sandbox.files.write('/home/user/formation-source.zip',buffer.getvalue())
@@ -47,7 +47,7 @@ def main():
         print(json.dumps({'state':'synced','files':len(hashes),'exitCode':result.exit_code}));return
     if args.action=='build':
         # Lock updates apply only in the isolated checkout for new workspace links.
-        command='cd /home/user/orbit && export ASTRO_TELEMETRY_DISABLED=1 SANITY_STUDIO_TELEMETRY_DISABLED=1 && npm install --no-audit --no-fund && python tools/install_cloud_native.py && npm run build -w web && npm run build -w studio && python tools/package_learning_studio.py --environment e2b --repo /home/user/orbit --out /home/user/orbit/artifacts/learning-studio'
+        command='cd /home/user/orbit && export ASTRO_TELEMETRY_DISABLED=1 SANITY_STUDIO_TELEMETRY_DISABLED=1 && npm install --no-audit --no-fund && python tools/install_cloud_native.py && npm run build -w web && npm run build -w studio && python tools/package_learning_studio.py --environment e2b --repo /home/user/orbit --out /home/user/orbit/artifacts/learning-studio && python tools/learning-studio-host/build_host.py --environment e2b'
         from e2b.sandbox.commands.command_handle import CommandExitException
         try:r=sandbox.commands.run(command,timeout=1800)
         except CommandExitException as e:r=e
@@ -55,8 +55,17 @@ def main():
         (OUT/'build-status.json').write_text(json.dumps({'host':'E2B','kind':'build-not-test','exitCode':r.exit_code},indent=2))
         print(json.dumps({'host':'E2B','kind':'build-not-test','exitCode':r.exit_code,'tail':(r.stdout+r.stderr)[-3200:]}));return
     if args.action=='collect':
-        sandbox.commands.run('tar -czf /home/user/formation-built.tar.gz -C /home/user/orbit web/dist studio/dist artifacts/learning-studio package-lock.json',timeout=120)
+        sandbox.commands.run('tar -czf /home/user/formation-built.tar.gz -C /home/user/orbit web/dist studio/dist artifacts/learning-studio package-lock.json tools/learning-studio-host/dist tools/learning-studio-host/host-build-status.json tools/learning-studio-host/package-lock.json',timeout=120)
         (OUT/'formation-built.tar.gz').write_bytes(bytes(sandbox.files.read('/home/user/formation-built.tar.gz',format='bytes')))
+        with tarfile.open(OUT/'formation-built.tar.gz') as built:
+            for name in ['artifacts/learning-studio/orbit-learning-studio-1.0.0.tgz','artifacts/learning-studio/package-report.json']:
+                member=built.getmember(name)
+                if not member.isfile() or not 0<member.size<32_000_000:raise ValueError('Unexpected built plugin artifact')
+                destination=ROOT/name;destination.parent.mkdir(parents=True,exist_ok=True)
+                destination.write_bytes(built.extractfile(member).read())
+            receipt=built.getmember('tools/learning-studio-host/host-build-status.json')
+            if not receipt.isfile() or not 0<receipt.size<100_000:raise ValueError('Unexpected second Studio build receipt')
+            (OUT/'second-studio-build.json').write_bytes(built.extractfile(receipt).read())
         print(json.dumps({'state':'collected'}))
 
 if __name__=='__main__':

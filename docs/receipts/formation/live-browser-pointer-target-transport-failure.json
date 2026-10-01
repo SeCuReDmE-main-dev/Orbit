@@ -1,0 +1,8 @@
+{
+  "state": "TRANSPORT_FAILURE_BEFORE_RUN",
+  "host": "Kaggle",
+  "httpStatus": 502,
+  "checksCompleted": 0,
+  "causeObserved": "Formation process absent from owned sandbox process list",
+  "recovery": "Same service bundle and credential relaunched; no test assertion or application change"
+}

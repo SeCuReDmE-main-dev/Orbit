@@ -1,0 +1,117 @@
+{
+  "state": "PASS_ACTUAL_EXPORT_ASSEMBLY_STATIC_BUILD",
+  "environment": "Kaggle",
+  "startedAt": "2026-10-01T13:40:51.774247+00:00",
+  "inputMode": "direct-independent-colab-assembly",
+  "outerDownloadSha256": null,
+  "assemblySha256": "96acc0ddfdd3728426980df39d2a1ccda07cc855eb95f950a552de776a5b2aed",
+  "exportsManifestSha256": "b014fbabebb4875847e9ade5777806d6576ed80d6449b799e7c927fe4594522f",
+  "receiptSha256": "5fbe8334453c968937d81b82f2888651244886c62983d37c7e6910bbc0e46e45",
+  "upstreamColabReceipt": {
+    "host": "Google Colab",
+    "state": "PASS_REAL_FREE_CPU_COLAB_ASSEMBLY_NOT_BUILT",
+    "operator": "Codex",
+    "origin": "software-qa-fixture",
+    "notStudentObservation": true,
+    "accountPlan": "free account reported by user; Processeur radio checked observed",
+    "sourceNotebookCommit": "b9411526cd6e06faee398c60d7afe5d68421e257",
+    "fixtureCommit": "ec99f875bd17e0b8f0db9711c3a2bf21f7219778",
+    "transport": "HTTP_QA_FIXTURE_IMPORT",
+    "manualUploadVerified": false,
+    "manualUploadIncident": "Two native filechooser event attempts timed out on the multiple input. Cancel yielded exact-eight-exports ValueError. No file transmitted or protection changed.",
+    "tlsVerifiedByDefault": true,
+    "bounds": "Eight fixed HTTPS URLs; response.read(expectedBytes+1), timeout30; exact SHA and length then moduleId; original load_module and assemble preserved.",
+    "frontendFileCountObserved": 9,
+    "assemblyManifestFileCountObserved": 46,
+    "archiveSha256": "96acc0ddfdd3728426980df39d2a1ccda07cc855eb95f950a552de776a5b2aed",
+    "archiveBytes": 78147,
+    "compiled": false,
+    "nativeWebMcpCallVerified": false,
+    "understandingExamined": false,
+    "humanApproval": false,
+    "runtimeStoppedAfterDownload": true,
+    "runtimeStopObserved": "Reconnecter Cliquez pour établir la connexion",
+    "oldGroupedQaRuntimeTouched": false
+  },
+  "dependencies": {
+    "astro": "7.3.3",
+    "three": "0.181.2"
+  },
+  "dependencyInstallationStrategy": "frozen-lock-npm-ci",
+  "suppliedInstallationLockSha256": "423e48783d884b71827bef1e4aae380a3e15ca93735ef1a89423cf54e8a0edd8",
+  "nodeVersion": "22.20.0",
+  "stage": "astro-build",
+  "commands": [
+    {
+      "stage": "node-version",
+      "command": [
+        "/kaggle/temp/orbit-actual-assembly-96acc0ddfdd3-1790862051773470713/runtime/node-v22.20.0-linux-x64/bin/node",
+        "--version"
+      ],
+      "exitCode": 0,
+      "seconds": 0.009
+    },
+    {
+      "stage": "dependency-ci",
+      "command": [
+        "/kaggle/temp/orbit-actual-assembly-96acc0ddfdd3-1790862051773470713/runtime/node-v22.20.0-linux-x64/bin/npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "--include=optional"
+      ],
+      "exitCode": 0,
+      "seconds": 10.803
+    },
+    {
+      "stage": "astro-build",
+      "command": [
+        "/kaggle/temp/orbit-actual-assembly-96acc0ddfdd3-1790862051773470713/node_modules/.bin/astro",
+        "build"
+      ],
+      "exitCode": 0,
+      "seconds": 2.499
+    }
+  ],
+  "actualExportsUsed": true,
+  "replacementBricksUsed": false,
+  "staticBuildValidated": true,
+  "browserInteractionValidated": false,
+  "learnerUnderstandingExamined": false,
+  "nativeWebMcpValidated": false,
+  "credentialsRequired": false,
+  "modelsCalled": false,
+  "independentColabEnvironmentValidatedByThisSuite": false,
+  "manifestFilesVerified": 46,
+  "modulesLinked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "sourceBrickFilesLinked": 9,
+  "sourceGraphCoverageValidated": true,
+  "producedInstallationLockSha256": "423e48783d884b71827bef1e4aae380a3e15ca93735ef1a89423cf54e8a0edd8",
+  "producedInstallationLockBytes": 143730,
+  "installationLockGeneratedByThisRun": false,
+  "originalAssemblyFilesUnchanged": true,
+  "compiledClientScripts": [
+    "/_astro/index.astro_astro_type_script_index_0_lang.DL_JxCuW.js"
+  ],
+  "staticBuildFiles": 2,
+  "compiledDistSha256": "71982b431bebd409b7a2e7945052047804cb7f5c1b20dabbd224712dfb3326ee",
+  "limits": [
+    "Source linkage and static compilation only",
+    "No browser or trusted pointer interaction",
+    "This Kaggle suite does not validate the Colab account plan, CPU runtime or cold start",
+    "No learner comprehension or human approval",
+    "No replacement or corrected bricks",
+    "Upstream Colab state is retained as reported: PASS_REAL_FREE_CPU_COLAB_ASSEMBLY_NOT_BUILT"
+  ],
+  "finishedAt": "2026-10-01T13:41:12.577142+00:00"
+}

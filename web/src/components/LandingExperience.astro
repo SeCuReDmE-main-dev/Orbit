@@ -1,47 +1,48 @@
----
-import OrbitLayout from '../layouts/OrbitLayout.astro'
-import OrbitMark from './OrbitMark.astro'
-import '../styles/atom-games.css'
-interface Props { chapter?: number }
-const { chapter = 0 } = Astro.props
-const titles = ['Orbit — Un espace pour votre curiosité', 'Une question — Orbit', 'Les sources — Orbit', 'Orbit — Orbit']
----
-<OrbitLayout bodyClass="landing-page" title={titles[chapter]}>
-  <main class="landing landing-journey" data-landing data-chapter={chapter}>
-    <div class="landing-grain" aria-hidden="true"></div>
-    <header class="landing-header">
-      <a href="/" class="brand-link" aria-label="Orbit, accueil"><OrbitMark /></a><span class="landing-edition" data-fr="UN ESPACE POUR LES ESPRITS CURIEUX" data-en="A SPACE FOR CURIOUS MINDS" data-es="UN ESPACIO PARA MENTES CURIOSAS">UN ESPACE POUR LES ESPRITS CURIEUX</span>
-    </header>
-    <div class="atom-experience" data-atom>
-      <div class="orbit-wordmark notranslate" translate="no" aria-hidden="true">{['O','r','b','i','t','.'].map(letter => <span data-logo-letter class:list={[{ "brand-i":letter==='i' }]}>{letter}</span>)}</div>
-      <canvas data-atom-canvas tabindex="0" role="img" aria-label="Atome interactif. Attrapez le noyau pour le déplacer, puis relâchez pour le lancer. Flèches : rotation. Majuscule et flèches : déplacement. Espace : pause. S : exploser. I : imploser. Y : synchroniser. L : lancer. R : recomposer." aria-describedby="atom-instructions"></canvas>
-      <div class="atom-fallback" data-atom-fallback aria-hidden="true"><span></span><span></span><span></span><i></i></div>
-      <nav class="atom-links" aria-label="Les portes Orbit">
-        <a data-atom-link="0" href="/guide/"><i></i><span data-fr="DOCUMENTATION" data-en="DOCUMENTATION" data-es="DOCUMENTACIÓN">DOCUMENTATION</span></a>
-        <a data-atom-link="1" href="/app/"><i></i><span data-fr="INTERFACE ORBIT" data-en="OPEN ORBIT" data-es="ABRIR ORBIT">INTERFACE ORBIT</span></a>
-        <button type="button" data-atom-link="2" data-play-toggle aria-expanded="false" aria-controls="atom-play"><i></i><span data-fr="JOUER" data-en="PLAY" data-es="JUGAR">JOUER</span></button>
-        <a data-atom-link="3" href="/studio/"><i></i><span data-fr="STUDIO SANITY" data-en="SANITY STUDIO" data-es="STUDIO SANITY">STUDIO SANITY</span></a>
-      </nav>
-      <div class="atom-label" aria-hidden="true"><span></span><span data-fr="UNE CURIOSITÉ EN MOUVEMENT" data-en="CURIOSITY IN MOTION" data-es="CURIOSIDAD EN MOVIMIENTO">UNE CURIOSITÉ EN MOUVEMENT</span></div>
-    </div>
-    <h1 class="sr-only">{titles[chapter]}</h1>{chapter === 3 && (<div class="landing-presence" data-landing-presence aria-hidden="true"><canvas data-landing-presence-canvas></canvas><span data-landing-presence-status>Rencontre avec Orbit</span></div>)}
-    <div class="atom-toolbar" id="atom-play" data-atom-play hidden aria-label="Gestes de l’atome"><p id="atom-instructions" data-fr="Attrapez le noyau. Déplacez-le. Relâchez." data-en="Grab the nucleus. Move it. Release." data-es="Agarra el núcleo. Muévelo. Suéltalo.">Attrapez le noyau. Déplacez-le. Relâchez.</p><div class="atom-buttons"><button type="button" data-atom-launch data-fr="Lancer" data-en="Throw" data-es="Lanzar">Lancer</button><button type="button" data-atom-scatter data-fr="Exploser" data-en="Explode" data-es="Explotar">Exploser</button><button type="button" data-atom-implode data-fr="Imploser" data-en="Implode" data-es="Implosionar">Imploser</button><button type="button" data-atom-sync aria-pressed="false" data-fr="Synchroniser" data-en="Synchronize" data-es="Sincronizar">Synchroniser</button><button type="button" data-atom-reform data-fr="Recomposer" data-en="Reform" data-es="Recomponer">Recomposer</button><button type="button" data-atom-pause aria-pressed="false" data-fr="Pause" data-en="Pause" data-es="Pausa">Pause</button><button type="button" data-atom-reset data-fr="Repartir" data-en="Reset" data-es="Reiniciar">Repartir</button><button type="button" data-atom-games data-fr="15 jeux" data-en="15 games" data-es="15 juegos">15 jeux</button><button type="button" data-play-close data-fr="Retour" data-en="Back" data-es="Volver">Retour</button></div><span class="atom-status" data-atom-status role="status">Illustration interactive · pas une simulation quantique</span></div>
-    <div class="landing-preferences" aria-label="Préférences d’affichage"><select data-landing-language aria-label="Langue"><option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option></select><button type="button" data-landing-access aria-haspopup="dialog">Accès</button></div>
-    <footer class="landing-footer"><span>ORBIT · RESEARCH COMPANION</span><a class="publication-lab-link" href="https://securedme.ca/" aria-label="SecuredMe Publication Lab — securedme.ca"><img class="publication-lab-signature" src="/brand/securedme-publication-lab-primary-dark.png" alt="SecuredMe Publication Lab" width="1672" height="941" loading="eager" /></a><span data-fr="VERSION 2.1.7" data-en="VERSION 2.1.7" data-es="VERSIÓN 2.1.7">VERSION 2.1.7</span></footer>
-  </main>
-  <dialog class="orbit-dialog auth-dialog" data-auth-dialog aria-labelledby="auth-title">
-    <button class="dialog-close" data-dialog-close type="button" aria-label="Fermer">×</button><OrbitMark small /><button class="language-toggle" data-language type="button" aria-label="Switch to English">FR / EN</button>
-    <p class="dialog-eyebrow" data-fr="VOTRE ESPACE VOUS ATTEND" data-en="YOUR SPACE AWAITS">VOTRE ESPACE VOUS ATTEND</p>
-    <h2 id="auth-title" data-fr="Bienvenue dans votre orbite." data-en="Welcome to your orbit.">Bienvenue dans votre orbite.</h2>
-    <p class="dialog-description" data-fr="Créez votre compte ou retrouvez vos recherches. La connexion à votre IA se fait ensuite, à votre choix." data-en="Create an account or return to your research. Connect your AI separately, when you choose.">Créez votre compte ou retrouvez vos recherches. La connexion à votre IA se fait ensuite, à votre choix.</p>
-    <div class="provider-buttons"><button type="button" data-auth-google disabled><span class="provider-symbol" aria-hidden="true">G</span><span data-fr="Continuer avec Google" data-en="Continue with Google">Continuer avec Google</span><span class="provider-state" data-provider-state>↗</span></button><button type="button" data-auth-github disabled><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.82.09-.64.35-1.08.64-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.1.4-1.99 1.03-2.69-.1-.26-.45-1.28.1-2.66 0 0 .84-.27 2.75 1.03A9.57 9.57 0 0 1 12 6.8c.85 0 1.7.11 2.49.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.66.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.58 4.94.36.31.68.92.68 1.85v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg><span data-fr="Continuer avec GitHub" data-en="Continue with GitHub">Continuer avec GitHub</span><span class="provider-state" data-provider-state>↗</span></button></div>
-    <div class="auth-divider"><span data-fr="ou par courriel" data-en="or by email">ou par courriel</span></div>
-    <form data-email-form><label for="auth-email" data-fr="Votre adresse courriel" data-en="Your email address">Votre adresse courriel</label><input id="auth-email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.com" required maxlength="254" /><div data-email-code-group hidden><label for="auth-code" data-fr="Code de connexion" data-en="Sign-in code">Code de connexion</label><input id="auth-code" name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="12" placeholder="000000" /></div><button class="primary-action" type="submit" data-email-submit disabled data-fr="Recevoir un code" data-en="Send me a code">Recevoir un code</button><button class="text-button auth-back" type="button" data-email-back hidden>Utiliser une autre adresse</button></form>
-    <p class="auth-status" data-auth-status role="status" aria-live="polite">Vérification du service de connexion…</p><button class="text-button auth-retry" type="button" data-auth-retry>Actualiser la connexion</button><p class="auth-note">La sauvegarde sur cet appareil vous sera proposée après connexion. Aucun compte IA n’est requis pour créer votre espace.</p>
-  </dialog>
-  <script>import { mountLanding } from '../lib/landing'; mountLanding()</script>
-</OrbitLayout>
-
-
-
-
+---
+import OrbitLayout from '../layouts/OrbitLayout.astro'
+import OrbitMark from './OrbitMark.astro'
+import '../styles/atom-games.css'
+interface Props { chapter?: number }
+const { chapter = 0 } = Astro.props
+const titles = ['Orbit — Un espace pour votre curiosité', 'Une question — Orbit', 'Les sources — Orbit', 'Orbit — Orbit']
+---
+<OrbitLayout bodyClass="landing-page" title={titles[chapter]}>
+  <main class="landing landing-journey" data-landing data-chapter={chapter}>
+    <div class="landing-grain" aria-hidden="true"></div>
+    <header class="landing-header">
+      <a href="/" class="brand-link" aria-label="Orbit, accueil"><OrbitMark /></a><span class="landing-edition" data-fr="UN ESPACE POUR LES ESPRITS CURIEUX" data-en="A SPACE FOR CURIOUS MINDS" data-es="UN ESPACIO PARA MENTES CURIOSAS">UN ESPACE POUR LES ESPRITS CURIEUX</span>
+    </header>
+    <div class="atom-experience" data-atom>
+      <div class="orbit-wordmark notranslate" translate="no" aria-hidden="true">{['O','r','b','i','t','.'].map(letter => <span data-logo-letter class:list={[{ "brand-i":letter==='i' }]}>{letter}</span>)}</div>
+      <canvas data-atom-canvas tabindex="0" role="img" aria-label="Atome interactif. Attrapez le noyau pour le déplacer, puis relâchez pour le lancer. Flèches : rotation. Majuscule et flèches : déplacement. Espace : pause. S : exploser. I : imploser. Y : synchroniser. L : lancer. R : recomposer." aria-describedby="atom-instructions"></canvas>
+      <div class="atom-fallback" data-atom-fallback aria-hidden="true"><span></span><span></span><span></span><i></i></div>
+      <nav class="atom-links" aria-label="Les portes Orbit">
+        <a data-atom-link="0" href="/guide/"><i></i><span data-fr="DOCUMENTATION" data-en="DOCUMENTATION" data-es="DOCUMENTACIÓN">DOCUMENTATION</span></a>
+        <a data-atom-link="1" href="/app/"><i></i><span data-fr="INTERFACE ORBIT" data-en="OPEN ORBIT" data-es="ABRIR ORBIT">INTERFACE ORBIT</span></a>
+        <button type="button" data-atom-link="2" data-play-toggle aria-expanded="false" aria-controls="atom-play"><i></i><span data-fr="JOUER" data-en="PLAY" data-es="JUGAR">JOUER</span></button>
+        <a data-atom-link="3" href="/studio/"><i></i><span data-fr="STUDIO SANITY" data-en="SANITY STUDIO" data-es="STUDIO SANITY">STUDIO SANITY</span></a>
+        <a data-atom-link="4" href="/formation/lab/"><i></i><span data-fr="APPRENDRE" data-en="LEARN" data-es="APRENDER">APPRENDRE</span></a>
+      </nav>
+      <div class="atom-label" aria-hidden="true"><span></span><span data-fr="UNE CURIOSITÉ EN MOUVEMENT" data-en="CURIOSITY IN MOTION" data-es="CURIOSIDAD EN MOVIMIENTO">UNE CURIOSITÉ EN MOUVEMENT</span></div>
+    </div>
+    <h1 class="sr-only">{titles[chapter]}</h1>{chapter === 3 && (<div class="landing-presence" data-landing-presence aria-hidden="true"><canvas data-landing-presence-canvas></canvas><span data-landing-presence-status>Rencontre avec Orbit</span></div>)}
+    <div class="atom-toolbar" id="atom-play" data-atom-play hidden aria-label="Gestes de l’atome"><p id="atom-instructions" data-fr="Attrapez le noyau. Déplacez-le. Relâchez." data-en="Grab the nucleus. Move it. Release." data-es="Agarra el núcleo. Muévelo. Suéltalo.">Attrapez le noyau. Déplacez-le. Relâchez.</p><div class="atom-buttons"><button type="button" data-atom-launch data-fr="Lancer" data-en="Throw" data-es="Lanzar">Lancer</button><button type="button" data-atom-scatter data-fr="Exploser" data-en="Explode" data-es="Explotar">Exploser</button><button type="button" data-atom-implode data-fr="Imploser" data-en="Implode" data-es="Implosionar">Imploser</button><button type="button" data-atom-sync aria-pressed="false" data-fr="Synchroniser" data-en="Synchronize" data-es="Sincronizar">Synchroniser</button><button type="button" data-atom-reform data-fr="Recomposer" data-en="Reform" data-es="Recomponer">Recomposer</button><button type="button" data-atom-pause aria-pressed="false" data-fr="Pause" data-en="Pause" data-es="Pausa">Pause</button><button type="button" data-atom-reset data-fr="Repartir" data-en="Reset" data-es="Reiniciar">Repartir</button><button type="button" data-atom-games data-fr="15 jeux" data-en="15 games" data-es="15 juegos">15 jeux</button><button type="button" data-play-close data-fr="Retour" data-en="Back" data-es="Volver">Retour</button></div><span class="atom-status" data-atom-status role="status">Illustration interactive · pas une simulation quantique</span></div>
+    <div class="landing-preferences" aria-label="Préférences d’affichage"><select data-landing-language aria-label="Langue"><option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option></select><button type="button" data-landing-access aria-haspopup="dialog">Accès</button></div>
+    <footer class="landing-footer"><span>ORBIT · RESEARCH COMPANION</span><a class="publication-lab-link" href="https://securedme.ca/" aria-label="SecuredMe Publication Lab — securedme.ca"><img class="publication-lab-signature" src="/brand/securedme-publication-lab-primary-dark.png" alt="SecuredMe Publication Lab" width="1672" height="941" loading="eager" /></a><span data-fr="VERSION 2.1.7" data-en="VERSION 2.1.7" data-es="VERSIÓN 2.1.7">VERSION 2.1.7</span></footer>
+  </main>
+  <dialog class="orbit-dialog auth-dialog" data-auth-dialog aria-labelledby="auth-title">
+    <button class="dialog-close" data-dialog-close type="button" aria-label="Fermer">×</button><OrbitMark small /><button class="language-toggle" data-language type="button" aria-label="Switch to English">FR / EN</button>
+    <p class="dialog-eyebrow" data-fr="VOTRE ESPACE VOUS ATTEND" data-en="YOUR SPACE AWAITS">VOTRE ESPACE VOUS ATTEND</p>
+    <h2 id="auth-title" data-fr="Bienvenue dans votre orbite." data-en="Welcome to your orbit.">Bienvenue dans votre orbite.</h2>
+    <p class="dialog-description" data-fr="Créez votre compte ou retrouvez vos recherches. La connexion à votre IA se fait ensuite, à votre choix." data-en="Create an account or return to your research. Connect your AI separately, when you choose.">Créez votre compte ou retrouvez vos recherches. La connexion à votre IA se fait ensuite, à votre choix.</p>
+    <div class="provider-buttons"><button type="button" data-auth-google disabled><span class="provider-symbol" aria-hidden="true">G</span><span data-fr="Continuer avec Google" data-en="Continue with Google">Continuer avec Google</span><span class="provider-state" data-provider-state>↗</span></button><button type="button" data-auth-github disabled><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.82.09-.64.35-1.08.64-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.1.4-1.99 1.03-2.69-.1-.26-.45-1.28.1-2.66 0 0 .84-.27 2.75 1.03A9.57 9.57 0 0 1 12 6.8c.85 0 1.7.11 2.49.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.66.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.58 4.94.36.31.68.92.68 1.85v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg><span data-fr="Continuer avec GitHub" data-en="Continue with GitHub">Continuer avec GitHub</span><span class="provider-state" data-provider-state>↗</span></button></div>
+    <div class="auth-divider"><span data-fr="ou par courriel" data-en="or by email">ou par courriel</span></div>
+    <form data-email-form><label for="auth-email" data-fr="Votre adresse courriel" data-en="Your email address">Votre adresse courriel</label><input id="auth-email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.com" required maxlength="254" /><div data-email-code-group hidden><label for="auth-code" data-fr="Code de connexion" data-en="Sign-in code">Code de connexion</label><input id="auth-code" name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="12" placeholder="000000" /></div><button class="primary-action" type="submit" data-email-submit disabled data-fr="Recevoir un code" data-en="Send me a code">Recevoir un code</button><button class="text-button auth-back" type="button" data-email-back hidden>Utiliser une autre adresse</button></form>
+    <p class="auth-status" data-auth-status role="status" aria-live="polite">Vérification du service de connexion…</p><button class="text-button auth-retry" type="button" data-auth-retry>Actualiser la connexion</button><p class="auth-note">La sauvegarde sur cet appareil vous sera proposée après connexion. Aucun compte IA n’est requis pour créer votre espace.</p>
+  </dialog>
+  <script>import { mountLanding } from '../lib/landing'; mountLanding()</script>
+</OrbitLayout>
+
+
+
+

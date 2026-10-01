@@ -1,0 +1,82 @@
+{
+  "state": "PASS_STATIC_INSTALL_BUILD",
+  "environment": "Kaggle",
+  "startedAt": "2026-10-01T12:16:27.232310+00:00",
+  "archiveSha256": "ea0f93eff48e9dd6a07283f46067eafdc317b352e43409efac8e5e61d4992b90",
+  "fixedHostDependencies": {
+    "sanity": "6.16.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "styled-components": "6.5.3"
+  },
+  "nodeVersion": "22.20.0",
+  "archiveVerified": true,
+  "installationLockSha256": "ed94c13524c078f84c44f074a3034d10850f81470a80603638c3404663b4ba06",
+  "lockedDependencies": true,
+  "installedInBlankStudio": true,
+  "importValidated": true,
+  "staticBuildValidated": true,
+  "authenticatedRuntimeValidated": false,
+  "crossOriginContextValidated": false,
+  "nativeWebMcpValidated": false,
+  "sanityWritesPerformed": false,
+  "publishedToNpm": false,
+  "stage": "studio-build",
+  "commands": [
+    {
+      "stage": "node-version",
+      "command": [
+        "/kaggle/temp/orbit-second-studio-ea0f93eff48e-1790856987230811514/runtime/node-v22.20.0-linux-x64/bin/node",
+        "--version"
+      ],
+      "exitCode": 0,
+      "seconds": 0.008
+    },
+    {
+      "stage": "dependency-install",
+      "command": [
+        "/kaggle/temp/orbit-second-studio-ea0f93eff48e-1790856987230811514/runtime/node-v22.20.0-linux-x64/bin/npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "--include=optional"
+      ],
+      "exitCode": 0,
+      "seconds": 26.234
+    },
+    {
+      "stage": "plugin-import",
+      "command": [
+        "/kaggle/temp/orbit-second-studio-ea0f93eff48e-1790856987230811514/runtime/node-v22.20.0-linux-x64/bin/node",
+        "smoke.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 3.458
+    },
+    {
+      "stage": "studio-build",
+      "command": [
+        "/kaggle/temp/orbit-second-studio-ea0f93eff48e-1790856987230811514/node_modules/.bin/sanity",
+        "build",
+        "dist",
+        "--yes",
+        "--no-auto-updates"
+      ],
+      "exitCode": 0,
+      "seconds": 7.277
+    }
+  ],
+  "installedEntrySha256": "09e40fb4be648f44777c268825df94de496ceecd51eda6a37a279a9506a68b00",
+  "staticBuildFiles": 315,
+  "limits": [
+    "No Sanity login or real account/dataset used",
+    "No browser session or native WebMCP execution",
+    "No cross-origin Context call",
+    "No learner data or publication write",
+    "No npm publication"
+  ],
+  "finishedAt": "2026-10-01T12:17:11.242029+00:00",
+  "execution": "Kaggle interactive draft",
+  "saveIncident": "source exceeded Kaggle 1 MB; dependency lock compressed for subsequent version"
+}

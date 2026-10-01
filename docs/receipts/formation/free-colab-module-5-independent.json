@@ -1,0 +1,35 @@
+{
+  "state": "PASS_INDEPENDENT_CPU_COPY_EXPORT_WITH_UI_DRIVER_INCIDENT",
+  "host": "Google Colab",
+  "moduleId": 5,
+  "sourceCommit": "b9411526cd6e06faee398c60d7afe5d68421e257",
+  "operator": "Codex",
+  "origin": "software-qa-fixture",
+  "notStudentObservation": true,
+  "accountPlan": "free account reported by user; Processeur radio checked observed",
+  "freshDriveCopy": true,
+  "copyName": "Orbit QA gratuit — Module 5 — copie neuve",
+  "trustedUIEvents": [
+    "Enter changed target from 1 to 1.5 with damping 12: value 1.049988520795431, velocity 0.9309732371936895.",
+    "Space froze value 1.15676333701537, velocity 1.1047062910678402, target 1.5 in two independent DOM readings.",
+    "Actual student_files damping edited from 12 to 5, stiffness 36 preserved, then rerun.",
+    "Space resumed movement; six real readings showed overshoot to 1.616301894349911 then return to 1.5291636117539653.",
+    "Space froze final value 1.4967128787004997, velocity -0.2666841433307801, target 1.5."
+  ],
+  "archiveSha256": "ebdcd2c1ff8409390515aa6f20c603c03b7f04e91c36fb86e487d79703ff8d19",
+  "archiveFile": "orbit-module-5-module-5-1790858418976494724.zip",
+  "downloadConfirmedByFilesystem": true,
+  "exportFileCountReported": 5,
+  "runtimeStoppedAfterExport": true,
+  "runtimeStopObserved": "Reconnecter Cliquez pour établir la connexion",
+  "driveSavedObserved": "Toutes les modifications ont été enregistrées",
+  "incidents": [
+    "Popup blocked new copy window; visible Open in new tab action recovered without changing protections.",
+    "Sticky Colab header obscured target button; screenshot and normal mouseWheel recovered semantic Enter.",
+    "Modified preview iframe stalled; saved Drive copy reloaded and same CPU runtime restored."
+  ],
+  "performanceMeasured": false,
+  "understandingExamined": false,
+  "humanApproval": false,
+  "privateEvidenceDirectory": ".orbit/formation-20261001/colab-independent"
+}

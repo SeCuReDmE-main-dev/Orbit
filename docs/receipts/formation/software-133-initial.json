@@ -1,0 +1,16 @@
+{
+  "suite": "A",
+  "host": "Kaggle",
+  "exitCode": 0,
+  "sourceSha256": "a3f28319ab60a9781e93b637073c760f81d5d337a8a04f2df32b02435ec3b938",
+  "tests": 133,
+  "passed": 133,
+  "failed": 0,
+  "success": true,
+  "provenance": {
+    "observer": "coordinator",
+    "preparation": "Sanitized copy of a retained execution report; no workstation rerun.",
+    "originalReportSha256": "839fe7ebd748ea603ba86ef9f77f959d46f9294bf4736ac62cd9c129ad2e06c5",
+    "omitted": "Private filesystem locations, account identity and operational access values."
+  }
+}

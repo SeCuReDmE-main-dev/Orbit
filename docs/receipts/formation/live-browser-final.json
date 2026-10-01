@@ -1,0 +1,529 @@
+{
+  "state": "complete",
+  "host": "E2B",
+  "orchestrator": "Kaggle",
+  "modelCalls": 0,
+  "nativeWebMCP": true,
+  "checks": [
+    {
+      "name": "native-twenty-five-unique-tools",
+      "passed": true,
+      "observation": {
+        "count": 25,
+        "names": [
+          "orbit_check_understanding",
+          "orbit_classify_evidence",
+          "orbit_compare_claims",
+          "orbit_find_relations",
+          "orbit_get_capabilities",
+          "orbit_get_learning_journal",
+          "orbit_get_learning_mission",
+          "orbit_get_learning_protocol",
+          "orbit_get_learning_support",
+          "orbit_get_mission_summary",
+          "orbit_get_research_protocol",
+          "orbit_get_research_request",
+          "orbit_list_research_points",
+          "orbit_plan_learning_activity",
+          "orbit_prepare_experiment",
+          "orbit_prepare_transfer",
+          "orbit_present_learning_work",
+          "orbit_present_research",
+          "orbit_read_learning_artifact",
+          "orbit_read_source_record",
+          "orbit_resolve_hold",
+          "orbit_sanity_initial_context",
+          "orbit_sanity_read_entries",
+          "orbit_search_sources",
+          "orbit_trace_impact"
+        ]
+      },
+      "atMs": 1285
+    },
+    {
+      "name": "discovery-starts-no-model-or-research",
+      "passed": true,
+      "atMs": 1289
+    },
+    {
+      "name": "fresh-session-has-no-implicit-engine",
+      "passed": true,
+      "atMs": 1289
+    },
+    {
+      "name": "private-read-requires-consent",
+      "passed": true,
+      "atMs": 1292
+    },
+    {
+      "name": "unpromoted-pages-have-noindex",
+      "passed": true,
+      "observation": true,
+      "atMs": 1294
+    },
+    {
+      "name": "canonical-language-en",
+      "passed": true,
+      "observation": true,
+      "atMs": 1303
+    },
+    {
+      "name": "canonical-language-es",
+      "passed": true,
+      "observation": true,
+      "atMs": 1309
+    },
+    {
+      "name": "canonical-language-fr",
+      "passed": true,
+      "observation": true,
+      "atMs": 1312
+    },
+    {
+      "name": "module-1-keyboard-state-actual",
+      "passed": true,
+      "observation": true,
+      "atMs": 1478
+    },
+    {
+      "name": "module-1-restoration-and-cleanup",
+      "passed": true,
+      "observation": true,
+      "atMs": 1487
+    },
+    {
+      "name": "module-2-actual-selection",
+      "passed": true,
+      "observation": true,
+      "atMs": 1597
+    },
+    {
+      "name": "module-2-restoration-and-cleanup",
+      "passed": true,
+      "observation": true,
+      "atMs": 1600
+    },
+    {
+      "name": "module-3-actual-selection",
+      "passed": true,
+      "observation": true,
+      "atMs": 1837
+    },
+    {
+      "name": "module-3-restoration-and-cleanup",
+      "passed": true,
+      "observation": true,
+      "atMs": 1928
+    },
+    {
+      "name": "module-4-inertia-after-release",
+      "passed": true,
+      "observation": true,
+      "atMs": 2231
+    },
+    {
+      "name": "module-4-restoration-and-cleanup",
+      "passed": true,
+      "observation": true,
+      "atMs": 2236
+    },
+    {
+      "name": "module-5-elastic-transition",
+      "passed": true,
+      "observation": true,
+      "atMs": 2499
+    },
+    {
+      "name": "module-5-restoration-and-cleanup",
+      "passed": true,
+      "observation": true,
+      "atMs": 2504
+    },
+    {
+      "name": "module-6-bounded-particles-actual",
+      "passed": true,
+      "observation": true,
+      "atMs": 2631
+    },
+    {
+      "name": "module-6-restoration-and-cleanup",
+      "passed": true,
+      "observation": true,
+      "atMs": 2641
+    },
+    {
+      "name": "module-7-history-actual",
+      "passed": true,
+      "observation": true,
+      "atMs": 2798
+    },
+    {
+      "name": "module-7-restoration-and-cleanup",
+      "passed": true,
+      "observation": true,
+      "atMs": 2803
+    },
+    {
+      "name": "module-8-prepared-trace-is-not-real-call",
+      "passed": true,
+      "observation": true,
+      "atMs": 2907
+    },
+    {
+      "name": "module-8-restoration-and-cleanup",
+      "passed": true,
+      "observation": true,
+      "atMs": 2911
+    },
+    {
+      "name": "static-freezes-current-experiment-frame",
+      "passed": true,
+      "observation": true,
+      "atMs": 3335
+    },
+    {
+      "name": "canonical-access-contrast-text-motion",
+      "passed": true,
+      "observation": true,
+      "atMs": 3379
+    },
+    {
+      "name": "same-evidence-baseline-and-n-comparison",
+      "passed": true,
+      "observation": true,
+      "atMs": 3404
+    },
+    {
+      "name": "shared-session-is-real-and-revisioned",
+      "passed": true,
+      "atMs": 3424
+    },
+    {
+      "name": "native-classification-keeps-two-results",
+      "passed": true,
+      "atMs": 3429
+    },
+    {
+      "name": "native-analysis-rejects-stale-revision",
+      "passed": true,
+      "atMs": 3432
+    },
+    {
+      "name": "native-proposal-pending-without-human-review",
+      "passed": true,
+      "atMs": 3441
+    },
+    {
+      "name": "native-proposal-idempotence",
+      "passed": true,
+      "atMs": 3452
+    },
+    {
+      "name": "native-proposal-rejects-old-revision",
+      "passed": true,
+      "atMs": 3456
+    },
+    {
+      "name": "native-revocation-blocks-private-read",
+      "passed": true,
+      "atMs": 3471
+    },
+    {
+      "name": "browser-back-restores-module-and-view",
+      "passed": true,
+      "observation": true,
+      "atMs": 3510
+    },
+    {
+      "name": "lab-and-projects-share-one-session",
+      "passed": true,
+      "atMs": 3535
+    },
+    {
+      "name": "preferences-shared-across-formation-pages",
+      "passed": true,
+      "observation": true,
+      "atMs": 3536
+    },
+    {
+      "name": "real-import-keeps-external-declared-status",
+      "passed": true,
+      "observation": true,
+      "atMs": 3552
+    },
+    {
+      "name": "native-read-only-selected-imported-artifact",
+      "passed": true,
+      "atMs": 3580
+    },
+    {
+      "name": "native-unselected-artifact-is-not-readable",
+      "passed": true,
+      "atMs": 3583
+    },
+    {
+      "name": "version-view-preserves-artifact-identity",
+      "passed": true,
+      "observation": true,
+      "atMs": 3639
+    },
+    {
+      "name": "browser-back-restores-files-view",
+      "passed": true,
+      "observation": true,
+      "atMs": 3653
+    },
+    {
+      "name": "unsaved-session-is-labelled-memory",
+      "passed": true,
+      "observation": true,
+      "atMs": 3654
+    },
+    {
+      "name": "real-sha-control-preserves-declared-status",
+      "passed": true,
+      "observation": true,
+      "atMs": 3663
+    },
+    {
+      "name": "real-sha-control-displays-exact-digest",
+      "passed": true,
+      "observation": true,
+      "atMs": 3678
+    },
+    {
+      "name": "new-version-preserves-text-and-resets-verification",
+      "passed": true,
+      "observation": true,
+      "atMs": 3707
+    },
+    {
+      "name": "new-version-has-no-implicit-agent-sharing",
+      "passed": true,
+      "atMs": 3712
+    },
+    {
+      "name": "new-version-keeps-original-artifact",
+      "passed": true,
+      "observation": true,
+      "atMs": 3729
+    },
+    {
+      "name": "version-concurrency-fixture-remains-agent-proposal",
+      "passed": true,
+      "atMs": 3764
+    },
+    {
+      "name": "stale-version-form-does-not-create-artifact",
+      "passed": true,
+      "observation": true,
+      "atMs": 3772
+    },
+    {
+      "name": "local-save-label-is-confirmed-only-with-browser-copy",
+      "passed": true,
+      "observation": true,
+      "atMs": 3797
+    },
+    {
+      "name": "failed-save-keeps-work-and-shows-durable-memory-warning",
+      "passed": true,
+      "observation": true,
+      "atMs": 3813
+    },
+    {
+      "name": "failed-save-does-not-overwrite-last-confirmed-copy",
+      "passed": true,
+      "observation": true,
+      "atMs": 3815
+    },
+    {
+      "name": "save-failure-warning-survives-view-change",
+      "passed": true,
+      "observation": true,
+      "atMs": 3850
+    },
+    {
+      "name": "explicit-save-recovers-after-storage-failure",
+      "passed": true,
+      "observation": true,
+      "atMs": 3868
+    },
+    {
+      "name": "real-colab-zip-import-validates-manifest-and-remains-declared",
+      "passed": true,
+      "observation": true,
+      "atMs": 3891
+    },
+    {
+      "name": "zip-import-preserves-actual-frontend-text-and-digest",
+      "passed": true,
+      "observation": true,
+      "atMs": 3907
+    },
+    {
+      "name": "tampered-colab-zip-is-rejected-without-partial-artifacts",
+      "passed": true,
+      "observation": true,
+      "atMs": 3934
+    },
+    {
+      "name": "tampered-archive-does-not-change-session-revision",
+      "passed": true,
+      "atMs": 3937
+    },
+    {
+      "name": "local-saving-revocation-removes-worker-copy",
+      "passed": true,
+      "observation": true,
+      "atMs": 3964
+    },
+    {
+      "name": "live-release-json-is-accessible",
+      "passed": true,
+      "observation": {
+        "url": "https://orbit.securedme.ca/formation/release.json?orbit-release-check=formation-790dfa8e-614e-4646-85d0-e428a65307fa",
+        "status": 200
+      },
+      "atMs": 4330
+    },
+    {
+      "name": "live-release-manifest-is-formation-only",
+      "passed": true,
+      "observation": {
+        "files": 358
+      },
+      "atMs": 4332
+    },
+    {
+      "name": "live-html-matches-release-digest",
+      "passed": true,
+      "observation": [
+        {
+          "url": "https://orbit.securedme.ca/formation/lab/index.html?orbit-release-check=formation-790dfa8e-614e-4646-85d0-e428a65307fa",
+          "status": 200,
+          "sha256": "721bdc40c39002ea104f1dfa787ef574bdc5e194b6860893602b08422240c256"
+        },
+        {
+          "url": "https://orbit.securedme.ca/formation/projets/index.html?orbit-release-check=formation-790dfa8e-614e-4646-85d0-e428a65307fa",
+          "status": 200,
+          "sha256": "44fd89b81c6c435e2114d6b885325c0022a5da738bfe72887f7a21a98927089e"
+        }
+      ],
+      "atMs": 4487
+    },
+    {
+      "name": "live-javascript-matches-release-digest",
+      "passed": true,
+      "observation": [
+        {
+          "url": "https://orbit.securedme.ca/formation/_astro/FormationLayout.astro_astro_type_script_index_0_lang.CDocKR1Y.js?orbit-release-check=formation-790dfa8e-614e-4646-85d0-e428a65307fa",
+          "status": 200,
+          "sha256": "51b6c97b92f4a15c400eeaa81fd39b0d46fa97c65fee8c6a292cf996f098fa47"
+        }
+      ],
+      "atMs": 4565
+    },
+    {
+      "name": "live-stylesheet-matches-release-digest",
+      "passed": true,
+      "observation": [
+        {
+          "url": "https://orbit.securedme.ca/formation/_astro/FormationLayout.B0sGGvIL.css?orbit-release-check=formation-790dfa8e-614e-4646-85d0-e428a65307fa",
+          "status": 200,
+          "sha256": "c64f1c5a80b9251e73f78b0bfa86649cd2adb11fb221a5eb0a6ce76a09e4541f"
+        }
+      ],
+      "atMs": 4639
+    },
+    {
+      "name": "live-studio-plugin-matches-release-digest",
+      "passed": true,
+      "observation": [
+        {
+          "url": "https://orbit.securedme.ca/formation/plugins/orbit-learning-studio-1.0.0.tgz?orbit-release-check=formation-790dfa8e-614e-4646-85d0-e428a65307fa",
+          "status": 200,
+          "sha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973"
+        }
+      ],
+      "atMs": 4718
+    },
+    {
+      "name": "live-landing-html-accessible",
+      "passed": true,
+      "observation": {
+        "url": "https://orbit.securedme.ca/?orbit-release-check=formation-790dfa8e-614e-4646-85d0-e428a65307fa",
+        "status": 200,
+        "sha256": "c83e872abdc3ab1a7458d8ea0391f199959bc237bb0a24df3d904ef5f5377ed8"
+      },
+      "atMs": 5026
+    },
+    {
+      "name": "live-landing-branding-and-five-navigation-doors",
+      "passed": true,
+      "observation": {
+        "brand": "Orbit.",
+        "atom": true,
+        "learningHref": "/formation/lab/",
+        "formationLinks": 1,
+        "landingEdition": "UN ESPACE POUR LES ESPRITS CURIEUX",
+        "navigation": [
+          "DOCUMENTATION",
+          "INTERFACE ORBIT",
+          "JOUER",
+          "STUDIO SANITY",
+          "APPRENDRE"
+        ],
+        "guideTitle": "Orbit — Un espace pour votre curiosité"
+      },
+      "atMs": 5031
+    },
+    {
+      "name": "live-guide-html-accessible",
+      "passed": true,
+      "observation": {
+        "url": "https://orbit.securedme.ca/guide/?orbit-release-check=formation-790dfa8e-614e-4646-85d0-e428a65307fa",
+        "status": 200,
+        "sha256": "51d2b3f64f885046644ceb7eaa0b3dd9a95bbc23b74e39459af3d5df1468e895"
+      },
+      "atMs": 5107
+    },
+    {
+      "name": "live-guide-branding-preserved",
+      "passed": true,
+      "observation": {
+        "brand": "Orbit.",
+        "atom": false,
+        "formationLinks": 0,
+        "navigation": [],
+        "guideTitle": "Jouer. Comprendre. Vérifier."
+      },
+      "atMs": 5117
+    },
+    {
+      "name": "small-screen-has-no-horizontal-overflow",
+      "passed": true,
+      "observation": true,
+      "atMs": 5144
+    },
+    {
+      "name": "no-runtime-errors",
+      "passed": true,
+      "observation": [],
+      "atMs": 5145
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "mission-fr.png",
+    "experiment-static.png",
+    "projects-import-declared.png"
+  ],
+  "fixtureAuthority": "Automated synthetic test setup, never a human learning review or notebook execution proof.",
+  "runId": "formation-790dfa8e-614e-4646-85d0-e428a65307fa",
+  "targetUrl": "https://orbit.securedme.ca/formation/lab/",
+  "success": true,
+  "completed": true,
+  "durationMs": 5147,
+  "runtimeErrors": []
+}

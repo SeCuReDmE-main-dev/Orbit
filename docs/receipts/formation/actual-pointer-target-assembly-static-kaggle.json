@@ -1,0 +1,111 @@
+{
+  "state": "PASS_ACTUAL_EXPORT_ASSEMBLY_STATIC_BUILD",
+  "environment": "Kaggle",
+  "startedAt": "2026-10-01T15:07:18.295991+00:00",
+  "inputMode": "direct-independent-colab-assembly",
+  "outerDownloadSha256": null,
+  "assemblySha256": "141466603afaca979af3e8ee011391c9516de2a723c52809bdca86f0dbb0b1ba",
+  "exportsManifestSha256": "f81f828bffe0e4094b92284e5f30b7fdea2fbdf8cadd325ff24c1af245f5fd41",
+  "receiptSha256": "cf6b2c268cd1c7a9263146874547a4e039451b6503b63d5c55912d6bc7522720",
+  "upstreamColabReceipt": {
+    "host": "Google Colab",
+    "state": "PASS_REAL_FREE_CPU_COLAB_ASSEMBLY_NOT_BUILT",
+    "accountPlanObserved": "free account reported by user; CPU radio checked, premium GPU unavailable observed",
+    "humanUnderstanding": false,
+    "operator": "Codex",
+    "origin": "software-qa-fixture",
+    "notStudentObservation": true,
+    "accountPlan": "free account reported by user; CPU radio checked, premium GPU unavailable observed",
+    "fixtureCommit": "4d3b48bc9236b1c3df06f209486009a4c8a4c942",
+    "manualUploadVerified": false,
+    "frontendFileCountObserved": 9,
+    "assemblyManifestFileCountObserved": 46,
+    "archiveSha256": "141466603afaca979af3e8ee011391c9516de2a723c52809bdca86f0dbb0b1ba",
+    "archiveBytes": 79149,
+    "understandingExamined": false,
+    "humanApproval": false,
+    "runtimeStoppedAfterDownload": true,
+    "runtimeStopObserved": "Reconnecter Cliquez pour établir la connexion"
+  },
+  "dependencies": {
+    "astro": "7.3.3",
+    "three": "0.181.2"
+  },
+  "dependencyInstallationStrategy": "frozen-lock-npm-ci",
+  "suppliedInstallationLockSha256": "423e48783d884b71827bef1e4aae380a3e15ca93735ef1a89423cf54e8a0edd8",
+  "nodeVersion": "22.20.0",
+  "stage": "astro-build",
+  "commands": [
+    {
+      "stage": "node-version",
+      "command": [
+        "/kaggle/temp/orbit-actual-assembly-141466603afa-1790867238295515936/runtime/node-v22.20.0-linux-x64/bin/node",
+        "--version"
+      ],
+      "exitCode": 0,
+      "seconds": 0.006
+    },
+    {
+      "stage": "dependency-ci",
+      "command": [
+        "/kaggle/temp/orbit-actual-assembly-141466603afa-1790867238295515936/runtime/node-v22.20.0-linux-x64/bin/npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "--include=optional"
+      ],
+      "exitCode": 0,
+      "seconds": 7.16
+    },
+    {
+      "stage": "astro-build",
+      "command": [
+        "/kaggle/temp/orbit-actual-assembly-141466603afa-1790867238295515936/node_modules/.bin/astro",
+        "build"
+      ],
+      "exitCode": 0,
+      "seconds": 1.847
+    }
+  ],
+  "actualExportsUsed": true,
+  "replacementBricksUsed": false,
+  "staticBuildValidated": true,
+  "browserInteractionValidated": false,
+  "learnerUnderstandingExamined": false,
+  "nativeWebMcpValidated": false,
+  "credentialsRequired": false,
+  "modelsCalled": false,
+  "independentColabEnvironmentValidatedByThisSuite": false,
+  "manifestFilesVerified": 46,
+  "modulesLinked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "sourceBrickFilesLinked": 9,
+  "sourceGraphCoverageValidated": true,
+  "producedInstallationLockSha256": "423e48783d884b71827bef1e4aae380a3e15ca93735ef1a89423cf54e8a0edd8",
+  "producedInstallationLockBytes": 143730,
+  "installationLockGeneratedByThisRun": false,
+  "originalAssemblyFilesUnchanged": true,
+  "compiledClientScripts": [
+    "/_astro/index.astro_astro_type_script_index_0_lang.D44IJgOG.js"
+  ],
+  "staticBuildFiles": 2,
+  "compiledDistSha256": "fbe91e6c745fc86872c5911360101353a3f6155e6fe9dfc8a248867d14ea563d",
+  "limits": [
+    "Source linkage and static compilation only",
+    "No browser or trusted pointer interaction",
+    "This Kaggle suite does not validate the Colab account plan, CPU runtime or cold start",
+    "No learner comprehension or human approval",
+    "No replacement or corrected bricks",
+    "Upstream Colab state is retained as reported: PASS_REAL_FREE_CPU_COLAB_ASSEMBLY_NOT_BUILT"
+  ],
+  "finishedAt": "2026-10-01T15:07:32.901142+00:00"
+}

@@ -108,6 +108,7 @@ export function mountAtomScene(root: HTMLElement): () => void {
     new THREE.Euler(-0.75, 0.7, -0.35),
     new THREE.Euler(0.12, -0.6, 1.32),
     new THREE.Euler(-0.26, 0.92, 0.91),
+    new THREE.Euler(1.10, -0.45, -0.28),
   ];
   const orbitMaterials: THREE.MeshStandardMaterial[] = [];
   const deformableRings: { geometry: THREE.BufferGeometry; home: Float32Array }[] = [];
@@ -123,8 +124,8 @@ export function mountAtomScene(root: HTMLElement): () => void {
         orbitPoint((i / 256) * Math.PI * 2, orbit, rail * 0.025),
       );
       const material = new THREE.MeshStandardMaterial({
-        color: ["#bba0ff", "#ffc782", "#73d7ff", "#efb6ff"][orbit],
-        emissive: ["#7044b7", "#bb7135", "#287ca9", "#a751c4"][orbit],
+        color: ["#bba0ff", "#ffc782", "#73d7ff", "#efb6ff", "#73d7ff"][orbit],
+        emissive: ["#7044b7", "#bb7135", "#287ca9", "#a751c4", "#287ca9"][orbit],
         emissiveIntensity: .4,
         transparent: true,
         opacity: rail === 0 ? 0.6 : 0.14,
@@ -143,6 +144,8 @@ export function mountAtomScene(root: HTMLElement): () => void {
       orbitGroup.add(new THREE.Mesh(railGeometry,material));
     }
   }
+  // Adding a navigation orbit preserves the existing decorative particle field.
+  const particleOrbitCount = 4;
   const count = 2100,
     positions = new Float32Array(count * 3),
     homes = new Float32Array(count * 3),
@@ -154,7 +157,7 @@ export function mountAtomScene(root: HTMLElement): () => void {
       i < 1750
         ? orbitPoint(
             random(i + 3) * Math.PI * 2,
-            i % orbitRotations.length,
+            i % particleOrbitCount,
             (random(i + 9) - 0.5) * 0.16,
           )
         : new THREE.Vector3(

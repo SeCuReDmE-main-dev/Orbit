@@ -1,0 +1,84 @@
+{
+  "state": "PASS_STATIC_INSTALL_BUILD",
+  "environment": "Kaggle",
+  "startedAt": "2026-10-01T07:15:10.574645-04:00",
+  "archiveSha256": "3e3a499db12d0af2a84bd8d48eeea9fa893636e6a5a624271ef73e32a2c614fe",
+  "fixedHostDependencies": {
+    "sanity": "6.16.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "styled-components": "6.5.3"
+  },
+  "nodeVersion": "22.20.0",
+  "archiveVerified": true,
+  "installedInBlankStudio": true,
+  "importValidated": true,
+  "staticBuildValidated": true,
+  "authenticatedRuntimeValidated": false,
+  "crossOriginContextValidated": false,
+  "nativeWebMcpValidated": false,
+  "sanityWritesPerformed": false,
+  "publishedToNpm": false,
+  "stage": "studio-build",
+  "commands": [
+    {
+      "stage": "node-version",
+      "exitCode": 0,
+      "seconds": 0.007,
+      "command": [
+        "node",
+        "--version"
+      ]
+    },
+    {
+      "stage": "dependency-install",
+      "exitCode": 0,
+      "seconds": 72.332,
+      "command": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "--include=optional"
+      ]
+    },
+    {
+      "stage": "plugin-import",
+      "exitCode": 0,
+      "seconds": 3.217,
+      "command": [
+        "node",
+        "smoke.mjs"
+      ]
+    },
+    {
+      "stage": "studio-build",
+      "exitCode": 0,
+      "seconds": 7.114,
+      "command": [
+        "sanity",
+        "build",
+        "dist",
+        "--yes",
+        "--no-auto-updates"
+      ]
+    }
+  ],
+  "installedEntrySha256": "208056b39ab8bea9cf69ce40a406f0579077253d1e6739f01e3d2f629336c409",
+  "staticBuildFiles": 315,
+  "limits": [
+    "No Sanity login or real account/dataset used",
+    "No browser session or native WebMCP execution",
+    "No cross-origin Context call",
+    "No learner data or publication write",
+    "No npm publication"
+  ],
+  "finishedAt": "2026-10-01T07:16:39.874331-04:00",
+  "provenance": {
+    "observer": "coordinator",
+    "preparation": "Sanitized copy of a retained execution report; no workstation rerun.",
+    "originalReportSha256": "f3ab7b8b5933b87e3971a73db7bacae1f49f5f198f53f17df4db3185c62535e5",
+    "omitted": "Private filesystem locations, account identity and operational access values."
+  }
+}

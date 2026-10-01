@@ -1,0 +1,9 @@
+{
+  "retired": {
+    "state": "RETIRED"
+  },
+  "refusal": {
+    "state": "OLD_TOKEN_REFUSED",
+    "httpStatus": 401
+  }
+}

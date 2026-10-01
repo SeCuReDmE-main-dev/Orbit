@@ -1,0 +1,14 @@
+{
+  "source": "artifacts/learning-studio/installation-package-lock.json",
+  "sourceSha256": "e4215188e3f702b8707d3992aaa0f917bbdca00e58118a0f6953d98697412938",
+  "hostLockSha256": "461d16dd8c0a99be68eaa993127fef2b119caace5076adb8468a629d6267302c",
+  "adaptedFields": [
+    "name",
+    "packages[\"\"].name",
+    "packages[\"\"].dependencies[\"@orbit/learning-studio\"]",
+    "packages.node_modules/@orbit/learning-studio.resolved"
+  ],
+  "registryEntriesChanged": false,
+  "localInstallationExecuted": false,
+  "localTestsExecuted": false
+}

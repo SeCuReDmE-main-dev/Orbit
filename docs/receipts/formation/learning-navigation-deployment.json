@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "transport": "brokered-ssh-sftp",
+  "package_sha256": "f681ae756495f01d321bb16d1fb1ba757406e39fdbb40b257023207d7ccf2f89",
+  "verified_paths": [
+    "index.html"
+  ],
+  "staging_cleaned": true,
+  "mutated": true,
+  "rollback_restored": false,
+  "secret_values_exposed": false,
+  "plan_id": "a70958df0e00464d647ed76d",
+  "remoteBackupRetained": true,
+  "privateOperationalPathsOmitted": true
+}

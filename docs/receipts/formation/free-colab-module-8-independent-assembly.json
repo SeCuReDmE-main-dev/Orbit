@@ -1,0 +1,97 @@
+{
+  "state": "PASS_REAL_FREE_CPU_COLAB_ASSEMBLY_NOT_BUILT",
+  "host": "Google Colab",
+  "operator": "Codex",
+  "origin": "software-qa-fixture",
+  "notStudentObservation": true,
+  "accountPlan": "free account reported by user; Processeur radio checked observed",
+  "sourceNotebookCommit": "b9411526cd6e06faee398c60d7afe5d68421e257",
+  "fixtureCommit": "ec99f875bd17e0b8f0db9711c3a2bf21f7219778",
+  "fixtureManifest": "docs/receipts/fixtures/free-colab-eight-export-manifest.json",
+  "transport": "HTTP_QA_FIXTURE_IMPORT",
+  "manualUploadVerified": false,
+  "manualUploadIncident": "Two native filechooser event attempts timed out on the multiple input. Cancel yielded exact-eight-exports ValueError. No file transmitted or protection changed.",
+  "tlsVerifiedByDefault": true,
+  "bounds": "Eight fixed HTTPS URLs; response.read(expectedBytes+1), timeout30; exact SHA and length then moduleId; original load_module and assemble preserved.",
+  "inputFiles": [
+    {
+      "moduleId": 1,
+      "path": "docs/receipts/fixtures/free-colab-module-1-export-a23ae46e.zip",
+      "sha256": "a23ae46e529314289fc098acdc165e1e2a1bfc29df61966d2e765ecba2a35794",
+      "bytes": 20957,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 2,
+      "path": "docs/receipts/fixtures/free-colab-module-2-export-211de817.zip",
+      "sha256": "211de817002cca08c08d16ff379df3849a8b1b9f7f62d8c1dbef87700b6a9073",
+      "bytes": 16764,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 3,
+      "path": "docs/receipts/fixtures/free-colab-module-3-export-50f48e5a.zip",
+      "sha256": "50f48e5a862be51e07bcbe12416ca183db3a6c6363e57007e84929b56b3d76c9",
+      "bytes": 24955,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 4,
+      "path": "docs/receipts/fixtures/free-colab-module-4-export-7e6c739c.zip",
+      "sha256": "7e6c739c0883e39aca491e6f6280cc353daf6745017a3bea5ce690746e4d67a5",
+      "bytes": 22095,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 5,
+      "path": "docs/receipts/fixtures/free-colab-module-5-export-ebdcd2c1.zip",
+      "sha256": "ebdcd2c1ff8409390515aa6f20c603c03b7f04e91c36fb86e487d79703ff8d19",
+      "bytes": 14814,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 6,
+      "path": "docs/receipts/fixtures/free-colab-module-6-export-4f0d2c98.zip",
+      "sha256": "4f0d2c98c5a3cf7d8f1bd6ed7ad1d76a5d3ee9474cf137955a18a59de425c23d",
+      "bytes": 15606,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 7,
+      "path": "docs/receipts/fixtures/free-colab-module-7-export-82752841.zip",
+      "sha256": "827528418863211e76307d3e3dbd2a21d17d2864bde0e59f4d8295948897f3ce",
+      "bytes": 19939,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 8,
+      "path": "docs/receipts/fixtures/free-colab-module-8-export-63f4384c.zip",
+      "sha256": "63f4384cee46d6d0d6edc7da6e9551f3aeee209ec929fc95e30fb4668ee1adfc",
+      "bytes": 19429,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    }
+  ],
+  "frontendFileCountObserved": 9,
+  "assemblyManifestFileCountObserved": 46,
+  "archiveFile": "orbit-mon-frontend-free-colab-independent.zip",
+  "archiveSha256": "96acc0ddfdd3728426980df39d2a1ccda07cc855eb95f950a552de776a5b2aed",
+  "archiveBytes": 78147,
+  "downloadConfirmedByFilesystem": true,
+  "compiled": false,
+  "nativeWebMcpCallVerified": false,
+  "understandingExamined": false,
+  "humanApproval": false,
+  "runtimeStoppedAfterDownload": true,
+  "runtimeStopObserved": "Reconnecter Cliquez pour établir la connexion",
+  "driveSavedObserved": "Toutes les modifications ont été enregistrées",
+  "oldGroupedQaRuntimeTouched": false,
+  "privateEvidenceDirectory": ".orbit/formation-20261001/colab-independent"
+}

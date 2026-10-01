@@ -1,0 +1,15 @@
+{
+  "name": "orbit-formation-studio-host",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "sanity build dist --yes --no-auto-updates"
+  },
+  "dependencies": {
+    "@orbit/learning-studio": "file:../../artifacts/learning-studio/orbit-learning-studio-1.0.0.tgz",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "sanity": "6.16.0",
+    "styled-components": "6.5.3"
+  }
+}

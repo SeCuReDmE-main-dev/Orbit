@@ -1,0 +1,226 @@
+{
+  "state": "complete",
+  "host": "E2B",
+  "orchestrator": "Kaggle",
+  "targetUrl": "http://127.0.0.1:4322/",
+  "assemblySha256": "141466603afaca979af3e8ee011391c9516de2a723c52809bdca86f0dbb0b1ba",
+  "modelCalls": 0,
+  "learnerUnderstandingExamined": false,
+  "humanApproval": false,
+  "nativeWebMCP": true,
+  "checks": [
+    {
+      "name": "kaggle-compile-receipt-identifies-nine-actual-bricks",
+      "passed": true,
+      "atMs": 4,
+      "observation": {
+        "state": "PASS_ACTUAL_EXPORT_ASSEMBLY_STATIC_BUILD",
+        "assemblySha256": "141466603afaca979af3e8ee011391c9516de2a723c52809bdca86f0dbb0b1ba",
+        "sourceBrickFiles": 9,
+        "authority": "Retained Kaggle compilation receipt, not a browser interaction or learner review."
+      }
+    },
+    {
+      "name": "served-artifact-matches-kaggle:_astro/index.astro_astro_type_script_index_0_lang.D44IJgOG.js",
+      "passed": true,
+      "atMs": 31,
+      "observation": {
+        "path": "_astro/index.astro_astro_type_script_index_0_lang.D44IJgOG.js",
+        "sha256": "427cd502a2b74ead1a4b766aae2221363fd10ad86d7f6f77de3e80147cde4bd1"
+      }
+    },
+    {
+      "name": "served-artifact-matches-kaggle:index.html",
+      "passed": true,
+      "atMs": 35,
+      "observation": {
+        "path": "index.html",
+        "sha256": "846e5c82c7131e72d715d360b236f72665a9d01f173c72bfd4b89877d35916f0"
+      }
+    },
+    {
+      "name": "real-compiled-frontend-loaded",
+      "passed": true,
+      "atMs": 614
+    },
+    {
+      "name": "actual-three-scene-and-accessible-cards-coexist",
+      "passed": true,
+      "atMs": 630
+    },
+    {
+      "name": "fresh-project-registers-no-implicit-tool",
+      "passed": true,
+      "atMs": 644,
+      "observation": {
+        "names": []
+      }
+    },
+    {
+      "name": "native-student-tool-requires-explicit-sharing",
+      "passed": true,
+      "atMs": 681,
+      "observation": {
+        "state": "CONSENT_REQUIRED"
+      }
+    },
+    {
+      "name": "one-real-student-tool-distinct-from-orbit-registry",
+      "passed": true,
+      "atMs": 682,
+      "observation": {
+        "names": [
+          "student_get_learning_snapshot"
+        ],
+        "chromeMajor": 154
+      }
+    },
+    {
+      "name": "changing-share-invalidates-old-registration",
+      "passed": true,
+      "atMs": 694
+    },
+    {
+      "name": "bounded-native-snapshot-without-human-approval",
+      "passed": true,
+      "atMs": 732,
+      "observation": {
+        "state": "READY",
+        "revision": 1,
+        "snapshot": {
+          "selected": "element-1",
+          "view": "mission",
+          "position": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "held": false
+          },
+          "authority": "student-declared"
+        },
+        "authority": "external-declared; not a human approval"
+      }
+    },
+    {
+      "name": "keyboard-card-selects-real-observation",
+      "passed": true,
+      "atMs": 750,
+      "observation": {
+        "pressed": "true",
+        "description": "Ma décision expliquée : Je compare le comportement à ma prédiction.",
+        "view": "Vue : proofs · sélection : element-2",
+        "inputEvents": [
+          {
+            "type": "click",
+            "key": null,
+            "code": null,
+            "charCode": null,
+            "isTrusted": true,
+            "target": "BUTTON",
+            "activeElement": null
+          },
+          {
+            "type": "click",
+            "key": null,
+            "code": null,
+            "charCode": null,
+            "isTrusted": true,
+            "target": "INPUT",
+            "activeElement": null
+          },
+          {
+            "type": "click",
+            "key": null,
+            "code": null,
+            "charCode": null,
+            "isTrusted": true,
+            "target": "BUTTON",
+            "activeElement": null
+          },
+          {
+            "type": "keydown",
+            "key": "Enter",
+            "code": "Enter",
+            "charCode": 0,
+            "isTrusted": true,
+            "target": "element-2",
+            "activeElement": "element-2"
+          },
+          {
+            "type": "keypress",
+            "key": "Enter",
+            "code": "Enter",
+            "charCode": 13,
+            "isTrusted": true,
+            "target": "element-2",
+            "activeElement": "element-2"
+          },
+          {
+            "type": "click",
+            "key": null,
+            "code": null,
+            "charCode": null,
+            "isTrusted": true,
+            "target": "element-2",
+            "activeElement": "element-2"
+          },
+          {
+            "type": "keyup",
+            "key": "Enter",
+            "code": "Enter",
+            "charCode": 0,
+            "isTrusted": true,
+            "target": "element-2",
+            "activeElement": "element-2"
+          }
+        ]
+      }
+    },
+    {
+      "name": "revision-change-suspends-old-native-snapshot",
+      "passed": true,
+      "atMs": 760,
+      "observation": {
+        "state": "STALE_REVISION"
+      }
+    },
+    {
+      "name": "view-navigation-retains-selection-and-url",
+      "passed": true,
+      "atMs": 784
+    },
+    {
+      "name": "browser-back-restores-real-flow-selection",
+      "passed": true,
+      "atMs": 798
+    },
+    {
+      "name": "browser-forward-restores-flow",
+      "passed": true,
+      "atMs": 815,
+      "observation": {
+        "internalHistoryLimitFromExport": 4,
+        "internalHistoryLengthMeasured": false,
+        "browserHistoryWasNotClaimedBounded": true
+      }
+    },
+    {
+      "name": "actual-raycast-selects-second-sphere",
+      "passed": true,
+      "atMs": 840
+    }
+  ],
+  "errors": [
+    "Cannot read properties of undefined (reading 'position')"
+  ],
+  "screenshots": [
+    "failure.png"
+  ],
+  "runtimeErrors": [],
+  "fixtureAuthority": "Synthetic Codex software QA of actual Colab exports; never learner work or human consent.",
+  "runId": "assembly-394f286a-2150-44ce-a45f-d49546a7ade4",
+  "success": false,
+  "completed": false,
+  "durationMs": 994
+}

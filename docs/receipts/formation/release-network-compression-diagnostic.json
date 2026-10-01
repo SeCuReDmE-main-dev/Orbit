@@ -1,0 +1,295 @@
+{
+  "state": "complete",
+  "host": "E2B",
+  "orchestrator": "Kaggle",
+  "scope": "Two fixed public Orbit resources; read-only network diagnostic.",
+  "expectedReleaseSha256": "3e68cbb888a76c9dbb791922158082dcfe89ed30c90326707fd4003ce58df420",
+  "expectedPluginSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973",
+  "expectedReleaseFiles": 358,
+  "observations": [
+    {
+      "observedAt": "2026-10-01T14:13:11.207Z",
+      "path": "/formation/release.json",
+      "url": "https://orbit.securedme.ca/formation/release.json?orbit-release-diagnostic=release-network-7491495a-da9a-4603-8485-a2cca43b3e9d&variant=node-fetch-default-encoding",
+      "variant": "node-fetch-default-encoding",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, max-age=0, must-revalidate",
+        "content-encoding": "br",
+        "content-length": "2230",
+        "content-type": "application/json",
+        "date": "Thu, 01 Oct 2026 14:13:11 GMT",
+        "last-modified": "Thu, 01 Oct 2026 04:00:00 GMT",
+        "server": "LiteSpeed",
+        "vary": "Accept-Encoding"
+      },
+      "bodyRepresentation": "Native fetch automatically decoded response; headers retain server encoding.",
+      "decodedBytes": 5164,
+      "decodedSha256": "f72075f116e389b61b581a88c83de72c853521f5089ef3fe0e84a9e5a7dca9b1",
+      "expectedSha256": "3e68cbb888a76c9dbb791922158082dcfe89ed30c90326707fd4003ce58df420",
+      "matchesExpectedSha256": false,
+      "releaseFiles": 41,
+      "manifestPluginSha256": "3e3a499db12d0af2a84bd8d48eeea9fa893636e6a5a624271ef73e32a2c614fe"
+    },
+    {
+      "observedAt": "2026-10-01T14:13:11.462Z",
+      "path": "/formation/release.json",
+      "url": "https://orbit.securedme.ca/formation/release.json?orbit-release-diagnostic=release-network-7491495a-da9a-4603-8485-a2cca43b3e9d&variant=node-fetch-identity",
+      "variant": "node-fetch-identity",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, max-age=0, must-revalidate",
+        "content-length": "44489",
+        "content-type": "application/json",
+        "date": "Thu, 01 Oct 2026 14:13:11 GMT",
+        "last-modified": "Thu, 01 Oct 2026 04:00:00 GMT",
+        "server": "LiteSpeed"
+      },
+      "bodyRepresentation": "Native fetch automatically decoded response; headers retain server encoding.",
+      "decodedBytes": 44489,
+      "decodedSha256": "3e68cbb888a76c9dbb791922158082dcfe89ed30c90326707fd4003ce58df420",
+      "expectedSha256": "3e68cbb888a76c9dbb791922158082dcfe89ed30c90326707fd4003ce58df420",
+      "matchesExpectedSha256": true,
+      "releaseFiles": 358,
+      "manifestPluginSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973"
+    },
+    {
+      "observedAt": "2026-10-01T14:13:11.673Z",
+      "path": "/formation/release.json",
+      "url": "https://orbit.securedme.ca/formation/release.json?orbit-release-diagnostic=release-network-7491495a-da9a-4603-8485-a2cca43b3e9d&variant=node-fetch-identity-python-useragent",
+      "variant": "node-fetch-identity-python-useragent",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, max-age=0, must-revalidate",
+        "content-length": "44489",
+        "content-type": "application/json",
+        "date": "Thu, 01 Oct 2026 14:13:11 GMT",
+        "last-modified": "Thu, 01 Oct 2026 04:00:00 GMT",
+        "server": "LiteSpeed"
+      },
+      "bodyRepresentation": "Native fetch automatically decoded response; headers retain server encoding.",
+      "decodedBytes": 44489,
+      "decodedSha256": "3e68cbb888a76c9dbb791922158082dcfe89ed30c90326707fd4003ce58df420",
+      "expectedSha256": "3e68cbb888a76c9dbb791922158082dcfe89ed30c90326707fd4003ce58df420",
+      "matchesExpectedSha256": true,
+      "releaseFiles": 358,
+      "manifestPluginSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973"
+    },
+    {
+      "observedAt": "2026-10-01T14:13:11.749Z",
+      "path": "/formation/release.json",
+      "url": "https://orbit.securedme.ca/formation/release.json?orbit-release-diagnostic=release-network-7491495a-da9a-4603-8485-a2cca43b3e9d&variant=node-https-identity-ipv4",
+      "variant": "node-https-identity-ipv4",
+      "status": 200,
+      "headers": {
+        "content-type": "application/json",
+        "last-modified": "Thu, 01 Oct 2026 04:00:00 GMT",
+        "content-length": "44489",
+        "date": "Thu, 01 Oct 2026 14:13:11 GMT",
+        "server": "LiteSpeed",
+        "cache-control": "no-cache, max-age=0, must-revalidate"
+      },
+      "remoteAddress": "167.114.6.96",
+      "remoteFamily": "IPv4",
+      "tlsAuthorized": true,
+      "tlsProtocol": "TLSv1.3",
+      "transferredBytes": 44489,
+      "transferredSha256": "3e68cbb888a76c9dbb791922158082dcfe89ed30c90326707fd4003ce58df420",
+      "decodedBytes": 44489,
+      "decodedSha256": "3e68cbb888a76c9dbb791922158082dcfe89ed30c90326707fd4003ce58df420",
+      "expectedSha256": "3e68cbb888a76c9dbb791922158082dcfe89ed30c90326707fd4003ce58df420",
+      "matchesExpectedSha256": true,
+      "releaseFiles": 358,
+      "manifestPluginSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973"
+    },
+    {
+      "observedAt": "2026-10-01T14:13:12.111Z",
+      "path": "/formation/release.json",
+      "url": "https://orbit.securedme.ca/formation/release.json?orbit-release-diagnostic=release-network-7491495a-da9a-4603-8485-a2cca43b3e9d&variant=node-https-identity-ipv6",
+      "variant": "node-https-identity-ipv6",
+      "error": "getaddrinfo ENOTFOUND orbit.securedme.ca"
+    },
+    {
+      "observedAt": "2026-10-01T14:13:12.144Z",
+      "path": "/formation/plugins/orbit-learning-studio-1.0.0.tgz",
+      "url": "https://orbit.securedme.ca/formation/plugins/orbit-learning-studio-1.0.0.tgz?orbit-release-diagnostic=release-network-7491495a-da9a-4603-8485-a2cca43b3e9d&variant=node-fetch-default-encoding",
+      "variant": "node-fetch-default-encoding",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, max-age=0, must-revalidate",
+        "content-length": "57469",
+        "content-type": "application/x-tar",
+        "date": "Thu, 01 Oct 2026 14:13:12 GMT",
+        "last-modified": "Thu, 01 Oct 2026 04:00:00 GMT",
+        "server": "LiteSpeed"
+      },
+      "bodyRepresentation": "Native fetch automatically decoded response; headers retain server encoding.",
+      "decodedBytes": 57469,
+      "decodedSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973",
+      "expectedSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973",
+      "matchesExpectedSha256": true
+    },
+    {
+      "observedAt": "2026-10-01T14:13:12.289Z",
+      "path": "/formation/plugins/orbit-learning-studio-1.0.0.tgz",
+      "url": "https://orbit.securedme.ca/formation/plugins/orbit-learning-studio-1.0.0.tgz?orbit-release-diagnostic=release-network-7491495a-da9a-4603-8485-a2cca43b3e9d&variant=node-fetch-identity",
+      "variant": "node-fetch-identity",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, max-age=0, must-revalidate",
+        "content-length": "57469",
+        "content-type": "application/x-tar",
+        "date": "Thu, 01 Oct 2026 14:13:12 GMT",
+        "last-modified": "Thu, 01 Oct 2026 04:00:00 GMT",
+        "server": "LiteSpeed"
+      },
+      "bodyRepresentation": "Native fetch automatically decoded response; headers retain server encoding.",
+      "decodedBytes": 57469,
+      "decodedSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973",
+      "expectedSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973",
+      "matchesExpectedSha256": true
+    },
+    {
+      "observedAt": "2026-10-01T14:13:12.362Z",
+      "path": "/formation/plugins/orbit-learning-studio-1.0.0.tgz",
+      "url": "https://orbit.securedme.ca/formation/plugins/orbit-learning-studio-1.0.0.tgz?orbit-release-diagnostic=release-network-7491495a-da9a-4603-8485-a2cca43b3e9d&variant=node-fetch-identity-python-useragent",
+      "variant": "node-fetch-identity-python-useragent",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, max-age=0, must-revalidate",
+        "content-length": "57469",
+        "content-type": "application/x-tar",
+        "date": "Thu, 01 Oct 2026 14:13:12 GMT",
+        "last-modified": "Thu, 01 Oct 2026 04:00:00 GMT",
+        "server": "LiteSpeed"
+      },
+      "bodyRepresentation": "Native fetch automatically decoded response; headers retain server encoding.",
+      "decodedBytes": 57469,
+      "decodedSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973",
+      "expectedSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973",
+      "matchesExpectedSha256": true
+    },
+    {
+      "observedAt": "2026-10-01T14:13:12.436Z",
+      "path": "/formation/plugins/orbit-learning-studio-1.0.0.tgz",
+      "url": "https://orbit.securedme.ca/formation/plugins/orbit-learning-studio-1.0.0.tgz?orbit-release-diagnostic=release-network-7491495a-da9a-4603-8485-a2cca43b3e9d&variant=node-https-identity-ipv4",
+      "variant": "node-https-identity-ipv4",
+      "status": 200,
+      "headers": {
+        "content-type": "application/x-tar",
+        "last-modified": "Thu, 01 Oct 2026 04:00:00 GMT",
+        "content-length": "57469",
+        "date": "Thu, 01 Oct 2026 14:13:12 GMT",
+        "server": "LiteSpeed",
+        "cache-control": "no-cache, max-age=0, must-revalidate"
+      },
+      "remoteAddress": "167.114.6.96",
+      "remoteFamily": "IPv4",
+      "tlsAuthorized": true,
+      "tlsProtocol": "TLSv1.3",
+      "transferredBytes": 57469,
+      "transferredSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973",
+      "decodedBytes": 57469,
+      "decodedSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973",
+      "expectedSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973",
+      "matchesExpectedSha256": true
+    },
+    {
+      "observedAt": "2026-10-01T14:13:12.581Z",
+      "path": "/formation/plugins/orbit-learning-studio-1.0.0.tgz",
+      "url": "https://orbit.securedme.ca/formation/plugins/orbit-learning-studio-1.0.0.tgz?orbit-release-diagnostic=release-network-7491495a-da9a-4603-8485-a2cca43b3e9d&variant=node-https-identity-ipv6",
+      "variant": "node-https-identity-ipv6",
+      "error": "getaddrinfo ENOTFOUND orbit.securedme.ca"
+    }
+  ],
+  "modelCalls": 0,
+  "diagnosticsExecuted": true,
+  "releaseValidated": false,
+  "runId": "release-network-7491495a-da9a-4603-8485-a2cca43b3e9d",
+  "startedAt": "2026-10-01T14:13:11.131Z",
+  "errors": [],
+  "dns": [
+    {
+      "address": "167.114.6.96",
+      "family": 4
+    }
+  ],
+  "completed": true,
+  "durationMs": 1651,
+  "finishedAt": "2026-10-01T14:13:12.780Z",
+  "kaggleUrllibObservations": [
+    {
+      "variant": "kaggle-urllib-identity",
+      "url": "https://orbit.securedme.ca/formation/release.json?orbit-release-diagnostic=release-network-7491495a-da9a-4603-8485-a2cca43b3e9d&variant=kaggle-urllib-identity",
+      "host": "Kaggle",
+      "observedAt": "2026-10-01T14:13:11.234629+00:00",
+      "status": 200,
+      "headers": {
+        "content-type": "application/json",
+        "last-modified": "Thu, 01 Oct 2026 04:00:00 GMT",
+        "content-length": "44489",
+        "date": "Thu, 01 Oct 2026 14:13:11 GMT",
+        "server": "LiteSpeed",
+        "cache-control": "no-cache, max-age=0, must-revalidate"
+      },
+      "decodedBytes": 44489,
+      "decodedSha256": "3e68cbb888a76c9dbb791922158082dcfe89ed30c90326707fd4003ce58df420",
+      "releaseFiles": 358,
+      "manifestPluginSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973"
+    },
+    {
+      "variant": "kaggle-urllib-node-useragent-identity",
+      "url": "https://orbit.securedme.ca/formation/release.json?orbit-release-diagnostic=release-network-7491495a-da9a-4603-8485-a2cca43b3e9d&variant=kaggle-urllib-node-useragent-identity",
+      "host": "Kaggle",
+      "observedAt": "2026-10-01T14:13:11.720967+00:00",
+      "status": 200,
+      "headers": {
+        "content-type": "application/json",
+        "last-modified": "Thu, 01 Oct 2026 04:00:00 GMT",
+        "content-length": "44489",
+        "date": "Thu, 01 Oct 2026 14:13:11 GMT",
+        "server": "LiteSpeed",
+        "cache-control": "no-cache, max-age=0, must-revalidate"
+      },
+      "decodedBytes": 44489,
+      "decodedSha256": "3e68cbb888a76c9dbb791922158082dcfe89ed30c90326707fd4003ce58df420",
+      "releaseFiles": 358,
+      "manifestPluginSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973"
+    },
+    {
+      "variant": "kaggle-urllib-identity",
+      "url": "https://orbit.securedme.ca/formation/plugins/orbit-learning-studio-1.0.0.tgz?orbit-release-diagnostic=release-network-7491495a-da9a-4603-8485-a2cca43b3e9d&variant=kaggle-urllib-identity",
+      "host": "Kaggle",
+      "observedAt": "2026-10-01T14:13:12.194270+00:00",
+      "status": 200,
+      "headers": {
+        "content-type": "application/x-tar",
+        "last-modified": "Thu, 01 Oct 2026 04:00:00 GMT",
+        "content-length": "57469",
+        "date": "Thu, 01 Oct 2026 14:13:12 GMT",
+        "server": "LiteSpeed",
+        "cache-control": "no-cache, max-age=0, must-revalidate"
+      },
+      "decodedBytes": 57469,
+      "decodedSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973"
+    },
+    {
+      "variant": "kaggle-urllib-node-useragent-identity",
+      "url": "https://orbit.securedme.ca/formation/plugins/orbit-learning-studio-1.0.0.tgz?orbit-release-diagnostic=release-network-7491495a-da9a-4603-8485-a2cca43b3e9d&variant=kaggle-urllib-node-useragent-identity",
+      "host": "Kaggle",
+      "observedAt": "2026-10-01T14:13:12.674127+00:00",
+      "status": 200,
+      "headers": {
+        "content-type": "application/x-tar",
+        "last-modified": "Thu, 01 Oct 2026 04:00:00 GMT",
+        "content-length": "57469",
+        "date": "Thu, 01 Oct 2026 14:13:12 GMT",
+        "server": "LiteSpeed",
+        "cache-control": "no-cache, max-age=0, must-revalidate"
+      },
+      "decodedBytes": 57469,
+      "decodedSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973"
+    }
+  ],
+  "diagnosticNotReleaseApproval": true
+}

@@ -1,0 +1,19 @@
+{
+  "state": "SUCCESSFUL_PUBLIC_ARCHIVE_REPLAY",
+  "versionId": 354438752,
+  "url": "https://www.kaggle.com/code/celebrum/orbit-formation-browser-validation?scriptVersionId=354438752",
+  "observedRunSeconds": 25.6,
+  "mode": "ARCHIVED_RECEIPT_REPLAY",
+  "newBrowserRunExecuted": false,
+  "newModelCallExecuted": false,
+  "originalTestsDispatchedFromKaggle": true,
+  "disposableCredentialsRemovedFromAllFiveCodeCellsBeforeSave": true,
+  "revocationConfirmedByHttp401": true,
+  "disclaimer": "# Archived observed result. Replaying this cell is not a new browser or agent run.",
+  "rawVisibleOutputCount": 10,
+  "renderedSourcesAndOutputsKnownMissionSecretScan": {
+    "valuesCompared": 4,
+    "matches": 0,
+    "scope": "Visible saved notebook code and output preformatted blocks; bounded known mission values"
+  }
+}

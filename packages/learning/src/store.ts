@@ -3,6 +3,17 @@ import { classifyEvidence, type Classification, type EngineId } from '../../evid
 import { PERMISSIONS, emptyPermissions, type AgentOperation, type ArtifactInput, type ExperimentInput, type LearningArtifact, type LearningExperiment, type LearningJournalEntry, type LearningNamespace, type LearningResult, type LearningSession, type Permission, type ProposalInput, type StorageLike, type SupportMode } from './contracts.js';
 import { assertReferences, choice, clone, createLearningSession, jsonBytes, learningStorageKey, MAX_SESSION_BYTES, moduleId, namespaceKey, parseArtifactInput, parseColabResult, parseEngineSelection, parseExperiment, parseLearningSession, parseProposalInput, sha256, stableSerialize, text, uniqueIds } from './serialization.js';
 
+/** Local permission and successful persistence are separate facts. Never serialize this runtime status. */
+export interface LearningPersistenceStatus {
+  state: 'memory' | 'saved' | 'awaiting-choice' | 'unavailable' | 'failed';
+  revision: number;
+  localSaveAllowed: boolean;
+  dirty: boolean;
+  savedRevision?: number;
+  code?: 'LOCAL_STORAGE_UNAVAILABLE';
+  message?: string;
+}
+
 /** Human commands are separate from agent tools. This store does no network or LLM work. */
 export class LearningStore {
   private session: LearningSession;
@@ -14,6 +25,8 @@ export class LearningStore {
   readonly namespace: string;
   readonly storageKey: string;
   persistenceError: string | null = null;
+  private persistenceState: LearningPersistenceStatus['state'] = 'memory';
+  private savedRevision?: number;
 
   constructor(namespace: string | LearningNamespace, private storage?: StorageLike, options: { id?: string; now?: () => string } = {}) {
     this.namespace = namespaceKey(namespace);
@@ -23,16 +36,39 @@ export class LearningStore {
     // Reading browser storage is itself explicit: construction never restores old private work.
   }
   snapshot(): LearningSession { return clone(this.session); }
+  getPersistenceStatus(): LearningPersistenceStatus {
+    return {
+      state: this.persistenceState, revision: this.session.revision,
+      localSaveAllowed: this.session.permissions.localSave,
+      dirty: this.persistenceState !== 'saved' || this.savedRevision !== this.session.revision,
+      ...(this.savedRevision === undefined ? {} : { savedRevision: this.savedRevision }),
+      ...(this.persistenceError ? { code: 'LOCAL_STORAGE_UNAVAILABLE' as const, message: this.persistenceError } : {}),
+    };
+  }
   subscribe(listener: (snapshot: LearningSession) => void): () => void {
     this.assertActive(); this.listeners.add(listener);
     return () => { this.listeners.delete(listener); };
   }
   private assertActive(): void { if (this.disposed) throw new Error('Learning session disposed.'); }
+  private notify(): void { for (const listener of this.listeners) listener(this.snapshot()); }
+  private storageFailure(message: string, state: 'unavailable' | 'failed' = 'failed'): void {
+    this.persistenceError = message; this.persistenceState = state;
+  }
   private persist(): void {
-    this.persistenceError = null;
-    if (!this.storage || !this.session.permissions.localSave || this.awaitingLocalDecision) return;
-    try { this.storage.setItem(this.storageKey, this.exportSession()); }
-    catch { this.persistenceError = 'Local saving failed. The session remains in memory; export it before closing.'; }
+    // A failed removal must remain visible even while new work is kept only in memory.
+    if (!this.session.permissions.localSave) {
+      if (!this.persistenceError) this.persistenceState = 'memory';
+      return;
+    }
+    if (!this.storage) {
+      this.storageFailure('Local storage is unavailable. The session remains in memory; export it before closing.', 'unavailable');
+      return;
+    }
+    if (this.awaitingLocalDecision) { this.persistenceState = 'awaiting-choice'; return; }
+    try {
+      this.storage.setItem(this.storageKey, this.exportSession());
+      this.persistenceError = null; this.persistenceState = 'saved'; this.savedRevision = this.session.revision;
+    } catch { this.storageFailure('Local saving failed. The session remains in memory; export it before closing.'); }
   }
   private commit(change: (next: LearningSession) => void, invalidate = true): void {
     this.assertActive(); const next = clone(this.session); change(next);
@@ -40,15 +76,24 @@ export class LearningStore {
     if (jsonBytes(next) > MAX_SESSION_BYTES) throw new Error('Session size limit reached. Export selected work before adding more.');
     this.session = next;
     if (invalidate) this.epoch += 1;
-    this.persist(); for (const listener of this.listeners) listener(this.snapshot());
+    this.persist(); this.notify();
   }
   private response<T>(data: T, state: LearningResult['state'] = 'READY'): LearningResult<T> { return { state, revision: this.session.revision, data }; }
   private unavailable(message: string, code?: string): LearningResult { return { state: 'UNAVAILABLE', revision: this.session.revision, message, ...(code ? { code } : {}) }; }
   setPermission(permission: Permission, allowed: boolean): LearningResult {
     choice(permission, PERMISSIONS); if (typeof allowed !== 'boolean') throw new TypeError('Permission must be boolean.');
-    if (permission === 'localSave' && allowed && !this.session.permissions.localSave && this.storage) {
-      try { this.awaitingLocalDecision = this.storage.getItem(this.storageKey) !== null; }
-      catch { return this.unavailable('Browser storage cannot be read. Keep working in memory and export.', 'LOCAL_STORAGE_UNAVAILABLE'); }
+    if (permission === 'localSave' && allowed && !this.session.permissions.localSave) {
+      if (!this.storage) {
+        this.storageFailure('Local storage is unavailable. The session remains in memory; export it before closing.', 'unavailable'); this.notify();
+        return this.unavailable(this.persistenceError!, 'LOCAL_STORAGE_UNAVAILABLE');
+      }
+      try {
+        this.awaitingLocalDecision = this.storage.getItem(this.storageKey) !== null;
+        this.persistenceError = null;
+      } catch {
+        this.storageFailure('Browser storage cannot be read. The session remains in memory; export it before closing.', 'unavailable'); this.notify();
+        return this.unavailable(this.persistenceError!, 'LOCAL_STORAGE_UNAVAILABLE');
+      }
     }
     if (this.session.permissions[permission] !== allowed) {
       this.commit(next => {
@@ -58,13 +103,16 @@ export class LearningStore {
           next.sharedArtifactIds = []; next.sharedJournalIds = [];
         }
       });
-      if (permission === 'localSave' && !allowed && this.storage) {
-        this.awaitingLocalDecision = false;
-        try { this.storage.removeItem(this.storageKey); }
-        catch { this.persistenceError = 'Saving is disabled, but the previous browser copy could not be removed. Clear it in browser settings.'; }
-      }
     }
-    return this.persistenceError ? this.unavailable(this.persistenceError, 'LOCAL_STORAGE_UNAVAILABLE') : this.response({ permission, allowed, savedCopyAvailable: this.awaitingLocalDecision });
+    if (permission === 'localSave' && !allowed) {
+      this.awaitingLocalDecision = false;
+      try {
+        this.storage?.removeItem(this.storageKey);
+        this.persistenceError = null; this.persistenceState = 'memory'; this.savedRevision = undefined;
+      } catch { this.storageFailure('Saving is disabled, but the previous browser copy could not be removed. Clear it in browser settings.'); }
+      this.notify();
+    }
+    return permission === 'localSave' && this.persistenceError ? this.unavailable(this.persistenceError, 'LOCAL_STORAGE_UNAVAILABLE') : this.response({ permission, allowed, savedCopyAvailable: this.awaitingLocalDecision });
   }
   shareSelection(selection: { artifactIds?: string[]; journalIds?: string[] }): LearningResult {
     const artifacts = uniqueIds(selection.artifactIds ?? []); const journal = uniqueIds(selection.journalIds ?? []);
@@ -112,9 +160,12 @@ export class LearningStore {
   addArtifactVersion(artifactId: string, content: string): LearningArtifact {
     const previous = this.session.artifacts.find(row => row.id === artifactId);
     if (!previous) throw new Error('Artifact not found.');
-    const result = this.addArtifact({ ...previous, id: crypto.randomUUID(), title: previous.title, content, origin: 'learner', sha256: undefined });
-    this.commit(next => { const row = next.artifacts.find(item => item.id === result.id)!; row.version = previous.version + 1; });
-    return this.snapshot().artifacts.find(row => row.id === result.id)!;
+    if (this.session.artifacts.length >= 100) throw new Error('Artifact limit reached.');
+    const parsed = parseArtifactInput({ title: previous.title, path: previous.path, moduleId: previous.moduleId, missionId: previous.missionId, mediaType: previous.mediaType, content, origin: 'learner' }, this.session.moduleId);
+    const result: LearningArtifact = { ...parsed, id: crypto.randomUUID(), title: parsed.title, moduleId: parsed.moduleId!, missionId: parsed.missionId!, mediaType: parsed.mediaType!, origin: 'learner', status: 'modified', createdAt: this.clock(), hashStatus: 'not-checked', version: previous.version + 1 };
+    // One version produces one revision, with no transient v1, inherited hash or implicit sharing.
+    this.commit(next => { next.artifacts.push(result); });
+    return clone(result);
   }
   async verifyArtifact(artifactId: string): Promise<LearningResult> {
     const artifact = this.session.artifacts.find(row => row.id === artifactId);
@@ -225,7 +276,9 @@ export class LearningStore {
   importSession(value: unknown): LearningResult {
     this.assertActive(); const restored = parseLearningSession(value, { namespace: this.namespace });
     this.session = restored; this.epoch += 1; this.awaitingLocalDecision = false;
-    for (const listener of this.listeners) listener(this.snapshot());
+    if (!this.persistenceError) this.persistenceState = 'memory';
+    this.savedRevision = undefined;
+    this.notify();
     return this.response({ sessionId: restored.id, accessReset: true, declarationsUnverified: true });
   }
   restoreLocal(): LearningResult {
@@ -240,7 +293,7 @@ export class LearningStore {
   saveCurrentLocally(): LearningResult {
     if (!this.session.permissions.localSave) return { state: 'CONSENT_REQUIRED', revision: this.session.revision };
     if (!this.storage) return this.unavailable('Local storage is unavailable.');
-    this.awaitingLocalDecision = false; this.persist();
+    this.awaitingLocalDecision = false; this.persist(); this.notify();
     return this.persistenceError ? this.unavailable(this.persistenceError, 'LOCAL_STORAGE_UNAVAILABLE') : this.response({ saved: true });
   }
   prepareTeacherExport(artifactIds: string[], journalIds: string[]): LearningResult {

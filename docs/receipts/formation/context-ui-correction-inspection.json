@@ -1,0 +1,26 @@
+{
+  "schema": "orbit.context-ui-inspection.v1",
+  "observedAt": "2026-10-01T14:39:16.947Z",
+  "dashboardUrl": "https://www.sanity.io/@oatv1mmu8/context",
+  "knowledgeBase": "kb5CHIYGXCMJ",
+  "entry": "learning_modules",
+  "entryTitle": "Orbit Learning Modules & Assessment",
+  "entryRead": true,
+  "controlsObserved": [
+    "History",
+    "Rewrite page",
+    "Rebuild"
+  ],
+  "rewriteDialog": {
+    "directContentEditor": false,
+    "optionalInstructionTextbox": true,
+    "ruleTextbox": true,
+    "saveAction": "Save & rebuild",
+    "admissionCouldNotBeCorrectedByManualEditing": true
+  },
+  "action": "Opened Rewrite page, read available controls, cancelled without saving",
+  "contentMutation": false,
+  "newBuildSubmitted": false,
+  "publicCourseContextReady": false,
+  "reason": "The available UI proposes a rule and rebuild, not a manual editor with controlled nine-source citations."
+}

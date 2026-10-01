@@ -1,0 +1,113 @@
+{
+  "state": "PASS_ACTUAL_EXPORT_ASSEMBLY_STATIC_BUILD",
+  "environment": "Kaggle",
+  "startedAt": "2026-10-01T06:58:31.324408-04:00",
+  "outerDownloadSha256": "2fea2758fb61b60c9a67a6a673d98376f8c39c2b037e5c6b63cda5504368d0dd",
+  "assemblySha256": "6ee07ba6268e2fb3575147c089e63d5eb92330c85766860ff6ec07cf7efc4790",
+  "upstreamColabReceipt": {
+    "schemaVersion": "orbit-colab-qa-report-v1",
+    "sourceSha256": "20d89be3af866f8e120489b67ccd15591fe6c1a7e3d58b8123eed31196e39a9d",
+    "scope": "Eight real notebook sources, separate namespaces in one Colab CPU computation; not eight independent cold starts.",
+    "host": "Colab",
+    "state": "PARTIAL_VALIDATION",
+    "accountPlanObserved": "not-observed",
+    "humanUnderstanding": "NOT_EXAMINED",
+    "trustedPointerInteractions": "NOT_OBSERVED",
+    "coldStartAfterActualRuntimeRestart": "NOT_OBSERVED",
+    "summary": {
+      "pythonPassed": 8,
+      "browserScriptPassed": 8,
+      "expectedModules": 8,
+      "coldStartsVerified": false,
+      "humanUnderstanding": "NOT_EXAMINED",
+      "allCourseFunctionsValidated": false
+    },
+    "assembly": {
+      "state": "EIGHT_ACTUAL_EXPORTS_ASSEMBLED",
+      "sha256": "6ee07ba6268e2fb3575147c089e63d5eb92330c85766860ff6ec07cf7efc4790",
+      "AstroCompilation": "NOT_EXECUTED_IN_COLAB; see Kaggle validation",
+      "module8UploadWidget": "NOT_OBSERVED"
+    }
+  },
+  "dependencies": {
+    "astro": "7.3.3",
+    "three": "0.181.2"
+  },
+  "nodeVersion": "22.20.0",
+  "stage": "astro-build",
+  "commands": [
+    {
+      "stage": "node-version",
+      "exitCode": 0,
+      "seconds": 0.009,
+      "command": [
+        "node",
+        "--version"
+      ]
+    },
+    {
+      "stage": "dependency-install",
+      "exitCode": 0,
+      "seconds": 21.492,
+      "command": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "--include=optional"
+      ]
+    },
+    {
+      "stage": "astro-build",
+      "exitCode": 0,
+      "seconds": 2.28,
+      "command": [
+        "astro",
+        "build"
+      ]
+    }
+  ],
+  "actualExportsUsed": true,
+  "replacementBricksUsed": false,
+  "staticBuildValidated": true,
+  "browserInteractionValidated": false,
+  "learnerUnderstandingExamined": false,
+  "nativeWebMcpValidated": false,
+  "credentialsRequired": false,
+  "modelsCalled": false,
+  "manifestFilesVerified": 46,
+  "modulesLinked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "sourceBrickFilesLinked": 9,
+  "sourceGraphCoverageValidated": true,
+  "originalAssemblyFilesUnchanged": true,
+  "compiledClientScripts": [
+    "/_astro/index.astro_astro_type_script_index_0_lang.BC1P79gT.js"
+  ],
+  "staticBuildFiles": 2,
+  "compiledDistSha256": "e90076c68d11f8abb52c1fe6939ee0bf78f7af3df415dc020cbe28b8f9f3e21b",
+  "limits": [
+    "Source linkage and static compilation only",
+    "No browser or trusted pointer interaction",
+    "No independent Colab cold-start verification",
+    "No learner comprehension or human approval",
+    "No replacement or corrected bricks",
+    "Upstream Colab receipt remains partial"
+  ],
+  "finishedAt": "2026-10-01T06:59:02.474247-04:00",
+  "provenance": {
+    "observer": "coordinator",
+    "preparation": "Sanitized copy of a retained execution report; no workstation rerun.",
+    "originalReportSha256": "f2ffd55155245f0d14d8d3c91ae3b154aa94784698c16df515e10da2c4651901",
+    "omitted": "Private filesystem locations, account identity and operational access values."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "transport": "brokered-ssh-sftp",
+  "package_sha256": "2a2eaac955d4f63359d5cce616eac750a6c760b323a01f6e723ae31e7760c15b",
+  "verified_paths": [
+    "formation/lab/index.html",
+    "formation/plugins/orbit-learning-studio-1.0.0.tgz",
+    "formation/projets/index.html",
+    "formation/studio/.htaccess",
+    "formation/studio/index.html"
+  ],
+  "staging_cleaned": true,
+  "mutated": true,
+  "rollback_restored": false,
+  "secret_values_exposed": false,
+  "plan_id": "3c959763e16ab903b0d9a512",
+  "remoteBackupRetained": true,
+  "privateOperationalPathsOmitted": true
+}

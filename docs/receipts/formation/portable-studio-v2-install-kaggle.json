@@ -1,0 +1,80 @@
+{
+  "state": "PASS_STATIC_INSTALL_BUILD",
+  "environment": "Kaggle",
+  "startedAt": "2026-10-01T12:53:27.929522+00:00",
+  "archiveSha256": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff9e973",
+  "fixedHostDependencies": {
+    "sanity": "6.16.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "styled-components": "6.5.3"
+  },
+  "nodeVersion": "22.20.0",
+  "archiveVerified": true,
+  "installationLockSha256": "93b4788518ccf6583e587592062832864775aa6a4c588257786ebc0a86b37769",
+  "lockedDependencies": true,
+  "installedInBlankStudio": true,
+  "importValidated": true,
+  "staticBuildValidated": true,
+  "authenticatedRuntimeValidated": false,
+  "crossOriginContextValidated": false,
+  "nativeWebMcpValidated": false,
+  "sanityWritesPerformed": false,
+  "publishedToNpm": false,
+  "stage": "studio-build",
+  "commands": [
+    {
+      "stage": "node-version",
+      "command": [
+        "/kaggle/temp/orbit-second-studio-f2b0dc6897fa-1790859207928124938/runtime/node-v22.20.0-linux-x64/bin/node",
+        "--version"
+      ],
+      "exitCode": 0,
+      "seconds": 0.009
+    },
+    {
+      "stage": "dependency-install",
+      "command": [
+        "/kaggle/temp/orbit-second-studio-f2b0dc6897fa-1790859207928124938/runtime/node-v22.20.0-linux-x64/bin/npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "--include=optional"
+      ],
+      "exitCode": 0,
+      "seconds": 33.782
+    },
+    {
+      "stage": "plugin-import",
+      "command": [
+        "/kaggle/temp/orbit-second-studio-f2b0dc6897fa-1790859207928124938/runtime/node-v22.20.0-linux-x64/bin/node",
+        "smoke.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 3.643
+    },
+    {
+      "stage": "studio-build",
+      "command": [
+        "/kaggle/temp/orbit-second-studio-f2b0dc6897fa-1790859207928124938/node_modules/.bin/sanity",
+        "build",
+        "dist",
+        "--yes",
+        "--no-auto-updates"
+      ],
+      "exitCode": 0,
+      "seconds": 7.798
+    }
+  ],
+  "installedEntrySha256": "23ba7d9a9aa386d8d8a717c6b9a40c099cfe670ba484639614f25962aeb58d32",
+  "staticBuildFiles": 315,
+  "limits": [
+    "No Sanity login or real account/dataset used",
+    "No browser session or native WebMCP execution",
+    "No cross-origin Context call",
+    "No learner data or publication write",
+    "No npm publication"
+  ],
+  "finishedAt": "2026-10-01T12:54:22.359517+00:00"
+}

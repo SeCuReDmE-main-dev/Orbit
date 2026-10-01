@@ -1,0 +1,123 @@
+{
+  "state": "complete",
+  "host": "E2B",
+  "orchestrator": "Kaggle",
+  "targetUrl": "http://127.0.0.1:4322/",
+  "assemblySha256": "96acc0ddfdd3728426980df39d2a1ccda07cc855eb95f950a552de776a5b2aed",
+  "modelCalls": 0,
+  "learnerUnderstandingExamined": false,
+  "humanApproval": false,
+  "nativeWebMCP": true,
+  "checks": [
+    {
+      "name": "kaggle-compile-receipt-identifies-nine-actual-bricks",
+      "passed": true,
+      "atMs": 4,
+      "observation": {
+        "state": "PASS_ACTUAL_EXPORT_ASSEMBLY_STATIC_BUILD",
+        "assemblySha256": "96acc0ddfdd3728426980df39d2a1ccda07cc855eb95f950a552de776a5b2aed",
+        "sourceBrickFiles": 9,
+        "authority": "Retained Kaggle compilation receipt, not a browser interaction or learner review."
+      }
+    },
+    {
+      "name": "served-artifact-matches-kaggle:_astro/index.astro_astro_type_script_index_0_lang.DL_JxCuW.js",
+      "passed": true,
+      "atMs": 31,
+      "observation": {
+        "path": "_astro/index.astro_astro_type_script_index_0_lang.DL_JxCuW.js",
+        "sha256": "d382edea0352cd17ea6a6029332f437a2621cca658fe1416a61855efbc601ab2"
+      }
+    },
+    {
+      "name": "served-artifact-matches-kaggle:index.html",
+      "passed": true,
+      "atMs": 36,
+      "observation": {
+        "path": "index.html",
+        "sha256": "d737310c2a3d2a49cc11a06e47bf02965e8215043778718f71f5dd6abde9c982"
+      }
+    },
+    {
+      "name": "real-compiled-frontend-loaded",
+      "passed": true,
+      "atMs": 739
+    },
+    {
+      "name": "actual-three-scene-and-accessible-cards-coexist",
+      "passed": true,
+      "atMs": 751
+    },
+    {
+      "name": "fresh-project-registers-no-implicit-tool",
+      "passed": true,
+      "atMs": 759,
+      "observation": {
+        "names": []
+      }
+    },
+    {
+      "name": "native-student-tool-requires-explicit-sharing",
+      "passed": true,
+      "atMs": 777,
+      "observation": {
+        "state": "CONSENT_REQUIRED"
+      }
+    },
+    {
+      "name": "one-real-student-tool-distinct-from-orbit-registry",
+      "passed": true,
+      "atMs": 778,
+      "observation": {
+        "names": [
+          "student_get_learning_snapshot"
+        ],
+        "chromeMajor": 154
+      }
+    },
+    {
+      "name": "changing-share-invalidates-old-registration",
+      "passed": true,
+      "atMs": 789
+    },
+    {
+      "name": "bounded-native-snapshot-without-human-approval",
+      "passed": true,
+      "atMs": 826,
+      "observation": {
+        "state": "READY",
+        "revision": 1,
+        "snapshot": {
+          "selected": "element-1",
+          "view": "mission",
+          "position": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "held": false
+          },
+          "authority": "student-declared"
+        },
+        "authority": "external-declared; not a human approval"
+      }
+    },
+    {
+      "name": "keyboard-card-selects-real-observation",
+      "passed": false,
+      "atMs": 831
+    }
+  ],
+  "errors": [
+    "CHECK_FAILED:keyboard-card-selects-real-observation"
+  ],
+  "screenshots": [
+    "failure.png"
+  ],
+  "runtimeErrors": [],
+  "fixtureAuthority": "Synthetic Codex software QA of actual Colab exports; never learner work or human consent.",
+  "runId": "assembly-a5a7a593-c81f-44c6-aeda-62d59b077548",
+  "success": false,
+  "completed": false,
+  "durationMs": 941
+}

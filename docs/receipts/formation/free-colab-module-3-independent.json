@@ -1,0 +1,33 @@
+{
+  "state": "PASS_INDEPENDENT_CPU_COPY_EXPORT",
+  "host": "Google Colab",
+  "moduleId": 3,
+  "sourceCommit": "b9411526cd6e06faee398c60d7afe5d68421e257",
+  "operator": "Codex",
+  "origin": "software-qa-fixture",
+  "notStudentObservation": true,
+  "accountPlan": "free account reported by user; Processeur radio checked observed",
+  "freshDriveCopy": true,
+  "copyName": "Orbit QA gratuit — Module 3 — copie neuve",
+  "trustedUIEvents": [
+    "Three.js 0.181.2 status and one canvas observed in the real preview.",
+    "Enter on Observation selected element-2 via HTML with position x=0.25,y=0.3.",
+    "Modified actual student_files cameraDistance from 5 to 7; same HTML identifier and position after rerun.",
+    "Figer l'image et le temps checkbox checked.",
+    "After export and CPU shutdown, the retained frontend preview received a trusted canvas click: element-1, source 3D, position x=0.5,y=0.5. This later event is recorded here, not retroactively included in the ZIP reflection."
+  ],
+  "archiveSha256": "50f48e5a862be51e07bcbe12416ca183db3a6c6363e57007e84929b56b3d76c9",
+  "archiveFile": "orbit-module-3-module-3-1790857401139739525.zip",
+  "downloadConfirmedByFilesystem": true,
+  "exportFileCountReported": 5,
+  "runtimeStoppedAfterExport": true,
+  "runtimeStopObserved": "Reconnecter Cliquez pour établir la connexion",
+  "driveSavedObserved": "Toutes les modifications ont été enregistrées",
+  "incident": "A REPL helper retained the previous Module 2 tab, reopening only that owned runtime; too-many-sessions dialog blocked Module 3. Helpers changed to explicit tab arguments, the owned Module 2 runtime was stopped again and its prediction restored. Old QA runtime was untouched. No browser protection or quota setting changed.",
+  "webglAvailabilityObserved": true,
+  "trusted3DSelectionVerified": true,
+  "projectionDifferenceMeasured": false,
+  "understandingExamined": false,
+  "humanApproval": false,
+  "privateEvidenceDirectory": ".orbit/formation-20261001/colab-independent"
+}

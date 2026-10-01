@@ -1,0 +1,19 @@
+{
+  "state": "SELECTED_CAPTURED_SOURCES_REPLAYED",
+  "modules": 8,
+  "host": "Colab",
+  "account": "user-reported free account; CPU observed in UI",
+  "actualRuntimeRestart": "Observed Colab menu restart, confirmation and Restarting Python 3 status; source setup then executed",
+  "checkpointSha256": "2fea2758fb61b60c9a67a6a673d98376f8c39c2b037e5c6b63cda5504368d0dd",
+  "transport": "public pinned GitHub synthetic QA fixture; file upload widget not tested",
+  "previousResultsAuthority": "imported report; not rerun",
+  "browserChecksRerun": false,
+  "independentEightColdStarts": false,
+  "humanUnderstanding": "NOT_EXAMINED",
+  "provenance": {
+    "observer": "coordinator",
+    "preparation": "Sanitized copy of a retained execution report; no workstation rerun.",
+    "originalReportSha256": "b0a4bc3d99da57ec69e93f9c4c2b316fa182574701c6ca650f722564268414b7",
+    "omitted": "Private filesystem locations, account identity and operational access values."
+  }
+}

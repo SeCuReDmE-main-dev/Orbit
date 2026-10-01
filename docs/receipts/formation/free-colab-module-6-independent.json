@@ -1,0 +1,34 @@
+{
+  "state": "PASS_INDEPENDENT_CPU_COPY_EXPORT_WITH_LIMITED_STATIC_OBSERVATION",
+  "host": "Google Colab",
+  "moduleId": 6,
+  "sourceCommit": "b9411526cd6e06faee398c60d7afe5d68421e257",
+  "operator": "Codex",
+  "origin": "software-qa-fixture",
+  "notStudentObservation": true,
+  "accountPlan": "free account reported by user; Processeur radio checked observed",
+  "freshDriveCopy": true,
+  "copyName": "Orbit QA gratuit — Module 6 — copie neuve",
+  "trustedUIEvents": [
+    "Canvas visible with 64 particles, lifetime3, seed17.",
+    "Actual student_files count changed from64 to128; source and preview rerun, status reported128 particles.",
+    "Space checked the freeze control with both populations."
+  ],
+  "archiveSha256": "4f0d2c98c5a3cf7d8f1bd6ed7ad1d76a5d3ee9474cf137955a18a59de425c23d",
+  "archiveFile": "orbit-module-6-module-6-1790858929087479712.zip",
+  "downloadConfirmedByFilesystem": true,
+  "exportFileCountReported": 5,
+  "runtimeStoppedAfterExport": true,
+  "runtimeStopObserved": "Reconnecter Cliquez pour établir la connexion",
+  "driveSavedObserved": "Toutes les modifications ont été enregistrées",
+  "incidents": [
+    "Rapid run-button pointer batch left source cell unexecuted; preview showed NameError student_files. Explicit semantic Enter ran source then preview and recovered.",
+    "Canvas.toDataURL unavailable in DOM reader; no pixel equality or internal age assertion claimed."
+  ],
+  "staticControlChecked": true,
+  "staticPixelsOrAgeMeasured": false,
+  "performanceMeasured": false,
+  "understandingExamined": false,
+  "humanApproval": false,
+  "privateEvidenceDirectory": ".orbit/formation-20261001/colab-independent"
+}

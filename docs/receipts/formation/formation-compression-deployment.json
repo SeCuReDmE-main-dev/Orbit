@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "transport": "brokered-ssh-sftp",
+  "package_sha256": "1f4c0ed94fa1d9638778fa953f34b4ac81dedf0c7dd8de49eaf6902e61f80704",
+  "verified_paths": [
+    "formation/.htaccess",
+    "formation/lab/index.html",
+    "formation/projets/index.html",
+    "formation/release.json",
+    "formation/studio/index.html"
+  ],
+  "staging_cleaned": true,
+  "mutated": true,
+  "rollback_restored": false,
+  "secret_values_exposed": false,
+  "plan_id": "d5ae1fab6fa3e3cab416a889",
+  "remoteBackupRetained": true,
+  "privateOperationalPathsOmitted": true
+}

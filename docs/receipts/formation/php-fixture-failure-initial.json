@@ -1,0 +1,238 @@
+{
+  "state": "FAILED_PHP_REGRESSIONS",
+  "host": "Kaggle",
+  "startedAt": "2026-10-01T12:41:22.252583+00:00",
+  "sourceSha256": "83e697c5cf829e1f41071309cdec59bd56eb2684f52885b60f783111c1e87e68",
+  "requiredPhpMinimum": "8.4.1",
+  "testsExecuted": true,
+  "modelsCalled": false,
+  "realCredentialsUsed": false,
+  "publicTransportActivatedInProduction": false,
+  "commands": [
+    {
+      "stage": "official-php-runtime",
+      "command": [
+        "/kaggle/temp/orbit-php-v1.12.7-1790858482479285411/php",
+        "-r",
+        "echo json_encode([\"versionId\"=>PHP_VERSION_ID,\"version\"=>PHP_VERSION,\"sapi\"=>PHP_SAPI,\"binaryConstant\"=>PHP_BINARY,\"extensions\"=>get_loaded_extensions()]);"
+      ],
+      "exitCode": 0,
+      "seconds": 0.397
+    },
+    {
+      "stage": "php-subprocess-compatibility",
+      "command": [
+        "/kaggle/temp/orbit-php-v1.12.7-1790858482479285411/php",
+        "-r",
+        "require 'vendor/autoload.php';\n$binary=(new Symfony\\Component\\Process\\PhpExecutableFinder())->find(false);\nif($binary===false){fwrite(STDERR,'Missing PHP executable');exit(1);}\n$process=new Symfony\\Component\\Process\\Process([$binary,'-r','echo json_encode([\"versionId\"=>PHP_VERSION_ID,\"sapi\"=>PHP_SAPI]);']);\n$process->setTimeout(20);$process->mustRun();echo $process->getOutput();"
+      ],
+      "exitCode": 0,
+      "seconds": 0.423
+    },
+    {
+      "stage": "artisan-public-routes",
+      "command": [
+        "/kaggle/temp/orbit-php-v1.12.7-1790858482479285411/php",
+        "artisan",
+        "route:list",
+        "--path=api/v1/course-context",
+        "--json",
+        "--no-interaction"
+      ],
+      "exitCode": 0,
+      "seconds": 0.469
+    },
+    {
+      "stage": "targeted-php-format",
+      "command": [
+        "/kaggle/temp/orbit-php-v1.12.7-1790858482479285411/php",
+        "vendor/bin/pint",
+        "--format",
+        "agent",
+        "app/Http/Middleware/PublicCourseContext.php",
+        "bootstrap/app.php",
+        "config/cors.php",
+        "config/orbit.php",
+        "routes/api.php",
+        "tests/Feature/PublicCourseContextTest.php"
+      ],
+      "exitCode": 0,
+      "seconds": 0.817
+    },
+    {
+      "stage": "php-regressions",
+      "command": [
+        "/kaggle/temp/orbit-php-v1.12.7-1790858482479285411/php",
+        "vendor/bin/phpunit",
+        "--testsuite",
+        "Feature",
+        "--filter",
+        "PublicCourseContextTest|SanityKnowledgeTest|OrbitAccountTest|OrbitWorkspaceTest",
+        "--log-junit",
+        "/kaggle/working/course-context-validation/php-tests.xml"
+      ],
+      "exitCode": 255,
+      "seconds": 0.172
+    }
+  ],
+  "runtimePlatform": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "libc": "glibc",
+    "libcVersion": "2.35"
+  },
+  "stage": "php-regressions",
+  "runtimePin": {
+    "release": "v1.12.7",
+    "asset": "frankenphp-linux-x86_64-gnu",
+    "url": "https://github.com/php/frankenphp/releases/download/v1.12.7/frankenphp-linux-x86_64-gnu",
+    "sha256": "b8eed5e4d2215874a8ca1f9b812d5394b4722d02c44dbcbf5c782b322d6baa43",
+    "bytes": 169209640,
+    "releaseSource": "https://github.com/php/frankenphp/releases/tag/v1.12.7",
+    "digestSource": "https://api.github.com/repos/php/frankenphp/releases/tags/v1.12.7",
+    "runtimeDocs": "https://frankenphp.dev/docs/static/",
+    "cliLimits": "https://frankenphp.dev/docs/known-issues/",
+    "extensionBuildSource": "https://raw.githubusercontent.com/php/frankenphp/v1.12.7/build-static.sh"
+  },
+  "runtimeOrigin": "official-frankenphp-release",
+  "runtimeVerified": {
+    "bytes": 169209640,
+    "sha256": "b8eed5e4d2215874a8ca1f9b812d5394b4722d02c44dbcbf5c782b322d6baa43",
+    "release": "v1.12.7"
+  },
+  "runtimeCompatibilityLimits": {
+    "phpFlags": "Script arguments and -r are forwarded unchanged; unsupported PHP CLI flags are never stripped.",
+    "composerScripts": "Not executed: this release does not support every Composer-generated PHP flag.",
+    "phpunitProcessIsolation": "Not used by the frozen targeted tests; compatibility is not claimed."
+  },
+  "phpRuntime": {
+    "versionId": 80511,
+    "version": "8.5.11",
+    "sapi": "cli",
+    "binaryConstant": "",
+    "extensions": [
+      "Core",
+      "date",
+      "lexbor",
+      "uri",
+      "pcre",
+      "sqlite3",
+      "zlib",
+      "amqp",
+      "apcu",
+      "ast",
+      "bcmath",
+      "brotli",
+      "bz2",
+      "calendar",
+      "ctype",
+      "curl",
+      "dba",
+      "json",
+      "SPL",
+      "mbstring",
+      "session",
+      "fileinfo",
+      "filter",
+      "ftp",
+      "gd",
+      "gettext",
+      "gmp",
+      "hash",
+      "iconv",
+      "standard",
+      "libxml",
+      "exif",
+      "dom",
+      "igbinary",
+      "imagick",
+      "intl",
+      "ldap",
+      "lz4",
+      "memcached",
+      "mysqlnd",
+      "mysqli",
+      "Zend OPcache",
+      "parallel",
+      "pcntl",
+      "PDO",
+      "pdo_mysql",
+      "pdo_pgsql",
+      "pdo_sqlite",
+      "pgsql",
+      "openssl",
+      "posix",
+      "protobuf",
+      "random",
+      "readline",
+      "redis",
+      "Reflection",
+      "shmop",
+      "SimpleXML",
+      "soap",
+      "sockets",
+      "sodium",
+      "ssh2",
+      "sysvmsg",
+      "sysvsem",
+      "sysvshm",
+      "tidy",
+      "tokenizer",
+      "Phar",
+      "xlswriter",
+      "xml",
+      "xmlreader",
+      "xmlwriter",
+      "xsl",
+      "xz",
+      "yaml",
+      "zip",
+      "zstd"
+    ],
+    "missingExtensions": [],
+    "qualified": true
+  },
+  "missingExtensions": [],
+  "verifiedFiles": 9596,
+  "subprocessRuntime": {
+    "versionId": 80511,
+    "sapi": "cli"
+  },
+  "registeredPublicRoutes": [
+    {
+      "domain": null,
+      "method": "GET|HEAD",
+      "uri": "api/v1/course-context/entries",
+      "name": null,
+      "action": "App\\Http\\Controllers\\KnowledgeController@entries",
+      "middleware": [
+        "api",
+        "App\\Http\\Middleware\\PublicCourseContext",
+        "throttle:20,1"
+      ],
+      "path": null
+    },
+    {
+      "domain": null,
+      "method": "GET|HEAD",
+      "uri": "api/v1/course-context/outline",
+      "name": null,
+      "action": "App\\Http\\Controllers\\KnowledgeController@outline",
+      "middleware": [
+        "api",
+        "App\\Http\\Middleware\\PublicCourseContext",
+        "throttle:20,1"
+      ],
+      "path": null
+    }
+  ],
+  "formatterChangedFiles": [
+    "tests/Feature/PublicCourseContextTest.php"
+  ],
+  "executedPhpFingerprint": "afaa37730d951f1513922c38927c47c4a190f280ac8e376cb0f46add75717c82",
+  "exitCode": 255,
+  "errorType": "RuntimeError",
+  "message": "PHP regressions failed; inspect retained logs and JUnit",
+  "finishedAt": "2026-10-01T12:41:31.209410+00:00",
+  "cause": "Packaging filter removed PHPUnit src/Event/Value/Test runtime classes; filtering corrected at package root only."
+}

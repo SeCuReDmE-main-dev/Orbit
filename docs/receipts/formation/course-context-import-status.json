@@ -1,0 +1,188 @@
+{
+  "version": "orbit-formation-context-import-receipt-v1",
+  "recordedAt": "2026-10-01T14:12:40.759Z",
+  "knowledgeBase": "kb5CHIYGXCMJ",
+  "sourceCommit": "784dbca3f71c5aa12fc71e616e327ccb4fe53ddb",
+  "observedPhase": "HOLD_PUBLIC_COURSE_CONTEXT_ADMISSION",
+  "beforeSourceUsage": {
+    "used": 97,
+    "limit": 5000
+  },
+  "submittedPublicDocuments": 9,
+  "completedOneSourceImports": 9,
+  "documents": [
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-1.md",
+      "sha256": "38d5e9e48d35a04e8ed5e422e7339f7be04aa7e3e58dd691fa667b9e6b1ddeab",
+      "ingestedSha256": "6d754f01351c485a94344eb28893aedccd5f2b1dd2df449eec0be045ce7c318a",
+      "sourceId": "2b13eb91-0725-4e0e-bd0c-b5a1bcfdebaf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-2.md",
+      "sha256": "cbdbc1f8430defa0518d81d6bb308e40969b7e7f59fb3c9b49c1cf3cac0dfa71",
+      "ingestedSha256": "414f70a1ff1164b61d855f873f4f6b172e5c08f9c7fa948929a2487031797891",
+      "sourceId": "fa1c79c2-ee7d-4ff8-84d2-699ad313c236"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-3.md",
+      "sha256": "085818229e531382c3fcfa83ce804ff75174c4738dae7fd3d7deda40ad084359",
+      "ingestedSha256": "8ecb29d6b1ba0cd61a673c00942da6fabfd173006e5aa111cf80ec0e8b501129",
+      "sourceId": "6d7501f1-74cc-4d8a-a30e-0bf53ec4332c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-4.md",
+      "sha256": "12e77b6da7579434a5963a47769888cfb43c25a678c39fadd33af275727adc96",
+      "ingestedSha256": "ab7d33e35e6e7492b6bb131f30848c0d5a4b3a9e14e9a0d5ed761c88d01c91fb",
+      "sourceId": "e2616660-2597-4625-a507-ad7c4b562b64"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-5.md",
+      "sha256": "ffee9a0b19c974b802a0135c5451219809c0dc1f4531ff41c674124d80f35079",
+      "ingestedSha256": "5848119e1fae9655a1f28e0a4043c265f02abecab05a7aa00226b6eb68beb1f3",
+      "sourceId": "ad2a5f0c-9333-42ac-906a-09e96bad429b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-6.md",
+      "sha256": "8215bd821676b00cc6f01842a39087af4a0dca2802fa4ccc4094eec777bb70d9",
+      "ingestedSha256": "c033f99166459d6fb8e0d54fdd327e46e851520a1a54aff023d2a256a2be1efe",
+      "sourceId": "4e6033de-0368-4baa-8b3c-dbb634f05c6e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-7.md",
+      "sha256": "255f792ebf5afa43ccb6907f6351bd8caabd401bfbae76ff0fa29f757aac73ac",
+      "ingestedSha256": "f795f6ab32409647b59dffd43f91a3f22753f06a828e8dd8b2eebcf15e409eb9",
+      "sourceId": "53e22040-ef01-437f-90c3-e72e91d83bf2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/modules/module-8.md",
+      "sha256": "99a3c887fff00f5e2c8564bc65b959f7f1f3ba187b4c17383cf3dc5dc818c720",
+      "ingestedSha256": "fcb35e4194005db21ed91093b1d358bb259463c5fcb5c5f3786685355c051f33",
+      "sourceId": "88d7bceb-c010-4c18-a313-9588bbecfafe"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/784dbca3f71c5aa12fc71e616e327ccb4fe53ddb/docs/learning/orbit-formation/PROJECT.md",
+      "sha256": "c74ee4c116c087baaf01ef1b06cd3952b35b5c0c87d866f5ddce9a140927ce2c",
+      "ingestedSha256": "7e6edaafa83b522aea25bc8bd879cba5063e8d91d82034e3e90ed76841ff3f47",
+      "sourceId": "7cde068b-8f16-4e05-b6d9-2c17491988af"
+    }
+  ],
+  "firstBuild": {
+    "status": "succeeded",
+    "revisionId": "50cc340a-5350-45c5-a2eb-062783cb28ea",
+    "jobReportedEntryCount": 31,
+    "sdkReadEntryCount": 18,
+    "publicAdmittedEntries": 0,
+    "courseSourcesCited": 8,
+    "protocolStatus": "skipped",
+    "mixedLegacyCitations": 2
+  },
+  "routingInstruction": {
+    "scopedSources": 9,
+    "verified": false,
+    "sha256": "8195c76d2a3720bf387355bc4af5abd6e16eb3a80d5e3e91d55fa64214f08a05",
+    "existingInstructionsPreserved": 0,
+    "attribution": "Codex automated routing under explicit human implementation authorization; not human content review",
+    "providerOrigin": "human",
+    "originIsNotEvidenceOfHumanContentReview": true,
+    "entryDesign": "One course entry; eight module sections and a separate protocol section; nine exact public source IDs."
+  },
+  "followupBuilds": {
+    "totalGuidedSubmissions": 3,
+    "usefulAttempts": 2,
+    "maximumUsefulAttempts": 2,
+    "cancelledOrchestrationDuplicates": [
+      {
+        "jobId": "ctx-build-a22131ab-85c8-4887-8467-b657d3d3c3dd-1790862829364",
+        "status": "cancelled",
+        "completedAt": "2026-10-01T13:54:54.200Z",
+        "cause": "Orchestrator submitted the unchanged policy after consolidation failed the 2000-character precondition; no consolidation mutation occurred."
+      }
+    ],
+    "correctedConsolidatedBuildStatus": "succeeded-but-admission-refused",
+    "instructionCharacters": 1678,
+    "retryAuthorization": "One explicitly authorized corrected retry after the identified orchestration duplicate was cancelled; no further rebuilds authorized."
+  },
+  "lastObservedBudget": {
+    "sourceUsageUsed": 107,
+    "sourceUsageLimit": 5000,
+    "listedSources": 91,
+    "listedReady": 83,
+    "listedSkipped": 8,
+    "resolvedCitedSources": 106,
+    "combinedReady": 107,
+    "conservativeCount": 115,
+    "hardSafetyCeiling": 150
+  },
+  "meterDifference": {
+    "expectedImmediatelyAfterNineImports": 106,
+    "observedAfterFirstBuild": 107,
+    "additionalImportsBeyondNine": 0,
+    "explanation": "Unresolved change of one metered document after build; reported, not inferred to be an additional public import."
+  },
+  "publicEndpointEnabled": false,
+  "privateLearnerContentIncluded": false,
+  "credentialsIncluded": false,
+  "softwareValidation": {
+    "receipt": "php-context-29-pass-kaggle.json",
+    "host": "Kaggle",
+    "tests": 29,
+    "assertions": 185,
+    "localTestsExecuted": false
+  },
+  "qualification": "Nine public files imported. The final bounded guided build completed, but course-only Context admission failed: the observed learning_modules entry mixes seven course citations with two legacy citations, omits Module 8, and the PROJECT source remains skipped. Public transport is disabled; no generated entry is approved as human-reviewed. No further rebuild was submitted after this result.",
+  "knowledgeBaseDescription": {
+    "originalTextPreserved": true,
+    "beforeSha256": "b3b6c902dc4ab3ed5fbb952df17b393744c19b966f1a8f3fd00d3408ee1b0ec9",
+    "afterSha256": "3a1fb74dc4652987c9279f3c9dfccf43d8be4a41b0f5d763fd40c4a0b84d9b1a",
+    "appendedPublicScope": " Public Orbit Formation course materials are also in scope: its eight Astro/Three.js frontend modules and PROJECT.md course protocol, learning with a personal assistant,40-hour timing, privacy, exports and final-project integration. These original public teaching sources are implementation material, not private learner work."
+  },
+  "finalGuidedBuild": {
+    "jobId": "ctx-build-a22131ab-85c8-4887-8467-b657d3d3c3dd-1790863096403",
+    "status": "succeeded",
+    "completedAt": "2026-10-01T14:10:25.814Z",
+    "revisionId": "8b6797ec-8622-4ad0-9789-4c5be3b0aa31",
+    "jobReportedEntryCount": 33,
+    "sdkReadEntryCount": 24,
+    "courseCandidatePath": "learning_modules",
+    "courseSourcesCited": 7,
+    "citedModules": [1, 2, 3, 4, 5, 6, 7],
+    "mixedLegacyCitations": 2,
+    "module8SourceStatus": "ready-but-not-cited",
+    "protocolSourceStatus": "skipped",
+    "publicAdmittedEntries": 0,
+    "missingPublicDocuments": ["modules/module-8.md", "PROJECT.md"],
+    "requestedNamespaceCreated": false,
+    "reportedOpenIssueCount": 6,
+    "sdkReadCurrentRevisionOpenIssues": 5,
+    "issueCountQualification": "Counts differ in the observed provider summary and current-revision SDK read; the difference is unresolved. The five read issues concern legacy content. No issue was accepted, dismissed or adjudicated.",
+    "issueDecisionsMade": 0,
+    "citationDiagnosticSha256": "299fd2688f4123099d65ebca29bbe85a708a346bbffe167d0bc87c813d8d5e34",
+    "admissionFailure": "COURSE_CITATION_COVERAGE_NOT_COMPLETE",
+    "rawEntryFabricated": false,
+    "newKnowledgeBaseCreated": false,
+    "furtherRebuildsSubmitted": 0
+  },
+  "failClosedBackend": {
+    "activationManifest": "config/course_context.php",
+    "enabled": false,
+    "qualifiedEntryCount": 0,
+    "expectedDisabledStatus": 503,
+    "expectedDisabledBody": {"state": "UNAVAILABLE", "reason": "CONTEXT_NOT_READY", "noFallback": true},
+    "incrementalArchiveSha256": "0246a3621cb6ccc224f3cc9ddf44a759ceaa26628486ee66c8658ecc7d2a6c7b",
+    "incrementalPhpFiles": 8,
+    "productionDeploymentObserved": false,
+    "productionCacheState": "not-observed",
+    "qualification": "The disabled response and private-route isolation were checked by the retained Kaggle PHP regression receipt. This does not establish deployment or a live production read."
+  },
+  "firstGuidedBuild": {
+    "status": "succeeded",
+    "revisionId": "7ac57e6b-3af8-40d8-8365-49e1e65fca38",
+    "jobReportedEntryCount": 30,
+    "sdkReadEntryCount": 19,
+    "courseSourcesCited": 0,
+    "publicAdmittedEntries": 0,
+    "currentLegacyOpenIssues": 3,
+    "sdkOpenIssuesIncludingHistory": 32,
+    "issueDecisionsMade": 0
+  }
+}

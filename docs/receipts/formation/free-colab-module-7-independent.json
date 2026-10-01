@@ -1,0 +1,31 @@
+{
+  "state": "PASS_INDEPENDENT_CPU_COPY_EXPORT_WITH_IFRAME_RECOVERY",
+  "host": "Google Colab",
+  "moduleId": 7,
+  "sourceCommit": "b9411526cd6e06faee398c60d7afe5d68421e257",
+  "operator": "Codex",
+  "origin": "software-qa-fixture",
+  "notStudentObservation": true,
+  "accountPlan": "free account reported by user; Processeur radio checked observed",
+  "freshDriveCopy": true,
+  "copyName": "Orbit QA gratuit — Module 7 — copie neuve",
+  "trustedUIEvents": [
+    "Enter experience/proofs/summary changed view, retaining selection element-1.",
+    "Space froze elapsed 0.38089999999999974; same second reading after source edit.",
+    "Actual student_files historyLimit32 to4; five navigations yielded four entries proofs/summary/mission/experience.",
+    "Final static true, elapsed13.451200000000053."
+  ],
+  "archiveSha256": "20e5daf330d6b3a6e4e472c46d2c8e15229d5c2ea71eb64cc3bff1c64a9ce0e9",
+  "archiveFile": "orbit-module-7-module-7-1790859175625703084.zip",
+  "downloadConfirmedByFilesystem": true,
+  "exportFileCountReported": 5,
+  "runtimeStoppedAfterExport": true,
+  "runtimeStopObserved": "Reconnecter Cliquez pour établir la connexion",
+  "driveSavedObserved": "Toutes les modifications ont été enregistrées",
+  "incident": "Modified output iframe stalled; saved Drive copy reloaded, normal scroll showed controls, same CPU runtime restored. No protection changed.",
+  "selectionVariantsVerified": false,
+  "realBrowserHistoryVerified": false,
+  "understandingExamined": false,
+  "humanApproval": false,
+  "privateEvidenceDirectory": ".orbit/formation-20261001/colab-independent"
+}

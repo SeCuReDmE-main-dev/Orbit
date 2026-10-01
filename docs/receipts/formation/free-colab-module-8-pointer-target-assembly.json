@@ -1,0 +1,205 @@
+{
+  "state": "PASS_REAL_FREE_CPU_COLAB_ASSEMBLY_NOT_BUILT",
+  "operator": "Codex",
+  "origin": "software-qa-fixture",
+  "notStudentObservation": true,
+  "host": "Google Colab",
+  "accountPlan": "free account reported by user; CPU radio checked, premium GPU unavailable observed",
+  "driveUrl": "https://colab.research.google.com/drive/1wbF3mqnAwyxtrBWFcsGaqIMojtLlhxCN",
+  "copyName": "Orbit QA gratuit — Module 8 — copie neuve raccordement corrigé",
+  "notebookSourceCommit": "6a60234",
+  "sourceNotebookSha256": "798c6e030db6db9a789be6d21a987a04bb4a324fb2f4f059886561fc624e68f2",
+  "assemblyTransport": "HTTP_QA_FIXTURE_IMPORT",
+  "manualUploadVerified": false,
+  "fixtureCommit": "4d3b48bc9236b1c3df06f209486009a4c8a4c942",
+  "fixtureManifestPath": "docs/receipts/fixtures/free-colab-eight-export-manifest.json",
+  "fixtureManifestSha256": "d65988647ad3dafc9bef289c040f5a011ebfe02d4aee7dccbcba135fbc032246",
+  "fixtureManifestBytes": 3283,
+  "moduleExports": [
+    {
+      "moduleId": 1,
+      "path": "docs/receipts/fixtures/free-colab-module-1-export-a23ae46e.zip",
+      "sha256": "a23ae46e529314289fc098acdc165e1e2a1bfc29df61966d2e765ecba2a35794",
+      "bytes": 20957,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 2,
+      "path": "docs/receipts/fixtures/free-colab-module-2-export-211de817.zip",
+      "sha256": "211de817002cca08c08d16ff379df3849a8b1b9f7f62d8c1dbef87700b6a9073",
+      "bytes": 16764,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 3,
+      "path": "docs/receipts/fixtures/free-colab-module-3-export-b202088c.zip",
+      "sha256": "b202088c8f092630676273c7cdf97d89302983866f70f5b8df3305486d7c3335",
+      "bytes": 26869,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true,
+      "previousExportPreserved": "docs/receipts/fixtures/free-colab-module-3-export-50f48e5a.zip"
+    },
+    {
+      "moduleId": 4,
+      "path": "docs/receipts/fixtures/free-colab-module-4-export-7e6c739c.zip",
+      "sha256": "7e6c739c0883e39aca491e6f6280cc353daf6745017a3bea5ce690746e4d67a5",
+      "bytes": 22095,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 5,
+      "path": "docs/receipts/fixtures/free-colab-module-5-export-ebdcd2c1.zip",
+      "sha256": "ebdcd2c1ff8409390515aa6f20c603c03b7f04e91c36fb86e487d79703ff8d19",
+      "bytes": 14814,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 6,
+      "path": "docs/receipts/fixtures/free-colab-module-6-export-4f0d2c98.zip",
+      "sha256": "4f0d2c98c5a3cf7d8f1bd6ed7ad1d76a5d3ee9474cf137955a18a59de425c23d",
+      "bytes": 15606,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 7,
+      "path": "docs/receipts/fixtures/free-colab-module-7-export-82752841.zip",
+      "sha256": "827528418863211e76307d3e3dbd2a21d17d2864bde0e59f4d8295948897f3ce",
+      "bytes": 19939,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 8,
+      "path": "docs/receipts/fixtures/free-colab-module-8-export-8d80562e.zip",
+      "sha256": "8d80562e069f26bb07ec097ad5763676548bf125d7ab06ce5529f8d590bd1654",
+      "bytes": 19925,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true,
+      "previousExportPreserved": "docs/receipts/fixtures/free-colab-module-8-export-63f4384c.zip"
+    }
+  ],
+  "sixPreviousModuleExportsPreserved": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7
+  ],
+  "replacedModulesByFreshQaCopies": [
+    3,
+    8
+  ],
+  "providedAssemblyHost": "src/student-frontend.js pointerTarget:stage",
+  "assemblyFile": "orbit-mon-frontend-pointer-target-free-colab.zip",
+  "assemblyDownloadConfirmedByFilesystem": true,
+  "assemblySha256": "141466603afaca979af3e8ee011391c9516de2a723c52809bdca86f0dbb0b1ba",
+  "assemblyBytes": 79149,
+  "manifestSchemaVersion": "orbit-student-assembly-v1",
+  "manifestFileCount": 46,
+  "assemblyManifestSha256": "07c81ece49ed1b85f5de1dc18ec63239be53c882eb8b2f3d62ee8593ab348040",
+  "archiveFileCount": 47,
+  "brickPaths": [
+    "src/learning/module-1/interaction-state.js",
+    "src/learning/module-2/ExplorationCard.astro",
+    "src/learning/module-2/exploration-card.js",
+    "src/learning/module-3/scene-controller.js",
+    "src/learning/module-4/inertia.js",
+    "src/learning/module-5/transitions.js",
+    "src/learning/module-6/particle-layer.js",
+    "src/learning/module-7/interaction-flow.js",
+    "src/learning/module-8/register-capabilities.js"
+  ],
+  "colabOutputObserved": "ASSEMBLED_NOT_BUILT with every module byte count and SHA256 listed",
+  "runtimeStoppedAfterDownload": true,
+  "runtimeStopObserved": "Reconnecter Cliquez pour établir la connexion",
+  "driveSavedObserved": "Toutes les modifications ont été enregistrées",
+  "incident": "First attempt correctly refused manifest: the supplied SHA f81f828bffe0e4094b92284e5f30b7fdea2fbdf8cadd325ff24c1af245f5fd41 identified Windows CRLF3358-byte file, not published LF3283-byte Git blob. Expected digest was corrected to the exact published d6598864 digest; all digest checks retained. No module bytes modified.",
+  "compiledInColab": false,
+  "nativeWebMcpCallVerifiedInColab": false,
+  "sharedStageRaycastVerified": false,
+  "understandingExamined": false,
+  "humanApproval": false,
+  "priorAssemblyReceiptPreserved": "free-colab-module-8-independent-assembly.json",
+  "priorAssemblySha256": "96acc0ddfdd3728426980df39d2a1ccda07cc855eb95f950a552de776a5b2aed",
+  "remainingValidation": "Kaggle exact archive and export checks plus npmci locked build; real E2B stage-capture raycast and drag/browser checks",
+  "inputFiles": [
+    {
+      "moduleId": 1,
+      "path": "docs/receipts/fixtures/free-colab-module-1-export-a23ae46e.zip",
+      "sha256": "a23ae46e529314289fc098acdc165e1e2a1bfc29df61966d2e765ecba2a35794",
+      "bytes": 20957,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 2,
+      "path": "docs/receipts/fixtures/free-colab-module-2-export-211de817.zip",
+      "sha256": "211de817002cca08c08d16ff379df3849a8b1b9f7f62d8c1dbef87700b6a9073",
+      "bytes": 16764,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 3,
+      "path": "docs/receipts/fixtures/free-colab-module-3-export-b202088c.zip",
+      "sha256": "b202088c8f092630676273c7cdf97d89302983866f70f5b8df3305486d7c3335",
+      "bytes": 26869,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true,
+      "previousExportPreserved": "docs/receipts/fixtures/free-colab-module-3-export-50f48e5a.zip"
+    },
+    {
+      "moduleId": 4,
+      "path": "docs/receipts/fixtures/free-colab-module-4-export-7e6c739c.zip",
+      "sha256": "7e6c739c0883e39aca491e6f6280cc353daf6745017a3bea5ce690746e4d67a5",
+      "bytes": 22095,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 5,
+      "path": "docs/receipts/fixtures/free-colab-module-5-export-ebdcd2c1.zip",
+      "sha256": "ebdcd2c1ff8409390515aa6f20c603c03b7f04e91c36fb86e487d79703ff8d19",
+      "bytes": 14814,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 6,
+      "path": "docs/receipts/fixtures/free-colab-module-6-export-4f0d2c98.zip",
+      "sha256": "4f0d2c98c5a3cf7d8f1bd6ed7ad1d76a5d3ee9474cf137955a18a59de425c23d",
+      "bytes": 15606,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 7,
+      "path": "docs/receipts/fixtures/free-colab-module-7-export-82752841.zip",
+      "sha256": "827528418863211e76307d3e3dbd2a21d17d2864bde0e59f4d8295948897f3ce",
+      "bytes": 19939,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true
+    },
+    {
+      "moduleId": 8,
+      "path": "docs/receipts/fixtures/free-colab-module-8-export-8d80562e.zip",
+      "sha256": "8d80562e069f26bb07ec097ad5763676548bf125d7ab06ce5529f8d590bd1654",
+      "bytes": 19925,
+      "authority": "Synthetic Codex QA; not learner submission or human review",
+      "originalBytesPreserved": true,
+      "previousExportPreserved": "docs/receipts/fixtures/free-colab-module-8-export-63f4384c.zip"
+    }
+  ],
+  "archiveBytes": 79149,
+  "archiveSha256": "141466603afaca979af3e8ee011391c9516de2a723c52809bdca86f0dbb0b1ba",
+  "assemblyManifestFileCountObserved": 46,
+  "frontendFileCountObserved": 9,
+  "accountPlanObserved": "free account reported by user; CPU radio checked, premium GPU unavailable observed",
+  "humanUnderstanding": false
+}

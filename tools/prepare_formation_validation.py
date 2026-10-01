@@ -8,7 +8,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / '.orbit/formation-20261001'
-TESTS = ['learning-contract', 'learning-registry', 'learning-studio-publication', 'learning-studio-registry', 'learning-notebooks-bricks', 'classification', 'evidence-review', 'relation-engines', 'relation-regressions', 'webmcp', 'webmcp-classification', 'workshop', 'context-provenance']
+TESTS = ['learning-contract', 'learning-archive', 'learning-webmcp', 'learning-registry', 'learning-studio-publication', 'learning-studio-registry', 'learning-notebooks-bricks', 'classification', 'evidence-review', 'relation-engines', 'relation-regressions', 'webmcp', 'webmcp-classification', 'workshop', 'context-provenance']
 
 
 def main():
@@ -20,7 +20,7 @@ def main():
                 files[path.relative_to(ROOT).as_posix()] = path.read_bytes()
     for folder in ['docs/learning/orbit-formation', 'packages/learning-studio']:
         for path in (ROOT / folder).rglob('*'):
-            if path.is_file() and not any(part in ['node_modules', 'dist','__pycache__'] for part in path.parts):files[path.relative_to(ROOT).as_posix()] = path.read_bytes()
+            if path.is_file() and not any(part in ['node_modules', 'dist','__pycache__', 'publication'] for part in path.parts):files[path.relative_to(ROOT).as_posix()] = path.read_bytes()
     for name in ['tests/learning-notebooks-test.py','tools/prepare_learning_notebooks.py','vitest.config.ts', 'tools/engine-jsonl.ts']:
         files[name] = (ROOT / name).read_bytes()
     files['package.json'] = json.dumps({'name': 'orbit-kaggle-validation', 'private': True, 'type': 'module',
@@ -86,7 +86,7 @@ if bundle.returncode: raise RuntimeError('Shared engine build failed.')
 print('Shared engine built in Kaggle:', hashlib.sha256((ROOT/'engine.mjs').read_bytes()).hexdigest())
 '''.replace('__TESTS__', repr(TESTS)).replace('__DIGEST__', repr(digest))
     cells = [
-        {'cell_type': 'markdown', 'metadata': {}, 'source': ['# Orbit â€” cloud software validation\nSource integrity, formation contracts, registry, exports and software regressions and the shared TypeScript engine. No model calls. This notebook does not claim that the full benchmark campaign has run.']},
+        {'cell_type': 'markdown', 'metadata': {}, 'source': ['# Orbit — cloud software validation\nSource integrity, formation contracts, registry, exports and software regressions and the shared TypeScript engine. No model calls. This notebook does not claim that the full benchmark campaign has run.']},
         *[{'cell_type':'code','metadata':{},'source':code.splitlines(True),'outputs':[],'execution_count':None} for code in [setup,validation]],
     ]
     notebook={'nbformat':4,'nbformat_minor':5,'metadata':{'kernelspec':{'name':'python3','display_name':'Python 3','language':'python'}},'cells':cells}

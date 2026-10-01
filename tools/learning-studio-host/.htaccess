@@ -1,0 +1,14 @@
+# Applies only to this additional Studio, never to the landing or /studio.
+DirectoryIndex index.html
+<IfModule mod_headers.c>
+    Header always set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /formation/studio/
+    # Missing assets must not be returned as the HTML application shell.
+    RewriteRule ^static/ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ /formation/studio/index.html [L]
+</IfModule>

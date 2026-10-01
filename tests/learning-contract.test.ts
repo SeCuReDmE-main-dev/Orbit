@@ -75,6 +75,93 @@ describe('learning course contract', () => {
     state.addArtifact({ title: 'Retained work', content: 'No cloud write.' });
     expect(state.snapshot().artifacts).toHaveLength(1); expect(state.persistenceError).toContain('memory');
   });
+  it('refuses a local-saving grant when no browser storage is available', () => {
+    const state = store(); const observed: string[] = [];
+    state.subscribe(() => observed.push(state.getPersistenceStatus().state));
+    const revision = state.snapshot().revision;
+    expect(state.setPermission('localSave', true)).toMatchObject({ state: 'UNAVAILABLE', code: 'LOCAL_STORAGE_UNAVAILABLE' });
+    expect(state.snapshot().permissions.localSave).toBe(false);
+    expect(state.snapshot().revision).toBe(revision);
+    expect(state.getPersistenceStatus()).toMatchObject({ state: 'unavailable', localSaveAllowed: false, dirty: true, code: 'LOCAL_STORAGE_UNAVAILABLE' });
+    expect(observed).toEqual(['unavailable']);
+    state.addJournalEntry({ kind: 'reflection', text: 'My work still exists in memory.' });
+    expect(state.snapshot().journal).toHaveLength(1);
+    expect(state.getPersistenceStatus().message).toContain('export');
+    // Storage failure must not disable unrelated read/proposal choices.
+    expect(state.setPermission('agentRead', true).state).toBe('READY');
+  });
+  it('reports a later quota failure to subscribers without discarding the new work', () => {
+    const local = storage(); let quotaReached = false;
+    const adapter: StorageLike = { ...local.adapter, setItem(key, value) { if (quotaReached) throw Error('quota'); local.adapter.setItem(key, value); } };
+    const state = store(adapter); state.setPermission('localSave', true);
+    const savedRevision = state.snapshot().revision; const savedCopy = local.values.get(state.storageKey);
+    const observed: string[] = []; state.subscribe(() => observed.push(state.getPersistenceStatus().state));
+    quotaReached = true;
+    state.addArtifact({ title: 'Unsaved after quota', content: 'Keep this content in memory.' });
+    expect(state.snapshot().artifacts[0].content).toBe('Keep this content in memory.');
+    expect(local.values.get(state.storageKey)).toBe(savedCopy);
+    expect(state.getPersistenceStatus()).toMatchObject({ state: 'failed', localSaveAllowed: true, dirty: true, savedRevision, revision: savedRevision + 1 });
+    expect(observed).toEqual(['failed']);
+    state.addJournalEntry({ kind: 'question', text: 'A further memory change.' });
+    expect(state.getPersistenceStatus().state).toBe('failed');
+    expect(state.persistenceError).toContain('memory');
+    quotaReached = false;
+    expect(state.saveCurrentLocally()).toMatchObject({ state: 'READY', data: { saved: true } });
+    expect(state.getPersistenceStatus()).toMatchObject({ state: 'saved', dirty: false, savedRevision: state.snapshot().revision });
+    expect(state.persistenceError).toBeNull();
+    expect(observed.at(-1)).toBe('saved');
+    expect(JSON.parse(local.values.get(state.storageKey)!).journal[0].text).toBe('A further memory change.');
+  });
+  it('keeps a failed browser-copy removal visible during later memory operations', () => {
+    const local = storage(); let removalBlocked = true;
+    const adapter: StorageLike = { ...local.adapter, removeItem(key) { if (removalBlocked) throw Error('blocked'); local.adapter.removeItem(key); } };
+    const state = store(adapter); state.setPermission('localSave', true);
+    expect(state.setPermission('localSave', false)).toMatchObject({ state: 'UNAVAILABLE', code: 'LOCAL_STORAGE_UNAVAILABLE' });
+    expect(state.snapshot().permissions.localSave).toBe(false);
+    expect(local.values.has(state.storageKey)).toBe(true);
+    state.addArtifact({ title: 'Memory only', content: 'A later version remains here.' });
+    state.switchModule(2);
+    expect(state.getPersistenceStatus()).toMatchObject({ state: 'failed', localSaveAllowed: false, dirty: true });
+    expect(state.persistenceError).toContain('could not be removed');
+    state.importSession(state.exportSession());
+    expect(state.persistenceError).toContain('could not be removed');
+    removalBlocked = false;
+    expect(state.setPermission('localSave', false).state).toBe('READY');
+    expect(local.values.has(state.storageKey)).toBe(false);
+    expect(state.getPersistenceStatus()).toMatchObject({ state: 'memory', localSaveAllowed: false, dirty: true });
+    expect(state.persistenceError).toBeNull();
+  });
+  it('reports blocked reads without granting storage or blocking memory work', () => {
+    const adapter: StorageLike = { getItem() { throw Error('blocked'); }, setItem() { throw Error('unexpected write'); }, removeItem() {} };
+    const state = store(adapter);
+    expect(state.setPermission('localSave', true)).toMatchObject({ state: 'UNAVAILABLE', code: 'LOCAL_STORAGE_UNAVAILABLE' });
+    expect(state.getPersistenceStatus()).toMatchObject({ state: 'unavailable', localSaveAllowed: false, dirty: true });
+    state.addArtifact({ title: 'Continued work', content: 'Not persisted.' });
+    expect(state.getPersistenceStatus().state).toBe('unavailable');
+    expect(state.snapshot().artifacts).toHaveLength(1);
+  });
+  it('distinguishes an older protected copy from a successful current save', () => {
+    const local = storage(); const old = store(); old.addJournalEntry({ kind: 'reflection', text: 'Older work.' });
+    local.values.set(old.storageKey, old.exportSession());
+    const state = store(local.adapter); state.setPermission('localSave', true);
+    expect(state.getPersistenceStatus()).toMatchObject({ state: 'awaiting-choice', dirty: true, localSaveAllowed: true });
+    expect(state.getPersistenceStatus()).not.toHaveProperty('savedRevision');
+    state.addJournalEntry({ kind: 'question', text: 'New work before choosing.' });
+    expect(state.getPersistenceStatus().state).toBe('awaiting-choice');
+    expect(state.restoreLocal().state).toBe('READY');
+    expect(state.getPersistenceStatus()).toMatchObject({ state: 'memory', localSaveAllowed: false, dirty: true });
+    expect(state.getPersistenceStatus()).not.toHaveProperty('savedRevision');
+  });
+  it('does not serialize runtime persistence status or expose its mutable state', () => {
+    const local = storage(); const state = store(local.adapter); state.setPermission('localSave', true);
+    const status = state.getPersistenceStatus(); status.state = 'failed';
+    expect(state.getPersistenceStatus().state).toBe('saved');
+    const exported = JSON.parse(state.exportSession());
+    expect(exported).not.toHaveProperty('persistenceError');
+    expect(exported).not.toHaveProperty('savedRevision');
+    expect(exported).not.toHaveProperty('persistenceState');
+    expect(exported.permissions.localSave).toBe(false);
+  });
   it('keeps external notebook work declared even if it asserts approval', () => {
     const parsed = parseColabResult(colab()); expect(parsed.status).toBe('external-declared');
     const state = store(); const result = state.importColabResult(colab());
@@ -95,6 +182,24 @@ describe('learning course contract', () => {
     const result = await state.verifyArtifact(artifact.id);
     expect(result.data).toMatchObject({ matches: false, executionVerified: false, understandingVerified: false });
     expect(state.snapshot().artifacts[0].hashStatus).toBe('mismatch');
+  });
+  it('creates an atomic new artifact version without changing or implicitly sharing the old one', async () => {
+    const state = store(); const originalContent = 'export const damping = 0.9;';
+    const original = state.addArtifact({ title: 'My inertia', path: 'frontend/inertia.js', content: originalContent, sha256: await sha256(originalContent), origin: 'external-colab' });
+    await state.verifyArtifact(original.id);
+    state.setPermission('agentRead', true); state.shareSelection({ artifactIds: [original.id] });
+    const revision = state.snapshot().revision; const observed: number[] = [];
+    state.subscribe(snapshot => observed.push(snapshot.artifacts.at(-1)!.version));
+    const changed = state.addArtifactVersion(original.id, 'export const damping = 0.5;');
+    expect(state.snapshot().revision).toBe(revision + 1);
+    expect(observed).toEqual([2]);
+    expect(changed).toMatchObject({ version: 2, status: 'modified', origin: 'learner', hashStatus: 'not-checked', path: 'frontend/inertia.js' });
+    expect(changed.id).not.toBe(original.id); expect(changed).not.toHaveProperty('sha256');
+    expect(state.snapshot().artifacts[0]).toMatchObject({ version: 1, content: originalContent, hashStatus: 'matched', status: 'external-declared' });
+    expect(state.snapshot().sharedArtifactIds).toEqual([original.id]);
+    changed.content = 'A mutation of the returned copy.';
+    expect(state.snapshot().artifacts[1].content).toBe('export const damping = 0.5;');
+    expect((await state.verifyArtifact(changed.id)).data).toMatchObject({ matches: true, executionVerified: false, understandingVerified: false });
   });
   it('imports without credentials, sharing, verified labels or human authority reuse', () => {
     const state = store(); const artifact = state.addArtifact({ title: 'Student file', content: 'Original explanation.' });

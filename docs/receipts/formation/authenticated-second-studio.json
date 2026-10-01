@@ -1,0 +1,50 @@
+{
+  "schema": "orbit.authenticated-studio-readback.v1",
+  "observedAt": "2026-10-01T14:33:22.701Z",
+  "url": "https://orbit.securedme.ca/formation/studio/orbit-learning-lab",
+  "authenticatedUserVisible": true,
+  "tools": [
+    "Orbit · Lab",
+    "Orbit · Projects",
+    "Releases"
+  ],
+  "moduleCount": 8,
+  "freshRevision": 1,
+  "preferences": [
+    "FR",
+    "EN",
+    "ES"
+  ],
+  "storage": "memory",
+  "permissions": [
+    {
+      "checked": false,
+      "label": "Sauvegarder explicitement dans ce navigateur"
+    },
+    {
+      "checked": false,
+      "label": "Autoriser l’assistant à lire la sélection partagée"
+    },
+    {
+      "checked": false,
+      "label": "Autoriser le dépôt de propositions"
+    },
+    {
+      "checked": false,
+      "label": "Autoriser l’assistant à choisir les moteurs"
+    },
+    {
+      "checked": false,
+      "label": "Autoriser un export sélectionné pour l’enseignant"
+    },
+    {
+      "checked": false,
+      "label": "Autoriser la préparation d’un contenu publiable pour Sanity"
+    }
+  ],
+  "webmcpUiStatus": "registered",
+  "method": "read-only DOM inspection of an authenticated fresh session",
+  "nativeAgentCallsExecuted": false,
+  "contentLakeWriteExecuted": false,
+  "existingUserSessionModified": false
+}

@@ -1,0 +1,11 @@
+{
+  "state": "CAMPAIGN_RESOURCES_STOPPED",
+  "campaign": "orbit-formation-20261001",
+  "sandboxesStopped": 2,
+  "disposableTokensRetiredBeforeStop": true,
+  "oldTokensRefusedWithHttp401InKaggle": true,
+  "unrelatedCampaignResourcesTouched": false,
+  "accountE2bKeyRevoked": false,
+  "actualFreeColabCopiesStoppedAfterExports": true,
+  "softwareTestsExecutedOnWorkstation": false
+}

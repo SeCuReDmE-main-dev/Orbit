@@ -1,0 +1,42 @@
+{
+  "state": "PASS_DEPLOYED_FAIL_CLOSED_TRANSPORT",
+  "host": "Kaggle",
+  "observedAt": "2026-10-01T14:25:45.595612+00:00",
+  "checks": [
+    {
+      "path": "/api/v1/course-context/outline",
+      "status": 503,
+      "body": {
+        "state": "UNAVAILABLE",
+        "reason": "CONTEXT_NOT_READY",
+        "noFallback": true
+      },
+      "corsOrigin": "*",
+      "corsCredentials": null,
+      "cacheControl": "no-store, private",
+      "nosniff": "nosniff"
+    },
+    {
+      "path": "/api/v1/course-context/entries?paths=%5B%22orbit_formation%2Fcourse%22%5D",
+      "status": 503,
+      "body": {
+        "state": "UNAVAILABLE",
+        "reason": "CONTEXT_NOT_READY",
+        "noFallback": true
+      },
+      "corsOrigin": "*",
+      "corsCredentials": null,
+      "cacheControl": "no-store, private",
+      "nosniff": "nosniff"
+    },
+    {
+      "path": "/api/v1/knowledge/outline",
+      "status": 403,
+      "legacyForeignOrigin": true
+    }
+  ],
+  "realCourseContextReady": false,
+  "backendPackageSha256": "0246a3621cb6ccc224f3cc9ddf44a759ceaa26628486ee66c8658ecc7d2a6c7b",
+  "credentialsUsed": false,
+  "modelsCalled": false
+}

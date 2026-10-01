@@ -1,0 +1,26 @@
+{
+  "state": "PASS_INDEPENDENT_CPU_COPY_EXPORT",
+  "host": "Google Colab",
+  "moduleId": 1,
+  "operator": "Codex",
+  "studentObservation": false,
+  "accountPlan": "free account reported by user; CPU observed",
+  "freshDriveCopy": true,
+  "trustedUIEvents": [
+    "two ArrowRight: x=0.58 with keyboardStep 0.04",
+    "pointer click: released/pointerup/pointerId null",
+    "two ArrowRight after keyboardStep 0.08: x=0.66"
+  ],
+  "archiveSha256": "a23ae46e529314289fc098acdc165e1e2a1bfc29df61966d2e765ecba2a35794",
+  "files": [
+    "INTEGRATION.md",
+    "frontend/interaction-state.js",
+    "manifest.json",
+    "notebook.ipynb",
+    "orbit-learning-result.json"
+  ],
+  "incident": "output JavaScript failed to load; page reload recovered without modifying browser security",
+  "runtimeStoppedAfterExport": true,
+  "understandingExamined": false,
+  "pointerCancelDuringDragVerified": false
+}

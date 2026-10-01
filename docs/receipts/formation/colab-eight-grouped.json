@@ -1,0 +1,556 @@
+{
+  "schemaVersion": "orbit-colab-qa-report-v1",
+  "runId": "orbit-colab-qa-9239ab16b73e4cebb007516a0bf1e66f",
+  "sourceSha256": "20d89be3af866f8e120489b67ccd15591fe6c1a7e3d58b8123eed31196e39a9d",
+  "scope": "Eight real notebook sources, separate namespaces in one Colab CPU computation; not eight independent cold starts.",
+  "host": "Colab",
+  "python": "3.13.15",
+  "machine": "x86_64",
+  "requestedAccelerator": "none",
+  "accountPlanObserved": "not-observed",
+  "state": "PARTIAL_VALIDATION",
+  "modules": {
+    "1": {
+      "moduleId": 1,
+      "pythonState": "PYTHON_EXPORT_REPLAY_PASSED",
+      "executedSourceCells": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "fixtureAuthority": "software test, not learner or human approval",
+      "sourceSha256": "accdb45c528b5a4f9cdcb1282b40ebe067ea4391987217e4f447bd2112f57085",
+      "exportSha256": "6527783693b00255b6754be1d1664c64b2c6d3314b12974d79172eb01815e1ca",
+      "exportFiles": 5,
+      "replayScope": "fresh Python namespace, same runtime",
+      "downloadFunctionInvoked": true,
+      "browserDownloadReceived": "NOT_OBSERVED",
+      "browserState": "BROWSER_SCRIPT_CHECKS_PASSED",
+      "trustedPointerInteractions": "NOT_OBSERVED",
+      "browserReport": {
+        "kind": "orbit-colab-qa",
+        "runId": "dc6a13a7757f45a8a2b1cfe9e1e72caa",
+        "moduleId": 1,
+        "checks": [
+          {
+            "name": "readyWithin30Seconds",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "visibleOutputBeforeInteraction",
+            "passed": true,
+            "detail": "stage; visible"
+          },
+          {
+            "name": "syntheticKeyboardChangesPosition",
+            "passed": true,
+            "detail": "50 → 54"
+          },
+          {
+            "name": "stateReportsKeyboard",
+            "passed": true,
+            "detail": "ArrowRight"
+          }
+        ],
+        "errors": [],
+        "state": "BROWSER_PROBE_COMPLETE",
+        "visibilityState": "visible",
+        "visibleAtProbe": true,
+        "visibilityTarget": "stage",
+        "frameObservations": [],
+        "authority": "browser script checks; not human review or trusted pointer input",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+        "webmcp": "NOT_CALLED"
+      },
+      "remainingChecks": []
+    },
+    "2": {
+      "moduleId": 2,
+      "pythonState": "PYTHON_EXPORT_REPLAY_PASSED",
+      "executedSourceCells": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "fixtureAuthority": "software test, not learner or human approval",
+      "sourceSha256": "ec94bb61c413fa08cb3490053580ac52c882e7b4320ef885ac7412d46780dd46",
+      "exportSha256": "6b07f6712eaefb192c7488b55c0193405fab885ed0ad06f3ef15968b51721e9b",
+      "exportFiles": 6,
+      "replayScope": "fresh Python namespace, same runtime",
+      "downloadFunctionInvoked": true,
+      "browserDownloadReceived": "NOT_OBSERVED",
+      "browserState": "BROWSER_SCRIPT_CHECKS_PASSED",
+      "trustedPointerInteractions": "NOT_OBSERVED",
+      "browserReport": {
+        "kind": "orbit-colab-qa",
+        "runId": "7e377691fd0a4c5889345b2c340ac600",
+        "moduleId": 2,
+        "checks": [
+          {
+            "name": "readyWithin30Seconds",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "visibleOutputBeforeInteraction",
+            "passed": true,
+            "detail": "cards; visible"
+          },
+          {
+            "name": "HTMLSelectionLinkedToStableId",
+            "passed": true,
+            "detail": "element-1"
+          },
+          {
+            "name": "selectedButtonPressed",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "errors": [],
+        "state": "BROWSER_PROBE_COMPLETE",
+        "visibilityState": "visible",
+        "visibleAtProbe": true,
+        "visibilityTarget": "cards",
+        "frameObservations": [],
+        "authority": "browser script checks; not human review or trusted pointer input",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+        "webmcp": "NOT_CALLED"
+      },
+      "remainingChecks": []
+    },
+    "3": {
+      "moduleId": 3,
+      "pythonState": "PYTHON_EXPORT_REPLAY_PASSED",
+      "executedSourceCells": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "fixtureAuthority": "software test, not learner or human approval",
+      "sourceSha256": "341c94e06c1c9645f2869d8483ba7b73d5c930c022ced32bd5f859d4e6ad8224",
+      "exportSha256": "161c8324bc928b0b2d8ad067430a03837451ac7c46dfd01d56724803c2aff7bc",
+      "exportFiles": 5,
+      "replayScope": "fresh Python namespace, same runtime",
+      "downloadFunctionInvoked": true,
+      "browserDownloadReceived": "NOT_OBSERVED",
+      "browserState": "BROWSER_SCRIPT_CHECKS_PASSED",
+      "trustedPointerInteractions": "NOT_OBSERVED",
+      "browserReport": {
+        "kind": "orbit-colab-qa",
+        "runId": "1b65369ca78b4b98a79c3804396b52e7",
+        "moduleId": 3,
+        "checks": [
+          {
+            "name": "readyWithin30Seconds",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "visibleOutputBeforeInteraction",
+            "passed": true,
+            "detail": "stage; visible"
+          },
+          {
+            "name": "HTMLFallbackCanSelect",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "renderSurfaceOrDeclaredFallback",
+            "passed": true,
+            "detail": "Three.js 0.181.2, dans votre navigateur. Caméra et position sont distinctes."
+          },
+          {
+            "name": "WebGLSurface",
+            "passed": null,
+            "detail": "Canvas surface observed; pixel/raycast interaction not certified."
+          }
+        ],
+        "errors": [],
+        "state": "BROWSER_PROBE_COMPLETE",
+        "visibilityState": "visible",
+        "visibleAtProbe": true,
+        "visibilityTarget": "stage",
+        "frameObservations": [],
+        "authority": "browser script checks; not human review or trusted pointer input",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+        "webmcp": "NOT_CALLED"
+      },
+      "remainingChecks": [
+        {
+          "name": "WebGLSurface",
+          "passed": null,
+          "detail": "Canvas surface observed; pixel/raycast interaction not certified."
+        }
+      ]
+    },
+    "4": {
+      "moduleId": 4,
+      "pythonState": "PYTHON_EXPORT_REPLAY_PASSED",
+      "executedSourceCells": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "fixtureAuthority": "software test, not learner or human approval",
+      "sourceSha256": "c6db8b7898e35ff4ba6847a8b9622841d58128da67f9b842147ee9ebd3065364",
+      "exportSha256": "263e6f12d68b1d718420a1f1b41b548ff2340f694961badf7145e6ed57d25192",
+      "exportFiles": 5,
+      "replayScope": "fresh Python namespace, same runtime",
+      "downloadFunctionInvoked": true,
+      "browserDownloadReceived": "NOT_OBSERVED",
+      "browserState": "BROWSER_SCRIPT_CHECKS_PASSED",
+      "trustedPointerInteractions": "NOT_OBSERVED",
+      "browserReport": {
+        "kind": "orbit-colab-qa",
+        "runId": "ac662eebc9574ec590575c51b3957b22",
+        "moduleId": 4,
+        "checks": [
+          {
+            "name": "readyWithin30Seconds",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "visibleOutputBeforeInteraction",
+            "passed": true,
+            "detail": "stage; visible"
+          },
+          {
+            "name": "initialMotionIsFinite",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "trustedPointerReleaseAndBounce",
+            "passed": null,
+            "detail": "Requires a real browser pointer, not mocked pointer capture."
+          }
+        ],
+        "errors": [],
+        "state": "BROWSER_PROBE_COMPLETE",
+        "visibilityState": "visible",
+        "visibleAtProbe": true,
+        "visibilityTarget": "stage",
+        "frameObservations": [],
+        "authority": "browser script checks; not human review or trusted pointer input",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+        "webmcp": "NOT_CALLED"
+      },
+      "remainingChecks": [
+        {
+          "name": "trustedPointerReleaseAndBounce",
+          "passed": null,
+          "detail": "Requires a real browser pointer, not mocked pointer capture."
+        }
+      ]
+    },
+    "5": {
+      "moduleId": 5,
+      "pythonState": "PYTHON_EXPORT_REPLAY_PASSED",
+      "executedSourceCells": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "fixtureAuthority": "software test, not learner or human approval",
+      "sourceSha256": "fff0987ca7801577d81d5c9f6898caf5fdd5333c2ffcf23f02517dc1bc4231ce",
+      "exportSha256": "3ad017a9d0f040de865211852f3c0329b73f97c984a56fcb7aef68837f80e713",
+      "exportFiles": 5,
+      "replayScope": "fresh Python namespace, same runtime",
+      "downloadFunctionInvoked": true,
+      "browserDownloadReceived": "NOT_OBSERVED",
+      "browserState": "BROWSER_SCRIPT_CHECKS_PASSED",
+      "trustedPointerInteractions": "NOT_OBSERVED",
+      "browserReport": {
+        "kind": "orbit-colab-qa",
+        "runId": "10a1fb6880c74867ad4259aec8ee12ce",
+        "moduleId": 5,
+        "checks": [
+          {
+            "name": "readyWithin30Seconds",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "visibleOutputBeforeInteraction",
+            "passed": true,
+            "detail": "stage; visible"
+          },
+          {
+            "name": "springMovesTowardNewTarget",
+            "passed": true,
+            "detail": "{\"value\":1.28722629897232,\"velocity\":0.8445382290847014,\"target\":1.5}"
+          },
+          {
+            "name": "staticFreezesSpringAndClock",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "errors": [],
+        "state": "BROWSER_PROBE_COMPLETE",
+        "visibilityState": "visible",
+        "visibleAtProbe": true,
+        "visibilityTarget": "stage",
+        "frameObservations": [
+          {
+            "label": "spring-after-target",
+            "state": "FRAMES_ADVANCED",
+            "count": 20,
+            "elapsedMs": 314.70000000000005,
+            "visibilityState": "visible"
+          }
+        ],
+        "authority": "browser script checks; not human review or trusted pointer input",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+        "webmcp": "NOT_CALLED"
+      },
+      "remainingChecks": []
+    },
+    "6": {
+      "moduleId": 6,
+      "pythonState": "PYTHON_EXPORT_REPLAY_PASSED",
+      "executedSourceCells": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "fixtureAuthority": "software test, not learner or human approval",
+      "sourceSha256": "2f4f8d7a427a1d5b5c909fecaee276ae9248f4c5dbe9395d0d0ed7efca5b38ec",
+      "exportSha256": "b03e440df30d73b36bdad2b25661328b12a33dc684d355486fe2e2d9bd1cd452",
+      "exportFiles": 5,
+      "replayScope": "fresh Python namespace, same runtime",
+      "downloadFunctionInvoked": true,
+      "browserDownloadReceived": "NOT_OBSERVED",
+      "browserState": "BROWSER_SCRIPT_CHECKS_PASSED",
+      "trustedPointerInteractions": "NOT_OBSERVED",
+      "browserReport": {
+        "kind": "orbit-colab-qa",
+        "runId": "cf0a4625b9aa463ea4f1ec15cc1bf0d1",
+        "moduleId": 6,
+        "checks": [
+          {
+            "name": "readyWithin30Seconds",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "visibleOutputBeforeInteraction",
+            "passed": true,
+            "detail": "stage; visible"
+          },
+          {
+            "name": "particleCanvasChangesWhileAnimated",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "staticFreezesParticlePixels",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "errors": [],
+        "state": "BROWSER_PROBE_COMPLETE",
+        "visibilityState": "visible",
+        "visibleAtProbe": true,
+        "visibilityTarget": "stage",
+        "frameObservations": [
+          {
+            "label": "particles-while-animated",
+            "state": "FRAMES_ADVANCED",
+            "count": 29,
+            "elapsedMs": 414.1,
+            "visibilityState": "visible"
+          }
+        ],
+        "authority": "browser script checks; not human review or trusted pointer input",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+        "webmcp": "NOT_CALLED"
+      },
+      "remainingChecks": []
+    },
+    "7": {
+      "moduleId": 7,
+      "pythonState": "PYTHON_EXPORT_REPLAY_PASSED",
+      "executedSourceCells": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "fixtureAuthority": "software test, not learner or human approval",
+      "sourceSha256": "2d6ac00e5a9635e8b031a31bbb92c8092b94b5a25db26584b5e8c6e6fa7894ca",
+      "exportSha256": "4977426d15c92c39295ebe7971d3a1ad79fc52ffa73b03fac67cd92c087c56a1",
+      "exportFiles": 5,
+      "replayScope": "fresh Python namespace, same runtime",
+      "downloadFunctionInvoked": true,
+      "browserDownloadReceived": "NOT_OBSERVED",
+      "browserState": "BROWSER_SCRIPT_CHECKS_PASSED",
+      "trustedPointerInteractions": "NOT_OBSERVED",
+      "browserReport": {
+        "kind": "orbit-colab-qa",
+        "runId": "a4ff59c56c04488faa649b84ac6307df",
+        "moduleId": 7,
+        "checks": [
+          {
+            "name": "readyWithin30Seconds",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "visibleOutputBeforeInteraction",
+            "passed": true,
+            "detail": "navigation-button:proofs; visible"
+          },
+          {
+            "name": "viewAndHistoryRecorded",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "staticFreezesNavigationClock",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "errors": [],
+        "state": "BROWSER_PROBE_COMPLETE",
+        "visibilityState": "visible",
+        "visibleAtProbe": true,
+        "visibilityTarget": "navigation-button:proofs",
+        "frameObservations": [],
+        "authority": "browser script checks; not human review or trusted pointer input",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+        "webmcp": "NOT_CALLED"
+      },
+      "remainingChecks": []
+    },
+    "8": {
+      "moduleId": 8,
+      "pythonState": "PYTHON_EXPORT_REPLAY_PASSED",
+      "executedSourceCells": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "fixtureAuthority": "software test, not learner or human approval",
+      "sourceSha256": "93699e909ae53a821b4929e05a9b1485fe7e3eb11a6791cd276b47148d8b3e54",
+      "exportSha256": "7d0709b3e5bd5d5f2a5bc80c7ccc552a71e6cb4328323c33b67ced9d08ba3bd1",
+      "exportFiles": 5,
+      "replayScope": "fresh Python namespace, same runtime",
+      "downloadFunctionInvoked": true,
+      "browserDownloadReceived": "NOT_OBSERVED",
+      "browserState": "BROWSER_SCRIPT_CHECKS_PASSED",
+      "trustedPointerInteractions": "NOT_OBSERVED",
+      "browserReport": {
+        "kind": "orbit-colab-qa",
+        "runId": "069e9415727341c39af496ab7168903a",
+        "moduleId": 8,
+        "checks": [
+          {
+            "name": "readyWithin30Seconds",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "visibleOutputBeforeInteraction",
+            "passed": true,
+            "detail": "prepared-trace; visible"
+          },
+          {
+            "name": "preparedTraceDeclared",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "traceContainsMissingPermissionAndStaleRevision",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "errors": [],
+        "state": "BROWSER_PROBE_COMPLETE",
+        "visibilityState": "visible",
+        "visibleAtProbe": true,
+        "visibilityTarget": "prepared-trace",
+        "frameObservations": [],
+        "authority": "browser script checks; not human review or trusted pointer input",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+        "webmcp": "NOT_CALLED"
+      },
+      "remainingChecks": []
+    }
+  },
+  "humanUnderstanding": "NOT_EXAMINED",
+  "trustedPointerInteractions": "NOT_OBSERVED",
+  "coldStartAfterActualRuntimeRestart": "NOT_OBSERVED",
+  "playwright": "NOT_USED",
+  "credentials": "none",
+  "modelsCalled": false,
+  "updatedAt": "2026-10-01T10:52:28Z",
+  "assembly": {
+    "state": "EIGHT_ACTUAL_EXPORTS_ASSEMBLED",
+    "sha256": "6ee07ba6268e2fb3575147c089e63d5eb92330c85766860ff6ec07cf7efc4790",
+    "AstroCompilation": "NOT_EXECUTED_IN_COLAB; see Kaggle validation",
+    "module8UploadWidget": "NOT_OBSERVED"
+  },
+  "selectedUiReview": {
+    "reviewerKind": "not-reviewed",
+    "accountPlan": "not-observed",
+    "eightSeparateColdStarts": false,
+    "runtimeRestartAndSelectedRecovery": false,
+    "trustedPointerUse": false,
+    "keyboardAndTouchEdgeCases": false,
+    "downloadReceived": false,
+    "notes": ""
+  },
+  "summary": {
+    "pythonPassed": 8,
+    "browserScriptPassed": 8,
+    "expectedModules": 8,
+    "coldStartsVerified": false,
+    "humanUnderstanding": "NOT_EXAMINED",
+    "allCourseFunctionsValidated": false
+  },
+  "provenance": {
+    "observer": "coordinator",
+    "preparation": "Sanitized copy of a retained execution report; no workstation rerun.",
+    "originalReportSha256": "4a5a210a300f6453c2ee8d021cb7adb86c9267d7faa5300db5b109072c7743dd",
+    "omitted": "Private filesystem locations, account identity and operational access values."
+  }
+}

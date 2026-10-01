@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "transport": "brokered-ssh-sftp",
+  "package_sha256": "0246a3621cb6ccc224f3cc9ddf44a759ceaa26628486ee66c8658ecc7d2a6c7b",
+  "verified_paths": [
+    "app/Http/Controllers/CourseContextController.php",
+    "app/Http/Middleware/PublicCourseContext.php",
+    "app/Services/PublicCourseContextReader.php",
+    "bootstrap/app.php",
+    "config/course_context.php",
+    "routes/api.php"
+  ],
+  "staging_cleaned": true,
+  "mutated": true,
+  "rollback_restored": false,
+  "secret_values_exposed": false,
+  "plan_id": "d1454ccad369934712a8e0f1",
+  "remoteBackupRetained": true,
+  "privateOperationalPathsOmitted": true
+}
