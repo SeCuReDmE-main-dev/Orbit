@@ -1,6 +1,6 @@
 export const sceneOptions = { cameraDistance: 5 }; // STUDENT: compare 5 and 7, with the same objects.
 /** THREE is the exact host dependency, never a second bundled library. No owned RAF. */
-export function createSceneController({ container, THREE, items, onSelect, options = sceneOptions }) {
+export function createSceneController({ container, THREE, items, onSelect, pointerTarget, options = sceneOptions }) {
   if (!(options.cameraDistance >= 1 && options.cameraDistance <= 10)) throw new Error('Camera distance outside the learning limits.');
   let renderer; const lifetime = new AbortController(); const geometries = []; const materials = [];
   try { renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); }
@@ -24,14 +24,19 @@ export function createSceneController({ container, THREE, items, onSelect, optio
   const resize = () => { const rect = container.getBoundingClientRect(); camera.aspect = Math.max(1, rect.width) / Math.max(1, rect.height); camera.updateProjectionMatrix(); renderer.setSize(Math.max(1, rect.width), Math.max(1, rect.height), false); renderer.render(scene, camera); };
   const observer = new ResizeObserver(resize); observer.observe(container); resize();
   const ray = new THREE.Raycaster(); let start;
-  renderer.domElement.addEventListener('pointerdown', (event) => { start = { x: event.clientX, y: event.clientY }; }, { signal: lifetime.signal });
-  renderer.domElement.addEventListener('pointercancel', () => { start = undefined; }, { signal: lifetime.signal });
-  renderer.domElement.addEventListener('pointerup', (event) => {
-    if (!start || Math.hypot(event.clientX - start.x, event.clientY - start.y) > 6) return;
+  // The host can share its pointer-capture surface; projection still uses the canvas.
+  const inputTarget = pointerTarget ?? renderer.domElement;
+  inputTarget.addEventListener('pointerdown', (event) => {
+    if (event.target !== renderer.domElement && !event.composedPath().includes(renderer.domElement)) { start = undefined; return; }
+    start = { x: event.clientX, y: event.clientY };
+  }, { signal: lifetime.signal });
+  inputTarget.addEventListener('pointercancel', () => { start = undefined; }, { signal: lifetime.signal });
+  inputTarget.addEventListener('pointerup', (event) => {
+    const gesture = start; start = undefined;
+    if (!gesture || Math.hypot(event.clientX - gesture.x, event.clientY - gesture.y) > 6) return;
     const rect = renderer.domElement.getBoundingClientRect();
     ray.setFromCamera(new THREE.Vector2((event.clientX - rect.left) / rect.width * 2 - 1, -((event.clientY - rect.top) / rect.height) * 2 + 1), camera);
     const hit = ray.intersectObjects([...objects.values()])[0]; if (hit) onSelect(hit.object.userData.id);
-    start = undefined;
   }, { signal: lifetime.signal });
   return { available: true,
     setPosition(id, position) { const object = objects.get(id); if (object) object.position.set((position.x - 0.5) * 4, (0.5 - position.y) * 3, 0); },

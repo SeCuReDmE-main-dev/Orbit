@@ -27,13 +27,13 @@
     },
     {
       "path": "notebooks/module-3.ipynb",
-      "sha256": "341c94e06c1c9645f2869d8483ba7b73d5c930c022ced32bd5f859d4e6ad8224",
+      "sha256": "acdefdfc01a56da8bd782b0c338c562bda769fe02a0bfa732b820f828133e482",
       "missionId": "module-3",
       "state": "prepared-not-executed"
     },
     {
       "path": "notebooks/instructor/module-3.ipynb",
-      "sha256": "fb9910334a0317f818dc8d529df9c5695c0e273bceccd6bb96fbfc13df788784",
+      "sha256": "2cafa1825818cee76a6e7ff52e3af0aa13cfd9588dfca2b0a11edababa920024",
       "missionId": "module-3",
       "state": "prepared-not-executed"
     },
@@ -87,13 +87,13 @@
     },
     {
       "path": "notebooks/module-8.ipynb",
-      "sha256": "93699e909ae53a821b4929e05a9b1485fe7e3eb11a6791cd276b47148d8b3e54",
+      "sha256": "798c6e030db6db9a789be6d21a987a04bb4a324fb2f4f059886561fc624e68f2",
       "missionId": "module-8",
       "state": "prepared-not-executed"
     },
     {
       "path": "notebooks/instructor/module-8.ipynb",
-      "sha256": "ed9d1e96b12f0aaf66d7427b56c5af35f75a615fa1aa08491761da7dd8c399d7",
+      "sha256": "428fba539d39224f7bbe11a019e41e99969c4e1c18c6860c26e3b8443bfd9730",
       "missionId": "module-8",
       "state": "prepared-not-executed"
     }

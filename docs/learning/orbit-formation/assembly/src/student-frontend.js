@@ -30,7 +30,7 @@ export function mountStudentFrontend(root) {
   } });
   const select = (id) => { revision++; flow.navigate('proofs', id); cards.select(id); };
   cards = createCards(root, items, select);
-  scene = createSceneController({ container: root.querySelector('[data-three]'), THREE, items, onSelect: select });
+  scene = createSceneController({ container: root.querySelector('[data-three]'), THREE, items, onSelect: select, pointerTarget: stage });
   stage.dataset.webgl = String(scene.available);
   const draw = (dt) => {
     flow.step(dt); const position = motion.step(dt, isStatic); const scale = transition.step(dt, isStatic);
