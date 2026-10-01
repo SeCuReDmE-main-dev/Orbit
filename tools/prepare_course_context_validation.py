@@ -225,8 +225,9 @@ finally:
 '''
 
 MODIFIED = [
+    'app/Http/Controllers/CourseContextController.php', 'app/Services/PublicCourseContextReader.php',
     'app/Http/Middleware/PublicCourseContext.php', 'bootstrap/app.php',
-    'config/cors.php', 'config/orbit.php', 'routes/api.php', 'tests/Feature/PublicCourseContextTest.php',
+    'config/cors.php', 'config/orbit.php', 'config/course_context.php', 'routes/api.php', 'tests/Feature/PublicCourseContextTest.php',
 ]
 
 # These are public format descriptions and encoder strings, not embedded keys.
