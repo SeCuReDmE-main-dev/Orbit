@@ -1,0 +1,110 @@
+{
+  "format": "orbit-native-e-preflight-receipt",
+  "state": "passed",
+  "executionHost": "Kaggle",
+  "browserHost": "E2B",
+  "sourceArtifactSha256": "83a393c1a2329ffd2d908e0a8cad96d5adadb51d5bdaa4eb4e33cf3c0144d4eb",
+  "sourceArtifactBytes": 45267,
+  "releaseId": "orbit-v3-closure-20261001T180900Z",
+  "releaseManifestSha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e",
+  "releaseReadTransport": "native-Chrome-session-fetch",
+  "workers": [
+    {
+      "workerIndex": 0,
+      "state": "passed",
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "capabilitiesState": "READY",
+      "contractVersion": "orbit-webmcp-v7",
+      "modelRoleChangeStatus": 401,
+      "profileStop": "closed"
+    },
+    {
+      "workerIndex": 1,
+      "state": "passed",
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "capabilitiesState": "READY",
+      "contractVersion": "orbit-webmcp-v7",
+      "modelRoleChangeStatus": 401,
+      "profileStop": "closed"
+    },
+    {
+      "workerIndex": 2,
+      "state": "passed",
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "capabilitiesState": "READY",
+      "contractVersion": "orbit-webmcp-v7",
+      "modelRoleChangeStatus": 401,
+      "profileStop": "closed"
+    },
+    {
+      "workerIndex": 3,
+      "state": "passed",
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "capabilitiesState": "READY",
+      "contractVersion": "orbit-webmcp-v7",
+      "modelRoleChangeStatus": 401,
+      "profileStop": "closed"
+    },
+    {
+      "workerIndex": 4,
+      "state": "passed",
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "capabilitiesState": "READY",
+      "contractVersion": "orbit-webmcp-v7",
+      "modelRoleChangeStatus": 401,
+      "profileStop": "closed"
+    },
+    {
+      "workerIndex": 5,
+      "state": "passed",
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "capabilitiesState": "READY",
+      "contractVersion": "orbit-webmcp-v7",
+      "modelRoleChangeStatus": 401,
+      "profileStop": "closed"
+    },
+    {
+      "workerIndex": 6,
+      "state": "passed",
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "capabilitiesState": "READY",
+      "contractVersion": "orbit-webmcp-v7",
+      "modelRoleChangeStatus": 401,
+      "profileStop": "closed"
+    },
+    {
+      "workerIndex": 7,
+      "state": "passed",
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "capabilitiesState": "READY",
+      "contractVersion": "orbit-webmcp-v7",
+      "modelRoleChangeStatus": 401,
+      "profileStop": "closed"
+    }
+  ],
+  "modelCalls": 0,
+  "benchmarkTrajectoriesExecuted": 0,
+  "notebook": "https://www.kaggle.com/code/celebrum/orbit-v3-webmcp-campaign-e-v2/edit",
+  "limits": [
+    "This native transport preflight does not validate the 144 model trajectories.",
+    "The root release pin is distinct from the formation release pin.",
+    "Cloud Node HTTP access remains affected by Imunify360; the actual Chrome page transport preserved the exact release pin."
+  ],
+  "credentialsIncluded": false
+}

@@ -1,0 +1,31 @@
+{
+  "format": "orbit-scoped-corpus-v2-preparation",
+  "corpusSha256": "c8d7f865ba2c9667f43759a053174e3250150704746141e52fc0dca236190f5a",
+  "corpusSelectionSha256": "205a0f669f564dae6ee23d78d3184f643754b284164cfd83b1ff7c4b0e7ee8f0",
+  "originalAccessSha256": "6f43c123818205a0e9cbe55f7ccd1a3b6bbeaafdb048802c78284296b735cb00",
+  "documents": 120,
+  "questions": 60,
+  "privateOriginals": 48,
+  "inspectedPassagesPreserved": 48,
+  "retrievedRawOriginals": 37,
+  "snapshotFallbackOriginals": 11,
+  "packetCharacters": {
+    "1": 1560,
+    "2": 1507,
+    "3": 1504,
+    "4": 1694,
+    "5": 1539,
+    "6": 1609,
+    "7": 113183,
+    "8": 87886,
+    "9": 126814,
+    "10": 119694
+  },
+  "maxDocumentCharacters": 12000,
+  "maxPacketCharacters": 144000,
+  "selectionUsesAnswers": false,
+  "humanReviewedRealReferences": 0,
+  "modelCallsExecuted": 0,
+  "softwareTestsExecuted": false,
+  "publicSourceTextIncluded": false
+}

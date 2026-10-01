@@ -86,7 +86,8 @@ def selected_owned(active, ledger):
 
 def current_manifest(path):
     config = json.loads(path.read_text(encoding='utf-8'))
-    if config.get('campaignId') != CAMPAIGN or not config.get('frozen') or not config.get('releaseId'):
+    supported={CAMPAIGN, CAMPAIGN+'-sdkparams2', CAMPAIGN+'-nativebounds1'}
+    if config.get('campaignId') not in supported or not config.get('frozen') or not config.get('releaseId'):
         raise RuntimeError('FROZEN_PUBLIC_RELEASE_MANIFEST_REQUIRED')
     engine, harness, rules = source_identity()
     if (config['engineSourceSha256'], config['harnessSha256'], config['rulesSha256']) != (

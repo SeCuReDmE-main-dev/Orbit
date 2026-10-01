@@ -1,0 +1,32 @@
+{
+  "format": "orbit-sdk-output-bound-incident-v2",
+  "state": "corrected-awaiting-actual-kaggle-validation",
+  "executionHost": "Kaggle",
+  "sdkVersion": "0.6.1",
+  "models": [
+    "google/gemini-3.8-flash",
+    "google/gemini-3.1-pro-preview"
+  ],
+  "observedError": "TypeError: Completions.create() got an unexpected keyword argument 'max_output_tokens'",
+  "providerGenerationsReported": 0,
+  "priorNamespace": "orbit-kaggle-20261001-v2",
+  "correctedNamespace": "orbit-kaggle-20261001-v2-sdkparams1",
+  "correction": {
+    "outputParameter": "max_tokens",
+    "limit": 4096,
+    "nativeSdkToolRounds": 22,
+    "reasoning": "medium"
+  },
+  "historyPreserved": true,
+  "followupConfigurationIncident": {
+    "executionHost": "Kaggle",
+    "observedError": "CAMPAIGN_MANIFEST_NOT_FROZEN while preparing software-only validation of the corrected namespace",
+    "cause": "require_configuration accepted only the historical exact campaign ID and rejected the corrected explicit namespace",
+    "correction": "Explicit allowlist for the two v2 identities and suites C/D/E, with frozen, version, SDK, budget and fingerprint gates preserved",
+    "providerGenerationsReported": 0,
+    "validation": "The SDK test also covers the corrected C/D/E configuration, unknown identity/version and unfrozen rejection"
+  },
+  "localTestsExecuted": false,
+  "officialSource": "https://github.com/Kaggle/kaggle-benchmarks/blob/ci/src/kaggle_benchmarks/actors/proxy_openai.py",
+  "gate": "Actual Kaggle SDK signatures plus non-provider recorded_prompt contract probe; existing corpus and checkpoint tests retained."
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "orbit.portable-studio-current-cloud-build.v1",
+  "recordedAt": "2026-10-01T22:48:44.072619+00:00",
+  "build": {
+    "state": "BUILD_COMPLETE",
+    "environment": "e2b",
+    "kind": "build-not-test",
+    "finishedAt": "2026-10-01T18:58:12.285062+00:00",
+    "nodeVersion": "22.20.0",
+    "fixedHostDependencies": {
+      "react": "19.3.0",
+      "react-dom": "19.3.0",
+      "sanity": "6.16.0",
+      "styled-components": "6.5.3"
+    },
+    "projectId": "pzscx4w8",
+    "dataset": "production",
+    "basePath": "/formation/studio",
+    "workspaceBasePath": "/",
+    "archiveSha256": "184358d01d9866ef7da0b5ac67f5d8020545656a31b66e39fece0c0e8e17ff64",
+    "installedPluginEntrySha256": "1480670edba368525d4e0a9d3a48b19be771e3e361558adae01d8428447e3219",
+    "sourceLockSha256": "461d16dd8c0a99be68eaa993127fef2b119caace5076adb8468a629d6267302c",
+    "installationLockSha256": "38c1254ced9d012a7236d8a31008024b78a43843fc3d462a44add4d862c7a4e9",
+    "builtFiles": 316,
+    "authenticatedRuntimeValidated": false,
+    "crossOriginContextValidated": false,
+    "nativeWebMcpValidated": false,
+    "sanityWritesPerformed": false,
+    "sanityPermissionsChanged": false,
+    "originalStudioModified": false,
+    "landingModified": false
+  },
+  "provenance": {
+    "sourceTool": "tools/learning-studio-host/build_host.py",
+    "collectionTool": "tools/formation_cloud.py",
+    "cloudArtifactMember": "tools/learning-studio-host/host-build-status.json",
+    "cloudArtifactSha256": "1388245ab0a173d5737a2e431a5768a240c1f73c47bda072e39b51a65941fb27",
+    "sourceReceiptSha256": "8ee680779c7fd94927e47961fef1c26257a77f3c23d026bf1d696553b4fee27d",
+    "downloadedReceiptExactlyMatchesArchive": true
+  },
+  "subsequentPublicObservation": {
+    "receipt": "cross-origin-public-validation.json",
+    "kaggleVersion": 354497668,
+    "checksPassed": 16,
+    "checksTotal": 16,
+    "foreignPortableStudioObservation": "Normal native login screen; no authenticated learning tools exposed before login.",
+    "doesNotProveAuthenticatedPublication": true
+  },
+  "limits": [
+    "Cloud installation and compilation are construction evidence, not a new Kaggle software-test result.",
+    "The earlier315-file blank-Studio Kaggle build belongs to the historicalf2b0 archive and is not reassigned here.",
+    "No authenticated native Studio session, Content Lake write, replay, rights rejection or logout is validated by this build."
+  ],
+  "fullMissionComplete": false
+}

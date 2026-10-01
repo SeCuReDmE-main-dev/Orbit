@@ -1,0 +1,3824 @@
+{
+  "format": "orbit-real-source-public-inventory-v2",
+  "sources": 48,
+  "sourceTextIncluded": false,
+  "privateOriginalsRetained": true,
+  "humanReviewedReferences": 0,
+  "rightsPolicy": "Originals and real-source model quotes remain private unless redistribution is verified.",
+  "records": [
+    {
+      "id": "r07-d01",
+      "packet": 7,
+      "title": "OpenAI Responses background mode",
+      "url": "https://platform.openai.com/docs/guides/background",
+      "primaryRole": "first-party-product-policy",
+      "contentHash": "b181219607e0cbe06a4957d158cb617d096634abeef73f84182f553b2fbb5d51",
+      "retrievedAt": "2026-09-30T02:18:12.071Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "1fd2a76167928850a143932f529cb95a0121a63edb340407caa73981f3182470",
+      "scopedViewCharacters": 6303,
+      "scopedViewSha256": "1fd2a76167928850a143932f529cb95a0121a63edb340407caa73981f3182470",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "1fd2a76167928850a143932f529cb95a0121a63edb340407caa73981f3182470",
+      "snapshotCharacters": 6303,
+      "snapshotNormalizedTextSha256": "1fd2a76167928850a143932f529cb95a0121a63edb340407caa73981f3182470",
+      "snapshotFileSha256": "bf336c916fb10b54753aca4665d75069e13722503460cd914626db22406a5508",
+      "sourceContentSha256": "b181219607e0cbe06a4957d158cb617d096634abeef73f84182f553b2fbb5d51",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 692,
+          "endCharacter": 819,
+          "sha256": "af820fd9272b5120c48a596d03699ff6117290d7ac09558bc700c642744822b8",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 6303,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 6303,
+          "sha256": "1fd2a76167928850a143932f529cb95a0121a63edb340407caa73981f3182470"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://platform.openai.com/docs/guides/background",
+        "finalUrl": "https://developers.openai.com/api/docs/guides/background",
+        "httpStatus": 200,
+        "bytes": 525230,
+        "retrievedAt": "2026-10-01T18:29:28.139810+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "bd3662c38d77396be275f0e43ee704539cb4b1d668c31a778fa819fedf5e7a07",
+        "textCharacters": 39025,
+        "textSha256": "bbcb5365d6bc41bc91a75f45ced1488f99e5921d0c905802f00fd9235beb43c7",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r07-d02",
+      "packet": 7,
+      "title": "OpenAI API data controls",
+      "url": "https://platform.openai.com/docs/guides/your-data",
+      "primaryRole": "first-party-product-policy",
+      "contentHash": "6cb674f7316fbf8f8bc2912510382c4d72cfa67d5c75d6e3359416bad1d3f7b4",
+      "retrievedAt": "2026-09-30T02:18:12.071Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "609a8655fc35edf155b53b7bb0d54da8c205845980cec04a0c0df9eb40381584",
+      "scopedViewCharacters": 11918,
+      "scopedViewSha256": "609a8655fc35edf155b53b7bb0d54da8c205845980cec04a0c0df9eb40381584",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "50177685bed38170e63297f9271dd5e5116362e990146b3d944116f842e03314",
+      "snapshotCharacters": 36207,
+      "snapshotNormalizedTextSha256": "50177685bed38170e63297f9271dd5e5116362e990146b3d944116f842e03314",
+      "snapshotFileSha256": "0d95956bfcd4bde3b71fedc892aaf146821f50c0e0ab01cba1571d1d88ccc3ae",
+      "sourceContentSha256": "6cb674f7316fbf8f8bc2912510382c4d72cfa67d5c75d6e3359416bad1d3f7b4",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 8649,
+          "endCharacter": 8737,
+          "sha256": "6a757722f1dfae812d17aace5e3bd1c1a0157ad12f9338b3502170655873b309",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": false
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 3350,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 3350,
+          "sha256": "481d234999648ab2216ad08a6dc8cfb7d2bb5c8edc63eb7b5d231469c64f364c"
+        },
+        {
+          "originalStartCharacter": 7150,
+          "originalEndCharacter": 11150,
+          "inputStartCharacter": 3442,
+          "inputEndCharacter": 7442,
+          "sha256": "958eeb51a31e8e29b2f2df4b9503963481506ed66f29cd74bfd04291aca5ec34"
+        },
+        {
+          "originalStartCharacter": 11700,
+          "originalEndCharacter": 13100,
+          "inputStartCharacter": 7534,
+          "inputEndCharacter": 8934,
+          "sha256": "6b4396ddeaa6d7d6bb2325afd38187500197d71a355a08116f0c1e624e88e32b"
+        },
+        {
+          "originalStartCharacter": 14300,
+          "originalEndCharacter": 15700,
+          "inputStartCharacter": 9026,
+          "inputEndCharacter": 10426,
+          "sha256": "854b0bbdc8b1a6d60686ee1b8afcb7bc5c469fcc56689329a108c516f3194fc4"
+        },
+        {
+          "originalStartCharacter": 33800,
+          "originalEndCharacter": 35200,
+          "inputStartCharacter": 10518,
+          "inputEndCharacter": 11918,
+          "sha256": "af60dc1626bcabedeba1ddf718b8e38a9f083d9cba307cd6fd507d331946456a"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://platform.openai.com/docs/guides/your-data",
+        "finalUrl": "https://developers.openai.com/api/docs/guides/your-data",
+        "httpStatus": 200,
+        "bytes": 622116,
+        "retrievedAt": "2026-10-01T18:29:27.802131+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "dc672521c7715d401bc2c1e984bf1255b14bca1bf959afe3bb1d4c5b8b212fe2",
+        "textCharacters": 67957,
+        "textSha256": "a4699c48f0f06dfde293e17a796ac6d3838b4dfa58c2c6d8d617761f5d45c1cd",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r07-d03",
+      "packet": 7,
+      "title": "OpenAI API deep research",
+      "url": "https://platform.openai.com/docs/guides/deep-research",
+      "primaryRole": "first-party-product-policy",
+      "contentHash": "ccfca22c910781c4929c23aaad40c93a285649a8a65613a03a601129216df7c7",
+      "retrievedAt": "2026-09-30T02:18:12.071Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "80718200371c79158f69a62fa60b7318a871940be6e07ba6d335ffae1e335386",
+      "scopedViewCharacters": 11918,
+      "scopedViewSha256": "80718200371c79158f69a62fa60b7318a871940be6e07ba6d335ffae1e335386",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "95be100bfc8cd479c5890d5c4b92675f3f3d136b222419e99dd1af3caa5623c9",
+      "snapshotCharacters": 30841,
+      "snapshotNormalizedTextSha256": "95be100bfc8cd479c5890d5c4b92675f3f3d136b222419e99dd1af3caa5623c9",
+      "snapshotFileSha256": "6c577bfd67a0f44f294be73e62efff85d18f901a62069b4a2bd786bc8f709127",
+      "sourceContentSha256": "ccfca22c910781c4929c23aaad40c93a285649a8a65613a03a601129216df7c7",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 350,
+          "endCharacter": 463,
+          "sha256": "8ee1a19dcffcdc6430cde83ef2b52181a755a26c9229e9ffcccae47b14bd6002",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 1400,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 1400,
+          "sha256": "7c6ae9d8a93c76716df70b10e8808b81ceab2904f075d13c1bab1590bc312373"
+        },
+        {
+          "originalStartCharacter": 1950,
+          "originalEndCharacter": 5950,
+          "inputStartCharacter": 1492,
+          "inputEndCharacter": 5492,
+          "sha256": "5500d16bdf60a3ca9db824258897badd0cff57d7a565931603ce2adb55be4cd8"
+        },
+        {
+          "originalStartCharacter": 18850,
+          "originalEndCharacter": 20250,
+          "inputStartCharacter": 5584,
+          "inputEndCharacter": 6984,
+          "sha256": "2e82ee5af1432a36fd9fc2eb1e88f16b1641388f2c3f6343feb5452c80643f93"
+        },
+        {
+          "originalStartCharacter": 21450,
+          "originalEndCharacter": 24150,
+          "inputStartCharacter": 7076,
+          "inputEndCharacter": 9776,
+          "sha256": "ac5f68887b50ccbb38d686036d5cc3b641973de4b91b653f8685d25653943008"
+        },
+        {
+          "originalStartCharacter": 27950,
+          "originalEndCharacter": 30000,
+          "inputStartCharacter": 9868,
+          "inputEndCharacter": 11918,
+          "sha256": "76f9f44f82286fe6da7f9b724b7560eec8ce05e09b9deef74c68c739912ba16e"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://platform.openai.com/docs/guides/deep-research",
+        "finalUrl": "https://developers.openai.com/api/docs/guides/deep-research",
+        "httpStatus": 200,
+        "bytes": 679626,
+        "retrievedAt": "2026-10-01T18:29:28.051316+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "c0e3d6c0166238bd15fc75e4bc4c4b5f89675a224250b825dff8d8333cf3e7f5",
+        "textCharacters": 75546,
+        "textSha256": "d8e967770a869cd2edb353f1fa3d3772dc444c253afe7e7b49827236391e2c2a",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r07-d04",
+      "packet": 7,
+      "title": "Gemini API Deep Research",
+      "url": "https://ai.google.dev/gemini-api/docs/deep-research",
+      "primaryRole": "first-party-product-policy",
+      "contentHash": "755be8eb38a52789048978b06f0f8f743f2e9f7812245805425cd4e7d282bb99",
+      "retrievedAt": "2026-09-30T02:18:12.071Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "20050d9087da1605199a0ac998ca558338db1820997ee3d413ba489e7b5da0ac",
+      "scopedViewCharacters": 11816,
+      "scopedViewSha256": "20050d9087da1605199a0ac998ca558338db1820997ee3d413ba489e7b5da0ac",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "fd73e2c4d7cf0a6a9a2b6655ff548f35309fde1d2ff02f9c04b395b7bdb9233a",
+      "snapshotCharacters": 52914,
+      "snapshotNormalizedTextSha256": "fd73e2c4d7cf0a6a9a2b6655ff548f35309fde1d2ff02f9c04b395b7bdb9233a",
+      "snapshotFileSha256": "ec3655b9107fac0ffb28bcff3706f2a2154e56e30d94a59f579cf998be6c6bd1",
+      "sourceContentSha256": "755be8eb38a52789048978b06f0f8f743f2e9f7812245805425cd4e7d282bb99",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 710,
+          "endCharacter": 833,
+          "sha256": "875c262f7ceaa6accc38da617c60d5e6b7d5091dc3d2e877d27acebda7c96877",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 2050,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 2050,
+          "sha256": "8105331fc1c376bc5e8444686f0d28b99236523f8f8b5859eb52ab4d34d30cc4"
+        },
+        {
+          "originalStartCharacter": 9100,
+          "originalEndCharacter": 10500,
+          "inputStartCharacter": 2142,
+          "inputEndCharacter": 3542,
+          "sha256": "c0c69bfb68f8fa41df295d3938bca67ac5a2e7cee257d22ef4ddfc9178d9e327"
+        },
+        {
+          "originalStartCharacter": 12350,
+          "originalEndCharacter": 13750,
+          "inputStartCharacter": 3634,
+          "inputEndCharacter": 5034,
+          "sha256": "e3ec202890e15c5a300397ef0204833d6b0c3d5653e58a4ec3ac26cc302dda2d"
+        },
+        {
+          "originalStartCharacter": 16250,
+          "originalEndCharacter": 17650,
+          "inputStartCharacter": 5126,
+          "inputEndCharacter": 6526,
+          "sha256": "eaeb79ea92c33928f3187c2629f0ec5fa3957803f7d37c24cc6ad8e790b87a7c"
+        },
+        {
+          "originalStartCharacter": 21450,
+          "originalEndCharacter": 24150,
+          "inputStartCharacter": 6618,
+          "inputEndCharacter": 9318,
+          "sha256": "7a1d8c09225d9d7631f934e7d5563df128eefd880c3e7ae7ef6387b51b666ca9"
+        },
+        {
+          "originalStartCharacter": 48750,
+          "originalEndCharacter": 50800,
+          "inputStartCharacter": 9410,
+          "inputEndCharacter": 11460,
+          "sha256": "81c9890464c603cf89ccb875c9f1525150bed72fb497538cf1a8ea14582c1813"
+        },
+        {
+          "originalStartCharacter": 52650,
+          "originalEndCharacter": 52914,
+          "inputStartCharacter": 11552,
+          "inputEndCharacter": 11816,
+          "sha256": "2d5c7f6e58f16c0b8aaff9090ba95013d0e52aae6f34db306f180fb35d81fbc0"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://ai.google.dev/gemini-api/docs/deep-research",
+        "finalUrl": "https://ai.google.dev/gemini-api/docs/deep-research",
+        "httpStatus": 200,
+        "bytes": 660574,
+        "retrievedAt": "2026-10-01T18:29:28.487357+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "c82bbc612277d49c075f6fc2ee814233b7954ade43926765b97ec51a3bdad8f0",
+        "textCharacters": 97603,
+        "textSha256": "5dfe7a8cdf73354dac89c866a0e8ac657b55b73a7ecdbb4fc7fc39fb211c0003",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r07-d05",
+      "packet": 7,
+      "title": "Gemini Interactions API",
+      "url": "https://ai.google.dev/gemini-api/docs/interactions",
+      "primaryRole": "first-party-product-policy",
+      "contentHash": "da36b4930dd65eee4a0dc255ee034fafc74e436422c4f11bf7b19bf3e1bc1e2f",
+      "retrievedAt": "2026-09-30T02:18:12.071Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "38bcbb43aa8ac23347f89d11385c23dd64bec3640aae6c1901f147944751eaee",
+      "scopedViewCharacters": 9299,
+      "scopedViewSha256": "38bcbb43aa8ac23347f89d11385c23dd64bec3640aae6c1901f147944751eaee",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "38bcbb43aa8ac23347f89d11385c23dd64bec3640aae6c1901f147944751eaee",
+      "snapshotCharacters": 9299,
+      "snapshotNormalizedTextSha256": "38bcbb43aa8ac23347f89d11385c23dd64bec3640aae6c1901f147944751eaee",
+      "snapshotFileSha256": "aa91e6416639c3df61a2bf490184101447ebf53e9b7b8040d5a37c034e87505d",
+      "sourceContentSha256": "da36b4930dd65eee4a0dc255ee034fafc74e436422c4f11bf7b19bf3e1bc1e2f",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 4806,
+          "endCharacter": 4928,
+          "sha256": "44b82559057f0139458f6e917f0643301c2f238b35b2a768c4d115089047c271",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 9299,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 9299,
+          "sha256": "38bcbb43aa8ac23347f89d11385c23dd64bec3640aae6c1901f147944751eaee"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://ai.google.dev/gemini-api/docs/interactions",
+        "finalUrl": "https://ai.google.dev/gemini-api/docs/interactions-overview",
+        "httpStatus": 200,
+        "bytes": 154475,
+        "retrievedAt": "2026-10-01T18:29:28.299122+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "bfb4382da82b0dfcbc2917a429ee01a46c422f1067ad202abb288d161c439d7b",
+        "textCharacters": 25271,
+        "textSha256": "e9228291c50d170f84601792db4df26a92fb9de99374a20e08e1f92512ac736c",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r07-d06",
+      "packet": 7,
+      "title": "Gemini API Additional Terms",
+      "url": "https://ai.google.dev/gemini-api/terms",
+      "primaryRole": "first-party-product-policy",
+      "contentHash": "f3202061b70b9cea1220813eed54e21ec3f1820582dca2780cc4b5d9acc6c0a8",
+      "retrievedAt": "2026-09-30T02:18:12.071Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "13013789e79fbad76666db5c38a9a02dd57cc6e2e4eb50da76fc39fb7b4383d0",
+      "scopedViewCharacters": 11534,
+      "scopedViewSha256": "13013789e79fbad76666db5c38a9a02dd57cc6e2e4eb50da76fc39fb7b4383d0",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "2a3c4f6457dd68d65b63bbe85fe5b8c72c5b66d7668f8f1b8174739f696a1866",
+      "snapshotCharacters": 18758,
+      "snapshotNormalizedTextSha256": "2a3c4f6457dd68d65b63bbe85fe5b8c72c5b66d7668f8f1b8174739f696a1866",
+      "snapshotFileSha256": "ab5e8cf1dc9478f483391a0e8a1e44da278c9af2ef68f785b1b98d8b76d1463c",
+      "sourceContentSha256": "f3202061b70b9cea1220813eed54e21ec3f1820582dca2780cc4b5d9acc6c0a8",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 3723,
+          "endCharacter": 3825,
+          "sha256": "f5d96e03d801350b73956d2f097aa968d831f34f91b8d68845cfa5c92ed08d97",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 7250,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 7250,
+          "sha256": "7899a04ed8aed67ec11f2de836e06f3683ec399f831f80ea0035955845077359"
+        },
+        {
+          "originalStartCharacter": 8450,
+          "originalEndCharacter": 10500,
+          "inputStartCharacter": 7342,
+          "inputEndCharacter": 9392,
+          "sha256": "c521134ff2d2146bc79adf636d0b58582f984aea4e94918c2819f06295bb6aed"
+        },
+        {
+          "originalStartCharacter": 11700,
+          "originalEndCharacter": 13750,
+          "inputStartCharacter": 9484,
+          "inputEndCharacter": 11534,
+          "sha256": "c8aaa0bca5047a34a23a181f66439fff77062300d216d0e779194945dd9e3a79"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://ai.google.dev/gemini-api/terms",
+        "finalUrl": "https://ai.google.dev/gemini-api/terms",
+        "httpStatus": 200,
+        "bytes": 112903,
+        "retrievedAt": "2026-10-01T18:29:28.246809+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "1d99d554d8d0060d6f91a518de3aeb999306ff71948972c0da078c04887e9efd",
+        "textCharacters": 30068,
+        "textSha256": "fea61aa14dec7c1ba21e532ab64a1e44c87433a4ad17ce69749d6803f5234936",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r07-d07",
+      "packet": 7,
+      "title": "OpenAI enterprise privacy",
+      "url": "https://openai.com/enterprise-privacy/",
+      "primaryRole": "first-party-product-policy",
+      "contentHash": "bade3fdfb85fe7d58eaaa0e92b35bb2cc9106901e14fa0081923dd78426e29bd",
+      "retrievedAt": "2026-09-30T02:20:39.514Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "1acee4f9db49529ad5e3b140689869d4b049d9a9d35108147cddf08ac28ee56a",
+      "scopedViewCharacters": 3387,
+      "scopedViewSha256": "1acee4f9db49529ad5e3b140689869d4b049d9a9d35108147cddf08ac28ee56a",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "1acee4f9db49529ad5e3b140689869d4b049d9a9d35108147cddf08ac28ee56a",
+      "snapshotCharacters": 3387,
+      "snapshotNormalizedTextSha256": "1acee4f9db49529ad5e3b140689869d4b049d9a9d35108147cddf08ac28ee56a",
+      "snapshotFileSha256": "e8fc8bf0297bc60e4b078879a0a74e59d8c8a01758d0ea4089bd0631e2e7744f",
+      "sourceContentSha256": "bade3fdfb85fe7d58eaaa0e92b35bb2cc9106901e14fa0081923dd78426e29bd",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 615,
+          "endCharacter": 715,
+          "sha256": "baf8ea517ef511b8049f5d6dd3912cb4ccbdbdaf1afdee9ae0d38acd732efd43",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": null
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 3387,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 3387,
+          "sha256": "1acee4f9db49529ad5e3b140689869d4b049d9a9d35108147cddf08ac28ee56a"
+        }
+      ],
+      "liveOriginal": {
+        "state": "http-unavailable",
+        "url": "https://openai.com/enterprise-privacy/",
+        "finalUrl": null,
+        "httpStatus": 403,
+        "bytes": null,
+        "retrievedAt": null,
+        "contentType": null,
+        "rawSha256": null,
+        "textCharacters": null,
+        "textSha256": null,
+        "textAvailable": null,
+        "licenseReview": null
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r07-d08",
+      "packet": 7,
+      "title": "OpenAI use of data for model improvement",
+      "url": "https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance",
+      "primaryRole": "first-party-product-policy",
+      "contentHash": "64a54ece3e7d8458dfde14cefb3fedcbe0158509353177079abc08fe4686e8c1",
+      "retrievedAt": "2026-09-30T02:20:39.514Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "83608d3095d3ec4f605a4a3fc3e4d9e1d6a27974baf4ef44e67459f307f7908e",
+      "scopedViewCharacters": 3838,
+      "scopedViewSha256": "83608d3095d3ec4f605a4a3fc3e4d9e1d6a27974baf4ef44e67459f307f7908e",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "83608d3095d3ec4f605a4a3fc3e4d9e1d6a27974baf4ef44e67459f307f7908e",
+      "snapshotCharacters": 3838,
+      "snapshotNormalizedTextSha256": "83608d3095d3ec4f605a4a3fc3e4d9e1d6a27974baf4ef44e67459f307f7908e",
+      "snapshotFileSha256": "593048678048dbbb01f123756b0b5033a7926de6bfcbc657e98b5719ffbc3d5b",
+      "sourceContentSha256": "64a54ece3e7d8458dfde14cefb3fedcbe0158509353177079abc08fe4686e8c1",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 1013,
+          "endCharacter": 1108,
+          "sha256": "ad2709736b6a88f10103faeb4ccc40b87c75c269b074a061dde34d3542b5aa83",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": null
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 3838,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 3838,
+          "sha256": "83608d3095d3ec4f605a4a3fc3e4d9e1d6a27974baf4ef44e67459f307f7908e"
+        }
+      ],
+      "liveOriginal": {
+        "state": "http-unavailable",
+        "url": "https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance",
+        "finalUrl": null,
+        "httpStatus": 403,
+        "bytes": null,
+        "retrievedAt": null,
+        "contentType": null,
+        "rawSha256": null,
+        "textCharacters": null,
+        "textSha256": null,
+        "textAvailable": null,
+        "licenseReview": null
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r07-d09",
+      "packet": 7,
+      "title": "Vertex AI generative AI data governance",
+      "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/data-governance",
+      "primaryRole": "first-party-product-policy",
+      "contentHash": "85d6b80a34bea3351694ac44bb6638d6a1d1ffe9599bde945bbdb4372564c2e8",
+      "retrievedAt": "2026-09-30T02:20:39.514Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "3cc11dec09e2b67cc36486b3605cee09f610db83bd4c7b03210ce8da1716e879",
+      "scopedViewCharacters": 8225,
+      "scopedViewSha256": "3cc11dec09e2b67cc36486b3605cee09f610db83bd4c7b03210ce8da1716e879",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "3cc11dec09e2b67cc36486b3605cee09f610db83bd4c7b03210ce8da1716e879",
+      "snapshotCharacters": 8225,
+      "snapshotNormalizedTextSha256": "3cc11dec09e2b67cc36486b3605cee09f610db83bd4c7b03210ce8da1716e879",
+      "snapshotFileSha256": "be8cfdf7788b858b618b3b417ae2bc02e353f7e3ac189ec7e9ed95076a5ed412",
+      "sourceContentSha256": "85d6b80a34bea3351694ac44bb6638d6a1d1ffe9599bde945bbdb4372564c2e8",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 1579,
+          "endCharacter": 1684,
+          "sha256": "bb7639f235d6eb0241a1bf044f2cd0f957dd205d701a73b7b5a360cabdddc034",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": false
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 8225,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 8225,
+          "sha256": "3cc11dec09e2b67cc36486b3605cee09f610db83bd4c7b03210ce8da1716e879"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/data-governance",
+        "finalUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention",
+        "httpStatus": 200,
+        "bytes": 758792,
+        "retrievedAt": "2026-10-01T18:29:30.267520+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "d884f1df17ddc63b45933d68ae5f4cc08144886303588ae55bb25bb8bd096119",
+        "textCharacters": 80768,
+        "textSha256": "dd7881742dde2e9e9a83e6df32f1eb061af3830c5b018d1e221c72752a8d8c7d",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r07-d10",
+      "packet": 7,
+      "title": "Gemini Files API",
+      "url": "https://ai.google.dev/gemini-api/docs/files",
+      "primaryRole": "first-party-product-policy",
+      "contentHash": "dca8860d1a267c0413760d805b82c426ffa37cf2de598a622f238e871491e6d5",
+      "retrievedAt": "2026-09-30T02:20:39.514Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "01757764955d1f4fa65441a2d833905eb70082478abb36015fe6543cfd59bd2a",
+      "scopedViewCharacters": 11534,
+      "scopedViewSha256": "01757764955d1f4fa65441a2d833905eb70082478abb36015fe6543cfd59bd2a",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "4261b9a9f1d2982a228b8feca75f22c8d348f030eef0daeb64464a857ee8195b",
+      "snapshotCharacters": 25723,
+      "snapshotNormalizedTextSha256": "4261b9a9f1d2982a228b8feca75f22c8d348f030eef0daeb64464a857ee8195b",
+      "snapshotFileSha256": "091d2f7acc45d5689014f7e0aa0c759519ae1738a8ecc5986f84207a4481f7c8",
+      "sourceContentSha256": "dca8860d1a267c0413760d805b82c426ffa37cf2de598a622f238e871491e6d5",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 9132,
+          "endCharacter": 9176,
+          "sha256": "e2d1f15e7f2ed4ee3ce430acff6819c98ced46656c4c6e3adb1105d9db4d935a",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 2050,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 2050,
+          "sha256": "bbf575d63ccc2a48c4056a6ae52333f67220d7f423928595b01ae77ec6fc5138"
+        },
+        {
+          "originalStartCharacter": 7800,
+          "originalEndCharacter": 15050,
+          "inputStartCharacter": 2142,
+          "inputEndCharacter": 9392,
+          "sha256": "37677d9b46ebfc185ead2878b5d13020f62b8ce0c468e4388c2d9da07ac63428"
+        },
+        {
+          "originalStartCharacter": 18200,
+          "originalEndCharacter": 20250,
+          "inputStartCharacter": 9484,
+          "inputEndCharacter": 11534,
+          "sha256": "b9e322a6b7f98ab0de38773d8ef3dd025628ab1de2146513a0af0ad34b43deac"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://ai.google.dev/gemini-api/docs/files",
+        "finalUrl": "https://ai.google.dev/gemini-api/docs/files",
+        "httpStatus": 200,
+        "bytes": 215626,
+        "retrievedAt": "2026-10-01T18:29:28.815496+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "ccb3929381e703eef36b902a05456ee7141fd0c4278d12b1e94b91733424a10c",
+        "textCharacters": 40384,
+        "textSha256": "b279087b6d38115452d643b7f56bd3af438df3d5aaf83716a35efa1b9fbd9e85",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r07-d11",
+      "packet": 7,
+      "title": "Responsible use of Copilot Chat in IDEs",
+      "url": "https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot-chat-in-your-ide",
+      "primaryRole": "first-party-product-policy",
+      "contentHash": "6a3100986a1985694caea326a43aa05580893f435cd983a373e1cce745b7c899",
+      "retrievedAt": "2026-09-30T02:20:39.514Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "30fe6ac93a31c8c42ef5cab4e94a9a41dd34739c5061135eca26f77345a91604",
+      "scopedViewCharacters": 11877,
+      "scopedViewSha256": "30fe6ac93a31c8c42ef5cab4e94a9a41dd34739c5061135eca26f77345a91604",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "30677695c0bde974b182029253f2ce052bba3da8a1042301ae65b6f5532c6735",
+      "snapshotCharacters": 36479,
+      "snapshotNormalizedTextSha256": "30677695c0bde974b182029253f2ce052bba3da8a1042301ae65b6f5532c6735",
+      "snapshotFileSha256": "1254813105719b3358db5b4ca1b4cf6693e9f726938314c8c3c56d4a738d76a6",
+      "sourceContentSha256": "6a3100986a1985694caea326a43aa05580893f435cd983a373e1cce745b7c899",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 3412,
+          "endCharacter": 3522,
+          "sha256": "d13530082860bad4096422e895239127cf240f8e3d92d60a8f1bcdedab1a8fa6",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 2050,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 2050,
+          "sha256": "f83b4d0b7b7a4ea2b89dda154d60efaf8e2b48f820db230c2e81d3d9336fe9e8"
+        },
+        {
+          "originalStartCharacter": 2503,
+          "originalEndCharacter": 4512,
+          "inputStartCharacter": 2142,
+          "inputEndCharacter": 4151,
+          "sha256": "99f537e0a2992c5075524ea97502bb55ab45faccfc4ff01a2983453d0112a75a"
+        },
+        {
+          "originalStartCharacter": 5200,
+          "originalEndCharacter": 7250,
+          "inputStartCharacter": 4243,
+          "inputEndCharacter": 6293,
+          "sha256": "d3ab0e03bfa5fe4c5e23987b6848bda356b955f253ebbd883ffdb99777f6fbae"
+        },
+        {
+          "originalStartCharacter": 11050,
+          "originalEndCharacter": 14400,
+          "inputStartCharacter": 6385,
+          "inputEndCharacter": 9735,
+          "sha256": "72f24a78fefe6895be6fc3e861af535ba6a3077058fb0d5288ccb6a4deffec4a"
+        },
+        {
+          "originalStartCharacter": 30550,
+          "originalEndCharacter": 32600,
+          "inputStartCharacter": 9827,
+          "inputEndCharacter": 11877,
+          "sha256": "0b29591c53f631843bee271415e15f2c9486e4793d32bbd9e6c7a1e735ae34de"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot-chat-in-your-ide",
+        "finalUrl": "https://docs.github.com/en/copilot/responsible-use/chat",
+        "httpStatus": 200,
+        "bytes": 722315,
+        "retrievedAt": "2026-10-01T18:29:30.464298+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "d78971f2605dd25eadbe6b3c304d0cc86b19ee0f380e4c24f8e8f427c934c006",
+        "textCharacters": 48431,
+        "textSha256": "e76e0aec4181b3ab164fc9243070bc8715413c38b9ad26f9e01f08fd33fb43b5",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r07-d12",
+      "packet": 7,
+      "title": "GitHub Copilot coding agent",
+      "url": "https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent",
+      "primaryRole": "first-party-product-policy",
+      "contentHash": "7a964167413e86d96d1a5c6fd20fca983a67a497bb3adf14d3d11a43745a99b9",
+      "retrievedAt": "2026-09-30T02:20:39.514Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "a44fe260e9636fa670c24f3fa63451415898615b08d649a380cd8249b25792bb",
+      "scopedViewCharacters": 11534,
+      "scopedViewSha256": "a44fe260e9636fa670c24f3fa63451415898615b08d649a380cd8249b25792bb",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "3bd389932da04adb6dc8d35ce8a9887ef5b88b4625941feda5881badef9f66f1",
+      "snapshotCharacters": 13884,
+      "snapshotNormalizedTextSha256": "3bd389932da04adb6dc8d35ce8a9887ef5b88b4625941feda5881badef9f66f1",
+      "snapshotFileSha256": "e5e3fe05fa0fbf9e3cfb9b95b503f373a9523b1aeeb3b5c034a9c39da5abcb17",
+      "sourceContentSha256": "7a964167413e86d96d1a5c6fd20fca983a67a497bb3adf14d3d11a43745a99b9",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 396,
+          "endCharacter": 506,
+          "sha256": "3a3193ab92c9b41a8ea2fab02fac0a74fa20ddbd1b7545deca29bb4a621a27bc",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 1400,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 1400,
+          "sha256": "0d7ff1684c093a7e2c648580a96b8f3b41e403ebfc3ffde8c27fdfbba8e8e841"
+        },
+        {
+          "originalStartCharacter": 2600,
+          "originalEndCharacter": 5950,
+          "inputStartCharacter": 1492,
+          "inputEndCharacter": 4842,
+          "sha256": "dc57533b8e112fe67c96f97bf0c643ed7fae1ac18db99aa51c1f240edc2839a1"
+        },
+        {
+          "originalStartCharacter": 7150,
+          "originalEndCharacter": 13750,
+          "inputStartCharacter": 4934,
+          "inputEndCharacter": 11534,
+          "sha256": "14d4bb3748018a36dd3e6d978c4282b6ba38e7842eef2e5024fcfcbc90318a97"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent",
+        "finalUrl": "https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent",
+        "httpStatus": 200,
+        "bytes": 643540,
+        "retrievedAt": "2026-10-01T18:29:30.052746+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "af493ca893671d8ec676a22889153f8cfe94f6bdb280bfb99e793e6088d1899b",
+        "textCharacters": 26945,
+        "textSha256": "acb5c67b41ff7f1b49ae3e21cdec2f267366626944b1d9138e2bb41a456b33ff",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r08-d01",
+      "packet": 8,
+      "title": "Sanity Context",
+      "url": "https://www.sanity.io/docs/ai/sanity-context",
+      "primaryRole": "maintainer-documentation",
+      "contentHash": "ae3fecb191d351e4330472d70c1d63383204ce786309f5c6c4aee0011b6a775a",
+      "retrievedAt": "2026-09-30T02:18:14.822Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "ede76c6ecd51128590cdc717ad79a6e972336e03b98ee6f4479db4fdd0db01ed",
+      "scopedViewCharacters": 11918,
+      "scopedViewSha256": "ede76c6ecd51128590cdc717ad79a6e972336e03b98ee6f4479db4fdd0db01ed",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "68a377b046c6af82a0b5e8beae8e22dfad4720361824d74e766fe8eb3121a2a0",
+      "snapshotCharacters": 20172,
+      "snapshotNormalizedTextSha256": "68a377b046c6af82a0b5e8beae8e22dfad4720361824d74e766fe8eb3121a2a0",
+      "snapshotFileSha256": "c665e10af49936ee1d794446baf50975a1cf69e5e902a31a94e71c170a7802c7",
+      "sourceContentSha256": "ae3fecb191d351e4330472d70c1d63383204ce786309f5c6c4aee0011b6a775a",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 256,
+          "endCharacter": 326,
+          "sha256": "3a8d5afed0eb92c5efbd99749203a26486229593a45994c9af62e76395f0a4aa",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": false
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 1400,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 1400,
+          "sha256": "73b864a0ef0dfee8e0e62f01438d7e42cfc19ad09af318f303f0928c8134a48f"
+        },
+        {
+          "originalStartCharacter": 2600,
+          "originalEndCharacter": 4000,
+          "inputStartCharacter": 1492,
+          "inputEndCharacter": 2892,
+          "sha256": "624cf3b23e3f4a3a64cd372da413e5ba44bb6d34d6aeff2726dfe60c374c4f87"
+        },
+        {
+          "originalStartCharacter": 4550,
+          "originalEndCharacter": 6600,
+          "inputStartCharacter": 2984,
+          "inputEndCharacter": 5034,
+          "sha256": "5fd992d06f203a79cc10cab0627edb48f0a03bcf0ebfa088856affe664858ab3"
+        },
+        {
+          "originalStartCharacter": 9750,
+          "originalEndCharacter": 11150,
+          "inputStartCharacter": 5126,
+          "inputEndCharacter": 6526,
+          "sha256": "f3ac4ef066ba542d4248de14fd4f0f27ca7bc406e1333baabe7ec7923ab951df"
+        },
+        {
+          "originalStartCharacter": 13000,
+          "originalEndCharacter": 18300,
+          "inputStartCharacter": 6618,
+          "inputEndCharacter": 11918,
+          "sha256": "d03d45b935e930419c020f2e9fe035996b8a6ff1c279fa4cff5fd9b52c9f60ff"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://www.sanity.io/docs/ai/sanity-context",
+        "finalUrl": "https://www.sanity.io/docs/ai/sanity-context",
+        "httpStatus": 200,
+        "bytes": 205750,
+        "retrievedAt": "2026-10-01T18:29:28.802031+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "23be750787e7660baaea96cb507fb6c043009a848479091495b4187856969c83",
+        "textCharacters": 7677,
+        "textSha256": "c4ceed070250eb33862496029e79dbf32249f3f98b04be99d8281dc182f07582",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r08-d02",
+      "packet": 8,
+      "title": "Sanity Knowledge Bases",
+      "url": "https://www.sanity.io/docs/ai/sanity-context-knowledge-bases",
+      "primaryRole": "maintainer-documentation",
+      "contentHash": "9dafba30ec38d8920fbcf678514ab4e27b584cbacf6d856fabfbcc3be8fa0c69",
+      "retrievedAt": "2026-09-30T02:18:14.822Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "88f5e9733dfb847ebf5255c1998c09d9f622455658e0f21cd7a71d69d60326e1",
+      "scopedViewCharacters": 6389,
+      "scopedViewSha256": "88f5e9733dfb847ebf5255c1998c09d9f622455658e0f21cd7a71d69d60326e1",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "88f5e9733dfb847ebf5255c1998c09d9f622455658e0f21cd7a71d69d60326e1",
+      "snapshotCharacters": 6389,
+      "snapshotNormalizedTextSha256": "88f5e9733dfb847ebf5255c1998c09d9f622455658e0f21cd7a71d69d60326e1",
+      "snapshotFileSha256": "587bb72544d872133673a7297facf7b2ce3d0c671f09c95b2d1c78945570c2c2",
+      "sourceContentSha256": "9dafba30ec38d8920fbcf678514ab4e27b584cbacf6d856fabfbcc3be8fa0c69",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 3407,
+          "endCharacter": 3476,
+          "sha256": "e088224e1813f2a73cae4e8c5fcd8715c66cf8d89639dbfa1896740ebd2335ab",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 6389,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 6389,
+          "sha256": "88f5e9733dfb847ebf5255c1998c09d9f622455658e0f21cd7a71d69d60326e1"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://www.sanity.io/docs/ai/sanity-context-knowledge-bases",
+        "finalUrl": "https://www.sanity.io/docs/ai/sanity-context-knowledge-bases",
+        "httpStatus": 200,
+        "bytes": 200533,
+        "retrievedAt": "2026-10-01T18:29:29.013894+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "b542c3782b7dcdb5ea1482003c36c71d8469cba89128322442a7160862c14a65",
+        "textCharacters": 8693,
+        "textSha256": "e14941a5fe293ae9ec596403134ba6f772adf72e337a50da21a1ac9b632efca3",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r08-d03",
+      "packet": 8,
+      "title": "Resolve Knowledge Base issues",
+      "url": "https://www.sanity.io/docs/ai/sanity-context-resolve-issues",
+      "primaryRole": "maintainer-documentation",
+      "contentHash": "dd744fd7922a15afd971fda2c2d4b6157f5c5ce87c3107faed376a427a747968",
+      "retrievedAt": "2026-09-30T02:18:14.822Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "86f282d49fcc541521224b15c74fa65153a909a3f677865980e3e3bc41aca515",
+      "scopedViewCharacters": 4110,
+      "scopedViewSha256": "86f282d49fcc541521224b15c74fa65153a909a3f677865980e3e3bc41aca515",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "86f282d49fcc541521224b15c74fa65153a909a3f677865980e3e3bc41aca515",
+      "snapshotCharacters": 4110,
+      "snapshotNormalizedTextSha256": "86f282d49fcc541521224b15c74fa65153a909a3f677865980e3e3bc41aca515",
+      "snapshotFileSha256": "41303c7d2aa0a34d7832891f28977273593eae66febd94d280158ef614f76e7e",
+      "sourceContentSha256": "dd744fd7922a15afd971fda2c2d4b6157f5c5ce87c3107faed376a427a747968",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 591,
+          "endCharacter": 683,
+          "sha256": "cf7c9ebb0baacb667e6ac12e310b4ca7fbf3aa8024d91b1b9f91358f9ead16eb",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 4110,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 4110,
+          "sha256": "86f282d49fcc541521224b15c74fa65153a909a3f677865980e3e3bc41aca515"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://www.sanity.io/docs/ai/sanity-context-resolve-issues",
+        "finalUrl": "https://www.sanity.io/docs/ai/sanity-context-resolve-issues",
+        "httpStatus": 200,
+        "bytes": 190082,
+        "retrievedAt": "2026-10-01T18:29:29.155655+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "d6f248657ea2909b98ed94fc20c3c0cd8604be6b3d83d50a751bceefd9f63786",
+        "textCharacters": 6147,
+        "textSha256": "dd6ff48e3906dd8c33e7a9c294e0a103a6e7342e10506545ec46f68cf6f31691",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r08-d04",
+      "packet": 8,
+      "title": "Knowledge Base source types",
+      "url": "https://www.sanity.io/docs/ai/sanity-context-source-types",
+      "primaryRole": "maintainer-documentation",
+      "contentHash": "0f8d6a5b94cb85a9c77d3fafc2726ce4aae415f16658c2458f94e4b8b7ee612c",
+      "retrievedAt": "2026-09-30T02:18:14.822Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "41944c02fb204a1e1e737260d18bcc5a4cace20bd70b6b048d2e37e0e499319a",
+      "scopedViewCharacters": 3951,
+      "scopedViewSha256": "41944c02fb204a1e1e737260d18bcc5a4cace20bd70b6b048d2e37e0e499319a",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "41944c02fb204a1e1e737260d18bcc5a4cace20bd70b6b048d2e37e0e499319a",
+      "snapshotCharacters": 3951,
+      "snapshotNormalizedTextSha256": "41944c02fb204a1e1e737260d18bcc5a4cace20bd70b6b048d2e37e0e499319a",
+      "snapshotFileSha256": "a9d13c4475b686a5566bb23d8fcaa06fba3dd37e2644e1e8d43810b5debacee4",
+      "sourceContentSha256": "0f8d6a5b94cb85a9c77d3fafc2726ce4aae415f16658c2458f94e4b8b7ee612c",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 610,
+          "endCharacter": 656,
+          "sha256": "1816d3e72c25e487a49bcc800077ded7ae6fed2742a2d22d946d5a340fb3a2ab",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 3951,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 3951,
+          "sha256": "41944c02fb204a1e1e737260d18bcc5a4cace20bd70b6b048d2e37e0e499319a"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://www.sanity.io/docs/ai/sanity-context-source-types",
+        "finalUrl": "https://www.sanity.io/docs/ai/sanity-context-source-types",
+        "httpStatus": 200,
+        "bytes": 190633,
+        "retrievedAt": "2026-10-01T18:29:29.311112+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "b24fa4ef4b71d356b5989f94fd29fd97a6add2fb942e1d15376a55dfc996208b",
+        "textCharacters": 5709,
+        "textSha256": "e46b97dd7536c9cc1f86d7d412a397b1a0584b429e6418ded8726bad4db3713e",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r08-d05",
+      "packet": 8,
+      "title": "Sanity datasets",
+      "url": "https://www.sanity.io/docs/content-lake/datasets",
+      "primaryRole": "maintainer-documentation",
+      "contentHash": "19cead75866f746409782157c03e301048d3d5dc07d865c7c13a94e1cfee2ad7",
+      "retrievedAt": "2026-09-30T02:18:14.822Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "a60ab0dbe7881b9f26e4a3738da7403a7d6be060fdf88f6ea2eb35b490662065",
+      "scopedViewCharacters": 4239,
+      "scopedViewSha256": "a60ab0dbe7881b9f26e4a3738da7403a7d6be060fdf88f6ea2eb35b490662065",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "a60ab0dbe7881b9f26e4a3738da7403a7d6be060fdf88f6ea2eb35b490662065",
+      "snapshotCharacters": 4239,
+      "snapshotNormalizedTextSha256": "a60ab0dbe7881b9f26e4a3738da7403a7d6be060fdf88f6ea2eb35b490662065",
+      "snapshotFileSha256": "3a249c1513efa13a3e4f9052ab89a49dea5a3da62e0495b14a66adc66a7bcc97",
+      "sourceContentSha256": "19cead75866f746409782157c03e301048d3d5dc07d865c7c13a94e1cfee2ad7",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 1752,
+          "endCharacter": 1828,
+          "sha256": "c4ccb3cd262685ba163fdc44d8b20fac71b44c3d0d2705ce52e2bf218b4932cd",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 4239,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 4239,
+          "sha256": "a60ab0dbe7881b9f26e4a3738da7403a7d6be060fdf88f6ea2eb35b490662065"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://www.sanity.io/docs/content-lake/datasets",
+        "finalUrl": "https://www.sanity.io/docs/content-lake/datasets",
+        "httpStatus": 200,
+        "bytes": 237189,
+        "retrievedAt": "2026-10-01T18:29:29.361544+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "da97bd899f4bc50247ba97e0a02d60d745446d9e3dbd7a0dff65f601d5650841",
+        "textCharacters": 7021,
+        "textSha256": "ea32704ab4edba00e363771de0caaa2145710f9d5d87be9d0589b8a10d24de21",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r08-d06",
+      "packet": 8,
+      "title": "Upgrading Sanity Studio",
+      "url": "https://www.sanity.io/docs/studio/upgrade",
+      "primaryRole": "maintainer-documentation",
+      "contentHash": "384bdd497981b7d491c817ab1f89093ed41881ca4b54eb08221f895b1d826c19",
+      "retrievedAt": "2026-09-30T02:18:14.822Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "25f957a8be6dba8ac5d48a8a010e0319399c076514a1193affefaee41bb9fad0",
+      "scopedViewCharacters": 2846,
+      "scopedViewSha256": "25f957a8be6dba8ac5d48a8a010e0319399c076514a1193affefaee41bb9fad0",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "25f957a8be6dba8ac5d48a8a010e0319399c076514a1193affefaee41bb9fad0",
+      "snapshotCharacters": 2846,
+      "snapshotNormalizedTextSha256": "25f957a8be6dba8ac5d48a8a010e0319399c076514a1193affefaee41bb9fad0",
+      "snapshotFileSha256": "a5a59629c947eb3a29b5524d512fea6a41c0d9e67d3c9737ecf8cb3668e80201",
+      "sourceContentSha256": "384bdd497981b7d491c817ab1f89093ed41881ca4b54eb08221f895b1d826c19",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 281,
+          "endCharacter": 372,
+          "sha256": "1ec09a5beebf663277ec0e0967ab8ea2a3c0c5c52a5af228f92338c2b463156e",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 2846,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 2846,
+          "sha256": "25f957a8be6dba8ac5d48a8a010e0319399c076514a1193affefaee41bb9fad0"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://www.sanity.io/docs/studio/upgrade",
+        "finalUrl": "https://www.sanity.io/docs/studio/upgrade",
+        "httpStatus": 200,
+        "bytes": 296830,
+        "retrievedAt": "2026-10-01T18:29:29.587762+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "5de77b2a01d0864b217e5bff4d1587009ad5eace01812bc0f234050f373f5676",
+        "textCharacters": 7713,
+        "textSha256": "d567d3e4adac6d8c00d566b596d284a1b1ba66076962f960ed0af78fcd0cf04b",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r08-d07",
+      "packet": 8,
+      "title": "Custom Studio tools",
+      "url": "https://www.sanity.io/docs/studio/custom-studio-tool",
+      "primaryRole": "maintainer-documentation",
+      "contentHash": "6d856c15183af951f663d9d380f44c8415d498f52d79e312943d5e7592eeab45",
+      "retrievedAt": "2026-09-30T02:20:41.778Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "076ccb63d11844e22ba62bc5e9b9089d30b04746e13610f0805c9bc5e718294b",
+      "scopedViewCharacters": 3528,
+      "scopedViewSha256": "076ccb63d11844e22ba62bc5e9b9089d30b04746e13610f0805c9bc5e718294b",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "076ccb63d11844e22ba62bc5e9b9089d30b04746e13610f0805c9bc5e718294b",
+      "snapshotCharacters": 3528,
+      "snapshotNormalizedTextSha256": "076ccb63d11844e22ba62bc5e9b9089d30b04746e13610f0805c9bc5e718294b",
+      "snapshotFileSha256": "eb4f29f093b58c11e840ad85f5338d86a792f8a9258377d0827c9111523b5e38",
+      "sourceContentSha256": "6d856c15183af951f663d9d380f44c8415d498f52d79e312943d5e7592eeab45",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 637,
+          "endCharacter": 738,
+          "sha256": "a43957f0298884f69bf657c0398c7501450c8d756d9b31111664e7c7072b34cd",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 3528,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 3528,
+          "sha256": "076ccb63d11844e22ba62bc5e9b9089d30b04746e13610f0805c9bc5e718294b"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://www.sanity.io/docs/studio/custom-studio-tool",
+        "finalUrl": "https://www.sanity.io/docs/studio/custom-studio-tool",
+        "httpStatus": 200,
+        "bytes": 306489,
+        "retrievedAt": "2026-10-01T18:29:30.053791+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "bffdbc5deb732105dfbd7d9af20fb17f46954a3f5b8dc9b4e86aff4543c7c592",
+        "textCharacters": 8811,
+        "textSha256": "813078ecc5d8fe0672f20d9d3aa20f6c610333686a49a86234dd8f4e98d1f8f8",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r08-d08",
+      "packet": 8,
+      "title": "App SDK authentication",
+      "url": "https://www.sanity.io/docs/app-sdk/sdk-authentication",
+      "primaryRole": "maintainer-documentation",
+      "contentHash": "3b9e7186c1f8d5581820fac86550aa81f2f9dcd04ff7814080b7627dc5fac5f8",
+      "retrievedAt": "2026-09-30T02:20:41.778Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "dad77b99be9165441d87b8b7777dc2e736459d835a26a2ed71edac37a36a4f3f",
+      "scopedViewCharacters": 6979,
+      "scopedViewSha256": "dad77b99be9165441d87b8b7777dc2e736459d835a26a2ed71edac37a36a4f3f",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "dad77b99be9165441d87b8b7777dc2e736459d835a26a2ed71edac37a36a4f3f",
+      "snapshotCharacters": 6979,
+      "snapshotNormalizedTextSha256": "dad77b99be9165441d87b8b7777dc2e736459d835a26a2ed71edac37a36a4f3f",
+      "snapshotFileSha256": "47f86695762aeceb65e1bd1e72b07c061ac2c14ae065c153952d3c9a12e033dd",
+      "sourceContentSha256": "3b9e7186c1f8d5581820fac86550aa81f2f9dcd04ff7814080b7627dc5fac5f8",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 306,
+          "endCharacter": 418,
+          "sha256": "3753fc7eda63bb5e31ba65e412595df6fd0014fd028f6a5c6c24f9927c8c98a2",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 6979,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 6979,
+          "sha256": "dad77b99be9165441d87b8b7777dc2e736459d835a26a2ed71edac37a36a4f3f"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://www.sanity.io/docs/app-sdk/sdk-authentication",
+        "finalUrl": "https://www.sanity.io/docs/app-sdk/sdk-authentication",
+        "httpStatus": 200,
+        "bytes": 220712,
+        "retrievedAt": "2026-10-01T18:29:30.013856+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "077254cfce88ee56df1b39d197620b8bb80f8fb05e3c22d5d5c62c45f3beff3f",
+        "textCharacters": 8091,
+        "textSha256": "2cc7dc859c6717364da966a88f61d89a5cfcd39cee61f01f0e63b2036519665c",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r08-d09",
+      "packet": 8,
+      "title": "Sanity Content Agent",
+      "url": "https://www.sanity.io/docs/content-agent/introduction",
+      "primaryRole": "maintainer-documentation",
+      "contentHash": "a4e5adbeb697803934562027be11b4ff2fe5aec8da833787755c2eb2fc4e69be",
+      "retrievedAt": "2026-09-30T02:20:41.778Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "3b75f49c0a581c58b245928d39c32a423b09fcd66ba521a14e456344e7249604",
+      "scopedViewCharacters": 11680,
+      "scopedViewSha256": "3b75f49c0a581c58b245928d39c32a423b09fcd66ba521a14e456344e7249604",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "9f65242f123a06d01af9973ea94ce8c882cfa2e9889b3e8c2fbb4cfe34182918",
+      "snapshotCharacters": 14354,
+      "snapshotNormalizedTextSha256": "9f65242f123a06d01af9973ea94ce8c882cfa2e9889b3e8c2fbb4cfe34182918",
+      "snapshotFileSha256": "97e2d649b77381aaccb899bb9fb3fe4f0e0a162a77deeef7f44087e7e76cd323",
+      "sourceContentSha256": "a4e5adbeb697803934562027be11b4ff2fe5aec8da833787755c2eb2fc4e69be",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 259,
+          "endCharacter": 353,
+          "sha256": "82cd79a59d7452b8dcf4ccb2a610cafdeb55ce621625f300026d536a660d3b24",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 1400,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 1400,
+          "sha256": "724651ea07b61af5dd490139329d469a8f7227695ee93ea5741facf7bab6939a"
+        },
+        {
+          "originalStartCharacter": 1950,
+          "originalEndCharacter": 3350,
+          "inputStartCharacter": 1492,
+          "inputEndCharacter": 2892,
+          "sha256": "3c1f47045a2c0ed2ac544c0f04ba8928a6f6e418404e4cc0bf5fcaeaf055139d"
+        },
+        {
+          "originalStartCharacter": 5200,
+          "originalEndCharacter": 10500,
+          "inputStartCharacter": 2984,
+          "inputEndCharacter": 8284,
+          "sha256": "95906a1d140d8caffdaefbcfed273887cc4c5bbb4074d21353292bcaa965f8f7"
+        },
+        {
+          "originalStartCharacter": 11050,
+          "originalEndCharacter": 14354,
+          "inputStartCharacter": 8376,
+          "inputEndCharacter": 11680,
+          "sha256": "7024d72a3172d011a3d95500875345a7f165d418636d8a8172b93f28d1e35195"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://www.sanity.io/docs/content-agent/introduction",
+        "finalUrl": "https://www.sanity.io/docs/content-agent/introduction",
+        "httpStatus": 200,
+        "bytes": 299616,
+        "retrievedAt": "2026-10-01T18:29:30.439792+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "4d5b9e9862da4bf640f98bb881f9a9af035a75090759651c9a5e843a250eb5cd",
+        "textCharacters": 14830,
+        "textSha256": "291612730b081b213ce4c3fd79468bbcb602c0bddd0e1c5da2928b65189b517c",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r08-d10",
+      "packet": 8,
+      "title": "Schema deployment",
+      "url": "https://www.sanity.io/docs/apis-and-sdks/schema-deployment",
+      "primaryRole": "maintainer-documentation",
+      "contentHash": "9e4a370f511fd0d7583e45443f69916ba4a2f8b0562347f08426ee6e5124f4d7",
+      "retrievedAt": "2026-09-30T02:26:13.070Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "f9f8c65473122161b917b16d2c58a575cff5cef290f50bbd8f44e987f7ad9ec9",
+      "scopedViewCharacters": 10118,
+      "scopedViewSha256": "f9f8c65473122161b917b16d2c58a575cff5cef290f50bbd8f44e987f7ad9ec9",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "f9f8c65473122161b917b16d2c58a575cff5cef290f50bbd8f44e987f7ad9ec9",
+      "snapshotCharacters": 10118,
+      "snapshotNormalizedTextSha256": "f9f8c65473122161b917b16d2c58a575cff5cef290f50bbd8f44e987f7ad9ec9",
+      "snapshotFileSha256": "81b046db566193b9ef645d6a01249a82cb1d0ada99f468d8e352c90be08ac641",
+      "sourceContentSha256": "9e4a370f511fd0d7583e45443f69916ba4a2f8b0562347f08426ee6e5124f4d7",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 319,
+          "endCharacter": 435,
+          "sha256": "375e60d3812163dcd2fae17c2a7426470087636e18a8102bc1324f61480ec657",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": false
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 10118,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 10118,
+          "sha256": "f9f8c65473122161b917b16d2c58a575cff5cef290f50bbd8f44e987f7ad9ec9"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://www.sanity.io/docs/apis-and-sdks/schema-deployment",
+        "finalUrl": "https://www.sanity.io/docs/apis-and-sdks/schema-deployment",
+        "httpStatus": 200,
+        "bytes": 438476,
+        "retrievedAt": "2026-10-01T18:29:30.645735+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "25d4c96f78758d74a730f73ddc6b0350b3048c70810eb377129851aee0b61e8d",
+        "textCharacters": 22255,
+        "textSha256": "b8f343d2a8cd27f74b8061a03266aee2d0497eb6c6d58b2d50928f7d01b671f3",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r08-d11",
+      "packet": 8,
+      "title": "GROQ syntax",
+      "url": "https://www.sanity.io/docs/specifications/groq-syntax",
+      "primaryRole": "maintainer-documentation",
+      "contentHash": "fd371abe1b44a7de3e2be2ea18eaca11301b7dd8da1a835bf53e519c83e345ba",
+      "retrievedAt": "2026-09-30T02:26:13.070Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "719a52b8310f742fe9d2b26ea4759682d89b1c270f8c0ffb1bd27e5c97b4076c",
+      "scopedViewCharacters": 10599,
+      "scopedViewSha256": "719a52b8310f742fe9d2b26ea4759682d89b1c270f8c0ffb1bd27e5c97b4076c",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "719a52b8310f742fe9d2b26ea4759682d89b1c270f8c0ffb1bd27e5c97b4076c",
+      "snapshotCharacters": 10599,
+      "snapshotNormalizedTextSha256": "719a52b8310f742fe9d2b26ea4759682d89b1c270f8c0ffb1bd27e5c97b4076c",
+      "snapshotFileSha256": "fad679e13fff0c4292887a1d5163d1108e8c28ca38790fc1f5b04a52115e253c",
+      "sourceContentSha256": "fd371abe1b44a7de3e2be2ea18eaca11301b7dd8da1a835bf53e519c83e345ba",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 689,
+          "endCharacter": 805,
+          "sha256": "c226ce92c02ea4710c111dd37a6f55788f2b14de02f12489b8932cad91c1f696",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 10599,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 10599,
+          "sha256": "719a52b8310f742fe9d2b26ea4759682d89b1c270f8c0ffb1bd27e5c97b4076c"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://www.sanity.io/docs/specifications/groq-syntax",
+        "finalUrl": "https://www.sanity.io/docs/specifications/groq-syntax",
+        "httpStatus": 200,
+        "bytes": 321663,
+        "retrievedAt": "2026-10-01T18:29:30.773254+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "2bece7567685d24188a7851df87bef11aaa338c6dd640910e244b6aab218a109",
+        "textCharacters": 12171,
+        "textSha256": "8fb86243851684c618c86db1ac82d19a5a2f649005a0e256eeb76e7c9d9b1e4a",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r08-d12",
+      "packet": 8,
+      "title": "Sanity MCP Server",
+      "url": "https://www.sanity.io/docs/ai/mcp-server",
+      "primaryRole": "maintainer-documentation",
+      "contentHash": "a21fdd298dd4f8152ba907d47e3908fd7d43406df7174ccfcda668e5e617aecb",
+      "retrievedAt": "2026-09-30T02:26:13.070Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "ecd2bec2dc18279d11dfb9d7e4cb38f35c9c1e3792b8c630174e1925551e8194",
+      "scopedViewCharacters": 11529,
+      "scopedViewSha256": "ecd2bec2dc18279d11dfb9d7e4cb38f35c9c1e3792b8c630174e1925551e8194",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "9794c44e3aa72c348c83a0dcfaded591c814e122fb44f7a5dc130053076db0c2",
+      "snapshotCharacters": 18753,
+      "snapshotNormalizedTextSha256": "9794c44e3aa72c348c83a0dcfaded591c814e122fb44f7a5dc130053076db0c2",
+      "snapshotFileSha256": "8600ef1fbfb4f01c8e9315a60720833af9c0a453eac353670c97c0832330de54",
+      "sourceContentSha256": "a21fdd298dd4f8152ba907d47e3908fd7d43406df7174ccfcda668e5e617aecb",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 595,
+          "endCharacter": 716,
+          "sha256": "ef95597ce275195873d9e35a49f3e843d635d5fc3a8e9d8c6d6650ef73ee8b63",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 2050,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 2050,
+          "sha256": "a8b7129922af4dfc10978409e3eb95966ac2f3554e92dcd03cc0013df915ec13"
+        },
+        {
+          "originalStartCharacter": 7150,
+          "originalEndCharacter": 8550,
+          "inputStartCharacter": 2142,
+          "inputEndCharacter": 3542,
+          "sha256": "a5748549a24fc5df8c9703bf92c2560320651ed833e5716f3e3e86e17068bc54"
+        },
+        {
+          "originalStartCharacter": 9750,
+          "originalEndCharacter": 11800,
+          "inputStartCharacter": 3634,
+          "inputEndCharacter": 5684,
+          "sha256": "4cc8de19776bcf56eeef7ce6e72f6dfd4e053f6a2e95e7032056bd462e5c0d3e"
+        },
+        {
+          "originalStartCharacter": 13000,
+          "originalEndCharacter": 18753,
+          "inputStartCharacter": 5776,
+          "inputEndCharacter": 11529,
+          "sha256": "93bdfeb4096d0ee83dbacb86640f75b95f9e0331bf48d8ec55da7f4a982e277b"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://www.sanity.io/docs/ai/mcp-server",
+        "finalUrl": "https://www.sanity.io/docs/ai/mcp-server",
+        "httpStatus": 200,
+        "bytes": 414905,
+        "retrievedAt": "2026-10-01T18:29:30.705070+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "4e272bf2da79f7fb57b3523d8b71d795646925bfa0fcae4d36b6d2e991f8c611",
+        "textCharacters": 21222,
+        "textSha256": "89cc5ef3943fdc1a22e30378021234fffb7656a88ad0c2d0fec744aa16f5ce85",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r09-d01",
+      "packet": 9,
+      "title": "Design of Stickbug: a Six-Armed Precision Pollination Robot",
+      "url": "https://arxiv.org/html/2404.03489",
+      "primaryRole": "original-research",
+      "contentHash": "49e4dd38d38177c8e322228359362c8f0ef519660b430a63c668b1b565f13580",
+      "retrievedAt": "2026-09-30T02:16:43.543Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "cd14a85e917c2ff2b1b049d631dfff6aa76439ea5b4d37f7ce365262bf95c13c",
+      "scopedViewCharacters": 11918,
+      "scopedViewSha256": "cd14a85e917c2ff2b1b049d631dfff6aa76439ea5b4d37f7ce365262bf95c13c",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "1eae636d2630a8ae197a0539a7a84f001d7a0969e222f3c0eece1df0ff4eea8e",
+      "snapshotCharacters": 38726,
+      "snapshotNormalizedTextSha256": "1eae636d2630a8ae197a0539a7a84f001d7a0969e222f3c0eece1df0ff4eea8e",
+      "snapshotFileSha256": "60f35928445d1a59dae8b5b40aef124f29f98da4c07b7db887dc6bae69cd8c8f",
+      "sourceContentSha256": "49e4dd38d38177c8e322228359362c8f0ef519660b430a63c668b1b565f13580",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 1986,
+          "endCharacter": 2121,
+          "sha256": "8ee27704d35393e34ed7d2367c5b4ce17a2e89c7147600d563f3d3006a87c8f6",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 4000,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 4000,
+          "sha256": "6fe8194e051d443d04f01aa4937db75a9138e00332f5fa6644617da2d26ecf0f"
+        },
+        {
+          "originalStartCharacter": 5200,
+          "originalEndCharacter": 7900,
+          "inputStartCharacter": 4092,
+          "inputEndCharacter": 6792,
+          "sha256": "2d79751e93514b2317c13c75f12566308a834ce8d8b0627bcd2f51fa8908875c"
+        },
+        {
+          "originalStartCharacter": 13000,
+          "originalEndCharacter": 14400,
+          "inputStartCharacter": 6884,
+          "inputEndCharacter": 8284,
+          "sha256": "b15960b74a8e83188fdd48355f45b14325350952027c39c5ff6a0fa7ba735056"
+        },
+        {
+          "originalStartCharacter": 27950,
+          "originalEndCharacter": 30000,
+          "inputStartCharacter": 8376,
+          "inputEndCharacter": 10426,
+          "sha256": "ab94a4469e98cb14302d346176d2fb8028b58e2ffb66d8c09b3017e63ff1a9f9"
+        },
+        {
+          "originalStartCharacter": 31850,
+          "originalEndCharacter": 33250,
+          "inputStartCharacter": 10518,
+          "inputEndCharacter": 11918,
+          "sha256": "5846d765bd4c4eca444d89a2de0b5b8e7d4dc8b5f9176df86b42ad328f97488d"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://arxiv.org/html/2404.03489",
+        "finalUrl": "https://arxiv.org/html/2404.03489",
+        "httpStatus": 200,
+        "bytes": 93046,
+        "retrievedAt": "2026-10-01T18:29:30.809743+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "5af1a18f4d144b9dfe3e9cd74243d4d42eb62e44491aa7d6c85fb3882c25e6d3",
+        "textCharacters": 40894,
+        "textSha256": "b611ee3b561b0c3b397137bcf67df7fcfb48c31a0cd2019dcc73a7caa8de2f49",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r09-d02",
+      "packet": 9,
+      "title": "A vision-based robotic system for precision pollination of apples",
+      "url": "https://arxiv.org/html/2409.19918v2",
+      "primaryRole": "original-research",
+      "contentHash": "f1164921f749522b0e769f7e0a6faa24c6931c82e430be857a1a1c410fb45641",
+      "retrievedAt": "2026-09-30T02:16:43.543Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "c7081bfcd79083913aa40216a192a78453764ea0fb707788cdb330e892150f7a",
+      "scopedViewCharacters": 11918,
+      "scopedViewSha256": "c7081bfcd79083913aa40216a192a78453764ea0fb707788cdb330e892150f7a",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "2137d8dd2106a821990dd1cba6daa4e16b550dec5ff31c4663e2ed27e47e123c",
+      "snapshotCharacters": 68584,
+      "snapshotNormalizedTextSha256": "2137d8dd2106a821990dd1cba6daa4e16b550dec5ff31c4663e2ed27e47e123c",
+      "snapshotFileSha256": "d9177c2119fb3f6193aded47d275ef7b5b7c3c70270153a33c9c31ccc56749f5",
+      "sourceContentSha256": "f1164921f749522b0e769f7e0a6faa24c6931c82e430be857a1a1c410fb45641",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 1504,
+          "endCharacter": 1556,
+          "sha256": "1ca1d4a1e83b7eafe1c2ebcbc60afa969e06249666d9e52c22f33a8b73634280",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 2700,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 2700,
+          "sha256": "4e11c9fe309b1ba5f8d9c863d6c1cdba2bc648d100401900f326a0d7332a5e19"
+        },
+        {
+          "originalStartCharacter": 7800,
+          "originalEndCharacter": 10500,
+          "inputStartCharacter": 2792,
+          "inputEndCharacter": 5492,
+          "sha256": "afca5ec946b9bb2607c630afc31b2d01f766e215099de361c3da7745b152113c"
+        },
+        {
+          "originalStartCharacter": 27300,
+          "originalEndCharacter": 30000,
+          "inputStartCharacter": 5584,
+          "inputEndCharacter": 8284,
+          "sha256": "f60e6f573d158729581a25b83b75e65f3fc8dcff5bc76cfb4105c8e300628816"
+        },
+        {
+          "originalStartCharacter": 44850,
+          "originalEndCharacter": 46900,
+          "inputStartCharacter": 8376,
+          "inputEndCharacter": 10426,
+          "sha256": "c313010ca6d762ea0d31ffee2c94d4601c3386771cf581b3361ea3a7afe29180"
+        },
+        {
+          "originalStartCharacter": 66300,
+          "originalEndCharacter": 67700,
+          "inputStartCharacter": 10518,
+          "inputEndCharacter": 11918,
+          "sha256": "2ba8b6fb7bb60ada230cb535662194ae5091e833a01fe6dc67925976ca639e87"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://arxiv.org/html/2409.19918v2",
+        "finalUrl": "https://arxiv.org/html/2409.19918v2",
+        "httpStatus": 200,
+        "bytes": 229395,
+        "retrievedAt": "2026-10-01T18:29:30.892958+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "4faf17d04917ac397bfa8bbe86d4503268b4d39f5af3f0ae9cced863ef51b159",
+        "textCharacters": 73169,
+        "textSha256": "79412bb5105cca54dc19da78922d15c75bef5f43163ddd8692fd2f699e10bd72",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r09-d03",
+      "packet": 9,
+      "title": "Precision robotic pollination with artificial flowers",
+      "url": "https://arxiv.org/abs/1906.09294",
+      "primaryRole": "original-research",
+      "contentHash": "87c5caa977225b8eaae57a45e6b9c08839f685c645060ccb9bc981db2a291c19",
+      "retrievedAt": "2026-09-30T02:16:43.543Z",
+      "contentAccess": "abstract-and-metadata",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "11e229c9e88dca2a619d801a5b540e1a4e268a5e0025f23b5f984d6b4a8ff53a",
+      "scopedViewCharacters": 4552,
+      "scopedViewSha256": "11e229c9e88dca2a619d801a5b540e1a4e268a5e0025f23b5f984d6b4a8ff53a",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "11e229c9e88dca2a619d801a5b540e1a4e268a5e0025f23b5f984d6b4a8ff53a",
+      "snapshotCharacters": 4552,
+      "snapshotNormalizedTextSha256": "11e229c9e88dca2a619d801a5b540e1a4e268a5e0025f23b5f984d6b4a8ff53a",
+      "snapshotFileSha256": "5baaaf4ec17c6fe5826900d2ecda0697ee15a8bfcaa8aaac65183c3728e0dec6",
+      "sourceContentSha256": "87c5caa977225b8eaae57a45e6b9c08839f685c645060ccb9bc981db2a291c19",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 1626,
+          "endCharacter": 1729,
+          "sha256": "7d10cb7be90349b56b4c946dc60e6dd0d81d22a751cb0af8afb1a7ba8106a1b3",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 4552,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 4552,
+          "sha256": "11e229c9e88dca2a619d801a5b540e1a4e268a5e0025f23b5f984d6b4a8ff53a"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://arxiv.org/abs/1906.09294",
+        "finalUrl": "https://arxiv.org/abs/1906.09294",
+        "httpStatus": 200,
+        "bytes": 41859,
+        "retrievedAt": "2026-10-01T18:29:30.990405+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "1ab4e1f1f0ee79766d0542e2b70ef87df5c0cd5f88ed2c7aaf9d53777afdaa04",
+        "textCharacters": 8939,
+        "textSha256": "5db1317e741641ccbe3f1f5ae875ee50255facb7f47c9f96bacadd83d598f9d2",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r09-d04",
+      "packet": 9,
+      "title": "Soap Bubble Pollination",
+      "url": "https://www.cell.com/iscience/fulltext/S2589-0042(20)30373-4",
+      "primaryRole": "original-research",
+      "contentHash": "6bff6118e31fdf90031742ce29bf2e300933bde59e9cf8aedc89e206d4dd0f0b",
+      "retrievedAt": "2026-09-30T02:16:43.543Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "76d449f5de07c4638e9ac8654cab5c2247761a06c566e8550b0ce9f49312c49c",
+      "scopedViewCharacters": 11682,
+      "scopedViewSha256": "76d449f5de07c4638e9ac8654cab5c2247761a06c566e8550b0ce9f49312c49c",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "62d40c78b2e01c140c99dd646de33aec570c51e8336a56ca6dd324791ac46996",
+      "snapshotCharacters": 61014,
+      "snapshotNormalizedTextSha256": "62d40c78b2e01c140c99dd646de33aec570c51e8336a56ca6dd324791ac46996",
+      "snapshotFileSha256": "7e20627145106dc490191277e3e6c62d261eb23fd396bbc5bb8da7e8cd33eaf7",
+      "sourceContentSha256": "6bff6118e31fdf90031742ce29bf2e300933bde59e9cf8aedc89e206d4dd0f0b",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 3753,
+          "endCharacter": 3875,
+          "sha256": "eb94f678c4b116001cb36fc7d7f58b512a998ef06187d36f96918fb4036fd2eb",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": null
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 1400,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 1400,
+          "sha256": "7aa46e48f4adb15ea9ad9fdf41bc4edd5de4b43812ba114e93f7e1891e7cb537"
+        },
+        {
+          "originalStartCharacter": 2600,
+          "originalEndCharacter": 5300,
+          "inputStartCharacter": 1492,
+          "inputEndCharacter": 4192,
+          "sha256": "56c420836683553b83ff0f7bb3f40e34465d10c48b03130209a1e4b7ba2ccb6a"
+        },
+        {
+          "originalStartCharacter": 20150,
+          "originalEndCharacter": 21581,
+          "inputStartCharacter": 4284,
+          "inputEndCharacter": 5715,
+          "sha256": "e7025bdd123bbee37e85752cc253fecd88ee4cf95f62329c03e60b3e335678f4"
+        },
+        {
+          "originalStartCharacter": 32894,
+          "originalEndCharacter": 34027,
+          "inputStartCharacter": 5807,
+          "inputEndCharacter": 6940,
+          "sha256": "5254dd8beaac009dc8852740c916172a69df46a902bc14b225885096db2a2446"
+        },
+        {
+          "originalStartCharacter": 39650,
+          "originalEndCharacter": 44300,
+          "inputStartCharacter": 7032,
+          "inputEndCharacter": 11682,
+          "sha256": "0fa4b466219a4b58ac9bddc3ae99467b5a617a9f51c8336d1f5dd075ce88f814"
+        }
+      ],
+      "liveOriginal": {
+        "state": "http-unavailable",
+        "url": "https://www.cell.com/iscience/fulltext/S2589-0042(20)30373-4",
+        "finalUrl": null,
+        "httpStatus": 403,
+        "bytes": null,
+        "retrievedAt": null,
+        "contentType": null,
+        "rawSha256": null,
+        "textCharacters": null,
+        "textSha256": null,
+        "textAvailable": null,
+        "licenseReview": null
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r09-d05",
+      "packet": 9,
+      "title": "Materially Engineered Artificial Pollinators",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2451929417300323",
+      "primaryRole": "original-research",
+      "contentHash": "3c5a217cdb2e8621bb9ad035872841c8846cda318c3ee5fec8dc60167a305067",
+      "retrievedAt": "2026-09-30T02:16:43.543Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "25d9ccd985b06d607816047ab8788d5bbd4c3bebd248d5193ffc74b8a9b4fd91",
+      "scopedViewCharacters": 11918,
+      "scopedViewSha256": "25d9ccd985b06d607816047ab8788d5bbd4c3bebd248d5193ffc74b8a9b4fd91",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "e709b133824794fce62513761c81b29653737d18f5614ea73264550ddd8962b9",
+      "snapshotCharacters": 81878,
+      "snapshotNormalizedTextSha256": "e709b133824794fce62513761c81b29653737d18f5614ea73264550ddd8962b9",
+      "snapshotFileSha256": "a1f69fe99898a6e01c77102b8dc8327b491335f0406c6a33704b6f398f27332a",
+      "sourceContentSha256": "3c5a217cdb2e8621bb9ad035872841c8846cda318c3ee5fec8dc60167a305067",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 2465,
+          "endCharacter": 2604,
+          "sha256": "e684fe187a41bd68470a620bcfeb8a0711d39838e125e1712d577f8edb4266e6",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": null
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 3350,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 3350,
+          "sha256": "947f864a95ce380d53928c342b0ea2faa3d314ffef8b44918865f157aa9940dc"
+        },
+        {
+          "originalStartCharacter": 5200,
+          "originalEndCharacter": 6600,
+          "inputStartCharacter": 3442,
+          "inputEndCharacter": 4842,
+          "sha256": "849ff4b9d662093313f90333d5884d495be5fde62086fbff31b84fc8693f0fc4"
+        },
+        {
+          "originalStartCharacter": 59150,
+          "originalEndCharacter": 60550,
+          "inputStartCharacter": 4934,
+          "inputEndCharacter": 6334,
+          "sha256": "7082709e05fc36c3abed0094f2440c87c50d4d012bb891df6f36a64d60cad651"
+        },
+        {
+          "originalStartCharacter": 61100,
+          "originalEndCharacter": 65100,
+          "inputStartCharacter": 6426,
+          "inputEndCharacter": 10426,
+          "sha256": "8d0e56b995e228027b02a5d41ec66ec9241b9a36d49dc753ed381495caeb3fe7"
+        },
+        {
+          "originalStartCharacter": 74100,
+          "originalEndCharacter": 75500,
+          "inputStartCharacter": 10518,
+          "inputEndCharacter": 11918,
+          "sha256": "dae44c5d91c1bcf2f19d117a755f7e494f52cd57d6973e39e4aa48046ad19edb"
+        }
+      ],
+      "liveOriginal": {
+        "state": "http-unavailable",
+        "url": "https://www.sciencedirect.com/science/article/pii/S2451929417300323",
+        "finalUrl": null,
+        "httpStatus": 400,
+        "bytes": null,
+        "retrievedAt": null,
+        "contentType": null,
+        "rawSha256": null,
+        "textCharacters": null,
+        "textSha256": null,
+        "textAvailable": null,
+        "licenseReview": null
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r09-d06",
+      "packet": 9,
+      "title": "Drone-assisted Japanese pear pollination",
+      "url": "https://doi.org/10.1016/j.atech.2026.102108",
+      "primaryRole": "original-research",
+      "contentHash": "fb4269b943d4728c9fc3b955881941fd9f968b19c3b6a99cb52cf415d802f521",
+      "retrievedAt": "2026-09-30T02:16:43.543Z",
+      "contentAccess": "abstract-and-metadata",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "a85573b8d48d87441e804e7702dec352209f75c5904a657a4b3e43cfaf9b13d1",
+      "scopedViewCharacters": 11681,
+      "scopedViewSha256": "a85573b8d48d87441e804e7702dec352209f75c5904a657a4b3e43cfaf9b13d1",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "a85573b8d48d87441e804e7702dec352209f75c5904a657a4b3e43cfaf9b13d1",
+      "snapshotCharacters": 11681,
+      "snapshotNormalizedTextSha256": "a85573b8d48d87441e804e7702dec352209f75c5904a657a4b3e43cfaf9b13d1",
+      "snapshotFileSha256": "8e280579a5fad908835439832c85fe14833c03b9361a1814e108c1302662631c",
+      "sourceContentSha256": "fb4269b943d4728c9fc3b955881941fd9f968b19c3b6a99cb52cf415d802f521",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 22,
+          "endCharacter": 207,
+          "sha256": "7b96153f0bfc2d28e075181071447616db5205e09b0ea8630abfe528f9f273da",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": false
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 11681,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 11681,
+          "sha256": "a85573b8d48d87441e804e7702dec352209f75c5904a657a4b3e43cfaf9b13d1"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://doi.org/10.1016/j.atech.2026.102108",
+        "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/S2772375526003291",
+        "httpStatus": 200,
+        "bytes": 2704,
+        "retrievedAt": "2026-10-01T18:29:32.412916+00:00",
+        "contentType": "text/html;charset=UTF-8",
+        "rawSha256": "25a32da04b35dbf5eee4f53c4a197acfa5a927dc6aa319bba8946e7b9a5817ed",
+        "textCharacters": 83,
+        "textSha256": "0103898be0feb7929f74eea793e6aa03713983146d6b5c1d7f9d35343a9553c2",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r09-d07",
+      "packet": 9,
+      "title": "Autonomous Visual Navigation for a Flower Pollination Drone",
+      "url": "https://www.mdpi.com/2075-1702/10/5/364",
+      "primaryRole": "original-research",
+      "contentHash": "0f81c1b3dd914d7333ea360118474f65515ec4ac8b901df28eade00778bb1a81",
+      "retrievedAt": "2026-09-30T02:18:13.661Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "809c6a9ebe1bd256ac63221ee1458bdee5bb099337dc06c7f1edded11d6d4878",
+      "scopedViewCharacters": 11915,
+      "scopedViewSha256": "809c6a9ebe1bd256ac63221ee1458bdee5bb099337dc06c7f1edded11d6d4878",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "ebb2c484c0dfd5b22b422c453301fec68a91404da8f59f981f77a410554f36f0",
+      "snapshotCharacters": 65826,
+      "snapshotNormalizedTextSha256": "ebb2c484c0dfd5b22b422c453301fec68a91404da8f59f981f77a410554f36f0",
+      "snapshotFileSha256": "d0ee16782629bdfa7af01e5a203450d6094a94fa4d307cad30b56db34a8bc262",
+      "sourceContentSha256": "0f81c1b3dd914d7333ea360118474f65515ec4ac8b901df28eade00778bb1a81",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 4084,
+          "endCharacter": 4189,
+          "sha256": "c601e71be738b7856cd1b80fcc1f6d60ad04dfce2b5c87d44de5ecff3fe4bc08",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": null
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 2700,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 2700,
+          "sha256": "34cb538921b998c5f47e32f6bb234290523c61802ce668a50eadfec1a45cddd1"
+        },
+        {
+          "originalStartCharacter": 3534,
+          "originalEndCharacter": 4739,
+          "inputStartCharacter": 2792,
+          "inputEndCharacter": 3997,
+          "sha256": "a80204a9df1ed410ed710b48581ad038f8b5fd5259c90d572f8fc641ad8810b8"
+        },
+        {
+          "originalStartCharacter": 11050,
+          "originalEndCharacter": 12450,
+          "inputStartCharacter": 4089,
+          "inputEndCharacter": 5489,
+          "sha256": "116529679e8082b9fea59e3ff2ef318ffcfc6fad63da520a00ddc00c1e86a0d6"
+        },
+        {
+          "originalStartCharacter": 20800,
+          "originalEndCharacter": 22850,
+          "inputStartCharacter": 5581,
+          "inputEndCharacter": 7631,
+          "sha256": "440afb13658a4450e0c0aa0fa998ea090448b36079a9d2542c71d664be8d80c3"
+        },
+        {
+          "originalStartCharacter": 24700,
+          "originalEndCharacter": 26750,
+          "inputStartCharacter": 7723,
+          "inputEndCharacter": 9773,
+          "sha256": "86a8e7be08bb7633719e981491019f13e2a3e70c8cb5039e9abddfbec401b8fc"
+        },
+        {
+          "originalStartCharacter": 40950,
+          "originalEndCharacter": 43000,
+          "inputStartCharacter": 9865,
+          "inputEndCharacter": 11915,
+          "sha256": "611e49d6193e111fcbdad02a01b6a0bce19d433bd63a7d1e9e2971cec567a329"
+        }
+      ],
+      "liveOriginal": {
+        "state": "http-unavailable",
+        "url": "https://www.mdpi.com/2075-1702/10/5/364",
+        "finalUrl": null,
+        "httpStatus": 403,
+        "bytes": null,
+        "retrievedAt": null,
+        "contentType": null,
+        "rawSha256": null,
+        "textCharacters": null,
+        "textSha256": null,
+        "textAvailable": null,
+        "licenseReview": null
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r09-d08",
+      "packet": 9,
+      "title": "Multinozzle targeting pollination of clustered kiwifruit",
+      "url": "https://doi.org/10.1002/rob.22499",
+      "primaryRole": "original-research",
+      "contentHash": "c4a82cc340025351d347fe47307d6a695bd06ebef8fe2784476e13443f435264",
+      "retrievedAt": "2026-09-30T02:18:13.661Z",
+      "contentAccess": "abstract-and-metadata",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "fd91323dde13e78cd1e5b46e94938c6537646596102fd51c06be1af9f38e8d99",
+      "scopedViewCharacters": 11954,
+      "scopedViewSha256": "fd91323dde13e78cd1e5b46e94938c6537646596102fd51c06be1af9f38e8d99",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "fd91323dde13e78cd1e5b46e94938c6537646596102fd51c06be1af9f38e8d99",
+      "snapshotCharacters": 11954,
+      "snapshotNormalizedTextSha256": "fd91323dde13e78cd1e5b46e94938c6537646596102fd51c06be1af9f38e8d99",
+      "snapshotFileSha256": "19e9a6aff59e55feb80b641deff350c1a4f5f25d2b8b33e6ee76feb1a8669f07",
+      "sourceContentSha256": "c4a82cc340025351d347fe47307d6a695bd06ebef8fe2784476e13443f435264",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 32,
+          "endCharacter": 204,
+          "sha256": "878b467aa81adc821bade4bca4793ef5d56cc82260949f6473dea732e002f101",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": null
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 11954,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 11954,
+          "sha256": "fd91323dde13e78cd1e5b46e94938c6537646596102fd51c06be1af9f38e8d99"
+        }
+      ],
+      "liveOriginal": {
+        "state": "http-unavailable",
+        "url": "https://doi.org/10.1002/rob.22499",
+        "finalUrl": null,
+        "httpStatus": 403,
+        "bytes": null,
+        "retrievedAt": null,
+        "contentType": null,
+        "rawSha256": null,
+        "textCharacters": null,
+        "textSha256": null,
+        "textAvailable": null,
+        "licenseReview": null
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r09-d09",
+      "packet": 9,
+      "title": "Cluster-Based Flight Path Construction for Drone-Assisted Pear Pollination",
+      "url": "https://www.mdpi.com/2504-446X/9/7/475",
+      "primaryRole": "original-research",
+      "contentHash": "6b0b09b7c2f628be359d961399445af4fd016383c212e5d98be11a9bec72c170",
+      "retrievedAt": "2026-09-30T02:18:13.661Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "8a9f0deda5db23000312302332b561bcbee9c58c66cef8374dbe87f851e8fe0b",
+      "scopedViewCharacters": 11726,
+      "scopedViewSha256": "8a9f0deda5db23000312302332b561bcbee9c58c66cef8374dbe87f851e8fe0b",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "2be43f9dd97ed2a7c24e82d1c1819e2b18fc58b645451ec01c58b5b740ec7ba8",
+      "snapshotCharacters": 97160,
+      "snapshotNormalizedTextSha256": "2be43f9dd97ed2a7c24e82d1c1819e2b18fc58b645451ec01c58b5b740ec7ba8",
+      "snapshotFileSha256": "5eb67e8ce5d7ad926761b659f2f19f26ef3258b4082533cb102abcc101766905",
+      "sourceContentSha256": "6b0b09b7c2f628be359d961399445af4fd016383c212e5d98be11a9bec72c170",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 3772,
+          "endCharacter": 3918,
+          "sha256": "5f5cb5765ff4d5d3401d7e79fa9cdacb50da0cc35e05ee4f0af157a96a41f343",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": null
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 1400,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 1400,
+          "sha256": "a0a6a57ba1df3bfab86b50ec2ec09223a930e81f0d8718062c7375b5f5ae0c94"
+        },
+        {
+          "originalStartCharacter": 1950,
+          "originalEndCharacter": 6600,
+          "inputStartCharacter": 1492,
+          "inputEndCharacter": 6142,
+          "sha256": "155d0faabe5f348e5cc9326a2a92031feac358be8d20d4935b1d8d9102d47df9"
+        },
+        {
+          "originalStartCharacter": 11050,
+          "originalEndCharacter": 15050,
+          "inputStartCharacter": 6234,
+          "inputEndCharacter": 10234,
+          "sha256": "db611ba92c65de098674c630840c0fc1b5977b87400844863b2d32975ad05147"
+        },
+        {
+          "originalStartCharacter": 43550,
+          "originalEndCharacter": 44950,
+          "inputStartCharacter": 10326,
+          "inputEndCharacter": 11726,
+          "sha256": "38de2932b234dfd627777ab7d903d67142c5035c93e133acbc5c950665c514d2"
+        }
+      ],
+      "liveOriginal": {
+        "state": "http-unavailable",
+        "url": "https://www.mdpi.com/2504-446X/9/7/475",
+        "finalUrl": null,
+        "httpStatus": 403,
+        "bytes": null,
+        "retrievedAt": null,
+        "contentType": null,
+        "rawSha256": null,
+        "textCharacters": null,
+        "textSha256": null,
+        "textAvailable": null,
+        "licenseReview": null
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r09-d10",
+      "packet": 9,
+      "title": "FAO Global Action on Pollination Services",
+      "url": "https://www.fao.org/pollination/",
+      "primaryRole": "institutional-assessment",
+      "contentHash": "3c0783b6970af44c8ffb1ad96ba418307e2ac40bb12c1bf44381d52823262d67",
+      "retrievedAt": "2026-09-30T02:18:13.661Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "4c095a7d6409aacf3aafc3a8b65b5890842de167eb185c7f6bd5399bf2770ad5",
+      "scopedViewCharacters": 4364,
+      "scopedViewSha256": "4c095a7d6409aacf3aafc3a8b65b5890842de167eb185c7f6bd5399bf2770ad5",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "4c095a7d6409aacf3aafc3a8b65b5890842de167eb185c7f6bd5399bf2770ad5",
+      "snapshotCharacters": 4364,
+      "snapshotNormalizedTextSha256": "4c095a7d6409aacf3aafc3a8b65b5890842de167eb185c7f6bd5399bf2770ad5",
+      "snapshotFileSha256": "98180b04dbbe020a2951398dd24822345827cadc0d7eb266137ced44dd6cf947",
+      "sourceContentSha256": "3c0783b6970af44c8ffb1ad96ba418307e2ac40bb12c1bf44381d52823262d67",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 548,
+          "endCharacter": 684,
+          "sha256": "d09fa2ec8fdaee8c71de630f229bf29cc1d8b1196542176b9d9300a9bde73288",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 4364,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 4364,
+          "sha256": "4c095a7d6409aacf3aafc3a8b65b5890842de167eb185c7f6bd5399bf2770ad5"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://www.fao.org/pollination/",
+        "finalUrl": "https://www.fao.org/pollination/",
+        "httpStatus": 200,
+        "bytes": 73890,
+        "retrievedAt": "2026-10-01T18:29:32.080743+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "dfa47cc4abb905243429dcfd5bbc3f990770a89223ae5626309d24c0fb11154e",
+        "textCharacters": 11061,
+        "textSha256": "b810f57d89d7df442436c02e9c475f90eb12bc550191afb87702d5c87bfc889c",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r09-d11",
+      "packet": 9,
+      "title": "Key tropical crops at risk from pollinator loss",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569713/",
+      "primaryRole": "original-research",
+      "contentHash": "3d5eb5b144b2b7cf642465e2f27ea5bfb648269d5d6a9e7789287dd1837acff7",
+      "retrievedAt": "2026-09-30T02:18:13.661Z",
+      "contentAccess": "abstract-and-metadata",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "0dc8b6aab4b8d86bf71eb8bcecacf2d2498981452c210ac3c909fcf148f32ba4",
+      "scopedViewCharacters": 11460,
+      "scopedViewSha256": "0dc8b6aab4b8d86bf71eb8bcecacf2d2498981452c210ac3c909fcf148f32ba4",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "b1018c7cf03e5651265f6bed8621d2bb6e54b97c701216a84c3496e9bc0df493",
+      "snapshotCharacters": 100308,
+      "snapshotNormalizedTextSha256": "b1018c7cf03e5651265f6bed8621d2bb6e54b97c701216a84c3496e9bc0df493",
+      "snapshotFileSha256": "99d374e450330eff7f4cb724627269f47e8b484a8ced1888c85499416aa1181f",
+      "sourceContentSha256": "3d5eb5b144b2b7cf642465e2f27ea5bfb648269d5d6a9e7789287dd1837acff7",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 2,
+          "endCharacter": 151,
+          "sha256": "cbbf4eef893afafe6d132d25d64dace5c38b4984e6abd6320a14859c1ddff5e7",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": false
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 2700,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 2700,
+          "sha256": "a78d74216f654acc4c5b280c0e08b3fe8b7f22ec9dcad4bdc0db8b8055df1811"
+        },
+        {
+          "originalStartCharacter": 3900,
+          "originalEndCharacter": 5950,
+          "inputStartCharacter": 2792,
+          "inputEndCharacter": 4842,
+          "sha256": "caa6abd206b4bfacb39c95e60829217162617646b9b135d761641914a5dc2b0e"
+        },
+        {
+          "originalStartCharacter": 12350,
+          "originalEndCharacter": 14400,
+          "inputStartCharacter": 4934,
+          "inputEndCharacter": 6984,
+          "sha256": "f5e05bdc7bf945cc7682fbcbbaa98fa810600ec2f6746a2d0fe0778160a9b89b"
+        },
+        {
+          "originalStartCharacter": 29250,
+          "originalEndCharacter": 30650,
+          "inputStartCharacter": 7076,
+          "inputEndCharacter": 8476,
+          "sha256": "abf2595722c96ae20e52c6457f443cbaaa01a5e6f0aebf79d9ace961a682bdba"
+        },
+        {
+          "originalStartCharacter": 40950,
+          "originalEndCharacter": 42350,
+          "inputStartCharacter": 8568,
+          "inputEndCharacter": 9968,
+          "sha256": "0cef8ccde232ac09aaa798203e159647c41b2f8b306d147d8b2f1d9ca7a41d6e"
+        },
+        {
+          "originalStartCharacter": 50700,
+          "originalEndCharacter": 52100,
+          "inputStartCharacter": 10060,
+          "inputEndCharacter": 11460,
+          "sha256": "cb752759c0b3b4a7400d58e416d47012d69a86fa04dbb7df9362844d9524dde8"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569713/",
+        "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569713/",
+        "httpStatus": 200,
+        "bytes": 275878,
+        "retrievedAt": "2026-10-01T18:29:31.625763+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "5296df3786c796ca31db31f57cf345b5b88d74cddc4243b14d4341a306fb34ef",
+        "textCharacters": 115077,
+        "textSha256": "44bcb9a1f5797136cf1aa0fb7ad193c7d7cdedd9409ffa5f22f662896b81638b",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r09-d12",
+      "packet": 9,
+      "title": "Design of an Autonomous Precision Pollination Robot (BrambleBee)",
+      "url": "https://arxiv.org/pdf/1808.10010",
+      "primaryRole": "original-research",
+      "contentHash": "0d038ac032a7059640316c7d581937e00bedbba2aa06814b9b60fa06575c9c44",
+      "retrievedAt": "2026-09-30T02:25:15.241Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "2407086216c043bfed5b098c6e14f845c27c3ff79315bf81416e55147f332b34",
+      "scopedViewCharacters": 11726,
+      "scopedViewSha256": "2407086216c043bfed5b098c6e14f845c27c3ff79315bf81416e55147f332b34",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "4f779c8a6891567256a6565db3bf4cf2dd0375b8fcdbbbf62bf4b7fab859ab60",
+      "snapshotCharacters": 44083,
+      "snapshotNormalizedTextSha256": "4f779c8a6891567256a6565db3bf4cf2dd0375b8fcdbbbf62bf4b7fab859ab60",
+      "snapshotFileSha256": "81efb5c3384736ecfe81043bfd6d42652fdd17a1015a6065a7bd454cb99dc468",
+      "sourceContentSha256": "0d038ac032a7059640316c7d581937e00bedbba2aa06814b9b60fa06575c9c44",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 657,
+          "endCharacter": 777,
+          "sha256": "770be20461da70d454a37035db703fe32126336a960db71105c9ae4d2f0619a9",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 5950,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 5950,
+          "sha256": "3ac41243334ea000568c4f9a6f416c8068e8534ba4305f55085e33f219677cb3"
+        },
+        {
+          "originalStartCharacter": 13000,
+          "originalEndCharacter": 15050,
+          "inputStartCharacter": 6042,
+          "inputEndCharacter": 8092,
+          "sha256": "1d8a9ed3803ce3a664c8b5ccc2d3b7fab55e74427da3ac4569c49a87a6bfdbdd"
+        },
+        {
+          "originalStartCharacter": 33150,
+          "originalEndCharacter": 35200,
+          "inputStartCharacter": 8184,
+          "inputEndCharacter": 10234,
+          "sha256": "0cb11ebaa7a8db60cabcc821ffa824fe005d9f26a878b6d8d70637388c91e1a6"
+        },
+        {
+          "originalStartCharacter": 37700,
+          "originalEndCharacter": 39100,
+          "inputStartCharacter": 10326,
+          "inputEndCharacter": 11726,
+          "sha256": "f9eaa8857ca485c06b47b8311c0b3003697819b080398e2df9a9527489119ef6"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://arxiv.org/pdf/1808.10010",
+        "finalUrl": "https://arxiv.org/pdf/1808.10010",
+        "httpStatus": 200,
+        "bytes": 1141041,
+        "retrievedAt": "2026-10-01T18:29:31.892849+00:00",
+        "contentType": "application/pdf",
+        "rawSha256": "fe6762160863c9fcfe31d4b612c70799ac23ab00eca247768242a6cd3be7528a",
+        "textCharacters": 44855,
+        "textSha256": "3501468da604a9a3b8a490b1f6f78c02039d348811ee98a0e0b792e880f6099e",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r10-d01",
+      "packet": 10,
+      "title": "Multi-Agent target allocation and safe trajectory planning for artificial pollination tasks",
+      "url": "https://doi.org/10.1016/j.atech.2024.100461",
+      "primaryRole": "original-research",
+      "contentHash": "aa7d2f2031d5cb1ceb52b4fda79f97ada67896d350f4bd252c1fb63fffee1f55",
+      "retrievedAt": "2026-09-30T02:16:43.452Z",
+      "contentAccess": "abstract-and-metadata",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "e009ece72fa2c62dfe44f93e39b2c0c26b060c0b50214826ae2bde9f73a5f0d6",
+      "scopedViewCharacters": 7081,
+      "scopedViewSha256": "e009ece72fa2c62dfe44f93e39b2c0c26b060c0b50214826ae2bde9f73a5f0d6",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "e009ece72fa2c62dfe44f93e39b2c0c26b060c0b50214826ae2bde9f73a5f0d6",
+      "snapshotCharacters": 7081,
+      "snapshotNormalizedTextSha256": "e009ece72fa2c62dfe44f93e39b2c0c26b060c0b50214826ae2bde9f73a5f0d6",
+      "snapshotFileSha256": "a7d2b0d59ba95886158478cf3d0d1cb2fe064dfe8562d4940b3a440b4aa3733c",
+      "sourceContentSha256": "aa7d2f2031d5cb1ceb52b4fda79f97ada67896d350f4bd252c1fb63fffee1f55",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 14,
+          "endCharacter": 193,
+          "sha256": "1eec193325ff0e6b6a39b6c710df1c2e923fb4876a2097a45b30536aa7743cbb",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": false
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 7081,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 7081,
+          "sha256": "e009ece72fa2c62dfe44f93e39b2c0c26b060c0b50214826ae2bde9f73a5f0d6"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://doi.org/10.1016/j.atech.2024.100461",
+        "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/S2772375524000662",
+        "httpStatus": 200,
+        "bytes": 2705,
+        "retrievedAt": "2026-10-01T18:29:33.985084+00:00",
+        "contentType": "text/html;charset=UTF-8",
+        "rawSha256": "811796f42a7ad42a645b055064140770357c70f7cb5b6ff41872f528fbf610b4",
+        "textCharacters": 83,
+        "textSha256": "0103898be0feb7929f74eea793e6aa03713983146d6b5c1d7f9d35343a9553c2",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r10-d02",
+      "packet": 10,
+      "title": "Perception, Path Planning, and Flight Control for a Drone-Enabled Autonomous Pollination System",
+      "url": "https://www.mdpi.com/2218-6581/11/6/144",
+      "primaryRole": "original-research",
+      "contentHash": "c29e092533fa7bb176830412c667d30bd92241c2811655d43ef68ee5f1f24b7b",
+      "retrievedAt": "2026-09-30T02:16:43.452Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "a0370a83f463e1089fd7117ca56ce2204343f63b7de41114b24e68d01d40395f",
+      "scopedViewCharacters": 11860,
+      "scopedViewSha256": "a0370a83f463e1089fd7117ca56ce2204343f63b7de41114b24e68d01d40395f",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "41c64dc704598de22163d4ee3b128dc307f51342986ccbcea238f63e5c0f1226",
+      "snapshotCharacters": 97225,
+      "snapshotNormalizedTextSha256": "41c64dc704598de22163d4ee3b128dc307f51342986ccbcea238f63e5c0f1226",
+      "snapshotFileSha256": "8dfaf2b22e464bbb0e94ea4ad59e7906064cffe185f19b0711779dd75d63a05a",
+      "sourceContentSha256": "c29e092533fa7bb176830412c667d30bd92241c2811655d43ef68ee5f1f24b7b",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 4180,
+          "endCharacter": 4308,
+          "sha256": "7939a8b65964b2e52ae0e3685bbd767df0d80e4d5e42921cabc7cb9f7dab991c",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": null
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 1400,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 1400,
+          "sha256": "af98db7711a54370c1da0e3b607c74e0e21b1a703dec820b597b178b044471ca"
+        },
+        {
+          "originalStartCharacter": 3250,
+          "originalEndCharacter": 4858,
+          "inputStartCharacter": 1492,
+          "inputEndCharacter": 3100,
+          "sha256": "af046e46a9f8a033351010823a6b009056a64c4754f1844e0d30bde99f32eafa"
+        },
+        {
+          "originalStartCharacter": 7150,
+          "originalEndCharacter": 8550,
+          "inputStartCharacter": 3192,
+          "inputEndCharacter": 4592,
+          "sha256": "2d57e4818895565558e57ee129230c3ac329b17a7ea67e5e3ab39978903da5d6"
+        },
+        {
+          "originalStartCharacter": 9750,
+          "originalEndCharacter": 12450,
+          "inputStartCharacter": 4684,
+          "inputEndCharacter": 7384,
+          "sha256": "865b47969fe8c75c14cac9a3676de11a1e68ceb2338831a11b65c03f81cddfe8"
+        },
+        {
+          "originalStartCharacter": 24700,
+          "originalEndCharacter": 26100,
+          "inputStartCharacter": 7476,
+          "inputEndCharacter": 8876,
+          "sha256": "86b1e814adc6f2a4b18a64572811c6f4fcc1e03b77dc0a4b8669c399b0b93392"
+        },
+        {
+          "originalStartCharacter": 52650,
+          "originalEndCharacter": 54050,
+          "inputStartCharacter": 8968,
+          "inputEndCharacter": 10368,
+          "sha256": "6f72d244b9765676e54bc217334c56f8afb18258cf8a27fa2b6afe8844b6af7b"
+        },
+        {
+          "originalStartCharacter": 67600,
+          "originalEndCharacter": 69000,
+          "inputStartCharacter": 10460,
+          "inputEndCharacter": 11860,
+          "sha256": "d62820d7ca8f717282affd91eac92a73561d66ef8664bf1a05a49927954e7939"
+        }
+      ],
+      "liveOriginal": {
+        "state": "http-unavailable",
+        "url": "https://www.mdpi.com/2218-6581/11/6/144",
+        "finalUrl": null,
+        "httpStatus": 403,
+        "bytes": null,
+        "retrievedAt": null,
+        "contentType": null,
+        "rawSha256": null,
+        "textCharacters": null,
+        "textSha256": null,
+        "textAvailable": null,
+        "licenseReview": null
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r10-d03",
+      "packet": 10,
+      "title": "Programmable collective behavior in dynamically self-assembled mobile microrobotic swarms",
+      "url": "https://arxiv.org/abs/1807.09702",
+      "primaryRole": "original-research",
+      "contentHash": "67e535c3e86d633a73fcb12d4ceeec6466d56a43f84fbc6b9a2eaa056fd513de",
+      "retrievedAt": "2026-09-30T02:16:43.452Z",
+      "contentAccess": "abstract-and-metadata",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "214cedd599a2d617675563e13300ecab35452a11ab8273e57d7d97fe60005840",
+      "scopedViewCharacters": 4267,
+      "scopedViewSha256": "214cedd599a2d617675563e13300ecab35452a11ab8273e57d7d97fe60005840",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "214cedd599a2d617675563e13300ecab35452a11ab8273e57d7d97fe60005840",
+      "snapshotCharacters": 4267,
+      "snapshotNormalizedTextSha256": "214cedd599a2d617675563e13300ecab35452a11ab8273e57d7d97fe60005840",
+      "snapshotFileSha256": "71c0f7b11b053277de582d2f2e2c74b8b162a4cf78fb1e3c9db3abad9c1a025a",
+      "sourceContentSha256": "67e535c3e86d633a73fcb12d4ceeec6466d56a43f84fbc6b9a2eaa056fd513de",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 1034,
+          "endCharacter": 1106,
+          "sha256": "f71f7f363ee25417c1475ef1b4524109801c4ff9fb92da3bb47a56fd09406837",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 4267,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 4267,
+          "sha256": "214cedd599a2d617675563e13300ecab35452a11ab8273e57d7d97fe60005840"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://arxiv.org/abs/1807.09702",
+        "finalUrl": "https://arxiv.org/abs/1807.09702",
+        "httpStatus": 200,
+        "bytes": 42400,
+        "retrievedAt": "2026-10-01T18:29:32.354488+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "49ada3a705d6992a5c54a0bc94589041be5baf74b7e3f359060374606b519b99",
+        "textCharacters": 9628,
+        "textSha256": "b39a208da54f02089f47436a57842366d295031f2de279ed4a2b2dc6dc167404",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r10-d04",
+      "packet": 10,
+      "title": "Cohesive self-organization of mobile microrobotic swarms",
+      "url": "https://arxiv.org/abs/1907.05856",
+      "primaryRole": "original-research",
+      "contentHash": "25745af6304446941b3790a16b3fcec727218e67e855afd6cdc4d6e2dcbd5ed7",
+      "retrievedAt": "2026-09-30T02:16:43.452Z",
+      "contentAccess": "abstract-and-metadata",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "97e4e8e058702348585d9dd69b509248ac101e78b9b5632db89128e18c3c65fd",
+      "scopedViewCharacters": 4036,
+      "scopedViewSha256": "97e4e8e058702348585d9dd69b509248ac101e78b9b5632db89128e18c3c65fd",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "97e4e8e058702348585d9dd69b509248ac101e78b9b5632db89128e18c3c65fd",
+      "snapshotCharacters": 4036,
+      "snapshotNormalizedTextSha256": "97e4e8e058702348585d9dd69b509248ac101e78b9b5632db89128e18c3c65fd",
+      "snapshotFileSha256": "81ea1ca650380e06085b5c62ca2d6094c5b80f1a1498c04eb8be7f4742df65c9",
+      "sourceContentSha256": "25745af6304446941b3790a16b3fcec727218e67e855afd6cdc4d6e2dcbd5ed7",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 758,
+          "endCharacter": 909,
+          "sha256": "0f9a002053b4e300ed28cee608784c2a8be6ad75e29c1f438a80e49c715e080e",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 4036,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 4036,
+          "sha256": "97e4e8e058702348585d9dd69b509248ac101e78b9b5632db89128e18c3c65fd"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://arxiv.org/abs/1907.05856",
+        "finalUrl": "https://arxiv.org/abs/1907.05856",
+        "httpStatus": 200,
+        "bytes": 41897,
+        "retrievedAt": "2026-10-01T18:29:32.416763+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "32f56e9d8daa7296c75adab970f03c148a89c7a1e122744075794d88c8502ae1",
+        "textCharacters": 9414,
+        "textSha256": "90036535e49f0e76e5f6d77a43f68d4d83310b785c5f7d8c1c0d0a9152708959",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r10-d05",
+      "packet": 10,
+      "title": "Programmable self-organization of heterogeneous microrobot collectives",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10268276/",
+      "primaryRole": "original-research",
+      "contentHash": "f749b7bb5e6fc14573ee08390a77ec7b8c10ae2194c9d96c45936f19d8709e52",
+      "retrievedAt": "2026-09-30T02:16:43.452Z",
+      "contentAccess": "abstract-and-metadata",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "0341c9d25e003f038c3fd2023c8306cb1e745a6dd9991a427a35d470c095f863",
+      "scopedViewCharacters": 11704,
+      "scopedViewSha256": "0341c9d25e003f038c3fd2023c8306cb1e745a6dd9991a427a35d470c095f863",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "23f5e8e2f5e122ac31637be1e5fccd0b09e6629ce14b848f465fe4b17e08abeb",
+      "snapshotCharacters": 70352,
+      "snapshotNormalizedTextSha256": "23f5e8e2f5e122ac31637be1e5fccd0b09e6629ce14b848f465fe4b17e08abeb",
+      "snapshotFileSha256": "6ad48534904eeeef9b501b05ee55f57891904c9d81c41d144b1dcd73dbbac4b2",
+      "sourceContentSha256": "f749b7bb5e6fc14573ee08390a77ec7b8c10ae2194c9d96c45936f19d8709e52",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 2,
+          "endCharacter": 197,
+          "sha256": "e9a35a6490c2e1772883277881e2327013d4a868d59bd5b2bf70bb11cd19d0c6",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": false
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 2700,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 2700,
+          "sha256": "8295c8e76398d1a8df76669bf5a6e1ff648f185e6ed15d8b17c90744a80f03f1"
+        },
+        {
+          "originalStartCharacter": 14950,
+          "originalEndCharacter": 16350,
+          "inputStartCharacter": 2792,
+          "inputEndCharacter": 4192,
+          "sha256": "d4376c9c6262909a311bf0d39d0342da9cb92ee96eb2e79548ceedc00d722c5c"
+        },
+        {
+          "originalStartCharacter": 44850,
+          "originalEndCharacter": 46250,
+          "inputStartCharacter": 4284,
+          "inputEndCharacter": 5684,
+          "sha256": "1beecd3e90e1cae0437fb0a0ef9a50a8916a0699c396ebc357a82707cbaf7400"
+        },
+        {
+          "originalStartCharacter": 51350,
+          "originalEndCharacter": 52750,
+          "inputStartCharacter": 5776,
+          "inputEndCharacter": 7176,
+          "sha256": "954d01a4728e83022e1994f5b0fcd8a13584722b35f93ca2e45e8a3f31ed8045"
+        },
+        {
+          "originalStartCharacter": 56550,
+          "originalEndCharacter": 59250,
+          "inputStartCharacter": 7268,
+          "inputEndCharacter": 9968,
+          "sha256": "83885ae2db349a10afa61e4f430b11afea501bae7d58d5d83c8e3628f2a1f2b0"
+        },
+        {
+          "originalStartCharacter": 60450,
+          "originalEndCharacter": 61850,
+          "inputStartCharacter": 10060,
+          "inputEndCharacter": 11460,
+          "sha256": "60f5a5d77ed704669c011619e5a6e3d96bfc763f3f9d7957cd624817094129bd"
+        },
+        {
+          "originalStartCharacter": 70200,
+          "originalEndCharacter": 70352,
+          "inputStartCharacter": 11552,
+          "inputEndCharacter": 11704,
+          "sha256": "b582e68dcc53e0f93c926839218761e2b9b36074de4aefbecbc62e2c4806fa8d"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10268276/",
+        "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10268276/",
+        "httpStatus": 200,
+        "bytes": 243305,
+        "retrievedAt": "2026-10-01T18:29:33.525676+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "1446e916b25380007de0b17073fe55cb39d9cc0c42790f188d8a1adb608c7d66",
+        "textCharacters": 89620,
+        "textSha256": "fabc8e9e0f0442ac5640123d9b09e170dc6f9449c14e0cd49b89ae5309fd066c",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r10-d06",
+      "packet": 10,
+      "title": "Enhanced multi agent coordination for drone swarm patrolling in durian orchards",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11914038/",
+      "primaryRole": "original-research",
+      "contentHash": "24897f1cd5ae206d085a6163e62b735b47c378bc61de6210580e67e7652fd361",
+      "retrievedAt": "2026-09-30T02:16:43.452Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "692a56a14b3c0a78a5dc0f6f404d608a3370aa62e65f3b11491ef402cd36e962",
+      "scopedViewCharacters": 11856,
+      "scopedViewSha256": "692a56a14b3c0a78a5dc0f6f404d608a3370aa62e65f3b11491ef402cd36e962",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "a1c265db9e8dcbb9816aa5f8ae2799a33ffb9e993c792aea7181416c4d5526eb",
+      "snapshotCharacters": 66067,
+      "snapshotNormalizedTextSha256": "a1c265db9e8dcbb9816aa5f8ae2799a33ffb9e993c792aea7181416c4d5526eb",
+      "snapshotFileSha256": "38e7a9b5ca6fd1840eb61224a31f06c78c950b0ac1c0d6f2d558bb852e6d2ba4",
+      "sourceContentSha256": "24897f1cd5ae206d085a6163e62b735b47c378bc61de6210580e67e7652fd361",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 4054,
+          "endCharacter": 4180,
+          "sha256": "2580d2563018f592e0126e30acdb7cac340afb356ebb0f1e7e83cdbaa0b35935",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 1400,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 1400,
+          "sha256": "a4670e67fbab81844776d65ea38722df786f808f47b0839b5b08512987549999"
+        },
+        {
+          "originalStartCharacter": 3504,
+          "originalEndCharacter": 7250,
+          "inputStartCharacter": 1492,
+          "inputEndCharacter": 5238,
+          "sha256": "22f5542c7e9320ab4c759e7876274e264f371544088081e328242f2ffe7d62ac"
+        },
+        {
+          "originalStartCharacter": 8450,
+          "originalEndCharacter": 9850,
+          "inputStartCharacter": 5330,
+          "inputEndCharacter": 6730,
+          "sha256": "d2dc225b167fc155a02d1f8a975d171bf126eb0adfc9b3414f60876b3bb2d8d3"
+        },
+        {
+          "originalStartCharacter": 22100,
+          "originalEndCharacter": 24150,
+          "inputStartCharacter": 6822,
+          "inputEndCharacter": 8872,
+          "sha256": "131ce2a2f2679839bb395403e8689c862d4d6ff6c00fb538c75b4de702d94e9f"
+        },
+        {
+          "originalStartCharacter": 42250,
+          "originalEndCharacter": 43650,
+          "inputStartCharacter": 8964,
+          "inputEndCharacter": 10364,
+          "sha256": "273d9b43ac26e731dc5f9b8010e9d07764ad764becafc4f0757cdb056fbf96b5"
+        },
+        {
+          "originalStartCharacter": 48750,
+          "originalEndCharacter": 50150,
+          "inputStartCharacter": 10456,
+          "inputEndCharacter": 11856,
+          "sha256": "50226ce8d54af115a33315e9eca5691b04abc8244b1f0d32e5dd24c0eadef6c6"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11914038/",
+        "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11914038/",
+        "httpStatus": 200,
+        "bytes": 225776,
+        "retrievedAt": "2026-10-01T18:29:33.697116+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "e4e638c41a8770fe91107ff2907f66e6ebf322edb959e5f30aa86f7f38375d98",
+        "textCharacters": 77797,
+        "textSha256": "4a6a48585f8ebaf38186750a6efc3af9c9c1a35dda2661c671466839d266da23",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r10-d07",
+      "packet": 10,
+      "title": "Optimized flocking of autonomous drones in confined environments",
+      "url": "https://www.science.org/doi/10.1126/scirobotics.aat3536",
+      "primaryRole": "original-research",
+      "contentHash": "d01544047a1f3bb0424f648d95ac24d6ebf86f2612f7120e91879b32b1491380",
+      "retrievedAt": "2026-09-30T02:20:49.598Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "6a2f49a48768fc6212cff3ffba125cb0feffacf7c843118b63ddc89060e51448",
+      "scopedViewCharacters": 11918,
+      "scopedViewSha256": "6a2f49a48768fc6212cff3ffba125cb0feffacf7c843118b63ddc89060e51448",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "66a8f00f7e1d08fae90130fe2da02623c39fc3afb9a475830835599884f461d4",
+      "snapshotCharacters": 65732,
+      "snapshotNormalizedTextSha256": "66a8f00f7e1d08fae90130fe2da02623c39fc3afb9a475830835599884f461d4",
+      "snapshotFileSha256": "40e170aa28bb1b4290ab3ce5482bc634af1ea2c5127f610806fa1e5ee4d8f574",
+      "sourceContentSha256": "d01544047a1f3bb0424f648d95ac24d6ebf86f2612f7120e91879b32b1491380",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 1581,
+          "endCharacter": 1692,
+          "sha256": "fe1faf63c7b6d6e79f9214f67d4d0a1d8efcbf40a335ecc12563376d2252bdb7",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": null
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 2700,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 2700,
+          "sha256": "205754c1f51ac16ee949c438718a5156c62e4d7c2c4e8a0491fcb4647017561a"
+        },
+        {
+          "originalStartCharacter": 7800,
+          "originalEndCharacter": 9850,
+          "inputStartCharacter": 2792,
+          "inputEndCharacter": 4842,
+          "sha256": "7c0b10f9d63ad5fd5c7d7829272a6744eb0b8991c0ed321d5d76afeb11b8b93c"
+        },
+        {
+          "originalStartCharacter": 13650,
+          "originalEndCharacter": 15050,
+          "inputStartCharacter": 4934,
+          "inputEndCharacter": 6334,
+          "sha256": "d4d43cab59c70fec8ec1640e388904119a0acfb97a96452eb89237a80249895d"
+        },
+        {
+          "originalStartCharacter": 24050,
+          "originalEndCharacter": 25450,
+          "inputStartCharacter": 6426,
+          "inputEndCharacter": 7826,
+          "sha256": "09fb632d87f9ae042aa47e153249f29dc8d9c1883f8d1170d8d19dd5a48bea76"
+        },
+        {
+          "originalStartCharacter": 55250,
+          "originalEndCharacter": 59250,
+          "inputStartCharacter": 7918,
+          "inputEndCharacter": 11918,
+          "sha256": "eecf896fa204a75aa071c6c2edd935115a11e91c340017a8bca778768b87f8f7"
+        }
+      ],
+      "liveOriginal": {
+        "state": "http-unavailable",
+        "url": "https://www.science.org/doi/10.1126/scirobotics.aat3536",
+        "finalUrl": null,
+        "httpStatus": 403,
+        "bytes": null,
+        "retrievedAt": null,
+        "contentType": null,
+        "rawSha256": null,
+        "textCharacters": null,
+        "textSha256": null,
+        "textAvailable": null,
+        "licenseReview": null
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r10-d08",
+      "packet": 10,
+      "title": "Outdoor flocking and formation flight with autonomous aerial robots",
+      "url": "https://hal.elte.hu/~vasarhelyi/doc/vasarhelyi2014outdoor.pdf",
+      "primaryRole": "original-research",
+      "contentHash": "606fba342f36defa611e2274ffdcd2dbb5c0adadaf0d0cc286c869841919d727",
+      "retrievedAt": "2026-09-30T02:20:49.598Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "09d128536c4e6ebc5d33081758262cedce2408253d6b193861dc0a1facf27d43",
+      "scopedViewCharacters": 11918,
+      "scopedViewSha256": "09d128536c4e6ebc5d33081758262cedce2408253d6b193861dc0a1facf27d43",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "d64040b73bfbd989351048ded5b9c8bc18b7d82260609d2a1610f12ed27893b7",
+      "snapshotCharacters": 43868,
+      "snapshotNormalizedTextSha256": "d64040b73bfbd989351048ded5b9c8bc18b7d82260609d2a1610f12ed27893b7",
+      "snapshotFileSha256": "5133fa4f529dc3055bb431d6d5e55262284af42a1641ea3af4696fc8b9ff0687",
+      "sourceContentSha256": "606fba342f36defa611e2274ffdcd2dbb5c0adadaf0d0cc286c869841919d727",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 2004,
+          "endCharacter": 2116,
+          "sha256": "1cef7d1798c46824c9863d84136f0d2c371a629b4f94fa34f984057af438632b",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 2700,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 2700,
+          "sha256": "1a949210ed2e3efe02b8be07c66287795dd831dc304ad95156353676c698fb71"
+        },
+        {
+          "originalStartCharacter": 3250,
+          "originalEndCharacter": 5300,
+          "inputStartCharacter": 2792,
+          "inputEndCharacter": 4842,
+          "sha256": "154ab2cde8088e0e647e34c4d4639a55fc1d72117a099ab9f379c139e4ff695d"
+        },
+        {
+          "originalStartCharacter": 7150,
+          "originalEndCharacter": 11150,
+          "inputStartCharacter": 4934,
+          "inputEndCharacter": 8934,
+          "sha256": "f322119994125a57e04832bedca0a5da4d73684be5a82d0beaa1658ee2b084d5"
+        },
+        {
+          "originalStartCharacter": 13650,
+          "originalEndCharacter": 15050,
+          "inputStartCharacter": 9026,
+          "inputEndCharacter": 10426,
+          "sha256": "8d726811b428c5fcb950113c89f8e791c729ac651cfdd5b1f02270e19b57fd20"
+        },
+        {
+          "originalStartCharacter": 40300,
+          "originalEndCharacter": 41700,
+          "inputStartCharacter": 10518,
+          "inputEndCharacter": 11918,
+          "sha256": "1893e19e358820bbca43fd7bd226f9a319f31ad44e3e6983f16abffddd5c41e7"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://hal.elte.hu/~vasarhelyi/doc/vasarhelyi2014outdoor.pdf",
+        "finalUrl": "https://hal.elte.hu/~vasarhelyi/doc/vasarhelyi2014outdoor.pdf",
+        "httpStatus": 200,
+        "bytes": 898284,
+        "retrievedAt": "2026-10-01T18:29:35.139624+00:00",
+        "contentType": "application/pdf",
+        "rawSha256": "2bf13332b12b2d358b9db93d62b6047ea2702b0b0d8d91f96a38d198af0854cf",
+        "textCharacters": 43200,
+        "textSha256": "2132bc5a4db8230d1a83337f6d328bf1bbaf90cb84a7c98f750f0647720a6f25",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r10-d09",
+      "packet": 10,
+      "title": "Swarm of micro flying robots in the wild",
+      "url": "https://www.science.org/doi/10.1126/scirobotics.abm5954",
+      "primaryRole": "original-research",
+      "contentHash": "51a109c7d3d3fc4a4844230c2718be4497375587739e57f3b67057a101260beb",
+      "retrievedAt": "2026-09-30T02:20:49.598Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "77e86df142aeab6858045e1012ccb25589885100447eff058197a7fa04aa5dae",
+      "scopedViewCharacters": 11915,
+      "scopedViewSha256": "77e86df142aeab6858045e1012ccb25589885100447eff058197a7fa04aa5dae",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "24c1392ba2ac990625427abbcb5ce2edaefcdd4f0302574d72fd2e427899d0d1",
+      "snapshotCharacters": 17189,
+      "snapshotNormalizedTextSha256": "24c1392ba2ac990625427abbcb5ce2edaefcdd4f0302574d72fd2e427899d0d1",
+      "snapshotFileSha256": "aeae5ef48ebf6215768a087d21bb8acccb043c8c264df0eec03b78d93f2d9685",
+      "sourceContentSha256": "51a109c7d3d3fc4a4844230c2718be4497375587739e57f3b67057a101260beb",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 17,
+          "endCharacter": 122,
+          "sha256": "17e9ddb41c909a19de5396f94b5468d1c3047d89502355b259ac9057d2958470",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": null
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 2700,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 2700,
+          "sha256": "2aac0c36e75aa301ade616762a7658609856694f7eac8422e4d168d3ec20184a"
+        },
+        {
+          "originalStartCharacter": 3250,
+          "originalEndCharacter": 4650,
+          "inputStartCharacter": 2792,
+          "inputEndCharacter": 4192,
+          "sha256": "eb70a3442a3c751442afbacb024ba932878be5a61f747e201af6fc5f19f606af"
+        },
+        {
+          "originalStartCharacter": 5200,
+          "originalEndCharacter": 11150,
+          "inputStartCharacter": 4284,
+          "inputEndCharacter": 10234,
+          "sha256": "9f333d8f5c0c5a5e37b97e38976b15db88104ea4b03d04893f214dd54c18402a"
+        },
+        {
+          "originalStartCharacter": 15600,
+          "originalEndCharacter": 17189,
+          "inputStartCharacter": 10326,
+          "inputEndCharacter": 11915,
+          "sha256": "957ae3bf5cdb3083c2587b2654baaa07e5720525c2c2edd24500a00c2e70ad09"
+        }
+      ],
+      "liveOriginal": {
+        "state": "http-unavailable",
+        "url": "https://www.science.org/doi/10.1126/scirobotics.abm5954",
+        "finalUrl": null,
+        "httpStatus": 403,
+        "bytes": null,
+        "retrievedAt": null,
+        "contentType": null,
+        "rawSha256": null,
+        "textCharacters": null,
+        "textSha256": null,
+        "textAvailable": null,
+        "licenseReview": null
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r10-d10",
+      "packet": 10,
+      "title": "Target detection and path planning for drone pollination in durian orchards",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12214751/",
+      "primaryRole": "original-research",
+      "contentHash": "7ce7733c3da8e20c2bdbccf18fd1744878f420c0cb6472fe2547b68ecd6af000",
+      "retrievedAt": "2026-09-30T02:20:49.598Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "26960e4ba934d3e4b10a24ce876aeb8527b391585dd78747a7298c3f0de241f2",
+      "scopedViewCharacters": 11839,
+      "scopedViewSha256": "26960e4ba934d3e4b10a24ce876aeb8527b391585dd78747a7298c3f0de241f2",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "8438cdf5d4adac785f4692b4d12d6e6ee95fb8bf0feb2c83ca94062f8a7c4988",
+      "snapshotCharacters": 82074,
+      "snapshotNormalizedTextSha256": "8438cdf5d4adac785f4692b4d12d6e6ee95fb8bf0feb2c83ca94062f8a7c4988",
+      "snapshotFileSha256": "5f4d4aba17c280ae4bfb9c544d7bb37e6c892c26d3ba6518fff161bace199a5a",
+      "sourceContentSha256": "7ce7733c3da8e20c2bdbccf18fd1744878f420c0cb6472fe2547b68ecd6af000",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 2313,
+          "endCharacter": 2463,
+          "sha256": "f50f2be421c14b8dbc1da3561ce3173c406f14fd95f398d631a710f57b64ddf2",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 1400,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 1400,
+          "sha256": "bd675ea6c0374107fc71a3ff09fa2aaa4560b44f6ba476f61a61b7f8f29faf29"
+        },
+        {
+          "originalStartCharacter": 1763,
+          "originalEndCharacter": 4650,
+          "inputStartCharacter": 1492,
+          "inputEndCharacter": 4379,
+          "sha256": "8a9f87e3ed72139d834d2cfd44df72870a028dbfecb03d79d3313d6840b2a1dd"
+        },
+        {
+          "originalStartCharacter": 18200,
+          "originalEndCharacter": 19600,
+          "inputStartCharacter": 4471,
+          "inputEndCharacter": 5871,
+          "sha256": "84da317d74fdcdfd901bc5d43f9ee0ef66f1da3dd6582e057f060c7a5a8bd941"
+        },
+        {
+          "originalStartCharacter": 33800,
+          "originalEndCharacter": 35200,
+          "inputStartCharacter": 5963,
+          "inputEndCharacter": 7363,
+          "sha256": "db7e9fbb60ac03122ffd1dcd9a602eb1139e60c99f74cecfd53fa108fe300b4f"
+        },
+        {
+          "originalStartCharacter": 40950,
+          "originalEndCharacter": 42350,
+          "inputStartCharacter": 7455,
+          "inputEndCharacter": 8855,
+          "sha256": "37d81d8fb910acb2b2b425d488792769299ca86c1f45aabc533e7ae45cb4026f"
+        },
+        {
+          "originalStartCharacter": 58500,
+          "originalEndCharacter": 59900,
+          "inputStartCharacter": 8947,
+          "inputEndCharacter": 10347,
+          "sha256": "aaa559f9ca639a63a676094c874a96d443b09e70fea536999d143704d8e8a29b"
+        },
+        {
+          "originalStartCharacter": 66300,
+          "originalEndCharacter": 67700,
+          "inputStartCharacter": 10439,
+          "inputEndCharacter": 11839,
+          "sha256": "955301cc534ea1a601430ee29a6626a65592fe54fde1809304046868d6f9b8ac"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12214751/",
+        "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12214751/",
+        "httpStatus": 200,
+        "bytes": 239731,
+        "retrievedAt": "2026-10-01T18:29:34.471659+00:00",
+        "contentType": "text/html; charset=utf-8",
+        "rawSha256": "322df085eeec63be530c2ecc7216b34b778cc4ddb1418d315b05fab7e7eca43d",
+        "textCharacters": 98197,
+        "textSha256": "36fe6853c1d536b140d0c0019276bfbe1066f0e2618d8009c38336c246dc60b0",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r10-d11",
+      "packet": 10,
+      "title": "Trajectory Planning of Multiple Unmanned Aerial Vehicles for Pollination",
+      "url": "https://www.casb.org.cn/EN/abstract/abstract28391.shtml",
+      "primaryRole": "original-research",
+      "contentHash": "aa72c7cfcdbc9fdf5cc298e9f7d5810e33b9299181126a21f10983d01e29949f",
+      "retrievedAt": "2026-09-30T02:20:49.598Z",
+      "contentAccess": "abstract-and-metadata",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": false,
+      "benchmarkSnapshotSha256": "5f980351ed93e0e56db51abba15831508db8f92ca8ebbabc2f15a25de3b6b502",
+      "scopedViewCharacters": 9662,
+      "scopedViewSha256": "5f980351ed93e0e56db51abba15831508db8f92ca8ebbabc2f15a25de3b6b502",
+      "scopedViewSelectionMethod": "complete-frozen-snapshot",
+      "scopedViewOriginalFingerprint": "5f980351ed93e0e56db51abba15831508db8f92ca8ebbabc2f15a25de3b6b502",
+      "snapshotCharacters": 9662,
+      "snapshotNormalizedTextSha256": "5f980351ed93e0e56db51abba15831508db8f92ca8ebbabc2f15a25de3b6b502",
+      "snapshotFileSha256": "0ca24b59cac498d25b109b1c09090cc957c89e1708d1fbe23e25f6f00ade0614",
+      "sourceContentSha256": "aa72c7cfcdbc9fdf5cc298e9f7d5810e33b9299181126a21f10983d01e29949f",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": false,
+      "selectedPassages": [
+        {
+          "startCharacter": 1634,
+          "endCharacter": 1768,
+          "sha256": "3a9672b3d8d2f40ed01345fed118327d903c301a623a2e8933f5737634186d46",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": true
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 9662,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 9662,
+          "sha256": "5f980351ed93e0e56db51abba15831508db8f92ca8ebbabc2f15a25de3b6b502"
+        }
+      ],
+      "liveOriginal": {
+        "state": "retrieved",
+        "url": "https://www.casb.org.cn/EN/abstract/abstract28391.shtml",
+        "finalUrl": "https://www.casb.org.cn/EN/abstract/abstract28391.shtml",
+        "httpStatus": 200,
+        "bytes": 77871,
+        "retrievedAt": "2026-10-01T18:29:37.455006+00:00",
+        "contentType": "text/html;charset=UTF-8",
+        "rawSha256": "50d02a13af8a7e162094d820bf83bf18fc6aa8ed1198f748d58f4e65b33eb80a",
+        "textCharacters": 28533,
+        "textSha256": "624cffa034c88d9275e49658a40b6c10524e84f5400996b1d38fe421e9e70e75",
+        "textAvailable": true,
+        "licenseReview": "link-observation-only-rights-not-cleared"
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    },
+    {
+      "id": "r10-d12",
+      "packet": 10,
+      "title": "Trajectory Planning for Quadrotor Swarms",
+      "url": "http://act.cs.brown.edu/publications/Hoenig_TRO2018.pdf",
+      "primaryRole": "original-research",
+      "contentHash": "c1b9fc632b13fcafcfc1e62fea7a707f2e17a335fe1110bb600ba8ba0a00154d",
+      "retrievedAt": "2026-09-30T02:26:59.713Z",
+      "contentAccess": "retrieved-page-content",
+      "redistribution": "Metadata and original links only; full text redistribution not cleared.",
+      "admissionStatus": "candidate-pending-review",
+      "benchmarkTextTruncated": true,
+      "benchmarkSnapshotSha256": "2c1c01b49eddb0b041daa4b99d21bc343a0e7da3f36b581dd87e3fabc2e42cee",
+      "scopedViewCharacters": 11638,
+      "scopedViewSha256": "2c1c01b49eddb0b041daa4b99d21bc343a0e7da3f36b581dd87e3fabc2e42cee",
+      "scopedViewSelectionMethod": "question-lexical-windows-plus-inspected-prose-and-introduction",
+      "scopedViewOriginalFingerprint": "8c81e2e03630fec924f80d68e9d872ce13d617208713c85460ee0aafcac659f8",
+      "snapshotCharacters": 75486,
+      "snapshotNormalizedTextSha256": "8c81e2e03630fec924f80d68e9d872ce13d617208713c85460ee0aafcac659f8",
+      "snapshotFileSha256": "1932610d467d6725aad4f4516ae7895e97e52544b8df026c7ee69d01db402a3a",
+      "sourceContentSha256": "c1b9fc632b13fcafcfc1e62fea7a707f2e17a335fe1110bb600ba8ba0a00154d",
+      "sourceContentFingerprintMatches": true,
+      "passageReview": "agent-candidate-human-semantic-review-pending",
+      "licenseReview": "rights-not-cleared",
+      "historicalPrefixInputTruncated": true,
+      "selectedPassages": [
+        {
+          "startCharacter": 844,
+          "endCharacter": 958,
+          "sha256": "78c9e2a31256badedb295f8af4088733f7ef378b31af56595a208a8b1c380963",
+          "selectionMethod": "review-anchor-prose-window",
+          "semanticReview": "agent-candidate-not-human-reference",
+          "locationUnit": "Unicode character offsets in frozen original snapshot",
+          "exactInSnapshot": true,
+          "exactInBenchmarkInput": true,
+          "normalizedInCurrentOriginal": null
+        }
+      ],
+      "scopedViewExcerptMap": [
+        {
+          "originalStartCharacter": 0,
+          "originalEndCharacter": 2050,
+          "inputStartCharacter": 0,
+          "inputEndCharacter": 2050,
+          "sha256": "32dc90e71e16b76c6066b3dfb8a2ba4bb7197408927d984c4876c4ea91a9e70c"
+        },
+        {
+          "originalStartCharacter": 3250,
+          "originalEndCharacter": 4650,
+          "inputStartCharacter": 2142,
+          "inputEndCharacter": 3542,
+          "sha256": "2f43951c5358888950d8de162b7b3bb7ba4b97a4657cce87454adffb7642493e"
+        },
+        {
+          "originalStartCharacter": 11050,
+          "originalEndCharacter": 13100,
+          "inputStartCharacter": 3634,
+          "inputEndCharacter": 5684,
+          "sha256": "93b0fd950429cc302345d0813bb628c697c52b97f001d55543504bd325b38634"
+        },
+        {
+          "originalStartCharacter": 18200,
+          "originalEndCharacter": 19600,
+          "inputStartCharacter": 5776,
+          "inputEndCharacter": 7176,
+          "sha256": "88ac58682eabedc1627cfd0245bb78132cedeb765e421af7b4d74ff7c03c220d"
+        },
+        {
+          "originalStartCharacter": 38350,
+          "originalEndCharacter": 39750,
+          "inputStartCharacter": 7268,
+          "inputEndCharacter": 8668,
+          "sha256": "572b9e5f6884ba35adc3a218e6d418156ca91d339acba6a4007eacb6c1a357bc"
+        },
+        {
+          "originalStartCharacter": 50050,
+          "originalEndCharacter": 51450,
+          "inputStartCharacter": 8760,
+          "inputEndCharacter": 10160,
+          "sha256": "222d52993d044c63a009e15527513a4eb63f957158e2a6ca6442f1bd4a8e763a"
+        },
+        {
+          "originalStartCharacter": 74100,
+          "originalEndCharacter": 75486,
+          "inputStartCharacter": 10252,
+          "inputEndCharacter": 11638,
+          "sha256": "f2cca496b79701aca7fcd002bc70856793d9d9e598a98429668dbbee2f77a574"
+        }
+      ],
+      "liveOriginal": {
+        "state": "response-bound-exceeded",
+        "url": "http://act.cs.brown.edu/publications/Hoenig_TRO2018.pdf",
+        "finalUrl": "http://act.cs.brown.edu/publications/Hoenig_TRO2018.pdf",
+        "httpStatus": 200,
+        "bytes": 2097153,
+        "retrievedAt": "2026-10-01T18:29:37.041160+00:00",
+        "contentType": "application/pdf",
+        "rawSha256": "3a011d04cc0f990c1400a7785ca4eb9fcf681652f7e0d57ae61f1ec26dfffa49",
+        "textCharacters": null,
+        "textSha256": null,
+        "textAvailable": false,
+        "licenseReview": null
+      },
+      "sourceTextIncluded": false,
+      "humanSemanticReview": "pending"
+    }
+  ]
+}

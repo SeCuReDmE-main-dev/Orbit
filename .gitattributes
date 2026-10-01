@@ -1,0 +1,5 @@
+# Preserve the exact bytes of the immutable Kaggle Suite C evidence snapshot.
+/.benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/frozen-c-sdkparams2/** -text
+# These two publication notes are not hashed inputs in the snapshot manifest.
+/.benchmark/**/frozen-c-sdkparams2/README.md text eol=lf
+/.benchmark/**/frozen-c-sdkparams2/snapshot-receipt.json text eol=lf

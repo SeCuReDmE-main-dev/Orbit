@@ -39,5 +39,16 @@
     "url": "https://www.kaggle.com/code/celebrum/orbit-v3-native-studio-publication-qa?scriptVersionId=354506752",
     "ordinaryNotebook": true,
     "runtimeSeconds": 25.6
+  },
+  "provenance": {
+    "controllerSource": "tools/learning-studio-authenticated-validation.ts",
+    "configuredControllerSourceSha256": "c3f7912cfd8c332d32594583b38804f98d4f258ae8ea862518098ca70bf6837b",
+    "configuredCloudBundleSha256": "e4e177ae566dfc88d9718f7fd664b718366906325415c443e824ce546db634e1",
+    "preparedKaggleCellSha256": "b3512eed183c1542348599d8361afbeb76ec8916a00eb6de1877625a8e6d6203",
+    "releaseManifestSha256": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046",
+    "proofScreenshot": "native-studio-login-chrome154-kaggle.png",
+    "proofScreenshotSha256": "b42b01a59f72e26855f37087dd6d1b4be19e5f081dc8beb6bba128a1bb069514",
+    "credentialsIncluded": false,
+    "scope": "Kaggle-dispatched login reload, not authenticated publication."
   }
 }

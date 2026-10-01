@@ -1,0 +1,27 @@
+{
+  "format": "orbit-frozen-c-source-snapshot-v1",
+  "campaignId": "orbit-kaggle-20261001-v2-sdkparams2",
+  "harnessSha256": "8f1eba8b70575fc57b7503b7b51d73bc309470f54484c0cc989950c735a41b05",
+  "engineSourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+  "notebookSha256": "42ed371eacd77c90d7713d1db3ddcda35ac0f32580d6825207867d9f9974078d",
+  "sourceArchiveSha256": "e4f8b9c8ec65d43c447047af684c7db1c6434f9174a04baea4540bcb4b3a303d",
+  "qualificationReceipt": "../software-validation-gate-sdkparams2.json",
+  "codeOnly": true,
+  "credentialsIncluded": false,
+  "corpusIncluded": false,
+  "answerKeyIncluded": false,
+  "modelOutputsIncluded": false,
+  "files": {
+    "manifest.json": "a67a1bc7021169a2c754e55d6e6816d945cce37d25d2b327b463fdb5198862a0",
+    "package.json": "0f183be3df9c6226fb662731461fc921d001ebc2372bf07e57528fbfaa453de2",
+    "packages/evidence-review/src/classification.ts": "230a5f494e64f86428aa3f26b6cfe6ab0d42c78d47f758419bfe76f7f22019ae",
+    "packages/evidence-review/src/index.ts": "1ef6ca28cf3da9001708d45a64b39c65192523584fd383d3a701010926cfa937",
+    "packages/evidence-review/src/relations.ts": "d5da24352b213c55cede9559e2faa48b3b8451c57a3257b882c77ff82ee495a4",
+    "runner.ipynb": "42ed371eacd77c90d7713d1db3ddcda35ac0f32580d6825207867d9f9974078d",
+    "source-manifest.json": "cdb86ee5a6cba9cb4f141e4b992024a5117cb515077b82e6c1041b161904def0",
+    "sources.zip": "e4f8b9c8ec65d43c447047af684c7db1c6434f9174a04baea4540bcb4b3a303d",
+    "tools/engine-jsonl.ts": "a07c83552b9c1b6450814819ecf0f9392f698f386e3c10bc06917edb4f7a9b39",
+    "tools/kaggle_engine_campaign.py": "ff7773b95dcb0b4d831ab75393cde79a9c3e3e0f5ed860fb5574e0d7ca8e2370",
+    "tools/orbit_campaign_checkpoint.py": "95a59fc3ff434d4169f179a8d4815b28597177534e3cd7c1f1063a1067d69052"
+  }
+}

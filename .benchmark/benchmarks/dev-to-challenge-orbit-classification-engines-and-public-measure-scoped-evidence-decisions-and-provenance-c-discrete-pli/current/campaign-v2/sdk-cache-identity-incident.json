@@ -1,0 +1,31 @@
+{
+  "format": "orbit-sdk-cache-identity-incident",
+  "host": "Kaggle",
+  "sdkVersion": "0.6.1",
+  "source": "actual installed Task.evaluate and Run.cache_id read from Kaggle",
+  "observedAt": "2026-10-01T21:38:00Z",
+  "timestampPrecision": "minute-approximate",
+  "historicalConfigurationSha256": "6e7ba4200717e1ab33c60a4ce98a6cd5aacc9f3657b9723edab308de4af91a34",
+  "historicalNamespace": "orbit-kaggle-20261001-v2-sdkparams1",
+  "plannedTasks": 60,
+  "completedTasks": 2,
+  "completedExtractions": 2,
+  "completedProductions": 8,
+  "sdkReportedErrors": 0,
+  "actualQuotaBlocked": false,
+  "cacheCause": "evaluate resets DataFrame index as _id, Run.cache_id uses param_id plus actor name without full parameter values",
+  "proposedFix": "Stable SHA256 DataFrame index from frozen configuration, suite, model and parameter row",
+  "newNamespace": "orbit-kaggle-20261001-v2-sdkparams2",
+  "newVersionValidated": true,
+  "uiQuota": {
+    "dailyUsedDollars": 0.15,
+    "dailyLimitDollars": 10,
+    "monthlyUsedDollars": 9.9,
+    "monthlyLimitDollars": 100
+  },
+  "privateActualSourceSha256": "14af985e6c2f31afd5e21cb65a3e0f382b2d211e62e761729590c1ab339a14d9",
+  "privateActualOutputSha256": "7d023b4652f27bfc6af425d32e16480039489566288ab109245a6073ca402d09",
+  "historicalResultsPooled": false,
+  "validation": "actual-Kaggle-QA16-pass",
+  "harnessSha256": "8f1eba8b70575fc57b7503b7b51d73bc309470f54484c0cc989950c735a41b05"
+}

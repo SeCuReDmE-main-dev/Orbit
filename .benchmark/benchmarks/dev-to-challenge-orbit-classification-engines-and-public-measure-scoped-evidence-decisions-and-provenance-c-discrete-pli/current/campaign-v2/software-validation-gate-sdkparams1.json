@@ -1,0 +1,32 @@
+{
+  "format": "orbit-campaign-v2-software-validation",
+  "host": "Kaggle",
+  "modelCalls": 0,
+  "harnessTestsRun": 14,
+  "harnessFailures": 0,
+  "harnessErrors": 0,
+  "sourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+  "references": "36-synthetic-scored-24-real-invariants-only-no-semantic-gold",
+  "corpusSha256": "c8d7f865ba2c9667f43759a053174e3250150704746141e52fc0dca236190f5a",
+  "harnessSha256": "9227177e6c2abec698d62ecfb565251e362e6496ee46078799203ada194841ec",
+  "deterministicStatus": {
+    "suite": "B",
+    "host": "Kaggle",
+    "coveredQuestions": 60,
+    "scorableQuestions": 36,
+    "evaluations": 180,
+    "scoredEvaluations": 108,
+    "unscoredRealEvaluations": 72,
+    "correct": 108,
+    "invariantsPassed": 540,
+    "invariantsTotal": 540,
+    "realQuestionsPendingArbitration": 24,
+    "sourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+    "engineSha256": "8c0a16a08fec3ea7b23213e4951cfb8cffdfdde1c37e1d8ddb69a3e849f1688d"
+  },
+  "source": "actual Kaggle notebook output, saved from visible execution",
+  "observedAt": "2026-10-01T21:17:00Z",
+  "timestampPrecision": "minute-approximate",
+  "evidenceSha256": "3cab465ee868592bca884d66ee3acb3558cf870e6ddd33cd29e286c237f5b90a",
+  "notebookSha256": "eb20a2099742c78306b51e6421ff714688520cff56d39591b1e4b8a7f1eaa165"
+}

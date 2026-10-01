@@ -1,0 +1,198 @@
+{
+  "format": "orbit-e-nativebounds1-qualification",
+  "host": "Kaggle",
+  "modelCalls": 0,
+  "state": "PASS",
+  "parallel": {
+    "format": "orbit-e-sdk-parallel-qualification-v1",
+    "host": "Kaggle",
+    "modelCalls": 0,
+    "state": "PASS",
+    "testsRun": 3,
+    "failures": 0,
+    "errors": 0,
+    "output": "test_actual_sdk_threads_keep_actor_parameter_chat_and_slot_isolated (__main__.run_parallel_validation.<locals>.ParallelBoundaries.test_actual_sdk_threads_keep_actor_parameter_chat_and_slot_isolated) ... ok\ntest_bounded_parallel_free_quota_accepts_unknown_prices_but_stops_on_consumption (__main__.run_parallel_validation.<locals>.ParallelBoundaries.test_bounded_parallel_free_quota_accepts_unknown_prices_but_stops_on_consumption) ... ok\ntest_e_namespace_cannot_relabel_a_c_result (__main__.run_parallel_validation.<locals>.ParallelBoundaries.test_e_namespace_cannot_relabel_a_c_result) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.161s\n\nOK\n",
+    "sdkVersion": "0.6.1",
+    "nJobsQualified": 8,
+    "browserConcurrencyQualified": false,
+    "limitations": [
+      "No provider request was sent.",
+      "Synthetic slot locks do not prove browser behavior.",
+      "Unknown price and reset values remain unknown; real free-provider refusal stops dispatch."
+    ]
+  },
+  "boundary": {
+    "schemaVersion": "orbit-webmcp-campaign-boundary-qa-v1",
+    "state": "PASS",
+    "host": "Kaggle",
+    "callback": {
+      "state": "PASS",
+      "scope": "actual callback with synthetic transport spy; not native-tool proof",
+      "testsRun": 6,
+      "failures": 0,
+      "errors": 0,
+      "output": "test_discovery_and_invalid_calls_share_one_twenty_attempt_budget (__main__.callback_checks.<locals>.CallbackBoundaries.test_discovery_and_invalid_calls_share_one_twenty_attempt_budget) ... ok\ntest_discovery_only_is_bounded_before_transport (__main__.callback_checks.<locals>.CallbackBoundaries.test_discovery_only_is_bounded_before_transport) ... ok\ntest_invalid_arguments_do_not_consume_a_dispatched_hold_request (__main__.callback_checks.<locals>.CallbackBoundaries.test_invalid_arguments_do_not_consume_a_dispatched_hold_request) ... ok\ntest_read_only_role_still_cannot_deposit (__main__.callback_checks.<locals>.CallbackBoundaries.test_read_only_role_still_cannot_deposit) ... ok\ntest_third_hold_request_is_traced_without_transport_dispatch (__main__.callback_checks.<locals>.CallbackBoundaries.test_third_hold_request_is_traced_without_transport_dispatch) ... ok\ntest_total_native_dispatch_budget_is_preserved (__main__.callback_checks.<locals>.CallbackBoundaries.test_total_native_dispatch_budget_is_preserved) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.091s\n\nOK\n",
+      "campaignSourceSha256": "965a703052dd9c9360e03ea6ca6d4c9a78c6ad934e7b3be18cc5b9e7d53fdfae",
+      "campaignSourceByteScope": "UTF-8 encoding of the supplied source text"
+    },
+    "nativeStart": {
+      "state": "PASS",
+      "checks": [
+        {
+          "name": "correct-release-native-start",
+          "passed": true,
+          "observation": {
+            "native": true,
+            "registeredToolCount": 15,
+            "exposedToolCount": 10,
+            "releaseId": "orbit-v3-closure-20261001T180900Z",
+            "releaseSha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e"
+          }
+        },
+        {
+          "name": "wrong-fingerprint-start-refused",
+          "passed": true,
+          "observation": {
+            "httpStatus": 422,
+            "error": "PUBLIC_RELEASE_FINGERPRINT_MISMATCH"
+          }
+        },
+        {
+          "name": "rejected-start-cannot-discover-old-registry",
+          "passed": true,
+          "observation": {
+            "httpStatus": 410,
+            "error": "MISSION_EXPIRED"
+          }
+        },
+        {
+          "name": "rejected-start-cannot-invoke-old-tool",
+          "passed": true,
+          "observation": {
+            "httpStatus": 410,
+            "error": "MISSION_EXPIRED"
+          }
+        },
+        {
+          "name": "correct-start-recovers-after-refusal",
+          "passed": true,
+          "observation": {
+            "native": true,
+            "registeredToolCount": 15,
+            "exposedToolCount": 10,
+            "releaseId": "orbit-v3-closure-20261001T180900Z",
+            "releaseSha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e"
+          }
+        },
+        {
+          "name": "owned-profile-closed",
+          "passed": true,
+          "observation": {
+            "state": "closed"
+          }
+        }
+      ],
+      "errorType": null,
+      "transport": "Kaggle to actual owned E2B native browser",
+      "modelCalls": 0,
+      "humanApprovalFabricated": false
+    },
+    "modelCalls": 0,
+    "fullMissionComplete": false
+  },
+  "nativePool": [
+    {
+      "worker": 0,
+      "passed": true,
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "releaseSha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e",
+      "capabilitiesState": "READY",
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    },
+    {
+      "worker": 1,
+      "passed": true,
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "releaseSha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e",
+      "capabilitiesState": "READY",
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    },
+    {
+      "worker": 2,
+      "passed": true,
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "releaseSha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e",
+      "capabilitiesState": "READY",
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    },
+    {
+      "worker": 3,
+      "passed": true,
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "releaseSha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e",
+      "capabilitiesState": "READY",
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    },
+    {
+      "worker": 4,
+      "passed": true,
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "releaseSha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e",
+      "capabilitiesState": "READY",
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    },
+    {
+      "worker": 5,
+      "passed": true,
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "releaseSha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e",
+      "capabilitiesState": "READY",
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    },
+    {
+      "worker": 6,
+      "passed": true,
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "releaseSha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e",
+      "capabilitiesState": "READY",
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    },
+    {
+      "worker": 7,
+      "passed": true,
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "releaseSha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e",
+      "capabilitiesState": "READY",
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    }
+  ],
+  "harnessSha256": "5aac38dc26df4d0433bea29b0afdffced3e660d32a5b9a07c3c376c5305f8b4e",
+  "campaignSourceSha256": "965a703052dd9c9360e03ea6ca6d4c9a78c6ad934e7b3be18cc5b9e7d53fdfae",
+  "releaseManifestSha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e",
+  "fullMissionComplete": false,
+  "recordedAtUtc": "2026-10-01T22:29:50.968691+00:00"
+}

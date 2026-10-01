@@ -1,0 +1,35 @@
+{
+  "format": "orbit-failure-classification-kaggle-qualification-v1",
+  "observedAt": "2026-10-01T23:24:53.382Z",
+  "notebook": "https://www.kaggle.com/code/celebrum/orbit-v3-webmcp-campaign-e-v2/edit",
+  "qualification": {
+    "schemaVersion": "orbit-provider-failure-classification-software-qa-v1",
+    "host": "Kaggle",
+    "state": "PASS",
+    "modelCalls": 0,
+    "providerRequests": 0,
+    "testsRun": 4,
+    "failures": 0,
+    "errors": 0,
+    "output": "test_explicit_provider_model_overload_is_transient (kaggle_failure_classification_validation.run_failure_classification_validation.<locals>.FailureClassificationRegression.test_explicit_provider_model_overload_is_transient) ... ok\ntest_overload_resume_stops_before_a_third_attempt (kaggle_failure_classification_validation.run_failure_classification_validation.<locals>.FailureClassificationRegression.test_overload_resume_stops_before_a_third_attempt) ... ok\ntest_quota_429_takes_priority_and_blocks_another_dispatch (kaggle_failure_classification_validation.run_failure_classification_validation.<locals>.FailureClassificationRegression.test_quota_429_takes_priority_and_blocks_another_dispatch) ... ok\ntest_unknown_429_remains_terminal_for_the_same_harness (kaggle_failure_classification_validation.run_failure_classification_validation.<locals>.FailureClassificationRegression.test_unknown_429_remains_terminal_for_the_same_harness) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.009s\n\nOK\n",
+    "origin": "synthetic-software-fixtures-not-provider-results",
+    "checkpointSourceSha256": "652835fe7e8b3aaf25fc1e9f37b953a32cdb2f581d8ad9cb604fe952a3567afc",
+    "validationSourceSha256": "17f038fb97395249403e354efe1a516b19c8b946aa458ac3f5b308bb12ad4169",
+    "fullCampaignComplete": false,
+    "humanUnderstandingVerified": false,
+    "sourceFiles": {
+      "orbit_campaign_checkpoint.py": "652835fe7e8b3aaf25fc1e9f37b953a32cdb2f581d8ad9cb604fe952a3567afc",
+      "kaggle_failure_classification_validation.py": "17f038fb97395249403e354efe1a516b19c8b946aa458ac3f5b308bb12ad4169"
+    }
+  },
+  "previousIncident": {
+    "campaignId": "orbit-kaggle-20261001-v2-sdkparams2",
+    "packet": 5,
+    "repetition": 0,
+    "model": "google/gemini-3.8-flash",
+    "condition": "baseline",
+    "historicalClassification": "technical-error",
+    "historicalObservationPreserved": true
+  },
+  "campaignDispatchesAfterQualification": 0
+}

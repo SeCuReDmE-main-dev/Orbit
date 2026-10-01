@@ -137,8 +137,13 @@ def validate_frozen(config, suite):
     if not config.get('quotaSnapshot'):
         raise RuntimeError('Current free quota windows are required.')
     if reserve is None:
-        if config.get('quotaPolicy',{}).get('unknownPricingStrategy')!='serial-provider-free-quota':
-            raise RuntimeError('Unknown pricing needs an explicit serial free-provider quota policy.')
+        strategy=config.get('quotaPolicy',{}).get('unknownPricingStrategy')
+        bounded_parallel=(suite=='E' and strategy=='bounded-parallel-provider-free-quota'
+            and isinstance(config.get('maxParallelTrajectories'),int)
+            and not isinstance(config.get('maxParallelTrajectories'),bool)
+            and 1<=config['maxParallelTrajectories']<=8)
+        if strategy!='serial-provider-free-quota' and not bounded_parallel:
+            raise RuntimeError('Unknown pricing needs an explicit bounded free-provider quota policy.')
     elif not isinstance(reserve,int) or isinstance(reserve,bool) or reserve<=0:
         raise RuntimeError('A declared numeric reserve must be a positive conservative bound.')
     if not 60<=config.get('quotaPolicy',{}).get('maxSnapshotAgeSeconds',0)<=3600:

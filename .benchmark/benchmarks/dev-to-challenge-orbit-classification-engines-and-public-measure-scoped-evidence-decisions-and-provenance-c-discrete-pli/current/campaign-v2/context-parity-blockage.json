@@ -1,0 +1,31 @@
+{
+  "format": "orbit-context-parity-blockage-v2",
+  "observedAt": "2026-10-01T19:33:32.808Z",
+  "source": "Official @sanity/client@8.6.2 createKnowledgeBase response",
+  "httpStatus": 403,
+  "providerCode": "planLimitReached",
+  "knowledgeBasesUsed": 2,
+  "knowledgeBasesLimit": 2,
+  "conservativeSourceUsage": 126,
+  "sourceSafetyCeiling": 150,
+  "proposedSources": 24,
+  "sourceCountFit": true,
+  "knowledgeBaseCapacityFit": false,
+  "createdKnowledgeBases": 0,
+  "importedSources": 0,
+  "builds": 0,
+  "productionKnowledgeBasesModified": false,
+  "publicContextEndpointsModified": false,
+  "upgradePerformed": false,
+  "caseSourceParityReviewed": false,
+  "DExpectedTrajectories": 24,
+  "DExecutedTrajectories": 0,
+  "sourceTextIncluded": false,
+  "privatePreparedPackagesRetired": true,
+  "retiredFiles": 28,
+  "blockedReason": "Dedicated source-matched Knowledge Bases exceed the current two-KB plan capacity. Existing research KB contains material outside the paired corpus; READY does not prove experimental parity.",
+  "docs": [
+    "https://www.sanity.io/docs/ai/sanity-context-security",
+    "https://www.sanity.io/docs/ai/sanity-context-create-knowledge-base"
+  ]
+}

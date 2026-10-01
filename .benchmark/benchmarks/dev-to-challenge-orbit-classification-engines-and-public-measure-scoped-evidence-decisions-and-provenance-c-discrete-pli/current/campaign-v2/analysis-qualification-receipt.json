@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "orbit-campaign-analysis-software-qa-v1",
+  "host": "Kaggle",
+  "state": "PASS",
+  "modelCalls": 0,
+  "testsRun": 5,
+  "failures": 0,
+  "errors": 0,
+  "output": "test_all_missing_costs_remain_unavailable (kaggle_campaign_analysis_validation.run_analysis_validation.<locals>.AnalysisRegression.test_all_missing_costs_remain_unavailable) ... ok\ntest_complete_campaign_keeps_pairing_packet_weights_and_real_exclusion (kaggle_campaign_analysis_validation.run_analysis_validation.<locals>.AnalysisRegression.test_complete_campaign_keeps_pairing_packet_weights_and_real_exclusion) ... ok\ntest_failed_usage_is_charged_and_failed_is_distinct_from_never_run (kaggle_campaign_analysis_validation.run_analysis_validation.<locals>.AnalysisRegression.test_failed_usage_is_charged_and_failed_is_distinct_from_never_run) ... ok\ntest_observed_zero_is_distinct_from_missing_or_partially_known_cost (kaggle_campaign_analysis_validation.run_analysis_validation.<locals>.AnalysisRegression.test_observed_zero_is_distinct_from_missing_or_partially_known_cost) ... ok\ntest_replayed_usage_is_deduplicated_but_a_new_attempt_is_chargeable (kaggle_campaign_analysis_validation.run_analysis_validation.<locals>.AnalysisRegression.test_replayed_usage_is_deduplicated_but_a_new_attempt_is_chargeable) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.404s\n\nOK\n",
+  "origin": "synthetic-software-fixtures-not-provider-results",
+  "analyzerSourceSha256": "1ae7a80aaf7fcfbec2e1121af6a73f30777b26976400308bedb7d5e30ecc21d3",
+  "fullCampaignComplete": false,
+  "humanUnderstandingVerified": false,
+  "recordedAtUtc": "2026-10-01T22:29:50.968691+00:00"
+}

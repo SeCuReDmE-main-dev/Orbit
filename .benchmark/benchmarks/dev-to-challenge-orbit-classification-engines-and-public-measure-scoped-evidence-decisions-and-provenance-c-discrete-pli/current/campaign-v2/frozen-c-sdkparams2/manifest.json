@@ -1,0 +1,301 @@
+{
+  "format": "orbit-kaggle-campaign-v2",
+  "campaignId": "orbit-kaggle-20261001-v2-sdkparams2",
+  "state": "frozen-after-actual-qa16",
+  "frozen": true,
+  "models": [
+    "google/gemini-3.8-flash",
+    "google/gemini-3.1-pro-preview"
+  ],
+  "sdkVersion": "0.6.1",
+  "repositoryHead": "cdbf48d7e645e8f521d983826ba283f84ce24ca7",
+  "corpusSha256": "c8d7f865ba2c9667f43759a053174e3250150704746141e52fc0dca236190f5a",
+  "goldSha256": "a0fffdf104aa36b3e994c57902ffc7a76f2d1a1fd143cc821ca60a4c88e93b23",
+  "fixturesSha256": "c8e4e0defc1c2c1a11f8aadfab4b3f02f953ea9fcc7540c581786dc6bef14bf2",
+  "engineSourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+  "harnessSha256": "8f1eba8b70575fc57b7503b7b51d73bc309470f54484c0cc989950c735a41b05",
+  "rulesSha256": "83307572bd6c1e4d7419d1e22c2998d592b8362bd18975d2369c6201bef82d8e",
+  "sourceFiles": {
+    "engine": {
+      "packages/evidence-review/src/classification.ts": "230a5f494e64f86428aa3f26b6cfe6ab0d42c78d47f758419bfe76f7f22019ae",
+      "packages/evidence-review/src/index.ts": "1ef6ca28cf3da9001708d45a64b39c65192523584fd383d3a701010926cfa937",
+      "packages/evidence-review/src/relations.ts": "d5da24352b213c55cede9559e2faa48b3b8451c57a3257b882c77ff82ee495a4",
+      "tools/engine-jsonl.ts": "a07c83552b9c1b6450814819ecf0f9392f698f386e3c10bc06917edb4f7a9b39"
+    },
+    "harness": {
+      "tools/orbit_campaign_checkpoint.py": "95a59fc3ff434d4169f179a8d4815b28597177534e3cd7c1f1063a1067d69052",
+      "tools/kaggle_engine_campaign.py": "ff7773b95dcb0b4d831ab75393cde79a9c3e3e0f5ed860fb5574e0d7ca8e2370",
+      "tools/kaggle_context_campaign.py": "f7cf4fa8ddc35f67a8e8f6bf00ccc8f1bf7651fa4cd71427aa774a4a12a5e1e6",
+      "tools/kaggle_webmcp_campaign.py": "0945a2a4ffcbfd1a4c45c23fbbe633a2dbbc03921c561cdf9ef4c0e5c0945f8c",
+      "tools/e2b-webmcp-bridge.ts": "b9f7808ce880f79550a56fd7c94abe6642e6f4154d99db11b7cef2376f6a6298",
+      "tools/webmcp-browser.ts": "96dfc65257aafffc17fa55785d927edb11d1038df9d14732eb34c73d3f8ba23c",
+      "tools/prepare_scoped_corpus_v2.py": "b435efdb25d3540d8bd2d2b5858dc19069a87a7a387a64edfed9073f72f45895",
+      "tools/prepare_kaggle_campaign_v2.py": "502597a6b88ba2237fb7cbd03d88693421cae3e1bad9773a3e52618e13d817d3"
+    }
+  },
+  "releaseId": null,
+  "releaseManifestSha256": null,
+  "browserMajor": null,
+  "reasoningSetting": "medium",
+  "maxOutputTokens": 4096,
+  "maxSdkToolRounds": 22,
+  "maxNativeCalls": 20,
+  "maxDurationSeconds": 480,
+  "maxHoldRequests": 2,
+  "maxTransientAttempts": 2,
+  "maxWorkers": 8,
+  "quotaChecked": true,
+  "modelsChecked": true,
+  "quotaPolicy": {
+    "newLongLotsStopConsumedPercent": 85,
+    "hardStopConsumedPercent": 89,
+    "paidTopupAllowed": false,
+    "automaticModelReplacement": false,
+    "maxSnapshotAgeSeconds": 3600,
+    "unknownResetPolicy": "preserve-null-refresh-observation-api-refusal-stops",
+    "unknownPricingStrategy": "serial-provider-free-quota"
+  },
+  "preflightObservation": {
+    "observedAt": "2026-10-01T17:53:00Z",
+    "timestampPrecision": "minute",
+    "source": "Kaggle Benchmark Task observed by coordinator",
+    "sdkVersion": "0.6.1",
+    "modelsAvailable": [
+      "google/gemini-3.8-flash",
+      "google/gemini-3.1-pro-preview"
+    ],
+    "modelCalls": 0,
+    "nativeToolAgentParameters": [
+      "llm",
+      "tools",
+      "schema",
+      "max_tool_rounds",
+      "respond_kwargs"
+    ],
+    "quotaResetTimes": "unavailable",
+    "lotCostReserve": "not-yet-established",
+    "latestCatalogueProbe": {
+      "observedAt": "2026-10-01T18:56:35Z",
+      "source": "Kaggle Benchmark Task observed by coordinator",
+      "sdkVersion": "0.6.1",
+      "modelsAvailable": [
+        "google/gemini-3.8-flash",
+        "google/gemini-3.1-pro-preview"
+      ],
+      "modelObjectType": "OpenAI",
+      "publicPricingFieldsAvailable": false,
+      "modelCalls": 0
+    }
+  },
+  "quotaSnapshot": [
+    {
+      "name": "daily",
+      "limitNanodollars": 10000000000,
+      "usedNanodollars": 150000000,
+      "observedAtUnix": 1790891280,
+      "resetsAtUnix": null
+    },
+    {
+      "name": "monthly",
+      "limitNanodollars": 100000000000,
+      "usedNanodollars": 9900000000,
+      "observedAtUnix": 1790891280,
+      "resetsAtUnix": null
+    }
+  ],
+  "maxLotReserveNanodollars": null,
+  "targets": {
+    "C": {
+      "extractions": 60,
+      "comparativeProductions": 240
+    },
+    "D": {
+      "trajectories": 24
+    },
+    "E": {
+      "trajectories": 144
+    }
+  },
+  "inputCorpusDir": "/kaggle/input/datasets/celebrum/orbit-kaggle-v2-private-inputs",
+  "inputReferenceDir": "/kaggle/input/datasets/celebrum/orbit-kaggle-v2-private-inputs",
+  "workerSecretName": "ORBIT_WORKER_POOL_JSON",
+  "resumeDatasetDir": null,
+  "resumeArchives": {},
+  "contextCases": {
+    "provider": {
+      "packet": 7,
+      "paths": [],
+      "responseDigests": {},
+      "parityReviewed": false
+    },
+    "sanity": {
+      "packet": 8,
+      "paths": [],
+      "responseDigests": {},
+      "parityReviewed": false
+    }
+  },
+  "referenceStatus": {
+    "syntheticQuestions": 36,
+    "humanReviewedRealQuestions": 0,
+    "realQuestionsPendingHuman": 24
+  },
+  "publicRelease": false,
+  "modelCallsExecuted": 0,
+  "softwareTestsExecuted": true,
+  "limits": [
+    "Historical v1 is preserved and not pooled with v2.",
+    "Real sources and labels remain subject to independent review.",
+    "Private datasets are not a license to redistribute their text."
+  ],
+  "corpusSelectionSha256": "205a0f669f564dae6ee23d78d3184f643754b284164cfd83b1ff7c4b0e7ee8f0",
+  "originalAccessSha256": "6f43c123818205a0e9cbe55f7ccd1a3b6bbeaafdb048802c78284296b735cb00",
+  "corpusFilesSha256": "3289b087b12130b884fedaef6e5b0f33c1988df3d3b504be77c6001de60363c8",
+  "corpusViewPolicy": {
+    "maxDocumentCharacters": 12000,
+    "maxPacketCharacters": 144000,
+    "selection": "question-windows-inspected-prose-introduction",
+    "sourceText": "frozen-snapshot-only",
+    "humanSemanticReview": "pending"
+  },
+  "pricingObservation": null,
+  "lotReserveScope": "one-model-prompt-C-or-one-agent-trajectory-D-E",
+  "executableSuites": [
+    "C"
+  ],
+  "configurationIncidents": [
+    {
+      "observed": "FileNotFoundError in first real Kaggle setup",
+      "correction": "Use actual Copy dataset path",
+      "modelCalls": 0
+    },
+    {
+      "observed": "Kaggle SDK 0.6.1 OpenAI Completions.create rejected max_output_tokens before model generation",
+      "correction": "max_tokens=4096 for pinned OpenAI-backed Gemini models; max_tool_rounds=22 unchanged",
+      "modelGenerations": 0,
+      "earlierNamespace": "orbit-kaggle-20261001-v2",
+      "archive": "sdk-output-bound-incident-20261001"
+    },
+    {
+      "observed": "Native-browser diagnostic reports cloud Node manifest request blocked by Imunify360",
+      "correction": "E fixed-origin manifest read in actual native Chrome session, same release ID and exact SHA pin required; HTTP failures retained separately",
+      "modelGenerations": 0
+    },
+    {
+      "observed": "QA setup rejected corrected sdkparams1 namespace by obsolete hardcoded identity",
+      "correction": "Exact supported identities and format are validated; QA14 verifies rejection of unknown/unfrozen versions",
+      "modelCalls": 0
+    },
+    {
+      "observed": "SDK0.6.1 cached every single-row evaluation at DataFrame index0; only2 tasks/2 extractions/8 productions actually ran",
+      "correction": "Stable index digest of campaign/suite/model/parameters; namespace-aware accounting excludes historical observations",
+      "modelGenerationsObserved": 10,
+      "historicalNamespace": "orbit-kaggle-20261001-v2-sdkparams1"
+    }
+  ],
+  "frozenAt": "2026-10-01T21:48:23Z",
+  "quotaObservation": {
+    "source": "actual Kaggle UI Refresh Quota after QA16",
+    "observedAt": "2026-10-01T21:48:00Z",
+    "timestampPrecision": "minute-approximate",
+    "dailyUsedDollars": 0.15,
+    "dailyLimitDollars": 10,
+    "monthlyUsedDollars": 9.9,
+    "monthlyLimitDollars": 100,
+    "priceFields": "unavailable",
+    "resetTimes": "unavailable"
+  },
+  "softwareValidationGatePrevious": {
+    "source": "actual Kaggle output observed by coordinator",
+    "observedAt": "2026-10-01T19:25:00Z",
+    "timestampPrecision": "minute-approximate",
+    "harnessTests": 13,
+    "failures": 0,
+    "errors": 0,
+    "questions": 60,
+    "engineEvaluations": 180,
+    "syntheticScored": 108,
+    "syntheticCorrect": 108,
+    "realUnscored": 72,
+    "invariants": 540,
+    "invariantsPassed": 540,
+    "engineSourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+    "harnessSha256": "de5b0522e4643b4764e65afdd978d09081ca254f3816e6f047e9a2ba24bfa1b0",
+    "sharedEngineSha256": "8c0a-prefix-reported; full digest in actual output",
+    "evidenceArchiveSha256": "8a224aa64e4b209fb60b98999b67791d25ce235fd2f689b64bd34ea74abfdd55",
+    "modelCalls": 0
+  },
+  "providerOutputBoundParameter": "max_tokens",
+  "sdkParameterEvidence": {
+    "officialSource": "https://github.com/Kaggle/kaggle-benchmarks/blob/ci/src/kaggle_benchmarks/actors/proxy_openai.py",
+    "actualSignatureGate": "inspect actual Kaggle OpenAI client completion and native_tool_agent signatures without dispatch",
+    "observedActualError": "TypeError unexpected keyword argument max_output_tokens",
+    "transport": "OpenAI chat.completions.create",
+    "outputLimit": 4096,
+    "modelCallsExecuted": 0
+  },
+  "softwareValidationGatePreviousSdkParams1": {
+    "format": "orbit-campaign-v2-software-validation",
+    "host": "Kaggle",
+    "modelCalls": 0,
+    "harnessTestsRun": 14,
+    "harnessFailures": 0,
+    "harnessErrors": 0,
+    "sourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+    "references": "36-synthetic-scored-24-real-invariants-only-no-semantic-gold",
+    "corpusSha256": "c8d7f865ba2c9667f43759a053174e3250150704746141e52fc0dca236190f5a",
+    "harnessSha256": "9227177e6c2abec698d62ecfb565251e362e6496ee46078799203ada194841ec",
+    "deterministicStatus": {
+      "suite": "B",
+      "host": "Kaggle",
+      "coveredQuestions": 60,
+      "scorableQuestions": 36,
+      "evaluations": 180,
+      "scoredEvaluations": 108,
+      "unscoredRealEvaluations": 72,
+      "correct": 108,
+      "invariantsPassed": 540,
+      "invariantsTotal": 540,
+      "realQuestionsPendingArbitration": 24,
+      "sourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+      "engineSha256": "8c0a16a08fec3ea7b23213e4951cfb8cffdfdde1c37e1d8ddb69a3e849f1688d"
+    },
+    "source": "actual Kaggle notebook output, saved from visible execution",
+    "observedAt": "2026-10-01T21:17:00Z",
+    "timestampPrecision": "minute-approximate",
+    "evidenceSha256": "3cab465ee868592bca884d66ee3acb3558cf870e6ddd33cd29e286c237f5b90a",
+    "notebookSha256": "eb20a2099742c78306b51e6421ff714688520cff56d39591b1e4b8a7f1eaa165"
+  },
+  "softwareValidationGate": {
+    "format": "orbit-campaign-v2-software-validation",
+    "host": "Kaggle",
+    "modelCalls": 0,
+    "harnessTestsRun": 16,
+    "harnessFailures": 0,
+    "harnessErrors": 0,
+    "sourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+    "references": "36-synthetic-scored-24-real-invariants-only-no-semantic-gold",
+    "corpusSha256": "c8d7f865ba2c9667f43759a053174e3250150704746141e52fc0dca236190f5a",
+    "harnessSha256": "8f1eba8b70575fc57b7503b7b51d73bc309470f54484c0cc989950c735a41b05",
+    "deterministicStatus": {
+      "suite": "B",
+      "host": "Kaggle",
+      "coveredQuestions": 60,
+      "scorableQuestions": 36,
+      "evaluations": 180,
+      "scoredEvaluations": 108,
+      "unscoredRealEvaluations": 72,
+      "correct": 108,
+      "invariantsPassed": 540,
+      "invariantsTotal": 540,
+      "realQuestionsPendingArbitration": 24,
+      "sourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+      "engineSha256": "8c0a16a08fec3ea7b23213e4951cfb8cffdfdde1c37e1d8ddb69a3e849f1688d"
+    },
+    "source": "actual Kaggle execution; installed scheduler tested without provider dispatch",
+    "observedAt": "2026-10-01T21:48:00Z",
+    "timestampPrecision": "minute-approximate",
+    "evidenceSha256": "d25668c0aa5f7eaea9c3e53d20e7813ad21bf3fd5ad18b451fb724d64331f389",
+    "notebookSha256": "391f24a23fbc0852c0f7a6fd4958c808281828df6bdb8ed466badb93fc38bed5"
+  }
+}

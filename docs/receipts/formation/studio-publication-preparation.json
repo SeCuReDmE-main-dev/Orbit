@@ -1,7 +1,7 @@
 {
   "schema": "orbit.studio-publication-preparation.v1",
-  "state": "WAITING_FOR_NATIVE_HUMAN_LOGIN",
-  "observedAt": "2026-10-01T21:57:33.578290+00:00",
+  "state": "INCOMPLETE_AUTHENTICATED_VALIDATION_TEMPORARY_CORS_REMOVED",
+  "observedAt": "2026-10-01T23:23:39Z",
   "fullMissionComplete": false,
   "publicValidation": {
     "receipt": "cross-origin-public-validation.json",
@@ -22,7 +22,9 @@
     "reactVersion": "19.3.0",
     "pluginArchiveSha256": "184358d01d9866ef7da0b5ac67f5d8020545656a31b66e39fece0c0e8e17ff64",
     "releaseManifestSha256": "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046",
-    "chromeVersion": "154.0.8037.92"
+    "chromeVersion": "154.0.8037.92",
+    "availability": "ABSENT_FROM_ACTIVE_OFFICIAL_SDK_INVENTORY",
+    "availabilityObservedAt": "2026-10-01T23:23:39Z"
   },
   "authority": {
     "personalSessionExported": false,
@@ -32,11 +34,19 @@
     "contentLakeWriteExecuted": false,
     "humanPublicationAcknowledgementObtained": false,
     "notebookContainsCredentials": false,
-    "temporaryCorsHumanApproved": true
+    "temporaryCorsHumanApproved": true,
+    "temporaryCorsCurrentlyPresent": false
   },
   "observedPrerequisites": {
     "corsReadMethod": "Authenticated existing Sanity SDK, GET /projects/pzscx4w8/cors; returned origins only, no credentials or identities emitted.",
-    "corsOrigins": [
+    "foreignOriginPresent": false,
+    "currentVmPrograms": null,
+    "interactiveHumanLoginTransport": "UNAVAILABLE_OWNED_DESKTOP_NOT_IN_ACTIVE_INVENTORY",
+    "existingWriteAccountInIsolatedBrowser": "NOT_PROVIDED",
+    "existingReadOnlyAccountInIsolatedBrowser": "NOT_PROVIDED",
+    "oldAuthenticatedReadback": "authenticated-second-studio.json",
+    "oldReadbackLimit": "Existing same-origin Windows session was observed read-only. It is not a login or write proof for the isolated E2B browser.",
+    "historicalCorsOrigins": [
       {
         "origin": "http://localhost:3333",
         "allowCredentials": true
@@ -47,29 +57,25 @@
         "temporary": true
       }
     ],
-    "foreignOriginPresent": true,
-    "currentVmPrograms": {
+    "temporaryForeignOriginRemovalVerified": true,
+    "historicalVmPrograms": {
       "google-chrome": true,
       "Xvfb": true,
       "officialDesktopStream": true
-    },
-    "interactiveHumanLoginTransport": "OFFICIAL_E2B_DESKTOP_PASSWORD_PROTECTED_STREAM_READY",
-    "existingWriteAccountInIsolatedBrowser": "NOT_PROVIDED",
-    "existingReadOnlyAccountInIsolatedBrowser": "NOT_PROVIDED",
-    "oldAuthenticatedReadback": "authenticated-second-studio.json",
-    "oldReadbackLimit": "Existing same-origin Windows session was observed read-only. It is not a login or write proof for the isolated E2B browser."
+    }
   },
   "blockers": [
     "NATIVE_AUTHENTICATED_SESSION_REQUIRED",
-    "EXISTING_READ_ONLY_IDENTITY_REQUIRED_FOR_SERVER_REJECTION"
+    "EXISTING_READ_ONLY_IDENTITY_REQUIRED_FOR_SERVER_REJECTION",
+    "OWNED_AUTHENTICATION_DESKTOP_NOT_ACTIVE"
   ],
   "executionBoundary": {
     "orchestrator": "Kaggle",
     "browser": "E2B isolated native Chrome",
     "modelCalls": 0,
     "localWorkstationTests": false,
-    "currentBridge": "RETIRED; HTTP 401 observed in Kaggle run 7",
-    "nextBridge": "Native Chrome controller constructed with OS pipe; dedicated mission secret stored privately for Kaggle. No general browser/debugging TCP endpoint.",
+    "currentBridge": "Dedicated authenticated mission bridge has no observed HTTP401 retirement; its owned desktop is absent from active SDK inventory.",
+    "nextBridge": "A fresh owned desktop and mission-scoped controller would be required before resuming native human login; no current replacement is claimed.",
     "forbiddenSubstitutions": [
       "Exporting a Windows session or owner token",
       "Calling createIfNotExists with a server credential and presenting it as native Studio publication",
@@ -77,7 +83,8 @@
       "Treating a mock client rejection as a real read-only server rejection",
       "Treating an unchecked publication preview as human acknowledgement"
     ],
-    "kaggleNotebook": "https://www.kaggle.com/code/celebrum/orbit-v3-native-studio-publication-qa"
+    "kaggleNotebook": "https://www.kaggle.com/code/celebrum/orbit-v3-native-studio-publication-qa",
+    "historicalPublicBridgeRetirement": "RETIRED; HTTP 401 observed in Kaggle run 7"
   },
   "fixture": {
     "publicArtifactFilename": "orbit-publication-synthetic-brick.js",
@@ -85,7 +92,7 @@
     "unselectedArtifactFilename": "orbit-synthetic-private-note.txt",
     "unselectedArtifactContent": "SYNTHETIC_UNSELECTED_ARTIFACT_20261001: must remain in this session.\n",
     "localJournalText": "SYNTHETIC_PRIVATE_JOURNAL_20261001: test marker only; do not publish.",
-    "publicationTitle": "Orbit QA \u2014 synthetic selected artifact \u2014 2026-10-01",
+    "publicationTitle": "Orbit QA — synthetic selected artifact — 2026-10-01",
     "expectedDocumentType": "orbitLearningPublication",
     "expectedDocumentId": "orbit.learning.<SHA-256 of actual destination, namespace and selected payload>",
     "expectedSelectedArtifactCount": 1,
@@ -96,13 +103,16 @@
       "step": 1,
       "action": "Provide a supported interactive E2B desktop and mission-scoped human access. The human completes native Sanity login in the isolated Chrome profile; password and MFA remain outside agent control.",
       "requiredEvidence": "Authenticated plugin UI on the exact foreign host, with project/dataset checked but user identity omitted from public logs.",
-      "state": "TRANSPORT_PREPARED_LOGIN_NOT_COMPLETED"
+      "state": "NOT_RUN",
+      "historicalPreparationState": "TRANSPORT_PREPARED_LOGIN_NOT_COMPLETED",
+      "currentTransport": "UNAVAILABLE_OWNED_DESKTOP_ABSENT"
     },
     {
       "step": 2,
       "action": "After the transport is concrete and approved, add only the exact temporary HTTPS origin to Sanity CORS with credentials. Preserve all existing origins and record the new rule identifier for removal.",
       "requiredEvidence": "Exact-origin readback and bounded cleanup plan. Wildcard credential CORS is forbidden.",
-      "state": "TEMPORARY_EXACT_ORIGIN_CREATED_AND_READ_BACK"
+      "state": "TEMPORARY_EXACT_ORIGIN_REMOVED_WITH_READBACK",
+      "historicalPreparationState": "TEMPORARY_EXACT_ORIGIN_CREATED_AND_READ_BACK"
     },
     {
       "step": 3,
@@ -144,7 +154,10 @@
       "step": 9,
       "action": "Use native Sanity logout; verify the learning surface and private selections disappear and its 25 tools are unregistered. Retire the new mission bridge and verify HTTP401, remove only the temporary CORS rule, then stop only the owned microVM after collecting results.",
       "requiredEvidence": "Real logout, native registry cleanup, observed token refusal and exact scoped resource cleanup.",
-      "state": "NOT_RUN"
+      "state": "PARTIAL_CLEANUP_CORS_REMOVAL_ONLY",
+      "nativeLogout": "NOT_RUN",
+      "authenticatedMissionHttp401Observed": false,
+      "sdkKillExecutedByCoordinator": false
     }
   ],
   "sourceReferences": [
@@ -162,7 +175,10 @@
   "limits": [
     "This is a concrete preparation record, not an executed authenticated test.",
     "Public foreign-origin Context transport passed independently; it does not authorize authenticated Content Lake access.",
-    "No learner understanding or pedagogical approval is certified."
+    "No learner understanding or pedagogical approval is certified.",
+    "The prepared desktop was absent from official SDK inventory at the closure checkpoint; no coordinator kill or expiry cause is asserted.",
+    "Only temporary CORS removal is verified at closure. Dedicated-token HTTP401 and Kaggle-secret deletion are not confirmed.",
+    "Historical preparation observations are retained; all authenticated publication and logout steps remain NOT_RUN."
   ],
   "controllerPreparation": {
     "source": "tools/learning-studio-authenticated-validation.ts",
@@ -173,14 +189,20 @@
     "contentLakeWriteExecuted": false,
     "humanLoginCompleted": false,
     "remoteDebuggingTcpExposed": false,
-    "loginReloadEndpoint": "Kaggle-dispatched POST /login, exact existing Studio page only"
+    "loginReloadEndpoint": "Kaggle-dispatched POST /login, exact existing Studio page only",
+    "stateReadBackIsHistorical": true,
+    "currentAvailability": "OWNED_DESKTOP_ABSENT_NOT_AUTHENTICATED_OR_RETESTED"
   },
   "temporaryCors": {
     "origin": "https://8000-i3svpb1bpfrzqnvrpsyv8.e2b.app",
     "allowCredentials": true,
     "actionTimeHumanApproval": true,
     "createdAndReadBack": true,
-    "removal": "Pending tests and logout; delete only the privately recorded new rule ID."
+    "removal": "Removed only the recorded temporary exact-origin rule; authenticated steps, token refusal and Kaggle secret removal were not completed.",
+    "ruleId": 3194089,
+    "state": "REMOVED",
+    "removedAt": "2026-10-01T23:14:38.723Z",
+    "removalVerified": true
   },
   "officialChromeUpdate": {
     "receipt": "studio-chrome-official-update.json",
@@ -195,5 +217,20 @@
     "corsError": false,
     "chromeMajor": 154,
     "authenticatedTestsExecuted": false
+  },
+  "historicalPreparationObservedAt": "2026-10-01T21:57:33.578290+00:00",
+  "timestampPrecision": "approximate-second-coordinator-reported",
+  "authenticationClosureReceipt": "native-studio-authentication-closure.json",
+  "authenticationClosure": {
+    "authenticatedSteps": "NOT_RUN",
+    "ownedDesktopCurrentlyActive": false,
+    "inventoryActiveSandboxes": 9,
+    "inventoryOwnedAuthenticationSandboxes": 0,
+    "sdkKillExecutedByCoordinator": false,
+    "stopCause": "UNCONFIRMED",
+    "temporaryCorsRemoved": true,
+    "temporaryCorsRemovalVerified": true,
+    "authenticatedMissionHttp401Observed": false,
+    "kaggleSecretDeletionConfirmed": false
   }
 }

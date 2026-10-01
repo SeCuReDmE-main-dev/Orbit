@@ -1,0 +1,102 @@
+{
+  "schema": "orbit.native-studio-authentication-closure.v1",
+  "state": "INCOMPLETE_AUTHENTICATED_VALIDATION_TEMPORARY_CORS_REMOVED",
+  "observedAt": "2026-10-01T23:23:39Z",
+  "timestampPrecision": "approximate-second-coordinator-reported",
+  "fullMissionComplete": false,
+  "authenticatedSteps": "NOT_RUN",
+  "publicForeignOriginValidation": {
+    "receipt": "cross-origin-public-validation.json",
+    "checksPassed": 16,
+    "checksTotal": 16,
+    "authenticatedPublicationIncluded": false
+  },
+  "ownedDesktop": {
+    "sandboxId": "i3svpb1bpfrzqnvrpsyv8",
+    "origin": "https://8000-i3svpb1bpfrzqnvrpsyv8.e2b.app",
+    "lastPreparationState": "prepared-for-human-login",
+    "currentObservation": "ABSENT_FROM_ACTIVE_OFFICIAL_SDK_INVENTORY",
+    "firstAbsenceObservation": {
+      "observedAt": "2026-10-01T23:11:00Z",
+      "timestampPrecision": "minute",
+      "activeSandboxes": 9,
+      "ownedAuthenticationSandboxes": 0
+    },
+    "freshInventory": {
+      "observedAt": "2026-10-01T23:23:39Z",
+      "timestampPrecision": "approximate-second-coordinator-reported",
+      "command": "python tools/provision_studio_desktop.py list",
+      "method": "Official E2B SDK list with exact authentication campaign ownership filter",
+      "exitCode": 0,
+      "activeSandboxes": 9,
+      "ownedAuthenticationSandboxes": 0
+    },
+    "sdkKillExecutedByCoordinator": false,
+    "stopCause": "UNCONFIRMED",
+    "expirationConfirmed": false,
+    "privateOwnershipLedgerModified": false,
+    "absenceIsNotSdkStopOrTokenRevocationProof": true
+  },
+  "temporaryCors": {
+    "projectId": "pzscx4w8",
+    "origin": "https://8000-i3svpb1bpfrzqnvrpsyv8.e2b.app",
+    "ruleId": 3194089,
+    "createdAndReadBack": true,
+    "actionTimeHumanApproval": true,
+    "removedAt": "2026-10-01T23:14:38.723Z",
+    "state": "REMOVED",
+    "removalVerified": true,
+    "removalScope": "Only the recorded temporary exact-origin rule",
+    "credentialValuesIncluded": false
+  },
+  "missionBridge": {
+    "authenticatedMissionRetirementExecuted": false,
+    "http401Observed": false,
+    "state": "TOKEN_REFUSAL_NOT_OBSERVED_AUTHENTICATED_DESKTOP_ABSENT",
+    "previousPublicBridgeRetirementIsSeparate": true
+  },
+  "kaggleMissionSecret": {
+    "deletionExecuted": false,
+    "deletionConfirmed": false,
+    "state": "NOT_REMOVED_OR_NOT_CONFIRMED",
+    "secretValueIncluded": false
+  },
+  "authenticationValidation": {
+    "nativeHumanLogin": "ATTEMPTED_NOT_AUTHENTICATED",
+    "nativeAuthenticated25Tools": "NOT_RUN",
+    "selectedPublicationPreview": "NOT_RUN",
+    "humanPayloadAcknowledgement": "NOT_RUN",
+    "contentLakeWriteAndReadback": "NOT_RUN",
+    "idempotentPublicationReplay": "NOT_RUN",
+    "readOnlyServerRejection": "NOT_RUN",
+    "nativeLogoutAndToolRevocation": "NOT_RUN"
+  },
+  "authority": {
+    "personalSessionExported": false,
+    "ownerTokenTransferred": false,
+    "contentLakeWriteExecuted": false,
+    "humanPublicationAcknowledgementObtained": false,
+    "sanityRolesModified": false,
+    "notebookContainsCredentials": false
+  },
+  "authenticationEvidence": {
+    "observedChrome150ProviderRefusal": "native-studio-google-oauth-incident-chrome150.json",
+    "officialChrome154Update": "studio-chrome-official-update.json",
+    "chrome154LoginScreenPreparation": "native-studio-login-chrome154-kaggle.json",
+    "chrome154ProviderRefusalClaimed": false,
+    "completedNativeLoginClaimed": false
+  },
+  "evidenceAttribution": "Official SDK inventory was executed and observed by the coordinator; the documentation agent read the scoped private CORS removal record. No authenticated validation was inferred from either observation.",
+  "remaining": [
+    "To resume, provision a fresh owned authentication desktop and repeat explicit native human login.",
+    "Authenticated publication, read-only rejection and logout remain unexecuted.",
+    "The dedicated mission token has no observed HTTP401 refusal.",
+    "Kaggle mission-secret removal remains unconfirmed; no deletion disclaimer is warranted."
+  ],
+  "limits": [
+    "Nine active sandboxes is an account inventory count, not zero active E2B resources.",
+    "Zero owned authentication sandboxes does not establish a coordinator kill or expiration cause.",
+    "Temporary CORS removal does not prove token revocation or authenticated Studio behavior.",
+    "No learner data, private journal, secret, human approval or comprehension is represented by this receipt."
+  ]
+}

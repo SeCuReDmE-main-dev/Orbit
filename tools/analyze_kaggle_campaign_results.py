@@ -9,6 +9,7 @@ from __future__ import annotations
 from collections import Counter, defaultdict
 import itertools
 import json
+import math
 from pathlib import Path
 import random
 import statistics
@@ -28,11 +29,60 @@ def _cluster_interval(differences, seed=20261001, repetitions=2000):
                            'No causal or population-wide superiority is certified.']}
 
 
+def _attempt_costs(all_rows, identity):
+    """Include observed failed/retried generations, without charging a replay twice."""
+    from orbit_campaign_checkpoint import digest
+    latest={}
+    for row in all_rows:
+        if row.get('configurationSha256')!=identity or row.get('suite')!='C':
+            continue
+        if row.get('parameters',{}).get('phase') not in ('extraction','production'):
+            continue
+        key=row.get('key'); attempt=row.get('attempt')
+        if not isinstance(key,str) or not isinstance(attempt,int) or isinstance(attempt,bool) or attempt<0:
+            raise RuntimeError('ANALYSIS_ATTEMPT_IDENTITY_REQUIRED')
+        identifier=(identity,key,attempt)
+        if row.get('observedAtUnix',0)>=latest.get(identifier,{}).get('observedAtUnix',0):
+            latest[identifier]=row
+    usages={}; attempts_without_usage=0
+    for row in latest.values():
+        usage=(row.get('result') or {}).get('usage')
+        if not isinstance(usage,dict) or not usage:
+            attempts_without_usage+=1
+            continue
+        # A restored observation retains its timestamp/content. Distinct
+        # attempts with genuinely new usage remain separately chargeable.
+        observed_at=usage.get('observedAtUnix')
+        replay_identity=(observed_at if isinstance(observed_at,(int,float)) and not isinstance(observed_at,bool)
+                         and math.isfinite(observed_at) else ('attempt',row['attempt']))
+        identifier=(identity,row['key'],replay_identity,digest(usage))
+        usages[identifier]=usage
+    known_components=[]; complete_costs=0; missing_units=2*attempts_without_usage
+    for usage in usages.values():
+        components=[usage.get(name) for name in
+                    ('input_tokens_cost_nanodollars','output_tokens_cost_nanodollars')]
+        valid=[isinstance(value,(int,float)) and not isinstance(value,bool)
+               and math.isfinite(value) and value>=0 for value in components]
+        known_components.extend(value for value,ok in zip(components,valid) if ok)
+        complete_costs+=int(all(valid)); missing_units+=sum(not ok for ok in valid)
+    subtotal=sum(known_components) if known_components else None
+    total=subtotal if usages and missing_units==0 else None
+    return {'generationAttemptRecords':len(latest),'generations':len(usages),
+            'generationsWithCost':complete_costs,'generationsWithMissingCost':len(usages)-complete_costs,
+            'attemptsWithoutUsage':attempts_without_usage,'missingCostUnits':missing_units,
+            'knownSubtotalNanodollars':subtotal,'totalNanodollars':total,
+            'knownNanodollars':subtotal,'missingCostIsNotZero':True,
+            'costScope':'observed attempts of the selected C identity; not a projection of unrun tasks',
+            'attemptStates':dict(Counter(row.get('state','unspecified') for row in latest.values())),
+            'deduplication':'latest identity/key/attempt, then identical usage identity/key/timestamp/content'}
+
+
 def analyze_c(config, public, gold, ledger_directory):
     from orbit_campaign_checkpoint import campaign_identity
     identity=campaign_identity(config)
     all_rows=[json.loads(p.read_text()) for p in Path(ledger_directory).glob('*.json')]
-    rows=[r for r in all_rows if r.get('configurationSha256')==identity]
+    rows=[r for r in all_rows if r.get('configurationSha256')==identity and r.get('suite')=='C']
+    attempt_rows=[json.loads(p.read_text()) for p in Path(ledger_directory).rglob('*.json')]
     current=[r for r in rows if r.get('state')=='completed']
     historical=Counter(r.get('state','unspecified') for r in all_rows if r.get('configurationSha256')!=identity)
     phases=Counter(r.get('parameters',{}).get('phase') for r in current)
@@ -41,15 +91,24 @@ def analyze_c(config, public, gold, ledger_directory):
     targets={identifier:value.get('modelDecision',value['decision']) for identifier,value in gold.items()}
     interpreted={tuple(r['parameters'][k] for k in ('model','packet','repetition','condition')):r['result']
                  for r in current if r.get('parameters',{}).get('phase')=='production-interpretation'}
+    productions={tuple(r['parameters'][k] for k in ('model','packet','repetition','condition')):r
+                 for r in rows if r.get('parameters',{}).get('phase')=='production'}
     metrics=[]; paired=defaultdict(dict)
     for model in config['models']:
         for condition in ('none','baseline','n','p'):
-            counts=Counter();confusion=Counter();packet_counts=defaultdict(Counter)
+            counts=Counter();confusion=Counter();packet_counts=defaultdict(Counter);missing_states=Counter()
             for packet in range(1,11):
                 for repetition in range(3):
                     output=interpreted.get((model,packet,repetition,condition))
                     if output is None:
                         counts['missingProductions']+=1
+                        production=productions.get((model,packet,repetition,condition))
+                        state=production.get('state','unspecified') if production else 'never-run'
+                        missing_states[state]+=1
+                        category=('neverRunProductions' if production is None else
+                                  'inProgressProductions' if state in ('running','observing') else
+                                  'uninterpretedProductions' if state=='completed' else 'failedProductions')
+                        counts[category]+=1
                         continue
                     counts['observedProductions']+=1
                     answers=output.get('answer',{}).get('results',[]) if output.get('status')=='completed' else []
@@ -76,6 +135,7 @@ def analyze_c(config, public, gold, ledger_directory):
                         paired[(model,packet,repetition,identifier)][condition]=int(correct)
             observed=counts['syntheticDecisionsObserved']
             metrics.append({'model':model,'condition':condition,'counts':dict(counts),
+                'missingProductionStates':dict(missing_states),
                 'syntheticAccuracyObserved':counts['syntheticCorrect']/observed if observed else None,
                 'plannedProductions':30,'plannedSyntheticDecisions':108,'plannedRealDecisionsUnscored':72,
                 'complete':counts['observedProductions']==30,
@@ -93,21 +153,15 @@ def analyze_c(config, public, gold, ledger_directory):
                 'matchedSyntheticDecisions':sum(map(len,differences.values())),
                 'plannedMatchedSyntheticDecisions':108,'complete':sum(map(len,differences.values()))==108,
                 **_cluster_interval(means)})
-    usage=[]
-    for row in current:
-        if row.get('parameters',{}).get('phase') in ('extraction','production'):
-            usage.append(row.get('result',{}).get('usage',{}))
-    known_costs=[u['input_tokens_cost_nanodollars']+u['output_tokens_cost_nanodollars'] for u in usage
-                 if u.get('input_tokens_cost_nanodollars') is not None and u.get('output_tokens_cost_nanodollars') is not None]
     return {'format':'orbit-c-actual-checkpoint-analysis-v1','host':'Kaggle','modelCallsDuringAnalysis':0,
         'campaignId':config['campaignId'],'configurationSha256':identity,
         'execution':{'plannedExtractions':60,'observedExtractions':phases['extraction'],
                      'plannedProductions':240,'observedProductions':phases['production'],
                      'completedPackets':phases['packet'],
+                     'currentStates':dict(Counter(r.get('state','unspecified') for r in rows)),
                      'complete':phases['extraction']==60 and phases['production']==240 and phases['packet']==60},
         'historicalStatesNotPooled':dict(historical),'metrics':metrics,'pairedComparisons':comparisons,
-        'observedCosts':{'generations':len(usage),'generationsWithCost':len(known_costs),
-                         'knownNanodollars':sum(known_costs),'missingCostIsNotZero':True},
+        'observedCosts':_attempt_costs(attempt_rows,identity),
         'referenceStatus':{'syntheticQuestions':36,'realQuestionsPendingHuman':24},
         'limitations':['Synthetic specification accuracy does not establish real-source semantic truth.',
                       'Exact quotes and citations require a separate relevance audit.',

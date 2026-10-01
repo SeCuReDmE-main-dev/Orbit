@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "orbit-public-artifact-inspection-v1",
+  "observedDate": "2026-10-01",
+  "state": "READ_ONLY_PUBLICATION_REVIEW",
+  "scope": "Tracked changes, staged changes and non-ignored candidate artifacts for the closure pass",
+  "candidateFilesInspected": 477,
+  "fileAndArchiveMembersInspected": 573,
+  "inspection": [
+    "Bounded raw provider credential and private-key pattern searches",
+    "Comparison against known private environment credential values without printing those values",
+    "ZIP, TGZ, DOCX and embedded notebook payload inspection",
+    "Explicit final-publication inventory selection; provisional renders excluded from the commit"
+  ],
+  "patternFindings": [
+    {
+      "path": "tools/kaggle_campaign_validation_v2.py",
+      "rule": "credential-url",
+      "resolution": "Inspected synthetic example.invalid redaction fixture, not an operational credential"
+    }
+  ],
+  "operationalCredentialFindingObserved": false,
+  "softwareTestsExecuted": false,
+  "modelsCalled": false,
+  "publishedCommit": "9a745f7d4161d85d955d5554cfae7f57bfeee2d6",
+  "followupInspection": {
+    "observedDate": "2026-10-01",
+    "candidateFilesInspected": 303,
+    "fileAndArchiveMembersInspected": 322,
+    "patternFindings": [],
+    "softwareTestsExecuted": false,
+    "modelsCalled": false,
+    "selection": "Only the explicitly reviewed source files and public receipt allowlist are committed; active campaign outputs and provisional renders remain excluded."
+  },
+  "latestFollowupInspection": {
+    "observedDate": "2026-10-01",
+    "candidateFilesInspected": 309,
+    "fileAndArchiveMembersInspected": 328,
+    "patternFindings": [],
+    "softwareTestsExecuted": false,
+    "modelsCalled": false,
+    "stagedFrozenInputFingerprintsMatched": 11,
+    "bytePreservation": "Git attributes keep the eleven hashed immutable Suite C inputs from line-ending conversion. Two non-input publication notes use normalized text.",
+    "selection": "Reviewed source and receipt allowlists, the code-only frozen C runner and factual partial progress are included. Private model outputs, originals, access values and provisional renders remain excluded."
+  },
+  "limits": [
+    "Pattern inspection cannot establish the absence of every possible encoded secret.",
+    "Private operational access, original-source snapshots and private annotation references are not publication inputs.",
+    "This is an artifact inspection, not a software test or proof of test-token revocation."
+  ]
+}

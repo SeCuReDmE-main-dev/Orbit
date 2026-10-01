@@ -72,12 +72,6 @@ def failure_kind(error):
     message = str(error).lower()
     if any(term in message for term in ('quota', 'resource_exhausted', 'insufficient credit', 'budget exceeded')):
         return 'blocked-quota'
-    # The observed provider 429 names model overload, not exhausted account
-    # quota. Only that explicit response is retryable; an unknown 429 stays a
-    # technical error. Quota markers above retain priority when both occur.
-    if (re.search(r'(?<!\d)429(?!\d)', message)
-            and re.search(r'\bmodel (?:is )?currently experiencing heavy load\b', message)):
-        return 'transient-transport'
     if any(term in message for term in ('timeout', 'timed out', 'temporarily unavailable', 'connection reset', 'http 502', 'http 503')):
         return 'transient-transport'
     if any(term in message for term in ('tool invocation limit', 'max_tool_rounds')):
@@ -99,13 +93,11 @@ def require_configuration(config, suite):
     # cannot silently merge with the historical failed dispatch. Keep the
     # version allowlist explicit rather than accepting an arbitrary suffix.
     supported = {'orbit-kaggle-20261001-v2', 'orbit-kaggle-20261001-v2-sdkparams1',
-                 'orbit-kaggle-20261001-v2-sdkparams2', 'orbit-kaggle-20261001-v2-nativebounds1'}
+                 'orbit-kaggle-20261001-v2-sdkparams2'}
     if config.get('format') != 'orbit-kaggle-campaign-v2' or config.get('campaignId') not in supported:
         raise RuntimeError('CAMPAIGN_NAMESPACE_OR_VERSION_UNSUPPORTED')
     if suite not in ('C', 'D', 'E'):
         raise RuntimeError('CAMPAIGN_SUITE_UNSUPPORTED')
-    if config.get('campaignId') == 'orbit-kaggle-20261001-v2-nativebounds1' and suite != 'E':
-        raise RuntimeError('E_NATIVE_BOUNDARY_SNAPSHOT_ONLY')
     if config.get('executableSuites') and suite not in config['executableSuites']:
         raise RuntimeError('SUITE_NOT_ENABLED_IN_THIS_FROZEN_SNAPSHOT')
     observed = importlib.metadata.version('kaggle-benchmarks')
@@ -178,14 +170,8 @@ class CampaignLedger:
     def lot_allowed(self):
         windows=self.config.get('quotaSnapshot',[])
         reserve=self.config.get('maxLotReserveNanodollars')
-        strategy=self.config.get('quotaPolicy',{}).get('unknownPricingStrategy')
-        serial_provider_guard=strategy=='serial-provider-free-quota'
-        parallel_provider_guard=(self.suite=='E' and strategy=='bounded-parallel-provider-free-quota'
-            and isinstance(self.config.get('maxParallelTrajectories'),int)
-            and not isinstance(self.config.get('maxParallelTrajectories'),bool)
-            and 1<=self.config['maxParallelTrajectories']<=8)
-        free_provider_guard=serial_provider_guard or parallel_provider_guard
-        if not windows or (reserve is None and not free_provider_guard):
+        serial_provider_guard=self.config.get('quotaPolicy',{}).get('unknownPricingStrategy')=='serial-provider-free-quota'
+        if not windows or (reserve is None and not serial_provider_guard):
             raise QuotaBlocked('CURRENT_QUOTA_AND_EXPLICIT_DISPATCH_POLICY_REQUIRED')
         if reserve is not None and (not isinstance(reserve,int) or isinstance(reserve,bool) or reserve<=0):
             raise QuotaBlocked('INVALID_DECLARED_LOT_RESERVE')
@@ -216,11 +202,11 @@ class CampaignLedger:
                 costs=[usage.get('input_tokens_cost_nanodollars'),usage.get('output_tokens_cost_nanodollars')]
                 observed_at=usage.get('observedAtUnix',row.get('observedAtUnix',0))
                 if any(value is None for value in costs):
-                    if not free_provider_guard and any(observed_at>=window.get('observedAtUnix',0) for window in windows):
+                    if not serial_provider_guard and any(observed_at>=window.get('observedAtUnix',0) for window in windows):
                         raise QuotaBlocked('OBSERVED_COST_UNAVAILABLE_REFRESH_QUOTA')
                     # Never turn unavailable cost into a reported zero. With
-                    # explicit free-provider mode, dispatch is bounded by the
-                    # fresh UI snapshot, batch size and real provider refusal.
+                    # explicit serial free-provider mode, dispatch is bounded
+                    # by the fresh UI snapshot and the provider's real refusal.
                     continue
                 observed.append((observed_at,sum(costs)))
         for window in windows:
