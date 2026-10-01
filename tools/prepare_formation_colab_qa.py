@@ -159,9 +159,9 @@ save_report()
 CHILD_PROBE = r'''<script>
 (async()=>{
  const moduleId=__NUMBER__, runId=__RUN_ID__; const checks=[], errors=[], frameObservations=[];
- let probeState='BROWSER_PROBE_COMPLETE', visibleAtProbe=false;
+ let probeState='BROWSER_PROBE_COMPLETE', visibleAtProbe=false, visibilityTarget='';
  const send=()=>parent.postMessage({kind:'orbit-colab-qa',runId,moduleId,checks,errors,state:probeState,
-   visibilityState:document.visibilityState,visibleAtProbe,frameObservations,
+   visibilityState:document.visibilityState,visibleAtProbe,visibilityTarget,frameObservations,
    authority:'browser script checks; not human review or trusted pointer input',
    userAgent:navigator.userAgent.slice(0,240),webmcp:'NOT_CALLED'},'*');
  const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
@@ -169,11 +169,18 @@ CHILD_PROBE = r'''<script>
  const parsed=()=>{try{return JSON.parse(document.getElementById('trace').textContent)}catch{return null}};
  const waitFor=async test=>{for(let n=0;n<120;n++){if(test())return true;if(document.getElementById('error').textContent)return false;await pause(250)}return false};
  const ensureVisible=async()=>{
-  const stage=document.getElementById('stage');stage.scrollIntoView({block:'center',inline:'nearest',behavior:'instant'});
+  // HTML-only lessons deliberately hide #stage; gate their actual central content instead.
+  const target=moduleId===2?document.getElementById('cards'):
+   moduleId===7?[...document.querySelectorAll('button')].find(button=>button.textContent==='proofs'):
+   moduleId===8?document.getElementById('trace'):document.getElementById('stage');
+  visibilityTarget=moduleId===2?'cards':moduleId===7?'navigation-button:proofs':moduleId===8?'prepared-trace':'stage';
+  if(!target)return false;
+  target.scrollIntoView({block:'center',inline:'nearest',behavior:'instant'});
   const started=performance.now();
   while(performance.now()-started<8000){
-   const rect=stage.getBoundingClientRect();
-   if(document.visibilityState==='visible'&&rect.width>0&&rect.height>0&&rect.bottom>0&&rect.top<innerHeight){visibleAtProbe=true;return true}
+   const rect=target.getBoundingClientRect(),style=getComputedStyle(target);
+   if(document.visibilityState==='visible'&&!target.hidden&&style.display!=='none'&&style.visibility!=='hidden'&&
+      rect.width>0&&rect.height>0&&rect.bottom>0&&rect.top<innerHeight&&rect.right>0&&rect.left<innerWidth){visibleAtProbe=true;return true}
    await pause(100);
   }
   return false;
@@ -208,7 +215,7 @@ CHILD_PROBE = r'''<script>
    checks.push({name:'visibleOutputBeforeInteraction',passed:null,detail:'Output was not visible within eight seconds; motion was not scored.'});
    send();return;
   }
-  check('visibleOutputBeforeInteraction',visibleAtProbe,document.visibilityState);
+  check('visibleOutputBeforeInteraction',visibleAtProbe,visibilityTarget+'; '+document.visibilityState);
   if(moduleId===1){
    control.checked=false;control.dispatchEvent(new Event('change'));
    const before=parseFloat(document.getElementById('marker').style.left);
