@@ -11,7 +11,7 @@
     "module-7.ipynb": "2d6ac00e5a9635e8b031a31bbb92c8092b94b5a25db26584b5e8c6e6fa7894ca",
     "module-8.ipynb": "93699e909ae53a821b4929e05a9b1485fe7e3eb11a6791cd276b47148d8b3e54"
   },
-  "notebookSha256": "92abfb5511e7e791a203635c1e3cf8ec9c46bbf0fa401426c5e3dc486cd6c875",
+  "notebookSha256": "fef97de8cc12e4fe33c94e2c5744355c61d550b54bdfbc834257a58046402cc9",
   "browserBridge": "official google.colab.output.eval_js; not executed",
   "playwright": "not used; no official attach bridge established"
 }

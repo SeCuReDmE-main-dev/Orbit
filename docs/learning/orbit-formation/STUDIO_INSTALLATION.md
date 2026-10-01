@@ -1,0 +1,97 @@
+# Install Orbit learning tools in your own Sanity Studio
+
+The portable plugin adds **Orbit · Lab** and **Orbit · Projects** to a Studio that you already own. It does not create a Sanity account, project, dataset, or teacher invitation. Your host Studio supplies its project, dataset, authenticated session, and existing rights; this follows the [Sanity plugin configuration API](https://www.sanity.io/docs/studio/plugins-api-reference).
+
+## Verified archive and validation status
+
+Download [orbit-learning-studio-1.0.0.tgz](../../../artifacts/learning-studio/orbit-learning-studio-1.0.0.tgz) and retain its [packaging report](../../../artifacts/learning-studio/package-report.json).
+
+The collected archive SHA-256 is:
+
+```text
+bc222bd2e3553ddfa0a659986ab3c26354d6ae36b424fe7a9f6d96dacab32bdf
+```
+
+The hash was independently checked against the cloud packaging report. The archive contains its JavaScript bundle, TypeScript declaration, build-input record, package manifest, and README. The learning core and engines are embedded; React and Sanity come from the host. No npm publication is required.
+
+**At preparation, installation into a second Studio is not yet declared successful.** The separate Kaggle validation cell must complete and its results must be inspected. The earlier formation software checks do not replace this integration check.
+
+## Add the plugin to an existing Studio
+
+From your own Studio directory, install the downloaded archive:
+
+```sh
+npm install /path/to/orbit-learning-studio-1.0.0.tgz
+```
+
+Add the plugin to your existing `sanity.config.ts`; preserve your other plugins, schemas, and workspace configuration:
+
+```ts
+import {defineConfig} from 'sanity'
+import {orbitLearningStudio} from '@orbit/learning-studio'
+
+export default defineConfig({
+  name: 'my-studio',
+  projectId: 'YOUR_PROJECT_ID',
+  dataset: 'YOUR_DATASET',
+  plugins: [
+    // Keep your existing plugins here.
+    orbitLearningStudio({courseOrigin: 'https://orbit.securedme.ca'}),
+  ],
+  schema: {types: [/* Keep your existing schema types here. */]},
+})
+```
+
+The example is a configuration pattern, not a request to replace an existing file. Your project and dataset identifiers are configuration, not credentials. Do not paste a service token into this file, the plugin, a notebook, or a learner handout.
+
+The current Orbit host is pinned for the integration campaign to **Sanity 6.16.0, React 19.3.0, react-dom 19.3.0, and styled-components 6.5.3**, as resolved by its lockfile. Sanity 6.16.0 declares Node `>=22.12`; the Kaggle cell uses Node **22.20.0** with an archive checksum. These are the validation versions. The package's broader peer range is not a promise that every permitted version has been tested.
+
+The tool paths, below your own Studio base URL, are:
+
+- `orbit-learning-lab/mission/1` — Mission, Experiment, Evidence, Reflection;
+- `orbit-learning-projects/files/1` — Files, Versions, Journal, Sharing.
+
+The host retains its other navigation. Module and view are encoded in the tool routes. FR / EN / ES, static display, contrast, and larger text use Orbit's shared preference contract on the current origin. Browser storage cannot automatically synchronize preferences across unrelated origins. Learner files and code are not automatically translated.
+
+## Three separate decisions about your work
+
+**Local saving:** personal work starts in memory. Allow browser saving, then explicitly choose restore or save. The local namespace includes project, dataset, and user. Opening the tool does not automatically load old personal work. Browser storage is not an encrypted vault.
+
+**Sharing:** choose the exact artifacts and journal entries your assistant may read, and allow proposal deposits separately if wanted. Teacher handoff is a selected export, not an automatic transmission or invitation. Colab and Drive are Google cloud storage; importing an export into Orbit does not make its original Google copy local.
+
+**Sanity publication:** enable preparation of publishable content, select artifacts, inspect the exact JSON and destination, then acknowledge and click the human publication control. These are separate steps. Private journal entries, permissions, and unselected session content are excluded. No pedagogical WebMCP tool approves or publishes as the human. Do not rely on a free or trial dataset to protect private learner work.
+
+Switching account, workspace, module, or learning tool invalidates the related assistant access. Restored/imported sessions require fresh authority. The assistant cannot silently promote imported work to verified execution or understanding.
+
+## Credential-free integration validation in Kaggle
+
+Prepare the notebook without running software tests locally:
+
+```sh
+python tools/prepare_learning_studio_validation.py
+```
+
+The preparation writes one code cell and a notebook under `.orbit/learning-studio-validation/`. Run the cell in Kaggle with Internet enabled. It embeds the archive above, verifies its checksum, downloads a checksum-pinned Node runtime, creates a new directory and isolated configuration, installs exact host dependencies plus the tarball, imports the plugin, and invokes the documented [Sanity build command](https://www.sanity.io/docs/cli-reference/build).
+
+The validation uses a **fictitious project ID**, no real account, and no token. It does not log in, create a project, deploy, publish to npm, or write Content Lake documents. It has no LLM calls.
+
+Results are retained in `/kaggle/working/learning-studio-validation/`:
+
+- `installation-status.json` — stages, command exit codes, versions, duration, and explicit limits;
+- command logs — dependency installation, plugin import, and Studio build;
+- `second-studio-package-lock.json` — exact resolved dependencies after success;
+- `static-build-manifest.json` — fingerprints of generated static files after success.
+
+`PASS_STATIC_INSTALL_BUILD` means that the archive installed, imported, and compiled in the fresh host. It does **not** mean that a person logged in, the UI behaved correctly, or native tools executed. A failed run keeps its stage and error; do not replace it with a fabricated passing receipt.
+
+## Separate authenticated and cross-origin QA
+
+After a passing integration run, inspect a real second Studio with its owner's normal session. Keep these outcomes separate from the static build:
+
+1. Open both tools, navigate forward/back, change module, and verify keyboard, small-screen, language, static display, contrast, and larger-text behavior.
+2. Import only test artifacts. Verify save/restore, account and workspace isolation, fresh consent after navigation/import, and rejection of stale or late proposals.
+3. Inspect the publication preview. Verify the host destination and selected payload; a real write requires the owner's explicit human action and existing rights. A read-only account must remain read-only.
+4. From the second origin, verify the public course Context transport and the gateway CORS response. Keep personal journal content out of those requests. A compiled `courseOrigin` setting does not prove a successful cross-origin call.
+5. In a browser that actually supports WebMCP, discover and execute the mounted twenty-five tools, verify permission refusal and revocation, then leave the tool and confirm cleanup. A browser without native WebMCP retains human controls; that fallback is not an agent execution.
+
+No personal MCP credential is collected by the plugin. The student's assistant retains its own personal MCP configuration. Record authenticated, cross-origin, and native WebMCP results with their own environment, artifact version, observed output, and limits.

@@ -158,14 +158,38 @@ save_report()
 
 CHILD_PROBE = r'''<script>
 (async()=>{
- const moduleId=__NUMBER__, runId=__RUN_ID__; const checks=[], errors=[];
- const send=()=>parent.postMessage({kind:'orbit-colab-qa',runId,moduleId,checks,errors,
+ const moduleId=__NUMBER__, runId=__RUN_ID__; const checks=[], errors=[], frameObservations=[];
+ let probeState='BROWSER_PROBE_COMPLETE', visibleAtProbe=false;
+ const send=()=>parent.postMessage({kind:'orbit-colab-qa',runId,moduleId,checks,errors,state:probeState,
+   visibilityState:document.visibilityState,visibleAtProbe,frameObservations,
    authority:'browser script checks; not human review or trusted pointer input',
    userAgent:navigator.userAgent.slice(0,240),webmcp:'NOT_CALLED'},'*');
  const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
  const check=(name,passed,detail)=>checks.push({name,passed:Boolean(passed),detail:String(detail||'').slice(0,400)});
  const parsed=()=>{try{return JSON.parse(document.getElementById('trace').textContent)}catch{return null}};
  const waitFor=async test=>{for(let n=0;n<120;n++){if(test())return true;if(document.getElementById('error').textContent)return false;await pause(250)}return false};
+ const ensureVisible=async()=>{
+  const stage=document.getElementById('stage');stage.scrollIntoView({block:'center',inline:'nearest',behavior:'instant'});
+  const started=performance.now();
+  while(performance.now()-started<8000){
+   const rect=stage.getBoundingClientRect();
+   if(document.visibilityState==='visible'&&rect.width>0&&rect.height>0&&rect.bottom>0&&rect.top<innerHeight){visibleAtProbe=true;return true}
+   await pause(100);
+  }
+  return false;
+ };
+ const advanceFrames=(label,minimumCount=18,minimumElapsed=300)=>new Promise(resolve=>{
+  const times=[];let handle,done=false;
+  const finish=state=>{if(done)return;done=true;clearTimeout(timer);if(handle)cancelAnimationFrame(handle);
+   const result={label,state,count:times.length,elapsedMs:times.length>1?times.at(-1)-times[0]:0,visibilityState:document.visibilityState};
+   frameObservations.push(result);resolve(result)};
+  const timer=setTimeout(()=>finish(document.visibilityState==='visible'?'FRAME_TIMEOUT':'VISIBILITY_LOST'),5000);
+  const frame=time=>{if(document.visibilityState!=='visible'){finish('VISIBILITY_LOST');return}
+   times.push(time);
+   if(times.length>=minimumCount&&times.at(-1)-times[0]>=minimumElapsed){finish('FRAMES_ADVANCED');return}
+   handle=requestAnimationFrame(frame)};
+  handle=requestAnimationFrame(frame);
+ });
  window.addEventListener('error',event=>errors.push(String(event.message).slice(0,300)));
  window.addEventListener('unhandledrejection',event=>errors.push(String(event.reason).slice(0,300)));
  try{
@@ -179,6 +203,12 @@ CHILD_PROBE = r'''<script>
   const errorText=document.getElementById('error').textContent;
   if(!ready||errorText)throw new Error(errorText||'Output readiness timeout');
   const stage=document.getElementById('stage'), control=document.getElementById('static');
+  if(!await ensureVisible()){
+   probeState='BROWSER_VISIBILITY_UNAVAILABLE';
+   checks.push({name:'visibleOutputBeforeInteraction',passed:null,detail:'Output was not visible within eight seconds; motion was not scored.'});
+   send();return;
+  }
+  check('visibleOutputBeforeInteraction',visibleAtProbe,document.visibilityState);
   if(moduleId===1){
    control.checked=false;control.dispatchEvent(new Event('change'));
    const before=parseFloat(document.getElementById('marker').style.left);
@@ -201,14 +231,25 @@ CHILD_PROBE = r'''<script>
    checks.push({name:'trustedPointerReleaseAndBounce',passed:null,detail:'Requires a real browser pointer, not mocked pointer capture.'});
   }else if(moduleId===5){
    control.checked=false;control.dispatchEvent(new Event('change'));
-   [...document.querySelectorAll('button')].find(button=>button.textContent.includes('Cible')).click();await pause(350);
-   check('springMovesTowardNewTarget',Math.abs((parsed()?.value||1)-1)>.01,JSON.stringify(parsed()));
+   const initialValue=parsed()?.value;
+   [...document.querySelectorAll('button')].find(button=>button.textContent.includes('Cible')).click();
+   const frames=await advanceFrames('spring-after-target');
+   if(frames.state!=='FRAMES_ADVANCED'){
+    probeState=frames.state==='VISIBILITY_LOST'?'BROWSER_VISIBILITY_UNAVAILABLE':'BROWSER_FRAME_UNAVAILABLE';
+    checks.push({name:'springMovesTowardNewTarget',passed:null,detail:'No complete visible frame interval; the spring was not scored.'});
+   }else{
+    const observed=parsed();check('springMovesTowardNewTarget',Number.isFinite(initialValue)&&Number.isFinite(observed?.value)&&Math.abs(observed.value-initialValue)>.01,JSON.stringify(observed));
+   }
    control.checked=true;control.dispatchEvent(new Event('change'));await pause(80);const a=document.getElementById('trace').textContent;await pause(200);
    check('staticFreezesSpringAndClock',a===document.getElementById('trace').textContent);
   }else if(moduleId===6){
-   control.checked=false;control.dispatchEvent(new Event('change'));await pause(200);
-   const canvas=stage.querySelector('canvas'), a=canvas.toDataURL();await pause(250);const b=canvas.toDataURL();
-   check('particleCanvasChangesWhileAnimated',a!==b);
+   control.checked=false;control.dispatchEvent(new Event('change'));
+   const canvas=stage.querySelector('canvas'), a=canvas.toDataURL();
+   const frames=await advanceFrames('particles-while-animated',24,400);const b=canvas.toDataURL();
+   if(frames.state!=='FRAMES_ADVANCED'){
+    probeState=frames.state==='VISIBILITY_LOST'?'BROWSER_VISIBILITY_UNAVAILABLE':'BROWSER_FRAME_UNAVAILABLE';
+    checks.push({name:'particleCanvasChangesWhileAnimated',passed:null,detail:'No complete visible frame interval; the animated pixels were not scored.'});
+   }else check('particleCanvasChangesWhileAnimated',a!==b);
    control.checked=true;control.dispatchEvent(new Event('change'));await pause(80);const c=canvas.toDataURL();await pause(200);
    check('staticFreezesParticlePixels',c===canvas.toDataURL());
   }else if(moduleId===7){
@@ -241,7 +282,8 @@ BROWSER_CHECK = r'''def run_browser_probe(number, namespace):
     expression = r''' + '"""' + r'''new Promise(resolve=>{
       const iframe=[...document.querySelectorAll('iframe')].find(frame=>frame.title===__TITLE__);
       if(!iframe){resolve({state:'OUTPUT_FRAME_UNAVAILABLE'});return}
-      const timeout=setTimeout(()=>finish({state:'BROWSER_TIMEOUT',checks:[],errors:['No bounded iframe response']}),40000);
+      iframe.scrollIntoView({block:'center',inline:'nearest',behavior:'instant'});
+      const timeout=setTimeout(()=>finish({state:'BROWSER_TIMEOUT',checks:[],errors:['No bounded iframe response']}),54000);
       function finish(value){clearTimeout(timeout);window.removeEventListener('message',listener);resolve(value)}
       function listener(event){if(event.source!==iframe.contentWindow||event.data?.kind!=='orbit-colab-qa'||event.data?.runId!==__RUN_ID__)return;finish(event.data)}
       window.addEventListener('message',listener);
@@ -249,14 +291,15 @@ BROWSER_CHECK = r'''def run_browser_probe(number, namespace):
     })''' + '"""' + r'''
     expression = expression.replace('__TITLE__', json.dumps(title)).replace('__RUN_ID__', json.dumps(run_id)).replace('__ENCODED__', json.dumps(encoded))
     try:
-        value = colab_output.eval_js(expression, timeout_sec=45)
+        value = colab_output.eval_js(expression, timeout_sec=58)
         if not isinstance(value, dict):
             raise ValueError('Le navigateur n’a fourni aucun résultat structuré.')
         checks = value.get('checks', [])
         failed = [item for item in checks if item.get('passed') is False]
         errors = value.get('errors', [])
         partial = [item for item in checks if item.get('passed') is None]
-        state = 'BROWSER_SCRIPT_CHECKS_FAILED' if failed or errors or not checks else 'BROWSER_SCRIPT_CHECKS_PASSED'
+        unavailable = value.get('state') in ['OUTPUT_FRAME_UNAVAILABLE', 'BROWSER_VISIBILITY_UNAVAILABLE', 'BROWSER_FRAME_UNAVAILABLE']
+        state = 'BROWSER_SCRIPT_CHECKS_FAILED' if failed or errors else ('BROWSER_CHECK_UNAVAILABLE' if unavailable or not checks else 'BROWSER_SCRIPT_CHECKS_PASSED')
         report['modules'][str(number)].update(browserState=state, browserReport=value, remainingChecks=partial)
     except Exception as error:
         report['modules'][str(number)].update(browserState='BROWSER_CHECK_UNAVAILABLE', browserErrorType=type(error).__name__, browserError=str(error)[:500])
@@ -318,7 +361,7 @@ print(json.dumps(report['summary'], indent=2, ensure_ascii=False))
 print('PARTIAL_VALIDATION. La réception du téléchargement, les huit copies neuves et la reprise après redémarrage réel restent à observer.')
 '''
 
-RECOVERY = r'''# Execute this after a real restart and the source setup, with only the QA evidence ZIP you select.
+RECOVERY_BODY = r'''# Execute this after a real restart and the source setup, with only the QA evidence ZIP you select.
 # Uploaded results remain reported history until the modules are executed again.
 uploaded = colab_files.upload()
 if len(uploaded) != 1:
@@ -361,6 +404,13 @@ save_report()
 print(json.dumps(report['recovery'], ensure_ascii=False))
 '''
 
+RECOVERY = (
+    "RUN_SELECTED_RECOVERY = False  # True only for an intentional selected recovery after a real restart.\n\n"
+    "def run_selected_recovery():\n" + textwrap.indent(RECOVERY_BODY, '    ') +
+    "\nif RUN_SELECTED_RECOVERY:\n    run_selected_recovery()\n"
+    "else:\n    print('SELECTED_RECOVERY_SKIPPED. Run All does not open an upload widget; enable recovery explicitly when needed.')\n"
+)
+
 
 def cell(kind, content, number):
     source = textwrap.dedent(content).strip()
@@ -396,6 +446,8 @@ La source officielle Google expose [output.eval_js dans le contexte de la cellul
 **Ce que ce carnet ne prouve pas :** huit démarrages froids séparés, trente minutes d’activité, gestes pointeur réels, confort tactile, qualité du rendu 3D, réception d’un téléchargement, compilation Astro, outils WebMCP réels ou compréhension humaine. Les résultats Python, JavaScript et observations UI restent distincts.
 
 Les huit rendus sont des fixtures de contrôle marquées comme telles. Les téléchargements arrivent dans votre navigateur; ne rendez pas ces fixtures comme travaux d’élève. Gardez ce carnet privé s’il contient ensuite vos observations personnelles.
+
+**Conserver cet onglet au premier plan pendant les sondes.** Chaque sortie est amenée dans la zone visible; la sonde attend une visibilité réelle et des frames avancées avant de noter le mouvement. Une perte de visibilité devient une limite de contrôle, pas une réussite. Si les frames avancent mais que le mouvement attendu manque, l’assertion reste un échec.
 '''),
         ('code', setup),
         ('code', definitions),
@@ -404,7 +456,7 @@ Les huit rendus sont des fixtures de contrôle marquées comme telles. Les tél�
         texts.extend([
             ('markdown', f'''## Module {number} — source, export, reprise et sonde navigateur
 
-Cette cellule exécute réellement les cellules du notebook. Elle remplit seulement les entrées de fixture et ajoute un commentaire de fidélité; elle ne corrige pas silencieusement le code. Le ZIP est produit par la vraie cellule d’export et la copie capturée est rejouée dans un namespace neuf. La sonde peut durer jusqu’à 45 secondes. Un état FAILED ou UNAVAILABLE reste un échec ou une limite, jamais une réussite implicite.
+Cette cellule exécute réellement les cellules du notebook. Elle remplit seulement les entrées de fixture et ajoute un commentaire de fidélité; elle ne corrige pas silencieusement le code. Le ZIP est produit par la vraie cellule d’export et la copie capturée est rejouée dans un namespace neuf. La sonde peut durer jusqu’à 58 secondes. Un état FAILED ou UNAVAILABLE reste un échec ou une limite, jamais une réussite implicite.
 '''),
             ('code', f"namespace = run_python_and_export({number})\nrun_browser_probe({number}, namespace)"),
         ])
@@ -423,7 +475,7 @@ Pour qualifier le parcours gratuit : ouvrir **une copie neuve de chaque notebook
         ('code', FINAL_REPORT),
         ('markdown', '''## Reprise après redémarrage réel — étape séparée
 
-Télécharger d’abord `orbit-colab-qa-evidence.zip` et vérifier sa présence. Redémarrer le runtime depuis Colab, rejouer uniquement la préparation source, puis exécuter la cellule suivante en choisissant ce ZIP. Cette action vérifie la reprise du code capturé dans le nouveau runtime. Les anciens scores importés restent des résultats rapportés; ils ne deviennent pas des tests fraîchement exécutés.
+Le réglage `RUN_SELECTED_RECOVERY = False` empêche **Tout exécuter** d’ouvrir un widget bloquant. Pour une reprise voulue, télécharger d’abord `orbit-colab-qa-evidence.zip` et vérifier sa présence. Redémarrer le runtime depuis Colab, rejouer uniquement la préparation source, puis changer le réglage en `True` et exécuter la dernière cellule en choisissant ce ZIP. Cette action vérifie la reprise du code capturé dans le nouveau runtime. Les anciens scores importés restent des résultats rapportés; ils ne deviennent pas des tests fraîchement exécutés.
 
 Ne montez pas tout votre Drive. Le widget n’importe que le fichier choisi. Aucun jeton temporaire ou compte E2B n’est nécessaire pour ce contrôle.
 '''),
