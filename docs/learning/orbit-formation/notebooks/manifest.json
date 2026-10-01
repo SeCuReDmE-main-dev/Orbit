@@ -75,13 +75,13 @@
     },
     {
       "path": "notebooks/module-7.ipynb",
-      "sha256": "2d6ac00e5a9635e8b031a31bbb92c8092b94b5a25db26584b5e8c6e6fa7894ca",
+      "sha256": "6b85b3780c50e10cb02a4e75e2ef553b15989f2487cef500ed15b6d572cc0f45",
       "missionId": "module-7",
       "state": "prepared-not-executed"
     },
     {
       "path": "notebooks/instructor/module-7.ipynb",
-      "sha256": "e2af6ed91afca036378797b1bd55cb4cc93b71c08722b408e1d90f5e20d99caa",
+      "sha256": "1426f7985237d66f60736b2b55e96e8b47aa6d9736e161ce25bef40b461b031b",
       "missionId": "module-7",
       "state": "prepared-not-executed"
     },

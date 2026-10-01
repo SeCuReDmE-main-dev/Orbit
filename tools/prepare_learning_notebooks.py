@@ -175,9 +175,17 @@ const canvas=document.createElement('canvas');stage.append(canvas);canvas.width=
 step=dt=>{const values=particles.step(dt,isStatic);context.clearRect(0,0,600,270);context.fillStyle='#ffa234';for(const p of values){context.beginPath();context.arc(p.x*600,p.y*270,2,0,Math.PI*2);context.fill()}
  info.textContent=values.length+' particules. Données JS et aperçu Canvas; coût Three.js à vérifier dans le projet.';};show(particleOptions);""",
 7: """const {createInteractionFlow}=await import(urls['interaction-flow.js']);marker.hidden=true;stage.hidden=true;
-const flow=createInteractionFlow({host:null,onChange:show});lifetimes.push(()=>flow.dispose());for(const view of ['mission','experience','proofs','summary']){const button=document.createElement('button');button.textContent=view;button.onclick=()=>flow.navigate(view,'element-1');document.body.insertBefore(button,document.getElementById('cards'))}
-onStatic=value=>flow.setStatic(value);step=dt=>{flow.step(dt);show(flow.snapshot())};
-info.textContent='Historique interne borné. L’iframe ne modifie pas la navigation de Colab; le vrai retour navigateur est vérifié dans Astro.';""",
+const inputLifetime=new AbortController(), inputOptions={signal:inputLifetime.signal};
+const navigation=document.createElement('div');navigation.setAttribute('role','group');navigation.setAttribute('aria-label','Vues du parcours');document.body.insertBefore(navigation,document.getElementById('cards'));
+const list=document.querySelector('[data-learning-cards]'), description=document.querySelector('[data-learning-description]');list.setAttribute('aria-label','Éléments du parcours');
+const viewButtons=new Map(), selectionButtons=new Map(), rows=[];
+const renderFlow=state=>{show(state);for(const [view,button] of viewButtons)button.setAttribute('aria-pressed',String(view===state.view));for(const [id,button] of selectionButtons)button.setAttribute('aria-pressed',String(id===state.selection));const selected=items.find(item=>item.id===state.selection);description.textContent=selected?selected.id+' — '+selected.content:''};
+const flow=createInteractionFlow({host:null,onChange:renderFlow});
+for(const view of ['mission','experience','proofs','summary']){const button=document.createElement('button');button.type='button';button.textContent=view;button.addEventListener('click',()=>flow.navigate(view),inputOptions);viewButtons.set(view,button);navigation.append(button)}
+for(const item of items){const row=document.createElement('li'),button=document.createElement('button');button.type='button';button.textContent=item.title+' ('+item.id+')';button.addEventListener('click',()=>flow.navigate(flow.snapshot().view,item.id),inputOptions);selectionButtons.set(item.id,button);row.append(button);rows.push(row);list.append(row)}
+lifetimes.push(()=>{inputLifetime.abort();flow.dispose();navigation.remove();rows.forEach(row=>row.remove())});
+onStatic=value=>flow.setStatic(value);step=dt=>{flow.step(dt);renderFlow(flow.snapshot())};
+info.textContent='Choisissez au moins deux éléments avec les boutons, au clavier ou au pointeur. Une nouvelle vue conserve la sélection actuelle. Chaque choix ajoute une entrée; comparez la même séquence de cinq choix avec historyLimit 32 puis 4. Le gel suspend elapsed. Historique interne de l’iframe : le vrai retour navigateur est vérifié dans Astro.';""",
 8: """const {learningToolName}=await import(urls['register-capabilities.js']);marker.hidden=true;stage.hidden=true;
 const preparedTrace={kind:'prepared-example-not-a-live-call',tool:learningToolName,question:'Puis-je lire cet aperçu ?',expectedRevision:2,currentRevision:3,canRead:false,claimedState:'READY',claimedHumanApproval:true};show(preparedTrace);
 info.textContent='Trace préparée volontairement défectueuse. N’interprétez ni READY ni humanApproval comme des faits. Le notebook ne crée aucun appel réel ni moteur Python.';""",
