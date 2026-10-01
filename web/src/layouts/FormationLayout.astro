@@ -3,10 +3,9 @@ import OrbitMark from '../components/OrbitMark.astro'
 import '../styles/cosmic.css'
 import '../styles/atom-games.css'
 import '../styles/formation.css'
-import { ClientRouter } from 'astro:transitions'
 const {title, area='lab'}=Astro.props
 ---
-<!doctype html><html lang="fr"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="robots" content="noindex,nofollow"/><meta name="theme-color" content="#07091b"/><title>{title} · Orbit.</title><ClientRouter/></head>
+<!doctype html><html lang="fr"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="robots" content="noindex,nofollow"/><meta name="theme-color" content="#07091b"/><title>{title} · Orbit.</title></head>
 <body class="formation-page"><a class="skip-link" href="#learning-surface">Aller au contenu</a>
 <div class="formation-shell" data-formation data-area={area}>
   <header class="formation-header"><a href="/" aria-label="Accueil Orbit"><OrbitMark small/></a><nav aria-label="Formation"><a href="/formation/lab/" data-fr="Laboratoire" data-en="Laboratory" data-es="Laboratorio">Laboratoire</a><a href="/formation/projets/" data-fr="Mes projets" data-en="My projects" data-es="Mis proyectos">Mes projets</a></nav><div data-formation-preferences></div></header>
@@ -18,5 +17,5 @@ const {title, area='lab'}=Astro.props
   <input type="file" data-learning-import accept="application/json,.json,.zip,.js,.ts,.astro,.md,.txt" hidden/>
   <dialog data-learning-dialog><button data-dialog-close aria-label="Fermer">×</button><div data-dialog-body></div></dialog>
 </div>
-<script>import {mountLearningWorkspace} from '../lib/learning-workspace'; function mount(){const root=document.querySelector<HTMLElement>('[data-formation]');if(root&&!root.dataset.mounted){root.dataset.mounted='true';void mountLearningWorkspace(root)}}document.addEventListener('astro:page-load',mount);mount()</script>
+<script>import {mountLearningWorkspace} from '../lib/learning-workspace'; function mount(){const root=document.querySelector<HTMLElement>('[data-formation]');if(root&&!root.dataset.mounted){root.dataset.mounted='true';void mountLearningWorkspace(root)}}document.addEventListener('astro:page-load',mount);window.addEventListener('pageshow',mount);mount()</script>
 </body></html>

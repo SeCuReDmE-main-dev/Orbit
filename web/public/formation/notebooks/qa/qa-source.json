@@ -1,0 +1,17 @@
+{
+  "state": "prepared-not-executed",
+  "sourceSha256": "20d89be3af866f8e120489b67ccd15591fe6c1a7e3d58b8123eed31196e39a9d",
+  "notebooks": {
+    "module-1.ipynb": "accdb45c528b5a4f9cdcb1282b40ebe067ea4391987217e4f447bd2112f57085",
+    "module-2.ipynb": "ec94bb61c413fa08cb3490053580ac52c882e7b4320ef885ac7412d46780dd46",
+    "module-3.ipynb": "341c94e06c1c9645f2869d8483ba7b73d5c930c022ced32bd5f859d4e6ad8224",
+    "module-4.ipynb": "c6db8b7898e35ff4ba6847a8b9622841d58128da67f9b842147ee9ebd3065364",
+    "module-5.ipynb": "fff0987ca7801577d81d5c9f6898caf5fdd5333c2ffcf23f02517dc1bc4231ce",
+    "module-6.ipynb": "2f4f8d7a427a1d5b5c909fecaee276ae9248f4c5dbe9395d0d0ed7efca5b38ec",
+    "module-7.ipynb": "2d6ac00e5a9635e8b031a31bbb92c8092b94b5a25db26584b5e8c6e6fa7894ca",
+    "module-8.ipynb": "93699e909ae53a821b4929e05a9b1485fe7e3eb11a6791cd276b47148d8b3e54"
+  },
+  "notebookSha256": "92abfb5511e7e791a203635c1e3cf8ec9c46bbf0fa401426c5e3dc486cd6c875",
+  "browserBridge": "official google.colab.output.eval_js; not executed",
+  "playwright": "not used; no official attach bridge established"
+}
