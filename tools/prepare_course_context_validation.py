@@ -340,9 +340,10 @@ def main() -> None:
         for current, directories, names in os.walk(source/folder, followlinks=False):
             for name in directories:
                 reject_link(Path(current)/name)
+            package_root = folder == 'vendor' and len(Path(current).relative_to(source).parts) == 3
             directories[:] = [name for name in directories
                               if name not in {'.git', 'node_modules', '.cache'}
-                              and not (folder == 'vendor' and name.lower() in vendor_documentation)]
+                              and not (package_root and name.lower() in vendor_documentation)]
             for name in names:
                 path = Path(current)/name
                 reject_link(path)
