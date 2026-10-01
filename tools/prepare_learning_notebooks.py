@@ -35,7 +35,7 @@ MODULES = [
          replacement=('cameraDistance: 5', 'cameraDistance: 7')),
     dict(id=4, title='Vitesse et inertie', files=['inertia.js'],
          goal='Distinguer position, vitesse et durée en secondes après le relâchement.',
-         change='Comparez damping 0.65 et 1.3. Gardez restitution 0.9 et tentez un geste comparable. Les vitesses sont des unités normalisées par seconde.',
+         change='Comparez damping 0.65 et 1.3. Gardez restitution 0.9 et tentez un glisser-relâcher comparable. Les vitesses sont des unités normalisées par seconde. Les flèches déplacent sans élan : leur relâchement ne simule pas un lancer. Espace fige/reprend l’image et le temps; Échap annule le geste.',
          question='Un amortissement plus grand raccourcit-il ou allonge-t-il le déplacement après le geste ?',
          expected='La vitesse décroît avec exp(-damping*dt). La position continue après relâchement; le simple survol ne réagrippe pas.',
          transfer='Appliquez l’inertie à une carte HTML sans obliger Three.js.',
@@ -141,12 +141,31 @@ try { const THREE=await import('https://cdn.jsdelivr.net/npm/three@0.181.2/build
 } catch(error) { info.textContent='CDN ou WebGL indisponible; alternative HTML conservée : '+error.message; }
 const list=document.querySelector('[data-learning-cards]');items.forEach(item=>{const li=document.createElement('li'),button=document.createElement('button');button.textContent=item.title;button.onclick=()=>show({selected:item.id,source:'HTML',position:item.position});li.append(button);list.append(li)});""",
 4: """const {createInertia}=await import(urls['inertia.js']);const motion=createInertia();lifetimes.push(()=>motion.dispose());let held=null;
-stage.addEventListener('pointerdown',e=>{if(isStatic)return;held=e.pointerId;stage.setPointerCapture(held);motion.grab(point(e),performance.now()/1000)});
-stage.addEventListener('pointermove',e=>{if(e.pointerId===held&&!isStatic)motion.move(point(e),performance.now()/1000)});
-stage.addEventListener('pointerup',e=>{if(e.pointerId!==held)return;motion.release(performance.now()/1000);held=null});
-stage.addEventListener('pointercancel',()=>{held=null;motion.cancel()});
+const keyboardHeld=new Set(), inputLifetime=new AbortController(), inputOptions={signal:inputLifetime.signal};
+const renderMotion=()=>{const state=motion.snapshot();drawPoint(state);show(state)};
+const releaseCapture=id=>{if(id!==null&&stage.hasPointerCapture(id))stage.releasePointerCapture(id)};
+const cancelGesture=()=>{const id=held;held=null;keyboardHeld.clear();motion.cancel();releaseCapture(id);renderMotion()};
+stage.addEventListener('pointerdown',e=>{if(isStatic||held!==null||e.button!==0)return;keyboardHeld.clear();stage.focus({preventScroll:true});held=e.pointerId;stage.setPointerCapture(held);motion.grab(point(e),performance.now()/1000);renderMotion()},inputOptions);
+stage.addEventListener('pointermove',e=>{if(e.pointerId===held&&!isStatic){motion.move(point(e),performance.now()/1000);renderMotion()}},inputOptions);
+stage.addEventListener('pointerup',e=>{if(e.pointerId!==held)return;const id=held;held=null;motion.release(performance.now()/1000);releaseCapture(id);renderMotion()},inputOptions);
+stage.addEventListener('pointercancel',e=>{if(e.pointerId===held)cancelGesture()},inputOptions);
+stage.addEventListener('lostpointercapture',e=>{if(e.pointerId===held)cancelGesture()},inputOptions);
+const keyboardDirections={ArrowLeft:{x:-.04,y:0},ArrowRight:{x:.04,y:0},ArrowUp:{x:0,y:-.04},ArrowDown:{x:0,y:.04}};
+stage.addEventListener('keydown',e=>{
+ if(e.code==='Space'||e.key===' '){e.preventDefault();if(!e.repeat){staticControl.checked=!isStatic;staticControl.dispatchEvent(new Event('change'))}return}
+ if(e.key==='Escape'){e.preventDefault();if(held!==null||keyboardHeld.size)cancelGesture();return}
+ const direction=keyboardDirections[e.key];if(!direction)return;e.preventDefault();if(isStatic||held!==null)return;
+ keyboardHeld.add(e.key);const current=motion.snapshot();
+ // Each key step begins at rest: the keyboard never fabricates a pointer velocity.
+ motion.grab({x:Math.max(0,Math.min(1,current.x+direction.x)),y:Math.max(0,Math.min(1,current.y+direction.y))},performance.now()/1000);renderMotion();
+},inputOptions);
+stage.addEventListener('keyup',e=>{if(!keyboardHeld.has(e.key))return;e.preventDefault();keyboardHeld.delete(e.key);if(!keyboardHeld.size)motion.release(performance.now()/1000);renderMotion()},inputOptions);
+stage.addEventListener('blur',()=>{if(held!==null||keyboardHeld.size)cancelGesture()},inputOptions);
+// Freeze preserves free-flight position/velocity; an active input is ended without a launch.
+onStatic=frozen=>{if(frozen&&(held!==null||keyboardHeld.size))cancelGesture()};
+lifetimes.push(()=>inputLifetime.abort());
 step=dt=>{const state=motion.step(dt,isStatic);drawPoint(state);show(state)};
-info.textContent='Les coordonnées sont normalisées entre 0 et 1, dt est en secondes. Un survol après lancer ne change pas la vitesse.';""",
+info.textContent='Glisser puis relâcher produit l’inertie. Flèches : déplacement de 0,04 sans élan au relâchement. Espace : figer/reprendre. Échap : annuler le geste. Le gel termine un geste actif sans lancer; en vol libre il conserve position et vitesse. Coordonnées entre 0 et 1; dt en secondes. Un survol ne réagrippe pas.';""",
 5: """const {createTransition}=await import(urls['transitions.js']);const transition=createTransition();lifetimes.push(()=>transition.dispose());drawPoint({x:.5,y:.5});
 const button=document.createElement('button');button.textContent='Cible 1.5 / 1';let expanded=false;button.onclick=()=>{expanded=!expanded;transition.setTarget(expanded?1.5:1)};document.body.insertBefore(button,stage);
 step=dt=>{const value=transition.step(dt,isStatic);marker.style.width=(24*value)+'px';marker.style.height=(24*value)+'px';show(transition.snapshot())};
