@@ -1,0 +1,26 @@
+{
+  "preparedAt": "2026-10-01",
+  "testHost": "Kaggle",
+  "containsModelGold": false,
+  "containsAccountCredentials": false,
+  "inputs": [
+    {
+      "path": "docs/receipts/fixtures/orbit-closure-php-fb4cbaa58d09.zip",
+      "sha256": "fb4cbaa58d091b80d77a2e50fdff46cd9a2eab7c90995d4cf0b12fad193a41ac",
+      "bytes": 18578031,
+      "state": "frozen-input-not-test-result"
+    },
+    {
+      "path": "docs/receipts/fixtures/orbit-closure-software-dd23469219c5.zip",
+      "sha256": "dd23469219c5040e541093e42175fb49310bfa3b9eac18653bf409279a82784e",
+      "bytes": 652936,
+      "state": "frozen-input-not-test-result"
+    },
+    {
+      "path": "docs/receipts/fixtures/orbit-closure-import-docqa-2e7c880c8c5c.zip",
+      "sha256": "2e7c880c8c5c4333d58462b69c532188d9b277755b2cc9c6f911c32a3713d050",
+      "bytes": 79418,
+      "state": "frozen-input-not-test-result"
+    }
+  ]
+}
