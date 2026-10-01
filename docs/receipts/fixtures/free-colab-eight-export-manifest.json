@@ -1,6 +1,6 @@
 {
   "state": "FROZEN_SYNTHETIC_QA_EXPORTS",
-  "source": "Eight independently copied free CPU Colab notebooks; M4 and M7 corrected retests",
+  "source": "Eight independent free CPU copies; corrected M4/M7 plus new M3/M8 capture integration retests",
   "accountCredentialsIncluded": false,
   "scanner": "48 configured credentials plus fixed token/private-key markers and email occurrences",
   "files": [
@@ -22,11 +22,12 @@
     },
     {
       "moduleId": 3,
-      "path": "docs/receipts/fixtures/free-colab-module-3-export-50f48e5a.zip",
-      "sha256": "50f48e5a862be51e07bcbe12416ca183db3a6c6363e57007e84929b56b3d76c9",
-      "bytes": 24955,
+      "path": "docs/receipts/fixtures/free-colab-module-3-export-b202088c.zip",
+      "sha256": "b202088c8f092630676273c7cdf97d89302983866f70f5b8df3305486d7c3335",
+      "bytes": 26869,
       "authority": "Synthetic Codex QA; not learner submission or human review",
-      "originalBytesPreserved": true
+      "originalBytesPreserved": true,
+      "previousExportPreserved": "docs/receipts/fixtures/free-colab-module-3-export-50f48e5a.zip"
     },
     {
       "moduleId": 4,
@@ -62,11 +63,13 @@
     },
     {
       "moduleId": 8,
-      "path": "docs/receipts/fixtures/free-colab-module-8-export-63f4384c.zip",
-      "sha256": "63f4384cee46d6d0d6edc7da6e9551f3aeee209ec929fc95e30fb4668ee1adfc",
-      "bytes": 19429,
+      "path": "docs/receipts/fixtures/free-colab-module-8-export-8d80562e.zip",
+      "sha256": "8d80562e069f26bb07ec097ad5763676548bf125d7ab06ce5529f8d590bd1654",
+      "bytes": 19925,
       "authority": "Synthetic Codex QA; not learner submission or human review",
-      "originalBytesPreserved": true
+      "originalBytesPreserved": true,
+      "previousExportPreserved": "docs/receipts/fixtures/free-colab-module-8-export-63f4384c.zip"
     }
-  ]
+  ],
+  "sourceNotebookCommit": "6a60234965685dd753391b23d0c3ebc5481df023"
 }
