@@ -57,3 +57,5 @@ The three disposable mission credentials were retired and their old values retur
 The two remaining campaign sandboxes were stopped after collecting the results. Both Kaggle interactive sessions show Cancelled, with zero active events; their saved successful versions remain available. [Resource cleanup](final-resource-cleanup.json).
 
 The user's [retained feedback](USER_FEEDBACK_2026-10-01.md) reports useful, understandable mechanisms and a need for clearer guidance for a new visitor. No visual redesign or onboarding tutorial was performed in this pass. The next joint session can address that guidance while the unresolved Context and Studio qualification remain explicit. No editorial or challenge submission was created.
+
+During V3 inspection, the user also supplied [external agent review 01](EXTERNAL_AGENT_REVIEW_01.md). Its prior exposure and subsequent explanation of the educational purpose are retained. It is qualitative reported feedback, not an independent first impression or completed agent benchmark. Permission and engine-selection interpretations are qualified against the source contract; the reported Context refusal remains unresolved.
