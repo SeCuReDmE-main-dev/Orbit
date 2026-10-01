@@ -1,0 +1,1044 @@
+{
+  "state": "OUTPUT_STRUCTURE_AND_ALL_PAGE_RENDER_OBSERVED",
+  "recordedAt": "2026-10-01T14:06:42.341845+00:00",
+  "courseSoftwareExecuted": false,
+  "learnerUnderstandingExamined": false,
+  "readiness": "review-ready-provisional",
+  "pdf": [
+    {
+      "path": "outputs/book.pdf",
+      "sha256": "94321a71cabc87bd14f3a488fe3d29b82327f2f8c70d4cae8586e1f3fab86a27",
+      "pages": 69,
+      "allPagesRendered": true,
+      "metadata": {
+        "/Creator": "LaTeX via pandoc",
+        "/Title": "Orbit Formation",
+        "/Author": "Jean-Sébastien Beaulieu",
+        "/Producer": "MiKTeX-dvipdfmx (20250413)",
+        "/CreationDate": "D:20261001100436-04'00'"
+      },
+      "authorMatches": true,
+      "language": "fr-CA",
+      "textCharacters": 128792,
+      "totalLinks": 297,
+      "outsidePageSpanCount": 14,
+      "replacementCharacterCount": 0,
+      "pageRows": [
+        {
+          "page": 1,
+          "textCharacters": 103,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-001.png",
+          "pngSha256": "5785be50ff56ccc39eb2737da9fbcf94f17848c9f7db6f45dbf2ecc5400b0bf5"
+        },
+        {
+          "page": 2,
+          "textCharacters": 2910,
+          "links": 36,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-002.png",
+          "pngSha256": "9754d9b918890a1c0eb5693cbb555f35618afeaa35a339a68341d7274ab34498"
+        },
+        {
+          "page": 3,
+          "textCharacters": 4013,
+          "links": 47,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-003.png",
+          "pngSha256": "d0ee932b87b1f4a53b2abea19b5dca9f84e2ae7c939babbde9151c02abe7f794"
+        },
+        {
+          "page": 4,
+          "textCharacters": 4041,
+          "links": 47,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-004.png",
+          "pngSha256": "86e5d65d2db70692f618a318a9a26c9d2a3e2fe72947cc5b12572de712f76017"
+        },
+        {
+          "page": 5,
+          "textCharacters": 2012,
+          "links": 24,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-005.png",
+          "pngSha256": "07d32782f57239f63427a49c02e063c935873cf341ccd103c5d7979d4b17a19e"
+        },
+        {
+          "page": 6,
+          "textCharacters": 2367,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-006.png",
+          "pngSha256": "f36e2553e3336b455aa7842188c856d0aed498b1d374d536460b764565a854f5"
+        },
+        {
+          "page": 7,
+          "textCharacters": 788,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-007.png",
+          "pngSha256": "147766eae684d6d415d2b75f921e2c073c10b88d803f8b5f0e38c4dccd2b5b20"
+        },
+        {
+          "page": 8,
+          "textCharacters": 1507,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-008.png",
+          "pngSha256": "23de74c2fdafc8b2727ed95eceeaca85d1d292e2283f22be50b3a328f1a19a23"
+        },
+        {
+          "page": 9,
+          "textCharacters": 1733,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-009.png",
+          "pngSha256": "d9926b9971b7bc7887c2a5b2a8a4091724c69c5b27180e24d9ddf395f2455476"
+        },
+        {
+          "page": 10,
+          "textCharacters": 337,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-010.png",
+          "pngSha256": "ff46caf350144f940317180b626fe267c564cfef236a3edec0b50b7f449e3145"
+        },
+        {
+          "page": 11,
+          "textCharacters": 1762,
+          "links": 3,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-011.png",
+          "pngSha256": "82c3852333af6998462b74d43c2acc292cdcda14a0438985465964773e8336a3"
+        },
+        {
+          "page": 12,
+          "textCharacters": 2959,
+          "links": 3,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-012.png",
+          "pngSha256": "ceb5f4051f9875011066c5b70cc95025c0ab223c7c271e70643039bc5b4df805"
+        },
+        {
+          "page": 13,
+          "textCharacters": 32,
+          "links": 1,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-013.png",
+          "pngSha256": "0a285ffcccdc47071f8aeefce404c9a2c3747e3c55b28053b92c8c390d61e6bc"
+        },
+        {
+          "page": 14,
+          "textCharacters": 1872,
+          "links": 4,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-014.png",
+          "pngSha256": "31b87014b2763ead71cea5308ad64f7df99e378f8273e7633146563bdcbcfc0e"
+        },
+        {
+          "page": 15,
+          "textCharacters": 2726,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-015.png",
+          "pngSha256": "77ed450405007513a486268843875a846e6390adbf15bc0f4774045df95d280b"
+        },
+        {
+          "page": 16,
+          "textCharacters": 191,
+          "links": 4,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-016.png",
+          "pngSha256": "f913820673fc4c8d7220c0baae2efed5ead28e3be267902ad9bd43a04530399a"
+        },
+        {
+          "page": 17,
+          "textCharacters": 1801,
+          "links": 2,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-017.png",
+          "pngSha256": "2cd9341c7f29f788f762e08a5989f76594b073c46be0cc0593b48219dcdcf1c8"
+        },
+        {
+          "page": 18,
+          "textCharacters": 2544,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-018.png",
+          "pngSha256": "22bfec90aee724a31f40e4222373575cc2261d7668a706dd61bc5a903bbe343d"
+        },
+        {
+          "page": 19,
+          "textCharacters": 145,
+          "links": 4,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-019.png",
+          "pngSha256": "0a5dd8361f6d289ca4c828fcd39e7902d1aea8d29e8f0e6abfcab9136906e89f"
+        },
+        {
+          "page": 20,
+          "textCharacters": 1791,
+          "links": 3,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-020.png",
+          "pngSha256": "c0b5c20cf1ffb322ba13ce51e8a28ea3e77fab04691c6ba010e4a8fb48664d19"
+        },
+        {
+          "page": 21,
+          "textCharacters": 2559,
+          "links": 1,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-021.png",
+          "pngSha256": "b7e00ee2621cbab74eb1c6d645784c6b0fbd9f52e230716e9a720da8df992c0f"
+        },
+        {
+          "page": 22,
+          "textCharacters": 827,
+          "links": 4,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-022.png",
+          "pngSha256": "a9ad50ae7d120750889138a30c431244ca582b814073f5be968a84c4b1795305"
+        },
+        {
+          "page": 23,
+          "textCharacters": 1913,
+          "links": 3,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-023.png",
+          "pngSha256": "cad60bb40a3fb1454fb969aee12c6ce86bd340eefc95d1aec40670179d8eb57e"
+        },
+        {
+          "page": 24,
+          "textCharacters": 2510,
+          "links": 4,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-024.png",
+          "pngSha256": "e2d2488f17eb0f8518e911d6c33518c4ce2931208b0229eb81f1b6489e40f5b4"
+        },
+        {
+          "page": 25,
+          "textCharacters": 1821,
+          "links": 2,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-025.png",
+          "pngSha256": "814f0d9935da16144744aefa2e026f441dd53a5d8a0ca1728546f46c14eb8c1f"
+        },
+        {
+          "page": 26,
+          "textCharacters": 2552,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-026.png",
+          "pngSha256": "d570460fcf26b8578f018a7f0c1d4676790a13103beb28f62371e306a878306c"
+        },
+        {
+          "page": 27,
+          "textCharacters": 166,
+          "links": 4,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-027.png",
+          "pngSha256": "97b19eef002eaeaf2631df839a5575a6a86887a5464e595c7af91a1c124ca141"
+        },
+        {
+          "page": 28,
+          "textCharacters": 1778,
+          "links": 2,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-028.png",
+          "pngSha256": "94307659c724e8555fc44a1bbcda941b1cf6c2e53cac930fb3742d4f5a7ba973"
+        },
+        {
+          "page": 29,
+          "textCharacters": 2637,
+          "links": 5,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-029.png",
+          "pngSha256": "43b370b6cf4f8f9bc2aea56600c058f4efe31617fcd1484cf9a961b1a10f744f"
+        },
+        {
+          "page": 30,
+          "textCharacters": 599,
+          "links": 1,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-030.png",
+          "pngSha256": "72dc02c52e3df9bde75aebbee2143d041623806a120a509af177ec3ad9818258"
+        },
+        {
+          "page": 31,
+          "textCharacters": 1801,
+          "links": 2,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-031.png",
+          "pngSha256": "e607b825a830662aae38aa7f3c8a00ea614791b82d8a71230031470400bec8af"
+        },
+        {
+          "page": 32,
+          "textCharacters": 2735,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-032.png",
+          "pngSha256": "8d1417029a0122f757093e675e060106f6259a8e5ed5b750aafb8b6f8d884824"
+        },
+        {
+          "page": 33,
+          "textCharacters": 1149,
+          "links": 6,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-033.png",
+          "pngSha256": "302b50f58af56be3069b596b217e560b76685e559e9dd8763d6461bd5c3cfbb1"
+        },
+        {
+          "page": 34,
+          "textCharacters": 1252,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-034.png",
+          "pngSha256": "acab7a29766d9c498326423765713eb20ae645f2aada4025caaf2768c910e8fa"
+        },
+        {
+          "page": 35,
+          "textCharacters": 2569,
+          "links": 4,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-035.png",
+          "pngSha256": "2c3e09659edfef9c52fcbfbaf0526ca85301ea7b5bb75eaaa7ba239b59616df6"
+        },
+        {
+          "page": 36,
+          "textCharacters": 2397,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-036.png",
+          "pngSha256": "bb36314c3554e59c134f3e93b723e4bace0579492f9d94840c1d042b45984893"
+        },
+        {
+          "page": 37,
+          "textCharacters": 885,
+          "links": 1,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-037.png",
+          "pngSha256": "6562e0dd21c1ec13c8f7e14ddd96b7addd5bd31f2d515b9a48c28e1de38257c1"
+        },
+        {
+          "page": 38,
+          "textCharacters": 2065,
+          "links": 11,
+          "outsidePage": [
+            {
+              "text": "28813ecbf712f4fb717aaa3f93444c7c7e14fbd737f2d3e3ac1ed6ca28f",
+              "bbox": [
+                223.20599365234375,
+                425.4523010253906,
+                597.656494140625,
+                436.9916076660156
+              ]
+            },
+            {
+              "text": "98a0c6594d176b3cb4fe7b921fd93e945e51d96f3fba3019d8603758506",
+              "bbox": [
+                223.20599365234375,
+                506.7483215332031,
+                597.656494140625,
+                518.28759765625
+              ]
+            }
+          ],
+          "nearHorizontalEdge": [
+            {
+              "text": "28813ecbf712f4fb717aaa3f93444c7c7e14fbd737f2d3e3ac1ed6ca28f",
+              "bbox": [
+                223.20599365234375,
+                425.4523010253906,
+                597.656494140625,
+                436.9916076660156
+              ]
+            },
+            {
+              "text": "98a0c6594d176b3cb4fe7b921fd93e945e51d96f3fba3019d8603758506",
+              "bbox": [
+                223.20599365234375,
+                506.7483215332031,
+                597.656494140625,
+                518.28759765625
+              ]
+            }
+          ],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-038.png",
+          "pngSha256": "4a93f632601c822f4f006ffe546f67c025b4a2a7ab9535c3579e7cf3da6f04b0"
+        },
+        {
+          "page": 39,
+          "textCharacters": 2159,
+          "links": 11,
+          "outsidePage": [
+            {
+              "text": "ea0f93eff48e9dd6a07283f46067eafdc317b352e43409efac8e5e61d49",
+              "bbox": [
+                223.2060089111328,
+                330.10931396484375,
+                597.656494140625,
+                341.64862060546875
+              ]
+            },
+            {
+              "text": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff",
+              "bbox": [
+                223.2060089111328,
+                411.4053039550781,
+                597.656494140625,
+                422.9446105957031
+              ]
+            },
+            {
+              "text": "7e6c739c0883e39aca491e6f6280cc353d",
+              "bbox": [
+                384.0249938964844,
+                587.5443115234375,
+                599.8099975585938,
+                599.0836181640625
+              ]
+            }
+          ],
+          "nearHorizontalEdge": [
+            {
+              "text": "ea0f93eff48e9dd6a07283f46067eafdc317b352e43409efac8e5e61d49",
+              "bbox": [
+                223.2060089111328,
+                330.10931396484375,
+                597.656494140625,
+                341.64862060546875
+              ]
+            },
+            {
+              "text": "f2b0dc6897fae7b56e36836e4019eff06e098bf14d35668fa1df84ec6ff",
+              "bbox": [
+                223.2060089111328,
+                411.4053039550781,
+                597.656494140625,
+                422.9446105957031
+              ]
+            },
+            {
+              "text": "7e6c739c0883e39aca491e6f6280cc353d",
+              "bbox": [
+                384.0249938964844,
+                587.5443115234375,
+                599.8099975585938,
+                599.0836181640625
+              ]
+            }
+          ],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-039.png",
+          "pngSha256": "af5fec2626d85d49fa5deda14fc258c7733179bb811838ad54e469e8004c21f8"
+        },
+        {
+          "page": 40,
+          "textCharacters": 2407,
+          "links": 11,
+          "outsidePage": [
+            {
+              "text": "4b06da41e603d63acd33bbf75995a75d82",
+              "bbox": [
+                384.0249938964844,
+                235.26527404785156,
+                599.8099975585938,
+                246.80458068847656
+              ]
+            },
+            {
+              "text": "827528418863211e76307d3e3dbd2a21d1",
+              "bbox": [
+                384.0250244140625,
+                262.3632507324219,
+                599.81005859375,
+                273.9025573730469
+              ]
+            },
+            {
+              "text": "96acc0ddfdd3728426980df39d2a1ccda0",
+              "bbox": [
+                384.0250244140625,
+                452.0523681640625,
+                599.81005859375,
+                463.5916748046875
+              ]
+            }
+          ],
+          "nearHorizontalEdge": [
+            {
+              "text": "4b06da41e603d63acd33bbf75995a75d82",
+              "bbox": [
+                384.0249938964844,
+                235.26527404785156,
+                599.8099975585938,
+                246.80458068847656
+              ]
+            },
+            {
+              "text": "827528418863211e76307d3e3dbd2a21d1",
+              "bbox": [
+                384.0250244140625,
+                262.3632507324219,
+                599.81005859375,
+                273.9025573730469
+              ]
+            },
+            {
+              "text": "96acc0ddfdd3728426980df39d2a1ccda0",
+              "bbox": [
+                384.0250244140625,
+                452.0523681640625,
+                599.81005859375,
+                463.5916748046875
+              ]
+            },
+            {
+              "text": "publiques/knowledge/comptes/workspaces.",
+              "bbox": [
+                384.0250244140625,
+                709.5942993164062,
+                593.8069458007812,
+                720.5033569335938
+              ]
+            }
+          ],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-040.png",
+          "pngSha256": "80a5db7055a798e50b21ae1ea9723f3782e57ad044105173974634fd370ea822"
+        },
+        {
+          "page": 41,
+          "textCharacters": 2040,
+          "links": 6,
+          "outsidePage": [
+            {
+              "text": "e4215188e3f702b8707d3992aaa0f917bbdca00e58118a0f6953d986974",
+              "bbox": [
+                223.20599365234375,
+                587.83935546875,
+                597.656494140625,
+                599.378662109375
+              ]
+            },
+            {
+              "text": "ed94c13524c078f84c44f074a3034d10850f81470a80603638c3404663b",
+              "bbox": [
+                223.20599365234375,
+                669.1353759765625,
+                597.656494140625,
+                680.6746826171875
+              ]
+            }
+          ],
+          "nearHorizontalEdge": [
+            {
+              "text": "e4215188e3f702b8707d3992aaa0f917bbdca00e58118a0f6953d986974",
+              "bbox": [
+                223.20599365234375,
+                587.83935546875,
+                597.656494140625,
+                599.378662109375
+              ]
+            },
+            {
+              "text": "ed94c13524c078f84c44f074a3034d10850f81470a80603638c3404663b",
+              "bbox": [
+                223.20599365234375,
+                669.1353759765625,
+                597.656494140625,
+                680.6746826171875
+              ]
+            }
+          ],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-041.png",
+          "pngSha256": "c741d80cb53ade579905a12258b4bf7d0dc8bc6b860158c758fca587bb5f05d9"
+        },
+        {
+          "page": 42,
+          "textCharacters": 2956,
+          "links": 2,
+          "outsidePage": [
+            {
+              "text": "83e697c5cf829e1f41071309cdec59bd56eb2684f52885b60f783111c1e",
+              "bbox": [
+                223.2060089111328,
+                194.61729431152344,
+                597.656494140625,
+                206.15660095214844
+              ]
+            },
+            {
+              "text": " d8ff5bd2c54474cca831101f9992d4b92af273370c6f53dee07cd7b6",
+              "bbox": [
+                242.2203369140625,
+                752.582275390625,
+                599.6906127929688,
+                764.12158203125
+              ]
+            },
+            {
+              "text": " 3acb942558e5dc6e42104494238a6191af12c274d607f184843611be3166",
+              "bbox": [
+                214.1184844970703,
+                766.13232421875,
+                596.9771118164062,
+                777.6715698242188
+              ]
+            }
+          ],
+          "nearHorizontalEdge": [
+            {
+              "text": "83e697c5cf829e1f41071309cdec59bd56eb2684f52885b60f783111c1e",
+              "bbox": [
+                223.2060089111328,
+                194.61729431152344,
+                597.656494140625,
+                206.15660095214844
+              ]
+            },
+            {
+              "text": " d8ff5bd2c54474cca831101f9992d4b92af273370c6f53dee07cd7b6",
+              "bbox": [
+                242.2203369140625,
+                752.582275390625,
+                599.6906127929688,
+                764.12158203125
+              ]
+            },
+            {
+              "text": " 3acb942558e5dc6e42104494238a6191af12c274d607f184843611be3166",
+              "bbox": [
+                214.1184844970703,
+                766.13232421875,
+                596.9771118164062,
+                777.6715698242188
+              ]
+            }
+          ],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-042.png",
+          "pngSha256": "6c88733a9a962c6592b1547d5c92b59701e9f0cd4006b5606b6531dfe5431a6d"
+        },
+        {
+          "page": 43,
+          "textCharacters": 2270,
+          "links": 2,
+          "outsidePage": [
+            {
+              "text": " 6b85b3780c50e10cb02a4e75e2ef553b15989f2487cef50",
+              "bbox": [
+                299.0240173339844,
+                196.78529357910156,
+                599.3890380859375,
+                208.32460021972656
+              ]
+            }
+          ],
+          "nearHorizontalEdge": [
+            {
+              "text": " 6b85b3780c50e10cb02a4e75e2ef553b15989f2487cef50",
+              "bbox": [
+                299.0240173339844,
+                196.78529357910156,
+                599.3890380859375,
+                208.32460021972656
+              ]
+            },
+            {
+              "text": " 1426f7985237d66f60736b2b55e96e8b47aa6d9736e161ce25bef40b461b031b",
+              "bbox": [
+                177.55111694335938,
+                210.33529663085938,
+                585.7825317382812,
+                221.87460327148438
+              ]
+            },
+            {
+              "text": ".",
+              "bbox": [
+                585.637939453125,
+                210.44223022460938,
+                588.670654296875,
+                221.35133361816406
+              ]
+            }
+          ],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-043.png",
+          "pngSha256": "ba63001db2d797a7a39f35c5b152453c9be6885c6281f5b586116bec36cf664c"
+        },
+        {
+          "page": 44,
+          "textCharacters": 1852,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-044.png",
+          "pngSha256": "47f4ffcb145f319d70a1933fc808081953166b3d9cde50dc0a22ad99d60bca6f"
+        },
+        {
+          "page": 45,
+          "textCharacters": 1647,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-045.png",
+          "pngSha256": "2c50f5ee728b89491ef23c0ac4fc2923c40f0b0636c8d1ed161fcba03ee5a272"
+        },
+        {
+          "page": 46,
+          "textCharacters": 1762,
+          "links": 2,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-046.png",
+          "pngSha256": "5b70a47c7e9073c631678b53397e13b5b43a8688710eb7923995b776fbd7a5aa"
+        },
+        {
+          "page": 47,
+          "textCharacters": 2125,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-047.png",
+          "pngSha256": "7b8257ba998699b65beaac0b03c80155e67289d8d021a86f3c67968b9414bb8f"
+        },
+        {
+          "page": 48,
+          "textCharacters": 1927,
+          "links": 2,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-048.png",
+          "pngSha256": "f522ff4b656396531bd3d06881a32b68a9d6862e713fb802c5158d9250f920b6"
+        },
+        {
+          "page": 49,
+          "textCharacters": 1864,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-049.png",
+          "pngSha256": "f5e466b2b1a60a835911766d3739233f2487a3b8f59b401d5ea74f5bab4af1dd"
+        },
+        {
+          "page": 50,
+          "textCharacters": 1882,
+          "links": 2,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-050.png",
+          "pngSha256": "fab1caa98e71fb56ea18faf85a30d3c77eea43798a445ef21902081e4443230e"
+        },
+        {
+          "page": 51,
+          "textCharacters": 1789,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-051.png",
+          "pngSha256": "45b25d4b0c7b0d75201462c443ff98fa062317173715d5512e0c95fa032e6ffc"
+        },
+        {
+          "page": 52,
+          "textCharacters": 1938,
+          "links": 2,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-052.png",
+          "pngSha256": "3ce7ddf005965cc554ee7362110107bb47354d92bc9801c32374f07b4e9f3531"
+        },
+        {
+          "page": 53,
+          "textCharacters": 2040,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-053.png",
+          "pngSha256": "fc651c113a11ba5021348281f7a95e33fdeadb8801feef5268c23b75b48cd6b0"
+        },
+        {
+          "page": 54,
+          "textCharacters": 1803,
+          "links": 2,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-054.png",
+          "pngSha256": "18c66a69c01677084a709345741921295662c8855617d4a8bb226d1789635a23"
+        },
+        {
+          "page": 55,
+          "textCharacters": 1900,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-055.png",
+          "pngSha256": "bac8560e36d5bd1b2d0671f7ef47cbbf67b050b74b08bb20170be0d095dba080"
+        },
+        {
+          "page": 56,
+          "textCharacters": 1900,
+          "links": 2,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-056.png",
+          "pngSha256": "2054401c7484ba2e3005187e76222eb2546aa94b8503aa330c2e2c935190b664"
+        },
+        {
+          "page": 57,
+          "textCharacters": 1736,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-057.png",
+          "pngSha256": "54620252d1f381ea850502dcb9b884751592441c5bda243ed7467f0a08dc917e"
+        },
+        {
+          "page": 58,
+          "textCharacters": 1601,
+          "links": 2,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-058.png",
+          "pngSha256": "c89dae5dbe2c70dbfea11c32419997a15b42af3a848fcf078bb4ec28dd988507"
+        },
+        {
+          "page": 59,
+          "textCharacters": 2055,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-059.png",
+          "pngSha256": "4657c7f8620e6d2693f8fe4d1db758190f3b3f44a2aee349f52681b240293bf9"
+        },
+        {
+          "page": 60,
+          "textCharacters": 1868,
+          "links": 2,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-060.png",
+          "pngSha256": "d1bbbcc3d46c78f545592051b028bea7fac0d06630539e44550746c69e1715ed"
+        },
+        {
+          "page": 61,
+          "textCharacters": 3009,
+          "links": 1,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-061.png",
+          "pngSha256": "8b7948d5f4ad4c3071daf8c3ea3499c561f4ab32898480fd6336d87437710151"
+        },
+        {
+          "page": 62,
+          "textCharacters": 1269,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-062.png",
+          "pngSha256": "3f16ed990321b14d14a72aff373249f016ee199228925953146f859a081a52df"
+        },
+        {
+          "page": 63,
+          "textCharacters": 1941,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-063.png",
+          "pngSha256": "9c8bcd3dc064c9813033a5085ba2c31e44df978480dd4194f348ce2df3b0903c"
+        },
+        {
+          "page": 64,
+          "textCharacters": 525,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-064.png",
+          "pngSha256": "179399eca4d13320a2eb346b9cf9d9b139094d1f409f43d5b26592043d71a970"
+        },
+        {
+          "page": 65,
+          "textCharacters": 1809,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-065.png",
+          "pngSha256": "027461e68cc57ea7b7287962451f4aea78c4336e2d31ea0cf82e97f41901c02d"
+        },
+        {
+          "page": 66,
+          "textCharacters": 3337,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-066.png",
+          "pngSha256": "a72d1074786ec4ab054ad7ec345feea344567f244d7b1a438ee0f6d53db5df75"
+        },
+        {
+          "page": 67,
+          "textCharacters": 1868,
+          "links": 10,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-067.png",
+          "pngSha256": "e1fee95f6438a3c4673942bb25180f3af401e10878583095d20bf616997b0887"
+        },
+        {
+          "page": 68,
+          "textCharacters": 1807,
+          "links": 0,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-068.png",
+          "pngSha256": "e03ad25bea9b1db5de89cc217190615ddb4354bef4c6f169624492d5abd6e766"
+        },
+        {
+          "page": 69,
+          "textCharacters": 1857,
+          "links": 10,
+          "outsidePage": [],
+          "nearHorizontalEdge": [],
+          "replacementCharacters": 0,
+          "render": "qa/render/book/page-069.png",
+          "pngSha256": "b5f347a5f7af3929334e6698a2c621689227c488cf739fe54059195afe31bca3"
+        }
+      ],
+      "contactSheets": [
+        "qa/render/book/contact-01.png",
+        "qa/render/book/contact-02.png",
+        "qa/render/book/contact-03.png",
+        "qa/render/book/contact-04.png",
+        "qa/render/book/contact-05.png",
+        "qa/render/book/contact-06.png"
+      ],
+      "visualInspection": "PENDING",
+      "semanticLinkReadback": "PENDING"
+    }
+  ],
+  "docx": [
+    {
+      "path": "outputs/book.docx",
+      "sha256": "b3a889935ea4f7139ebb54dfd0113b4eece36c2945ae3e17712fa309f5ecb31a",
+      "title": "Orbit Formation",
+      "author": "Jean-Sébastien Beaulieu",
+      "authorMatches": true,
+      "paragraphs": 530,
+      "tables": 33,
+      "headings": 154,
+      "bodyCharacters": 88860,
+      "tableCharacters": 26086,
+      "formatTotal40Hours": true,
+      "canonicalDisclosureCount": 0,
+      "layoutInspection": "PENDING_NATIVE_RENDER"
+    }
+  ],
+  "limits": [
+    "Rendered pages still require visual review.",
+    "DOCX structure is distinct from native Word pagination.",
+    "External links need separate readback.",
+    "Final public-runtime qualification remains pending."
+  ]
+}

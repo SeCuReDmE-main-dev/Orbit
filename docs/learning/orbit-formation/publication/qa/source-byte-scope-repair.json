@@ -1,0 +1,12 @@
+{
+  "state": "DOCUMENT_SOURCE_BYTE_SCOPE_REPAIR_COMPLETE",
+  "firstFinalizerState": "DOCUMENT_REVIEW_REQUIRES_REPAIR",
+  "firstFailure": "SOURCE_REVIEW_DIFFERS_FROM_MAINTAINED_SOURCE",
+  "cause": "Source-review previously hashed universal-newline-normalized text; the finalizer correctly required exact maintained file bytes on Windows.",
+  "repair": "source-review now records exact-byte sha256 plus separate normalizedTextSha256; the binding check and failure path are retained.",
+  "currentFinalizerState": "DOCUMENT_REVIEW_COPY_QA_COMPLETE",
+  "currentFailures": [],
+  "softwareExecuted": false,
+  "humanApproval": false,
+  "payloadValuesPrinted": false
+}

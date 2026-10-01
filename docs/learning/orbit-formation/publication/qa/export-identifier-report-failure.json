@@ -1,0 +1,9 @@
+{
+  "state": "DOCUMENT_EXPORT_LOGGING_FAILURE_FIXED",
+  "errorType": "ValueError",
+  "reason": "The PDF pass report referred to the list that contained it, creating a circular JSON object.",
+  "effect": "Document generation preceded the logging failure; no successful complete export report was claimed for that attempt.",
+  "correction": "Copy the last pass record before attaching the pass list, then rebuild and collect the complete report.",
+  "courseSoftwareExecuted": false,
+  "secretsIncluded": false
+}

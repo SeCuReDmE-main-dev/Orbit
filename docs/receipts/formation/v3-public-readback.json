@@ -1,0 +1,59 @@
+{
+  "state": "V3_PUBLIC_BYTES_VERIFIED",
+  "displayVersion": "V3",
+  "version": "3.0.0",
+  "representations": [
+    {
+      "path": "index.html",
+      "requestedEncoding": "identity",
+      "receivedEncoding": "identity",
+      "httpStatus": 200,
+      "sha256": "90b58c335ef87fb0984cfb835ead09de91d845b25d312a321174a8cfd29ab3c6"
+    },
+    {
+      "path": "index.html",
+      "requestedEncoding": "gzip",
+      "receivedEncoding": "gzip",
+      "httpStatus": 200,
+      "sha256": "90b58c335ef87fb0984cfb835ead09de91d845b25d312a321174a8cfd29ab3c6"
+    },
+    {
+      "path": "orbit-release.json",
+      "requestedEncoding": "identity",
+      "receivedEncoding": "identity",
+      "httpStatus": 200,
+      "sha256": "1ccf8102eb0bfaf6a0646a2d0556c88bb0b469cdbabde35bcab1dd6189ab692f"
+    },
+    {
+      "path": "orbit-release.json",
+      "requestedEncoding": "gzip",
+      "receivedEncoding": "gzip",
+      "httpStatus": 200,
+      "sha256": "1ccf8102eb0bfaf6a0646a2d0556c88bb0b469cdbabde35bcab1dd6189ab692f"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/formation/lab/",
+      "httpStatus": 200,
+      "sha256": "993d933c2d59917e0ce053bb44cecae15cd7c86e28779f04a45a83cf8c7deed7"
+    },
+    {
+      "path": "/formation/projets/",
+      "httpStatus": 200,
+      "sha256": "bbdc991b6035d3b2858af4e365ce051cd3361ce965bdd4547bdbb76a54820298"
+    },
+    {
+      "path": "/guide/",
+      "httpStatus": 200,
+      "sha256": "51d2b3f64f885046644ceb7eaa0b3dd9a95bbc23b74e39459af3d5df1468e895"
+    }
+  ],
+  "runtimeBytesChanged": false,
+  "queryParameterUsed": false,
+  "softwareTestsExecuted": false,
+  "modelCalls": 0,
+  "fullMissionComplete": false,
+  "scope": "Deployment readback. Existing runtime validation remains separately attributed to Kaggle/E2B.",
+  "observedAt": "2026-10-01T16:29:50.440046+00:00"
+}

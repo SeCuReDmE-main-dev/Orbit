@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "transport": "brokered-ssh-sftp",
+  "package_sha256": "fdbb0d26e5b51af75b1f017f7f27fd7e57597017eb7282fead6ac376e2bc2971",
+  "verified_paths": [
+    "index.html",
+    "orbit-release.json"
+  ],
+  "staging_cleaned": true,
+  "mutated": true,
+  "rollback_restored": false,
+  "secret_values_exposed": false,
+  "plan_id": "c64117e5bbee4f719161a6db",
+  "remoteBackupRetained": true,
+  "privateOperationalPathsOmitted": true
+}

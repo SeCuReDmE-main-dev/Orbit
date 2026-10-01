@@ -7,5 +7,7 @@
   "unrelatedCampaignResourcesTouched": false,
   "accountE2bKeyRevoked": false,
   "actualFreeColabCopiesStoppedAfterExports": true,
-  "softwareTestsExecutedOnWorkstation": false
+  "softwareTestsExecutedOnWorkstation": false,
+  "kaggleInteractiveSessionsStopped": 2,
+  "kaggleUiStateObserved": "Both Interactive Session events Cancelled; 0 Active Events; saved successful v5/v2 unchanged"
 }

@@ -1,0 +1,145 @@
+{
+  "project": {
+    "title": "Orbit Formation",
+    "subtitle": "Construire, vérifier et enseigner avec son assistant personnel",
+    "authors": [
+      "Jean-Sébastien Beaulieu"
+    ],
+    "language": "fr-CA",
+    "courseVersion": "orbit-course-1.0.0",
+    "edition": "Édition pédagogique 1.0 — source de revue",
+    "audience": [
+      "Learner with personal assistant",
+      "Teacher"
+    ],
+    "readinessGoal": "review-ready",
+    "currentReadiness": "draft"
+  },
+  "sources": [
+    {
+      "path": "MASTER_MANUSCRIPT.md",
+      "type": "markdown",
+      "role": "complete maintained French manual",
+      "status": "composed-source"
+    },
+    {
+      "path": "TEACHER_GUIDE.md",
+      "type": "markdown",
+      "role": "derived teacher handout",
+      "status": "composed-source"
+    },
+    {
+      "path": "ASSISTANT_MISSIONS.md",
+      "type": "markdown",
+      "role": "nine personal-assistant missions",
+      "status": "composed-source"
+    },
+    {
+      "path": "CANVA_BRIEFS.md",
+      "type": "markdown",
+      "role": "nine student web-document briefs",
+      "status": "composed-source"
+    },
+    {
+      "path": "source-map.json",
+      "type": "json",
+      "role": "source and qualification inventory",
+      "status": "composed-source"
+    },
+    {
+      "path": "QUALIFICATION.md",
+      "type": "markdown",
+      "role": "current scoped validation and pending gates",
+      "status": "reported-and-source-inspected"
+    },
+    {
+      "path": "TOOLCHAIN_AND_VERSIONS.md",
+      "type": "markdown",
+      "role": "declared versions and recorded toolchain observations",
+      "status": "recorded-preflight; export-pending"
+    }
+  ],
+  "outputs": {
+    "markdown": true,
+    "docx": true,
+    "pdf": true,
+    "latex": true,
+    "epub": false,
+    "canvaStudentDocuments": 9,
+    "audio": false
+  },
+  "style": {
+    "profile": "technical-manual",
+    "bodyFont": "Arial",
+    "headingFont": "Arial",
+    "monoFont": "Consolas",
+    "fallbackPolicy": "Resolve tool paths from the inspected private preflight report; fonts are installed-file observations, with legibility and glyph coverage still to examine in rendered outputs.",
+    "pageSize": "A4",
+    "marginsMm": 22,
+    "bodySizePt": 11,
+    "lineSpacing": 1.15,
+    "bodyColor": "#18212B",
+    "background": "#FFFFFF",
+    "accents": {
+      "cyan": "#006C82",
+      "violet": "#67409D",
+      "orange": "#A34B00"
+    },
+    "cover": {
+      "tone": "technical learning and exploration",
+      "metaphor": "Orbit and connected learning elements",
+      "constraints": "No mastery, scientific-validity or contest-win claim; existing Orbit identity preserved."
+    },
+    "fontQualification": {
+      "status": "installed-files-observed; render-pending",
+      "observedAt": "2026-10-01",
+      "system": "Windows",
+      "bodyFiles": [
+        "arial.ttf",
+        "arialbd.ttf",
+        "ariali.ttf",
+        "arialbi.ttf"
+      ],
+      "monoFiles": [
+        "consola.ttf",
+        "consolab.ttf",
+        "consolai.ttf",
+        "consolaz.ttf"
+      ],
+      "installationPerformed": false,
+      "renderingExecuted": false
+    }
+  },
+  "hours": {
+    "teacher": 10,
+    "solo": 30,
+    "total": 40,
+    "perModule": {
+      "guided": 120,
+      "colab": 30,
+      "reflection": 30,
+      "webinar": 60
+    },
+    "project": {
+      "setting": 60,
+      "solo": 360,
+      "closure": 60
+    }
+  },
+  "voiceProfile": "voice_profile.json",
+  "sourceMap": "source-map.json",
+  "qualification": "QUALIFICATION.md",
+  "production": {
+    "canvaStatus": "not-produced",
+    "docxStatus": "see qa/export-report.json",
+    "pdfStatus": "see qa/export-report.json",
+    "finalCloudIds": "354436854 actual software run; 354438752 archived browser receipt replay; scoped native browser receipts",
+    "publicationAuthorized": false,
+    "editorialScope": "excluded",
+    "sourceCheckpoint": "Current immutable Kaggle v5 354436854, source68949498, 120.7s: 141 tests in 15 suites, seven notebook Python tests, corrected exact assembly1414666, locked f2 Studio installation and PHP29/185. Historical v4 354422952 retained separately. Fresh independent M3/M8 exports and actual assembly1414666 browser35/35 in E2B. Current live formation72/72 run de718cf4,5093ms, and atom77/77; authenticated second Studio read-only session observed. Course Context admission refused and endpoint disabled; Studio native calls and writes retain separate unvalidated gates; manual Colab upload unavailable.",
+    "deliveryReady": false,
+    "fullMissionComplete": false,
+    "graphicsReview": "future joint review",
+    "nextTutorial": "separate later mission"
+  }
+}

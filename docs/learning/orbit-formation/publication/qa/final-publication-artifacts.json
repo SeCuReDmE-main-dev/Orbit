@@ -1,0 +1,234 @@
+{
+  "state": "FINAL_DOCUMENT_REVIEW_DISTRIBUTION_INVENTORY",
+  "readiness": "review-ready-provisional",
+  "deliveryReady": false,
+  "fullMissionComplete": false,
+  "selfHashIncluded": false,
+  "artifacts": [
+    {
+      "path": "MASTER_MANUSCRIPT.md",
+      "bytes": 143196,
+      "sha256": "fb09a0da2692e3130b5bca90ae6a4e6173d3baf3ea61dcca4c28379256dc935e",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "TEACHER_GUIDE.md",
+      "bytes": 76955,
+      "sha256": "ba7c36900295e5ff1103d5294131ef1f6eeaf07abd8bc97da183008fdb761b04",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "ASSISTANT_MISSIONS.md",
+      "bytes": 30138,
+      "sha256": "0a5b0b3d3ad8ed7ea51e9a24cfe684f47f1534a6aa5fcc81a34c38011f5423f6",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "CANVA_BRIEFS.md",
+      "bytes": 45013,
+      "sha256": "5360694f0f333f5578f83dffe13f4aa7c375a0c2d0558982823c8e941a34ac40",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6184,
+      "sha256": "ba3131324132189520eba5bbe1818f5430721dd028e07184caf6af355ad478ee",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "QUALIFICATION.md",
+      "bytes": 28174,
+      "sha256": "875108b6b657338323c59dc0f30b68ae15d6dd4fd84ddc76abc3ac9377f654ca",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "TOOLCHAIN_AND_VERSIONS.md",
+      "bytes": 5035,
+      "sha256": "af6b33b86a232b8b0887128e31716739bbe7b4e2c1b6a0cc81738b698303a6aa",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "QA_CHECKLIST.md",
+      "bytes": 5815,
+      "sha256": "578c81ca96c61a5f53d64d365ba30db515f726bff0269122a59cd432595754c4",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "book_project.yml",
+      "bytes": 4628,
+      "sha256": "79b8ee35dceac586dc636199d5fa6c55e776edb0674ebe5517f75f7daf80428e",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "source-map.json",
+      "bytes": 54669,
+      "sha256": "fea4167d59c5f072ee7aca6226fd96e22edc1dc225be84d555c909f05ca753da",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "voice_profile.json",
+      "bytes": 1840,
+      "sha256": "44a109e87a919793adba9971971c381d73b5a951c71beac679addc107f105b3c",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "outputs/MASTER_MANUSCRIPT.md",
+      "bytes": 144417,
+      "sha256": "facafeed550f0254910a72f3f8cdfee1d02159d277196099f31f5974f967cdb6",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "outputs/book.docx",
+      "bytes": 84929,
+      "sha256": "768e7611a2d8fa3a6cf2da2c534f3ce08a691b17f3bed77adccc18d57175c341",
+      "byteScope": "exact binary bytes"
+    },
+    {
+      "path": "outputs/book.pdf",
+      "bytes": 293858,
+      "sha256": "2f1c30adbeed7185916c3e16921ea0092aa88d6559ce0a8779418f66981215f0",
+      "byteScope": "exact binary bytes"
+    },
+    {
+      "path": "outputs/book.tex",
+      "bytes": 185193,
+      "sha256": "626102d19a836c2def0f972c29e471e84a71891f5c9458a0e0e92f66d2917531",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "outputs/fingerprints.json",
+      "bytes": 1453,
+      "sha256": "4bb763181454f69f1f1e2469ad1945bf7671bb6608caf112212c9c3fefba4ba7",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "outputs/header.tex",
+      "bytes": 350,
+      "sha256": "fb475065985153cb62336099c42779182f027091ff862bb737943d5bc112efbc",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "outputs/reference.docx",
+      "bytes": 36743,
+      "sha256": "da5cf01d5eee3b13c2479318270fae9e0621a747670a9da726fa84e1fe42e5f1",
+      "byteScope": "exact binary bytes"
+    },
+    {
+      "path": "outputs/package_manifest.json",
+      "bytes": 1440,
+      "sha256": "aade8378c70cda7aa9e2997f4c706720965c3ad6ea07fb330242897e1aa88f0b",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "outputs/publication_qa.json",
+      "bytes": 2775,
+      "sha256": "a5b699b2597811102234a23fdd13e83211353eb5b6c00ca8f472b2527bfe36d9",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "qa/source-composition.json",
+      "bytes": 757,
+      "sha256": "edd1c7937dad64de38abfbb48aedc4911d16f8d36a604fb550c793a6da74a9b1",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "qa/source-review.json",
+      "bytes": 77867,
+      "sha256": "1c403ce44bd4d1f496f40b39bbd1a4079926c7d8f540dbf57db1c04dbe1c0633",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "qa/output-review.json",
+      "bytes": 30386,
+      "sha256": "1d71b685ae473e6caab3e82f53b878e9fdea5099072356a7014552c39494881d",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "qa/export-report.json",
+      "bytes": 52418,
+      "sha256": "10eda4af33166e769dfa07eee001eb37645a1da9ccdd70600398fa5ae70cfa26",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "qa/export-docx.json",
+      "bytes": 395,
+      "sha256": "071d9d375f28f41421433ea0e8d4781d2ef7e6dd3ff2c198eb59e60478cb47e9",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "qa/export-latex.json",
+      "bytes": 630,
+      "sha256": "764f658a14d20e9084ff155ac21b87bf575981e355253f3b986e9e66b674ed83",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "qa/export-pdf.json",
+      "bytes": 48461,
+      "sha256": "20fdec073d4e83a0f9406f5d5ee99bcf097e441bca1aa054545e5cee11fd2b9f",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "qa/document-delivery-review.json",
+      "bytes": 3246,
+      "sha256": "6d92b53f8d1a34ac7f3756aeb24ecdcc0ea638cc93197d1ab3bcc9e7569cb40f",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "scripts/build_outputs.py",
+      "bytes": 14748,
+      "sha256": "0f8f6a45dc5834bfb2f110e32f7bf16339733a7450645a2df907596fcaaac1b5",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "scripts/finalize_document_review.py",
+      "bytes": 9500,
+      "sha256": "06a782f082e2a01b35f60a5b6e3471c15f16f1dd713d27cf5b4c0f64d6e1b29e",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "scripts/prepare_sources.py",
+      "bytes": 74083,
+      "sha256": "521904d3fa1bc3d4c63dfbf0c5a8c55b526440929e8d8dde2ba8f56c1f50b947",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "scripts/review_outputs.py",
+      "bytes": 6901,
+      "sha256": "16a5abaea3daf1a3f8cbb82a6dfb8cc95d8ace186a9c1b24c5acce155b7d5090",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "scripts/review_sources.py",
+      "bytes": 4547,
+      "sha256": "90e455c75d672e9ce8c20a780fd8b266d8361ba280d313bdbf3420e8289b03db",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "scripts/run_publication_gate.py",
+      "bytes": 2729,
+      "sha256": "60161ca60e52fd3906627f189a9ea423e44c0fe6d703960e929d694f857f907b",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "qa/input-snapshots/formation-delivery-status-before-final-document.md",
+      "bytes": 45364,
+      "sha256": "4252565d5c929ce4a1cf18aedb81a6c6fed27e374b775ad0ff1ec6e7ccd56eb6",
+      "byteScope": "UTF-8 LF"
+    },
+    {
+      "path": "qa/input-snapshots/README.md",
+      "bytes": 810,
+      "sha256": "8a49634d66d26dd27ae2fa55312daec19c81cb04afedb9f24e9b595f543c002c",
+      "byteScope": "UTF-8 LF"
+    }
+  ],
+  "excluded": [
+    "qa/final-publication-artifacts.json",
+    "outputs/book.log",
+    "outputs/book.aux",
+    "outputs/book.out",
+    "outputs/book.toc",
+    "qa/render/history/"
+  ],
+  "renderProof": "Current rendered page directory and exact PDF SHA are recorded in qa/output-review.json; historical mixed renders are excluded."
+}

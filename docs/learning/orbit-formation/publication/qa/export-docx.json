@@ -1,0 +1,19 @@
+{
+  "command": [
+    "pandoc.EXE",
+    "MASTER_MANUSCRIPT.md",
+    "--from=markdown+tex_math_dollars",
+    "--standalone",
+    "--toc",
+    "--toc-depth=3",
+    "--metadata=title:Orbit Formation",
+    "--metadata=author:Jean-Sébastien Beaulieu",
+    "--metadata=lang:fr-CA",
+    "--reference-doc=reference.docx",
+    "-o",
+    "book.docx"
+  ],
+  "exitCode": 0,
+  "stdout": "",
+  "stderr": ""
+}

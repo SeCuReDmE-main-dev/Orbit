@@ -1,0 +1,80 @@
+{
+  "state": "DOCUMENT_REVIEW_COPY_QA_COMPLETE",
+  "recordedAt": "2026-10-01T16:27:15.752323+00:00",
+  "readiness": "review-ready-provisional",
+  "documentReadyForAuthorReview": true,
+  "deliveryReady": false,
+  "fullMissionComplete": false,
+  "courseSoftwareExecutedByDocumentWorkflow": false,
+  "canvaProducedByThisWorkflow": false,
+  "learnerUnderstandingExamined": false,
+  "humanContentApproval": false,
+  "sourceSha256": "fb09a0da2692e3130b5bca90ae6a4e6173d3baf3ea61dcca4c28379256dc935e",
+  "sources": {
+    "MASTER_MANUSCRIPT.md": "fb09a0da2692e3130b5bca90ae6a4e6173d3baf3ea61dcca4c28379256dc935e",
+    "TEACHER_GUIDE.md": "ba7c36900295e5ff1103d5294131ef1f6eeaf07abd8bc97da183008fdb761b04",
+    "ASSISTANT_MISSIONS.md": "0a5b0b3d3ad8ed7ea51e9a24cfe684f47f1534a6aa5fcc81a34c38011f5423f6",
+    "CANVA_BRIEFS.md": "5360694f0f333f5578f83dffe13f4aa7c375a0c2d0558982823c8e941a34ac40"
+  },
+  "pdf": {
+    "path": "outputs/book.pdf",
+    "sha256": "2f1c30adbeed7185916c3e16921ea0092aa88d6559ce0a8779418f66981215f0",
+    "pages": 72,
+    "allPagesRendered": true,
+    "visualReview": "Codex reviewed rendered page contact sheets and critical full-size pages",
+    "outsidePageSpanCount": 0,
+    "overlapCandidateCount": 0,
+    "replacementCharacterCount": 0,
+    "linksObserved": 334,
+    "everyExternalDestinationRetested": false
+  },
+  "docx": {
+    "path": "outputs/book.docx",
+    "sha256": "768e7611a2d8fa3a6cf2da2c534f3ce08a691b17f3bed77adccc18d57175c341",
+    "paragraphs": 518,
+    "tables": 33,
+    "authorMatches": true,
+    "canonicalDisclosureCount": 1,
+    "nativeWordPaginationVerified": false
+  },
+  "installedPublicationGate": {
+    "automaticReadiness": "print-ready",
+    "qualifiedReadiness": "review-ready-provisional",
+    "renderScope": "two pages; complemented by the complete PDF render"
+  },
+  "credentialMarkerScan": {
+    "files": [
+      "MASTER_MANUSCRIPT.md",
+      "TEACHER_GUIDE.md",
+      "ASSISTANT_MISSIONS.md",
+      "CANVA_BRIEFS.md",
+      "outputs/book.tex",
+      "source-map.json",
+      "outputs/publication_qa.json"
+    ],
+    "docxXmlChecked": true,
+    "valuesPrinted": false,
+    "scope": "Known credential prefixes only; not a general proof of absence"
+  },
+  "preservedBoundaries": [
+    "40 hours: teacher10 / solo30; final project setting1 / solo6 / closure1",
+    "Course Context admission HOLD and public transport disabled",
+    "Canva and authenticated Studio keep their own qualification",
+    "Actual assembly browser keeps its latest independent receipt",
+    "Manual Colab upload not observed",
+    "No editorial, promotion, new tutorial or voice cloning"
+  ],
+  "sourceOriginalityScope": "Authorized course files and teaching scripts are identified in source-map.json; primary external resources are linked. No external plagiarism service was used.",
+  "sourceReviewBinding": {
+    "path": "qa/source-review.json",
+    "sha256": "1c403ce44bd4d1f496f40b39bbd1a4079926c7d8f540dbf57db1c04dbe1c0633",
+    "maintainedFiles": [
+      "MASTER_MANUSCRIPT.md",
+      "TEACHER_GUIDE.md",
+      "ASSISTANT_MISSIONS.md",
+      "CANVA_BRIEFS.md"
+    ]
+  },
+  "voiceReviewScope": "Written scripts and proposed intonation; no recorded vocal reproduction or human content acceptance.",
+  "failures": []
+}

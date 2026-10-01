@@ -135,7 +135,9 @@ const server=createServer(async(req,res)=>{
     await browser.evaluate(`(()=>{window.__atomErrors=[];window.addEventListener('error',e=>window.__atomErrors.push(e.message));document.querySelector('[data-landing-access]').click();document.querySelector('[data-landing-motion]').click();document.querySelector('[data-access-close]').click();return true})()`);
     await browser.evaluate(`(async()=>{for(let i=0;i<100;i++){if(document.querySelector('.atom-games'))return true;await new Promise(r=>setTimeout(r,100));}throw Error('ANIMATED_NOT_RESTORED')})()`);
     await check('animated-resumed',`!document.querySelector('[data-atom-canvas]').hidden`);
-    await check('publication-lab-and-version-2.1.7',`document.querySelector('.publication-lab-signature').naturalWidth>0&&document.querySelector('.landing-footer').textContent.includes('2.1.7')&&document.querySelector('.publication-lab-link').href==='https://securedme.ca/'`);
+    // Preserve old campaign stamps through an explicit parameter; new runs target V3.
+    const expectedVersion = process.env.ORBIT_ATOM_EXPECTED_VERSION || 'V3';
+    await check('publication-lab-and-version-'+expectedVersion,`document.querySelector('.publication-lab-signature').naturalWidth>0&&document.querySelector('.landing-footer').textContent.includes(${JSON.stringify(expectedVersion)})&&document.querySelector('.publication-lab-link').href==='https://securedme.ca/'`);
     await check('logo-below-separator',`(()=>{const f=document.querySelector('.landing-footer').getBoundingClientRect(),l=document.querySelector('.publication-lab-link'),r=l.getBoundingClientRect();return r.top>f.top&&r.bottom<=f.bottom&&getComputedStyle(l).mixBlendMode==='screen'})()`);
     const lost=await browser.evaluate(`(()=>{const c=document.querySelector('[data-atom-canvas]'),gl=c.getContext('webgl2');const ext=gl?.getExtension('WEBGL_lose_context');ext?.loseContext();return !!ext})()`);
     if(lost){await browser.evaluate(`new Promise(r=>setTimeout(r,200))`);await check('context-loss-fallback',`document.querySelector('[data-landing]').dataset.graphics==='unavailable'`);}

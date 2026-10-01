@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "orbit-course-author-voice-v1",
+  "language": "fr-CA",
+  "author": "Jean-Sébastien Beaulieu",
+  "derivedFrom": [
+    "Authorized messages in the Orbit formation mission",
+    "Prepared five-minute scripts in modules 1–8 and PROJECT.md"
+  ],
+  "claimStatus": "proposed-written-voice; no recorded vocal reference",
+  "rhythm": [
+    "One visible effect, one question, one datum, one short experiment.",
+    "Pause before prediction and after observation.",
+    "Connect personal intention to a concrete file and a new use."
+  ],
+  "writingRules": [
+    "Lead with capability, decision and observable evidence.",
+    "First-person singular for the teacher's demonstration; direct invitation for learner activity.",
+    "Name units and conditions before interpreting a change.",
+    "Invite frank disclosure of help, limits and open questions.",
+    "Distinguish code supplied, modified, executed-reported and examined."
+  ],
+  "oralSuggestions": [
+    "Slow down on a new term or unit.",
+    "Accent the single variable changed.",
+    "Leave manipulation and reformulation time.",
+    "Use enthusiasm during demonstration with claims governed by evidence."
+  ],
+  "phrasePatterns": [
+    "Je veux qu'on parte d'un geste simple.",
+    "Dans ce code…",
+    "Mon hypothèse était…",
+    "Qu'est-ce qui change, et qu'est-ce qui reste ?"
+  ],
+  "noCopyPolicy": [
+    "No long passages from prior books.",
+    "No recorded voice cloning or certified reproduction of intonation.",
+    "No student mastery inferred from scripts, file hashes or test counts."
+  ],
+  "generationPolicy": [
+    "Scripts are proposed utterances for the teacher, not reports of completed sessions.",
+    "Examples preserve source paths, scope and uncertainty.",
+    "Use one localized research-partner disclosure in manual front matter."
+  ]
+}

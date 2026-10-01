@@ -1,0 +1,9 @@
+# Local TeX intermediates can contain private runtime paths.
+/outputs/book.aux
+/outputs/book.log
+/outputs/book.out
+/outputs/book.toc
+
+# Historical and superseded document renders remain local.
+/qa/render/history/
+/qa/render/book-cfbed57be06a/

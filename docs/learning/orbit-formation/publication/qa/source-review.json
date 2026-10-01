@@ -1,0 +1,3136 @@
+{
+  "state": "DOCUMENT_SOURCE_REVIEW_PREPARED",
+  "preparedAt": "2026-10-01T16:04:45.266789+00:00",
+  "softwareExecuted": false,
+  "documentExportsExecutedByThisStep": false,
+  "canvaProduced": false,
+  "outputVisualQA": "See qa/output-review.json and qa/document-delivery-review.json",
+  "learnerUnderstanding": "NOT_EXAMINED",
+  "canonicalResearchPartnerDisclosureCount": 1,
+  "negativeConstructionPolicy": "Proposed purposes are source-review classifications; final editorial review remains pending. Exact protocol/security/scientific/status distinctions remain explicit.",
+  "revisions": [
+    "M3 pointer target and exact independent assembly browser35/35 synchronized",
+    "M4 controls and limits synchronized",
+    "M7 two-selection objective retained with corrected HTML choices",
+    "Project sequence retained as setting 1h / solo 6h / closure 1h",
+    "Native-registry ownership and public GET course Context differentiated",
+    "Historical and current evidence kept scoped by payload"
+  ],
+  "files": [
+    {
+      "path": "MASTER_MANUSCRIPT.md",
+      "sha256": "fb09a0da2692e3130b5bca90ae6a4e6173d3baf3ea61dcca4c28379256dc935e",
+      "normalizedTextSha256": "fb09a0da2692e3130b5bca90ae6a4e6173d3baf3ea61dcca4c28379256dc935e",
+      "hashScope": "sha256 identifies exact file bytes; normalizedTextSha256 identifies the text used by this review",
+      "characters": 138925,
+      "localReferencesMissing": [],
+      "negativeConstructionMatches": 286,
+      "negativeConstructionLocations": [
+        {
+          "line": 21,
+          "matches": 2,
+          "markers": [
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 23,
+          "matches": 2,
+          "markers": [
+            "n'",
+            "aucune"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 79,
+          "matches": 3,
+          "markers": [
+            "pas",
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 83,
+          "matches": 3,
+          "markers": [
+            "aucun",
+            "aucune",
+            "aucune"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 91,
+          "matches": 2,
+          "markers": [
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 113,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 119,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 125,
+          "matches": 4,
+          "markers": [
+            "pas",
+            "ni",
+            "ni",
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 129,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 130,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 131,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 133,
+          "matches": 4,
+          "markers": [
+            "pas",
+            "n'",
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 139,
+          "matches": 2,
+          "markers": [
+            "Aucune",
+            "n'"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 143,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 145,
+          "matches": 2,
+          "markers": [
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 163,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 169,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 180,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 185,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 188,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 196,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 200,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 216,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 222,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 224,
+          "matches": 2,
+          "markers": [
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 233,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 240,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "sans"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 243,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 249,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 253,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 272,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 274,
+          "matches": 2,
+          "markers": [
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 281,
+          "matches": 1,
+          "markers": [
+            "n'"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 295,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 303,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 306,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 311,
+          "matches": 2,
+          "markers": [
+            "sans",
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 314,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 318,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 320,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 324,
+          "matches": 3,
+          "markers": [
+            "pas",
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 332,
+          "matches": 5,
+          "markers": [
+            "pas",
+            "sans",
+            "n'",
+            "pas",
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 340,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 348,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 354,
+          "matches": 2,
+          "markers": [
+            "sans",
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 362,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 370,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 373,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 379,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 385,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 393,
+          "matches": 2,
+          "markers": [
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 407,
+          "matches": 2,
+          "markers": [
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 414,
+          "matches": 2,
+          "markers": [
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 418,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 422,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 423,
+          "matches": 2,
+          "markers": [
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 426,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 436,
+          "matches": 2,
+          "markers": [
+            "sans",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 444,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 460,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 476,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 479,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 485,
+          "matches": 4,
+          "markers": [
+            "n'",
+            "pas",
+            "aucune",
+            "n'"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 489,
+          "matches": 3,
+          "markers": [
+            "sans",
+            "pas",
+            "sans"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 513,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 519,
+          "matches": 4,
+          "markers": [
+            "n'",
+            "pas",
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 530,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 534,
+          "matches": 2,
+          "markers": [
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 535,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "aucun"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 538,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 542,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 548,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 550,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 556,
+          "matches": 3,
+          "markers": [
+            "pas",
+            "Aucun",
+            "ni"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 564,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 591,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 604,
+          "matches": 2,
+          "markers": [
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 608,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 614,
+          "matches": 3,
+          "markers": [
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 616,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 626,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 631,
+          "matches": 2,
+          "markers": [
+            "non",
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 641,
+          "matches": 5,
+          "markers": [
+            "n'",
+            "pas",
+            "n'",
+            "aucun",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 643,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 645,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 649,
+          "matches": 3,
+          "markers": [
+            "aucun",
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 651,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 657,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 658,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 659,
+          "matches": 3,
+          "markers": [
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 662,
+          "matches": 2,
+          "markers": [
+            "aucune",
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 671,
+          "matches": 4,
+          "markers": [
+            "Aucun",
+            "ni",
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 673,
+          "matches": 2,
+          "markers": [
+            "non",
+            "non"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 674,
+          "matches": 3,
+          "markers": [
+            "sans",
+            "sans",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 675,
+          "matches": 1,
+          "markers": [
+            "non"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 676,
+          "matches": 2,
+          "markers": [
+            "sans",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 677,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 678,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 679,
+          "matches": 1,
+          "markers": [
+            "aucun"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 680,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 681,
+          "matches": 4,
+          "markers": [
+            "n'",
+            "pas",
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 682,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 684,
+          "matches": 2,
+          "markers": [
+            "aucune",
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 685,
+          "matches": 3,
+          "markers": [
+            "sans",
+            "pas",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 686,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 687,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 689,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 690,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 691,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 693,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 694,
+          "matches": 9,
+          "markers": [
+            "sans",
+            "n'",
+            "pas",
+            "Aucune",
+            "n'",
+            "Aucun",
+            "ni",
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 695,
+          "matches": 3,
+          "markers": [
+            "sans",
+            "no",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 697,
+          "matches": 1,
+          "markers": [
+            "aucune"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 700,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "not"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 704,
+          "matches": 2,
+          "markers": [
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 706,
+          "matches": 3,
+          "markers": [
+            "pas",
+            "sans",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 710,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 718,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 720,
+          "matches": 2,
+          "markers": [
+            "aucune",
+            "n'"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 730,
+          "matches": 5,
+          "markers": [
+            "pas",
+            "pas",
+            "sans",
+            "Aucun",
+            "n'"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 732,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 745,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 756,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 767,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 771,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 775,
+          "matches": 2,
+          "markers": [
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 786,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 790,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 803,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 807,
+          "matches": 2,
+          "markers": [
+            "sans",
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 809,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 811,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 838,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 847,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 861,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 886,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 905,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 907,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "sans"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 924,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 930,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 934,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 949,
+          "matches": 1,
+          "markers": [
+            "n'"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 955,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 957,
+          "matches": 2,
+          "markers": [
+            "sans",
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 972,
+          "matches": 2,
+          "markers": [
+            "sans",
+            "ni"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 982,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1003,
+          "matches": 2,
+          "markers": [
+            "sans",
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1030,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1049,
+          "matches": 3,
+          "markers": [
+            "aucune",
+            "n'",
+            "sans"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1051,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1053,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1078,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1126,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1141,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1143,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1147,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1185,
+          "matches": 2,
+          "markers": [
+            "aucune",
+            "n'"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1207,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1209,
+          "matches": 2,
+          "markers": [
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1232,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1234,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1256,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1258,
+          "matches": 4,
+          "markers": [
+            "n'",
+            "aucun",
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1264,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1266,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1270,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1318,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1321,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 1327,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        }
+      ]
+    },
+    {
+      "path": "TEACHER_GUIDE.md",
+      "sha256": "ba7c36900295e5ff1103d5294131ef1f6eeaf07abd8bc97da183008fdb761b04",
+      "normalizedTextSha256": "ba7c36900295e5ff1103d5294131ef1f6eeaf07abd8bc97da183008fdb761b04",
+      "hashScope": "sha256 identifies exact file bytes; normalizedTextSha256 identifies the text used by this review",
+      "characters": 74511,
+      "localReferencesMissing": [],
+      "negativeConstructionMatches": 136,
+      "negativeConstructionLocations": [
+        {
+          "line": 15,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 26,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 37,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 41,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 45,
+          "matches": 2,
+          "markers": [
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 56,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 60,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 73,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 77,
+          "matches": 2,
+          "markers": [
+            "sans",
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 79,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 81,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 100,
+          "matches": 1,
+          "markers": [
+            "Aucun"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 115,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 124,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 138,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 155,
+          "matches": 1,
+          "markers": [
+            "Aucun"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 170,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 189,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 191,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "sans"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 210,
+          "matches": 1,
+          "markers": [
+            "Aucun"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 215,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 221,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 225,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 240,
+          "matches": 1,
+          "markers": [
+            "n'"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 246,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 248,
+          "matches": 2,
+          "markers": [
+            "sans",
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 265,
+          "matches": 1,
+          "markers": [
+            "Aucun"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 270,
+          "matches": 2,
+          "markers": [
+            "sans",
+            "ni"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 280,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 301,
+          "matches": 2,
+          "markers": [
+            "sans",
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 320,
+          "matches": 1,
+          "markers": [
+            "Aucun"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 335,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 354,
+          "matches": 3,
+          "markers": [
+            "aucune",
+            "n'",
+            "sans"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 356,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 358,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 375,
+          "matches": 1,
+          "markers": [
+            "Aucun"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 390,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 430,
+          "matches": 1,
+          "markers": [
+            "Aucun"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 445,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 460,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 462,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 466,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 493,
+          "matches": 1,
+          "markers": [
+            "Aucun"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 511,
+          "matches": 2,
+          "markers": [
+            "aucune",
+            "n'"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 533,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 535,
+          "matches": 2,
+          "markers": [
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 546,
+          "matches": 3,
+          "markers": [
+            "aucun",
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 548,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 554,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 555,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 556,
+          "matches": 3,
+          "markers": [
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 559,
+          "matches": 2,
+          "markers": [
+            "aucune",
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 568,
+          "matches": 4,
+          "markers": [
+            "Aucun",
+            "ni",
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 570,
+          "matches": 2,
+          "markers": [
+            "non",
+            "non"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 571,
+          "matches": 3,
+          "markers": [
+            "sans",
+            "sans",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 572,
+          "matches": 1,
+          "markers": [
+            "non"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 573,
+          "matches": 2,
+          "markers": [
+            "sans",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 574,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 575,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 576,
+          "matches": 1,
+          "markers": [
+            "aucun"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 577,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 578,
+          "matches": 4,
+          "markers": [
+            "n'",
+            "pas",
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 579,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 581,
+          "matches": 2,
+          "markers": [
+            "aucune",
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 582,
+          "matches": 3,
+          "markers": [
+            "sans",
+            "pas",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 583,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 584,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 586,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 587,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 588,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 590,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 591,
+          "matches": 9,
+          "markers": [
+            "sans",
+            "n'",
+            "pas",
+            "Aucune",
+            "n'",
+            "Aucun",
+            "ni",
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 592,
+          "matches": 3,
+          "markers": [
+            "sans",
+            "no",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 594,
+          "matches": 1,
+          "markers": [
+            "aucune"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 597,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "not"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 601,
+          "matches": 2,
+          "markers": [
+            "n'",
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 603,
+          "matches": 3,
+          "markers": [
+            "pas",
+            "sans",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 607,
+          "matches": 1,
+          "markers": [
+            "sans"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 615,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 617,
+          "matches": 2,
+          "markers": [
+            "aucune",
+            "n'"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 627,
+          "matches": 5,
+          "markers": [
+            "pas",
+            "pas",
+            "sans",
+            "Aucun",
+            "n'"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 629,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        }
+      ]
+    },
+    {
+      "path": "ASSISTANT_MISSIONS.md",
+      "sha256": "0a5b0b3d3ad8ed7ea51e9a24cfe684f47f1534a6aa5fcc81a34c38011f5423f6",
+      "normalizedTextSha256": "0a5b0b3d3ad8ed7ea51e9a24cfe684f47f1534a6aa5fcc81a34c38011f5423f6",
+      "hashScope": "sha256 identifies exact file bytes; normalizedTextSha256 identifies the text used by this review",
+      "characters": 29015,
+      "localReferencesMissing": [],
+      "negativeConstructionMatches": 52,
+      "negativeConstructionLocations": [
+        {
+          "line": 3,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 28,
+          "matches": 1,
+          "markers": [
+            "non"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 30,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 36,
+          "matches": 4,
+          "markers": [
+            "n'",
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 62,
+          "matches": 1,
+          "markers": [
+            "non"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 64,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 70,
+          "matches": 4,
+          "markers": [
+            "n'",
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 96,
+          "matches": 1,
+          "markers": [
+            "non"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 98,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 104,
+          "matches": 4,
+          "markers": [
+            "n'",
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 130,
+          "matches": 1,
+          "markers": [
+            "non"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 132,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 138,
+          "matches": 4,
+          "markers": [
+            "n'",
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 164,
+          "matches": 1,
+          "markers": [
+            "non"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 166,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 172,
+          "matches": 4,
+          "markers": [
+            "n'",
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 198,
+          "matches": 1,
+          "markers": [
+            "non"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 200,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 206,
+          "matches": 4,
+          "markers": [
+            "n'",
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 232,
+          "matches": 1,
+          "markers": [
+            "non"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 234,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 240,
+          "matches": 4,
+          "markers": [
+            "n'",
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 266,
+          "matches": 1,
+          "markers": [
+            "non"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 268,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 274,
+          "matches": 4,
+          "markers": [
+            "n'",
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 285,
+          "matches": 2,
+          "markers": [
+            "ni",
+            "n'"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        }
+      ]
+    },
+    {
+      "path": "CANVA_BRIEFS.md",
+      "sha256": "5360694f0f333f5578f83dffe13f4aa7c375a0c2d0558982823c8e941a34ac40",
+      "normalizedTextSha256": "5360694f0f333f5578f83dffe13f4aa7c375a0c2d0558982823c8e941a34ac40",
+      "hashScope": "sha256 identifies exact file bytes; normalizedTextSha256 identifies the text used by this review",
+      "characters": 43644,
+      "localReferencesMissing": [],
+      "negativeConstructionMatches": 85,
+      "negativeConstructionLocations": [
+        {
+          "line": 3,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 13,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 17,
+          "matches": 3,
+          "markers": [
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 22,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 32,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 49,
+          "matches": 3,
+          "markers": [
+            "pas",
+            "aucune",
+            "aucune"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 60,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 64,
+          "matches": 3,
+          "markers": [
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 79,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 96,
+          "matches": 3,
+          "markers": [
+            "pas",
+            "aucune",
+            "aucune"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 107,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 111,
+          "matches": 3,
+          "markers": [
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 126,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 143,
+          "matches": 3,
+          "markers": [
+            "pas",
+            "aucune",
+            "aucune"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 154,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 158,
+          "matches": 3,
+          "markers": [
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 163,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 173,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 190,
+          "matches": 4,
+          "markers": [
+            "pas",
+            "pas",
+            "aucune",
+            "aucune"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 201,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 205,
+          "matches": 3,
+          "markers": [
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 220,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 237,
+          "matches": 3,
+          "markers": [
+            "pas",
+            "aucune",
+            "aucune"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 248,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 252,
+          "matches": 3,
+          "markers": [
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 267,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "scientific-or-measurement-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 284,
+          "matches": 3,
+          "markers": [
+            "pas",
+            "aucune",
+            "aucune"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 295,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 299,
+          "matches": 3,
+          "markers": [
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 314,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 331,
+          "matches": 3,
+          "markers": [
+            "pas",
+            "aucune",
+            "aucune"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 342,
+          "matches": 2,
+          "markers": [
+            "pas",
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 346,
+          "matches": 3,
+          "markers": [
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 361,
+          "matches": 1,
+          "markers": [
+            "pas"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 378,
+          "matches": 3,
+          "markers": [
+            "pas",
+            "aucune",
+            "aucune"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 383,
+          "matches": 3,
+          "markers": [
+            "n'",
+            "pas",
+            "ni"
+          ],
+          "proposedPurpose": "technical-or-status-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 389,
+          "matches": 4,
+          "markers": [
+            "n'",
+            "ni",
+            "ni",
+            "ni"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        }
+      ]
+    }
+  ]
+}

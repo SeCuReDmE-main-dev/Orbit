@@ -1,0 +1,33 @@
+{
+  "command": [
+    "pandoc.EXE",
+    "MASTER_MANUSCRIPT.md",
+    "--from=markdown+tex_math_dollars",
+    "--standalone",
+    "--toc",
+    "--toc-depth=3",
+    "--metadata=title:Orbit Formation",
+    "--metadata=author:Jean-Sébastien Beaulieu",
+    "--metadata=lang:fr-CA",
+    "--include-in-header=header.tex",
+    "-V",
+    "documentclass=report",
+    "-V",
+    "papersize=a4",
+    "-V",
+    "geometry:margin=22mm",
+    "-V",
+    "fontsize=11pt",
+    "-V",
+    "mainfont=Arial",
+    "-V",
+    "sansfont=Arial",
+    "-V",
+    "monofont=Consolas",
+    "-o",
+    "book.tex"
+  ],
+  "exitCode": 0,
+  "stdout": "",
+  "stderr": ""
+}

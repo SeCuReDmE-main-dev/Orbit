@@ -1,0 +1,100 @@
+{
+  "created_at": "2026-10-01T16:07:20.875000+00:00",
+  "package_dir": "<publication>\\outputs",
+  "readiness_label": "review-ready-provisional",
+  "checks": {
+    "manifest": {
+      "path": "<publication>\\outputs\\package_manifest.json",
+      "exists": true,
+      "size": 1440
+    },
+    "markdown": {
+      "path": "<publication>\\outputs\\MASTER_MANUSCRIPT.md",
+      "exists": true,
+      "size": 144417,
+      "headings": 150,
+      "has_conclusion": true,
+      "has_back_matter": true
+    },
+    "docx": {
+      "path": "<publication>\\outputs\\book.docx",
+      "exists": true,
+      "size": 84929,
+      "paragraphs": 518,
+      "characters": 94506
+    },
+    "epub": {
+      "path": "<publication>\\outputs\\book.epub",
+      "exists": false,
+      "size": 0
+    },
+    "latex": {
+      "path": "<publication>\\outputs\\book.tex",
+      "exists": true,
+      "size": 185193
+    },
+    "pdf": {
+      "path": "<publication>\\outputs\\book.pdf",
+      "exists": true,
+      "size": 293858,
+      "pages": 72,
+      "metadata_title": "Orbit Formation"
+    },
+    "pdf_render": {
+      "renderer": "<home>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\pdftoppm.exe",
+      "rendered": true,
+      "pages": [
+        {
+          "path": "<publication>\\outputs\\pdf-render\\page-01.png",
+          "size": 27068
+        },
+        {
+          "path": "<publication>\\outputs\\pdf-render\\page-02.png",
+          "size": 207041
+        }
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    "indices_manifest": {
+      "path": "<publication>\\outputs\\indices\\indices_manifest.json",
+      "exists": false,
+      "size": 0
+    },
+    "cover_brief": {
+      "path": "<publication>\\outputs\\cover_brief.yml",
+      "exists": false,
+      "size": 0
+    },
+    "podcast_manifest": {
+      "path": "<publication>\\outputs\\podcast\\podcast_episode.json",
+      "exists": false,
+      "size": 0
+    }
+  },
+  "blockers": [],
+  "warnings": [
+    "Index/annex manifest missing.",
+    "Podcast package missing."
+  ],
+  "automaticPluginReadiness": "print-ready",
+  "qualification": {
+    "gate": "Book Publication Lab Publication QA Gate",
+    "renderScope": "first-two-pages; supplemented by qa/output-review.json all-page rendering",
+    "courseSoftwareExecuted": false,
+    "learnerUnderstandingExamined": false,
+    "humanApproval": false,
+    "deliveryReady": false,
+    "fullMissionComplete": false,
+    "remaining": [
+      "Context course-only admission HOLD",
+      "Canva not produced",
+      "Assembled browser and authenticated Studio retain separate evidence",
+      "Native Word pagination and external-link readback not certified"
+    ],
+    "formatsExcluded": [
+      "epub",
+      "podcast"
+    ]
+  }
+}

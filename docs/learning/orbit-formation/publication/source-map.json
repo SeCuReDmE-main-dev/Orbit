@@ -1,0 +1,941 @@
+{
+  "schemaVersion": "orbit-course-publication-source-map-v1",
+  "courseVersion": "orbit-course-1.0.0",
+  "composedAt": "2026-10-01T16:04:43.892316+00:00",
+  "inputs": [
+    {
+      "path": "docs/learning/orbit-formation/PROJECT.md",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "c74ee4c116c087baaf01ef1b06cd3952b35b5c0c87d866f5ddce9a140927ce2c",
+      "observedFileBytesSha256": "c74ee4c116c087baaf01ef1b06cd3952b35b5c0c87d866f5ddce9a140927ce2c",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/modules/module-1.md",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "38d5e9e48d35a04e8ed5e422e7339f7be04aa7e3e58dd691fa667b9e6b1ddeab",
+      "observedFileBytesSha256": "38d5e9e48d35a04e8ed5e422e7339f7be04aa7e3e58dd691fa667b9e6b1ddeab",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/modules/module-2.md",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "cbdbc1f8430defa0518d81d6bb308e40969b7e7f59fb3c9b49c1cf3cac0dfa71",
+      "observedFileBytesSha256": "cbdbc1f8430defa0518d81d6bb308e40969b7e7f59fb3c9b49c1cf3cac0dfa71",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/modules/module-3.md",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "085818229e531382c3fcfa83ce804ff75174c4738dae7fd3d7deda40ad084359",
+      "observedFileBytesSha256": "085818229e531382c3fcfa83ce804ff75174c4738dae7fd3d7deda40ad084359",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/modules/module-4.md",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "12e77b6da7579434a5963a47769888cfb43c25a678c39fadd33af275727adc96",
+      "observedFileBytesSha256": "12e77b6da7579434a5963a47769888cfb43c25a678c39fadd33af275727adc96",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/modules/module-5.md",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "ffee9a0b19c974b802a0135c5451219809c0dc1f4531ff41c674124d80f35079",
+      "observedFileBytesSha256": "ffee9a0b19c974b802a0135c5451219809c0dc1f4531ff41c674124d80f35079",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/modules/module-6.md",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "8215bd821676b00cc6f01842a39087af4a0dca2802fa4ccc4094eec777bb70d9",
+      "observedFileBytesSha256": "8215bd821676b00cc6f01842a39087af4a0dca2802fa4ccc4094eec777bb70d9",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/modules/module-7.md",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "255f792ebf5afa43ccb6907f6351bd8caabd401bfbae76ff0fa29f757aac73ac",
+      "observedFileBytesSha256": "255f792ebf5afa43ccb6907f6351bd8caabd401bfbae76ff0fa29f757aac73ac",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/modules/module-8.md",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "99a3c887fff00f5e2c8564bc65b959f7f1f3ba187b4c17383cf3dc5dc818c720",
+      "observedFileBytesSha256": "99a3c887fff00f5e2c8564bc65b959f7f1f3ba187b4c17383cf3dc5dc818c720",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/frontend/module-1/interaction-state.js",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "862094c9eb0f90092561ff83d0851535508b3ef521da755fcc6ab8c0bc9765b3",
+      "observedFileBytesSha256": "862094c9eb0f90092561ff83d0851535508b3ef521da755fcc6ab8c0bc9765b3",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/frontend/module-2/exploration-card.js",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "90e7616d92bbb28f0cfd81aea77fa17a9fe495f4ffa34d85591a7110d549adee",
+      "observedFileBytesSha256": "90e7616d92bbb28f0cfd81aea77fa17a9fe495f4ffa34d85591a7110d549adee",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/frontend/module-3/scene-controller.js",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "5b5a29ea79b81873bcd417e7fe178e08a2c58c1d4f2f4d4801b23624efaf4759",
+      "observedFileBytesSha256": "5b5a29ea79b81873bcd417e7fe178e08a2c58c1d4f2f4d4801b23624efaf4759",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/frontend/module-4/inertia.js",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "2c463d5a64f218b9b256ceb40352bde755aa40c023d677594121e394ec5d5a6b",
+      "observedFileBytesSha256": "2c463d5a64f218b9b256ceb40352bde755aa40c023d677594121e394ec5d5a6b",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/frontend/module-5/transitions.js",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "7cf3e81aff6b42adb72c0cd78365263db2a35fe2088c58ad5e9fd5372654825b",
+      "observedFileBytesSha256": "7cf3e81aff6b42adb72c0cd78365263db2a35fe2088c58ad5e9fd5372654825b",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/frontend/module-6/particle-layer.js",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "4dca6e43e0dc694cb417d4532462c64977993f065546235902ac434ecb3befbb",
+      "observedFileBytesSha256": "4dca6e43e0dc694cb417d4532462c64977993f065546235902ac434ecb3befbb",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/frontend/module-7/interaction-flow.js",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "b16f44050a000813632e57713a48c8c6a866b681afb841d9a7a882e891c60b6c",
+      "observedFileBytesSha256": "b16f44050a000813632e57713a48c8c6a866b681afb841d9a7a882e891c60b6c",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/frontend/module-8/register-capabilities.js",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "24d4c76a74393a486003e395be258dd8beaad69befe32ad35853ff5a91c71165",
+      "observedFileBytesSha256": "24d4c76a74393a486003e395be258dd8beaad69befe32ad35853ff5a91c71165",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/frontend/module-2/ExplorationCard.astro",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "a3f9cd51282d2a5a8e285a81354d21a5cbb34b110c82f98a7a876afc2bc6313b",
+      "observedFileBytesSha256": "a3f9cd51282d2a5a8e285a81354d21a5cbb34b110c82f98a7a876afc2bc6313b",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/notebooks/module-1.ipynb",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "accdb45c528b5a4f9cdcb1282b40ebe067ea4391987217e4f447bd2112f57085",
+      "observedFileBytesSha256": "accdb45c528b5a4f9cdcb1282b40ebe067ea4391987217e4f447bd2112f57085",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Notebook content is code and selected report, not an independent execution certificate."
+    },
+    {
+      "path": "docs/learning/orbit-formation/notebooks/module-2.ipynb",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "ec94bb61c413fa08cb3490053580ac52c882e7b4320ef885ac7412d46780dd46",
+      "observedFileBytesSha256": "ec94bb61c413fa08cb3490053580ac52c882e7b4320ef885ac7412d46780dd46",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Notebook content is code and selected report, not an independent execution certificate."
+    },
+    {
+      "path": "docs/learning/orbit-formation/notebooks/module-3.ipynb",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "acdefdfc01a56da8bd782b0c338c562bda769fe02a0bfa732b820f828133e482",
+      "observedFileBytesSha256": "acdefdfc01a56da8bd782b0c338c562bda769fe02a0bfa732b820f828133e482",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Notebook content is code and selected report, not an independent execution certificate."
+    },
+    {
+      "path": "docs/learning/orbit-formation/notebooks/module-4.ipynb",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "d8ff5bd2c54474cca831101f9992d4b92af273370c6f53dee07cd7b639c2d2ce",
+      "observedFileBytesSha256": "d8ff5bd2c54474cca831101f9992d4b92af273370c6f53dee07cd7b639c2d2ce",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Notebook content is code and selected report, not an independent execution certificate."
+    },
+    {
+      "path": "docs/learning/orbit-formation/notebooks/module-5.ipynb",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "fff0987ca7801577d81d5c9f6898caf5fdd5333c2ffcf23f02517dc1bc4231ce",
+      "observedFileBytesSha256": "fff0987ca7801577d81d5c9f6898caf5fdd5333c2ffcf23f02517dc1bc4231ce",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Notebook content is code and selected report, not an independent execution certificate."
+    },
+    {
+      "path": "docs/learning/orbit-formation/notebooks/module-6.ipynb",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "2f4f8d7a427a1d5b5c909fecaee276ae9248f4c5dbe9395d0d0ed7efca5b38ec",
+      "observedFileBytesSha256": "2f4f8d7a427a1d5b5c909fecaee276ae9248f4c5dbe9395d0d0ed7efca5b38ec",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Notebook content is code and selected report, not an independent execution certificate."
+    },
+    {
+      "path": "docs/learning/orbit-formation/notebooks/module-7.ipynb",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "6b85b3780c50e10cb02a4e75e2ef553b15989f2487cef500ed15b6d572cc0f45",
+      "observedFileBytesSha256": "6b85b3780c50e10cb02a4e75e2ef553b15989f2487cef500ed15b6d572cc0f45",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Notebook content is code and selected report, not an independent execution certificate."
+    },
+    {
+      "path": "docs/learning/orbit-formation/notebooks/module-8.ipynb",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "798c6e030db6db9a789be6d21a987a04bb4a324fb2f4f059886561fc624e68f2",
+      "observedFileBytesSha256": "798c6e030db6db9a789be6d21a987a04bb4a324fb2f4f059886561fc624e68f2",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Notebook content is code and selected report, not an independent execution certificate."
+    },
+    {
+      "path": "docs/learning/orbit-formation/FORMATION_CONTRACT.md",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "84bb29a78c7435cc9bf51880f9f7caf4c2ffef20311227b0a967feee6ed55948",
+      "observedFileBytesSha256": "84bb29a78c7435cc9bf51880f9f7caf4c2ffef20311227b0a967feee6ed55948",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/WEBMCP.md",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "3ac244833f5d5660c646ecb5a1e357922584bf4f0bc43362edea2a18dc266303",
+      "observedFileBytesSha256": "3ac244833f5d5660c646ecb5a1e357922584bf4f0bc43362edea2a18dc266303",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/STUDIO_INSTALLATION.md",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "593bc6e5e37a3da933b79b1b32f3b43d55fe9f936aa3d528aea482531c8ad4dd",
+      "observedFileBytesSha256": "593bc6e5e37a3da933b79b1b32f3b43d55fe9f936aa3d528aea482531c8ad4dd",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/assembly/README.md",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "83d482fa64d49f3cfa06996a51171bbd7e6074284358fddc59a5fb473bda1d23",
+      "observedFileBytesSha256": "83d482fa64d49f3cfa06996a51171bbd7e6074284358fddc59a5fb473bda1d23",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/assembly/package.json",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "b6edd6a5b56a171b6c1f340796a177d3fdfd5bf1c42554c65264018136aad7d9",
+      "observedFileBytesSha256": "b6edd6a5b56a171b6c1f340796a177d3fdfd5bf1c42554c65264018136aad7d9",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/assembly/src/student-frontend.js",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "d108617b440fb706852ca88df1be5590013e3992054845d46b2bc9da7165f7e9",
+      "observedFileBytesSha256": "d108617b440fb706852ca88df1be5590013e3992054845d46b2bc9da7165f7e9",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/publication/qa/input-snapshots/formation-delivery-status-before-final-document.md",
+      "role": "immutable-input-snapshot-before-final-document-export",
+      "exists": true,
+      "sha256": "4252565d5c929ce4a1cf18aedb81a6c6fed27e374b775ad0ff1ec6e7ccd56eb6",
+      "observedFileBytesSha256": "4252565d5c929ce4a1cf18aedb81a6c6fed27e374b775ad0ff1ec6e7ccd56eb6",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source-snapshot-content-unchanged",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status.",
+      "originalPath": "docs/receipts/FORMATION_DELIVERY_STATUS.md",
+      "relocationNote": "Exact LF bytes captured before the final document export; current delivery status later points to the final document. Original relative links use originalPath as their reference base."
+    },
+    {
+      "path": "packages/learning/src/catalog.ts",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "95aa619d2aa29226144b31f4a881476018abec02773e844c18e2e331dac8a1cb",
+      "observedFileBytesSha256": "95aa619d2aa29226144b31f4a881476018abec02773e844c18e2e331dac8a1cb",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "packages/learning/src/notebook-archive.ts",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "5f93984ed0cf1e227d862c7b3b7e32f085b4d4801824dac9b7093b1c8341f9dc",
+      "observedFileBytesSha256": "5f93984ed0cf1e227d862c7b3b7e32f085b4d4801824dac9b7093b1c8341f9dc",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/publication/QUALIFICATION.md",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "875108b6b657338323c59dc0f30b68ae15d6dd4fd84ddc76abc3ac9377f654ca",
+      "observedFileBytesSha256": "875108b6b657338323c59dc0f30b68ae15d6dd4fd84ddc76abc3ac9377f654ca",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/publication/TOOLCHAIN_AND_VERSIONS.md",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "af6b33b86a232b8b0887128e31716739bbe7b4e2c1b6a0cc81738b698303a6aa",
+      "observedFileBytesSha256": "af6b33b86a232b8b0887128e31716739bbe7b4e2c1b6a0cc81738b698303a6aa",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "tools/prepare_learning_notebooks.py",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "683d44be5e47993c3692ca6136e5a0fb0a1e8fac6ba1c19fa1b3227859837855",
+      "observedFileBytesSha256": "683d44be5e47993c3692ca6136e5a0fb0a1e8fac6ba1c19fa1b3227859837855",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "web/src/lib/learning-webmcp.ts",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "eafc3fe4791dda930ad3d002f752fc8d56f5cda1c1e5f3c3d3d255d88dca7ab3",
+      "observedFileBytesSha256": "6c06b67a39138e40171dc9765855031f60cb60ef3d4f08ff9f6d9a7b9128a78d",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "packages/learning-studio/src/index.tsx",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "58f8c45b5be0db743af2ccafd7c5e2fa70e1a9a8dcfaf19a9fb4f4cafcd31c96",
+      "observedFileBytesSha256": "58f8c45b5be0db743af2ccafd7c5e2fa70e1a9a8dcfaf19a9fb4f4cafcd31c96",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "packages/learning-studio/package.json",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "1a031b6fd59c3983bc6d20503eab13008f82207996032ffea8ff244935fc903e",
+      "observedFileBytesSha256": "1a031b6fd59c3983bc6d20503eab13008f82207996032ffea8ff244935fc903e",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "tools/learning-studio-host/package.json",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "bb0657e80d9681e50b0a8f2b682f3379c1ce73f2608f625a8a1588172e47f429",
+      "observedFileBytesSha256": "bb0657e80d9681e50b0a8f2b682f3379c1ce73f2608f625a8a1588172e47f429",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "tools/learning-studio-host/sanity.config.ts",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "26d19292f787f8766931fdf0f501a7d969ab92644c8fe6cffcf2132fb1dd60a5",
+      "observedFileBytesSha256": "26d19292f787f8766931fdf0f501a7d969ab92644c8fe6cffcf2132fb1dd60a5",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "tools/learning-studio-host/sanity.cli.ts",
+      "role": "course-source",
+      "exists": true,
+      "sha256": "3a552dcfebe3d7668f9364098f27218f9477acb908a79e499e62630e7c99e87f",
+      "observedFileBytesSha256": "3a552dcfebe3d7668f9364098f27218f9477acb908a79e499e62630e7c99e87f",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/software-139-kaggle.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "c2f28ba326cce3748fd0353dcd5e29e05a5f4aeac1234cbbe4c3ba12f76632f7",
+      "observedFileBytesSha256": "c2f28ba326cce3748fd0353dcd5e29e05a5f4aeac1234cbbe4c3ba12f76632f7",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/software-141-kaggle.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "7a10f412b85d9a45c7a6a849c68c9af5b8a8adadf35f73ed0ad222bf7fa4adda",
+      "observedFileBytesSha256": "7a10f412b85d9a45c7a6a849c68c9af5b8a8adadf35f73ed0ad222bf7fa4adda",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/software-141-final-kaggle.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "add86062d6facd9890f4e63fe15c34b14783af7beafa43dd8b011a1ee6dc90eb",
+      "observedFileBytesSha256": "add86062d6facd9890f4e63fe15c34b14783af7beafa43dd8b011a1ee6dc90eb",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/software-version4-kaggle.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "a65e7df4d36cf5865784ddae6f78be0136d6db5ace404cd5e268e2ee289a8c18",
+      "observedFileBytesSha256": "a65e7df4d36cf5865784ddae6f78be0136d6db5ace404cd5e268e2ee289a8c18",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/portable-studio-locked-install-kaggle.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "a3df4bf51503964f5703f08b85674cae1b362fa898812ec0ccbf878d710bfd2b",
+      "observedFileBytesSha256": "a3df4bf51503964f5703f08b85674cae1b362fa898812ec0ccbf878d710bfd2b",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/portable-studio-v2-install-kaggle.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "41c0ca8d15a626b653ee5defcbd5e5a3323d79231db15dc05b900d5ef6cb5db1",
+      "observedFileBytesSha256": "41c0ca8d15a626b653ee5defcbd5e5a3323d79231db15dc05b900d5ef6cb5db1",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/free-colab-module-1-independent.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "c6438aacb3836995f6d1b9fadd9ce954cfeccde434e35a20c001ce42db5e6350",
+      "observedFileBytesSha256": "f355980914f82cf1cd0a470dc675db66578994c0dfc40437ac75f9142bae0a7d",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/free-colab-module-2-independent.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "21cbb898e53542b79896f50bcb411f4b85d36709a13c1c8b200e98c25fb8ed0f",
+      "observedFileBytesSha256": "21cbb898e53542b79896f50bcb411f4b85d36709a13c1c8b200e98c25fb8ed0f",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/free-colab-module-3-independent.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "bcfdf44a5d240766db0fca9e5e8ee6061f63b3657b24250989ff6b8c242c1589",
+      "observedFileBytesSha256": "bcfdf44a5d240766db0fca9e5e8ee6061f63b3657b24250989ff6b8c242c1589",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/free-colab-module-4-independent.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "bde4ef714cd9cf3092cb0286fe4b56754bec008fe320280f6601276249d6be9c",
+      "observedFileBytesSha256": "bde4ef714cd9cf3092cb0286fe4b56754bec008fe320280f6601276249d6be9c",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/free-colab-module-4-independent-retest.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "0fdc3977902a5f9a84ccdbc5c1729fe83f1ea431187015c1e5832ae14011e002",
+      "observedFileBytesSha256": "7c547bed51566862c7c681bf17866fbae70745feb07b265bc9748cd2cda0453b",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/free-colab-module-5-independent.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "59d8012ea32d8d6b01d0c0bed7560f8eec3f09e473a8cd9a048c17ead6f4d6c7",
+      "observedFileBytesSha256": "070db03ad9d15e86b1420ce332380b70c3978b89b2d53ca93086a0329c9cc882",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/free-colab-module-6-independent.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "3c29f910d12a56f431bb64c9295abd759e540df8e59b16a7a7d4fc57e89a24ec",
+      "observedFileBytesSha256": "3d65523558e97ca799699a8d6c2dbe3d5f83899913fb106146ef927add3f4a20",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/free-colab-module-7-independent.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "a826772b4246051e419163901a5c066e3c4521cd7582eadd489519fbd5f86148",
+      "observedFileBytesSha256": "f940de04899558addfee0542fffbccf596af89b14cd5cf1fbc7e2b99f4c84b3b",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/free-colab-module-7-independent-retest.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "70533ce9364bc1de4ad8901ebcb69f7afe58db2a29663424888569065f31ac8d",
+      "observedFileBytesSha256": "30aaddf0ee3382090cd67421356dbbea2efd979e99eb3ce0854c62e23273e547",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/free-colab-module-8-independent.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "6d7aec7eb18a8b706a5351d5a20475749d025b358328bae2ee529de04451db38",
+      "observedFileBytesSha256": "7783f4370790d135868eb7db163422b93d495db272a08b3335a5ca73bb307ab2",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/free-colab-module-8-independent-assembly.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "02621e930e6a46a60898660c43afe1bf032135fc7ead81fa4769a5ec6b42021b",
+      "observedFileBytesSha256": "5fbe8334453c968937d81b82f2888651244886c62983d37c7e6910bbc0e46e45",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/actual-independent-assembly-static-kaggle.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "1b5940bb039e1105bfd63930cfc619448d95341fe64e92288ab22538ddd49264",
+      "observedFileBytesSha256": "1b5940bb039e1105bfd63930cfc619448d95341fe64e92288ab22538ddd49264",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/actual-assembly-browser-first-failure.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "51ff4f10e3ab0a6265bdcad1f443d9a0c7728a2dbb9330cf853f15ad668030d9",
+      "observedFileBytesSha256": "51ff4f10e3ab0a6265bdcad1f443d9a0c7728a2dbb9330cf853f15ad668030d9",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/actual-assembly-browser-keyboard-failure.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "c3b60fc380d80784fb20829af7706fdbd924c7d382ff1dabb9646608cc6c4324",
+      "observedFileBytesSha256": "c3b60fc380d80784fb20829af7706fdbd924c7d382ff1dabb9646608cc6c4324",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/php-context-29-pass-kaggle.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "01ffc6f8ea6a0cd2bdc5dd775d3894a478bce5d6487007ab2eb0966c35cfac0a",
+      "observedFileBytesSha256": "01ffc6f8ea6a0cd2bdc5dd775d3894a478bce5d6487007ab2eb0966c35cfac0a",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/candidate-browser-62-v2.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "17b0c85a46ff14ae85b5a167353a675ac263a36958bb52732796ee13c303fd5a",
+      "observedFileBytesSha256": "17b0c85a46ff14ae85b5a167353a675ac263a36958bb52732796ee13c303fd5a",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/atom-five-navigation-candidate.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "9c50baa6665f6ef5e8351a93373bd29754015f2b35fed81d1956a42207c21f36",
+      "observedFileBytesSha256": "9c50baa6665f6ef5e8351a93373bd29754015f2b35fed81d1956a42207c21f36",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/atom-five-navigation-live.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "56e47f3d86c435008317cd1cd309ef93a0dcdb6bc4322dc957fae85eabe463f5",
+      "observedFileBytesSha256": "56e47f3d86c435008317cd1cd309ef93a0dcdb6bc4322dc957fae85eabe463f5",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/live-browser-v2-digest-failure.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "fa473bc2f53f6df12e5bf5606e3a5dd57cc257f48460ae001f6156d8dc8747ab",
+      "observedFileBytesSha256": "fa473bc2f53f6df12e5bf5606e3a5dd57cc257f48460ae001f6156d8dc8747ab",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/live-browser-latest-digest-failure.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "58abd9cb9d92dd32f04297bcaba941a4fcc14fae38bff32af568b3f9d6c3666f",
+      "observedFileBytesSha256": "58abd9cb9d92dd32f04297bcaba941a4fcc14fae38bff32af568b3f9d6c3666f",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/live-browser-final.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "6bc83903567556aa2c7f97497f33034df5b345e68f23d1f4dc50ac18211ef522",
+      "observedFileBytesSha256": "6bc83903567556aa2c7f97497f33034df5b345e68f23d1f4dc50ac18211ef522",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/course-context-import-status.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "505b26827b30c2c60665b2fa5071b074166b79ef49ae9d5ca8ccd9e20dd83cb2",
+      "observedFileBytesSha256": "a721ff72274d58b4203ede423fbc5f92a86edf417b4ae3048a761ff060964a26",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/course-context-production-disabled.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "69f29aed7b2831ab1e4348a5b87141fc60c5267b62f2c72d7aa3f31f59f20d8f",
+      "observedFileBytesSha256": "69f29aed7b2831ab1e4348a5b87141fc60c5267b62f2c72d7aa3f31f59f20d8f",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/public-course-context-review.md",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "95ef606652bd28eb30f17d017b40f131e359258fb239f3392d901b5b419f3240",
+      "observedFileBytesSha256": "95ef606652bd28eb30f17d017b40f131e359258fb239f3392d901b5b419f3240",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/software-version5-kaggle.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "a2637161927e875488f8e4739142ae2e1fc3a69247decf4041a587c19151d5a5",
+      "observedFileBytesSha256": "a2637161927e875488f8e4739142ae2e1fc3a69247decf4041a587c19151d5a5",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/authenticated-second-studio.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "39b6a750163424f5ba5cc84f30d1ce7e48f2a00394e17cf1bfddbabc5c58def7",
+      "observedFileBytesSha256": "39b6a750163424f5ba5cc84f30d1ce7e48f2a00394e17cf1bfddbabc5c58def7",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/actual-assembly-browser-raycast-failure.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "405b96cadc7bf26b5f4166a3c90589e941cab35f8b684d89e1893dad1bf96043",
+      "observedFileBytesSha256": "405b96cadc7bf26b5f4166a3c90589e941cab35f8b684d89e1893dad1bf96043",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/free-colab-module-3-pointer-target-independent.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "714045aad6043468d7deefe267434b864cb18bc4bc983174d9ebc11cd3fe7712",
+      "observedFileBytesSha256": "36d8ba391ebc366f87a5177039a9bc2ffe22bfa8eae4c38482cf08ddc22bc9ff",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/free-colab-module-8-pointer-target-independent.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "cb4c384eae61708ce2c82e329af22dd32d488fcdfca80004c43c27f84892ca2e",
+      "observedFileBytesSha256": "5d1a6d98db01a4a493022725ce9c2574a60e5823df5629088d107479931aa664",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/free-colab-module-8-pointer-target-assembly.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "2748b3aa5c83cff3c16efd2864304686f431bb2c84540400e0362dbc427f3dc1",
+      "observedFileBytesSha256": "cf6b2c268cd1c7a9263146874547a4e039451b6503b63d5c55912d6bc7522720",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/actual-pointer-target-assembly-static-kaggle.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "2b633c6c8fffbe7302908fc113ca30cd5de5de00e10e5b89e1190efbc7ba927e",
+      "observedFileBytesSha256": "2b633c6c8fffbe7302908fc113ca30cd5de5de00e10e5b89e1190efbc7ba927e",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/actual-pointer-target-assembly-browser-kaggle.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "72445749ed581caedb37f92cf6ec765659fd2f1085cddcb91db04d4a8cc69d50",
+      "observedFileBytesSha256": "72445749ed581caedb37f92cf6ec765659fd2f1085cddcb91db04d4a8cc69d50",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/live-browser-pointer-target-final.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "09faeb76323e087b81bebb080d8303166dab930689df17e5b637e0261579d1a1",
+      "observedFileBytesSha256": "09faeb76323e087b81bebb080d8303166dab930689df17e5b637e0261579d1a1",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/final-resource-cleanup.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "1fd8e1b5c497652d14ef0d092051a282c83d02b1835bdf884a4e97989eea9a98",
+      "observedFileBytesSha256": "189ec037ddd9ee18fd230caf0b467ac01c74af00967dac29d91f348be3f96841",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/final-mission-credential-retirement.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "4b923bf6a3e0207a924384c8bac4278d5427ae6876799b7c8dba4c22b3e09385",
+      "observedFileBytesSha256": "4b923bf6a3e0207a924384c8bac4278d5427ae6876799b7c8dba4c22b3e09385",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/final-browser-public-replay.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "e41da2a698e03484bcc4fa0a9500d151e3c78cfbfbbcbabca1770913c2dcb6e9",
+      "observedFileBytesSha256": "e41da2a698e03484bcc4fa0a9500d151e3c78cfbfbbcbabca1770913c2dcb6e9",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/learning/orbit-formation/notebooks/instructor/module-3.ipynb",
+      "role": "teacher-prepared-example",
+      "exists": true,
+      "sha256": "2cafa1825818cee76a6e7ff52e3af0aa13cfd9588dfca2b0a11edababa920024",
+      "observedFileBytesSha256": "2cafa1825818cee76a6e7ff52e3af0aa13cfd9588dfca2b0a11edababa920024",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Notebook content is code and selected report, not an independent execution certificate."
+    },
+    {
+      "path": "docs/learning/orbit-formation/notebooks/instructor/module-4.ipynb",
+      "role": "teacher-prepared-example",
+      "exists": true,
+      "sha256": "3acb942558e5dc6e42104494238a6191af12c274d607f184843611be3166807b",
+      "observedFileBytesSha256": "3acb942558e5dc6e42104494238a6191af12c274d607f184843611be3166807b",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Notebook content is code and selected report, not an independent execution certificate."
+    },
+    {
+      "path": "docs/learning/orbit-formation/notebooks/instructor/module-7.ipynb",
+      "role": "teacher-prepared-example",
+      "exists": true,
+      "sha256": "1426f7985237d66f60736b2b55e96e8b47aa6d9736e161ce25bef40b461b031b",
+      "observedFileBytesSha256": "1426f7985237d66f60736b2b55e96e8b47aa6d9736e161ce25bef40b461b031b",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Notebook content is code and selected report, not an independent execution certificate."
+    },
+    {
+      "path": "docs/learning/orbit-formation/notebooks/instructor/module-8.ipynb",
+      "role": "teacher-prepared-example",
+      "exists": true,
+      "sha256": "428fba539d39224f7bbe11a019e41e99969c4e1c18c6860c26e3b8443bfd9730",
+      "observedFileBytesSha256": "428fba539d39224f7bbe11a019e41e99969c4e1c18c6860c26e3b8443bfd9730",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Notebook content is code and selected report, not an independent execution certificate."
+    },
+    {
+      "path": ".orbit/formation-20261001/studio-success-lock.json",
+      "role": "validation-dependency-lock",
+      "exists": true,
+      "sha256": "e4215188e3f702b8707d3992aaa0f917bbdca00e58118a0f6953d98697412938",
+      "observedFileBytesSha256": "e4215188e3f702b8707d3992aaa0f917bbdca00e58118a0f6953d98697412938",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status.",
+      "visibility": "private-operational-provenance",
+      "distributed": false,
+      "reproducibilityBoundary": "Captured local provenance only; file content is not distributed or available from the public repository. This retained digest does not make the private file independently reproducible. Public installation and build results retain their separate scoped receipts."
+    }
+  ],
+  "skippedInputs": [
+    {
+      "source": "Instructor notebooks except the selected Modules 3, 4, 7 and 8 corrections",
+      "reason": "Corrections remain separately linked in teacher material; the selected sources record event-target, keyboard, selection and assembly updates and are not learner execution evidence."
+    },
+    {
+      "source": "Prior scientific books from default author source map",
+      "reason": "This bounded course uses the authorized teaching messages and module scripts; no prior long-form prose is copied."
+    },
+    {
+      "source": "Personal conversations, identities, credentials and unrelated projects",
+      "reason": "Outside the selected teaching corpus."
+    },
+    {
+      "source": "Reserved editorial chapters and promotional copy",
+      "reason": "Separate future workstream."
+    }
+  ],
+  "verificationBoundary": "Composition is source preparation, not software execution, print QA or learner assessment."
+}

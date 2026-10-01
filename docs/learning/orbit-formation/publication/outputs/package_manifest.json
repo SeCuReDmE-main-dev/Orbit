@@ -1,0 +1,55 @@
+{
+  "project": {
+    "title": "Orbit Formation",
+    "authors": [
+      "Jean-Sébastien Beaulieu"
+    ],
+    "language": "fr-CA",
+    "edition": "1.0 source de revue"
+  },
+  "phase": "document-export-before-final-qa",
+  "built": {
+    "docx": {
+      "returncode": 0,
+      "path": "book.docx"
+    },
+    "latex": {
+      "returncode": 0,
+      "path": "book.tex"
+    },
+    "pdf": {
+      "returncode": 0,
+      "path": "book.pdf"
+    }
+  },
+  "blockers": [],
+  "visualQA": "NOT_EXECUTED",
+  "requestedFormats": [
+    "markdown",
+    "docx",
+    "latex",
+    "pdf"
+  ],
+  "excludedFormats": [
+    "epub",
+    "podcast"
+  ],
+  "excludedFiles": [
+    "book.log",
+    "book.aux",
+    "book.out",
+    "book.toc",
+    "package_manifest.json",
+    "publication_qa.json"
+  ],
+  "qualificationPending": true,
+  "sha256": {
+    "MASTER_MANUSCRIPT.md": "facafeed550f0254910a72f3f8cdfee1d02159d277196099f31f5974f967cdb6",
+    "book.docx": "768e7611a2d8fa3a6cf2da2c534f3ce08a691b17f3bed77adccc18d57175c341",
+    "book.pdf": "2f1c30adbeed7185916c3e16921ea0092aa88d6559ce0a8779418f66981215f0",
+    "book.tex": "626102d19a836c2def0f972c29e471e84a71891f5c9458a0e0e92f66d2917531",
+    "fingerprints.json": "4bb763181454f69f1f1e2469ad1945bf7671bb6608caf112212c9c3fefba4ba7",
+    "header.tex": "fb475065985153cb62336099c42779182f027091ff862bb737943d5bc112efbc",
+    "reference.docx": "da5cf01d5eee3b13c2479318270fae9e0621a747670a9da726fa84e1fe42e5f1"
+  }
+}
