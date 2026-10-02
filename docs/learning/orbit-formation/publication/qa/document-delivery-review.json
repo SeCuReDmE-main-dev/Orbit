@@ -1,6 +1,6 @@
 {
   "state": "DOCUMENT_REVIEW_COPY_QA_COMPLETE",
-  "recordedAt": "2026-10-01T21:53:41.044489+00:00",
+  "recordedAt": "2026-10-02T02:03:51.770553+00:00",
   "readiness": "review-ready-provisional",
   "documentReadyForAuthorReview": true,
   "deliveryReady": false,
@@ -9,29 +9,29 @@
   "canvaProducedByThisWorkflow": false,
   "learnerUnderstandingExamined": false,
   "humanContentApproval": false,
-  "sourceSha256": "1ed1656889b204fded2b0a6cf683069e678a9273b8042c2fc7e3ffd2a09bd172",
+  "sourceSha256": "dd4b0ac88af511921fc4b2d51978f690c407dedec2321a358c20dcfd05bfeaa2",
   "sources": {
-    "MASTER_MANUSCRIPT.md": "1ed1656889b204fded2b0a6cf683069e678a9273b8042c2fc7e3ffd2a09bd172",
-    "TEACHER_GUIDE.md": "f7830eddebd3acff4089095e76f246b92500c55643ac9787b466b04a5487268a",
+    "MASTER_MANUSCRIPT.md": "dd4b0ac88af511921fc4b2d51978f690c407dedec2321a358c20dcfd05bfeaa2",
+    "TEACHER_GUIDE.md": "c38c0f39cbe9cb5021becaa2af2f693ee3f96833e48e17cd3150d3b85eb30fad",
     "ASSISTANT_MISSIONS.md": "0a5b0b3d3ad8ed7ea51e9a24cfe684f47f1534a6aa5fcc81a34c38011f5423f6",
     "CANVA_BRIEFS.md": "90f18a85bf40d2053df4fbb55433639e96696199acc609264fb3097de0d45658"
   },
   "pdf": {
     "path": "outputs/book.pdf",
-    "sha256": "f35791dc743dcc293b032f277065a64487c33de1821fce73287d1933d6c5174e",
-    "pages": 75,
+    "sha256": "d1db29c642e5044000ec73f27f6d730ebd631c256de6dcd1473d7428db589d70",
+    "pages": 76,
     "allPagesRendered": true,
     "visualReview": "Codex reviewed rendered page contact sheets and critical full-size pages",
     "outsidePageSpanCount": 0,
     "overlapCandidateCount": 0,
     "replacementCharacterCount": 0,
-    "linksObserved": 368,
+    "linksObserved": 375,
     "everyExternalDestinationRetested": false
   },
   "docx": {
     "path": "outputs/book.docx",
-    "sha256": "6a4b8394e96f65d6ebbbf0fc23ab67ee3a788ffc9f2a7fe38e73e70040606601",
-    "paragraphs": 544,
+    "sha256": "fedf65a68fe235ab2dd69ebe1c14ab2f26808045f0af76627eb935ad2932a9eb",
+    "paragraphs": 548,
     "tables": 35,
     "authorMatches": true,
     "canonicalDisclosureCount": 1,
@@ -67,7 +67,7 @@
   "sourceOriginalityScope": "Authorized course files and teaching scripts are identified in source-map.json; primary external resources are linked. No external plagiarism service was used.",
   "sourceReviewBinding": {
     "path": "qa/source-review.json",
-    "sha256": "9e06d9214ea0b1ab57584cd33c2fbdba26f188e09f0eb2272b6196063ad9c508",
+    "sha256": "40fd73c3e366bbd50d514d4d43a3e8c2263ee4784e0614e49926b97b7ed570a6",
     "maintainedFiles": [
       "MASTER_MANUSCRIPT.md",
       "TEACHER_GUIDE.md",

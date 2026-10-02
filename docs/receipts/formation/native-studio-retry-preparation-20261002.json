@@ -1,0 +1,23 @@
+{
+  "schema": "orbit.native-studio-retry-preparation.v1",
+  "recordedAt": "2026-10-02T00:43:44.279770+00:00",
+  "state": "PREPARED_NOT_AUTHENTICATED",
+  "sandboxId": "idmzxel00itmmxthl5cac",
+  "releaseId": "orbit-v3-closure-20261001T180900Z",
+  "packageSha256": "246bd711f6d24048a3c8e5a3387b074f4bdb9abba442b3424a715a69c13ca9e4",
+  "studioOrigin": "https://8000-idmzxel00itmmxthl5cac.e2b.app",
+  "officialBrowserSource": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
+  "browserPackageSha256": "69e3f6ac0a4811f4689ca23f1fd5cc5b2c01550881928b3e196a97131165c4a2",
+  "browserBefore": "Google Chrome 150.0.7871.114",
+  "browserAfter": "Google Chrome 154.0.8037.92",
+  "browserLaunch": "Headed official Chrome, unprivileged native profile, no testing feature or debugging pipe during login.",
+  "browserUser": "user",
+  "ownerProfileExported": false,
+  "userAgentSpoofed": false,
+  "securityProtectionsWeakened": false,
+  "testControllerStarted": false,
+  "browserTestsExecuted": false,
+  "contentLakeWritesExecuted": false,
+  "corsRuleCreated": false,
+  "humanLoginRequired": true
+}

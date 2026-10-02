@@ -1,5 +1,8 @@
 # Orbit Formation: implementation and learning contract
 
+> Final checkpoint, October 1 Toronto: authenticated synthetic publication/readback, native logout and temporary runtime cleanup are now verified. Earlier preview-only statements below are historical. Immutable replay, workspace change, distinct read-only identity and model campaigns remain incomplete. See [delivery evidence](../../receipts/formation/FINAL_DELIVERY_2026-10-01.md).
+
+
 Version: `orbit-course-1.0.0` / `orbit-learning-v1`. Prepared on October 1, 2026.
 
 This document describes the implemented contract and the remaining runtime qualification. It is a technical reference, not a claim that every learner notebook, public route or teaching outcome has been validated. The source of truth is the [course catalogue](../../../packages/learning/src/catalog.ts), [session types](../../../packages/learning/src/contracts.ts) and [store](../../../packages/learning/src/store.ts).
@@ -182,9 +185,19 @@ Dataset permissions and plan changes must not be the sole privacy safeguard for 
 
 ## Validation record and remaining qualification
 
-### Current consolidated checkpoint — October 1, 2026
+### Current closure qualification — October 2, 2026 UTC
 
-This section supersedes the historical checkpoint retained below. It reads the coordinator's retained execution receipts; no software test was rerun on the workstation. A passing fixture, a compiled export, an authenticated page and an examined learning outcome remain separate qualifications.
+The [current delivery matrix](../../receipts/FORMATION_DELIVERY_STATUS.md#definitive-closure-pass--current-evidence-october-2-2026-utc) supersedes the earlier checkpoint below. The current portable archive is `184358d01d9866ef7da0b5ac67f5d8020545656a31b66e39fece0c0e8e17ff64`; its [actual E2B host construction](../../receipts/formation/current-portable-studio-cloud-build.json) produces 316 files and is explicitly build evidence, not a runtime test. Course outline and nine admitted entry paths are `READY`; [audited transport](../../receipts/formation/course-context-live-transport.json) and [provenance](../../receipts/formation/course-context-ingestion.json) identify their scope. Nine [Canva course documents](publication/CANVA_DELIVERY.md) are published and read back. The new explicit manual Colab import and assembly are retained in their [own receipt](../../receipts/formation/free-colab-module-8-manual-import-assembled.json); their compilation does not inherit an older archive's browser results.
+
+The [16-check public run](../../receipts/formation/cross-origin-public-validation.json) discovers the 25-tool native registry and executes selected calls on the real Orbit course page, observes the foreign portable Studio's signed-out screen and reads course Context from the foreign origin without credentials. It does not prove authenticated Studio execution. That evidence is now supplied separately by the [18-check owner-authenticated preview](../../receipts/formation/native-studio-preview-20261002.json): native 25-tool registry, initial six permissions off and no selected engine, private refusal before sharing, actual course reads, explicit save/reload/restore/export and the exact selected synthetic payload. No Content Lake write is executed in that receipt.
+
+At this checkpoint, publication/readback, immutable publication replay, workspace change, server rejection for a separate read-only identity and actual native logout remain `NOT_RUN`. Historical OAuth refusals, login preparations and cleanup keep their original outcomes; an authenticated preview is not publication or human pedagogical approval. The eight source modules, three engines and forty-hour course contract are unchanged.
+
+The [new quota readback](../../receipts/formation/kaggle-quota-readback-20261002.json) still observes $8.53/$10 daily and $18.29/$100 monthly, without renewal or a provider refill time. The [C/D/E prerequisite review](../../receipts/formation/campaign-resumption-prerequisites-20261002.json) preserves frozen identities, three missing C extractions and nineteen productions, the local 85% gate and terminal heavy-load case, D's two-KB capacity limit and E's missing qualified frozen harness/worker generation. It dispatches no work. `fullMissionComplete` remains false; native Studio preview and software qualification do not complete model campaigns or learner assessment.
+
+### Historical consolidated checkpoint — October 1, 2026, superseded
+
+This earlier checkpoint is retained with its own release, archive and limitations. Its claims of current status, disabled Context and pending Canva are historical and superseded by the closure qualification above. No software test was rerun on the workstation to update this chronology. A passing fixture, a compiled export, an authenticated page and an examined learning outcome remain separate qualifications.
 
 | Checkpoint | Current evidence | Qualification and limit |
 |---|---|---|

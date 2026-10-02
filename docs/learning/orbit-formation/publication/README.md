@@ -1,5 +1,8 @@
 # Orbit Formation — sources de publication
 
+> Final checkpoint, October 1 Toronto: authenticated synthetic publication/readback, native logout and temporary runtime cleanup are now verified. Earlier preview-only statements below are historical. Immutable replay, workspace change, distinct read-only identity and model campaigns remain incomplete. See [delivery evidence](../../../receipts/formation/FINAL_DELIVERY_2026-10-01.md).
+
+
 Ce dossier prépare le manuel français, les documents web Canva, les fiches enseignant et les missions des assistants. Il reste distinct du code de l'application, des notebooks et des éditoriaux réservés.
 
 ## Les sources à maintenir
@@ -29,7 +32,9 @@ Le manuel rassemble une partie apprenant et une partie enseignant. Son cadre de 
 
 Les scripts à la première personne sont des propositions pour Jean-Sébastien. Les annotations d'intonation proposent une lecture ; la compréhension de l'élève se constate dans les exercices et les revues.
 
-Le point documentaire courant conserve l’import Colab gratuit par sélection explicite de huit ZIP, puis l’assemblage `7ae43df9…` et sa compilation statique dans Kaggle. La [qualification](QUALIFICATION.md) relie les reçus, versions et limites. V2 354480684 reste immuable ; la publication V3 354484426, observée par le coordinateur, corrige la présentation Markdown sans nouveau rejeu. Le corpus Context fournit outline et neuf entrées READY sur sa projection auditée. Les 16 contrôles natifs hors origine sont conservés dans la version Kaggle354497668. Les appels, workspace, publication sélectionnée et déconnexion du Studio authentifié gardent leurs critères séparés.
+Le point documentaire courant conserve l’import Colab gratuit par sélection explicite de huit ZIP, puis l’assemblage `7ae43df9…` et sa compilation statique dans Kaggle. La [qualification](QUALIFICATION.md) relie les reçus, versions et limites. V2 354480684 reste immuable ; la publication V3 354484426, observée par le coordinateur, corrige la présentation Markdown sans nouveau rejeu. Le corpus Context fournit outline et neuf entrées READY sur sa projection auditée. Les [16 contrôles publics](../../../receipts/formation/cross-origin-public-validation.json) découvrent les outils natifs sur Orbit réel et observent l’écran de connexion du Studio étranger. Le [nouveau preview authentifié](../../../receipts/formation/native-studio-preview-20261002.json) passe séparément **18 contrôles**, avec 25 outils natifs et sauvegarde/restauration/export explicites, sans écriture Sanity. Publication/readback, rejeu, changement de workspace, refus serveur sous une identité en lecture seule et logout restent `NOT_RUN` jusqu’à leurs propres reçus.
+
+Le [relevé quota courant](../../../receipts/formation/kaggle-quota-readback-20261002.json) n’observe aucun renouvellement. Les [prérequis C/D/E](../../../receipts/formation/campaign-resumption-prerequisites-20261002.json) gardent configurations figées et campagnes incomplètes séparées des logiciels et de la compréhension humaine. La présente mise à jour porte sur le suivi : elle ne recompose ni `MASTER_MANUSCRIPT.md`, ni sa carte des sources, ni les PDF/DOCX. Leurs empreintes et revues continuent d’identifier leurs octets antérieurs ; une édition actualisée devra être reconstruite et relue séparément.
 
 **Neuf documents Canva élève sont publiés et relus.** Leur [index](CANVA_DELIVERY.md), leur [reçu](CANVA_DELIVERY.json) et les neuf captures dans `qa/canva/` décrivent les sorties réelles. Le prototype initial est préservé ; aucune modification du landing ou publication d’un travail d’élève n’est faite par cette production.
 

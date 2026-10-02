@@ -1,0 +1,23 @@
+{
+  "schema": "orbit.native-studio-final-cleanup.v1",
+  "observedAt": "2026-10-02T01:55:32.373145+00:00",
+  "campaign": "orbit-closure-studio-auth-20261001",
+  "nativeLogoutReceipt": "native-studio-logout-20261002.json",
+  "retirementReceipt": "native-studio-final-controller-retirement-20261002.json",
+  "tokenRefusalVerified": true,
+  "actualPostRetirementStatus": 401,
+  "ownedSandbox": "idmzxel00itmmxthl5cac",
+  "ownedDesktopStopObserved": true,
+  "postCleanupInventory": {
+    "active": 0,
+    "owned": 0
+  },
+  "temporaryCors": {
+    "originId": 3194346,
+    "removed": true,
+    "removalVerified": true
+  },
+  "storedSecret": "REVOKED_AND_NOTEBOOK_ASSOCIATION_DISABLED_PENDING_OWNER_DELETION_DECISION",
+  "primaryE2BKeyModified": false,
+  "fullMissionComplete": false
+}

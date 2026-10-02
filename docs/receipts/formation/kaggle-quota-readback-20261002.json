@@ -1,0 +1,17 @@
+{
+  "schema": "orbit.kaggle-quota-ui-readback.v1",
+  "observedAt": "2026-10-02T00:46:00Z",
+  "timestampPrecision": "minute; captured during the root browser turn, not a provider-supplied timestamp",
+  "source": "Kaggle notebook E editor, Benchmark task panel, one Refresh Quota action followed by visible DOM readback",
+  "daily": {"usedUsd": 8.53, "totalUsd": 10.0, "remainingUsd": 1.47},
+  "monthly": {"usedUsd": 18.29, "totalUsd": 100.0, "remainingUsd": 81.71},
+  "providerRefillAt": null,
+  "renewalObserved": false,
+  "providerQuotaRefusalObservedInThisReadback": false,
+  "modelCalls": 0,
+  "paidTopup": false,
+  "scope": "Account inference quota; a local 85 percent campaign guard remains distinct from provider exhaustion.",
+  "officialQuotaCli": "https://github.com/Kaggle/kaggle-cli/blob/main/docs/benchmarks.md#kaggle-benchmarks-quota",
+  "officialQuotaCliExecuted": false,
+  "fullMissionComplete": false
+}

@@ -133,10 +133,16 @@
     "canvaStatus": "nine-public-documents-published-and-read-back",
     "docxStatus": "see qa/export-report.json",
     "pdfStatus": "see qa/export-report.json",
-    "finalCloudIds": "Closure notebook orbit-v3-closure-regressions receipts linked; V2 immutable354480684; V3 public354484426 observed by coordinator; Markdown presentation correction without a new run; public cross-origin354497668. Historical354436854 actual software run and354438752 archived browser replay retained.",
+    "finalCloudIds": "See the exact execution URLs and version identities cited in QUALIFICATION.md and its inventoried public receipts. Historical executions and later narrative publications retain their separate identities.",
     "publicationAuthorized": false,
     "editorialScope": "excluded",
-    "sourceCheckpoint": "Closure Kaggle: 141 TypeScript tests, Node policy/provenance checks, 14 import/document checks and PHP36 regressions. Free Colab explicit Files-panel selection, examination, acknowledgement and assembly7ae43 observed; official embedded files.upload control remains unqualified. Exact assembly7ae43 static build passes with 46 hashes, nine bricks, eight modules, Node22.20, Astro7.3.3, Three0.181.2 and frozen lock423e4878; no replacement. Earlier assembly1414666 browser35/35 and live formation72/72 remain scoped to their original artifacts. Public Context HTTP9 and foreign-origin public native16 checks pass. Authenticated second Studio read-only session observed; its native calls, writes and logout retain separate pending gates.",
+    "sourceCheckpoint": "See the maintained QUALIFICATION.md embedded in the manuscript. Its current chronology supersedes historical checkpoints; source-map.json identifies the inputs examined during this composition. Receipt presence, accepted mutations, prepared previews and incomplete readbacks must not be promoted to a completed test.",
+    "qualificationAuthority": {
+      "path": "QUALIFICATION.md",
+      "sourceMap": "source-map.json",
+      "scope": "Maintained chronology and scoped statuses; each cited receipt retains its own artifact, execution and limitations.",
+      "compositionIsValidation": false
+    },
     "deliveryReady": false,
     "fullMissionComplete": false,
     "graphicsReview": "future joint review",

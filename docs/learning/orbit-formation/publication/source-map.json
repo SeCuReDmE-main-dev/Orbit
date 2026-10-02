@@ -1,7 +1,7 @@
 {
   "schemaVersion": "orbit-course-publication-source-map-v1",
   "courseVersion": "orbit-course-1.0.0",
-  "composedAt": "2026-10-01T21:48:01.795820+00:00",
+  "composedAt": "2026-10-02T02:01:24.520902+00:00",
   "inputs": [
     {
       "path": "docs/learning/orbit-formation/PROJECT.md",
@@ -267,8 +267,8 @@
       "path": "docs/learning/orbit-formation/FORMATION_CONTRACT.md",
       "role": "course-source",
       "exists": true,
-      "sha256": "84bb29a78c7435cc9bf51880f9f7caf4c2ffef20311227b0a967feee6ed55948",
-      "observedFileBytesSha256": "84bb29a78c7435cc9bf51880f9f7caf4c2ffef20311227b0a967feee6ed55948",
+      "sha256": "a448bb8748903132ba8d877fedffad64f932f566ca0389d17efe8c9c4bba648b",
+      "observedFileBytesSha256": "a63f5ea7a37d9db1b28218655e072877f0c8b76cc4e5c947ef684ea29ebcbd75",
       "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
       "status": "inspected-source",
       "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
@@ -277,8 +277,8 @@
       "path": "docs/learning/orbit-formation/WEBMCP.md",
       "role": "course-source",
       "exists": true,
-      "sha256": "df15a1bfa2de26a8f66f54690594fce2e81013f9916c949b83535cc9fa69d77a",
-      "observedFileBytesSha256": "df15a1bfa2de26a8f66f54690594fce2e81013f9916c949b83535cc9fa69d77a",
+      "sha256": "a3f618c8fc9c9a713ff6c778e553feac51a8acfe430206fb53038847ed9e7809",
+      "observedFileBytesSha256": "6cfa07e30b5ed6106fa7a65027284ec4650a32921ca06969d50a57004b7b6678",
       "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
       "status": "inspected-source",
       "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
@@ -287,8 +287,8 @@
       "path": "docs/learning/orbit-formation/STUDIO_INSTALLATION.md",
       "role": "course-source",
       "exists": true,
-      "sha256": "269ee7c010f1b7a187613a95dd7a727b246ca00ab4afbe1f5649c2620db0a25b",
-      "observedFileBytesSha256": "269ee7c010f1b7a187613a95dd7a727b246ca00ab4afbe1f5649c2620db0a25b",
+      "sha256": "b1e92c3d678fb9c5ff0c9c12d94dcbc71689df10342f3ab57f36c67ceb52fa8b",
+      "observedFileBytesSha256": "744032934e6ebd2e9de67f8845653543b8609713c4e0ba1e7443fc20e3a1c182",
       "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
       "status": "inspected-source",
       "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
@@ -327,8 +327,8 @@
       "path": "docs/receipts/FORMATION_DELIVERY_STATUS.md",
       "role": "qualification-reported",
       "exists": true,
-      "sha256": "3a6c1a943eb71538fcfa2a44ad0897d808d01ee72b391f3a064b963be7c937a4",
-      "observedFileBytesSha256": "3a6c1a943eb71538fcfa2a44ad0897d808d01ee72b391f3a064b963be7c937a4",
+      "sha256": "a46168c68d45e1202906f8dfb84a26d3007bf1dfa1791070888e98c33b941789",
+      "observedFileBytesSha256": "4a8e9729c312fba11a22bd7f96911acaf1d92ffcf774791173f0607c1a564d9f",
       "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
       "status": "inspected-source",
       "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
@@ -357,8 +357,8 @@
       "path": "docs/learning/orbit-formation/publication/QUALIFICATION.md",
       "role": "qualification-reported",
       "exists": true,
-      "sha256": "5780a7f920f2badeee5613a3298d40bcc7ecf4e91e689dab9382468a8a59295d",
-      "observedFileBytesSha256": "5780a7f920f2badeee5613a3298d40bcc7ecf4e91e689dab9382468a8a59295d",
+      "sha256": "139ced635aa67b630ff1c7f81e6a922bb2f77ccf8f834769d82906209c6cd11f",
+      "observedFileBytesSha256": "139ced635aa67b630ff1c7f81e6a922bb2f77ccf8f834769d82906209c6cd11f",
       "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
       "status": "inspected-source",
       "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
@@ -367,8 +367,8 @@
       "path": "docs/learning/orbit-formation/publication/TOOLCHAIN_AND_VERSIONS.md",
       "role": "qualification-reported",
       "exists": true,
-      "sha256": "3e533115bdb5cb435f3ca9be2b81a72ba990b8a2d04a677e70e99fc4b8b3ad42",
-      "observedFileBytesSha256": "3e533115bdb5cb435f3ca9be2b81a72ba990b8a2d04a677e70e99fc4b8b3ad42",
+      "sha256": "8d2ed341835b8823cea552da2f1c0a33b364ac2573f809dc36ebe84798916089",
+      "observedFileBytesSha256": "8d2ed341835b8823cea552da2f1c0a33b364ac2573f809dc36ebe84798916089",
       "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
       "status": "inspected-source",
       "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
@@ -959,6 +959,176 @@
       "exists": true,
       "sha256": "66f1d9e2089ba83a59fa5f91864b5aaca79fba57ee25a3c3777c83d2b57a9089",
       "observedFileBytesSha256": "66f1d9e2089ba83a59fa5f91864b5aaca79fba57ee25a3c3777c83d2b57a9089",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/current-portable-studio-cloud-build.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "48075476f53e39133f925a2197823501399ec7ec35574a89e662257812a72290",
+      "observedFileBytesSha256": "4c9e22aaf793cc140a325646009726464c9be95e81a300fced71b24a79293998",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/native-studio-authentication-closure.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "54053125cb9e3c1469dd68fd52504916d19995109340aba804e7c391e5c7fd97",
+      "observedFileBytesSha256": "fb3760c9921ea7730176d3b99f1fab78b31c4ff5df379bac6fd2bef5d54fc22b",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/studio-publication-preparation.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "8742a234e74e939a10a42cd35ba0d6a0d35dbb002fc42098e6f41c6c8e1d2845",
+      "observedFileBytesSha256": "53722891d07d7113069fc3ee6c82f3760dbf9f2dd21fa1e2108d910b9ca4f7c5",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/closure-runtime-cleanup-20261002.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "9ad32164b4303f40dfa4540b03fdc3d6eaa441e3b53eafbca8b8766816eed312",
+      "observedFileBytesSha256": "e176a362de287253424716163cd801d5ff9080b3c840f6386471358beadbe90e",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/campaign-resumption-prerequisites-20261002.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "5f13ef9dcbdad42d2b08cc08ed144b664056a86d13afb530311000d59fb9877d",
+      "observedFileBytesSha256": "5f13ef9dcbdad42d2b08cc08ed144b664056a86d13afb530311000d59fb9877d",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/kaggle-quota-readback-20261002.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "6f90d742c06b63113d62b5453f40c26227a989dd36c09d0e5cdc1dbdc4cfa46a",
+      "observedFileBytesSha256": "6f90d742c06b63113d62b5453f40c26227a989dd36c09d0e5cdc1dbdc4cfa46a",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/native-studio-retry-preparation-20261002.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "5fa55c994a861bfe79301af744afce3e4db00d9e50eee3c1d3b5152eadd63c83",
+      "observedFileBytesSha256": "2e8e5c30b2b70a4ce55b237adacd76ced522c4b574aeaba07d7793e2fe479216",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/native-studio-preview-20261002.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "d691540f27de5ed35d5ddc2f15fff11c1b6612ffe37a212404043528d31c9d60",
+      "observedFileBytesSha256": "d691540f27de5ed35d5ddc2f15fff11c1b6612ffe37a212404043528d31c9d60",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/native-studio-preview-refresh-incident-20261002.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "3bf970fc4556b7c7323eee8bf27cc19f3437af5e9e589bd8f1834c4d5404adb2",
+      "observedFileBytesSha256": "3bf970fc4556b7c7323eee8bf27cc19f3437af5e9e589bd8f1834c4d5404adb2",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/native-studio-preview-recovery-20261002.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "b4ccd1e9e60d07e5115773dfd9c2798aaa7ec617284282cdff3578b805b3c341",
+      "observedFileBytesSha256": "b4ccd1e9e60d07e5115773dfd9c2798aaa7ec617284282cdff3578b805b3c341",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/native-studio-current-preview-20261002.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "494b681110860e9685e3bdd0a21030e7376046a64c0c3b8bcc15d7b3b95815e9",
+      "observedFileBytesSha256": "494b681110860e9685e3bdd0a21030e7376046a64c0c3b8bcc15d7b3b95815e9",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/native-studio-publication-first-attempt-20261002.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "afe03a80a752a8f985348aeea4a1de1f5daf430fb611d0de0c4127f9dc075e7b",
+      "observedFileBytesSha256": "afe03a80a752a8f985348aeea4a1de1f5daf430fb611d0de0c4127f9dc075e7b",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/native-studio-publication-recovery-20261002.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "8d43f69be71dad5724f7c6c35619adc6cc5bd0e9dceb726e3f4ed26be5daa07b",
+      "observedFileBytesSha256": "8d43f69be71dad5724f7c6c35619adc6cc5bd0e9dceb726e3f4ed26be5daa07b",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/native-studio-logout-20261002.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "a517a55b3107d7c0718f7f3224a2980bc36be5a03c3b53238f143108317d8474",
+      "observedFileBytesSha256": "a517a55b3107d7c0718f7f3224a2980bc36be5a03c3b53238f143108317d8474",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/native-studio-final-controller-retirement-20261002.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "1c440784377c019516281dad294009172ace9eba3b2579d6f07e6367406b2192",
+      "observedFileBytesSha256": "1c440784377c019516281dad294009172ace9eba3b2579d6f07e6367406b2192",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/native-studio-final-cleanup-20261002.json",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "8f6e064fa9312509e283886e019929a86b615573cb986f47c3e588fceb9242ae",
+      "observedFileBytesSha256": "fc8f445d8db0a30ac27aae6e22a29afe438cc0b49140922430d9e489840470c8",
+      "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
+      "status": "inspected-source",
+      "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."
+    },
+    {
+      "path": "docs/receipts/formation/FINAL_DELIVERY_2026-10-01.md",
+      "role": "qualification-reported",
+      "exists": true,
+      "sha256": "11d4721f97fb22753fd693166ede57ad5db40cc89354bbea61833d97b27201ea",
+      "observedFileBytesSha256": "11d4721f97fb22753fd693166ede57ad5db40cc89354bbea61833d97b27201ea",
       "hashScope": "canonical LF text; observedFileBytesSha256 separately identifies the inspected bytes",
       "status": "inspected-source",
       "extractionRisk": "Source text can lag the current runtime; qualification receipt governs status."

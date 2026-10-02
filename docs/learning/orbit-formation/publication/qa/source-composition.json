@@ -12,12 +12,18 @@
   "projectBriefs": 1,
   "teacherSheets": 9,
   "assistantMissions": 9,
-  "inputFiles": 101,
+  "inputFiles": 118,
   "outputCharacters": {
-    "MASTER_MANUSCRIPT.md": 151385,
-    "TEACHER_GUIDE.md": 82593,
+    "MASTER_MANUSCRIPT.md": 153911,
+    "TEACHER_GUIDE.md": 85119,
     "ASSISTANT_MISSIONS.md": 29015,
     "CANVA_BRIEFS.md": 44061
   },
-  "pending": "Public Context HTTP9 and native cross-origin16 pass; nine Canva public documents read back. Authenticated second Studio native calls, writes and logout remain unvalidated. Actual assembly browser35/35 and authenticated read-only Studio session observed; document exports and visual QA retain their own receipts."
+  "qualificationAuthority": {
+    "path": "QUALIFICATION.md",
+    "sourceMap": "source-map.json",
+    "scope": "Maintained chronology and scoped statuses; each cited receipt retains its own artifact, execution and limitations.",
+    "compositionIsValidation": false
+  },
+  "pending": "Read the current scoped results and remaining gates in QUALIFICATION.md. Composition does not execute course software, establish publication readback, close model campaigns, examine learner understanding or perform document exports and visual QA."
 }

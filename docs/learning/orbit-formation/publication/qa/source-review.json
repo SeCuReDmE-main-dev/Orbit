@@ -1,6 +1,6 @@
 {
   "state": "DOCUMENT_SOURCE_REVIEW_PREPARED",
-  "preparedAt": "2026-10-01T21:48:06.787048+00:00",
+  "preparedAt": "2026-10-02T02:01:24.854662+00:00",
   "softwareExecuted": false,
   "documentExportsExecutedByThisStep": false,
   "canvaProduced": false,
@@ -19,12 +19,12 @@
   "files": [
     {
       "path": "MASTER_MANUSCRIPT.md",
-      "sha256": "1ed1656889b204fded2b0a6cf683069e678a9273b8042c2fc7e3ffd2a09bd172",
-      "normalizedTextSha256": "1ed1656889b204fded2b0a6cf683069e678a9273b8042c2fc7e3ffd2a09bd172",
+      "sha256": "dd4b0ac88af511921fc4b2d51978f690c407dedec2321a358c20dcfd05bfeaa2",
+      "normalizedTextSha256": "dd4b0ac88af511921fc4b2d51978f690c407dedec2321a358c20dcfd05bfeaa2",
       "hashScope": "sha256 identifies exact file bytes; normalizedTextSha256 identifies the text used by this review",
-      "characters": 151385,
+      "characters": 153911,
       "localReferencesMissing": [],
-      "negativeConstructionMatches": 318,
+      "negativeConstructionMatches": 328,
       "negativeConstructionLocations": [
         {
           "line": 21,
@@ -883,16 +883,26 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 674,
+          "line": 676,
           "matches": 1,
           "markers": [
-            "aucun"
+            "non"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 682,
+          "matches": 2,
+          "markers": [
+            "non",
+            "pas"
           ],
           "proposedPurpose": "manual-review-required",
           "humanReviewStatus": "pending"
         },
         {
-          "line": 682,
+          "line": 688,
           "matches": 3,
           "markers": [
             "sans",
@@ -903,7 +913,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 683,
+          "line": 689,
           "matches": 2,
           "markers": [
             "n’",
@@ -913,7 +923,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 684,
+          "line": 690,
           "matches": 3,
           "markers": [
             "pas",
@@ -924,7 +934,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 685,
+          "line": 691,
           "matches": 2,
           "markers": [
             "ni",
@@ -934,18 +944,29 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 686,
-          "matches": 3,
+          "line": 692,
+          "matches": 2,
           "markers": [
             "sans",
-            "aucun",
-            "n’"
+            "aucun"
           ],
           "proposedPurpose": "technical-or-status-boundary",
           "humanReviewStatus": "pending"
         },
         {
-          "line": 687,
+          "line": 693,
+          "matches": 4,
+          "markers": [
+            "aucun",
+            "sans",
+            "Aucun",
+            "n’"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 694,
           "matches": 1,
           "markers": [
             "pas"
@@ -954,7 +975,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 689,
+          "line": 696,
           "matches": 1,
           "markers": [
             "pas"
@@ -963,7 +984,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 693,
+          "line": 700,
           "matches": 2,
           "markers": [
             "n’",
@@ -973,7 +994,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 695,
+          "line": 702,
           "matches": 2,
           "markers": [
             "ni",
@@ -983,7 +1004,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 699,
+          "line": 706,
           "matches": 1,
           "markers": [
             "aucun"
@@ -992,7 +1013,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 701,
+          "line": 708,
           "matches": 2,
           "markers": [
             "pas",
@@ -1002,17 +1023,30 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 707,
-          "matches": 2,
+          "line": 714,
+          "matches": 3,
           "markers": [
-            "Aucun",
+            "aucun",
+            "ni",
             "n’"
           ],
           "proposedPurpose": "security-or-authority-boundary",
           "humanReviewStatus": "pending"
         },
         {
-          "line": 711,
+          "line": 716,
+          "matches": 4,
+          "markers": [
+            "sans",
+            "ni",
+            "Aucune",
+            "n’"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 720,
           "matches": 2,
           "markers": [
             "ni",
@@ -1022,7 +1056,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 719,
+          "line": 728,
           "matches": 1,
           "markers": [
             "pas"
@@ -1031,7 +1065,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 720,
+          "line": 729,
           "matches": 1,
           "markers": [
             "pas"
@@ -1040,7 +1074,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 721,
+          "line": 730,
           "matches": 3,
           "markers": [
             "ni",
@@ -1051,7 +1085,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 724,
+          "line": 733,
           "matches": 2,
           "markers": [
             "aucune",
@@ -1061,7 +1095,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 733,
+          "line": 742,
           "matches": 4,
           "markers": [
             "Aucun",
@@ -1073,7 +1107,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 735,
+          "line": 744,
           "matches": 2,
           "markers": [
             "non",
@@ -1083,7 +1117,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 736,
+          "line": 745,
           "matches": 3,
           "markers": [
             "sans",
@@ -1094,7 +1128,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 737,
+          "line": 746,
           "matches": 1,
           "markers": [
             "non"
@@ -1103,7 +1137,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 738,
+          "line": 747,
           "matches": 2,
           "markers": [
             "sans",
@@ -1113,7 +1147,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 739,
+          "line": 748,
           "matches": 1,
           "markers": [
             "pas"
@@ -1122,7 +1156,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 740,
+          "line": 749,
           "matches": 1,
           "markers": [
             "sans"
@@ -1131,7 +1165,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 741,
+          "line": 750,
           "matches": 1,
           "markers": [
             "aucun"
@@ -1140,7 +1174,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 742,
+          "line": 751,
           "matches": 1,
           "markers": [
             "pas"
@@ -1149,7 +1183,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 743,
+          "line": 752,
           "matches": 4,
           "markers": [
             "n'",
@@ -1161,7 +1195,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 744,
+          "line": 753,
           "matches": 1,
           "markers": [
             "pas"
@@ -1170,7 +1204,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 746,
+          "line": 755,
           "matches": 2,
           "markers": [
             "aucune",
@@ -1180,7 +1214,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 747,
+          "line": 756,
           "matches": 3,
           "markers": [
             "sans",
@@ -1191,7 +1225,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 748,
+          "line": 757,
           "matches": 1,
           "markers": [
             "sans"
@@ -1200,7 +1234,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 749,
+          "line": 758,
           "matches": 1,
           "markers": [
             "pas"
@@ -1209,7 +1243,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 751,
+          "line": 760,
           "matches": 1,
           "markers": [
             "sans"
@@ -1218,7 +1252,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 752,
+          "line": 761,
           "matches": 1,
           "markers": [
             "pas"
@@ -1227,7 +1261,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 753,
+          "line": 762,
           "matches": 2,
           "markers": [
             "pas",
@@ -1237,7 +1271,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 755,
+          "line": 764,
           "matches": 1,
           "markers": [
             "pas"
@@ -1246,7 +1280,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 756,
+          "line": 765,
           "matches": 9,
           "markers": [
             "sans",
@@ -1263,7 +1297,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 757,
+          "line": 766,
           "matches": 3,
           "markers": [
             "sans",
@@ -1274,7 +1308,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 759,
+          "line": 768,
           "matches": 1,
           "markers": [
             "aucune"
@@ -1283,7 +1317,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 762,
+          "line": 771,
           "matches": 2,
           "markers": [
             "pas",
@@ -1293,7 +1327,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 766,
+          "line": 775,
           "matches": 2,
           "markers": [
             "n'",
@@ -1303,7 +1337,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 768,
+          "line": 777,
           "matches": 3,
           "markers": [
             "pas",
@@ -1314,7 +1348,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 772,
+          "line": 781,
           "matches": 1,
           "markers": [
             "sans"
@@ -1323,7 +1357,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 780,
+          "line": 789,
           "matches": 1,
           "markers": [
             "pas"
@@ -1332,7 +1366,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 782,
+          "line": 791,
           "matches": 2,
           "markers": [
             "aucune",
@@ -1342,7 +1376,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 792,
+          "line": 801,
           "matches": 5,
           "markers": [
             "pas",
@@ -1355,7 +1389,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 794,
+          "line": 803,
           "matches": 1,
           "markers": [
             "pas"
@@ -1364,7 +1398,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 807,
+          "line": 816,
           "matches": 1,
           "markers": [
             "sans"
@@ -1373,7 +1407,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 818,
+          "line": 827,
           "matches": 2,
           "markers": [
             "pas",
@@ -1383,7 +1417,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 829,
+          "line": 838,
           "matches": 1,
           "markers": [
             "sans"
@@ -1392,7 +1426,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 833,
+          "line": 842,
           "matches": 1,
           "markers": [
             "pas"
@@ -1401,7 +1435,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 837,
+          "line": 846,
           "matches": 2,
           "markers": [
             "n'",
@@ -1411,7 +1445,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 848,
+          "line": 857,
           "matches": 1,
           "markers": [
             "pas"
@@ -1420,7 +1454,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 852,
+          "line": 861,
           "matches": 1,
           "markers": [
             "pas"
@@ -1429,7 +1463,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 865,
+          "line": 874,
           "matches": 1,
           "markers": [
             "sans"
@@ -1438,7 +1472,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 869,
+          "line": 878,
           "matches": 2,
           "markers": [
             "sans",
@@ -1448,7 +1482,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 871,
+          "line": 880,
           "matches": 1,
           "markers": [
             "sans"
@@ -1457,7 +1491,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 873,
+          "line": 882,
           "matches": 1,
           "markers": [
             "pas"
@@ -1466,7 +1500,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 900,
+          "line": 909,
           "matches": 1,
           "markers": [
             "pas"
@@ -1475,7 +1509,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 909,
+          "line": 918,
           "matches": 1,
           "markers": [
             "sans"
@@ -1484,7 +1518,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 923,
+          "line": 932,
           "matches": 1,
           "markers": [
             "pas"
@@ -1493,7 +1527,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 948,
+          "line": 957,
           "matches": 1,
           "markers": [
             "pas"
@@ -1502,7 +1536,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 967,
+          "line": 976,
           "matches": 1,
           "markers": [
             "pas"
@@ -1511,7 +1545,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 969,
+          "line": 978,
           "matches": 2,
           "markers": [
             "pas",
@@ -1521,7 +1555,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 986,
+          "line": 995,
           "matches": 1,
           "markers": [
             "sans"
@@ -1530,7 +1564,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 992,
+          "line": 1001,
           "matches": 2,
           "markers": [
             "pas",
@@ -1540,7 +1574,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 996,
+          "line": 1005,
           "matches": 2,
           "markers": [
             "pas",
@@ -1550,7 +1584,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1011,
+          "line": 1020,
           "matches": 1,
           "markers": [
             "n'"
@@ -1559,7 +1593,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1017,
+          "line": 1026,
           "matches": 1,
           "markers": [
             "pas"
@@ -1568,7 +1602,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1019,
+          "line": 1028,
           "matches": 2,
           "markers": [
             "sans",
@@ -1578,7 +1612,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1034,
+          "line": 1043,
           "matches": 2,
           "markers": [
             "sans",
@@ -1588,7 +1622,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1044,
+          "line": 1053,
           "matches": 1,
           "markers": [
             "pas"
@@ -1597,7 +1631,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1065,
+          "line": 1074,
           "matches": 2,
           "markers": [
             "sans",
@@ -1607,7 +1641,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1092,
+          "line": 1101,
           "matches": 1,
           "markers": [
             "pas"
@@ -1616,7 +1650,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1111,
+          "line": 1120,
           "matches": 3,
           "markers": [
             "aucune",
@@ -1627,7 +1661,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1113,
+          "line": 1122,
           "matches": 1,
           "markers": [
             "sans"
@@ -1636,7 +1670,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1115,
+          "line": 1124,
           "matches": 1,
           "markers": [
             "pas"
@@ -1645,7 +1679,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1140,
+          "line": 1149,
           "matches": 1,
           "markers": [
             "pas"
@@ -1654,7 +1688,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1188,
+          "line": 1197,
           "matches": 1,
           "markers": [
             "pas"
@@ -1663,7 +1697,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1205,
+          "line": 1214,
           "matches": 1,
           "markers": [
             "ni"
@@ -1672,7 +1706,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1207,
+          "line": 1216,
           "matches": 1,
           "markers": [
             "pas"
@@ -1681,7 +1715,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1209,
+          "line": 1218,
           "matches": 3,
           "markers": [
             "pas",
@@ -1692,7 +1726,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1211,
+          "line": 1220,
           "matches": 2,
           "markers": [
             "pas",
@@ -1702,7 +1736,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1215,
+          "line": 1224,
           "matches": 1,
           "markers": [
             "pas"
@@ -1711,7 +1745,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1253,
+          "line": 1262,
           "matches": 2,
           "markers": [
             "aucune",
@@ -1721,7 +1755,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1275,
+          "line": 1284,
           "matches": 1,
           "markers": [
             "sans"
@@ -1730,7 +1764,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1277,
+          "line": 1286,
           "matches": 2,
           "markers": [
             "n'",
@@ -1740,7 +1774,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1300,
+          "line": 1309,
           "matches": 1,
           "markers": [
             "pas"
@@ -1749,7 +1783,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1302,
+          "line": 1311,
           "matches": 1,
           "markers": [
             "pas"
@@ -1758,7 +1792,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1326,
+          "line": 1335,
           "matches": 1,
           "markers": [
             "pas"
@@ -1767,7 +1801,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1328,
+          "line": 1337,
           "matches": 4,
           "markers": [
             "n'",
@@ -1779,7 +1813,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1334,
+          "line": 1343,
           "matches": 1,
           "markers": [
             "pas"
@@ -1788,7 +1822,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1336,
+          "line": 1345,
           "matches": 1,
           "markers": [
             "pas"
@@ -1797,7 +1831,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1340,
+          "line": 1349,
           "matches": 1,
           "markers": [
             "pas"
@@ -1806,7 +1840,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1388,
+          "line": 1397,
           "matches": 1,
           "markers": [
             "sans"
@@ -1815,7 +1849,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1391,
+          "line": 1400,
           "matches": 1,
           "markers": [
             "sans"
@@ -1824,7 +1858,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 1397,
+          "line": 1406,
           "matches": 1,
           "markers": [
             "pas"
@@ -1836,12 +1870,12 @@
     },
     {
       "path": "TEACHER_GUIDE.md",
-      "sha256": "f7830eddebd3acff4089095e76f246b92500c55643ac9787b466b04a5487268a",
-      "normalizedTextSha256": "f7830eddebd3acff4089095e76f246b92500c55643ac9787b466b04a5487268a",
+      "sha256": "c38c0f39cbe9cb5021becaa2af2f693ee3f96833e48e17cd3150d3b85eb30fad",
+      "normalizedTextSha256": "c38c0f39cbe9cb5021becaa2af2f693ee3f96833e48e17cd3150d3b85eb30fad",
       "hashScope": "sha256 identifies exact file bytes; normalizedTextSha256 identifies the text used by this review",
-      "characters": 82593,
+      "characters": 85119,
       "localReferencesMissing": [],
-      "negativeConstructionMatches": 161,
+      "negativeConstructionMatches": 171,
       "negativeConstructionLocations": [
         {
           "line": 15,
@@ -2292,16 +2326,26 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 552,
+          "line": 554,
           "matches": 1,
           "markers": [
-            "aucun"
+            "non"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 560,
+          "matches": 2,
+          "markers": [
+            "non",
+            "pas"
           ],
           "proposedPurpose": "manual-review-required",
           "humanReviewStatus": "pending"
         },
         {
-          "line": 560,
+          "line": 566,
           "matches": 3,
           "markers": [
             "sans",
@@ -2312,7 +2356,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 561,
+          "line": 567,
           "matches": 2,
           "markers": [
             "n’",
@@ -2322,7 +2366,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 562,
+          "line": 568,
           "matches": 3,
           "markers": [
             "pas",
@@ -2333,7 +2377,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 563,
+          "line": 569,
           "matches": 2,
           "markers": [
             "ni",
@@ -2343,18 +2387,29 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 564,
-          "matches": 3,
+          "line": 570,
+          "matches": 2,
           "markers": [
             "sans",
-            "aucun",
-            "n’"
+            "aucun"
           ],
           "proposedPurpose": "technical-or-status-boundary",
           "humanReviewStatus": "pending"
         },
         {
-          "line": 565,
+          "line": 571,
+          "matches": 4,
+          "markers": [
+            "aucun",
+            "sans",
+            "Aucun",
+            "n’"
+          ],
+          "proposedPurpose": "security-or-authority-boundary",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 572,
           "matches": 1,
           "markers": [
             "pas"
@@ -2363,7 +2418,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 567,
+          "line": 574,
           "matches": 1,
           "markers": [
             "pas"
@@ -2372,7 +2427,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 571,
+          "line": 578,
           "matches": 2,
           "markers": [
             "n’",
@@ -2382,7 +2437,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 573,
+          "line": 580,
           "matches": 2,
           "markers": [
             "ni",
@@ -2392,7 +2447,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 577,
+          "line": 584,
           "matches": 1,
           "markers": [
             "aucun"
@@ -2401,7 +2456,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 579,
+          "line": 586,
           "matches": 2,
           "markers": [
             "pas",
@@ -2411,17 +2466,30 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 585,
-          "matches": 2,
+          "line": 592,
+          "matches": 3,
           "markers": [
-            "Aucun",
+            "aucun",
+            "ni",
             "n’"
           ],
           "proposedPurpose": "security-or-authority-boundary",
           "humanReviewStatus": "pending"
         },
         {
-          "line": 589,
+          "line": 594,
+          "matches": 4,
+          "markers": [
+            "sans",
+            "ni",
+            "Aucune",
+            "n’"
+          ],
+          "proposedPurpose": "manual-review-required",
+          "humanReviewStatus": "pending"
+        },
+        {
+          "line": 598,
           "matches": 2,
           "markers": [
             "ni",
@@ -2431,7 +2499,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 597,
+          "line": 606,
           "matches": 1,
           "markers": [
             "pas"
@@ -2440,7 +2508,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 598,
+          "line": 607,
           "matches": 1,
           "markers": [
             "pas"
@@ -2449,7 +2517,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 599,
+          "line": 608,
           "matches": 3,
           "markers": [
             "ni",
@@ -2460,7 +2528,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 602,
+          "line": 611,
           "matches": 2,
           "markers": [
             "aucune",
@@ -2470,7 +2538,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 611,
+          "line": 620,
           "matches": 4,
           "markers": [
             "Aucun",
@@ -2482,7 +2550,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 613,
+          "line": 622,
           "matches": 2,
           "markers": [
             "non",
@@ -2492,7 +2560,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 614,
+          "line": 623,
           "matches": 3,
           "markers": [
             "sans",
@@ -2503,7 +2571,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 615,
+          "line": 624,
           "matches": 1,
           "markers": [
             "non"
@@ -2512,7 +2580,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 616,
+          "line": 625,
           "matches": 2,
           "markers": [
             "sans",
@@ -2522,7 +2590,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 617,
+          "line": 626,
           "matches": 1,
           "markers": [
             "pas"
@@ -2531,7 +2599,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 618,
+          "line": 627,
           "matches": 1,
           "markers": [
             "sans"
@@ -2540,7 +2608,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 619,
+          "line": 628,
           "matches": 1,
           "markers": [
             "aucun"
@@ -2549,7 +2617,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 620,
+          "line": 629,
           "matches": 1,
           "markers": [
             "pas"
@@ -2558,7 +2626,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 621,
+          "line": 630,
           "matches": 4,
           "markers": [
             "n'",
@@ -2570,7 +2638,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 622,
+          "line": 631,
           "matches": 1,
           "markers": [
             "pas"
@@ -2579,7 +2647,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 624,
+          "line": 633,
           "matches": 2,
           "markers": [
             "aucune",
@@ -2589,7 +2657,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 625,
+          "line": 634,
           "matches": 3,
           "markers": [
             "sans",
@@ -2600,7 +2668,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 626,
+          "line": 635,
           "matches": 1,
           "markers": [
             "sans"
@@ -2609,7 +2677,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 627,
+          "line": 636,
           "matches": 1,
           "markers": [
             "pas"
@@ -2618,7 +2686,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 629,
+          "line": 638,
           "matches": 1,
           "markers": [
             "sans"
@@ -2627,7 +2695,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 630,
+          "line": 639,
           "matches": 1,
           "markers": [
             "pas"
@@ -2636,7 +2704,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 631,
+          "line": 640,
           "matches": 2,
           "markers": [
             "pas",
@@ -2646,7 +2714,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 633,
+          "line": 642,
           "matches": 1,
           "markers": [
             "pas"
@@ -2655,7 +2723,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 634,
+          "line": 643,
           "matches": 9,
           "markers": [
             "sans",
@@ -2672,7 +2740,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 635,
+          "line": 644,
           "matches": 3,
           "markers": [
             "sans",
@@ -2683,7 +2751,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 637,
+          "line": 646,
           "matches": 1,
           "markers": [
             "aucune"
@@ -2692,7 +2760,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 640,
+          "line": 649,
           "matches": 2,
           "markers": [
             "pas",
@@ -2702,7 +2770,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 644,
+          "line": 653,
           "matches": 2,
           "markers": [
             "n'",
@@ -2712,7 +2780,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 646,
+          "line": 655,
           "matches": 3,
           "markers": [
             "pas",
@@ -2723,7 +2791,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 650,
+          "line": 659,
           "matches": 1,
           "markers": [
             "sans"
@@ -2732,7 +2800,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 658,
+          "line": 667,
           "matches": 1,
           "markers": [
             "pas"
@@ -2741,7 +2809,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 660,
+          "line": 669,
           "matches": 2,
           "markers": [
             "aucune",
@@ -2751,7 +2819,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 670,
+          "line": 679,
           "matches": 5,
           "markers": [
             "pas",
@@ -2764,7 +2832,7 @@
           "humanReviewStatus": "pending"
         },
         {
-          "line": 672,
+          "line": 681,
           "matches": 1,
           "markers": [
             "pas"

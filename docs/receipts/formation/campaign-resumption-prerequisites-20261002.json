@@ -1,0 +1,201 @@
+{
+  "format": "orbit-campaign-resumption-prerequisites-v1",
+  "recordedAt": "2026-10-02T00:43:18Z",
+  "state": "READ_ONLY_REVIEW_NO_DISPATCH",
+  "repository": {
+    "branch": "master",
+    "headAtReview": "272fdf539f2022924ee82106337051422c1ac7a5"
+  },
+  "scope": {
+    "newModelCalls": 0,
+    "newWorkerPools": 0,
+    "testsExecuted": 0,
+    "existingManifestsModified": false,
+    "existingFrozenSourcesModified": false,
+    "privateSourceOrModelTextRedistributed": false
+  },
+  "suiteC": {
+    "campaignId": "orbit-kaggle-20261001-v2-sdkparams2",
+    "configurationSha256": "0d433497a1e6fa7810c68a51709e821d204f3241707e39850e45b2ce6283ad85",
+    "harnessSha256": "8f1eba8b70575fc57b7503b7b51d73bc309470f54484c0cc989950c735a41b05",
+    "frozenCheckpointSha256": "95a59fc3ff434d4169f179a8d4815b28597177534e3cd7c1f1063a1067d69052",
+    "sdkVersion": "0.6.1",
+    "models": [
+      "google/gemini-3.8-flash",
+      "google/gemini-3.1-pro-preview"
+    ],
+    "observed": {
+      "extractions": 57,
+      "productions": 221,
+      "completedPacketComparisons": 55,
+      "complete": false
+    },
+    "planned": {
+      "extractions": 60,
+      "productions": 240,
+      "packetComparisons": 60
+    },
+    "missing": [
+      {
+        "packet": 5,
+        "repetition": 0,
+        "model": "google/gemini-3.8-flash",
+        "extractions": 0,
+        "productions": 4,
+        "conditions": ["baseline", "n", "p", "none"],
+        "firstProductionState": "technical-error",
+        "incident": "Provider heavy-load 429 was classified as terminal by the frozen checkpoint."
+      },
+      {
+        "packet": 9,
+        "repetition": 2,
+        "model": "google/gemini-3.8-flash",
+        "extractions": 1,
+        "productions": 4,
+        "conditions": ["none", "baseline", "n", "p"]
+      },
+      {
+        "packet": 9,
+        "repetition": 2,
+        "model": "google/gemini-3.1-pro-preview",
+        "extractions": 0,
+        "productions": 3,
+        "conditions": ["none", "baseline", "n"],
+        "alreadyObservedCondition": "p"
+      },
+      {
+        "packet": 10,
+        "repetition": 2,
+        "model": "google/gemini-3.8-flash",
+        "extractions": 1,
+        "productions": 4,
+        "conditions": ["none", "baseline", "n", "p"]
+      },
+      {
+        "packet": 10,
+        "repetition": 2,
+        "model": "google/gemini-3.1-pro-preview",
+        "extractions": 1,
+        "productions": 4,
+        "conditions": ["none", "baseline", "n", "p"]
+      }
+    ],
+    "missingTotals": {"extractions": 3, "productions": 19},
+    "evidence": {
+      "privateArchiveSha256": "c5e88b5321b716b8070f0e5604138223d0fb5b9937b73317dcca144e415a1ebc",
+      "privateArchiveBytes": 1703726,
+      "privateArchiveJsonFiles": 1154,
+      "publicAnalysisSha256": "f9dc51d3f32e71b7378281376ca64dfbfc21803ca75364944a7f4bff0d3ad6d3",
+      "directory": ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2",
+      "backupReceipt": "c-sdkparams2-backup-analysis-receipt.json",
+      "publicAnalysis": "c-sdkparams2-independent-analysis.json"
+    }
+  },
+  "quotaObservation": {
+    "observedAt": "2026-10-02T00:11:25.470Z",
+    "source": "Previously recorded Kaggle notebook UI after one Refresh Quota action",
+    "freshReadPerformedDuringThisReview": false,
+    "daily": {"usedDollars": 8.53, "limitDollars": 10},
+    "monthly": {"usedDollars": 18.29, "limitDollars": 100},
+    "renewalObserved": false,
+    "resetAt": null,
+    "providerQuotaRefusalObserved": false,
+    "receipt": ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/quota-final-readback.json"
+  },
+  "frozenObstacles": [
+    {
+      "kind": "LOCAL_CONSERVATIVE_THRESHOLD",
+      "frozenSource": "frozen-c-sdkparams2/tools/orbit_campaign_checkpoint.py",
+      "lines": [230, 231],
+      "newDispatchStopConsumedPercent": 85,
+      "reservationStopConsumedPercent": 89,
+      "numericThresholdsHardcoded": true,
+      "observedDailyConsumedPercent": 85.3,
+      "error": "NO_NEW_LOT_AT_DECLARED_QUOTA_THRESHOLD",
+      "providerLimitExhaustion": false,
+      "explanation": "The 85 percent check is independent of the 89 percent reservation check. Changing quotaPolicy numbers alone cannot change this frozen serial gate."
+    },
+    {
+      "kind": "TERMINAL_TECHNICAL_OBSERVATION",
+      "frozenSource": "frozen-c-sdkparams2/tools/orbit_campaign_checkpoint.py",
+      "lines": [326, 331],
+      "packet": 5,
+      "repetition": 0,
+      "model": "google/gemini-3.8-flash",
+      "condition": "baseline",
+      "error": "TECHNICAL_FIX_REQUIRES_NEW_HARNESS_VERSION",
+      "explanation": "A real quota renewal does not make this terminal record retryable. The separately qualified heavy-load classification correction cannot be substituted into the frozen source or attributed retroactively."
+    }
+  ],
+  "officialQuotaReadPath": {
+    "command": "kaggle benchmarks quota --format json",
+    "documentedFields": ["period", "used", "remaining", "total", "refillAt"],
+    "officialMethod": "KaggleApi.benchmarks_quota",
+    "officialClientCall": "models.model_proxy_api_client.get_model_proxy_quotas(ApiGetModelProxyQuotasRequest())",
+    "documentation": "https://github.com/Kaggle/kaggle-cli/blob/main/docs/benchmarks.md",
+    "implementation": "https://github.com/Kaggle/kaggle-cli/blob/main/src/kaggle/api/kaggle_api_extended.py#L10655",
+    "executed": false,
+    "accountEndpointCalled": false,
+    "newCredentialCreated": false,
+    "lastKnownCliAuthentication": "Unavailable in the existing control environment",
+    "authenticationFreshlyProbed": false,
+    "requires": "Existing official Kaggle authentication; otherwise retain the UI observation and an unknown reset time.",
+    "sdk061Inspection": "The inspected official kaggle-benchmarks 0.6.1 distribution exposes observed response usage costs, but no quota, refill or advance-pricing method was found.",
+    "sdkGuide": "https://github.com/Kaggle/kaggle-benchmarks/blob/ci/user_guide.md",
+    "providerGuaranteeForLocal99PercentThresholdFound": false
+  },
+  "minimalLegitimateRoutes": [
+    {
+      "kind": "ORIGINAL_IDENTITY_RESUMPTION",
+      "prerequisites": [
+        "A fresh real quota observation below the frozen 85 percent gate, such as an observed provider renewal; do not invent a reset or lower the used amount.",
+        "Restore the verified private archive through its SHA-pinned Kaggle dataset path, preserving its original campaign identity.",
+        "Retain frozen code, model parameters, corpus and existing successful observations; do not redispatch completed generations."
+      ],
+      "candidateNewExtractions": 3,
+      "candidateNewProductions": 15,
+      "excludedTerminalProductions": 4,
+      "resultIfAllCandidateGenerationsSucceed": {"extractions": 60, "productions": 236, "complete": false},
+      "operationalFieldsExcludedFromIdentity": ["quotaSnapshot", "resumeDatasetDir", "resumeArchives"],
+      "executed": false
+    },
+    {
+      "kind": "SEPARATE_COMPLEMENTARY_FOLLOW_UP",
+      "prerequisites": [
+        "Use a newly identified and qualified harness for the terminal heavy-load case.",
+        "Obtain a fresh real quota observation and enforce its declared local guard and actual provider refusal.",
+        "Preserve the old terminal receipt, old outputs and old identity without relabeling them."
+      ],
+      "candidateNewProductions": 4,
+      "pooledIntoOriginalFrozenIdentity": false,
+      "classification": "Complementary exploratory observations, not an undisclosed completion of the original frozen campaign",
+      "executed": false
+    }
+  ],
+  "otherSuites": {
+    "D": {
+      "plannedTrajectories": 24,
+      "observedTrajectories": 0,
+      "state": "BLOCKED_REAL_KNOWLEDGE_BASE_LIMIT",
+      "observedKnowledgeBases": 2,
+      "knowledgeBaseLimit": 2,
+      "providerError": "planLimitReached",
+      "existingProductionKnowledgeBasesModified": false
+    },
+    "E": {
+      "plannedTrajectories": 144,
+      "observedTrajectories": 0,
+      "state": "PREPARED_UNFROZEN_NOT_EXECUTABLE",
+      "oldOwnedWorkerPoolRetired": true,
+      "providerQuotaRefusalObserved": false,
+      "requires": "Fresh quota, a separately frozen qualified full harness, and a newly owned scoped worker generation before dispatch."
+    }
+  },
+  "limits": [
+    "This receipt records prerequisites and existing evidence; it is not an executed resumption.",
+    "The 85 and 89 percent gates are local policies, not Kaggle provider exhaustion signals.",
+    "No exact cost bound for the remaining generations or guarantee that they fit the unused daily balance is established.",
+    "No inferred midnight renewal, fabricated completion, model replacement or silent cross-identity pooling is allowed.",
+    "Real-source model answers, originals, private answer keys and secrets are absent from this public receipt."
+  ]
+}

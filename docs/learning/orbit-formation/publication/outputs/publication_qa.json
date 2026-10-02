@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T21:51:40.913591+00:00",
+  "created_at": "2026-10-02T02:02:33.691976+00:00",
   "package_dir": "<publication>\\outputs",
   "readiness_label": "review-ready-provisional",
   "checks": {
@@ -11,17 +11,17 @@
     "markdown": {
       "path": "<publication>\\outputs\\MASTER_MANUSCRIPT.md",
       "exists": true,
-      "size": 157318,
-      "headings": 157,
+      "size": 159915,
+      "headings": 158,
       "has_conclusion": true,
       "has_back_matter": true
     },
     "docx": {
       "path": "<publication>\\outputs\\book.docx",
       "exists": true,
-      "size": 90913,
-      "paragraphs": 544,
-      "characters": 101987
+      "size": 92067,
+      "paragraphs": 548,
+      "characters": 103505
     },
     "epub": {
       "path": "<publication>\\outputs\\book.epub",
@@ -31,13 +31,13 @@
     "latex": {
       "path": "<publication>\\outputs\\book.tex",
       "exists": true,
-      "size": 200722
+      "size": 203611
     },
     "pdf": {
       "path": "<publication>\\outputs\\book.pdf",
       "exists": true,
-      "size": 307597,
-      "pages": 75,
+      "size": 311657,
+      "pages": 76,
       "metadata_title": "Orbit Formation"
     },
     "pdf_render": {
@@ -87,7 +87,7 @@
     "deliveryReady": false,
     "fullMissionComplete": false,
     "remaining": [
-      "Authenticated second Studio native/write/logout remain unvalidated",
+      "Authenticated Studio publication/readback/logout have separate native receipts; immutable replay, workspace change and a distinct read-only identity remain unqualified",
       "Canva public documents have separate readback evidence",
       "Assembled browser and authenticated Studio retain separate evidence",
       "Native Word pagination and external-link readback not certified"

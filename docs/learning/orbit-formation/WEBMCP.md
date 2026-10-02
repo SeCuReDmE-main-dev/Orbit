@@ -1,5 +1,8 @@
 # Orbit Formation WebMCP contract
 
+> Final checkpoint, October 1 Toronto: authenticated synthetic publication/readback, native logout and temporary runtime cleanup are now verified. Earlier preview-only statements below are historical. Immutable replay, workspace change, distinct read-only identity and model campaigns remain incomplete. See [delivery evidence](../../receipts/formation/FINAL_DELIVERY_2026-10-01.md).
+
+
 Contract versions: formation registry `orbit-formation-webmcp-v1`; pedagogical tools `orbit-learning-tools-v1`; session `orbit-learning-v1`. Prepared on October 1, 2026.
 
 The formation pages expose **25 tools: the 15 existing research names and 10 pedagogical names**. The [formation adapter](../../../web/src/lib/learning-webmcp.ts) binds the research tools to the selected learning evidence dossier. The [pedagogical implementation](../../../packages/learning/src/tools.ts) is a pure TypeScript resource/calculation layer. Neither creates a provider service, invokes a model, publishes work or approves a human decision.
@@ -176,7 +179,19 @@ Module changes, imported sessions, changed workspaces and document replacement w
 
 ## Validation evidence and reproduction boundary
 
-### Current consolidated checkpoint — October 1, 2026
+### Current closure qualification — October 2, 2026 UTC
+
+The root research context keeps 15 tools; pedagogical contexts keep 25. The [current delivery matrix](../../receipts/FORMATION_DELIVERY_STATUS.md#definitive-closure-pass--current-evidence-october-2-2026-utc) links the current software, Context, notebooks and documents. The portable archive is `184358d01d9866ef7da0b5ac67f5d8020545656a31b66e39fece0c0e8e17ff64`, with [316 constructed host files](../../receipts/formation/current-portable-studio-cloud-build.json). Its construction is not a native execution proof. Course outline and nine admitted paths are [actually READY](../../receipts/formation/course-context-live-transport.json); the old disabled candidate below remains historical.
+
+The [16-check public native run](../../receipts/formation/cross-origin-public-validation.json) discovers the 25-tool course registry and executes selected calls on real Orbit, observes the foreign portable Studio login screen, and verifies credential-free public Context transport from that foreign origin. It does not execute an authenticated Studio registry. The [new owner-authenticated preview](../../receipts/formation/native-studio-preview-20261002.json) separately passes **18 checks** on the actual foreign Studio: 25 native tools, six initial permissions off, no engine selection, private refusal before sharing, actual audited Context reads, explicit save/reload/restore/export and a preview containing one selected synthetic artifact. The preview is not a Content Lake write or automatic human acknowledgement.
+
+Publication/readback, immutable replay, workspace change, rejection under a separate read-only identity and native logout remain `NOT_RUN` at this checkpoint. No WebMCP tool publishes or manufactures human approval. Prior OAuth refusals and resource retirements remain scoped to their own session; the new session needs its own result and cleanup. The explicit manual Colab import and [nine published Canva documents](publication/CANVA_DELIVERY.md) are separately recorded in the current delivery matrix, not left pending by this superseded checkpoint.
+
+The [00:46 UTC quota observation](../../receipts/formation/kaggle-quota-readback-20261002.json) does not establish a refill or provider exhaustion. The [C/D/E prerequisites](../../receipts/formation/campaign-resumption-prerequisites-20261002.json) retain C's frozen local gate and missing work, D's real KB capacity limit and E's unfrozen full campaign. These are read-only resumption conditions, not model results. `fullMissionComplete` remains false.
+
+### Historical consolidated checkpoint — October 1, 2026, superseded
+
+The following release, plugin digest, Context HOLD, manual-upload limitation and pending Canva claims belong to the earlier checkpoint. They are retained as historical evidence and do not describe the current closure qualification above.
 
 The [successful immutable Kaggle v5 receipt](../../receipts/formation/software-version5-kaggle.json), version [354436854](https://www.kaggle.com/code/celebrum/orbit-formation-software-validation?scriptVersionId=354436854), records **141/141 assertions across 15 suites**, plus **seven separate Python tests**, exit 0. The source payload is `689494986b4b6a9b02b5a22a8beb81e8de7cb7388a55ad20a122743d3de7966e`; the observed run took 120.7 seconds with zero model calls. It retains the corrected actual assembly, locked portable Studio installation and PHP statuses. Each artifact and browser run keeps its own fingerprint and receipt; version 354422952 is historical.
 

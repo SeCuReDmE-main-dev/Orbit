@@ -74,7 +74,8 @@ def main() -> None:
         if row.get("controllerPid"):
             if any(item.pid == row["controllerPid"] for item in worker.commands.list()):
                 raise RuntimeError("EXISTING_CONTROLLER_MUST_BE_RETIRED")
-            row.setdefault("controllerConstructionIncidents", []).append({"pid": row["controllerPid"], "sourceSha256": row.get("controllerSourceSha256"), "bundleSha256": row.get("controllerBundleSha256"), "state": "PROCESS_EXITED_BEFORE_READY"})
+            previous_state = "RETIRED_WITH_OBSERVED_401" if row.get("controllerRetirement", {}).get("pid") == row["controllerPid"] else "PROCESS_EXITED_BEFORE_READY"
+            row.setdefault("controllerConstructionIncidents", []).append({"pid": row["controllerPid"], "sourceSha256": row.get("controllerSourceSha256"), "bundleSha256": row.get("controllerBundleSha256"), "state": previous_state})
         source = (ROOT / "tools" / "learning-studio-authenticated-validation.ts").read_bytes()
         worker.commands.run("mkdir -p /home/user/orbit-studio-controller", timeout=20, user="user")
         node_directory = "/home/user/orbit-node/node-v22.20.0-linux-x64/bin"

@@ -1,0 +1,314 @@
+{
+  "schema": "orbit.native-studio-kaggle-retirement.v1",
+  "observedAt": "2026-10-02T01:35:00.224206+00:00",
+  "orchestrator": "Kaggle",
+  "modelCalls": 0,
+  "finalResult": {
+    "schema": "orbit.authenticated-native-studio-qa.v1",
+    "state": "FAILED",
+    "orchestrator": "Kaggle",
+    "browserHost": "E2B Desktop",
+    "origin": "https://8000-idmzxel00itmmxthl5cac.e2b.app",
+    "checks": [
+      {
+        "name": "native-authenticated-studio-on-exact-foreign-host",
+        "passed": true
+      },
+      {
+        "name": "portable-studio-native-25-tools",
+        "passed": true,
+        "observation": {
+          "toolCount": 25
+        }
+      },
+      {
+        "name": "native-fresh-session-has-six-permissions-off-and-no-engine",
+        "passed": true,
+        "observation": {
+          "permissionCount": 6
+        }
+      },
+      {
+        "name": "native-private-read-refused-before-sharing",
+        "passed": true
+      },
+      {
+        "name": "native-course-context-has-audited-provenance",
+        "passed": true,
+        "observation": {
+          "state": "READY",
+          "projection": "public-course-allowlist-v1",
+          "auditedRevision": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94"
+        }
+      },
+      {
+        "name": "native-course-outline-has-nine-admitted-entry-paths",
+        "passed": true,
+        "observation": {
+          "entryCount": 9
+        }
+      },
+      {
+        "name": "native-course-entry-has-audited-source-citations",
+        "passed": true,
+        "observation": {
+          "state": "READY",
+          "citationGroups": 1,
+          "sourceCount": 1
+        }
+      },
+      {
+        "name": "actual-studio-destination",
+        "passed": true
+      },
+      {
+        "name": "native-project-navigation-keeps-one-25-tool-registry",
+        "passed": true,
+        "observation": {
+          "toolCount": 25
+        }
+      },
+      {
+        "name": "native-explicit-browser-save-confirmed",
+        "passed": true
+      },
+      {
+        "name": "native-reload-registers-25-tools-once",
+        "passed": true,
+        "observation": {
+          "toolCount": 25
+        }
+      },
+      {
+        "name": "native-reload-does-not-restore-work-or-permissions-implicitly",
+        "passed": true
+      },
+      {
+        "name": "native-storage-choice-does-not-auto-restore",
+        "passed": true
+      },
+      {
+        "name": "native-explicit-restore-keeps-fixtures-and-revokes-sharing",
+        "passed": true,
+        "observation": {
+          "artifacts": 2,
+          "journalMarkers": 1
+        }
+      },
+      {
+        "name": "native-restored-private-read-requires-fresh-sharing",
+        "passed": true
+      },
+      {
+        "name": "native-real-export-has-exact-fixtures-and-no-grants",
+        "passed": true,
+        "observation": {
+          "bytes": 2038,
+          "sha256": "3e8f7335c4a472237f02c87269a61337dafdd8c74ae35e712e0fee54ec12a26d",
+          "artifacts": 2,
+          "journalEntries": 1
+        }
+      },
+      {
+        "name": "preview-has-only-selected-synthetic-artifact",
+        "passed": true
+      },
+      {
+        "name": "publish-disabled-before-separate-human-acknowledgement",
+        "passed": true
+      },
+      {
+        "name": "preview-has-only-selected-synthetic-artifact",
+        "passed": true
+      },
+      {
+        "name": "publish-disabled-before-separate-human-acknowledgement",
+        "passed": true
+      },
+      {
+        "name": "native-content-lake-mutation-success",
+        "passed": true,
+        "observation": [
+          {
+            "status": 204,
+            "path": "/v2026-03-01/data/mutate/production"
+          },
+          {
+            "status": 200,
+            "path": "/v2026-03-01/data/mutate/production"
+          }
+        ]
+      },
+      {
+        "name": "exact-synthetic-publication-readback",
+        "passed": false,
+        "observation": {
+          "documentId": "orbit.learning.8be7243a827bb052c1d9aeda529296b8bb3d55cc1da60650d889fdc0bc9b0eef",
+          "count": 0
+        }
+      }
+    ],
+    "modelCalls": 0,
+    "personalSessionExported": false,
+    "ownerTokenTransferred": false,
+    "remoteDebuggingTcpExposed": false,
+    "humanAcknowledgementFabricated": false,
+    "contentLakeWriteExecuted": false,
+    "readOnlyServerRejection": {
+      "state": "NOT_RUN",
+      "reason": "Requires a separate existing read-only native identity."
+    },
+    "fullMissionComplete": false,
+    "chromeMajor": 154,
+    "persistence": {
+      "state": "EXPLICIT_SAVE_RELOAD_RESTORE_EXPORT_VERIFIED",
+      "syntheticOnly": true,
+      "downloadRemainsInOwnedVm": true,
+      "permissionsReset": true
+    },
+    "preview": {
+      "documentId": "orbit.learning.8be7243a827bb052c1d9aeda529296b8bb3d55cc1da60650d889fdc0bc9b0eef",
+      "type": "orbitLearningPublication",
+      "title": "Orbit QA — synthetic selected artifact — 2026-10-01",
+      "payloadSha256": "eba64419f628ef80dfe723322bda5b4336a11773974b2a256bd1fa8ff1d41634",
+      "selectedArtifacts": 1,
+      "syntheticOnly": true
+    },
+    "loginPreparation": {
+      "origin": "https://8000-idmzxel00itmmxthl5cac.e2b.app",
+      "learningSurface": true,
+      "loginScreen": false,
+      "corsError": false,
+      "reloadedFromKaggle": true,
+      "credentialsEnteredByAgent": false
+    },
+    "priorAttempts": [
+      {
+        "state": "NATIVE_AUTHENTICATED_SURFACE_READY",
+        "checks": [
+          {
+            "name": "native-authenticated-studio-on-exact-foreign-host",
+            "passed": true
+          },
+          {
+            "name": "portable-studio-native-25-tools",
+            "passed": true,
+            "observation": {
+              "toolCount": 25
+            }
+          },
+          {
+            "name": "native-fresh-session-has-six-permissions-off-and-no-engine",
+            "passed": true,
+            "observation": {
+              "permissionCount": 6
+            }
+          },
+          {
+            "name": "native-private-read-refused-before-sharing",
+            "passed": true
+          },
+          {
+            "name": "native-course-context-has-audited-provenance",
+            "passed": true,
+            "observation": {
+              "state": "READY",
+              "projection": "public-course-allowlist-v1",
+              "auditedRevision": "d2c6279c-4ded-44de-a45e-f5e8e63bdf94"
+            }
+          },
+          {
+            "name": "native-course-outline-has-nine-admitted-entry-paths",
+            "passed": true,
+            "observation": {
+              "entryCount": 9
+            }
+          },
+          {
+            "name": "native-course-entry-has-audited-source-citations",
+            "passed": true,
+            "observation": {
+              "state": "READY",
+              "citationGroups": 1,
+              "sourceCount": 1
+            }
+          },
+          {
+            "name": "actual-studio-destination",
+            "passed": true
+          },
+          {
+            "name": "native-project-navigation-keeps-one-25-tool-registry",
+            "passed": true,
+            "observation": {
+              "toolCount": 25
+            }
+          },
+          {
+            "name": "native-explicit-browser-save-confirmed",
+            "passed": true
+          },
+          {
+            "name": "native-reload-registers-25-tools-once",
+            "passed": true,
+            "observation": {
+              "toolCount": 25
+            }
+          },
+          {
+            "name": "native-reload-does-not-restore-work-or-permissions-implicitly",
+            "passed": true
+          },
+          {
+            "name": "native-storage-choice-does-not-auto-restore",
+            "passed": true
+          },
+          {
+            "name": "native-explicit-restore-keeps-fixtures-and-revokes-sharing",
+            "passed": true,
+            "observation": {
+              "artifacts": 2,
+              "journalMarkers": 1
+            }
+          },
+          {
+            "name": "native-restored-private-read-requires-fresh-sharing",
+            "passed": true
+          },
+          {
+            "name": "native-real-export-has-exact-fixtures-and-no-grants",
+            "passed": true,
+            "observation": {
+              "bytes": 2038,
+              "sha256": "678b6004aaf80db6ff7a46eff46dee88ed978b3ab306346d83bae9aa459069ce",
+              "artifacts": 2,
+              "journalEntries": 1
+            }
+          },
+          {
+            "name": "preview-has-only-selected-synthetic-artifact",
+            "passed": true
+          },
+          {
+            "name": "publish-disabled-before-separate-human-acknowledgement",
+            "passed": true
+          },
+          {
+            "name": "preview-has-only-selected-synthetic-artifact",
+            "passed": false
+          }
+        ],
+        "error": "NATIVE_STUDIO_CHECK_FAILED"
+      }
+    ],
+    "humanAcknowledgementObserved": true,
+    "error": "NATIVE_STUDIO_CHECK_FAILED",
+    "busy": false
+  },
+  "retired": {
+    "state": "RETIRED"
+  },
+  "actualPostRetirementStatus": 401,
+  "tokenRefusalVerified": true,
+  "fullMissionComplete": false
+}

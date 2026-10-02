@@ -44,12 +44,12 @@
   ],
   "qualificationPending": true,
   "sha256": {
-    "MASTER_MANUSCRIPT.md": "e1a7d6a11596746fd45cbb8deeb6125573305e58c7dd78ac8aaa8901f678f976",
-    "book.docx": "6a4b8394e96f65d6ebbbf0fc23ab67ee3a788ffc9f2a7fe38e73e70040606601",
-    "book.pdf": "f35791dc743dcc293b032f277065a64487c33de1821fce73287d1933d6c5174e",
-    "book.tex": "cb03e44848d213275616cad18bd5bb3820e330657a23d092f8981f2ffeff8a48",
+    "MASTER_MANUSCRIPT.md": "5db705c364bb0cfabacd21171f9ed798bffac43cbce3778c243ade0298fcd9bd",
+    "book.docx": "fedf65a68fe235ab2dd69ebe1c14ab2f26808045f0af76627eb935ad2932a9eb",
+    "book.pdf": "d1db29c642e5044000ec73f27f6d730ebd631c256de6dcd1473d7428db589d70",
+    "book.tex": "87e38125b4e3ebe7478508fbd211402e73e49e82788a082b164244b9449e8f52",
     "fingerprints.json": "8fdcd0fef5154169aab41c438fada78270076e708c8f04b41b602ed0e69c9a0c",
     "header.tex": "fb475065985153cb62336099c42779182f027091ff862bb737943d5bc112efbc",
-    "reference.docx": "634c0fd34e387e5f73633c75c2b30c0f0922a0322fb4fbdf7801910f69d3805d"
+    "reference.docx": "ea9382b49ed783b89d27a531ca10b1802e4020e74cfce66d84d3664c74957b7c"
   }
 }

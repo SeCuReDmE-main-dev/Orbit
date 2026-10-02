@@ -656,6 +656,29 @@ Design : lecture claire, code lisible, légendes, clavier, petite largeur et con
         "php-context-closure-pass-kaggle.json",
         "course-context-ingestion.json", "course-context-issue-triage.json", "course-context-live-transport.json", "cross-origin-public-validation.json",
     ]]
+    # Retain each later observation and incident under its own identity. Merely
+    # inventorying a receipt does not promote its result to successful validation.
+    current_receipt_names = [
+        "current-portable-studio-cloud-build.json",
+        "native-studio-authentication-closure.json",
+        "studio-publication-preparation.json",
+        "closure-runtime-cleanup-20261002.json",
+        "campaign-resumption-prerequisites-20261002.json",
+        "kaggle-quota-readback-20261002.json",
+        "native-studio-retry-preparation-20261002.json",
+        "native-studio-preview-20261002.json",
+        "native-studio-preview-refresh-incident-20261002.json",
+        "native-studio-preview-recovery-20261002.json",
+        "native-studio-current-preview-20261002.json",
+        "native-studio-publication-first-attempt-20261002.json",
+        "native-studio-publication-recovery-20261002.json",
+        "native-studio-logout-20261002.json",
+        "native-studio-final-controller-retirement-20261002.json",
+        "native-studio-final-cleanup-20261002.json",
+        "FINAL_DELIVERY_2026-10-01.md",
+    ]
+    inputs += [path for name in current_receipt_names
+               if (path := REPO / "docs" / "receipts" / "formation" / name).is_file()]
     inputs += [COURSE / "notebooks" / "instructor" / f"module-{number}.ipynb" for number in [3, 4, 7, 8]]
     private_studio_lock = REPO / ".orbit" / "formation-20261001" / "studio-success-lock.json"
     inputs.append(private_studio_lock)
@@ -682,10 +705,16 @@ Design : lecture claire, code lisible, légendes, clavier, petite largeur et con
     project = dict(project=dict(title="Orbit Formation", subtitle="Construire, vérifier et enseigner avec son assistant personnel", authors=["Jean-Sébastien Beaulieu"], language="fr-CA", courseVersion="orbit-course-1.0.0", edition="Édition pédagogique 1.0 — source de revue", audience=["Learner with personal assistant", "Teacher"], readinessGoal="review-ready", currentReadiness="draft"), sources=[dict(path="MASTER_MANUSCRIPT.md", type="markdown", role="complete maintained French manual", status="composed-source"), dict(path="TEACHER_GUIDE.md", type="markdown", role="derived teacher handout", status="composed-source"), dict(path="ASSISTANT_MISSIONS.md", type="markdown", role="nine personal-assistant missions", status="composed-source"), dict(path="CANVA_BRIEFS.md", type="markdown", role="nine student web-document briefs", status="composed-source"), dict(path="source-map.json", type="json", role="source and qualification inventory", status="composed-source")], outputs=dict(markdown=True, docx=True, pdf=True, latex=True, epub=False, canvaStudentDocuments=9, audio=False), style=dict(profile="technical-manual", bodyFont="DejaVu Sans", headingFont="DejaVu Sans", monoFont="DejaVu Sans Mono", fallbackPolicy="Verify installed fonts during preflight; preserve explicit alternatives in the build report.", pageSize="A4", marginsMm=22, bodySizePt=11, lineSpacing=1.15, bodyColor="#18212B", background="#FFFFFF", accents=dict(cyan="#006C82", violet="#67409D", orange="#A34B00"), cover=dict(tone="technical learning and exploration", metaphor="Orbit and connected learning elements", constraints="No mastery, scientific-validity or contest-win claim; existing Orbit identity preserved.")), hours=dict(teacher=10, solo=30, total=40, perModule=dict(guided=120, colab=30, reflection=30, webinar=60), project=dict(setting=60, solo=360, closure=60)), voiceProfile="voice_profile.json", sourceMap="source-map.json", qualification="QUALIFICATION.md", production=dict(canvaStatus="nine-public-documents-published-and-read-back", docxStatus="not-exported", pdfStatus="not-exported", finalCloudIds="awaiting-new-receipt", publicationAuthorized=False, editorialScope="excluded"))
     project["style"].update(bodyFont="Arial", headingFont="Arial", monoFont="Consolas", fontQualification=dict(status="installed-files-observed; render-pending", observedAt="2026-10-01", system="Windows", bodyFiles=["arial.ttf", "arialbd.ttf", "ariali.ttf", "arialbi.ttf"], monoFiles=["consola.ttf", "consolab.ttf", "consolai.ttf", "consolaz.ttf"], installationPerformed=False, renderingExecuted=False), fallbackPolicy="Resolve tool paths from the inspected private preflight report; fonts are installed-file observations, with legibility and glyph coverage still to examine in rendered outputs.")
     project["sources"] += [dict(path="QUALIFICATION.md", type="markdown", role="current scoped validation and pending gates", status="reported-and-source-inspected"), dict(path="TOOLCHAIN_AND_VERSIONS.md", type="markdown", role="declared versions and recorded toolchain observations", status="recorded-preflight; export-pending")]
-    project["production"].update(sourceCheckpoint="Closure Kaggle: 141 TypeScript tests, Node policy/provenance checks, 14 import/document checks and PHP36 regressions. Free Colab explicit Files-panel selection, examination, acknowledgement and assembly7ae43 observed; official embedded files.upload control remains unqualified. Exact assembly7ae43 static build passes with 46 hashes, nine bricks, eight modules, Node22.20, Astro7.3.3, Three0.181.2 and frozen lock423e4878; no replacement. Earlier assembly1414666 browser35/35 and live formation72/72 remain scoped to their original artifacts. Public Context HTTP9 and foreign-origin public native16 checks pass. Authenticated second Studio read-only session observed; its native calls, writes and logout retain separate pending gates.", finalCloudIds="Closure notebook orbit-v3-closure-regressions receipts linked; V2 immutable354480684; V3 public354484426 observed by coordinator; Markdown presentation correction without a new run; public cross-origin354497668. Historical354436854 actual software run and354438752 archived browser replay retained.", docxStatus="see qa/export-report.json", pdfStatus="see qa/export-report.json", deliveryReady=False, fullMissionComplete=False, graphicsReview="future joint review", nextTutorial="separate later mission")
+    qualification_authority = dict(
+        path="QUALIFICATION.md",
+        sourceMap="source-map.json",
+        scope="Maintained chronology and scoped statuses; each cited receipt retains its own artifact, execution and limitations.",
+        compositionIsValidation=False,
+    )
+    project["production"].update(sourceCheckpoint="See the maintained QUALIFICATION.md embedded in the manuscript. Its current chronology supersedes historical checkpoints; source-map.json identifies the inputs examined during this composition. Receipt presence, accepted mutations, prepared previews and incomplete readbacks must not be promoted to a completed test.", qualificationAuthority=qualification_authority, finalCloudIds="See the exact execution URLs and version identities cited in QUALIFICATION.md and its inventoried public receipts. Historical executions and later narrative publications retain their separate identities.", docxStatus="see qa/export-report.json", pdfStatus="see qa/export-report.json", deliveryReady=False, fullMissionComplete=False, graphicsReview="future joint review", nextTutorial="separate later mission")
     # JSON is a valid YAML subset; this keeps preparation dependency-free.
     write("book_project.yml", json.dumps(project, ensure_ascii=False, indent=2))
-    report = dict(status="DOCUMENT_SOURCES_COMPOSED", softwareExecuted=False, officeExportsExecuted=False, canvaProduced=True, canvaProducedByComposition=False, canvaDeliveryReceipt="CANVA_DELIVERY.json", learnerUnderstandingExamined=False, deliveryReady=False, fullMissionComplete=False, modules=8, projectBriefs=1, teacherSheets=9, assistantMissions=9, inputFiles=len(rows), outputCharacters={name:len(read(PUBLICATION / name)) for name in ["MASTER_MANUSCRIPT.md", "TEACHER_GUIDE.md", "ASSISTANT_MISSIONS.md", "CANVA_BRIEFS.md"]}, pending="Public Context HTTP9 and native cross-origin16 pass; nine Canva public documents read back. Authenticated second Studio native calls, writes and logout remain unvalidated. Actual assembly browser35/35 and authenticated read-only Studio session observed; document exports and visual QA retain their own receipts.")
+    report = dict(status="DOCUMENT_SOURCES_COMPOSED", softwareExecuted=False, officeExportsExecuted=False, canvaProduced=True, canvaProducedByComposition=False, canvaDeliveryReceipt="CANVA_DELIVERY.json", learnerUnderstandingExamined=False, deliveryReady=False, fullMissionComplete=False, modules=8, projectBriefs=1, teacherSheets=9, assistantMissions=9, inputFiles=len(rows), outputCharacters={name:len(read(PUBLICATION / name)) for name in ["MASTER_MANUSCRIPT.md", "TEACHER_GUIDE.md", "ASSISTANT_MISSIONS.md", "CANVA_BRIEFS.md"]}, qualificationAuthority=qualification_authority, pending="Read the current scoped results and remaining gates in QUALIFICATION.md. Composition does not execute course software, establish publication readback, close model campaigns, examine learner understanding or perform document exports and visual QA.")
     write("qa/source-composition.json", json.dumps(report, ensure_ascii=False, indent=2))
     print(json.dumps(report, ensure_ascii=False))
 
