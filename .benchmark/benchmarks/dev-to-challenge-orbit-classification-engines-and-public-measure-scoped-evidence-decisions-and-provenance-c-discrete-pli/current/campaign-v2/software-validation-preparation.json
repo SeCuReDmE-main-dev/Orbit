@@ -1,0 +1,13 @@
+{
+  "format": "orbit-campaign-v2-software-validation-preparation",
+  "state": "prepared-not-run",
+  "notebook": "orbit-campaign-v2-software-validation.ipynb",
+  "sha256": "391f24a23fbc0852c0f7a6fd4958c808281828df6bdb8ed466badb93fc38bed5",
+  "corpusSha256": "c8d7f865ba2c9667f43759a053174e3250150704746141e52fc0dca236190f5a",
+  "harnessSha256": "8f1eba8b70575fc57b7503b7b51d73bc309470f54484c0cc989950c735a41b05",
+  "validationSourceSha256": "7aebf06288448733fd87c0d0444ce9e0880013238eae39d82b4fb8cea0b7f426",
+  "modelCallsExecuted": 0,
+  "softwareTestsExecuted": false,
+  "embeddedGold": false,
+  "embeddedCredentials": false
+}

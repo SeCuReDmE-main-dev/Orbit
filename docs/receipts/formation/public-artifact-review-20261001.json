@@ -46,5 +46,22 @@
     "Pattern inspection cannot establish the absence of every possible encoded secret.",
     "Private operational access, original-source snapshots and private annotation references are not publication inputs.",
     "This is an artifact inspection, not a software test or proof of test-token revocation."
-  ]
+  ],
+  "finalPublicFollowup": {
+    "recordedAt": "2026-10-02T00:27:58.602955+00:00",
+    "candidateFilesInspected": 25,
+    "fileAndArchiveMembersInspected": 25,
+    "patternFindings": [],
+    "softwareTestsExecuted": false,
+    "modelsCalled": false,
+    "independentReadOnlyReview": {
+      "campaignFiles": 19,
+      "nativeStudioClosure": true,
+      "privateRecoveryArchiveOpened": false,
+      "currentAndHistoricalScopeSeparated": true
+    },
+    "selection": "Explicit final allowlist only; aggregate observations, cleanup, immutable identity metadata and historical preparations are public.",
+    "excluded": "Private source-review inventory, internal provenance notes, original/model content, credentials and provisional render directories remain local and ignored.",
+    "filesystemMutation": "Git ignore exclusions only; private and provisional files were not removed, moved or staged."
+  }
 }

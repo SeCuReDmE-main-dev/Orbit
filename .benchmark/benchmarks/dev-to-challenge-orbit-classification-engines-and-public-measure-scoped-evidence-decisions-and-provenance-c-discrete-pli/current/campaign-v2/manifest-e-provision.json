@@ -1,0 +1,210 @@
+{
+  "format": "orbit-kaggle-campaign-v2",
+  "campaignId": "orbit-kaggle-20261001-v2",
+  "state": "E-resource-preparation-only-no-model-execution",
+  "frozen": true,
+  "models": [
+    "google/gemini-3.8-flash",
+    "google/gemini-3.1-pro-preview"
+  ],
+  "sdkVersion": "0.6.1",
+  "repositoryHead": "cdbf48d7e645e8f521d983826ba283f84ce24ca7",
+  "corpusSha256": "c8d7f865ba2c9667f43759a053174e3250150704746141e52fc0dca236190f5a",
+  "goldSha256": "a0fffdf104aa36b3e994c57902ffc7a76f2d1a1fd143cc821ca60a4c88e93b23",
+  "fixturesSha256": "c8e4e0defc1c2c1a11f8aadfab4b3f02f953ea9fcc7540c581786dc6bef14bf2",
+  "engineSourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+  "harnessSha256": "e5bcbb49dfa213c353ca8bd8a677358428178a13377130fa2a58462a43fc37b8",
+  "rulesSha256": "83307572bd6c1e4d7419d1e22c2998d592b8362bd18975d2369c6201bef82d8e",
+  "sourceFiles": {
+    "engine": {
+      "packages/evidence-review/src/classification.ts": "230a5f494e64f86428aa3f26b6cfe6ab0d42c78d47f758419bfe76f7f22019ae",
+      "packages/evidence-review/src/index.ts": "1ef6ca28cf3da9001708d45a64b39c65192523584fd383d3a701010926cfa937",
+      "packages/evidence-review/src/relations.ts": "d5da24352b213c55cede9559e2faa48b3b8451c57a3257b882c77ff82ee495a4",
+      "tools/engine-jsonl.ts": "a07c83552b9c1b6450814819ecf0f9392f698f386e3c10bc06917edb4f7a9b39"
+    },
+    "harness": {
+      "tools/orbit_campaign_checkpoint.py": "1e7f425ad05a9b93a2c51ef6ea7f7ad2e698983cea9787a31d159b7e35a8c993",
+      "tools/kaggle_engine_campaign.py": "437f3d642749a3dc3c5288200be6b05733c11895c3888ff5a8c32f6724d92dcc",
+      "tools/kaggle_context_campaign.py": "6f39177a1747e3e07ccbe3d0352ceb011f5d3c869b2d3c7a0b9d9aabcc346008",
+      "tools/kaggle_webmcp_campaign.py": "26c1eb3ec72acf40cdf04b402cc4ff5ae9baaf9fe088d316ef7347fb41f1ada1",
+      "tools/e2b-webmcp-bridge.ts": "b9f7808ce880f79550a56fd7c94abe6642e6f4154d99db11b7cef2376f6a6298",
+      "tools/webmcp-browser.ts": "96dfc65257aafffc17fa55785d927edb11d1038df9d14732eb34c73d3f8ba23c",
+      "tools/prepare_scoped_corpus_v2.py": "b435efdb25d3540d8bd2d2b5858dc19069a87a7a387a64edfed9073f72f45895",
+      "tools/prepare_kaggle_campaign_v2.py": "502597a6b88ba2237fb7cbd03d88693421cae3e1bad9773a3e52618e13d817d3"
+    }
+  },
+  "releaseId": "orbit-v3-closure-20261001T180900Z",
+  "releaseManifestSha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e",
+  "browserMajor": null,
+  "reasoningSetting": "medium",
+  "maxOutputTokens": 4096,
+  "maxSdkToolRounds": 22,
+  "maxNativeCalls": 20,
+  "maxDurationSeconds": 480,
+  "maxHoldRequests": 2,
+  "maxTransientAttempts": 2,
+  "maxWorkers": 8,
+  "quotaChecked": true,
+  "modelsChecked": true,
+  "quotaPolicy": {
+    "newLongLotsStopConsumedPercent": 85,
+    "hardStopConsumedPercent": 89,
+    "paidTopupAllowed": false,
+    "automaticModelReplacement": false,
+    "maxSnapshotAgeSeconds": 3600,
+    "unknownResetPolicy": "preserve-null-refresh-observation-api-refusal-stops",
+    "unknownPricingStrategy": "serial-provider-free-quota"
+  },
+  "preflightObservation": {
+    "observedAt": "2026-10-01T17:53:00Z",
+    "timestampPrecision": "minute",
+    "source": "Kaggle Benchmark Task observed by coordinator",
+    "sdkVersion": "0.6.1",
+    "modelsAvailable": [
+      "google/gemini-3.8-flash",
+      "google/gemini-3.1-pro-preview"
+    ],
+    "modelCalls": 0,
+    "nativeToolAgentParameters": [
+      "llm",
+      "tools",
+      "schema",
+      "max_tool_rounds",
+      "respond_kwargs"
+    ],
+    "quotaResetTimes": "unavailable",
+    "lotCostReserve": "not-yet-established",
+    "latestCatalogueProbe": {
+      "observedAt": "2026-10-01T18:56:35Z",
+      "source": "Kaggle Benchmark Task observed by coordinator",
+      "sdkVersion": "0.6.1",
+      "modelsAvailable": [
+        "google/gemini-3.8-flash",
+        "google/gemini-3.1-pro-preview"
+      ],
+      "modelObjectType": "OpenAI",
+      "publicPricingFieldsAvailable": false,
+      "modelCalls": 0
+    }
+  },
+  "quotaSnapshot": [
+    {
+      "name": "daily",
+      "limitNanodollars": 10000000000,
+      "usedNanodollars": 0,
+      "observedAtUnix": 1790882918,
+      "resetsAtUnix": null
+    },
+    {
+      "name": "monthly",
+      "limitNanodollars": 100000000000,
+      "usedNanodollars": 9760000000,
+      "observedAtUnix": 1790882918,
+      "resetsAtUnix": null
+    }
+  ],
+  "maxLotReserveNanodollars": null,
+  "targets": {
+    "C": {
+      "extractions": 60,
+      "comparativeProductions": 240
+    },
+    "D": {
+      "trajectories": 24
+    },
+    "E": {
+      "trajectories": 144
+    }
+  },
+  "inputCorpusDir": "/kaggle/input/datasets/celebrum/orbit-kaggle-v2-private-inputs",
+  "inputReferenceDir": "/kaggle/input/datasets/celebrum/orbit-kaggle-v2-private-inputs",
+  "workerSecretName": "ORBIT_WORKER_POOL_JSON",
+  "resumeDatasetDir": null,
+  "resumeArchives": {},
+  "contextCases": {
+    "provider": {
+      "packet": 7,
+      "paths": [],
+      "responseDigests": {},
+      "parityReviewed": false
+    },
+    "sanity": {
+      "packet": 8,
+      "paths": [],
+      "responseDigests": {},
+      "parityReviewed": false
+    }
+  },
+  "referenceStatus": {
+    "syntheticQuestions": 36,
+    "humanReviewedRealQuestions": 0,
+    "realQuestionsPendingHuman": 24
+  },
+  "publicRelease": false,
+  "modelCallsExecuted": 0,
+  "softwareTestsExecuted": false,
+  "limits": [
+    "Historical v1 is preserved and not pooled with v2.",
+    "Real sources and labels remain subject to independent review.",
+    "Private datasets are not a license to redistribute their text."
+  ],
+  "corpusSelectionSha256": "205a0f669f564dae6ee23d78d3184f643754b284164cfd83b1ff7c4b0e7ee8f0",
+  "originalAccessSha256": "6f43c123818205a0e9cbe55f7ccd1a3b6bbeaafdb048802c78284296b735cb00",
+  "corpusFilesSha256": "3289b087b12130b884fedaef6e5b0f33c1988df3d3b504be77c6001de60363c8",
+  "corpusViewPolicy": {
+    "maxDocumentCharacters": 12000,
+    "maxPacketCharacters": 144000,
+    "selection": "question-windows-inspected-prose-introduction",
+    "sourceText": "frozen-snapshot-only",
+    "humanSemanticReview": "pending"
+  },
+  "pricingObservation": null,
+  "lotReserveScope": "one-model-prompt-C-or-one-agent-trajectory-D-E",
+  "executableSuites": [],
+  "configurationIncidents": [
+    {
+      "observed": "FileNotFoundError in first real Kaggle setup",
+      "correction": "Use actual Copy dataset path",
+      "modelCalls": 0
+    }
+  ],
+  "frozenAt": "2026-10-01T19:28:38Z",
+  "softwareValidationGate": {
+    "source": "actual Kaggle output observed by coordinator",
+    "observedAt": "2026-10-01T19:25:00Z",
+    "timestampPrecision": "minute-approximate",
+    "harnessTests": 13,
+    "failures": 0,
+    "errors": 0,
+    "questions": 60,
+    "engineEvaluations": 180,
+    "syntheticScored": 108,
+    "syntheticCorrect": 108,
+    "realUnscored": 72,
+    "invariants": 540,
+    "invariantsPassed": 540,
+    "engineSourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+    "harnessSha256": "de5b0522e4643b4764e65afdd978d09081ca254f3816e6f047e9a2ba24bfa1b0",
+    "sharedEngineSha256": "8c0a-prefix-reported; full digest in actual output",
+    "evidenceArchiveSha256": "8a224aa64e4b209fb60b98999b67791d25ce235fd2f689b64bd34ea74abfdd55",
+    "modelCalls": 0
+  },
+  "quotaObservation": {
+    "source": "Kaggle UI Refresh Quota observed by coordinator",
+    "observedAt": "2026-10-01T19:28:38Z",
+    "priceFields": "unavailable",
+    "resetTimes": "unavailable"
+  },
+  "browserNativePreflight": {
+    "state": "pending-real-Linux-WebMCP-probe",
+    "actualTools": null,
+    "actualBrowserMajor": null
+  },
+  "releaseObservation": {
+    "source": "docs/receipts/formation/closure-static-live-transport.json",
+    "recordedAt": "2026-10-01T19:07:52.218257+00:00",
+    "allReadBytesMatchPackage": true,
+    "releaseId": "orbit-v3-closure-20261001T180900Z",
+    "manifestSha256": "17449e33e9bb943c2c7c304a322b07e57d48d6c06a0430c7aec5feaebeadaf8e"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "format": "orbit-c-private-backup-and-analysis-receipt-v1",
+  "recordedAt": "2026-10-01T23:54:03.521Z",
+  "observations": "Actual Kaggle persisted observations; no model generation during recovery or analysis",
+  "campaignId": "orbit-kaggle-20261001-v2-sdkparams2",
+  "configurationSha256": "0d433497a1e6fa7810c68a51709e821d204f3241707e39850e45b2ce6283ad85",
+  "execution": {
+    "plannedExtractions": 60,
+    "observedExtractions": 57,
+    "plannedProductions": 240,
+    "observedProductions": 221,
+    "completedPackets": 55,
+    "currentStates": {
+      "completed": 554,
+      "blocked-quota": 1,
+      "technical-error": 1
+    },
+    "complete": false
+  },
+  "privateBackup": {
+    "origin": "Kaggle private cloud notebook",
+    "destination": "Private workstation backup excluded from Git",
+    "sha256": "c5e88b5321b716b8070f0e5604138223d0fb5b9937b73317dcca144e415a1ebc",
+    "bytes": 1703726,
+    "jsonFiles": 1154,
+    "verifiedByteForByte": true,
+    "publicRedistribution": false,
+    "includesRealModelText": true
+  },
+  "publicAnalysis": {
+    "path": "c-sdkparams2-independent-analysis.json",
+    "sha256": "f9dc51d3f32e71b7378281376ca64dfbfc21803ca75364944a7f4bff0d3ad6d3",
+    "bytes": 24394,
+    "modelCalls": 0,
+    "scoredQuestions": 36,
+    "unscoredRealQuestions": 24,
+    "rawSourceTextIncluded": false,
+    "rawModelAnswersIncluded": false
+  },
+  "privacy": {
+    "notebookVisibility": "Private checked in Share UI",
+    "publicSaveVersionPerformed": false,
+    "temporaryExportCellReplaced": true,
+    "temporaryExportDomElementsRemaining": 0
+  },
+  "stop": {
+    "cause": "local conservative 85 percent quota threshold",
+    "providerQuotaRefusalObserved": false,
+    "observedDailyUsedDollars": 8.53,
+    "observedDailyLimitDollars": 10,
+    "observedMonthlyUsedDollars": 18.29,
+    "observedMonthlyLimitDollars": 100,
+    "resetAt": null
+  },
+  "limits": [
+    "C remains 57/60 extractions, 221/240 productions, 55/60 completed packet comparisons.",
+    "Historical SDK attempts remain separate; no recomputation or synthetic completion.",
+    "Heavy-load 429 was terminal under the old frozen runner; future correction separately qualified.",
+    "No engine winner, real-source semantic truth or complete cost is certified."
+  ]
+}

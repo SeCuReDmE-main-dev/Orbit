@@ -1,0 +1,70 @@
+{
+  "format": "orbit-e-owned-pool-retirement-v1",
+  "host": "Kaggle",
+  "observedAt": "2026-10-01T23:45:59.882176+00:00",
+  "campaign": "orbit-kaggle-20261001-v2",
+  "generation": "34d2e884-037a-4c9e-930d-3797d2b0151d",
+  "workers": [
+    {
+      "sandboxId": "i8sh1gfevskgr9ppgr7gl",
+      "retirementHttpStatus": 200,
+      "missionRefusalHttpStatus": 401,
+      "controlRefusalHttpStatus": 401,
+      "revocationVerified": true
+    },
+    {
+      "sandboxId": "iniu5r4l120jjjxo5f5h5",
+      "retirementHttpStatus": 200,
+      "missionRefusalHttpStatus": 401,
+      "controlRefusalHttpStatus": 401,
+      "revocationVerified": true
+    },
+    {
+      "sandboxId": "i3n5d66f5plwh31gcbro0",
+      "retirementHttpStatus": 200,
+      "missionRefusalHttpStatus": 401,
+      "controlRefusalHttpStatus": 401,
+      "revocationVerified": true
+    },
+    {
+      "sandboxId": "i1c409bo7403aj8d1x3zp",
+      "retirementHttpStatus": 200,
+      "missionRefusalHttpStatus": 401,
+      "controlRefusalHttpStatus": 401,
+      "revocationVerified": true
+    },
+    {
+      "sandboxId": "izif56yjx9nabv7wa2kln",
+      "retirementHttpStatus": 200,
+      "missionRefusalHttpStatus": 401,
+      "controlRefusalHttpStatus": 401,
+      "revocationVerified": true
+    },
+    {
+      "sandboxId": "izddz8dg0nu1rnppnf0q9",
+      "retirementHttpStatus": 200,
+      "missionRefusalHttpStatus": 401,
+      "controlRefusalHttpStatus": 401,
+      "revocationVerified": true
+    },
+    {
+      "sandboxId": "ihxft8fhomadss5x4bfsp",
+      "retirementHttpStatus": 200,
+      "missionRefusalHttpStatus": 401,
+      "controlRefusalHttpStatus": 401,
+      "revocationVerified": true
+    },
+    {
+      "sandboxId": "imyca39vy55d7f6i9c5uv",
+      "retirementHttpStatus": 200,
+      "missionRefusalHttpStatus": 401,
+      "controlRefusalHttpStatus": 401,
+      "revocationVerified": true
+    }
+  ],
+  "allEightMissionAndControlRefusalsVerified": true,
+  "modelCalls": 0,
+  "suiteEObservedTrajectories": 0,
+  "accountE2BCredentialRevoked": false,
+  "kaggleSecretDeleted": false
+}

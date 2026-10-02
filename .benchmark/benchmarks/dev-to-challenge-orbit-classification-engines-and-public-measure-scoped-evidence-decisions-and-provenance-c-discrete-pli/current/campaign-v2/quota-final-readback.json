@@ -1,0 +1,20 @@
+{
+  "format": "orbit-kaggle-quota-ui-readback-v1",
+  "observedAt": "2026-10-02T00:11:25.470Z",
+  "source": "Kaggle notebook UI after one explicit Refresh Quota action",
+  "daily": {"usedDollars": 8.53, "limitDollars": 10.0},
+  "monthly": {"usedDollars": 18.29, "limitDollars": 100.0},
+  "renewalObserved": false,
+  "resetAt": null,
+  "captureSha256": "4f8b8af52d01f06dcb4af9ddd558962e13b7b9b3d955eb407f7692262ea6f5a4",
+  "captureRedistributed": false,
+  "modelsCalled": false,
+  "workerPoolCreated": false,
+  "providerQuotaRefusalObserved": false,
+  "stopPolicy": "Previously frozen local conservative 85 percent threshold; not a provider quota-exhaustion refusal",
+  "limits": [
+    "A midnight UTC boundary is not evidence that a quota window renewed.",
+    "This readback does not establish prices or an upper cost bound for another lot.",
+    "No frozen experimental identity or operational quota configuration was changed."
+  ]
+}

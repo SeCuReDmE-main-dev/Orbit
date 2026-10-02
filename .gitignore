@@ -22,3 +22,11 @@ docs/learning/orbit-atom-guide-2026-09-30/voice-extraction.log
 docs/learning/orbit-atom-guide-2026-09-30/drive-delivery.json
 docs/learning/orbit-atom-guide-2026-09-30/build_guide.py
 docs/delivery-2026-09-30/landing-2.1.6-cloture.md
+# Private review provenance and unlicensed source selections are not publication inputs.
+/.benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/context-parity-preparation.json
+/.benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/real-source-review-inventory.json
+/.benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/real-source-review-notes.md
+# Preserve earlier document renders locally; only the reviewed final render is distributed.
+/docs/learning/orbit-formation/publication/qa/render/book-0964415d6b37/
+/docs/learning/orbit-formation/publication/qa/render/book-86954d85a2af/
+/docs/learning/orbit-formation/publication/qa/render/book-d6a448899270/

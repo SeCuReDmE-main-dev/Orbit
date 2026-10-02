@@ -1,0 +1,20 @@
+{
+  "source": "actual Kaggle output observed by coordinator",
+  "observedAt": "2026-10-01T19:25:00Z",
+  "timestampPrecision": "minute-approximate",
+  "harnessTests": 13,
+  "failures": 0,
+  "errors": 0,
+  "questions": 60,
+  "engineEvaluations": 180,
+  "syntheticScored": 108,
+  "syntheticCorrect": 108,
+  "realUnscored": 72,
+  "invariants": 540,
+  "invariantsPassed": 540,
+  "engineSourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+  "harnessSha256": "de5b0522e4643b4764e65afdd978d09081ca254f3816e6f047e9a2ba24bfa1b0",
+  "sharedEngineSha256": "8c0a-prefix-reported; full digest in actual output",
+  "evidenceArchiveSha256": "8a224aa64e4b209fb60b98999b67791d25ce235fd2f689b64bd34ea74abfdd55",
+  "modelCalls": 0
+}

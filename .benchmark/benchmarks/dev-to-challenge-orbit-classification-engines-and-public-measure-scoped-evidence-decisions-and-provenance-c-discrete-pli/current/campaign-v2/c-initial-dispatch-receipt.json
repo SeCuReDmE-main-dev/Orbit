@@ -1,0 +1,26 @@
+{
+  "format": "orbit-c-initial-sdkparams1-dispatch-receipt",
+  "source": "actual Kaggle notebook UI execution",
+  "observedAt": "2026-10-01T21:27:00Z",
+  "timestampPrecision": "minute-approximate",
+  "campaignId": "orbit-kaggle-20261001-v2-sdkparams1",
+  "configurationSha256": "6e7ba4200717e1ab33c60a4ce98a6cd5aacc9f3657b9723edab308de4af91a34",
+  "completedExtractions": 1,
+  "completedComparativeProductions": 0,
+  "predeterminedParameters": {
+    "model": "google/gemini-3.1-pro-preview",
+    "packet": 1,
+    "repetition": 0
+  },
+  "uiQuota": {
+    "dailyUsedDollars": 0.03,
+    "dailyLimitDollars": 10,
+    "monthlyUsedDollars": 9.79,
+    "monthlyLimitDollars": 100,
+    "resetTimes": "unavailable"
+  },
+  "outputSha256": "a703f3656c96e528f135f2e08833b40f794a756a51968f74168355e711fe479d",
+  "historicalTechnicalErrorRetained": true,
+  "completeCampaign": false,
+  "modelsUsedElsewhere": false
+}

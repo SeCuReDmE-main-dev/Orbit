@@ -1,0 +1,44 @@
+{
+  "schema": "orbit.closure-runtime-cleanup.v1",
+  "recordedAt": "2026-10-02T00:25:58.888787+00:00",
+  "scope": "Only Orbit C and E interactive notebook sessions after backup and public receipt recovery",
+  "kaggle": {
+    "uiObserved": true,
+    "sessions": [
+      {
+        "title": "Orbit V3 — engines campaign v2",
+        "state": "Cancelled"
+      },
+      {
+        "title": "Orbit v3 WebMCP campaign E v2",
+        "state": "Cancelled"
+      }
+    ],
+    "activeEvents": 0,
+    "notebooksDeleted": false,
+    "publicSaveVersionPerformed": false,
+    "captureSha256": "88604eff9598b3536610b445789993bf0cf2cd829025d55c17b7269308ffe67f",
+    "captureRedistributed": false
+  },
+  "e2b": {
+    "officialSdkInventoryObserved": true,
+    "active": 0,
+    "ownedAuthenticationSandboxes": 0,
+    "command": "python tools/provision_studio_desktop.py list",
+    "exitCode": 0,
+    "primaryAccountCredentialChanged": false
+  },
+  "related": {
+    "nativeStudio": "native-studio-authentication-closure.json",
+    "pool": "../../../.benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/e-owned-pool-cleanup-receipt.json",
+    "backup": "../../../.benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/c-sdkparams2-backup-analysis-receipt.json"
+  },
+  "modelsCalled": false,
+  "softwareTestsExecuted": false,
+  "fullMissionComplete": false,
+  "limits": [
+    "Cancelled sessions and zero active resources do not complete missing model or authenticated Studio runs.",
+    "The native Studio stored secret remains present with notebook access disabled; no unobserved HTTP401 is claimed.",
+    "Private recovered original/model content is retained and excluded from Git."
+  ]
+}

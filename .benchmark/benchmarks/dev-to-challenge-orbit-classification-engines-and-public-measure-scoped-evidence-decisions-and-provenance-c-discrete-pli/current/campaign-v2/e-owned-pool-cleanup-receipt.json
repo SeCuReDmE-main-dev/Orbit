@@ -1,0 +1,35 @@
+{
+  "format": "orbit-owned-pool-cleanup-v1",
+  "campaign": "orbit-kaggle-20261001-v2",
+  "generation": "34d2e884-037a-4c9e-930d-3797d2b0151d",
+  "observedAt": "2026-10-01T23:46:52.798040+00:00",
+  "transport": "Official E2B SDK; exact ledger/campaign/generation ownership",
+  "activeBefore": 9,
+  "ownedBefore": 9,
+  "ownedAfter": 0,
+  "state": "closed",
+  "ownedGenerationConfirmedAbsent": true,
+  "localMissionCredentialFilesRemoved": true,
+  "accountE2BCredentialRevoked": false,
+  "kaggleSecret": {
+    "name": "ORBIT_WORKER_POOL_JSON",
+    "notebookAccess": false,
+    "valueDeleted": true,
+    "deletionObservedAt": "2026-10-02T00:01:07.187Z",
+    "confirmation": "Specific human confirmation received at action time",
+    "readbackNamedRows": 0,
+    "otherFiveCrossOriginLabelsUnchanged": true
+  },
+  "desktopSecret": {
+    "name": "ORBIT_NATIVE_STUDIO_BRIDGE_CONFIG",
+    "initialDisplayedList": "Not shown while pool occupied the sixth displayed row; not exhaustive account absence",
+    "laterReadbackPresent": true,
+    "laterReadbackObservedAt": "2026-10-02T00:01:07.187Z",
+    "notebookAccess": false,
+    "valueDeleted": false,
+    "accountDeletionClaim": false
+  },
+  "priorCloudRetirementReceipt": "e-owned-pool-retirement-receipt.json",
+  "modelCalls": 0,
+  "executedSuiteETrajectories": 0
+}

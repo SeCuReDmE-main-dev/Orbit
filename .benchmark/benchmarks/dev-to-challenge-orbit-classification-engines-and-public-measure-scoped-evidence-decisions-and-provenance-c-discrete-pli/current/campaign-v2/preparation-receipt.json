@@ -1,0 +1,36 @@
+{
+  "format": "orbit-kaggle-v2-preparation",
+  "campaignId": "orbit-kaggle-20261001-v2-nativebounds1",
+  "modelCallsExecuted": 0,
+  "softwareTestsExecuted": false,
+  "notebooks": [
+    {
+      "suite": "E",
+      "notebook": "orbit-suite-e-v2.ipynb",
+      "sha256": "e3e84c31d706df447dcb4ddd2cbeefd451c140dd5018b55db8a4c19b5fcc3859",
+      "state": "prepared-not-run",
+      "executable": false,
+      "embeddedGold": false,
+      "embeddedCredentials": false,
+      "embeddedOriginalCorpus": false
+    }
+  ],
+  "privateDatasetArchive": {
+    "file": "orbit-kaggle-v2-private-inputs.zip",
+    "sha256": "e0f1cd1cbe9bc7d36584a8cc6269cdd8aaf6235516f600529ee355a2ffdde632",
+    "fileCount": 91,
+    "files": [
+      "public-input.json",
+      "private-gold.json",
+      "deterministic-fixtures.json",
+      "selection-manifest.json",
+      "private-original-access.json",
+      "corpus-files.json"
+    ],
+    "privateOriginals": 48,
+    "visibilityRequired": "private",
+    "answerKeyIncluded": true,
+    "credentialsIncluded": false,
+    "sourceTextRights": "not-cleared-for-public-redistribution"
+  }
+}

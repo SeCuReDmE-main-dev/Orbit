@@ -58,8 +58,11 @@
   "kaggleMissionSecret": {
     "deletionExecuted": false,
     "deletionConfirmed": false,
-    "state": "NOT_REMOVED_OR_NOT_CONFIRMED",
-    "secretValueIncluded": false
+    "state": "PRESENT_WITH_NOTEBOOK_ACCESS_DISABLED",
+    "secretValueIncluded": false,
+    "presentInSecretsManager": true,
+    "notebookAccess": false,
+    "followupReceipt": "../../../.benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/e-owned-pool-cleanup-receipt.json"
   },
   "authenticationValidation": {
     "nativeHumanLogin": "ATTEMPTED_NOT_AUTHENTICATED",
@@ -91,12 +94,37 @@
     "To resume, provision a fresh owned authentication desktop and repeat explicit native human login.",
     "Authenticated publication, read-only rejection and logout remain unexecuted.",
     "The dedicated mission token has no observed HTTP401 refusal.",
-    "Kaggle mission-secret removal remains unconfirmed; no deletion disclaimer is warranted."
+    "The dedicated native Studio secret remains stored privately in Kaggle with notebook access disabled; no deletion or backend HTTP401 disclaimer is warranted."
   ],
   "limits": [
-    "Nine active sandboxes is an account inventory count, not zero active E2B resources.",
+    "The nine active sandboxes recorded at 23:23 UTC were a historical account inventory count, before the separate pool cleanup; followupReceipt records that generation's later cleanup.",
     "Zero owned authentication sandboxes does not establish a coordinator kill or expiration cause.",
     "Temporary CORS removal does not prove token revocation or authenticated Studio behavior.",
     "No learner data, private journal, secret, human approval or comprehension is represented by this receipt."
-  ]
+  ],
+  "laterOfficialSdkInventory": {
+    "recordedAt": "2026-10-02T00:17:20Z",
+    "command": "python tools/provision_studio_desktop.py list",
+    "observedBy": "Coordinator",
+    "exitCode": 0,
+    "activeSandboxes": 0,
+    "ownedAuthenticationSandboxes": 0,
+    "coordinatorKillOfAuthenticationDesktopClaimed": false,
+    "backendTokenRefusalClaimed": false
+  },
+  "localAccessCleanup": {
+    "schema": "orbit.native-studio-local-access-removal.v1",
+    "removedAt": "2026-10-02T00:04:00.336734+00:00",
+    "resource": "i3svpb1bpfrzqnvrpsyv8",
+    "sdkInventoryConfirmedInactive": true,
+    "scope": "Two generated test-access files only",
+    "primaryAccountKeyDeleted": false,
+    "humanIdentityCredentialsRemovedOrExported": false,
+    "backendHttp401Observed": false,
+    "absenceVerified": true,
+    "fileNames": [
+      "studio-desktop-access.private.json",
+      "studio-desktop-kaggle-secret.private.json"
+    ]
+  }
 }
