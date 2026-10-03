@@ -6,13 +6,14 @@ This is a working register, not a full-mission completion receipt. Starting repo
 |---|---|---|
 | Guide V3, five entrances and formation in FR/EN/ES | Built in Kaggle and deployed | [Software and build receipt](studio-software-qa-20261003.json), [public HTTP readback](final-public-readback-20261003.json). Release `orbit-v3-final-20261003T142300Z`; native interaction replay remains separate |
 | Studio exact publication identity, response verification, replay and stale response handling | Targeted checks passed in Kaggle | 36 publication/registry/transport checks, 8 packaging checks and targeted TypeScript check on the identified source snapshot |
-| Exact Studio archive and second-host build | Static builds passed in Kaggle | Corrected 202-file bundle; portable version 1.0.1 and exact-archive host. Native authenticated runtime remains separate |
+| Exact Studio archive and second-host build | Static builds passed in Kaggle | Corrected 202-file bundle; portable version 1.0.1 and exact-archive host. Owner login for a fresh authenticated native run remains pending; the new bytes are not yet natively qualified |
 | Campaign C historical identity plus separate complement | Production coverage reaches 240 across two identities | [C resumption](c-resumption-20261003.json): 60 extractions, 236 productions, 59 packets; [C4](c4-complement-20261003.json): four productions, one packet, zero new extractions. Both downloaded archives verified; original overload preserved |
 | Campaign D | Provider lot 12/12 executed, full mission 12/24 | [Execution audit](d-provider-20261003.json): nine trajectories met the reading criterion; three Pro Context-condition outputs did not read Context. Same twelve originals in both conditions. Sanity lot and semantic arbitration remain incomplete |
-| Campaign E | New generation resources being prepared; 0/144 model trajectories | Resource preparation does not qualify native workers or model trajectories; fresh native preflight remains required |
+| Campaign E | Kaggle qualification `FAIL`: 7/8 native workers passed; 0/144 model trajectories | [First qualification receipt](e-qualification-attempt-1-20261003.json): preparation 6/6, SDK 4/4, callback 6/6 and native-start 6/6 passed. Worker 7 failed the release-fingerprint gate; model dispatch did not start |
+| E generation cleanup | Sixteen mission/control accesses retired; nine owned VMs stopped | [Cleanup receipt](e-cleanup-20261003.json): refusals verified, generation confirmed absent and local credential files removed. The separate Studio and primary account key were preserved. The revoked Kaggle secret is detached but remains stored |
 | Path One article | Complete EN and FR drafts; review ongoing | `docs/submission/orbit-v3-path-one/`; exact six official headings, two reserved editorial angles |
 | Explanatory video | Author reports production in progress | Approximately four minutes about the tool, produced with NotebookLM; link not yet supplied |
-| Deployment and public Git push | Release deployed; Git push remains separate | [Deployment receipt](final-static-deploy-20261003.json) and [public HTTP readback](final-public-readback-20261003.json) identify the release and separate research/course outlines. No new Git commit or push is inferred from deployment |
+| Deployment and public Git push | Release deployed; code, guide, articles and receipts pushed in `ad3587b` | [Public source commit](https://github.com/SeCuReDmE-main-dev/Orbit/commit/ad3587b42ff39cbdf243ecbd497d702f7483116e), [deployment receipt](final-static-deploy-20261003.json) and [public HTTP readback](final-public-readback-20261003.json). The later E attempt and cleanup are preserved in the follow-up evidence commit |
 
 ## Observed C startup incidents
 
@@ -39,6 +40,10 @@ The second run, `orbit-v3-studio-final-2ccfa1632c14-1791036029220880567`, preser
 C4 initially stopped before model dispatch because its fresh image had loaded Protobuf 5.29.5 while the SDK's generated code required 5.29.6. Its preparation now pins `kaggle-benchmarks==0.6.1` and `protobuf==5.29.6`, and requires a session restart when an older runtime is already loaded. No Protobuf compatibility check was disabled.
 
 C4 and D then reported an empty model registry in standard notebook mode. The native Kaggle setting `File → Set as Benchmark Task` was enabled before rerunning preflight. An empty registry from that mode is not evidence that the pinned models were withdrawn. No model call occurred during these rejected preflights.
+
+## E qualification and access diagnosis
+
+The first Kaggle qualification of the new E generation passed seven native workers and failed worker 7 at the release-fingerprint gate. A separate read-only request from that isolated worker observed HTTP 403 from Imunify360. The earlier mismatched native response body was not captured, so the public probe does not establish its exact cause. No E model trajectory was dispatched. The [attempt receipt](e-qualification-attempt-1-20261003.json) preserves both observations; the [cleanup receipt](e-cleanup-20261003.json) closes only this generation, leaving the separate Studio session intact. At this handoff, the coordinator observed the Kaggle E, D, C4 and software-QA runtimes off; the separate Studio is the only remaining VM of this closure pass and awaits the owner's native login.
 
 ## Validation boundaries
 

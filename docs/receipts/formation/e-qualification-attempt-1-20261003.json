@@ -1,0 +1,239 @@
+{
+  "format": "orbit-final-e-qualification-receipt-v1",
+  "state": "FAIL",
+  "host": "Kaggle",
+  "modelCalls": 0,
+  "releaseId": "orbit-v3-final-20261003T142300Z",
+  "observedAtUnix": 1791039951.46895,
+  "campaignId": "orbit-kaggle-20261003-final-e1",
+  "configurationSha256": "de888e9bdf56617a17e4805fceb96cfbf4831e86cc4eac75cbcfa4be270f0d0e",
+  "workerGeneration": "c65d6a0c-2d7f-48fb-9606-51790fa0726f",
+  "sourceReceiptSha256": "dca378e262db73dabd7653bed0c7e0d84b9ec6c663f9c4f1ceadc558a9a83285",
+  "preparation": {
+    "format": "orbit-final-e-preparation-qualification-v1",
+    "host": "Kaggle",
+    "modelCalls": 0,
+    "state": "PASS",
+    "testsRun": 6,
+    "failures": 0,
+    "errors": 0,
+    "output": "test_actual_catalogue_and_quota_remain_bounded (__main__.run_preparation_validation.<locals>.PreparationGuards.test_actual_catalogue_and_quota_remain_bounded) ... ok\ntest_new_files_cannot_overwrite_history_or_escape_versioned_directory (__main__.run_preparation_validation.<locals>.PreparationGuards.test_new_files_cannot_overwrite_history_or_escape_versioned_directory) ... ok\ntest_new_pool_requires_exact_identity_and_all_running_resources (__main__.run_preparation_validation.<locals>.PreparationGuards.test_new_pool_requires_exact_identity_and_all_running_resources) ... ok\ntest_qualification_requires_every_unique_worker_and_actual_snapshot (__main__.run_preparation_validation.<locals>.PreparationGuards.test_qualification_requires_every_unique_worker_and_actual_snapshot) ... ok\ntest_recorded_retirement_is_not_live_inventory_or_token_access (__main__.run_preparation_validation.<locals>.PreparationGuards.test_recorded_retirement_is_not_live_inventory_or_token_access) ... ok\ntest_stale_partial_and_exhausted_quota_refuse_dispatch (__main__.run_preparation_validation.<locals>.PreparationGuards.test_stale_partial_and_exhausted_quota_refuse_dispatch) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.014s\n\nOK\n",
+    "limitations": [
+      "Synthetic resource ledgers do not prove live E2B inventory or token revocation.",
+      "Catalogue and quota values in these tests are fixtures; dispatch needs fresh observations."
+    ]
+  },
+  "parallel": {
+    "format": "orbit-e-sdk-parallel-qualification-v1",
+    "host": "Kaggle",
+    "modelCalls": 0,
+    "state": "PASS",
+    "testsRun": 4,
+    "failures": 0,
+    "errors": 0,
+    "output": "test_actual_sdk_threads_keep_actor_parameter_chat_and_slot_isolated (__main__.run_parallel_validation.<locals>.ParallelBoundaries.test_actual_sdk_threads_keep_actor_parameter_chat_and_slot_isolated) ... ok\ntest_bounded_parallel_free_quota_accepts_unknown_prices_but_stops_on_consumption (__main__.run_parallel_validation.<locals>.ParallelBoundaries.test_bounded_parallel_free_quota_accepts_unknown_prices_but_stops_on_consumption) ... ok\ntest_e_namespace_cannot_relabel_a_c_result (__main__.run_parallel_validation.<locals>.ParallelBoundaries.test_e_namespace_cannot_relabel_a_c_result) ... ok\ntest_final_namespaces_budget_and_model_dispatch_gates (__main__.run_parallel_validation.<locals>.ParallelBoundaries.test_final_namespaces_budget_and_model_dispatch_gates) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.149s\n\nOK\n",
+    "sdkVersion": "0.6.1",
+    "nJobsQualified": 8,
+    "browserConcurrencyQualified": false,
+    "limitations": [
+      "No provider request was sent.",
+      "Synthetic slot locks do not prove browser behavior.",
+      "Unknown price and reset values remain unknown; real free-provider refusal stops dispatch."
+    ]
+  },
+  "boundary": {
+    "schemaVersion": "orbit-webmcp-campaign-boundary-qa-v1",
+    "state": "PASS",
+    "host": "Kaggle",
+    "callback": {
+      "state": "PASS",
+      "scope": "actual callback with synthetic transport spy; not native-tool proof",
+      "testsRun": 6,
+      "failures": 0,
+      "errors": 0,
+      "output": "test_discovery_and_invalid_calls_share_one_twenty_attempt_budget (__main__.callback_checks.<locals>.CallbackBoundaries.test_discovery_and_invalid_calls_share_one_twenty_attempt_budget) ... ok\ntest_discovery_only_is_bounded_before_transport (__main__.callback_checks.<locals>.CallbackBoundaries.test_discovery_only_is_bounded_before_transport) ... ok\ntest_invalid_arguments_do_not_consume_a_dispatched_hold_request (__main__.callback_checks.<locals>.CallbackBoundaries.test_invalid_arguments_do_not_consume_a_dispatched_hold_request) ... ok\ntest_read_only_role_still_cannot_deposit (__main__.callback_checks.<locals>.CallbackBoundaries.test_read_only_role_still_cannot_deposit) ... ok\ntest_third_hold_request_is_traced_without_transport_dispatch (__main__.callback_checks.<locals>.CallbackBoundaries.test_third_hold_request_is_traced_without_transport_dispatch) ... ok\ntest_total_native_dispatch_budget_is_preserved (__main__.callback_checks.<locals>.CallbackBoundaries.test_total_native_dispatch_budget_is_preserved) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.096s\n\nOK\n",
+      "campaignSourceSha256": "965a703052dd9c9360e03ea6ca6d4c9a78c6ad934e7b3be18cc5b9e7d53fdfae",
+      "campaignSourceByteScope": "UTF-8 encoding of the supplied source text"
+    },
+    "nativeStart": {
+      "state": "PASS",
+      "checks": [
+        {
+          "name": "correct-release-native-start",
+          "passed": true,
+          "observation": {
+            "native": true,
+            "registeredToolCount": 15,
+            "exposedToolCount": 10,
+            "releaseId": "orbit-v3-final-20261003T142300Z",
+            "releaseSha256": "2cf43064c166c8b7744f359faa43af95ea5b39451eecd7c177d0ac71007b958a"
+          }
+        },
+        {
+          "name": "wrong-fingerprint-start-refused",
+          "passed": true,
+          "observation": {
+            "httpStatus": 422,
+            "error": "PUBLIC_RELEASE_FINGERPRINT_MISMATCH"
+          }
+        },
+        {
+          "name": "rejected-start-cannot-discover-old-registry",
+          "passed": true,
+          "observation": {
+            "httpStatus": 410,
+            "error": "MISSION_EXPIRED"
+          }
+        },
+        {
+          "name": "rejected-start-cannot-invoke-old-tool",
+          "passed": true,
+          "observation": {
+            "httpStatus": 410,
+            "error": "MISSION_EXPIRED"
+          }
+        },
+        {
+          "name": "correct-start-recovers-after-refusal",
+          "passed": true,
+          "observation": {
+            "native": true,
+            "registeredToolCount": 15,
+            "exposedToolCount": 10,
+            "releaseId": "orbit-v3-final-20261003T142300Z",
+            "releaseSha256": "2cf43064c166c8b7744f359faa43af95ea5b39451eecd7c177d0ac71007b958a"
+          }
+        },
+        {
+          "name": "owned-profile-closed",
+          "passed": true,
+          "observation": {
+            "state": "closed"
+          }
+        }
+      ],
+      "errorType": null,
+      "transport": "Kaggle to actual owned E2B native browser",
+      "modelCalls": 0,
+      "humanApprovalFabricated": false
+    },
+    "modelCalls": 0,
+    "fullMissionComplete": false
+  },
+  "nativePool": [
+    {
+      "worker": 0,
+      "passed": true,
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "releaseSha256": "2cf43064c166c8b7744f359faa43af95ea5b39451eecd7c177d0ac71007b958a",
+      "capabilitiesState": "READY",
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    },
+    {
+      "worker": 1,
+      "passed": true,
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "releaseSha256": "2cf43064c166c8b7744f359faa43af95ea5b39451eecd7c177d0ac71007b958a",
+      "capabilitiesState": "READY",
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    },
+    {
+      "worker": 2,
+      "passed": true,
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "releaseSha256": "2cf43064c166c8b7744f359faa43af95ea5b39451eecd7c177d0ac71007b958a",
+      "capabilitiesState": "READY",
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    },
+    {
+      "worker": 3,
+      "passed": true,
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "releaseSha256": "2cf43064c166c8b7744f359faa43af95ea5b39451eecd7c177d0ac71007b958a",
+      "capabilitiesState": "READY",
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    },
+    {
+      "worker": 4,
+      "passed": true,
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "releaseSha256": "2cf43064c166c8b7744f359faa43af95ea5b39451eecd7c177d0ac71007b958a",
+      "capabilitiesState": "READY",
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    },
+    {
+      "worker": 5,
+      "passed": true,
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "releaseSha256": "2cf43064c166c8b7744f359faa43af95ea5b39451eecd7c177d0ac71007b958a",
+      "capabilitiesState": "READY",
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    },
+    {
+      "worker": 6,
+      "passed": true,
+      "native": true,
+      "registeredToolCount": 15,
+      "chromeMajor": 154,
+      "releaseSha256": "2cf43064c166c8b7744f359faa43af95ea5b39451eecd7c177d0ac71007b958a",
+      "capabilitiesState": "READY",
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    },
+    {
+      "worker": 7,
+      "passed": false,
+      "native": null,
+      "registeredToolCount": null,
+      "chromeMajor": null,
+      "releaseSha256": null,
+      "capabilitiesState": null,
+      "modelCredentialRoleChangeRefused": true,
+      "profileStop": "closed"
+    }
+  ],
+  "releaseManifestSha256": "2cf43064c166c8b7744f359faa43af95ea5b39451eecd7c177d0ac71007b958a",
+  "harnessSha256": "aba135b17b73c3ff2976ab1d875f355652bca109a9e40666948bd522f75985d2",
+  "diagnosis": {
+    "worker": 7,
+    "firstQualificationPassed": false,
+    "oneDiagnosticReplay": {
+      "httpStatus": 422,
+      "error": "PUBLIC_RELEASE_FINGERPRINT_MISMATCH",
+      "cleanup": "closed"
+    },
+    "actualMismatchedNativeBodyCaptured": false,
+    "modelsNotDispatched": true,
+    "publicReadOnlyProbe": {
+      "observedAt": "2026-10-03T15:14:03Z",
+      "url": "https://orbit.securedme.ca/orbit-release.json",
+      "httpStatus": 403,
+      "server": "openresty/1.31.1.1",
+      "contentType": "application/json",
+      "bytes": 107,
+      "sha256": "269b3a43ad6cb11d80319383b1b4640e97bb042a80dea8b8061c6824f898cab6",
+      "message": "Access denied by Imunify360 bot-protection. IPs used for automation should be whitelisted",
+      "transport": "Python urllib in the same isolated worker, no cookies or modified headers",
+      "limitation": "The earlier native HTTP 200 response body was not captured; a challenge page is an inference, not a demonstrated identity."
+    }
+  },
+  "fullMissionComplete": false
+}

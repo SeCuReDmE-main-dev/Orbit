@@ -1,0 +1,115 @@
+{
+  "format": "orbit-e-resource-cleanup-v1",
+  "state": "closed",
+  "generation": "c65d6a0c-2d7f-48fb-9606-51790fa0726f",
+  "campaignId": "orbit-kaggle-20261003-final-e1",
+  "modelCalls": 0,
+  "retirement": {
+    "format": "orbit-e-retirement-receipt-v1",
+    "host": "Kaggle",
+    "observedAtUnix": 1791040965.3454733,
+    "campaignId": "orbit-kaggle-20261003-final-e1",
+    "workerGeneration": "c65d6a0c-2d7f-48fb-9606-51790fa0726f",
+    "modelCalls": 0,
+    "state": "retired",
+    "credentialsTested": 16,
+    "workers": [
+      {
+        "worker": 0,
+        "retirement": {
+          "state": "credential-revoked",
+          "scope": "this-worker-only"
+        },
+        "missionDenied": true,
+        "controlDenied": true
+      },
+      {
+        "worker": 1,
+        "retirement": {
+          "state": "credential-revoked",
+          "scope": "this-worker-only"
+        },
+        "missionDenied": true,
+        "controlDenied": true
+      },
+      {
+        "worker": 2,
+        "retirement": {
+          "state": "credential-revoked",
+          "scope": "this-worker-only"
+        },
+        "missionDenied": true,
+        "controlDenied": true
+      },
+      {
+        "worker": 3,
+        "retirement": {
+          "state": "credential-revoked",
+          "scope": "this-worker-only"
+        },
+        "missionDenied": true,
+        "controlDenied": true
+      },
+      {
+        "worker": 4,
+        "retirement": {
+          "state": "credential-revoked",
+          "scope": "this-worker-only"
+        },
+        "missionDenied": true,
+        "controlDenied": true
+      },
+      {
+        "worker": 5,
+        "retirement": {
+          "state": "credential-revoked",
+          "scope": "this-worker-only"
+        },
+        "missionDenied": true,
+        "controlDenied": true
+      },
+      {
+        "worker": 6,
+        "retirement": {
+          "state": "credential-revoked",
+          "scope": "this-worker-only"
+        },
+        "missionDenied": true,
+        "controlDenied": true
+      },
+      {
+        "worker": 7,
+        "retirement": {
+          "state": "credential-revoked",
+          "scope": "this-worker-only"
+        },
+        "missionDenied": true,
+        "controlDenied": true
+      }
+    ],
+    "accountE2BCredentialChanged": false
+  },
+  "sourceRetirementSha256": "8b2f766a7e01f418e7e6f51d2e5a66c77ad54f319f695d104d9edf74ba56cdf2",
+  "cleanup": {
+    "observedAt": "2026-10-03T15:24:25.459461+00:00",
+    "resourcesOwnedBefore": 9,
+    "resourcesOwnedAfter": 0,
+    "ownedGenerationConfirmedAbsent": true,
+    "localMissionCredentialFilesRemoved": true,
+    "separateStudioPreserved": true,
+    "accountE2BCredentialChanged": false
+  },
+  "kaggleSecret": {
+    "name": "ORBIT_WORKER_POOL_JSON",
+    "credentialState": "revoked",
+    "attachedToQualificationNotebook": false,
+    "storedValueDeleted": false
+  },
+  "fullMissionComplete": false,
+  "kaggleQualificationRuntime": {
+    "state": "stopped",
+    "observedInNativeEditor": true,
+    "cellOutputsPreserved": true,
+    "modelCalls": 0
+  }
+}
