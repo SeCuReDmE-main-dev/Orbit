@@ -10,8 +10,10 @@ import {createWriteStream} from 'node:fs'
 import type {Readable,Writable} from 'node:stream'
 
 const secret=process.env.ORBIT_STUDIO_CHECK_TOKEN,origin=process.env.ORBIT_STUDIO_ORIGIN
+const expectedReleaseId=process.env.ORBIT_STUDIO_RELEASE_ID,expectedReleaseSha=process.env.ORBIT_FORMATION_RELEASE_SHA256
 if(process.platform!=='linux'||process.env.ORBIT_VALIDATION_HOST!=='E2B'||!secret||secret.length<40)throw Error('OWNED_E2B_MISSION_REQUIRED')
 if(!origin||!/^https:\/\/8000-[a-z0-9]+\.e2b\.app$/.test(origin))throw Error('EXACT_DESKTOP_ORIGIN_REQUIRED')
+if(Boolean(expectedReleaseId)!==Boolean(expectedReleaseSha)||(expectedReleaseSha&&!/^[a-f0-9]{64}$/.test(expectedReleaseSha)))throw Error('EXACT_STUDIO_RELEASE_PINS_REQUIRED')
 const profile='/home/user/orbit-studio-native-profile',folder='/home/user/orbit-studio-auth-results'
 await mkdir(folder,{recursive:true})
 // Retain the preceding controller's receipt before initialise writes this run.
@@ -91,6 +93,10 @@ async function prepare(){
     receipt.checks=[];delete receipt.error
   }
   const state=await nativeState();record('native-authenticated-studio-on-exact-foreign-host',state.origin===origin&&state.learningUI)
+  if(expectedReleaseId&&expectedReleaseSha){
+    const release=await evaluate(`(async()=>{if(location.origin!==${JSON.stringify(origin)})throw Error('EXACT_NATIVE_RELEASE_ORIGIN_REQUIRED');const r=await fetch('/formation/release.json',{credentials:'omit',cache:'no-store'});if(!r.ok)throw Error('NATIVE_RELEASE_UNAVAILABLE');const b=await r.arrayBuffer();if(b.byteLength>1000000)throw Error('NATIVE_RELEASE_BOUND');const d=JSON.parse(new TextDecoder().decode(b)),h=await crypto.subtle.digest('SHA-256',b);return{releaseId:d.releaseId,pluginVersion:d.portablePlugin?.version,sha256:Array.from(new Uint8Array(h)).map(v=>v.toString(16).padStart(2,'0')).join('')}})()`)
+    record('native-studio-serves-exact-current-1-0-1-release',release.releaseId===expectedReleaseId&&release.sha256===expectedReleaseSha&&release.pluginVersion==='1.0.1',release)
+  }
   await nativeRegistry('portable-studio-native-25-tools')
   const capabilities=await nativeTool('orbit_get_capabilities')
   const freshControls=await evaluate(`(()=>{const inputs=Array.from(document.querySelectorAll('.orbit-learning-studio fieldset input[type=checkbox]'));return {count:inputs.length,allOff:inputs.every(e=>!e.checked)}})()`)
@@ -194,15 +200,18 @@ async function recoverPublication(){
 }
 async function publish(replay=false){
   if(!preview)throw Error('REVIEWABLE_PREVIEW_REQUIRED')
+  if(replay&&(!firstDocument||preview._id!==firstDocument._id))throw Error('EXACT_VERIFIED_PUBLICATION_REQUIRED_BEFORE_REPLAY')
   const acknowledged=await evaluate(`(()=>{const label=Array.from(document.querySelectorAll('.orbit-learning-studio label')).find(e=>/J’accepte que cette sélection|I accept that this selection|Acepto que esta selección/i.test(e.textContent));return label?.querySelector('input')?.checked===true})()`)
   if(!acknowledged)throw Error('NATIVE_HUMAN_ACKNOWLEDGEMENT_REQUIRED')
   receipt.humanAcknowledgementObserved=true;const before=mutationResponses.length
   await button('Publier la sélection examinée|Publish reviewed selection|Publicar selección revisada')
-  await wait(`Array.from(document.querySelectorAll('.orbit-learning-studio [role=status]')).some(e=>/Sélection publiée|Selection published|Selección publicada/i.test(e.textContent))`)
+  for(let i=0;i<200&&!mutationResponses.slice(before).some(r=>r.status>=200&&r.status<300);i++)await new Promise(r=>setTimeout(r,100))
   record(replay?'native-replay-mutation-success':'native-content-lake-mutation-success',mutationResponses.slice(before).some(r=>r.status>=200&&r.status<300),mutationResponses.slice(before))
-  receipt.contentLakeWriteExecuted=true;receipt.state='MUTATION_OBSERVED_READBACK_PENDING';await save()
+  receipt.contentLakeWriteExecuted=true;receipt.state='MUTATION_OBSERVED_VALIDATED_UI_PENDING';await save()
+  await wait(`Array.from(document.querySelectorAll('.orbit-learning-studio [role=status]')).some(e=>/Publication vérifiée|Publication verified|Publicación verificada|Sélection publiée|Selection published|Selección publicada/i.test(e.textContent))&&!Array.from(document.querySelectorAll('.orbit-learning-studio pre')).some(e=>e.textContent.includes('"_type": "orbitLearningPublication"'))`)
+  receipt.state='MUTATION_OBSERVED_READBACK_PENDING';await save()
   const docs=await readExact(preview._id)
-  record(replay?'immutable-replay-readback':'exact-synthetic-publication-readback',Array.isArray(docs)&&docs.length===1&&docs[0]._type===preview._type&&docs[0].payloadJson===preview.payloadJson&&docs[0].title===preview.title&&(!replay||docs[0].publishedAt===firstDocument.publishedAt),{documentId:preview._id,count:docs.length})
+  record(replay?'immutable-replay-readback':'exact-synthetic-publication-readback',Array.isArray(docs)&&docs.length===1&&docs[0]._id===preview._id&&docs[0]._type===preview._type&&docs[0].payloadJson===preview.payloadJson&&docs[0].title===preview.title&&docs[0].moduleId===preview.moduleId&&docs[0].revision===preview.revision&&docs[0].publishedAt===(replay?firstDocument.publishedAt:preview.publishedAt),{documentId:preview._id,count:docs.length})
   if(!replay)firstDocument=docs[0]
   receipt.contentLakeWriteExecuted=true;receipt.state=replay?'PUBLICATION_AND_REPLAY_VERIFIED':'PUBLICATION_VERIFIED';await save()
 }

@@ -1,0 +1,15 @@
+{
+  "namespace": "orbit-context-qa-20261003",
+  "phase": "import",
+  "case": "provider",
+  "organizationId": "ofo1daa1l",
+  "observedAt": "2026-10-03T13:09:01.236Z",
+  "modelCalls": 0,
+  "productionModified": false,
+  "credentialsPrinted": false,
+  "sourceTextPrinted": false,
+  "state": "TWELVE_IMPORTS_SUBMITTED",
+  "knowledgeBase": "kbMOG2p1HkA4",
+  "submittedFiles": 12,
+  "completed": false
+}

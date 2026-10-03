@@ -1,0 +1,18 @@
+{
+  "namespace": "orbit-context-qa-20261003",
+  "phase": "create",
+  "case": null,
+  "organizationId": "ofo1daa1l",
+  "observedAt": "2026-10-03T13:08:01.697Z",
+  "modelCalls": 0,
+  "productionModified": false,
+  "credentialsPrinted": false,
+  "sourceTextPrinted": false,
+  "state": "BLOCKED",
+  "error": {
+    "code": "OFFICIAL_SDK_REQUEST_FAILED",
+    "status": 403,
+    "providerMessage": "Forbidden - The organization's plan limit for knowledge bases is reached (1 of 1 used). Upgrade the plan to continue. (traceId: 437fd6a6b387231814fa35a51f3a59f5)",
+    "providerCode": null
+  }
+}

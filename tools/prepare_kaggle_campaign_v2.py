@@ -151,12 +151,24 @@ def validate_frozen(config, suite):
     if suite=='E' and (not config.get('releaseId') or not config.get('releaseManifestSha256') or not config.get('browserMajor')):
         raise RuntimeError('Frozen public release and native browser preflight are required.')
     if suite=='D':
-        for case in ('provider','sanity'):
+        selected=config.get('contextCaseSelection',['provider','sanity'])
+        if (not isinstance(selected,list) or not selected or len(set(selected))!=len(selected)
+                or any(case not in ('provider','sanity') for case in selected)):
+            raise RuntimeError('An explicit, distinct Context case selection is required.')
+        if config['targets']['D']['trajectories']!=len(selected)*12:
+            raise RuntimeError('The D target must match the selected paired cases (12 or24).')
+        for case in selected:
             row=config['contextCases'][case]
             if not row.get('parityReviewed') or not row.get('paths') or '' not in row.get('responseDigests',{}):
-                raise RuntimeError('Context parity, exact entry paths and outline digest are required for both cases.')
+                raise RuntimeError('Context parity, exact entry paths and outline digest are required for every selected case.')
             if any(path not in row['responseDigests'] for path in row['paths']):
                 raise RuntimeError('Every allowed Context entry needs a frozen content digest.')
+            if config.get('contextCaseSelection') and (row.get('transport')!='sanity-context-mcp-live'
+                    or row.get('organizationId')!='ofo1daa1l'
+                    or row.get('knowledgeBase') in ('kb5CHIYGXCMJ','kbbBvrClyweF')):
+                raise RuntimeError('Prospective D requires the isolated live QA Context transport.')
+        if config.get('contextCaseSelection') and config.get('contextViewerSecretName')!='ORBIT_CONTEXT_QA_VIEWER':
+            raise RuntimeError('The fixed temporary QA Viewer secret is required.')
 
 
 def source_archive():

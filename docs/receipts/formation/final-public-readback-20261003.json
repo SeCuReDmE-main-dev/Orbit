@@ -1,0 +1,183 @@
+{
+  "state": "PUBLIC_HTTP_READBACK",
+  "observedAt": "2026-10-03T14:30:53.382570+00:00",
+  "releaseId": "orbit-v3-final-20261003T142300Z",
+  "routes": [
+    {
+      "url": "https://orbit.securedme.ca/",
+      "status": 200,
+      "sha256": "ef358a42bc2acaf498c297b9f43c68469adcbddfc1cc8f9b2f4e95622f563881",
+      "bytes": 9589,
+      "contentType": "text/html",
+      "finalUrl": "https://orbit.securedme.ca/"
+    },
+    {
+      "url": "https://orbit.securedme.ca/guide/",
+      "status": 200,
+      "sha256": "b474c2235fbadc098bc2340f4492178a5b73fb1abf3b376f508f1721f6d990df",
+      "bytes": 68485,
+      "contentType": "text/html",
+      "finalUrl": "https://orbit.securedme.ca/guide/"
+    },
+    {
+      "url": "https://orbit.securedme.ca/formation/lab/",
+      "status": 200,
+      "sha256": "4e2de284e638b3c3e84cb432cd4ceb36db047835cafdf11a540d32350c2b0008",
+      "bytes": 4031,
+      "contentType": "text/html",
+      "finalUrl": "https://orbit.securedme.ca/formation/lab/"
+    },
+    {
+      "url": "https://orbit.securedme.ca/formation/projets/",
+      "status": 200,
+      "sha256": "35f67e772dd1257d279a7e915abea350ae29b8a83f2937b81e7660a35e565300",
+      "bytes": 4036,
+      "contentType": "text/html",
+      "finalUrl": "https://orbit.securedme.ca/formation/projets/"
+    },
+    {
+      "url": "https://orbit.securedme.ca/formation/studio/",
+      "status": 200,
+      "sha256": "8bbf660706f82e328bca30fe6591008605fdb7dcd253c5b1ed328ac9c984b446",
+      "bytes": 8819,
+      "contentType": "text/html",
+      "finalUrl": "https://orbit.securedme.ca/formation/studio/"
+    },
+    {
+      "url": "https://orbit.securedme.ca/formation/release.json",
+      "status": 200,
+      "sha256": "218a8386076c5c9507aa66e2920d38c40827ea85db94cc76e101fb0dc2c190f5",
+      "bytes": 86148,
+      "contentType": "application/json",
+      "finalUrl": "https://orbit.securedme.ca/formation/release.json",
+      "releaseId": "orbit-v3-final-20261003T142300Z",
+      "version": "3.0.0"
+    },
+    {
+      "url": "https://orbit.securedme.ca/api/v1/course-context/outline",
+      "status": 200,
+      "sha256": "500927d0a130e4acc7a2f8025e4468f4a87e0f9a208b5ddc81eea54e98ff5ba1",
+      "bytes": 1371,
+      "contentType": "application/json",
+      "finalUrl": "https://orbit.securedme.ca/api/v1/course-context/outline",
+      "state": "READY",
+      "knowledgeBase": "kbbBvrClyweF"
+    },
+    {
+      "url": "https://orbit.securedme.ca/api/v1/knowledge/outline",
+      "status": 200,
+      "sha256": "686dd23fed4cddf6b72ef7a6e2e5293f705672140187abdc53c08e1e658acf1c",
+      "bytes": 2873,
+      "contentType": "application/json",
+      "finalUrl": "https://orbit.securedme.ca/api/v1/knowledge/outline",
+      "state": "READY",
+      "knowledgeBase": "kb5CHIYGXCMJ"
+    },
+    {
+      "url": "https://orbit.securedme.ca/account/",
+      "error": "HTTPError",
+      "status": 404,
+      "interpretation": "Non-canonical route probe; the application uses /api/v1/session. This 404 is not evidence of a regression."
+    }
+  ],
+  "landingBaselineSha256": "90b58c335ef87fb0984cfb835ead09de91d845b25d312a321174a8cfd29ab3c6",
+  "landingByteIdentical": false,
+  "nativeBrowserReplayed": false,
+  "landingPreservation": {
+    "baselineIndexSha256": "90b58c335ef87fb0984cfb835ead09de91d845b25d312a321174a8cfd29ab3c6",
+    "indexSha256": "ef358a42bc2acaf498c297b9f43c68469adcbddfc1cc8f9b2f4e95622f563881",
+    "markupUnchangedExceptAssetHashes": true,
+    "unchangedDependencies": [
+      {
+        "before": "_astro/OrbitLayout.astro_astro_type_script_index_0_lang.DPLZ2h8g.js",
+        "after": "_astro/OrbitLayout.astro_astro_type_script_index_0_lang.DPLZ2h8g.js",
+        "beforeSha256": "7b4d4dfb4068693e09948e5a28860be9d6e76d59eb25d29f5cda9af6eb87fcd3",
+        "afterSha256": "7b4d4dfb4068693e09948e5a28860be9d6e76d59eb25d29f5cda9af6eb87fcd3"
+      },
+      {
+        "before": "_astro/landing-preferences.BWzz2QTO.js",
+        "after": "_astro/landing-preferences.BWzz2QTO.js",
+        "beforeSha256": "60c131ccbd2503eaeb199caab1956e0066bb176fc28d00da1f4b7e89232b0897",
+        "afterSha256": "60c131ccbd2503eaeb199caab1956e0066bb176fc28d00da1f4b7e89232b0897"
+      },
+      {
+        "before": "_astro/LandingExperience.astro_astro_type_script_index_0_lang.AkwtxChf.js",
+        "after": "_astro/LandingExperience.astro_astro_type_script_index_0_lang.C_S-G-Jn.js",
+        "beforeSha256": "2bce3bb40b5805ada48ecf50449179980597715f914b1163b97a3c5af3b0a068",
+        "afterSha256": "be6a0d0f133975033d5656500636d1aed7ce4802c1a4ff5d57f5d0973ad06e29"
+      },
+      {
+        "before": "_astro/preload-helper.B3nfOi5I.js",
+        "after": "_astro/preload-helper.B3nfOi5I.js",
+        "beforeSha256": "298e58483be1903930c5a1661df3e66b3ef02723b34237990ad3a5f5e6052628",
+        "afterSha256": "298e58483be1903930c5a1661df3e66b3ef02723b34237990ad3a5f5e6052628"
+      },
+      {
+        "before": "_astro/three.module.CMpx1NI_.js",
+        "after": "_astro/three.module.CMpx1NI_.js",
+        "beforeSha256": "36cc97c3b490fc650debb6d7151a7ed432eb9d41d7971ef924b738d283c62e64",
+        "afterSha256": "36cc97c3b490fc650debb6d7151a7ed432eb9d41d7971ef924b738d283c62e64"
+      },
+      {
+        "before": "_astro/atom-games.pEF6dAC6.css",
+        "after": "_astro/atom-games.pEF6dAC6.css",
+        "beforeSha256": "8f017d7d59f3788cf823880c58d3532aba68fadad5b52e01c7b1937a0767050d",
+        "afterSha256": "8f017d7d59f3788cf823880c58d3532aba68fadad5b52e01c7b1937a0767050d"
+      },
+      {
+        "before": "_astro/OrbitLayout.BRER8aZk.css",
+        "after": "_astro/OrbitLayout.BRER8aZk.css",
+        "beforeSha256": "b805abde45ad08d5b6e18a699e9c0d9353e78353fb668f23c5f81d2896c22a27",
+        "afterSha256": "b805abde45ad08d5b6e18a699e9c0d9353e78353fb668f23c5f81d2896c22a27"
+      }
+    ],
+    "authorizedMetadataDependencies": [
+      {
+        "before": "_astro/webmcp.BJVyUgSF.js",
+        "after": "_astro/webmcp.C5DKb26p.js",
+        "reason": "Authorized root WebMCP contract update"
+      }
+    ],
+    "visualOrPhysicsChangesAuthorized": false
+  },
+  "deployedLandingMatchesPackagedBytes": true,
+  "landingByteDifferenceReason": "Hashed asset references changed through the authorized root WebMCP metadata update; packager verified unchanged markup and visual/physics dependency content after normalizing those imports.",
+  "sessionReadback": {
+    "url": "https://orbit.securedme.ca/api/v1/session",
+    "status": 200,
+    "anonymousSessionContractValid": true,
+    "observedAt": "2026-10-03T14:43:20.378449+00:00",
+    "csrfAndCookieValuesStored": false
+  },
+  "guideBrowserLanguageReadback": {
+    "method": "Chrome native select control and rendered DOM via Codex browser plugin",
+    "sourceSha256": "6966e23ac5ddd9057b7ec6aac61fda5c4251e8368bdffa1055c58f64905f468e",
+    "states": [
+      {
+        "lang": "en",
+        "hasCorrectVersion": true,
+        "heading": [
+          "  - heading \"Play. Understand. Verify.\" [level=1]"
+        ]
+      },
+      {
+        "lang": "es",
+        "hasCorrectVersion": true,
+        "heading": [
+          "  - heading \"Jugar. Comprender. Verificar.\" [level=1]"
+        ]
+      },
+      {
+        "lang": "fr",
+        "hasCorrectVersion": true,
+        "heading": [
+          "  - heading \"Jouer. Comprendre. Vérifier.\" [level=1]"
+        ]
+      }
+    ],
+    "accessibilityDialogOpened": true,
+    "originalLanguageRestored": "fr",
+    "preferenceValuesChanged": false,
+    "benchmarkExecution": false
+  }
+}

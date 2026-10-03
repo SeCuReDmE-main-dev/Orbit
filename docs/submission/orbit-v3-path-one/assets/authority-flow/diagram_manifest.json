@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "orbit-v3-authority-flow",
+  "title": "Orbit: the person chooses, an assistant proposes, a human reviews",
+  "engine": "graphviz",
+  "profile": "education-platform",
+  "qa_status": "render-ready",
+  "prepared_on": "2026-10-03",
+  "source_path": "source.dot",
+  "markdown_path": "../../article.en.md",
+  "other_article_path": "../../article.fr.md",
+  "caption_path": "caption.md",
+  "alt_text_path": "alt_text.md",
+  "rendered": {
+    "svg": "diagram.svg",
+    "png": "diagram.png"
+  },
+  "tool_versions": {
+    "graphviz": "15.1.0 (20260618.0150)"
+  },
+  "render_messages": {
+    "svg": "dot -Tsvg completed with exit code 0; accessible title/description added after render.",
+    "png": "dot -Tpng completed with exit code 0."
+  },
+  "qa_checks": {
+    "source_and_exports_exist": true,
+    "bilingual_caption_present": true,
+    "bilingual_alternative_present": true,
+    "svg_role_and_description_present": true,
+    "visual_review": "Observed full PNG: labels legible, roles distinguishable, no clipping. Authority flow revised vertically for article width.",
+    "svg_xml_valid": true,
+    "source_references_exist": true,
+    "svg_contains_no_scripts_or_remote_images": true,
+    "png_dimensions_px": [
+      767,
+      883
+    ]
+  },
+  "source_references": [
+    "docs/learning/orbit-formation/WEBMCP.md",
+    "docs/learning/orbit-formation/FORMATION_CONTRACT.md",
+    "docs/receipts/formation/course-context-live-transport.json"
+  ],
+  "warnings": [
+    "This diagram describes the pedagogical context with 25 tools; the landing retains 15.",
+    "Publication acceptance is outside this reading/proposal diagram. Personal journals stay in the selected learner workspace."
+  ],
+  "errors": [],
+  "artifacts": {
+    "source.dot": {
+      "bytes": 1565,
+      "sha256": "2f7294eeb0b15b2582471f43f46d09ec313d1bc51a32aa6feaa3ea310597dfd9"
+    },
+    "diagram.svg": {
+      "bytes": 9937,
+      "sha256": "535fc18d54addf9ce9ee43f06bee77c48c84018bc44e26ae8288ec4118641794"
+    },
+    "diagram.png": {
+      "bytes": 59661,
+      "sha256": "9536476c7803886ec74ea45e3b75ead58da3faf4756baf8242e273d957f48167"
+    },
+    "caption.md": {
+      "bytes": 768,
+      "sha256": "bc2c7789bfe3a7b127da122ec35664338925d7d7e3b9301c32cd9747579dd139"
+    },
+    "alt_text.md": {
+      "bytes": 1120,
+      "sha256": "2adee3784f33ce40c773d1fa682bdcb0b4e77a793e64c018993da0fdf1c75fae"
+    }
+  }
+}

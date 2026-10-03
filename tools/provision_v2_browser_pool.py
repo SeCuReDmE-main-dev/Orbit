@@ -13,6 +13,7 @@ import io
 import json
 import os
 from pathlib import Path
+import re
 import secrets
 import subprocess
 import uuid
@@ -54,6 +55,7 @@ def protect_private_file(path):
 
 def write_json(path, value, private=False):
     OUT.mkdir(parents=True, exist_ok=True)
+    path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix('.tmp')
     temporary.write_text(json.dumps(value, indent=2), encoding='utf-8')
     if private:
@@ -86,9 +88,13 @@ def selected_owned(active, ledger):
 
 def current_manifest(path):
     config = json.loads(path.read_text(encoding='utf-8'))
-    supported={CAMPAIGN, CAMPAIGN+'-sdkparams2', CAMPAIGN+'-nativebounds1'}
+    supported={CAMPAIGN, CAMPAIGN+'-sdkparams2', CAMPAIGN+'-nativebounds1', 'orbit-kaggle-20261003-final-e1'}
     if config.get('campaignId') not in supported or not config.get('frozen') or not config.get('releaseId'):
         raise RuntimeError('FROZEN_PUBLIC_RELEASE_MANIFEST_REQUIRED')
+    if config.get('campaignId') == 'orbit-kaggle-20261003-final-e1' and (
+            config.get('maxWorkers') != 8 or config.get('maxNativeCalls') != 20
+            or config.get('maxDurationSeconds') != 480 or config.get('maxHoldRequests') != 2):
+        raise RuntimeError('FINAL_E_RESOURCE_BUDGET_MISMATCH')
     engine, harness, rules = source_identity()
     if (config['engineSourceSha256'], config['harnessSha256'], config['rulesSha256']) != (
             mapping_digest(engine), mapping_digest(harness), mapping_digest(rules)):
@@ -118,6 +124,8 @@ def publish_secret_file(pool):
 
 def prepare(Sandbox, key, active, ledger, args):
     config = current_manifest(args.manifest)
+    if config['campaignId'] == 'orbit-kaggle-20261003-final-e1' and args.workers != 8:
+        raise RuntimeError('FINAL_E_REQUIRES_EXACTLY_EIGHT_BROWSER_WORKERS')
     if not args.browser_template or not args.control_template:
         raise RuntimeError('EXPLICIT_REUSABLE_TEMPLATE_IDS_REQUIRED')
     if selected_owned(active, ledger) or ledger.get('state') in ['preparing', 'prepared-not-tested', 'running']:
@@ -125,7 +133,10 @@ def prepare(Sandbox, key, active, ledger, args):
     if POOL.exists() or SECRET_FILE.exists():
         raise RuntimeError('PREVIOUS_PRIVATE_POOL_REQUIRES_VERIFIED_CLEANUP_FIRST')
     generation = str(uuid.uuid4())
+    generation_output = OUT / 'generations' / generation if config['campaignId'] == 'orbit-kaggle-20261003-final-e1' else OUT
+    generation_output.mkdir(parents=True, exist_ok=True)
     ledger.update({'campaign': CAMPAIGN, 'project': 'Secured_Me', 'currentGeneration': generation,
+        'experimentalCampaignId': config['campaignId'],
         'state': 'preparing', 'createdAt': now(), 'releaseId': config['releaseId'],
         'harnessSha256': config['harnessSha256'], 'modelExecution': 'Kaggle only',
         'softwareTests': 'Kaggle only', 'secretName': config['workerSecretName']})
@@ -134,7 +145,8 @@ def prepare(Sandbox, key, active, ledger, args):
 
     def create(role, template, index=None):
         metadata = {'app': 'orbit', 'campaign': CAMPAIGN, 'generation': generation, 'role': role,
-                    'release': config['releaseId'], 'harness': config['harnessSha256']}
+                    'release': config['releaseId'], 'harness': config['harnessSha256'],
+                    'experiment': config['campaignId']}
         if index is not None:
             metadata['worker'] = str(index)
         sandbox = Sandbox.create(template, timeout=86400, secure=True, api_key=key, metadata=metadata)
@@ -153,14 +165,23 @@ def prepare(Sandbox, key, active, ledger, args):
                'npx esbuild tools/e2b-webmcp-bridge.ts --bundle --platform=node --format=esm --outfile=/home/user/bridge-v2.mjs')
     result = control.commands.run(command, timeout=600)
     # Build output is credential-free; account/mission credentials are never shell text.
-    (OUT / 'bridge-build-v2.log').write_text(result.stdout + result.stderr, encoding='utf-8')
+    (generation_output / 'bridge-build-v2.log').write_text(result.stdout + result.stderr, encoding='utf-8')
     if result.exit_code:
         raise RuntimeError('CLOUD_BRIDGE_BUILD_FAILED')
     bundle = bytes(control.files.read('/home/user/bridge-v2.mjs', format='bytes'))
     pool = []
+    browser_versions = []
     for index in range(args.workers):
         worker = create('browser', args.browser_template, index)
         worker.files.write('/home/user/bridge-v2.mjs', bundle)
+        if config['campaignId'] == 'orbit-kaggle-20261003-final-e1':
+            observed = worker.commands.run('google-chrome --version', timeout=20)
+            version = observed.stdout.strip()
+            match = re.fullmatch(r'Google Chrome ([0-9]+)\.[0-9.]+', version)
+            if observed.exit_code or not match:
+                raise RuntimeError('ACTUAL_NEW_WORKER_CHROME_VERSION_REQUIRED')
+            browser_versions.append({'worker': index, 'sandboxId': worker.sandbox_id,
+                                     'version': version, 'chromeMajor': int(match.group(1))})
         mission_token, control_token = secrets.token_urlsafe(48), secrets.token_urlsafe(48)
         record = {'url': 'https://' + worker.get_host(8000), 'token': mission_token,
                   'controlToken': control_token, 'sandboxId': worker.sandbox_id}
@@ -174,9 +195,19 @@ def prepare(Sandbox, key, active, ledger, args):
                    'sourceArchiveSha256': hashlib.sha256(payload).hexdigest(), 'preparedAt': now()})
     save_ledger(ledger)
     receipt = {'campaign': CAMPAIGN, 'generation': generation, 'state': 'prepared-not-tested',
+               'experimentalCampaignId': config['campaignId'], 'releaseId': config['releaseId'],
+               'harnessSha256': config['harnessSha256'],
                'workers': len(pool), 'bundleSha256': ledger['bundleSha256'], 'modelCalls': 0, 'softwareTests': False,
                'privatePoolPath': str(POOL), 'secretImportPath': str(SECRET_FILE), 'secretName': config['workerSecretName']}
-    write_json(OUT / 'pool-preparation-v2.json', receipt)
+    if config['campaignId'] == 'orbit-kaggle-20261003-final-e1':
+        receipt['browserVersions'] = browser_versions
+        receipt['browserVersionSource'] = 'google-chrome --version / official E2B worker commands'
+        receipt['nativeQualificationStillRequired'] = True
+    receipt_path = generation_output / 'pool-preparation-v2.json'
+    if config['campaignId'] == 'orbit-kaggle-20261003-final-e1' and receipt_path.exists():
+        raise RuntimeError('REFUSE_TO_OVERWRITE_POOL_PREPARATION_RECEIPT')
+    receipt['receiptPath'] = str(receipt_path)
+    write_json(receipt_path, receipt)
     print(json.dumps(receipt))
 
 

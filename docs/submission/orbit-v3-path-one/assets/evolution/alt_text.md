@@ -1,0 +1,5 @@
+# Evolution diagram alternative text
+
+**English.** Three cards connected from left to right. The preserved September 22 research companion has a focused question, bounded mission, permissions and a checkpoint. The September 28–29 evidence dossier adds sources, claims, passages and an actual Context reading trace that produces a plan for human review. At the October 1 V3 delivery checkpoint, that foundation supports eight learning modules, reusable exports, a separate public course corpus and the learner–assistant–teacher relationship.
+
+**Français.** Trois cartes reliées de gauche à droite. Le compagnon de recherche conservé dans l’historique du 22 septembre associe une question précise à une mission bornée, des permissions et un checkpoint. Le dossier des 28–29 septembre ajoute sources, affirmations, passages et lecture réelle de Context pour proposer un plan à la revue humaine. Le checkpoint de livraison V3 du 1er octobre transforme ce socle en huit modules, des exports réutilisables, un corpus pédagogique public séparé et une relation élève–assistant–enseignant.

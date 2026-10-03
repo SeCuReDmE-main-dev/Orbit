@@ -21,6 +21,29 @@ def run_parallel_validation(config):
     if not Path('/kaggle/working').is_dir(): raise RuntimeError('KAGGLE_EXECUTION_REQUIRED')
 
     class ParallelBoundaries(unittest.TestCase):
+        def test_final_namespaces_budget_and_model_dispatch_gates(self):
+            prospective=copy.deepcopy(config)
+            prospective.update({'campaignId':'orbit-kaggle-20261003-final-e1','modelDispatchAuthorized':False,
+                'maxWorkers':8,'maxParallelTrajectories':8,'maxHoldRequests':2,'maxTransientAttempts':2})
+            self.assertEqual(require_configuration(prospective,'E'),'0.6.1')
+            with self.assertRaisesRegex(RuntimeError,'NATIVE_QUALIFICATION_REQUIRED'):
+                CampaignLedger(prospective,'E')
+            for key,value in [('maxWorkers',9),('maxHoldRequests',3),('maxParallelTrajectories',True)]:
+                altered={**prospective,key:value}
+                with self.subTest(key=key),self.assertRaisesRegex(RuntimeError,'FINAL_BUDGET'):
+                    require_configuration(altered,'E')
+            with self.assertRaisesRegex(RuntimeError,'NAMESPACE_OR_VERSION_UNSUPPORTED'):
+                require_configuration({**prospective,'campaignId':'orbit-kaggle-20261003-final-e2'},'E')
+            selected=copy.deepcopy(prospective)
+            selected.update({'campaignId':'orbit-kaggle-20261003-final-d1','executableSuites':['D'],
+                'contextCaseSelection':['provider']})
+            selected['targets']['D']['trajectories']=12
+            self.assertEqual(require_configuration(selected,'D'),'0.6.1')
+            with self.assertRaisesRegex(RuntimeError,'D_CONTEXT_SNAPSHOT_ONLY'):
+                require_configuration(selected,'E')
+            with self.assertRaisesRegex(RuntimeError,'D_SELECTED_CONTEXT_TARGET_MISMATCH'):
+                require_configuration({**selected,'contextCaseSelection':['provider','provider']},'D')
+
         def test_e_namespace_cannot_relabel_a_c_result(self):
             self.assertEqual(require_configuration(config,'E'),'0.6.1')
             with self.assertRaisesRegex(RuntimeError,'E_NATIVE_BOUNDARY_SNAPSHOT_ONLY'):

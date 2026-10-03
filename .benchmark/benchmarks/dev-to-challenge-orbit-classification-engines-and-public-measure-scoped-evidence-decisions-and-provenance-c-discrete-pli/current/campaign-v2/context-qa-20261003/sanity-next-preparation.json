@@ -1,0 +1,116 @@
+{
+  "state": "SOURCES_PREPARED_KB_RETIREMENT_AUTHORIZATION_PENDING",
+  "observedAt": "2026-10-03T14:37:58.879323+00:00",
+  "case": "sanity",
+  "packet": 8,
+  "organizationId": "ofo1daa1l",
+  "corpusSha256": "c8d7f865ba2c9667f43759a053174e3250150704746141e52fc0dca236190f5a",
+  "sourceCount": 12,
+  "preparedSources": [
+    {
+      "sourceId": "r08-d01",
+      "filename": "r08-d01.md",
+      "sha256": "2309b9cf3966859f0c7731a4351bb9deb720efd185910dc22c7f7cf3818055dd",
+      "originalSha256": "68a377b046c6af82a0b5e8beae8e22dfad4720361824d74e766fe8eb3121a2a0",
+      "viewSha256": "ede76c6ecd51128590cdc717ad79a6e972336e03b98ee6f4479db4fdd0db01ed"
+    },
+    {
+      "sourceId": "r08-d02",
+      "filename": "r08-d02.md",
+      "sha256": "e6395ae3d0dc13170408e1dbb3c211d0316af31b5a337b4c2d3e335478e6c339",
+      "originalSha256": "88f5e9733dfb847ebf5255c1998c09d9f622455658e0f21cd7a71d69d60326e1",
+      "viewSha256": "88f5e9733dfb847ebf5255c1998c09d9f622455658e0f21cd7a71d69d60326e1"
+    },
+    {
+      "sourceId": "r08-d03",
+      "filename": "r08-d03.md",
+      "sha256": "a3167152899bd8ecf47004bbb8373d7590f4f23c78df8a4b5935325c36b55939",
+      "originalSha256": "86f282d49fcc541521224b15c74fa65153a909a3f677865980e3e3bc41aca515",
+      "viewSha256": "86f282d49fcc541521224b15c74fa65153a909a3f677865980e3e3bc41aca515"
+    },
+    {
+      "sourceId": "r08-d04",
+      "filename": "r08-d04.md",
+      "sha256": "265815bf509f60b508c31132d44e8a9001c4205163337e224ba161d883786f06",
+      "originalSha256": "41944c02fb204a1e1e737260d18bcc5a4cace20bd70b6b048d2e37e0e499319a",
+      "viewSha256": "41944c02fb204a1e1e737260d18bcc5a4cace20bd70b6b048d2e37e0e499319a"
+    },
+    {
+      "sourceId": "r08-d05",
+      "filename": "r08-d05.md",
+      "sha256": "cb096b17c795e5cd632e483bbb47e63ca1ec36f0a1eec25e37d904d209eb62b7",
+      "originalSha256": "a60ab0dbe7881b9f26e4a3738da7403a7d6be060fdf88f6ea2eb35b490662065",
+      "viewSha256": "a60ab0dbe7881b9f26e4a3738da7403a7d6be060fdf88f6ea2eb35b490662065"
+    },
+    {
+      "sourceId": "r08-d06",
+      "filename": "r08-d06.md",
+      "sha256": "5350615a7823ed6a7947d4f06894685884c87d7c3ffcc5f31c4ad82ca584955c",
+      "originalSha256": "25f957a8be6dba8ac5d48a8a010e0319399c076514a1193affefaee41bb9fad0",
+      "viewSha256": "25f957a8be6dba8ac5d48a8a010e0319399c076514a1193affefaee41bb9fad0"
+    },
+    {
+      "sourceId": "r08-d07",
+      "filename": "r08-d07.md",
+      "sha256": "3d31ec8105ed525ca2a51f079fe7d98b890e73a39930a57594bda50526111c51",
+      "originalSha256": "076ccb63d11844e22ba62bc5e9b9089d30b04746e13610f0805c9bc5e718294b",
+      "viewSha256": "076ccb63d11844e22ba62bc5e9b9089d30b04746e13610f0805c9bc5e718294b"
+    },
+    {
+      "sourceId": "r08-d08",
+      "filename": "r08-d08.md",
+      "sha256": "503badd98a2e8e49e0fd2de0fb360fdf1b15e1fc0cbe5e1cd8777a145992e1db",
+      "originalSha256": "dad77b99be9165441d87b8b7777dc2e736459d835a26a2ed71edac37a36a4f3f",
+      "viewSha256": "dad77b99be9165441d87b8b7777dc2e736459d835a26a2ed71edac37a36a4f3f"
+    },
+    {
+      "sourceId": "r08-d09",
+      "filename": "r08-d09.md",
+      "sha256": "a889d43f3e152a2d5f6158aa1d76590b16b2b65cc67d6291eb2437c13efd5625",
+      "originalSha256": "9f65242f123a06d01af9973ea94ce8c882cfa2e9889b3e8c2fbb4cfe34182918",
+      "viewSha256": "3b75f49c0a581c58b245928d39c32a423b09fcd66ba521a14e456344e7249604"
+    },
+    {
+      "sourceId": "r08-d10",
+      "filename": "r08-d10.md",
+      "sha256": "3eac55acf0ecd9a7092e2a9a2660d5bb19c4f90e9254359383a1729dfdc79562",
+      "originalSha256": "f9f8c65473122161b917b16d2c58a575cff5cef290f50bbd8f44e987f7ad9ec9",
+      "viewSha256": "f9f8c65473122161b917b16d2c58a575cff5cef290f50bbd8f44e987f7ad9ec9"
+    },
+    {
+      "sourceId": "r08-d11",
+      "filename": "r08-d11.md",
+      "sha256": "0236ad8368763b4ddc7c6cf42a8ec43696ba9121942103eb9ee346a9ac043fe2",
+      "originalSha256": "719a52b8310f742fe9d2b26ea4759682d89b1c270f8c0ffb1bd27e5c97b4076c",
+      "viewSha256": "719a52b8310f742fe9d2b26ea4759682d89b1c270f8c0ffb1bd27e5c97b4076c"
+    },
+    {
+      "sourceId": "r08-d12",
+      "filename": "r08-d12.md",
+      "sha256": "7527645b41d2b0399ec09b42929f6c87fb27c34ad4ebfd1fa66b5fe0ef24a637",
+      "originalSha256": "9794c44e3aa72c348c83a0dcfaded591c814e122fb44f7a5dc130053076db0c2",
+      "viewSha256": "ecd2bec2dc18279d11dfb9d7e4cb38f35c9c1e3792b8c630174e1925551e8194"
+    }
+  ],
+  "questionsIndexed": false,
+  "goldIndexed": false,
+  "sourceTextPublished": false,
+  "proposedEndpoint": "orbit-d-sanity-20261003",
+  "proposedEndpointState": "not created",
+  "plannedTrajectories": 12,
+  "fullMissionTrajectories": 24,
+  "modelCallsExecuted": 0,
+  "knowledgeBaseCreated": false,
+  "missingBeforeNotebookFreeze": [
+    "explicit Provider KB retirement authorization",
+    "new actual Sanity KB identity",
+    "twelve imports and actual build",
+    "actual generated paths/revision/provenance audit",
+    "native fixed endpoint",
+    "eleven-or-actual-count live Context readings and hashes",
+    "fresh free quota and native Benchmark Task catalog check"
+  ],
+  "sourcePreparationOnly": true,
+  "transportFallback": "forbidden",
+  "generatedEntryPaths": "never invented"
+}

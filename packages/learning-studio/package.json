@@ -1,6 +1,6 @@
 {
   "name": "@orbit/learning-studio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Portable Sanity Studio learning workbench with local-first student artefacts and explicit publication.",
   "type": "module",
   "private": true,

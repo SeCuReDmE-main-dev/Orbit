@@ -1,0 +1,187 @@
+{
+  "format": "orbit-kaggle-campaign-v2",
+  "campaignId": "orbit-kaggle-20261003-final-d1",
+  "state": "QA_PROVIDER_READY_FOR_KAGGLE_CATALOG_PREFLIGHT",
+  "frozen": false,
+  "models": [
+    "google/gemini-3.8-flash",
+    "google/gemini-3.1-pro-preview"
+  ],
+  "sdkVersion": "0.6.1",
+  "repositoryHead": "f2313b27a586bbe98e53869d6753315935b91b52",
+  "corpusSha256": "c8d7f865ba2c9667f43759a053174e3250150704746141e52fc0dca236190f5a",
+  "goldSha256": "a0fffdf104aa36b3e994c57902ffc7a76f2d1a1fd143cc821ca60a4c88e93b23",
+  "fixturesSha256": "c8e4e0defc1c2c1a11f8aadfab4b3f02f953ea9fcc7540c581786dc6bef14bf2",
+  "corpusSelectionSha256": "205a0f669f564dae6ee23d78d3184f643754b284164cfd83b1ff7c4b0e7ee8f0",
+  "originalAccessSha256": "6f43c123818205a0e9cbe55f7ccd1a3b6bbeaafdb048802c78284296b735cb00",
+  "corpusFilesSha256": "3289b087b12130b884fedaef6e5b0f33c1988df3d3b504be77c6001de60363c8",
+  "corpusViewPolicy": {
+    "maxDocumentCharacters": 12000,
+    "maxPacketCharacters": 144000,
+    "selection": "question-windows-inspected-prose-introduction",
+    "sourceText": "frozen-snapshot-only",
+    "humanSemanticReview": "pending"
+  },
+  "engineSourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+  "harnessSha256": "aba135b17b73c3ff2976ab1d875f355652bca109a9e40666948bd522f75985d2",
+  "rulesSha256": "83307572bd6c1e4d7419d1e22c2998d592b8362bd18975d2369c6201bef82d8e",
+  "sourceFiles": {
+    "engine": {
+      "packages/evidence-review/src/classification.ts": "230a5f494e64f86428aa3f26b6cfe6ab0d42c78d47f758419bfe76f7f22019ae",
+      "packages/evidence-review/src/index.ts": "1ef6ca28cf3da9001708d45a64b39c65192523584fd383d3a701010926cfa937",
+      "packages/evidence-review/src/relations.ts": "d5da24352b213c55cede9559e2faa48b3b8451c57a3257b882c77ff82ee495a4",
+      "tools/engine-jsonl.ts": "a07c83552b9c1b6450814819ecf0f9392f698f386e3c10bc06917edb4f7a9b39"
+    },
+    "harness": {
+      "tools/orbit_campaign_checkpoint.py": "5ba28748059beb4154a5256d39627c4610b1baab977f04124f34eadffe87bb2e",
+      "tools/kaggle_engine_campaign.py": "ff7773b95dcb0b4d831ab75393cde79a9c3e3e0f5ed860fb5574e0d7ca8e2370",
+      "tools/kaggle_context_campaign.py": "b65e9e6675d80e9432bc80062e846dcf2764d81940bf78ad81c9138ce5cbd2c2",
+      "tools/kaggle_webmcp_campaign.py": "965a703052dd9c9360e03ea6ca6d4c9a78c6ad934e7b3be18cc5b9e7d53fdfae",
+      "tools/e2b-webmcp-bridge.ts": "04d7374ae676c48199acfbfddd97cdb0e3a0837cf0bf7af2b0a1da48d0a59196",
+      "tools/webmcp-browser.ts": "96dfc65257aafffc17fa55785d927edb11d1038df9d14732eb34c73d3f8ba23c",
+      "tools/prepare_scoped_corpus_v2.py": "b435efdb25d3540d8bd2d2b5858dc19069a87a7a387a64edfed9073f72f45895",
+      "tools/prepare_kaggle_campaign_v2.py": "091c40f9772c18a2937c600e38dd0c686018456b2a257a3754e8253ab6924944"
+    }
+  },
+  "releaseId": null,
+  "releaseManifestSha256": null,
+  "browserMajor": null,
+  "reasoningSetting": "medium",
+  "maxOutputTokens": 4096,
+  "maxSdkToolRounds": 22,
+  "maxNativeCalls": 20,
+  "maxDurationSeconds": 480,
+  "maxHoldRequests": 2,
+  "maxTransientAttempts": 2,
+  "maxWorkers": 8,
+  "quotaChecked": true,
+  "modelsChecked": false,
+  "quotaPolicy": {
+    "newLongLotsStopConsumedPercent": 85,
+    "hardStopConsumedPercent": 89,
+    "paidTopupAllowed": false,
+    "automaticModelReplacement": false,
+    "maxSnapshotAgeSeconds": 3600,
+    "unknownResetPolicy": "preserve-null-refresh-observation-api-refusal-stops",
+    "unknownPricingStrategy": "serial-provider-free-quota"
+  },
+  "preflightObservation": {
+    "source": "coordinator readback of Kaggle Refresh Quota UI",
+    "observedAt": "2026-10-03T13:56:00+00:00",
+    "timestampPrecision": "minute",
+    "modelCatalog": "runtime verification required before freezing",
+    "sdkVersion": "0.6.1",
+    "modelCalls": 0,
+    "contextMcpReceipt": "mcp-provider.json",
+    "contextMcpObservedAt": "2026-10-03T13:55:51.400Z",
+    "quotaResetTimes": "unavailable"
+  },
+  "quotaSnapshot": [
+    {
+      "name": "daily",
+      "limitNanodollars": 10000000000,
+      "usedNanodollars": 890000000,
+      "observedAtUnix": 1791035760,
+      "resetsAtUnix": null
+    },
+    {
+      "name": "monthly",
+      "limitNanodollars": 100000000000,
+      "usedNanodollars": 19180000000,
+      "observedAtUnix": 1791035760,
+      "resetsAtUnix": null
+    }
+  ],
+  "maxLotReserveNanodollars": null,
+  "lotReserveScope": "one-model-prompt-C-or-one-agent-trajectory-D-E",
+  "pricingObservation": null,
+  "targets": {
+    "C": {
+      "extractions": 60,
+      "comparativeProductions": 240
+    },
+    "D": {
+      "trajectories": 12
+    },
+    "E": {
+      "trajectories": 144
+    }
+  },
+  "inputCorpusDir": "/kaggle/input/datasets/celebrum/orbit-kaggle-v2-private-inputs",
+  "inputReferenceDir": "/kaggle/input/datasets/celebrum/orbit-kaggle-v2-private-inputs",
+  "workerSecretName": "ORBIT_WORKER_POOL_JSON",
+  "resumeDatasetDir": null,
+  "resumeArchives": {},
+  "contextCases": {
+    "provider": {
+      "packet": 7,
+      "paths": [
+        "agentic_workflows",
+        "api_execution",
+        "data_retention",
+        "deep_research",
+        "enterprise_compliance",
+        "model_selection",
+        "prompt_engineering_and_multimodal",
+        "responsible_use",
+        "terms_of_service",
+        "training_policies"
+      ],
+      "responseDigests": {
+        "": "d8f6ca876168dce19f6c817910a7c55f473e37e098b2412709abb065867f058f",
+        "agentic_workflows": "23f2fa781b64a46174b1ad75236119e79cd84b4bfd82785180469b9ee488e2b6",
+        "api_execution": "3d982803f54404e6980f329d46f96a6c3efef41af8ba9739c6a18015a59cee75",
+        "data_retention": "7ec7d699f38933498a05b86ef607315fd1012de03652022aee81cba25b1f9684",
+        "deep_research": "7f63e78e547ab2a77923c1d48604cb3dc31ded46b6ecf93e5be7582d098723e1",
+        "enterprise_compliance": "61e93f718f9e9ea0f8c5cc27e19f1f038726478a737ca184f538fb2761afc99e",
+        "model_selection": "88cd935d29059e2a62486686962f3100461ab5510522cd796058737780800e17",
+        "prompt_engineering_and_multimodal": "d09bc380eb9bb33af905328d5d07a16b7887d1ce5bf8d2f2a46bc58e0f18fa1e",
+        "responsible_use": "36776e1d3d929991fa4d7431ab0dfee30ad991053c03d43ff12fb4549ad029bb",
+        "terms_of_service": "ae43f574f9e2e0c4df27c2222f971af7bce4461744daba309e09f2cb622bb5ae",
+        "training_policies": "0cef76d3f9782f569305821b43fd40e409b43c7787b48cc1d21201ba74065512"
+      },
+      "parityReviewed": true,
+      "parityReviewScope": "source membership and literal citation provenance only",
+      "organizationId": "ofo1daa1l",
+      "knowledgeBase": "kbMOG2p1HkA4",
+      "revisionId": "297caf88-114e-407b-b0e0-582082f772c2",
+      "transport": "sanity-context-mcp-live",
+      "mcpEndpoint": "orbit-d-provider-20261003",
+      "sourceMembershipState": "12 frozen views, 12 cited sources and 58 literal quotations verified",
+      "semanticReview": "pending independent review",
+      "contextOpenIssues": 2
+    },
+    "sanity": {
+      "packet": 8,
+      "paths": [],
+      "responseDigests": {},
+      "parityReviewed": false
+    }
+  },
+  "referenceStatus": {
+    "syntheticQuestions": 36,
+    "humanReviewedRealQuestions": 0,
+    "realQuestionsPendingHuman": 24
+  },
+  "publicRelease": false,
+  "modelCallsExecuted": 0,
+  "softwareTestsExecuted": false,
+  "limits": [
+    "This Provider-only lot plans 12 of 24 Context trajectories; it is not complete mission D.",
+    "Two generated Context warnings remain open; source parity is not semantic approval.",
+    "No production fallback, CLI credential distribution or automatic model replacement.",
+    "Source texts, model answers and annotations require independent rights/privacy/review."
+  ],
+  "contextCaseSelection": [
+    "provider"
+  ],
+  "contextViewerSecretName": "ORBIT_CONTEXT_QA_VIEWER",
+  "executableSuites": [
+    "D"
+  ],
+  "fullContextMissionTarget": 24,
+  "runtimeDependencyPins": {
+    "protobuf": "5.29.6"
+  },
+  "preparationSourceSha256": "a8742e78c644b2185f6707465d8fc9008c7fba0f891d9285ac36fd01142957fa"
+}

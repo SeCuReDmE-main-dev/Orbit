@@ -1,0 +1,90 @@
+{
+  "namespace": "orbit-context-qa-20261003",
+  "phase": "mcp",
+  "case": "provider",
+  "organizationId": "ofo1daa1l",
+  "observedAt": "2026-10-03T13:55:51.400Z",
+  "modelCalls": 0,
+  "productionModified": false,
+  "credentialsPrinted": false,
+  "sourceTextPrinted": false,
+  "state": "QA_MCP_REAL_READS_COMPLETE",
+  "knowledgeBase": "kbMOG2p1HkA4",
+  "endpoint": "orbit-d-provider-20261003",
+  "tools": [
+    "initial_context",
+    "knowledge_base_read"
+  ],
+  "readings": [
+    {
+      "path": "",
+      "state": "READY",
+      "file": "outline.json",
+      "responseBytes": 1553
+    },
+    {
+      "path": "agentic_workflows",
+      "state": "READY",
+      "file": "agentic_workflows.json",
+      "responseBytes": 4388
+    },
+    {
+      "path": "api_execution",
+      "state": "READY",
+      "file": "api_execution.json",
+      "responseBytes": 6386
+    },
+    {
+      "path": "data_retention",
+      "state": "READY",
+      "file": "data_retention.json",
+      "responseBytes": 8156
+    },
+    {
+      "path": "deep_research",
+      "state": "READY",
+      "file": "deep_research.json",
+      "responseBytes": 5709
+    },
+    {
+      "path": "enterprise_compliance",
+      "state": "READY",
+      "file": "enterprise_compliance.json",
+      "responseBytes": 4050
+    },
+    {
+      "path": "model_selection",
+      "state": "READY",
+      "file": "model_selection.json",
+      "responseBytes": 3099
+    },
+    {
+      "path": "prompt_engineering_and_multimodal",
+      "state": "READY",
+      "file": "prompt_engineering_and_multimodal.json",
+      "responseBytes": 3637
+    },
+    {
+      "path": "responsible_use",
+      "state": "READY",
+      "file": "responsible_use.json",
+      "responseBytes": 5276
+    },
+    {
+      "path": "terms_of_service",
+      "state": "READY",
+      "file": "terms_of_service.json",
+      "responseBytes": 6908
+    },
+    {
+      "path": "training_policies",
+      "state": "READY",
+      "file": "training_policies.json",
+      "responseBytes": 4402
+    }
+  ],
+  "readOnlyCredential": "native QA Context Viewer",
+  "liveTransport": true,
+  "sourceMembership": "requires separate provenance audit",
+  "semanticTruth": "not certified"
+}

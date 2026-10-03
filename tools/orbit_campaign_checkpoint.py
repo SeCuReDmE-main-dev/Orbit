@@ -99,13 +99,29 @@ def require_configuration(config, suite):
     # cannot silently merge with the historical failed dispatch. Keep the
     # version allowlist explicit rather than accepting an arbitrary suffix.
     supported = {'orbit-kaggle-20261001-v2', 'orbit-kaggle-20261001-v2-sdkparams1',
-                 'orbit-kaggle-20261001-v2-sdkparams2', 'orbit-kaggle-20261001-v2-nativebounds1'}
+                 'orbit-kaggle-20261001-v2-sdkparams2', 'orbit-kaggle-20261001-v2-nativebounds1',
+                 'orbit-kaggle-20261003-final-e1', 'orbit-kaggle-20261003-final-d1'}
     if config.get('format') != 'orbit-kaggle-campaign-v2' or config.get('campaignId') not in supported:
         raise RuntimeError('CAMPAIGN_NAMESPACE_OR_VERSION_UNSUPPORTED')
     if suite not in ('C', 'D', 'E'):
         raise RuntimeError('CAMPAIGN_SUITE_UNSUPPORTED')
-    if config.get('campaignId') == 'orbit-kaggle-20261001-v2-nativebounds1' and suite != 'E':
+    if config.get('campaignId') in {'orbit-kaggle-20261001-v2-nativebounds1', 'orbit-kaggle-20261003-final-e1'} and suite != 'E':
         raise RuntimeError('E_NATIVE_BOUNDARY_SNAPSHOT_ONLY')
+    if config.get('campaignId') == 'orbit-kaggle-20261003-final-d1':
+        if suite != 'D':
+            raise RuntimeError('D_CONTEXT_SNAPSHOT_ONLY')
+        selected = config.get('contextCaseSelection')
+        if (not isinstance(selected, list) or not 1 <= len(selected) <= 2
+                or any(case not in ('provider', 'sanity') for case in selected)
+                or len(set(selected)) != len(selected)
+                or config.get('targets', {}).get('D', {}).get('trajectories') != 12 * len(selected)):
+            raise RuntimeError('D_SELECTED_CONTEXT_TARGET_MISMATCH')
+    if config.get('campaignId') == 'orbit-kaggle-20261003-final-e1':
+        if (config.get('maxWorkers') != 8 or config.get('maxParallelTrajectories') != 8
+                or config.get('maxHoldRequests') != 2 or config.get('maxTransientAttempts') != 2
+                or config.get('targets', {}).get('E', {}).get('trajectories') != 144
+                or not isinstance(config.get('modelDispatchAuthorized'), bool)):
+            raise RuntimeError('E_FINAL_BUDGET_OR_AUTHORIZATION_MISMATCH')
     if config.get('executableSuites') and suite not in config['executableSuites']:
         raise RuntimeError('SUITE_NOT_ENABLED_IN_THIS_FROZEN_SNAPSHOT')
     observed = importlib.metadata.version('kaggle-benchmarks')
@@ -165,6 +181,9 @@ def verify_scoped_views(public, original_access, input_directory):
 class CampaignLedger:
     def __init__(self, config, suite):
         require_configuration(config, suite)
+        if (config.get('campaignId') == 'orbit-kaggle-20261003-final-e1'
+                and config.get('modelDispatchAuthorized') is not True):
+            raise RuntimeError('E_FINAL_NATIVE_QUALIFICATION_REQUIRED_BEFORE_MODEL_DISPATCH')
         self.config = config
         self.suite = suite
         self.root = Path('/kaggle/working/orbit-campaign-v2') / suite

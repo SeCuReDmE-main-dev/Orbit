@@ -1,0 +1,5 @@
+# Authority diagram alternative text
+
+**English.** A top-to-bottom diagram starts with the person choosing an activity, selected work and permissions. Their personal assistant calls pedagogical WebMCP tools, which check consent and revision. The tools read public research or course Context and receive entries with provenance. A separate branch presents selected work in a versioned dossier for human review by a teacher or author. This diagram represents the reading and proposal path; publication uses a separate acceptance step.
+
+**Français.** Le schéma descend depuis la personne qui choisit une activité, un travail sélectionné et ses permissions. Son assistant personnel appelle les outils WebMCP pédagogiques, qui contrôlent le consentement et la révision. Les outils lisent le Context public de recherche ou de cours et reçoivent les entrées avec leur provenance. Une branche distincte dépose un travail sélectionné dans un dossier versionné pour la revue d’un enseignant ou de l’auteur. Ce schéma représente la lecture et la proposition ; la publication comporte une acceptation séparée.

@@ -6,8 +6,10 @@ from datetime import datetime, timezone
 import hashlib
 import json
 from pathlib import Path
+import re
 import secrets
 import shlex
+import zipfile
 
 from e2b import Sandbox
 
@@ -21,6 +23,7 @@ PACKAGE = ROOT / ".orbit" / "releases" / "orbit-v3-closure-20261001T180900Z.zip"
 PACKAGE_SHA = "246bd711f6d24048a3c8e5a3387b074f4bdb9abba442b3424a715a69c13ca9e4"
 SOURCE_SHA = "6cf947c677f5cbd91008a1ef3053aa9c98ec593385955ecf06a8465ab9928cf6"
 RELEASE_SHA = "a537a94afe9c3215e6bd0db7a4767234a1a2f0daea3d6a74e8b620b49024b046"
+RELEASE_ID = "orbit-v3-closure-20261001T180900Z"
 
 
 def timestamp() -> str:
@@ -49,10 +52,35 @@ def save(value: dict) -> None:
 
 
 def main() -> None:
+    global FOLDER, LEDGER, SECRET_CONFIG, CAMPAIGN, PACKAGE, PACKAGE_SHA, SOURCE_SHA, RELEASE_SHA, RELEASE_ID
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", choices=["list", "provision", "refresh", "collect", "cleanup"])
     parser.add_argument("--env", type=Path, default=Path(r"Z:\SecuredMe Education suite\.env"))
+    parser.add_argument("--package", type=Path)
+    parser.add_argument("--package-sha256")
+    parser.add_argument("--release-id")
+    parser.add_argument("--source-sha256")
     args = parser.parse_args()
+    if any([args.package, args.package_sha256, args.release_id, args.source_sha256]):
+        if (not all([args.package, args.package_sha256, args.release_id, args.source_sha256])
+                or not all(re.fullmatch(r"[a-f0-9]{64}", value) for value in [args.package_sha256, args.source_sha256])
+                or not re.fullmatch(r"orbit-v3-final-[A-Za-z0-9-]{1,76}", args.release_id)):
+            raise RuntimeError("EXACT_FINAL_CROSS_ORIGIN_PINS_REQUIRED")
+        PACKAGE = args.package.resolve()
+        if not PACKAGE.is_relative_to((ROOT/".orbit/releases").resolve()) or not PACKAGE.is_file() or args.package.is_symlink():
+            raise RuntimeError("EXACT_PUBLIC_RELEASE_ARCHIVE_REQUIRED")
+        PACKAGE_SHA, SOURCE_SHA, RELEASE_ID = args.package_sha256, args.source_sha256, args.release_id
+        if sha(PACKAGE.read_bytes()) != PACKAGE_SHA or sha((ROOT/"tools/learning-studio-cross-origin-validation.ts").read_bytes()) != SOURCE_SHA:
+            raise RuntimeError("PINNED_INPUT_CHANGED")
+        with zipfile.ZipFile(PACKAGE) as archive:
+            raw = archive.read("formation/release.json")
+        release = json.loads(raw)
+        if release.get("releaseId") != RELEASE_ID or release.get("portablePlugin", {}).get("version") != "1.0.1":
+            raise RuntimeError("CURRENT_1_0_1_FORMATION_PACKAGE_REQUIRED")
+        RELEASE_SHA = sha(raw)
+        CAMPAIGN = "orbit-closure-cross-origin-20261003"
+        FOLDER = ROOT/".orbit/closure-20261003/cross-origin"/RELEASE_ID
+        LEDGER, SECRET_CONFIG = FOLDER/"cross-origin-resources.private.json", FOLDER/"cross-origin-kaggle-secret.private.json"
     key = credential(args.env)
     # Required precondition: inspect existing account resources before creating.
     active = Sandbox.list(limit=100, api_key=key).next_items()
@@ -120,7 +148,7 @@ def main() -> None:
     else:
         worker = Sandbox.create(TEMPLATE, timeout=7200, secure=True, api_key=key,
             metadata={"app": "orbit", "campaign": CAMPAIGN, "role": "cross-origin-public-browser",
-                      "release": "orbit-v3-closure-20261001T180900Z", "sourceSha256": SOURCE_SHA})
+                      "release": RELEASE_ID, "sourceSha256": SOURCE_SHA})
         row = {"id": worker.sandbox_id, "state": "created", "createdAt": timestamp(),
                "secure": True, "timeoutSeconds": 7200, "packageSha256": PACKAGE_SHA, "sourceSha256": SOURCE_SHA}
         ledger["resources"].append(row)

@@ -1,9 +1,10 @@
 import { build } from 'esbuild'
-import { mkdir, copyFile, writeFile } from 'node:fs/promises'
+import { mkdir, copyFile, readFile, writeFile } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 
 const directory = path.dirname(fileURLToPath(import.meta.url))
+const packageMetadata = JSON.parse(await readFile(path.join(directory, 'package.json'), 'utf8'))
 await mkdir(path.join(directory, 'dist'), { recursive: true })
 const result = await build({
   entryPoints: [path.join(directory, 'src/index.tsx')],
@@ -21,7 +22,7 @@ const result = await build({
 // installed archive must never resolve ../../../packages from a second Studio.
 await copyFile(path.join(directory, 'src/public-api.d.ts'), path.join(directory, 'dist/index.d.ts'))
 await writeFile(path.join(directory, 'dist/build-inputs.json'), JSON.stringify({
-  package: '@orbit/learning-studio', version: '1.0.0',
+  package: packageMetadata.name, version: packageMetadata.version,
   inputs: Object.keys(result.metafile.inputs).map((input) => input.replaceAll('\\', '/')),
   externalImports: [...new Set(Object.values(result.metafile.outputs).flatMap((output) => output.imports.filter((item) => item.external).map((item) => item.path)))],
 }, null, 2))

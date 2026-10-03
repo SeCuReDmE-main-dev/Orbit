@@ -1,0 +1,30 @@
+{
+  "namespace": "orbit-context-qa-20261003",
+  "phase": "prepare",
+  "case": null,
+  "organizationId": "ofo1daa1l",
+  "observedAt": "2026-10-03T13:07:01.530Z",
+  "modelCalls": 0,
+  "productionModified": false,
+  "credentialsPrinted": false,
+  "sourceTextPrinted": false,
+  "state": "PRIVATE_INPUTS_PREPARED",
+  "packages": [
+    {
+      "case": "provider",
+      "sources": 12,
+      "manifestSha256": "be348c706aa100b81f024bd1ce4c74082b3cf7622b53367b7158eb40297742d0",
+      "corpusSha256": "c8d7f865ba2c9667f43759a053174e3250150704746141e52fc0dca236190f5a"
+    },
+    {
+      "case": "sanity",
+      "sources": 12,
+      "manifestSha256": "62ef569514c89bb8f9c37300115db0375eaabcd17b3166ebf679e0f112536c23",
+      "corpusSha256": "c8d7f865ba2c9667f43759a053174e3250150704746141e52fc0dca236190f5a"
+    }
+  ],
+  "privateRedistributionOnly": true,
+  "uploaded": false,
+  "built": false,
+  "semanticParity": "pending"
+}

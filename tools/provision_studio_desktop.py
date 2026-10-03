@@ -10,8 +10,10 @@ from datetime import datetime, timezone
 import hashlib
 import json
 from pathlib import Path
+import re
 import secrets
 import shlex
+import zipfile
 
 from e2b_desktop import Sandbox
 from e2b_desktop.main import _VNCServer
@@ -23,6 +25,8 @@ ACCESS = OUT / "studio-desktop-access.private.json"
 CAMPAIGN = "orbit-closure-studio-auth-20261001"
 PACKAGE = ROOT / ".orbit" / "releases" / "orbit-v3-closure-20261001T180900Z.zip"
 PACKAGE_SHA = "246bd711f6d24048a3c8e5a3387b074f4bdb9abba442b3424a715a69c13ca9e4"
+RELEASE_ID = "orbit-v3-closure-20261001T180900Z"
+FORMATION_RELEASE_SHA = None
 
 
 def now() -> str:
@@ -47,10 +51,34 @@ def save(value: dict) -> None:
 
 
 def main() -> None:
+    global OUT, LEDGER, ACCESS, CAMPAIGN, PACKAGE, PACKAGE_SHA, RELEASE_ID, FORMATION_RELEASE_SHA
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", choices=["list", "prepare", "controller", "cleanup"])
     parser.add_argument("--env", type=Path, default=Path(r"Z:\SecuredMe Education suite\.env"))
+    parser.add_argument("--package", type=Path)
+    parser.add_argument("--package-sha256")
+    parser.add_argument("--release-id")
     args = parser.parse_args()
+    if any([args.package, args.package_sha256, args.release_id]):
+        if (not all([args.package, args.package_sha256, args.release_id])
+                or not re.fullmatch(r"[a-f0-9]{64}", args.package_sha256)
+                or not re.fullmatch(r"orbit-v3-final-[A-Za-z0-9-]{1,76}", args.release_id)):
+            raise RuntimeError("EXACT_FINAL_RELEASE_PACKAGE_PINS_REQUIRED")
+        PACKAGE = args.package.resolve()
+        if not PACKAGE.is_relative_to((ROOT/".orbit/releases").resolve()) or not PACKAGE.is_file() or args.package.is_symlink():
+            raise RuntimeError("EXACT_PUBLIC_RELEASE_ARCHIVE_REQUIRED")
+        PACKAGE_SHA, RELEASE_ID = args.package_sha256, args.release_id
+        if hashlib.sha256(PACKAGE.read_bytes()).hexdigest() != PACKAGE_SHA:
+            raise RuntimeError("PINNED_PACKAGE_CHANGED")
+        with zipfile.ZipFile(PACKAGE) as archive:
+            raw = archive.read("formation/release.json")
+        release = json.loads(raw)
+        if release.get("releaseId") != RELEASE_ID or release.get("portablePlugin", {}).get("version") != "1.0.1":
+            raise RuntimeError("CURRENT_1_0_1_FORMATION_PACKAGE_REQUIRED")
+        FORMATION_RELEASE_SHA = hashlib.sha256(raw).hexdigest()
+        CAMPAIGN = "orbit-closure-studio-auth-20261003"
+        OUT = ROOT/".orbit/closure-20261003/studio"/RELEASE_ID
+        LEDGER, ACCESS = OUT/"studio-desktop-resources.private.json", OUT/"studio-desktop-access.private.json"
     key = key_from(args.env)
     active = Sandbox.list(limit=100, api_key=key).next_items()
     owned = [item for item in active if item.metadata.get("campaign") == CAMPAIGN and item.metadata.get("app") == "orbit"]
@@ -122,10 +150,12 @@ time.sleep(2)
         token = secrets.token_urlsafe(48)
         control = worker.commands.run(node_directory + "/node /home/user/orbit-studio-controller/check.mjs", background=True, timeout=5400, user="user",
             envs={"DISPLAY": ":0", "ORBIT_VALIDATION_HOST": "E2B", "ORBIT_STUDIO_CHECK_TOKEN": token,
-                "ORBIT_STUDIO_ORIGIN": row["foreignOrigin"]})
+                "ORBIT_STUDIO_ORIGIN": row["foreignOrigin"],
+                **({"ORBIT_STUDIO_RELEASE_ID": RELEASE_ID, "ORBIT_FORMATION_RELEASE_SHA256": FORMATION_RELEASE_SHA} if FORMATION_RELEASE_SHA else {})})
         config = {"bridgeOrigin": "https://" + worker.get_host(8022), "token": token,
             "studioOrigin": row["foreignOrigin"], "sourceSha256": hashlib.sha256(source).hexdigest(),
             "bundleSha256": hashlib.sha256(bundle).hexdigest(), "profileCopied": False,
+            "releaseId": RELEASE_ID, "formationReleaseSha256": FORMATION_RELEASE_SHA,
             "controller": "Native Chrome OS pipe; exact endpoint allowlist only."}
         secret_path = OUT / "studio-desktop-kaggle-secret.private.json"
         secret_path.write_text(json.dumps(config, indent=2) + "\n", encoding="utf-8")
@@ -179,9 +209,10 @@ time.sleep(2)
         row["state"] = "resuming-preparation"
     else:
         worker = Sandbox.create(timeout=7200, resolution=(1366, 768), api_key=key, allow_internet_access=True,
-            metadata={"app": "orbit", "campaign": CAMPAIGN, "role": "native-human-studio-login", "release": "orbit-v3-closure-20261001T180900Z"})
+            metadata={"app": "orbit", "campaign": CAMPAIGN, "role": "native-human-studio-login", "release": RELEASE_ID})
         row = {"id": worker.sandbox_id, "state": "created", "createdAt": now(),
         "officialTemplate": "desktop", "timeoutSeconds": 7200, "packageSha256": PACKAGE_SHA,
+        "releaseId": RELEASE_ID, "formationReleaseSha256": FORMATION_RELEASE_SHA,
         "sdk": "e2b-desktop@2.6.0", "baseSdk": "e2b@2.44.0", "browserTestsExecuted": False,
         "contentLakeWritesExecuted": False}
         ledger["resources"].append(row)
@@ -229,7 +260,7 @@ ThreadingHTTPServer(('0.0.0.0',8000),Handler).serve_forever()
         # Headed Chrome has no debugging TCP listener. Kaggle can later launch
         # a bounded pipe controller using this native profile within this VM.
         browser = worker.commands.run("google-chrome --user-data-dir=" + shlex.quote(profile) +
-            " --enable-blink-features=WebMCPTesting --no-first-run --no-default-browser-check --disable-sync " +
+            " --no-first-run --no-default-browser-check --disable-sync " +
             shlex.quote(host + "/formation/studio/"), background=True, timeout=7200, user="user", envs={"DISPLAY": ":0"})
         worker.stream.start(require_auth=True)
         stream_url = worker.stream.get_url(auth_key=worker.stream.get_auth_key())

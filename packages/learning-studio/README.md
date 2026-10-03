@@ -9,7 +9,7 @@ The course remains 40 hours: eight modules with one live hour and three solo hou
 Use the `.tgz` produced by the cloud packaging task:
 
 ```sh
-npm install /path/to/orbit-learning-studio-1.0.0.tgz
+npm install /path/to/orbit-learning-studio-1.0.1.tgz
 ```
 
 Add the plugin to the Studio you already own:
@@ -37,6 +37,8 @@ Personal artefacts and reflections stay in memory until local saving is explicit
 Colab notebooks saved in Drive are **Google cloud documents**, not local Orbit storage. A notebook's cells and outputs can be disclosed when it is shared. Choose what to hand to the teacher; installing the plugin grants the teacher no access.
 
 The free Sanity plan has public datasets, and a Growth trial downgrade can make a formerly private dataset public. Treat every selected Sanity publication as publishable content. The sharing view shows the exact destination and JSON before a separate human acknowledgement and click. Only selected artefacts are sent; journal entries, permissions, private proposals and the rest of the session are excluded. No private Sanity form autosave is used. The immutable publication document type is `orbitLearningPublication`.
+
+Publication identity includes the normalized title, course module, revision, destination and selected content. Reopening the same selection preserves its immutable ID and the first stored publication's date; changing its title or module creates a distinct document. Version 1.0.1 leaves existing publications untouched. The complete preview is checked before writing, and the returned document is checked before the UI reports verified publication. A response arriving after revocation or navigation is withheld; a mutation already sent may still have completed, so inspect the stored document before retrying.
 
 ## Routes, accessibility and tools
 

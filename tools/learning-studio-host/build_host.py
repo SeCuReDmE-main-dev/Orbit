@@ -1,4 +1,4 @@
-"""Build a second self-hosted Studio in E2B; this is not authenticated QA."""
+"""Build a second self-hosted Studio in Kaggle/E2B; this is not authenticated QA."""
 from __future__ import annotations
 
 import argparse
@@ -17,36 +17,42 @@ import urllib.request
 NODE_VERSION = '22.20.0'
 NODE_SHA256 = '00bbd05e306ea68b6e13e17360d0e2f680b493ef95f2fea1c4296ff7437530bc'
 DEPENDENCIES = {'react': '19.3.0', 'react-dom': '19.3.0', 'sanity': '6.16.0', 'styled-components': '6.5.3'}
-PLUGIN_REFERENCE = 'file:../../artifacts/learning-studio/orbit-learning-studio-1.0.0.tgz'
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--environment', choices=['e2b'], required=True)
+    parser.add_argument('--environment', choices=['e2b', 'kaggle'], required=True)
     arguments = parser.parse_args()
     if os.name == 'nt':
-        raise RuntimeError('Build this host only in the isolated E2B Linux workspace.')
+        raise RuntimeError('Build this host only in the isolated Kaggle/E2B Linux workspace.')
     host = Path(__file__).resolve().parent
     repository = host.parents[1]
     status_path = host/'host-build-status.json'
     status_path.unlink(missing_ok=True)
     artifacts = repository/'artifacts/learning-studio'
     report = json.loads((artifacts/'package-report.json').read_text())
-    archive = artifacts/'orbit-learning-studio-1.0.0.tgz'
+    archive_name = report.get('archive')
+    if (report.get('package') != '@orbit/learning-studio' or not isinstance(archive_name, str)
+            or Path(archive_name).name != archive_name or not archive_name.endswith('.tgz')
+            or report.get('environmentDeclaredByOrchestrator') != arguments.environment):
+        raise RuntimeError('Unexpected portable archive identity or cloud environment.')
+    archive = artifacts/archive_name
     archive_bytes = archive.read_bytes()
     archive_sha = hashlib.sha256(archive_bytes).hexdigest()
     if report['archive'] != archive.name or report['sha256'] != archive_sha or report['bundled'] is not True:
         raise RuntimeError('Portable archive and cloud packaging receipt disagree.')
 
     package = json.loads((host/'package.json').read_text())
-    expected = {'@orbit/learning-studio': PLUGIN_REFERENCE, **DEPENDENCIES}
+    plugin_reference = 'file:../../artifacts/learning-studio/' + archive.name
+    expected = {'@orbit/learning-studio': plugin_reference, **DEPENDENCIES}
     lock_path = host/'package-lock.json'
     lock_source = lock_path.read_bytes()
     lock = json.loads(lock_source)
     if package['dependencies'] != expected or lock['packages']['']['dependencies'] != expected:
         raise RuntimeError('Host dependencies differ from the retained installation graph.')
     plugin_lock = lock['packages']['node_modules/@orbit/learning-studio']
-    if plugin_lock['resolved'] != PLUGIN_REFERENCE or plugin_lock.get('link'):
+    if (plugin_lock['resolved'] != plugin_reference or plugin_lock.get('link')
+            or plugin_lock['version'] != report.get('version')):
         raise RuntimeError('The host must install the archive, not a workspace source link.')
     # Keep every registry version and integrity unchanged. The archive is rebuilt
     # from the current source, so bind only its SHA-512 in this isolated checkout.
@@ -80,6 +86,7 @@ def main() -> None:
     observed_node = subprocess.run([node, '--version'], env=environment, check=True, capture_output=True, text=True).stdout.strip()
     if observed_node != 'v'+NODE_VERSION:
         raise RuntimeError('Unexpected host build runtime.')
+    observed_npm = subprocess.run([npm, '--version'], env=environment, check=True, capture_output=True, text=True).stdout.strip()
     subprocess.run([npm, 'ci', '--workspaces=false', '--ignore-scripts', '--no-audit', '--no-fund', '--include=optional'], cwd=host, env=environment, check=True)
     installed_lock = json.loads(lock_path.read_text())['packages']
     for name, version in DEPENDENCIES.items():
@@ -97,10 +104,11 @@ def main() -> None:
     installed_entry = host/'node_modules/@orbit/learning-studio/dist/index.js'
     status = {
         'state': 'BUILD_COMPLETE', 'environment': arguments.environment, 'kind': 'build-not-test',
-        'finishedAt': datetime.now(timezone.utc).isoformat(), 'nodeVersion': NODE_VERSION,
+        'finishedAt': datetime.now(timezone.utc).isoformat(), 'nodeVersion': NODE_VERSION, 'npmVersion': observed_npm,
         'fixedHostDependencies': DEPENDENCIES, 'projectId': 'pzscx4w8', 'dataset': 'production',
         'basePath': '/formation/studio', 'workspaceBasePath': '/', 'archiveSha256': archive_sha,
         'installedPluginEntrySha256': hashlib.sha256(installed_entry.read_bytes()).hexdigest(),
+        'pluginVersion': report['version'], 'pluginArchive': archive.name,
         'sourceLockSha256': hashlib.sha256(lock_source).hexdigest(),
         'installationLockSha256': hashlib.sha256(bound_lock).hexdigest(),
         'builtFiles': len([path for path in output.rglob('*') if path.is_file()]),

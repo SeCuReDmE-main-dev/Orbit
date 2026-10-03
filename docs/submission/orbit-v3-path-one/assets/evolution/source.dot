@@ -1,0 +1,26 @@
+digraph OrbitEvolution {
+  graph [rankdir=LR, bgcolor="#ffffff", pad="0.32", nodesep="0.40", ranksep="0.55", fontname="Segoe UI", fontsize=16, label="Orbit: a question becomes a teaching practice", labelloc=t, labeljust=l];
+  node [shape=plain, fontname="Segoe UI"];
+  edge [color="#4b5563", penwidth=1.8, arrowsize=0.8, fontname="Segoe UI", fontsize=11];
+
+  research [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="12" COLOR="#2563a6" BGCOLOR="#f3f8ff">
+    <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="11" COLOR="#2563a6">SEPTEMBER 22 · PRESERVED LOCAL HISTORY</FONT></TD></TR>
+    <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="20"><B>Research companion</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="14">A focused question<BR ALIGN="LEFT"/>Bounded mission and permissions<BR ALIGN="LEFT"/>A checkpoint to continue</FONT></TD></TR>
+  </TABLE>>];
+
+  dossier [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="12" COLOR="#7855a2" BGCOLOR="#f8f4fc">
+    <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="11" COLOR="#67468e">SEPTEMBER 28–29 · READ AND RECONSIDER</FONT></TD></TR>
+    <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="20"><B>Evidence dossier</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="14">Sources, claims and passages<BR ALIGN="LEFT"/>An actual Context reading trace<BR ALIGN="LEFT"/>A plan for human review</FONT></TD></TR>
+  </TABLE>>];
+
+  formation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="12" COLOR="#a65b08" BGCOLOR="#fff7ed">
+    <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="11" COLOR="#985008">OCTOBER 1 · V3 DELIVERY CHECKPOINT</FONT></TD></TR>
+    <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="20"><B>Learning with an assistant</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="14">Eight modules and reusable exports<BR ALIGN="LEFT"/>A separate public course corpus<BR ALIGN="LEFT"/>Learner, assistant and teacher</FONT></TD></TR>
+  </TABLE>>];
+
+  research -> dossier [label="Keep the evidence"];
+  dossier -> formation [label="Give it a teaching use"];
+}

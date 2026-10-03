@@ -1,0 +1,96 @@
+{
+  "format": "orbit-c-resumption-public-receipt-v1",
+  "preparedOn": "2026-10-03",
+  "host": "Kaggle",
+  "state": "PARTIAL_GENERATION_VOLUME",
+  "campaignId": "orbit-kaggle-20261001-v2-sdkparams2",
+  "configurationSha256": "0d433497a1e6fa7810c68a51709e821d204f3241707e39850e45b2ce6283ad85",
+  "harnessSha256": "8f1eba8b70575fc57b7503b7b51d73bc309470f54484c0cc989950c735a41b05",
+  "engineSourceSha256": "17a05a4dd5f58e5993ef298a274855882203c2de5075135a8a0217cae4b8482a",
+  "compiledEngineSha256": "8c0a16a08fec3ea7b23213e4951cfb8cffdfdde1c37e1d8ddb69a3e849f1688d",
+  "corpusSha256": "c8d7f865ba2c9667f43759a053174e3250150704746141e52fc0dca236190f5a",
+  "sdkVersion": "0.6.1",
+  "models": ["google/gemini-3.8-flash", "google/gemini-3.1-pro-preview"],
+  "conditions": ["none", "baseline", "n", "p"],
+  "reasoningSetting": "medium",
+  "maxOutputTokens": 4096,
+  "archive": {
+    "name": "orbit-c-resumption-results-20261003.zip",
+    "sha256": "55276f8c2d772d1c87caec867e0678a7d16d9eec2b97e09beea1ba471c0f3116",
+    "bytes": 3079353,
+    "members": 911,
+    "unsafeMemberPaths": 0,
+    "duplicateMemberPaths": 0,
+    "localDownloadVerified": true,
+    "private": true,
+    "rawModelTextIncludedInPublicReceipt": false,
+    "publicRedistributionAuthorized": false
+  },
+  "checkpointObservationRangeUtc": {
+    "first": "2026-10-01T21:52:19.629800+00:00",
+    "last": "2026-10-03T13:22:55.720601+00:00",
+    "scope": "Checkpoint metadata retained in the resumption archive, including restored historical observations; not the duration of one continuous run"
+  },
+  "planned": {"extractions": 60, "productions": 240, "packets": 60},
+  "observed": {"extractions": 60, "productions": 236, "completedPackets": 59},
+  "quotaBlocked": false,
+  "ledger": {
+    "completed": 591,
+    "technicalError": 1,
+    "phaseCounts": {
+      "extractionCompleted": 60,
+      "productionCompleted": 236,
+      "productionInterpretationCompleted": 236,
+      "packetCompleted": 59,
+      "productionTechnicalError": 1
+    },
+    "deduplication": "Only matching configuration records; latest observation per configurationSha256 and key by attempt and observedAtUnix. The 905 stored checkpoint records include history and are not 905 generations."
+  },
+  "missingProductionGroup": {
+    "packet": 5,
+    "repetition": 0,
+    "model": "google/gemini-3.8-flash",
+    "fixedConditionOrder": ["baseline", "n", "p", "none"],
+    "cases": [
+      {"condition": "baseline", "checkpointKey": "5f79465b57dc09349901b46ba1ac708eb2834b2307452db9012e48a491cdd744", "state": "technical-error", "attempt": 1, "errorType": "RateLimitError", "providerHttpStatus": 429, "providerReasonCategory": "heavy-load", "historicalFailureKind": "technical-error"},
+      {"condition": "n", "checkpointKey": "b635097532b5d873168390a2b881cdc5b40123a86e48e62e94eaf2a108af4c6d", "state": "never-run", "cause": "Earlier condition raised and interrupted the packet"},
+      {"condition": "p", "checkpointKey": "9ee22696ef30b4187a91130efc248c8c63fbf1b8497df099e7d618291ca47687", "state": "never-run", "cause": "Earlier condition raised and interrupted the packet"},
+      {"condition": "none", "checkpointKey": "b93132653fed2382e2baac7caacc167fbd19cf3f9ca097445929d238031bdc95", "state": "never-run", "cause": "Earlier condition raised and interrupted the packet"}
+    ],
+    "classificationReview": "The retained heavy-load HTTP 429 is a provider overload incident. The frozen classifier omitted this transient category and recorded technical-error. Its terminal guard preserves that record and prevents an in-place technical correction. The three other conditions have no generation record; they are not three model-answer failures.",
+    "commonExtraction": {
+      "state": "completed",
+      "checkpointKey": "3c3161accc4df1068312b3d1395c5017bdee9fe3a4c7223ceeb290c855113196",
+      "rawUtf8Sha256": "6fc132ef4784e4345e09d87f5b94fc7989f3d871d4b9a986211d8807ab6731bb",
+      "attempt": 1,
+      "reusePolicy": "A prospective, separately identified C4 complement can reference this exact extraction without a new extraction call."
+    }
+  },
+  "deterministicSuiteB": {
+    "coveredQuestions": 60,
+    "scorableSyntheticQuestions": 36,
+    "evaluations": 180,
+    "scoredEvaluations": 108,
+    "correctScoredEvaluations": 108,
+    "unscoredRealEvaluations": 72,
+    "invariantsPassed": 540,
+    "invariantsTotal": 540,
+    "realQuestionsPendingHumanArbitration": 24,
+    "sourceMember": "orbit-campaign-results/suite-b-status.json"
+  },
+  "sourceMembers": ["orbit-campaign-results/campaign-accounting.json", "orbit-campaign-results/suite-b-status.json", "matching private checkpoint envelopes"],
+  "sourceCode": {
+    "packetOrderAndDispatch": ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/frozen-c-sdkparams2/tools/kaggle_engine_campaign.py:223",
+    "historicalFailureClassifier": ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/frozen-c-sdkparams2/tools/orbit_campaign_checkpoint.py:71",
+    "terminalTechnicalErrorGuard": ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/frozen-c-sdkparams2/tools/orbit_campaign_checkpoint.py:330"
+  },
+  "inspection": {"modelCalls": 0, "productTestsExecuted": false, "privateModelResponsesPrinted": false, "originalCheckpointsChanged": false},
+  "limits": [
+    "The campaign retains its original namespace and source identities. The earlier 57/60 and 221/240 checkpoint remains historical; this is a later archive-backed receipt.",
+    "The campaign is partial at 236/240 productions, despite complete extraction coverage.",
+    "A prospective C4 complement requires a separate configuration, source identity, checkpoint namespace and explicit linkage; it must not replace the historical error.",
+    "Invalid model answers remain observations. Only reviewed transient transport incidents may be retried under the bounded policy.",
+    "Twenty-four real questions remain pending human arbitration and excluded from a definitive real-case ranking.",
+    "This receipt does not establish a winning engine, pedagogical effectiveness, or completion of the separate D and E campaigns."
+  ]
+}

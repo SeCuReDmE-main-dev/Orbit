@@ -1,0 +1,18 @@
+{
+  "state": "DEPLOYED_STATIC_OVERLAY",
+  "releaseId": "orbit-v3-final-20261003T142300Z",
+  "transport": "brokered-ssh-sftp",
+  "planId": "9af1af8557a6d0f3a3617208",
+  "packageSha256": "4b3b3bca46b21677ff1419499391d48037b69ccb473ace222b93fe9f642e0d77",
+  "backupCreated": true,
+  "verifiedPaths": [
+    "formation/release.json",
+    "formation/studio/index.html",
+    "guide/index.html",
+    "index.html"
+  ],
+  "stagingCleaned": true,
+  "rollbackRestored": false,
+  "fullMissionComplete": false,
+  "publicReadback": "final-public-readback-20261003.json"
+}

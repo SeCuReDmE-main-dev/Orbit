@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "orbit-editorial-voice-v1",
+  "author": "Jean-Sébastien Beaulieu",
+  "preparedOn": "2026-10-03",
+  "purpose": "Complete bilingual Path One article for author review; no publication performed",
+  "sourceSelection": {
+    "originalAuthorDecisions": [
+      {"timestamp": "2026-09-29T18:54:33.804Z", "subject": "Preserve the work and change the product direction"},
+      {"timestamp": "2026-10-01T00:10:01.086Z", "subject": "Reserve the interactive landing angle"},
+      {"timestamp": "2026-10-01T08:19:47.104Z", "subject": "Reserve Sanity for education as the second angle"}
+    ],
+    "technicalSources": "Repository plans, contracts, public traces and exact delivery receipts",
+    "existingWriting": "Retained Orbit editorial note and research/report writing contracts",
+    "priorBooksConsulted": false,
+    "fullPrivateConversationPublished": false,
+    "limitations": "Derived from targeted authorized project exchanges, not a fresh statistical profile of the author's complete book corpus"
+  },
+  "linguisticVoice": {
+    "perspective": "First-person singular for intention, decisions and interpretation",
+    "rhythm": "Connected paragraphs, concrete sentences, occasional short turning-point sentence",
+    "argumentMovement": ["Observed difficulty", "Author's choice", "Concrete implementation", "Evidence", "Consequence for teaching"],
+    "english": "Plain professional English; retain natural curiosity and identify technical conditions",
+    "french": "Direct, warm French; use the actual files and gestures to explain a concept; avoid mechanically reproducing conversational spelling",
+    "enthusiasm": "Express through the discovery and the work, with no promotional superiority claim",
+    "avoid": ["Marketing slogans", "Artificial contrastive punchlines", "Repeated rhetorical negatives", "Invented emotions or quotations", "Third-person ghostwritten author narration"]
+  },
+  "intellectualMotifs": [
+    "Learn while building and inspect the real code",
+    "Preserve a research answer's conditions and evidence",
+    "Turn an assistant's answer into verification, explanation and transfer",
+    "Give curiosity a concrete interactive arrival",
+    "Keep the learner's chosen work separate from the public course corpus",
+    "Keep teacher judgment distinct from deterministic checks"
+  ],
+  "claimDiscipline": {
+    "labels": ["Author intention", "Historical report", "Recorded execution", "Implemented contract", "Pending validation"],
+    "versions": "Application V3 / 3.0.0 is distinct from atom mechanism 2.1.7",
+    "chronology": "Preserved local September 22 history, public GitHub October 1, Kaggle prompt September 23",
+    "benchmarks": "Latest observed partial C/D/E counts remain explicit until a new receipt",
+    "learning": "Student understanding requires actual reformulation and transfer, beyond software QA",
+    "negativeConstructions": "Retain only exact security, scientific, authority or status distinctions"
+  },
+  "visualIdentity": {
+    "application": "Approved dark Orbit landing and existing atom palette; no application redesign in this task",
+    "article": "Six official Path One sections; code/tool excerpts and compact tables support the narrative",
+    "video": "Author-produced NotebookLM explanation of the tool remains pending; distinct from the article"
+  },
+  "no_copy_policy": {
+    "rule": "Generate original connected prose from verified intentions and evidence; do not copy prior book paragraphs",
+    "quotes": "Only short selected author phrases and the actual public trace, clearly attributed",
+    "signatureLines": "Avoid repeating distinctive lines as a substitute for reasoning"
+  },
+  "generation_policy": {
+    "requiredH2": ["What I Built", "Demo", "Code", "How I Used Sanity", "Sanity Project Details", "Agent Session"],
+    "disclosure": "Canonical Book Publication Lab Codex research-partner disclosure once in English front matter; faithful French localization once",
+    "authority": "Jean-Sébastien owns intent, interpretation, conclusions, public decisions, responsibility and final signature",
+    "reviewBoundary": "Author factual and voice review precedes final publication; new artifact URLs require readback"
+  }
+}

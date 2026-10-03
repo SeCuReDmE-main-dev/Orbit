@@ -1,0 +1,21 @@
+digraph OrbitAuthority {
+  graph [rankdir=TB, bgcolor="#ffffff", pad="0.32", nodesep="0.52", ranksep="0.48", fontname="Segoe UI", fontsize=16, label="A reading and proposal path\nwith human authority", labelloc=t, labeljust=l];
+  node [shape=box, style="rounded,filled", color="#64748b", fillcolor="#f8fafc", fontname="Segoe UI", fontsize=14, margin="0.16,0.12", penwidth=1.3];
+  edge [color="#4b5563", penwidth=1.6, arrowsize=0.8, fontname="Segoe UI", fontsize=11];
+
+  person [label="Person\nIntention · selected work\nExplicit permissions", color="#a65b08", fillcolor="#fff7ed"];
+  assistant [label="Personal assistant\nRead · explain · propose", color="#2563a6", fillcolor="#f3f8ff"];
+  tools [label="Pedagogical WebMCP tools\n25 registered capabilities\nConsent and revision checks", color="#7855a2", fillcolor="#f8f4fc"];
+  context [label="Public Context\nResearch profile | Course profile\nSources and provenance", color="#2563a6", fillcolor="#f3f8ff"];
+  proposal [label="Versioned dossier\nSelected proposal\nPending human review", color="#7855a2", fillcolor="#f8f4fc"];
+  review [label="Human review\nInspect · explain · decide\nTeacher or author", color="#a65b08", fillcolor="#fff7ed"];
+
+  person -> assistant [label="Choose the activity"];
+  assistant -> tools [label="Call a bounded tool"];
+  tools -> context [label="Public reading"];
+  context -> tools [label="Entries + provenance", constraint=false];
+  tools -> proposal [label="Present selected work"];
+  proposal -> review [label="Examine the proposal"];
+
+  {rank=same; context; proposal;}
+}

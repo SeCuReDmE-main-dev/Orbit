@@ -1,0 +1,15 @@
+{
+  "namespace": "orbit-context-qa-20261003",
+  "phase": "build",
+  "case": "provider",
+  "organizationId": "ofo1daa1l",
+  "observedAt": "2026-10-03T13:11:54.581Z",
+  "modelCalls": 0,
+  "productionModified": false,
+  "credentialsPrinted": false,
+  "sourceTextPrinted": false,
+  "state": "QA_BUILD_SUBMITTED",
+  "knowledgeBase": "kbMOG2p1HkA4",
+  "jobId": "ctx-build-692c7bfc-52a0-4537-b9d9-703d7fd55cb2-1791033115023",
+  "admitted": false
+}

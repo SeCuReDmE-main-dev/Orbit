@@ -17,6 +17,69 @@ CASES={
   'question':'Which documented Sanity Context, Knowledge Base and Studio version distinctions qualify the answer? Identify scope and version differences rather than inventing a contradiction.'},
 }
 LEDGER=None
+CONTEXT_VIEWER=None
+QA_ORGANIZATION='ofo1daa1l'
+QA_VIEWER_SECRET='ORBIT_CONTEXT_QA_VIEWER'
+
+
+def live_qa_context(config, path, viewer):
+    """Read the fixed QA Context MCP with a temporary, read-only org token.
+
+    Configuration is frozen by the controller; the model can supply only an
+    admitted entry path. Neither a CLI credential nor an arbitrary URL is used.
+    """
+    import re
+    if config.get('transport')!='sanity-context-mcp-live':
+        raise RuntimeError('QA_LIVE_CONTEXT_TRANSPORT_REQUIRED')
+    organization=config.get('organizationId')
+    knowledge_base=config.get('knowledgeBase')
+    endpoint=config.get('mcpEndpoint')
+    if organization!=QA_ORGANIZATION or not re.fullmatch(r'kb[A-Za-z0-9_-]{1,100}',str(knowledge_base or '')):
+        raise RuntimeError('FIXED_QA_CONTEXT_IDENTITY_REQUIRED')
+    if knowledge_base in ('kb5CHIYGXCMJ','kbbBvrClyweF'):
+        raise RuntimeError('PRODUCTION_CONTEXT_FORBIDDEN')
+    if not re.fullmatch(r'[a-z0-9-]{1,64}',str(endpoint or '')) or not isinstance(viewer,str) or not viewer:
+        raise RuntimeError('QA_CONTEXT_VIEWER_CONFIGURATION_REQUIRED')
+    if path and path not in config['paths']:
+        return {'state':'NOT_ALLOWED'}
+    url=('https://api.sanity.io/v1/context/organizations/'+organization+'/mcp/'+endpoint+'?'+
+         urllib.parse.urlencode({'mode':'knowledge_base','knowledgeBases':knowledge_base,
+                                 'tools':'initial_context,knowledge_base_read'}))
+    arguments={'knowledgeBase':knowledge_base,'paths':[path]} if path else {}
+    payload={'jsonrpc':'2.0','id':1,'method':'tools/call','params':{
+        'name':'knowledge_base_read' if path else 'initial_context','arguments':arguments}}
+    request=urllib.request.Request(url,data=json.dumps(payload).encode(),method='POST',headers={
+        'Accept':'application/json, text/event-stream','Content-Type':'application/json',
+        'Authorization':'Bearer '+viewer})
+    class NoRedirect(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, request, file, code, message, headers, new_url):
+            raise RuntimeError('QA_CONTEXT_REDIRECT_REJECTED')
+    with urllib.request.build_opener(NoRedirect()).open(request,timeout=25) as response:
+        content=response.read(262144+1)
+        if len(content)>262144: raise RuntimeError('QA_CONTEXT_RESPONSE_TOO_LARGE')
+        content_type=response.headers.get('Content-Type','')
+    raw=content.decode('utf-8')
+    if 'text/event-stream' in content_type:
+        rpc=None
+        for event in re.split(r'\r?\n\r?\n',raw):
+            data='\n'.join(line[5:].lstrip() for line in event.splitlines() if line.startswith('data:'))
+            if not data: continue
+            candidate=json.loads(data)
+            if candidate.get('id')==1: rpc=candidate
+    else: rpc=json.loads(raw)
+    if not isinstance(rpc,dict) or rpc.get('id')!=1 or rpc.get('error') or rpc.get('result',{}).get('isError'):
+        raise RuntimeError('QA_CONTEXT_RPC_REJECTED')
+    blocks=rpc.get('result',{}).get('content')
+    if not isinstance(blocks,list) or not blocks or any(block.get('type')!='text' or not isinstance(block.get('text'),str) for block in blocks):
+        raise RuntimeError('QA_CONTEXT_CONTENT_REJECTED')
+    return {'state':'READY','source':'sanity-context-mcp','knowledgeBase':knowledge_base,'content':blocks}
+
+
+def selected_context_cases(configuration):
+    selected=configuration.get('contextCaseSelection',list(CASES))
+    if not isinstance(selected,list) or not selected or len(set(selected))!=len(selected) or any(case not in CASES for case in selected):
+        raise RuntimeError('CONTEXT_CASE_SELECTION_INVALID')
+    return selected
 
 @kbench.task(name='Orbit Context versus same original corpus v2',description='Paired source reading; corpus parity and semantic relevance require independent review.')
 def context_comparison(llm,case:str,mode:str,repetition:int,campaign_fingerprint:str)->dict:
@@ -58,13 +121,20 @@ def context_comparison(llm,case:str,mode:str,repetition:int,campaign_fingerprint
         if mode!='context' or (path and path not in config['paths']):
             result={'state':'NOT_ALLOWED'}
             trace.append({'tool':'read_context','path':path,'result':result}); checkpoint(); return result
-        endpoint='entries?'+urllib.parse.urlencode({'paths':json.dumps([path])}) if path else 'outline'
         try:
-            request=urllib.request.Request('https://orbit.securedme.ca/api/v1/knowledge/'+endpoint,headers={'Accept':'application/json'})
-            with urllib.request.urlopen(request,timeout=25) as response:
-                content=response.read(2*1024*1024+1)
-                if len(content)>2*1024*1024: raise ValueError('CONTEXT_RESPONSE_TOO_LARGE')
-                result=json.loads(content)
+            if config.get('transport')=='sanity-context-mcp-live':
+                result=live_qa_context(config,path,CONTEXT_VIEWER)
+            else:
+                if RUN_CONFIG.get('contextCaseSelection'):
+                    raise RuntimeError('PROSPECTIVE_D_REQUIRES_QA_LIVE_TRANSPORT')
+                # Historical transport remains explicit for its preserved input
+                # contract. It cannot qualify the prospective paired QA corpus.
+                endpoint='entries?'+urllib.parse.urlencode({'paths':json.dumps([path])}) if path else 'outline'
+                request=urllib.request.Request('https://orbit.securedme.ca/api/v1/knowledge/'+endpoint,headers={'Accept':'application/json'})
+                with urllib.request.urlopen(request,timeout=25) as response:
+                    content=response.read(2*1024*1024+1)
+                    if len(content)>2*1024*1024: raise ValueError('CONTEXT_RESPONSE_TOO_LARGE')
+                    result=json.loads(content)
             expected=config['responseDigests'].get(path)
             if expected and context_digest(result)!=expected:
                 result={'state':'CONTEXT_FINGERPRINT_CHANGED'}
@@ -102,19 +172,31 @@ def context_comparison(llm,case:str,mode:str,repetition:int,campaign_fingerprint
     return LEDGER.call(parameters,investigate)
 
 def run_context_campaign():
-    global LEDGER
+    global LEDGER,CONTEXT_VIEWER
     if not Path('/kaggle/working').is_dir(): raise RuntimeError('KAGGLE_REQUIRED')
     import pandas as pd
     LEDGER=CampaignLedger(RUN_CONFIG,'D')
     if MODELS!=RUN_CONFIG['models']: raise RuntimeError('PINNED_MODEL_CONFIGURATION_MISMATCH')
-    for case in CASES:
+    selected=selected_context_cases(RUN_CONFIG)
+    planned=len(selected)*2*len(MODELS)*3
+    if RUN_CONFIG['targets']['D']['trajectories']!=planned:
+        raise RuntimeError('CONTEXT_SELECTED_TARGET_MISMATCH')
+    for case in selected:
         config=RUN_CONFIG['contextCases'][case]
         if not config.get('parityReviewed') or not config.get('paths') or not config.get('responseDigests'):
             raise RuntimeError('CONTEXT_CORPUS_PARITY_NOT_FROZEN')
+        if RUN_CONFIG.get('contextCaseSelection'):
+            if config.get('transport')!='sanity-context-mcp-live' or config.get('organizationId')!=QA_ORGANIZATION:
+                raise RuntimeError('PROSPECTIVE_D_REQUIRES_QA_LIVE_TRANSPORT')
+    if any(RUN_CONFIG['contextCases'][case].get('transport')=='sanity-context-mcp-live' for case in selected):
+        if RUN_CONFIG.get('contextViewerSecretName')!=QA_VIEWER_SECRET:
+            raise RuntimeError('FIXED_QA_VIEWER_SECRET_REQUIRED')
+        from kaggle_secrets import UserSecretsClient
+        CONTEXT_VIEWER=UserSecretsClient().get_secret(QA_VIEWER_SECRET)
     errors=[]
     try:
       for repetition in range(3):
-        for case in CASES:
+        for case in selected:
           if LEDGER.blocked.is_set(): break
           # Keep Context/textual and both models in the same declared lot.
           with kbench.client.enable_cache():
@@ -126,7 +208,8 @@ def run_context_campaign():
     finally:
       rows=LEDGER.rows()
       completed=[row['result'] for row in rows if row['state']=='completed']
-      accounting={'planned':24,'completed':len(completed),'state':'complete' if len(completed)==24 else 'partial',
+      accounting={'planned':planned,'completed':len(completed),'state':'complete' if len(completed)==planned else 'partial',
+          'selectedCases':selected,'fullMissionTarget':24,'fullMissionComplete':planned==24 and len(completed)==24,
           'comparativeScore':'not-arbitrated','quotaBlocked':LEDGER.blocked.is_set(),'ledger':LEDGER.accounting()}
       Path('/kaggle/working/context-completed.json').write_text(json.dumps(completed,indent=2))
       Path('/kaggle/working/context-accounting.json').write_text(json.dumps(accounting,indent=2))

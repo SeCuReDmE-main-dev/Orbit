@@ -1,0 +1,101 @@
+{
+  "namespace": "orbit-context-qa-20261003",
+  "phase": "status",
+  "case": "provider",
+  "organizationId": "ofo1daa1l",
+  "observedAt": "2026-10-03T13:16:50.317Z",
+  "modelCalls": 0,
+  "productionModified": false,
+  "credentialsPrinted": false,
+  "sourceTextPrinted": false,
+  "state": "QA_STATUS_OBSERVED",
+  "cases": [
+    {
+      "case": "provider",
+      "knowledgeBase": "kbMOG2p1HkA4",
+      "state": "review",
+      "isBuilding": false,
+      "sourceUsage": {
+        "used": 12,
+        "limit": 5000
+      },
+      "imports": [
+        {
+          "filename": "r07-d01.md",
+          "status": "succeeded"
+        },
+        {
+          "filename": "r07-d02.md",
+          "status": "succeeded"
+        },
+        {
+          "filename": "r07-d03.md",
+          "status": "succeeded"
+        },
+        {
+          "filename": "r07-d04.md",
+          "status": "succeeded"
+        },
+        {
+          "filename": "r07-d05.md",
+          "status": "succeeded"
+        },
+        {
+          "filename": "r07-d06.md",
+          "status": "succeeded"
+        },
+        {
+          "filename": "r07-d07.md",
+          "status": "succeeded"
+        },
+        {
+          "filename": "r07-d08.md",
+          "status": "succeeded"
+        },
+        {
+          "filename": "r07-d09.md",
+          "status": "succeeded"
+        },
+        {
+          "filename": "r07-d10.md",
+          "status": "succeeded"
+        },
+        {
+          "filename": "r07-d11.md",
+          "status": "succeeded"
+        },
+        {
+          "filename": "r07-d12.md",
+          "status": "succeeded"
+        }
+      ],
+      "builds": [
+        {
+          "jobId": "ctx-build-692c7bfc-52a0-4537-b9d9-703d7fd55cb2-1791033115023",
+          "submittedAt": "2026-10-03T13:11:54.577Z",
+          "type": "initial",
+          "status": "succeeded",
+          "completedAt": "2026-10-03T13:15:39.975Z",
+          "revisionId": "297caf88-114e-407b-b0e0-582082f772c2",
+          "entryCount": 10
+        }
+      ]
+    }
+  ],
+  "budget": {
+    "observed": [
+      {
+        "knowledgeBase": "kbMOG2p1HkA4",
+        "title": "Orbit Benchmark Matched D 2026-10-03 — Provider",
+        "state": "review",
+        "used": 12,
+        "limit": 5000,
+        "skipped": 0
+      }
+    ],
+    "used": 12,
+    "additional": 0,
+    "after": 12,
+    "safetyCeiling": 150
+  }
+}

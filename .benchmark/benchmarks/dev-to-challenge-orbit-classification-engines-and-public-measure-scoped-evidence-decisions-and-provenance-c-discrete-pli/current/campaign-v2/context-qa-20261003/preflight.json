@@ -1,0 +1,31 @@
+{
+  "namespace": "orbit-context-qa-20261003",
+  "phase": "preflight",
+  "case": null,
+  "organizationId": "ofo1daa1l",
+  "observedAt": "2026-10-03T13:07:56.246Z",
+  "modelCalls": 0,
+  "productionModified": false,
+  "credentialsPrinted": false,
+  "sourceTextPrinted": false,
+  "state": "QA_CONTEXT_AVAILABLE",
+  "organizationName": "Orbit Context QA 2026-10-03",
+  "budget": {
+    "observed": [
+      {
+        "knowledgeBase": "kbMOG2p1HkA4",
+        "title": "Orbit Benchmark Matched D 2026-10-03 — Provider",
+        "state": "created",
+        "used": 0,
+        "limit": 5000,
+        "skipped": 0
+      }
+    ],
+    "used": 0,
+    "additional": 24,
+    "after": 24,
+    "safetyCeiling": 150
+  },
+  "mutation": false,
+  "knowledgeBaseCapacity": "create-response-required"
+}

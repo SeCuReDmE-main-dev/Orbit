@@ -1,0 +1,41 @@
+{
+  "namespace": "orbit-context-qa-20261003",
+  "phase": "audit",
+  "case": "provider",
+  "organizationId": "ofo1daa1l",
+  "observedAt": "2026-10-03T13:27:06.808Z",
+  "modelCalls": 0,
+  "productionModified": false,
+  "credentialsPrinted": false,
+  "sourceTextPrinted": false,
+  "state": "BUILT_CONTENT_RETRIEVED_NOT_ADMITTED",
+  "knowledgeBase": "kbMOG2p1HkA4",
+  "expectedSources": 12,
+  "observedSources": 12,
+  "entryPaths": [
+    "agentic_workflows",
+    "api_execution",
+    "data_retention",
+    "deep_research",
+    "enterprise_compliance",
+    "model_selection",
+    "prompt_engineering_and_multimodal",
+    "responsible_use",
+    "terms_of_service",
+    "training_policies"
+  ],
+  "revisions": [
+    "297caf88-114e-407b-b0e0-582082f772c2"
+  ],
+  "openIssues": 2,
+  "quotationAudit": {
+    "spans": 58,
+    "normalizedLiteralMatches": 58,
+    "outsideCaseCitations": 0,
+    "citedFrozenSources": 12,
+    "method": "literal quote matching after whitespace normalization; not semantic truth"
+  },
+  "privateAuditSha256": "a6be8d21bea1f343c298fd83858863301ca7e270b24a4ca5b89cdafae58a10ef",
+  "semanticParity": "pending",
+  "transportQualified": false
+}

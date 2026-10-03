@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "orbit-v3-evolution",
+  "title": "Orbit: a research foundation becomes a teaching practice",
+  "engine": "graphviz",
+  "profile": "education-platform",
+  "qa_status": "render-ready",
+  "prepared_on": "2026-10-03",
+  "source_path": "source.dot",
+  "markdown_path": "../../article.en.md",
+  "other_article_path": "../../article.fr.md",
+  "caption_path": "caption.md",
+  "alt_text_path": "alt_text.md",
+  "rendered": {
+    "svg": "diagram.svg",
+    "png": "diagram.png"
+  },
+  "tool_versions": {
+    "graphviz": "15.1.0 (20260618.0150)"
+  },
+  "render_messages": {
+    "svg": "dot -Tsvg completed with exit code 0; accessible title/description added after render.",
+    "png": "dot -Tpng completed with exit code 0."
+  },
+  "qa_checks": {
+    "source_and_exports_exist": true,
+    "bilingual_caption_present": true,
+    "bilingual_alternative_present": true,
+    "svg_role_and_description_present": true,
+    "visual_review": "Observed full PNG: labels legible, roles distinguishable, no clipping. Authority flow revised vertically for article width.",
+    "svg_xml_valid": true,
+    "source_references_exist": true,
+    "svg_contains_no_scripts_or_remote_images": true,
+    "png_dimensions_px": [
+      1429,
+      335
+    ]
+  },
+  "source_references": [
+    "docs/receipts/CHALLENGE_WORK_TIMELINE.md",
+    "docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json.trace.json",
+    "docs/receipts/formation/v3-public-readback.json",
+    "docs/learning/orbit-formation/FORMATION_CONTRACT.md"
+  ],
+  "warnings": [
+    "Dates identify retained Git metadata, tool traces or delivery checkpoints; GitHub publication occurred October 1.",
+    "The illustration makes no completed benchmark or measured teaching-effectiveness claim."
+  ],
+  "errors": [],
+  "artifacts": {
+    "source.dot": {
+      "bytes": 2058,
+      "sha256": "7de2ea2db7794aedf57340bdc97e006ad97f8f7a53e596a6dc66609976187c48"
+    },
+    "diagram.svg": {
+      "bytes": 5352,
+      "sha256": "e19e1179a4d6928f83095f8b48052368f49335bfbe2385d4c8fa568217ac322e"
+    },
+    "diagram.png": {
+      "bytes": 37742,
+      "sha256": "e7c28017ce7c2f195b867d7c154e15b6a2b3f1fcb76cecee99f3e220266ce887"
+    },
+    "caption.md": {
+      "bytes": 492,
+      "sha256": "f6b96d44456fe4aa70147e726ea777d307fcde6f00a290084c78885f3668c493"
+    },
+    "alt_text.md": {
+      "bytes": 1110,
+      "sha256": "6731744c01aeb75e6f46a4636708e60e5da2532e63c3306a25867ca4cbc37ca2"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "state": "PREPARED_RUNTIME_CATALOG_CHECK_REQUIRED",
+  "campaignId": "orbit-kaggle-20261003-final-d1",
+  "notebook": ".orbit/cloud-lab/orbit-context-qa-20261003/runner-provider.ipynb",
+  "notebookSha256": "cc5ba71ccee6e1c69426ec8f8b6eddb13dfc9bdaf35c472c91cf43ff0ec3b65f",
+  "notebookBytes": 66790,
+  "anticipatedExecutableConfigurationSha256": "329c5b65893bce11ae1d13480fb8c98dfeb9b08c850994275cdc11f4f836241e",
+  "manifestSha256": "cc455379718588bb37eb41ed15f0e40f8831692119469b2abb3745feaeba4f5e",
+  "harnessSha256": "aba135b17b73c3ff2976ab1d875f355652bca109a9e40666948bd522f75985d2",
+  "contextResponseDigests": {
+    "": "d8f6ca876168dce19f6c817910a7c55f473e37e098b2412709abb065867f058f",
+    "agentic_workflows": "23f2fa781b64a46174b1ad75236119e79cd84b4bfd82785180469b9ee488e2b6",
+    "api_execution": "3d982803f54404e6980f329d46f96a6c3efef41af8ba9739c6a18015a59cee75",
+    "data_retention": "7ec7d699f38933498a05b86ef607315fd1012de03652022aee81cba25b1f9684",
+    "deep_research": "7f63e78e547ab2a77923c1d48604cb3dc31ded46b6ecf93e5be7582d098723e1",
+    "enterprise_compliance": "61e93f718f9e9ea0f8c5cc27e19f1f038726478a737ca184f538fb2761afc99e",
+    "model_selection": "88cd935d29059e2a62486686962f3100461ab5510522cd796058737780800e17",
+    "prompt_engineering_and_multimodal": "d09bc380eb9bb33af905328d5d07a16b7887d1ce5bf8d2f2a46bc58e0f18fa1e",
+    "responsible_use": "36776e1d3d929991fa4d7431ab0dfee30ad991053c03d43ff12fb4549ad029bb",
+    "terms_of_service": "ae43f574f9e2e0c4df27c2222f971af7bce4461744daba309e09f2cb622bb5ae",
+    "training_policies": "0cef76d3f9782f569305821b43fd40e409b43c7787b48cc1d21201ba74065512"
+  },
+  "sdkCatalogVerifiedInKaggle": false,
+  "liveMcpLocalTechnicalReads": 11,
+  "mcpMatchesSdkEntryBodies": 10,
+  "sourceLiteralMatches": 58,
+  "sourceCitationCoverage": 12,
+  "openContextIssues": 2,
+  "semanticReview": "pending",
+  "plannedTrajectories": 12,
+  "fullMissionTarget": 24,
+  "modelCallsExecuted": 0,
+  "softwareTestsExecuted": false,
+  "syntaxCompilation": "passed",
+  "credentialsEmbedded": false,
+  "privateSourceTextEmbedded": false,
+  "quotaSource": {
+    "source": "coordinator readback of Kaggle Refresh Quota UI",
+    "observedAt": "2026-10-03T13:56:00+00:00",
+    "timestampPrecision": "minute",
+    "modelCatalog": "runtime verification required before freezing",
+    "sdkVersion": "0.6.1",
+    "modelCalls": 0,
+    "contextMcpReceipt": "mcp-provider.json",
+    "contextMcpObservedAt": "2026-10-03T13:55:51.400Z",
+    "quotaResetTimes": "unavailable"
+  },
+  "quotaSnapshot": [
+    {
+      "name": "daily",
+      "limitNanodollars": 10000000000,
+      "usedNanodollars": 890000000,
+      "observedAtUnix": 1791035760,
+      "resetsAtUnix": null
+    },
+    {
+      "name": "monthly",
+      "limitNanodollars": 100000000000,
+      "usedNanodollars": 19180000000,
+      "observedAtUnix": 1791035760,
+      "resetsAtUnix": null
+    }
+  ]
+}

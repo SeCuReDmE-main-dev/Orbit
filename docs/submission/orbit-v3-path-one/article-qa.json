@@ -1,0 +1,1487 @@
+{
+  "schemaVersion": "orbit-article-document-qa-v1",
+  "preparedOn": "2026-10-03",
+  "scope": "Local document structure, source linkage, exact recorded trace and diagram package inspection; no product/model execution or fresh public HTTP validation",
+  "productTestsExecuted": false,
+  "modelCalls": 0,
+  "networkRequests": 0,
+  "published": false,
+  "files": {
+    "article.en.md": {
+      "sha256": "03e1d25e5971338e6d21902d3b046385c075e7737f4ab1a6f1d657299b6d8b90",
+      "bytes": 22895,
+      "wordCountApproximate": 2934,
+      "h2": [
+        "What I Built",
+        "Demo",
+        "Code",
+        "How I Used Sanity",
+        "Sanity Project Details",
+        "Agent Session"
+      ],
+      "actualTraceExactMatch": true,
+      "canonicalDisclosureExactCount": 1,
+      "frontMatterDisclosureCount": 1,
+      "diagramCount": 2
+    },
+    "article.fr.md": {
+      "sha256": "cbd3fa5a823b737736b05a36fc12dc0a085788bd0d0c9f888a8566bf26efdab6",
+      "bytes": 25637,
+      "wordCountApproximate": 3227,
+      "h2": [
+        "What I Built",
+        "Demo",
+        "Code",
+        "How I Used Sanity",
+        "Sanity Project Details",
+        "Agent Session"
+      ],
+      "actualTraceExactMatch": true,
+      "canonicalDisclosureExactCount": null,
+      "frontMatterDisclosureCount": 1,
+      "diagramCount": 2
+    }
+  },
+  "errors": [],
+  "negativeConstructionReview": [
+    {
+      "line": 149,
+      "terms": [
+        "not",
+        "not"
+      ],
+      "excerpt": "I retained three deterministic engines: `baseline`, `n` and `p`. They examine evidence under different representations, with explicit selection and separate outputs. They do not choose a winning engine automatically. T/I/F describes evidence for a claim; it is not a learner's grade or a probability of truth.",
+      "justification": "Exact engine-selection authority and evidence-versus-learner-grade distinction"
+    }
+  ],
+  "localLinks": [
+    {
+      "document": "agent-session-excerpts.md",
+      "target": "../../delivery-2026-09-28/workshop/CONTEXT_AGENT_STATUS.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/delivery-2026-09-28/workshop/CONTEXT_AGENT_STATUS.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "agent-session-excerpts.md",
+      "target": "../../delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json.trace.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json.trace.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "agent-session-excerpts.md",
+      "target": "../../delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/CHALLENGE_WORK_TIMELINE.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/CHALLENGE_WORK_TIMELINE.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/master/docs/submission/orbit-v3-path-one/assets/evolution/diagram.svg",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/assets/evolution/diagram.svg",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/atom-five-navigation-live.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/atom-five-navigation-live.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/v3-public-readback.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/v3-public-readback.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/learning/orbit-formation/publication/CANVA_DELIVERY.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/learning/orbit-formation/publication/CANVA_DELIVERY.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/learning/orbit-formation/FORMATION_CONTRACT.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/learning/orbit-formation/FORMATION_CONTRACT.md",
+      "gitStatus": "committed-local-changes-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/learning/orbit-formation/STUDIO_INSTALLATION.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/learning/orbit-formation/STUDIO_INSTALLATION.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/learning/orbit-formation/publication/outputs/book.pdf",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/learning/orbit-formation/publication/outputs/book.pdf",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json.trace.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json.trace.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/delivery-2026-09-28/workshop/CONTEXT_AGENT_STATUS.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/delivery-2026-09-28/workshop/CONTEXT_AGENT_STATUS.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/course-context-live-transport.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/course-context-live-transport.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/course-context-ingestion.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/course-context-ingestion.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/master/docs/submission/orbit-v3-path-one/assets/authority-flow/diagram.svg",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/assets/authority-flow/diagram.svg",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/FINAL_DELIVERY_2026-10-01.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/FINAL_DELIVERY_2026-10-01.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/FORMATION_DELIVERY_STATUS.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/FORMATION_DELIVERY_STATUS.md",
+      "gitStatus": "committed-local-changes-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/c-resumption-20261003.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/c-resumption-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/c4-complement-20261003.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/c4-complement-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/d-provider-20261003.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/d-provider-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/final-public-readback-20261003.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/final-public-readback-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/studio/sanity.config.ts",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "studio/sanity.config.ts",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/studio/schemaTypes/index.ts",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "studio/schemaTypes/index.ts",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/submission/orbit-v3-path-one/agent-session-excerpts.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/agent-session-excerpts.md",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json.trace.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json.trace.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/CHALLENGE_WORK_TIMELINE.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/CHALLENGE_WORK_TIMELINE.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/master/docs/submission/orbit-v3-path-one/assets/evolution/diagram.svg",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/assets/evolution/diagram.svg",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/atom-five-navigation-live.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/atom-five-navigation-live.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/v3-public-readback.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/v3-public-readback.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/learning/orbit-formation/publication/CANVA_DELIVERY.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/learning/orbit-formation/publication/CANVA_DELIVERY.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/learning/orbit-formation/FORMATION_CONTRACT.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/learning/orbit-formation/FORMATION_CONTRACT.md",
+      "gitStatus": "committed-local-changes-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/learning/orbit-formation/STUDIO_INSTALLATION.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/learning/orbit-formation/STUDIO_INSTALLATION.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/learning/orbit-formation/publication/outputs/book.pdf",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/learning/orbit-formation/publication/outputs/book.pdf",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json.trace.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json.trace.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/delivery-2026-09-28/workshop/CONTEXT_AGENT_STATUS.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/delivery-2026-09-28/workshop/CONTEXT_AGENT_STATUS.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/course-context-live-transport.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/course-context-live-transport.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/course-context-ingestion.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/course-context-ingestion.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/master/docs/submission/orbit-v3-path-one/assets/authority-flow/diagram.svg",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/assets/authority-flow/diagram.svg",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/FINAL_DELIVERY_2026-10-01.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/FINAL_DELIVERY_2026-10-01.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/FORMATION_DELIVERY_STATUS.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/FORMATION_DELIVERY_STATUS.md",
+      "gitStatus": "committed-local-changes-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/c-resumption-20261003.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/c-resumption-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/c4-complement-20261003.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/c4-complement-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/d-provider-20261003.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/d-provider-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/receipts/formation/final-public-readback-20261003.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/receipts/formation/final-public-readback-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/studio/sanity.config.ts",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "studio/sanity.config.ts",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/studio/schemaTypes/index.ts",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "studio/schemaTypes/index.ts",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/submission/orbit-v3-path-one/agent-session-excerpts.md",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/agent-session-excerpts.md",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json.trace.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json.trace.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://github.com/SeCuReDmE-main-dev/Orbit/blob/master/docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json",
+      "exists": true,
+      "scope": "Mapped GitHub target",
+      "repositoryPath": "docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "assets/README.md",
+      "target": "evolution/diagram.svg",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/assets/evolution/diagram.svg",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "assets/README.md",
+      "target": "authority-flow/diagram.svg",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/assets/authority-flow/diagram.svg",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "assets/README.md",
+      "target": "../demo-capture-checklist.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/demo-capture-checklist.md",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "demo-capture-checklist.md",
+      "target": "../../receipts/formation/final-public-readback-20261003.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/final-public-readback-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/A88-SCAFFOLD-RECEIPT.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/A88-SCAFFOLD-RECEIPT.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/CHALLENGE_WORK_TIMELINE.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/CHALLENGE_WORK_TIMELINE.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/CHALLENGE_WORK_TIMELINE.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/CHALLENGE_WORK_TIMELINE.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json.trace.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json.trace.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../delivery-2026-09-28/workshop/CONTEXT_AGENT_STATUS.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/delivery-2026-09-28/workshop/CONTEXT_AGENT_STATUS.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "agent-session-excerpts.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/agent-session-excerpts.md",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "agent-session-excerpts.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/agent-session-excerpts.md",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "agent-session-excerpts.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/agent-session-excerpts.md",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/atom-five-navigation-live.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/atom-five-navigation-live.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/atom-five-navigation-live.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/atom-five-navigation-live.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/FORMATION_CONTRACT.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/FORMATION_CONTRACT.md",
+      "gitStatus": "committed-local-changes-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/live-browser-pointer-target-final.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/live-browser-pointer-target-final.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/v3-public-readback.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/v3-public-readback.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/FORMATION_HANDOFF_2026-10-01.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/FORMATION_HANDOFF_2026-10-01.md",
+      "gitStatus": "committed-local-changes-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/v3-public-readback.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/v3-public-readback.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/atom-five-navigation-live.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/atom-five-navigation-live.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/FORMATION_CONTRACT.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/FORMATION_CONTRACT.md",
+      "gitStatus": "committed-local-changes-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/PROJECT.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/PROJECT.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/notebooks/README.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/notebooks/README.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/FORMATION_DELIVERY_STATUS.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/FORMATION_DELIVERY_STATUS.md",
+      "gitStatus": "committed-local-changes-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/free-colab-module-8-manual-import-assembled.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/free-colab-module-8-manual-import-assembled.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/actual-manual-import-assembly-static-kaggle.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/actual-manual-import-assembly-static-kaggle.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/assembly/README.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/assembly/README.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/PROJECT.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/PROJECT.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/FORMATION_CONTRACT.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/FORMATION_CONTRACT.md",
+      "gitStatus": "committed-local-changes-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/native-root-schema-discovery.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/native-root-schema-discovery.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/cross-origin-public-validation.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/cross-origin-public-validation.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/WEBMCP.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/WEBMCP.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/WEBMCP.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/WEBMCP.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/FORMATION_CONTRACT.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/FORMATION_CONTRACT.md",
+      "gitStatus": "committed-local-changes-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/course-context-ingestion.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/course-context-ingestion.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/course-context-issue-triage.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/course-context-issue-triage.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/course-context-live-transport.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/course-context-live-transport.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/course-context-issue-triage.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/course-context-issue-triage.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/native-studio-preview-20261002.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/native-studio-preview-20261002.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/native-studio-publication-first-attempt-20261002.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/native-studio-publication-first-attempt-20261002.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/native-studio-publication-recovery-20261002.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/native-studio-publication-recovery-20261002.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/studio-software-qa-20261003.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/studio-software-qa-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/native-studio-logout-20261002.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/native-studio-logout-20261002.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/native-studio-final-cleanup-20261002.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/native-studio-final-cleanup-20261002.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/FORMATION_CONTRACT.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/FORMATION_CONTRACT.md",
+      "gitStatus": "committed-local-changes-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/WEBMCP.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/WEBMCP.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/publication/CANVA_DELIVERY.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/publication/CANVA_DELIVERY.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/publication/CANVA_DELIVERY.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/publication/CANVA_DELIVERY.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/final-public-readback-20261003.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/final-public-readback-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/final-static-deploy-20261003.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/final-static-deploy-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/final-public-readback-20261003.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/final-public-readback-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "assets/evolution/source.dot",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/assets/evolution/source.dot",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/CHALLENGE_WORK_TIMELINE.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/CHALLENGE_WORK_TIMELINE.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json.trace.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/delivery-2026-09-28/workshop/CONTEXT_DEMO_PLAN_PENDING.json.trace.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/v3-public-readback.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/v3-public-readback.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "assets/authority-flow/source.dot",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/assets/authority-flow/source.dot",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/WEBMCP.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/WEBMCP.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/FORMATION_CONTRACT.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/FORMATION_CONTRACT.md",
+      "gitStatus": "committed-local-changes-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/course-context-live-transport.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/course-context-live-transport.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/publication/README.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/publication/README.md",
+      "gitStatus": "committed-local-changes-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../learning/orbit-formation/publication/qa/document-delivery-review.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/learning/orbit-formation/publication/qa/document-delivery-review.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/FORMATION_DELIVERY_STATUS.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/FORMATION_DELIVERY_STATUS.md",
+      "gitStatus": "committed-local-changes-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/FINAL_DELIVERY_2026-10-01.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/FINAL_DELIVERY_2026-10-01.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/c-resumption-20261003.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/c-resumption-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/c4-complement-20261003.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/c4-complement-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/d-provider-20261003.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/d-provider-20261003.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/FINAL_DELIVERY_2026-10-01.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/FINAL_DELIVERY_2026-10-01.md",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/FINALIZATION_2026-10-03.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/FINALIZATION_2026-10-03.md",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../../studio/sanity.config.ts",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "studio/sanity.config.ts",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "evidence-map.md",
+      "target": "../../receipts/formation/course-context-live-transport.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/receipts/formation/course-context-live-transport.json",
+      "gitStatus": "committed",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "README.md",
+      "target": "article.en.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/article.en.md",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "README.md",
+      "target": "article.fr.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/article.fr.md",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "README.md",
+      "target": "evidence-map.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/evidence-map.md",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "README.md",
+      "target": "agent-session-excerpts.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/agent-session-excerpts.md",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "README.md",
+      "target": "voice-profile.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/voice-profile.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "README.md",
+      "target": "article-qa.json",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/article-qa.json",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "README.md",
+      "target": "demo-capture-checklist.md",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/demo-capture-checklist.md",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "README.md",
+      "target": "assets/evolution/diagram.svg",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/assets/evolution/diagram.svg",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    },
+    {
+      "document": "README.md",
+      "target": "assets/authority-flow/diagram.svg",
+      "exists": true,
+      "scope": "Local relative target",
+      "repositoryPath": "docs/submission/orbit-v3-path-one/assets/authority-flow/diagram.svg",
+      "gitStatus": "new-public-artifact-pending-push",
+      "publicLinkAllowedAfterPush": true
+    }
+  ],
+  "externalUrlsPendingFreshPublicReadback": [
+    "https://dev.to/challenges/sanity-2026-09-16",
+    "https://github.com/SeCuReDmE-main-dev/Orbit",
+    "https://github.com/SeCuReDmE-main-dev/Orbit/commit/e3326986451d366bc25ddc01220a288c1e9fc14a",
+    "https://github.com/SeCuReDmE-main-dev/Orbit/commit/f2313b27a586bbe98e53869d6753315935b91b52",
+    "https://orbit-formation-module-1.my.canva.site/",
+    "https://orbit.securedme.ca/",
+    "https://orbit.securedme.ca/formation/lab/",
+    "https://orbit.securedme.ca/formation/projets/",
+    "https://orbit.securedme.ca/formation/studio/orbit-learning-lab",
+    "https://orbit.securedme.ca/guide/"
+  ],
+  "newArticleGitHubLinksNeedPush": true,
+  "authorApprovalObserved": false,
+  "notebookLmVideo": {
+    "owner": "Jean-Sébastien",
+    "subject": "Explanation of the tool, distinct from the article",
+    "reportedApproximateMinutes": 4,
+    "state": "AUTHOR_PRODUCTION_IN_PROGRESS",
+    "actualUrl": null,
+    "includedCompletedClaim": false
+  },
+  "state": "PASSED_LOCAL_DOCUMENT_INSPECTION",
+  "initialInspection": {
+    "state": "FAILED_LOCAL_DOCUMENT_INSPECTION",
+    "errors": [
+      "README.md: missing article-qa.json"
+    ],
+    "resolution": "The first checker ran before creating its own output, which README already links. The generated report now exists; all document links are rechecked."
+  },
+  "voiceProfileJsonValid": true,
+  "imageAlternatives": [
+    {
+      "document": "article.en.md",
+      "target": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/master/docs/submission/orbit-v3-path-one/assets/evolution/diagram.svg",
+      "nonempty": true
+    },
+    {
+      "document": "article.en.md",
+      "target": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/master/docs/submission/orbit-v3-path-one/assets/authority-flow/diagram.svg",
+      "nonempty": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/master/docs/submission/orbit-v3-path-one/assets/evolution/diagram.svg",
+      "nonempty": true
+    },
+    {
+      "document": "article.fr.md",
+      "target": "https://raw.githubusercontent.com/SeCuReDmE-main-dev/Orbit/master/docs/submission/orbit-v3-path-one/assets/authority-flow/diagram.svg",
+      "nonempty": true
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "orbit-v3-evolution",
+      "source": "assets/evolution/source.dot",
+      "svg": "assets/evolution/diagram.svg",
+      "png": "assets/evolution/diagram.png",
+      "manifestSchemaEngine": "jsonschema",
+      "schemaValid": true,
+      "state": "render-ready",
+      "pngDimensionsPx": [
+        1429,
+        335
+      ]
+    },
+    {
+      "id": "orbit-v3-authority-flow",
+      "source": "assets/authority-flow/source.dot",
+      "svg": "assets/authority-flow/diagram.svg",
+      "png": "assets/authority-flow/diagram.png",
+      "manifestSchemaEngine": "jsonschema",
+      "schemaValid": true,
+      "state": "render-ready",
+      "pngDimensionsPx": [
+        767,
+        883
+      ]
+    }
+  ],
+  "guideCorrection": "Guide FR/EN/ES correction built in Kaggle and deployed as orbit-v3-final-20261003T142300Z. Its parent-owned public HTTP readback is inspected as recorded evidence; this document QA made no fresh network request or native browser replay.",
+  "inspectionIncidents": [
+    {
+      "stage": "Diagram/article QA regeneration",
+      "state": "CHECKER_ERROR_RESOLVED",
+      "cause": "The checker first addressed calls at the JSON root; the retained trace stores them at trace.calls.",
+      "resolution": "Inspected the actual structure and repeated all checks against trace.calls; no source trace changed."
+    }
+  ],
+  "publicLinkAudit": {
+    "executed": true,
+    "method": "Git committed/index/modified path inventory and batched git check-ignore; all local and mapped GitHub targets checked",
+    "occurrences": 131,
+    "uniqueTargets": 54,
+    "ignoredLinkedTargets": 0,
+    "counts": {
+      "committed": 77,
+      "new-public-artifact-pending-push": 40,
+      "committed-local-changes-pending-push": 14
+    },
+    "publicReadbackExecuted": false,
+    "correction": "Ignored internal editorial and closure-note links were removed; public atom77-check receipt and curated author excerpts are the linked evidence."
+  },
+  "campaignReceipt": {
+    "path": "docs/receipts/formation/c-resumption-20261003.json",
+    "sha256": "8c7bd0f8ded6d0ad0c3afc6979c97730866606aef0699d523f4d9a82e1c5800a",
+    "newState": "60/60 extractions, 236/240 productions and 59/60 packets under the historical identity; original overload preserved",
+    "historicalCheckpointPreserved": true
+  },
+  "campaignComplementReceipt": {
+    "path": "docs/receipts/formation/c4-complement-20261003.json",
+    "sha256": "396ae919f3f642f3abf9704efa9e72a590859b0a905ac2f1c2f83c914d683c2e",
+    "archiveVerified": true,
+    "newState": "236 historical plus 4 complementary = 240 observed productions across two distinct execution identities; no new extraction; historical error retained",
+    "originalErrorPreserved": true
+  },
+  "updatedAt": "2026-10-03T15:02:57.264086+00:00",
+  "sourceHead": "f2313b27a586bbe98e53869d6753315935b91b52",
+  "sourceSnapshotIncludesUncommittedChanges": true,
+  "campaignProviderReceipt": {
+    "path": "docs/receipts/formation/d-provider-20261003.json",
+    "sha256": "bcc31d580baeb6978f5b132c4a80eed8f73aeb269fbe25c930b7fb01b398344b",
+    "newState": "Provider lot 12/12 produced, covering 12/24 full-mission trajectories; 9/12 met the reading criterion and three Pro Context-condition outputs did not read Context; human semantic review remains pending; E remains 0/144"
+  },
+  "recordedDeploymentEvidence": [
+    {
+      "path": "docs/receipts/formation/final-static-deploy-20261003.json",
+      "sha256": "93a597494813308b779a87793247a1d386543918f16bdd9c20f6aaf6b8ce9294",
+      "releaseId": "orbit-v3-final-20261003T142300Z",
+      "readAsParentOwnedReceipt": true
+    },
+    {
+      "path": "docs/receipts/formation/final-public-readback-20261003.json",
+      "sha256": "e2579591b4a83bbbaff9b2d3e95fe05c5c7927e4a473b5570df648bc643ea2db",
+      "releaseId": "orbit-v3-final-20261003T142300Z",
+      "readAsParentOwnedReceipt": true
+    },
+    {
+      "path": "docs/receipts/formation/studio-software-qa-20261003.json",
+      "sha256": "3c876ee4b3db5d5e2a99c441dec7deea1b05b824e4f9538f2903dd8e96461d5c",
+      "releaseId": "orbit-v3-final-20261003T142300Z",
+      "readAsParentOwnedReceipt": true
+    }
+  ],
+  "remainingValidationBoundaries": [
+    "Portable Studio 1.0.1 fresh authenticated native run remains unqualified",
+    "D full target 24 is incomplete; Provider outputs and reading nonadherence are retained separately",
+    "E remains 0/144 model trajectories; resource preparation is not trajectory completion",
+    "Code/markup landing preservation is distinct from a fresh native replay or graphical measurement",
+    "New GitHub links require push and anonymous readback; author review and submission remain distinct"
+  ],
+  "publicCommitInspection": {
+    "observedAt": "2026-10-03T15:07:59.981065+00:00",
+    "sourceHead": "f2313b27a586bbe98e53869d6753315935b91b52",
+    "kind": "Read-only candidate inventory before the parent-controlled commit",
+    "modifiedTrackedFiles": 26,
+    "newPublicFiles": 49,
+    "candidatePaths": [
+      ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/context-qa-20261003/README.md",
+      ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/context-qa-20261003/audit-provider.json",
+      ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/context-qa-20261003/build-provider.json",
+      ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/context-qa-20261003/create.json",
+      ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/context-qa-20261003/import-provider.json",
+      ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/context-qa-20261003/manifest-provider.json",
+      ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/context-qa-20261003/mcp-provider.json",
+      ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/context-qa-20261003/operations.ndjson",
+      ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/context-qa-20261003/preflight.json",
+      ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/context-qa-20261003/prepare.json",
+      ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/context-qa-20261003/provider-runner-preparation.json",
+      ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/context-qa-20261003/qa-viewer-proposal.json",
+      ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/context-qa-20261003/sanity-next-preparation.json",
+      ".benchmark/benchmarks/dev-to-challenge-orbit-classification-engines-and-public-measure-scoped-evidence-decisions-and-provenance-c-discrete-pli/current/campaign-v2/context-qa-20261003/status-provider.json",
+      "docs/learning/orbit-formation/FORMATION_CONTRACT.md",
+      "docs/learning/orbit-formation/publication/README.md",
+      "docs/receipts/FORMATION_DELIVERY_STATUS.md",
+      "docs/receipts/formation/FINALIZATION_2026-10-03.md",
+      "docs/receipts/formation/FORMATION_HANDOFF_2026-10-01.md",
+      "docs/receipts/formation/c-resumption-20261003.json",
+      "docs/receipts/formation/c4-complement-20261003.json",
+      "docs/receipts/formation/d-provider-20261003.json",
+      "docs/receipts/formation/final-public-readback-20261003.json",
+      "docs/receipts/formation/final-static-deploy-20261003.json",
+      "docs/receipts/formation/studio-software-qa-20261003.json",
+      "docs/submission/orbit-v3-path-one/README.md",
+      "docs/submission/orbit-v3-path-one/agent-session-excerpts.md",
+      "docs/submission/orbit-v3-path-one/article-qa.json",
+      "docs/submission/orbit-v3-path-one/article.en.md",
+      "docs/submission/orbit-v3-path-one/article.fr.md",
+      "docs/submission/orbit-v3-path-one/assets/README.md",
+      "docs/submission/orbit-v3-path-one/assets/authority-flow/alt_text.md",
+      "docs/submission/orbit-v3-path-one/assets/authority-flow/caption.md",
+      "docs/submission/orbit-v3-path-one/assets/authority-flow/diagram.png",
+      "docs/submission/orbit-v3-path-one/assets/authority-flow/diagram.svg",
+      "docs/submission/orbit-v3-path-one/assets/authority-flow/diagram_manifest.json",
+      "docs/submission/orbit-v3-path-one/assets/authority-flow/source.dot",
+      "docs/submission/orbit-v3-path-one/assets/evolution/alt_text.md",
+      "docs/submission/orbit-v3-path-one/assets/evolution/caption.md",
+      "docs/submission/orbit-v3-path-one/assets/evolution/diagram.png",
+      "docs/submission/orbit-v3-path-one/assets/evolution/diagram.svg",
+      "docs/submission/orbit-v3-path-one/assets/evolution/diagram_manifest.json",
+      "docs/submission/orbit-v3-path-one/assets/evolution/source.dot",
+      "docs/submission/orbit-v3-path-one/demo-capture-checklist.md",
+      "docs/submission/orbit-v3-path-one/evidence-map.md",
+      "docs/submission/orbit-v3-path-one/voice-profile.json",
+      "package-lock.json",
+      "packages/learning-studio/README.md",
+      "packages/learning-studio/build.mjs",
+      "packages/learning-studio/package.json",
+      "packages/learning-studio/src/index.tsx",
+      "packages/learning-studio/src/publication.ts",
+      "tests/closure_release_packaging_test.py",
+      "tests/learning-studio-publication.test.ts",
+      "tools/kaggle_context_campaign.py",
+      "tools/kaggle_final_e_preparation_validation.py",
+      "tools/kaggle_webmcp_parallel_validation.py",
+      "tools/learning-studio-authenticated-validation.ts",
+      "tools/learning-studio-host/build_host.py",
+      "tools/learning-studio-host/package-lock.json",
+      "tools/learning-studio-host/package.json",
+      "tools/orbit_campaign_checkpoint.py",
+      "tools/package_closure_release.py",
+      "tools/prepare_c4_complement_20261003.py",
+      "tools/prepare_c_resumption_20261003.py",
+      "tools/prepare_context_qa_20261003.mjs",
+      "tools/prepare_d_provider_20261003.py",
+      "tools/prepare_final_e_20261003.py",
+      "tools/prepare_kaggle_campaign_v2.py",
+      "tools/prepare_kaggle_webmcp_validation_v2.py",
+      "tools/provision_cross_origin.py",
+      "tools/provision_studio_desktop.py",
+      "tools/provision_v2_browser_pool.py",
+      "web/src/components/GuideAtom.astro",
+      "web/src/pages/guide.astro"
+    ],
+    "privateOperationalPathsIncluded": false,
+    "archiveOrNotebookIncluded": false,
+    "candidateOverOneMiB": [],
+    "diffCheckExitCode": 0,
+    "proportionalSecretReview": {
+      "confirmedSecretFindings": 0,
+      "credentialQueryFindings": 0,
+      "falsePositiveReviewed": "package-lock.json cookie is a dependency version, not a browser cookie value",
+      "scope": "Changed/new public text candidates; no private campaign archive or notebook read for publication"
+    },
+    "commitExecuted": false,
+    "pushExecuted": false,
+    "validationBoundary": "This inventory does not qualify native Studio 1.0.1 or complete D/E. Preparation metadata remains distinct from run evidence."
+  }
+}

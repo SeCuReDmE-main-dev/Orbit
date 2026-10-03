@@ -1,0 +1,313 @@
+{
+  "state": "PASS_SOFTWARE_AND_STATIC_BUILD",
+  "kind": "software-tests-and-static-build",
+  "environment": "Kaggle",
+  "runId": "orbit-v3-studio-final-2ccfa1632c14-1791036029220880567",
+  "startedAt": "2026-10-03T14:00:29.222161+00:00",
+  "sourceSnapshot": {
+    "preparedAt": "2026-10-03T13:56:59.332588+00:00",
+    "sourceHead": "f2313b27a586bbe98e53869d6753315935b91b52",
+    "sourceBranch": "master",
+    "sourceSnapshotIncludesUncommittedChanges": true,
+    "sourceIdentitySha256": "2ccfa1632c146a32a23ca3a486fe030535fa1e03105c2ff25d6b65c69c261898",
+    "sourceBundleSha256": "372c2154e5e0e26cf000ced87df7cf193d6b9eaa3af31a6eec501e9fd25cd390",
+    "sourceFiles": 202,
+    "sourceBytes": 12308009,
+    "rootLockSha256": "013f59741a544534220cb5544cbb92191c0c99e04d79c197aa74ceb79708cf19",
+    "nodeVersion": "22.20.0",
+    "nodeSha256": "00bbd05e306ea68b6e13e17360d0e2f680b493ef95f2fea1c4296ff7437530bc",
+    "nodeUrl": "https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.xz",
+    "npmVersion": "10.9.4",
+    "npmUrl": "https://registry.npmjs.org/npm/-/npm-10.9.4.tgz",
+    "npmIntegrity": "sha512-OnUG836FwboQIbqtefDNlyR0gTHzIfwRfE3DuiNewBvnMnWEpB0VEXwBlFVgqpNzIgYo/MHh3d2Hel/pszapAA==",
+    "targetedTests": [
+      "tests/learning-studio-publication.test.ts",
+      "tests/learning-studio-registry.test.ts",
+      "tests/learning-webmcp.test.ts"
+    ],
+    "dependencyVersions": {
+      "astro": "7.3.3",
+      "sanity": "6.16.0",
+      "react": "19.3.0",
+      "react-dom": "19.3.0",
+      "esbuild": "0.28.2",
+      "vitest": "4.1.11",
+      "typescript": "5.9.3"
+    },
+    "linuxNativeVersions": {
+      "@bruits/satteri-linux-x64-gnu": "0.10.5",
+      "@astrojs/compiler-binding-linux-x64-gnu": "0.4.1",
+      "@rolldown/binding-linux-x64-gnu": "1.2.9"
+    },
+    "pluginVersion": "1.0.1",
+    "qaRevision": 2,
+    "staticPublicImports": {
+      "web/src/pages/benchmark.astro": [
+        "web/public/benchmark/suite-a-development.json",
+        "web/public/benchmark/gemini-development-pilots.json",
+        "web/public/benchmark/real-corpus-candidates.json",
+        "web/public/benchmark/agent-mission-observations.json",
+        "web/public/benchmark/cloud-campaign-status.json"
+      ]
+    },
+    "datasetHandle": "celebrum/orbit-v3-final-qa-source-20261003/versions/2",
+    "historicalPublicBenchmarkAssets": "Product imports and downloads only; never fresh QA evidence"
+  },
+  "sourceVerified": true,
+  "lockUnchanged": true,
+  "freshInstall": true,
+  "targetedStudioTests": {
+    "expected": 36,
+    "executed": true,
+    "total": 36,
+    "passed": 36,
+    "failed": 0
+  },
+  "packagingGuardTests": {
+    "expected": 8,
+    "executed": true,
+    "total": 8,
+    "passed": 8
+  },
+  "builds": {
+    "web": "PASS",
+    "teamStudio": "PASS",
+    "portablePlugin": {
+      "package": "@orbit/learning-studio",
+      "version": "1.0.1",
+      "archive": "orbit-learning-studio-1.0.1.tgz",
+      "sha256": "7eafb28b169ed0ff611b5cc29bdd7fe04bebbd3b027e51b50c38b5d7d5769159",
+      "environmentDeclaredByOrchestrator": "kaggle",
+      "bundled": true,
+      "installedInSecondStudio": false,
+      "runtimeValidated": false,
+      "publishedToNpm": false,
+      "members": [
+        "package/dist/index.js",
+        "package/dist/build-inputs.json",
+        "package/package.json",
+        "package/README.md",
+        "package/dist/index.d.ts"
+      ]
+    },
+    "portableHost": {
+      "state": "BUILD_COMPLETE",
+      "environment": "kaggle",
+      "kind": "build-not-test",
+      "finishedAt": "2026-10-03T14:02:25.063715+00:00",
+      "nodeVersion": "22.20.0",
+      "npmVersion": "10.9.3",
+      "fixedHostDependencies": {
+        "react": "19.3.0",
+        "react-dom": "19.3.0",
+        "sanity": "6.16.0",
+        "styled-components": "6.5.3"
+      },
+      "projectId": "pzscx4w8",
+      "dataset": "production",
+      "basePath": "/formation/studio",
+      "workspaceBasePath": "/",
+      "archiveSha256": "7eafb28b169ed0ff611b5cc29bdd7fe04bebbd3b027e51b50c38b5d7d5769159",
+      "installedPluginEntrySha256": "dc28ba240ac98705a7f08eda121cc4f7213e09e02b3418e86baca573ffeedbd5",
+      "pluginVersion": "1.0.1",
+      "pluginArchive": "orbit-learning-studio-1.0.1.tgz",
+      "sourceLockSha256": "c0609b43e043b0510a93be506a1b089a8d243a3b2092c1cc357600730c8249e4",
+      "installationLockSha256": "984348216cef8ae28269a48bcaf8285e394f0029b823f9840748a433bfb6efa6",
+      "builtFiles": 316,
+      "authenticatedRuntimeValidated": false,
+      "crossOriginContextValidated": false,
+      "nativeWebMcpValidated": false,
+      "sanityWritesPerformed": false,
+      "sanityPermissionsChanged": false,
+      "originalStudioModified": false,
+      "landingModified": false
+    }
+  },
+  "commands": [
+    {
+      "stage": "node-version",
+      "command": [
+        "/kaggle/temp/orbit-v3-studio-final-2ccfa1632c14-1791036029220880567/runtime/node-v22.20.0-linux-x64/bin/node",
+        "--version"
+      ],
+      "exitCode": 0,
+      "seconds": 0.007
+    },
+    {
+      "stage": "npm-version",
+      "command": [
+        "/kaggle/temp/orbit-v3-studio-final-2ccfa1632c14-1791036029220880567/pinned-bin/npm",
+        "--version"
+      ],
+      "exitCode": 0,
+      "seconds": 0.142
+    },
+    {
+      "stage": "root-npm-ci",
+      "command": [
+        "/kaggle/temp/orbit-v3-studio-final-2ccfa1632c14-1791036029220880567/pinned-bin/npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "--include=optional"
+      ],
+      "exitCode": 0,
+      "seconds": 34.631
+    },
+    {
+      "stage": "locked-linux-native-bindings",
+      "command": [
+        "python",
+        "tools/install_cloud_native.py"
+      ],
+      "exitCode": 0,
+      "seconds": 1.974
+    },
+    {
+      "stage": "studio-targeted-tests",
+      "command": [
+        "/kaggle/temp/orbit-v3-studio-final-2ccfa1632c14-1791036029220880567/runtime/node-v22.20.0-linux-x64/bin/node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "tests/learning-studio-publication.test.ts",
+        "tests/learning-studio-registry.test.ts",
+        "tests/learning-webmcp.test.ts",
+        "--reporter=json",
+        "--outputFile=/kaggle/working/orbit-v3-studio-final-2ccfa1632c14-1791036029220880567/studio-targeted-tests.json"
+      ],
+      "exitCode": 0,
+      "seconds": 1.443
+    },
+    {
+      "stage": "packaging-guards",
+      "command": [
+        "python",
+        "tests/closure_release_packaging_test.py"
+      ],
+      "exitCode": 0,
+      "seconds": 0.165
+    },
+    {
+      "stage": "publication-types",
+      "command": [
+        "/kaggle/temp/orbit-v3-studio-final-2ccfa1632c14-1791036029220880567/runtime/node-v22.20.0-linux-x64/bin/node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--skipLibCheck",
+        "--target",
+        "es2022",
+        "--module",
+        "esnext",
+        "--moduleResolution",
+        "bundler",
+        "--types",
+        "node",
+        "packages/learning-studio/src/publication.ts",
+        "tests/learning-studio-publication.test.ts"
+      ],
+      "exitCode": 0,
+      "seconds": 2.012
+    },
+    {
+      "stage": "web-build",
+      "command": [
+        "/kaggle/temp/orbit-v3-studio-final-2ccfa1632c14-1791036029220880567/pinned-bin/npm",
+        "run",
+        "build",
+        "--workspace",
+        "@orbit/web"
+      ],
+      "exitCode": 0,
+      "seconds": 3.46
+    },
+    {
+      "stage": "team-studio-build",
+      "command": [
+        "/kaggle/temp/orbit-v3-studio-final-2ccfa1632c14-1791036029220880567/pinned-bin/npm",
+        "run",
+        "build",
+        "--workspace",
+        "@orbit/studio"
+      ],
+      "exitCode": 0,
+      "seconds": 9.091
+    },
+    {
+      "stage": "portable-plugin-package",
+      "command": [
+        "python",
+        "tools/package_learning_studio.py",
+        "--environment",
+        "kaggle",
+        "--repo",
+        "/kaggle/temp/orbit-v3-studio-final-2ccfa1632c14-1791036029220880567",
+        "--out",
+        "/kaggle/temp/orbit-v3-studio-final-2ccfa1632c14-1791036029220880567/artifacts/learning-studio"
+      ],
+      "exitCode": 0,
+      "seconds": 0.86
+    },
+    {
+      "stage": "portable-studio-host-build",
+      "command": [
+        "python",
+        "tools/learning-studio-host/build_host.py",
+        "--environment",
+        "kaggle"
+      ],
+      "exitCode": 0,
+      "seconds": 54.605
+    }
+  ],
+  "modelCalls": 0,
+  "deploymentPerformed": false,
+  "nativeBrowserQualified": false,
+  "authenticatedPublicationQualified": false,
+  "stage": "portable-studio-host-build",
+  "nodeVersion": "v22.20.0",
+  "npmVersion": "10.9.4",
+  "installedDependencies": {
+    "astro": "7.3.3",
+    "sanity": "6.16.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "esbuild": "0.28.2",
+    "vitest": "4.1.11",
+    "typescript": "5.9.3"
+  },
+  "linuxNativeVersions": {
+    "@bruits/satteri-linux-x64-gnu": "0.10.5",
+    "@astrojs/compiler-binding-linux-x64-gnu": "0.4.1",
+    "@rolldown/binding-linux-x64-gnu": "1.2.9"
+  },
+  "routeShellChecks": {
+    "landingVersionV3": true,
+    "fiveDoors": true,
+    "guideHasLearningEntry": true,
+    "landingVisualEquivalence": "SEPARATE_PACKAGER_BASELINE_CHECK_REQUIRED"
+  },
+  "limits": [
+    "36 software contracts and 8 packaging guards; no authenticated browser or model trajectory",
+    "No real Sanity write/read, account/workspace change or native WebMCP executed in this notebook",
+    "No deployment; exact landing baseline/assets are checked separately by the release packager",
+    "Source-only snapshot; previous QA output and build artifacts are not inputs"
+  ],
+  "finishedAt": "2026-10-03T14:02:27.435943+00:00",
+  "buildArtifact": {
+    "name": "formation-built.tar.gz",
+    "bytes": 14716368,
+    "sha256": "c884d96e89dd4c9bafbcb319f390b2487d0419a8e51e7e1e18a74166e676b5a9"
+  },
+  "receiptCapture": {
+    "method": "Kaggle rendered cell output, no inferred or substituted values",
+    "notebook": "https://www.kaggle.com/code/celebrum/orbit-v3-final-studio-qa-20261003/edit",
+    "capturedAt": "2026-10-03T14:03:03.049091+00:00",
+    "artifactDownloadVerifiedLocally": true,
+    "archiveSha256": "a7258704da4d1f0efd833c70e5be4372890763135250429c557f190bb679f2fd",
+    "archiveBytes": 15051898,
+    "recoveredStatusExactlyMatchesRenderedReceipt": true,
+    "artifactTransfer": "Kaggle visible notebook output, bounded base64 chunks, whole archive SHA-256 verified before extraction",
+    "verifiedAt": "2026-10-03T14:43:20.509348+00:00"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "state": "PROPOSED_NOT_CREATED",
+  "observedAt": "2026-10-03T13:29:26.297Z",
+  "organizationId": "ofo1daa1l",
+  "knowledgeBase": "kbMOG2p1HkA4",
+  "label": "Orbit D Provider QA 2026-10-03",
+  "permissions": [
+    "sanity.knowledge-base.read"
+  ],
+  "roleMapping": "native-Context-Viewer-role-not-yet-verified",
+  "expiresAt": "2026-10-04T13:29:26.297Z",
+  "expirySeconds": 86400,
+  "projectMemberships": [],
+  "datasets": [],
+  "scope": "only-isolated-QA-organization-and-fixed-provider-KB-endpoint",
+  "principalCredentialExport": false,
+  "credentialDestination": "Kaggle Secrets ORBIT_CONTEXT_QA_VIEWER; never public source/output",
+  "productionAccess": false,
+  "tokenCreated": false,
+  "modelCalls": 0,
+  "requiredChecks": [
+    "Verify native Context Viewer mapping before create.",
+    "Verify viewer refuses builds, imports, source/entry mutations, and production Context.",
+    "Verify actual tools/list, initial_context and admitted paths via QA endpoint.",
+    "Revoke only this temporary robot after exported campaign results; verify read refusal."
+  ]
+}

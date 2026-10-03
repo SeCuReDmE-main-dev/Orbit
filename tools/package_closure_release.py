@@ -1,4 +1,4 @@
-"""Package an E2B-built static overlay; never build, test or deploy on Windows.
+"""Package a Kaggle/E2B-built static overlay; never build, test or deploy on Windows.
 
 Existing account/API files, other routes and every .htaccess stay outside this
 archive. The cPanel broker must apply it as an overlay with a retained backup.
@@ -56,6 +56,36 @@ SECRET_MARKERS = {
 
 def digest(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
+
+
+def release_paths(release_id: str) -> tuple[Path, Path]:
+    if not re.fullmatch(r"orbit-[a-z0-9][A-Za-z0-9-]{0,95}", release_id):
+        raise ValueError("A bounded Orbit release identifier is required")
+    receipt = (PRIVATE / "closure-20261001" / "closure-release-package.json" if release_id == RELEASE
+               else PRIVATE / "releases" / release_id / "closure-release-package.json")
+    return PRIVATE / "releases" / (release_id + ".zip"), receipt
+
+
+def validate_plugin_build(plugin_bytes: bytes, report: dict, host_report: dict | None) -> str:
+    if (report.get("package") != "@orbit/learning-studio" or report.get("bundled") is not True
+            or report.get("sha256") != digest(plugin_bytes)
+            or report.get("environmentDeclaredByOrchestrator") not in {"e2b", "kaggle"}):
+        raise ValueError("Portable plugin differs from its cloud build report")
+    with tarfile.open(fileobj=io.BytesIO(plugin_bytes), mode="r:gz") as archive:
+        package_metadata = json.load(archive.extractfile("package/package.json"))
+        entry_digest = digest(archive.extractfile("package/dist/index.js").read())
+    environment = report["environmentDeclaredByOrchestrator"]
+    if (package_metadata.get("name") != report["package"]
+            or package_metadata.get("version") != report.get("version")
+            or not isinstance(host_report, dict) or host_report.get("state") != "BUILD_COMPLETE"
+            or host_report.get("environment") != environment
+            or host_report.get("archiveSha256") != digest(plugin_bytes)
+            or host_report.get("installedPluginEntrySha256") != entry_digest
+            or (report.get("version") != "1.0.0" and (
+                host_report.get("pluginVersion") != report.get("version")
+                or host_report.get("pluginArchive") != report.get("archive")))):
+        raise ValueError("Second Studio must install this exact cloud-built plugin archive")
+    return environment
 
 
 def safe_path(name: str, directory: bool = False) -> PurePosixPath:
@@ -241,7 +271,9 @@ def main() -> None:
     parser.add_argument("--artifact-sha256", required=True)
     parser.add_argument("--landing-baseline", type=Path, default=DEFAULT_BASELINE)
     parser.add_argument("--landing-assets", type=Path, default=DEFAULT_BASELINE_ASSETS)
+    parser.add_argument("--release-id", default=RELEASE)
     args = parser.parse_args()
+    output, receipt = release_paths(args.release_id)
     if not re.fullmatch(r"[a-f0-9]{64}", args.artifact_sha256):
         raise ValueError("An exact lowercase cloud-artifact SHA-256 is required")
     for source in (args.artifact, args.landing_baseline, args.landing_assets):
@@ -252,7 +284,7 @@ def main() -> None:
     artifact_bytes = args.artifact.read_bytes()
     if digest(artifact_bytes) != args.artifact_sha256:
         raise ValueError("Cloud artifact SHA-256 differs")
-    entries, origin, plugin_data, plugin_report = {}, {}, None, None
+    entries, origin, plugin_data, plugin_report, host_report = {}, {}, None, None, None
     total, archive_total = 0, 0
     with tarfile.open(fileobj=io.BytesIO(artifact_bytes), mode="r:gz") as archive:
         seen = set()
@@ -268,8 +300,9 @@ def main() -> None:
                 continue
             is_plugin = member.name.startswith("artifacts/learning-studio/") and member.name.endswith(".tgz")
             is_report = member.name == "artifacts/learning-studio/package-report.json"
+            is_host_report = member.name == "tools/learning-studio-host/host-build-status.json"
             target = "formation/plugins/" + PurePosixPath(member.name).name if is_plugin else destination(member.name)
-            if target is None and not is_report:
+            if target is None and not is_report and not is_host_report:
                 continue
             if member.size < 0 or member.size > MAX_FILE_BYTES:
                 raise ValueError("Selected cloud member exceeds its bound")
@@ -281,6 +314,9 @@ def main() -> None:
                 raise ValueError("Selected cloud member size differs")
             if is_report:
                 plugin_report = json.loads(data)
+                continue
+            if is_host_report:
+                host_report = json.loads(data)
                 continue
             if target in entries:
                 raise ValueError("Duplicate public destination: " + target)
@@ -297,11 +333,9 @@ def main() -> None:
     if plugin_data is None or not isinstance(plugin_report, dict):
         raise ValueError("Cloud plugin and its build report are required")
     plugin_name, plugin_bytes = plugin_data
-    if (plugin_report.get("package") != "@orbit/learning-studio" or plugin_report.get("bundled") is not True
-            or plugin_report.get("archive") != PurePosixPath(plugin_name).name
-            or plugin_report.get("sha256") != digest(plugin_bytes)
-            or plugin_report.get("environmentDeclaredByOrchestrator") != "e2b"):
+    if plugin_report.get("archive") != PurePosixPath(plugin_name).name:
         raise ValueError("Portable plugin differs from its cloud build report")
+    environment = validate_plugin_build(plugin_bytes, plugin_report, host_report)
     required = {"index.html", "app/index.html", "guide/index.html", "studio/index.html",
                 "formation/lab/index.html", "formation/projets/index.html", "formation/studio/index.html",
                 "formation/assembly.zip", "brand/securedme-publication-lab-primary-dark.png", plugin_name}
@@ -319,14 +353,14 @@ def main() -> None:
         raise ValueError("A declared public asset dependency is missing")
     landing = verify_landing(entries, args.landing_baseline.read_bytes(), args.landing_assets)
     now = datetime.now(timezone.utc)
-    common = {"releaseId": RELEASE, "version": "3.0.0", "displayVersion": "V3", "generatedAt": now.isoformat(),
-              "buildHost": "E2B", "buildArtifactSha256": args.artifact_sha256, "fullMissionComplete": False,
+    common = {"releaseId": args.release_id, "version": "3.0.0", "displayVersion": "V3", "generatedAt": now.isoformat(),
+              "buildHost": "Kaggle" if environment == "kaggle" else "E2B", "buildArtifactSha256": args.artifact_sha256, "fullMissionComplete": False,
               "softwareValidation": {"state": "SEPARATE_KAGGLE_RECEIPTS_REQUIRED", "testsExecutedByPackager": False},
               "modelsCalledByPackager": False, "deploymentPerformed": False}
     plugin = {"package": "@orbit/learning-studio", "version": plugin_report.get("version"),
               "path": "/" + plugin_name, "sha256": digest(plugin_bytes), "builtInSameArtifact": True}
     hashes = {name: digest(data) for name, data in sorted(entries.items())}
-    formation = {**common, "scope": "formation-only", "parentReleaseId": RELEASE,
+    formation = {**common, "scope": "formation-only", "parentReleaseId": args.release_id,
                  "context": {"knowledgeBase": "kbbBvrClyweF", "backendIncluded": False,
                              "activation": "Separate audited PHP package after final Kaggle validation"},
                  "portablePlugin": plugin, "secondStudio": {"basePath": "/formation/studio", "projectId": "pzscx4w8",
@@ -336,7 +370,7 @@ def main() -> None:
                  "sharedAssets": {name: value for name, value in hashes.items() if name.startswith(("_astro/", "fonts/", "brand/", "static/"))},
                  "hashScope": "Public formation payload and shared assets; release manifests and SHA256SUMS.txt excluded."}
     entries["formation/release.json"] = (json.dumps(formation, indent=2, ensure_ascii=False) + "\n").encode()
-    public = {**common, "scope": "closure-static-overlay", "applicationRelease": RELEASE,
+    public = {**common, "scope": "closure-static-overlay", "applicationRelease": args.release_id,
               "atomMechanismVersion": "2.1.7", "landingVisualMarkupChanged": False,
               "rootWebMcpContract": "orbit-webmcp-v7", "formationWebMcpContract": "orbit-formation-webmcp-v1",
               "routes": ["/", "/app/", "/guide/", "/studio/", "/formation/lab/", "/formation/projets/", "/formation/studio/"],
@@ -347,8 +381,6 @@ def main() -> None:
     entries["SHA256SUMS.txt"] = ("\n".join(digest(data) + "  " + name for name, data in sorted(entries.items())) + "\n").encode()
     if len(entries) > MAX_MEMBERS or sum(map(len, entries.values())) > MAX_TOTAL_BYTES:
         raise ValueError("Final public package exceeds bounds")
-    output = PRIVATE / "releases" / (RELEASE + ".zip")
-    receipt = PRIVATE / "closure-20261001" / "closure-release-package.json"
     output.parent.mkdir(parents=True, exist_ok=True)
     receipt.parent.mkdir(parents=True, exist_ok=True)
     if output.exists() or receipt.exists():
@@ -370,7 +402,7 @@ def main() -> None:
         if created:
             output.unlink(missing_ok=True)
         raise
-    report = {"state": "PACKAGED_NOT_DEPLOYED", "releaseId": RELEASE, "packagePath": str(output),
+    report = {"state": "PACKAGED_NOT_DEPLOYED", "releaseId": args.release_id, "packagePath": str(output),
               "packageSha256": digest(output.read_bytes()), "cloudArtifactSha256": args.artifact_sha256,
               "files": len(entries), "directories": len(directories), "payloadBytes": sum(map(len, entries.values())),
               "permissions": {"files": "0644", "directories": "0755", "creator": "Unix", "timestampUTC": now.isoformat()},
