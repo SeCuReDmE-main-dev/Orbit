@@ -1,0 +1,23 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: "The FfeD "
+  structure:
+    - type: space
+      key: space-1
+      title: The FfeD
+      path: the-ffed
+      default: true
+      content:
+        directory: ./the-ffed
+    - type: space
+      key: space-2
+      title: The FfeD
+      path: ai_server
+      content:
+        directory: ./ai_server
+    - type: space
+      key: space-3
+      title: Ai Server
+      path: ai_server-1
+      content:
+        directory: ./ai_server
